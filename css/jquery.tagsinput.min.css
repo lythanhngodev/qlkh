@@ -1,0 +1,18 @@
+div.tagsinput { border:1px solid #CCC; background: #FFF; padding:5px; width:300px; height:100px; overflow-y: auto;}
+div.tagsinput span.tag {-moz-border-radius:2px;-webkit-border-radius: 4px;display: block;float: left;padding: 2px 5px 4px 4px;text-decoration:none;background: #4992e4;color: #f8f8f8;margin-right: 6px;margin-bottom: 6px;font-family: helvetica;font-size: 16px;}
+div.tagsinput span.tag a {color: #4992e4;text-decoration:none;font-size: 11px;background: #ffffff;padding: 0px 5px 0px 5px;border-radius: 50%;font-family: monospace;font-weight: bold;} 
+div.tagsinput input { width:80px; margin:0px; font-family: helvetica; font-size: 13px; border:1px solid transparent; padding:5px; background: transparent; color: #000; outline:0px;  margin-right:5px; margin-bottom:5px; }
+div.tagsinput div { display:block; float: left; } 
+.tags_clear { clear: both; width: 100%; height: 0px; }
+.not_valid {background: #FBD8DB !important; color: #90111A !important;}
+div.tagsinput span.tag:hover{
+	transition: all 0.234s;
+    background:#fa5252;
+    color:white;
+}
+div.tagsinput span.tag span{
+	
+padding: 0px 0px 0px 4px;
+	
+width:  fit-content;
+}

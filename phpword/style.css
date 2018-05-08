@@ -1,0 +1,101 @@
+@charset 'utf-8';	
+	*,body{
+    	margin:0;
+    	padding:0;
+	}
+	body {
+	  background: rgb(204,204,204); 
+	  font-size: 13px;
+      line-height: 4.5mm;
+	}
+	page {
+	  background: white;
+	  display: block;
+	  margin: 0 auto;
+	  margin-bottom: 0.5cm;
+	}
+	page[size="A4"] {  
+	  width: 210mm;
+	  height: 310mm;
+	}
+	page[size="A4"][layout="portrait"] {
+	  width: 2970mm;
+	  height: 210mcm;  
+	}
+	@media print {
+	  body, page {
+	    margin: 0;
+	    box-shadow: 0;
+	  }
+	}
+	.giua{
+		text-align: center;
+	}
+	#bangheader{
+		border-collapse: collapse;
+		float: left;
+		width: 186mm;
+		margin-top: 10mm;
+		margin-left: 12mm;
+		height: 20mm;
+	}
+	.tendetai{
+	    float: left;
+	    width: 100%;
+	    margin-bottom: 3mm;
+	    padding-right: 4mm;
+	}
+	.thantrang{
+	    width: 186mm;
+	    float: left;
+	    margin: 0 auto;
+	    margin-left: 12mm;
+	}
+	#bangchunhiemdetai{
+	    border-collapse: collapse;
+	    float: left;
+	    width: 178mm;
+	    margin-left: 5mm;
+	    height: 20mm;
+	}
+	#bangchunhiemdetai td{
+	    padding-left: 2mm;
+	}
+	#bangloaihinhnghiencuu{
+	    border-collapse: collapse;
+	    float: left;
+	    width: 180mm;
+	    margin-left: 5mm;
+	}
+	#bangloaihinhnghiencuu td{
+		padding-left: 2mm;
+	}
+	#bangloaihinhnghiencuu th{
+	    height: 6.5mm;
+	}
+	#bangloaihinhnghiencuu td{
+	    height: 6.5mm;
+	}
+	#banglinhvuckhoahoc{
+	    border-collapse: collapse;
+	    float: left;
+	    width: 180mm;
+	    margin-left: 5mm;
+	}
+	#banglinhvuckhoahoc td{
+		padding-left: 2mm;
+	}
+	#banglinhvuckhoahoc th{
+	    height: 6.5mm;
+        padding: 0 0.8mm;
+	}
+	#banglinhvuckhoahoc td{
+	    height: 6.5mm;
+	}
+	#bangchuky{
+	    border-collapse: collapse;
+	    float: left;
+	    width: 180mm;
+	    margin-left: 5mm;
+	    margin-top: 2mm;
+	}
