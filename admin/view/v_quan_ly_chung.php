@@ -164,7 +164,7 @@
                     <tr>
                         <td><input type="text" id="tenmail" value="<?php echo $rmail['0']; ?>" class="form-control"></td>
                         <td><input type="password" id="matkhaumail" class="form-control"></td>
-                        <td><button class="btn btn-primary">Lưu mail</button></td>
+                        <td><button class="btn btn-primary" id="bluumail">Lưu mail</button></td>
                     </tr>
                     </tbody>
                 </table>
@@ -1182,7 +1182,7 @@
             if(kiemtraketnoi()){
                 // Ajax
                 $.ajax({
-                    url: 'ajax/ajax_them_khoa_bo_mon',
+                    url: 'ajax/ajax_them_khoa_bo_mon.php',
                     type: 'POST',
                     data: {
                         ten: $('#tenkbm').val().trim()
@@ -1219,7 +1219,7 @@
             }
             if(kiemtraketnoi()){
                 $.ajax({
-                    url: 'ajax/ajax_sua_khoa_bo_mon',
+                    url: 'ajax/ajax_sua_khoa_bo_mon.php',
                     type: 'POST',
                     data: {
                         ten: $('#tenkbmsua').val().trim(),
@@ -1255,7 +1255,7 @@
             if(kiemtraketnoi()){
                 // Ajax
                 $.ajax({
-                    url: 'ajax/ajax_xoa_khoa_bo_mon',
+                    url: 'ajax/ajax_xoa_khoa_bo_mon.php',
                     type: 'POST',
                     data: {
                         ma: $(thiskbm).parent('td').attr('id')
@@ -1293,7 +1293,7 @@
             if(kiemtraketnoi()){
                 // Ajax
                 $.ajax({
-                    url: 'ajax/ajax_them_trinh_do_chuyen_mon',
+                    url: 'ajax/ajax_them_trinh_do_chuyen_mon.php',
                     type: 'POST',
                     data: {
                         ten: $('#tentdcm').val().trim()
@@ -1331,7 +1331,7 @@
             if(kiemtraketnoi()){
                 // Ajax
                 $.ajax({
-                    url: 'ajax/ajax_sua_trinh_do_chuyen_mon',
+                    url: 'ajax/ajax_sua_trinh_do_chuyen_mon.php',
                     type: 'POST',
                     data: {
                         ten: $('#tentdcmsua').val().trim(),
@@ -1366,7 +1366,7 @@
             if(kiemtraketnoi()){
                 // Ajax
                 $.ajax({
-                    url: 'ajax/ajax_xoa_trinh_do_chuyen_mon',
+                    url: 'ajax/ajax_xoa_trinh_do_chuyen_mon.php',
                     type: 'POST',
                     data: {
                         ma: $(thistdcm).parent('td').attr('id')
@@ -1404,7 +1404,7 @@
             if(kiemtraketnoi()){
                 // Ajax
                 $.ajax({
-                    url: 'ajax/ajax_them_chuc_danh_giang_vien',
+                    url: 'ajax/ajax_them_chuc_danh_giang_vien.php',
                     type: 'POST',
                     data: {
                         ten: $('#tencdgv').val().trim()
@@ -1442,7 +1442,7 @@
             if(kiemtraketnoi()){
                 // Ajax
                 $.ajax({
-                    url: 'ajax/ajax_sua_chuc_danh_giang_vien',
+                    url: 'ajax/ajax_sua_chuc_danh_giang_vien.php',
                     type: 'POST',
                     data: {
                         ten: $('#tencdgvsua').val().trim(),
@@ -1477,7 +1477,7 @@
             if(kiemtraketnoi()){
                 // Ajax
                 $.ajax({
-                    url: 'ajax/ajax_xoa_chuc_danh_giang_vien',
+                    url: 'ajax/ajax_xoa_chuc_danh_giang_vien.php',
                     type: 'POST',
                     data: {
                         ma: $(thiscdgv).parent('td').attr('id')
@@ -1515,7 +1515,7 @@
             if(kiemtraketnoi()){
                 // Ajax
                 $.ajax({
-                    url: 'ajax/ajax_them_hoc_vi',
+                    url: 'ajax/ajax_them_hoc_vi.php',
                     type: 'POST',
                     data: {
                         ten: $('#tenhv').val().trim()
@@ -1553,7 +1553,7 @@
             if(kiemtraketnoi()){
                 // Ajax
                 $.ajax({
-                    url: 'ajax/ajax_sua_hoc_vi',
+                    url: 'ajax/ajax_sua_hoc_vi.php',
                     type: 'POST',
                     data: {
                         ten: $('#tenhvsua').val().trim(),
@@ -1588,7 +1588,7 @@
             if(kiemtraketnoi()){
                 // Ajax
                 $.ajax({
-                    url: 'ajax/ajax_xoa_hoc_vi',
+                    url: 'ajax/ajax_xoa_hoc_vi.php',
                     type: 'POST',
                     data: {
                         ma: $(thishv).parent('td').attr('id')
@@ -1617,16 +1617,52 @@
             else
                 khongthanhcong('Không có kết nối internet');
         });
-        // CHỨC DANH KHOA HỌC
-        $('#themcdkh').on('click',function(){
-            if ($('#tencdkh').val().trim()==''){
-                khongthanhcong('Vui lòng nhập tên chứ danh');
+        // MAIL 
+        $('#bluumail').click(()=>{
+            if(!$('#tenmail').val().trim() || !$('#matkhaumail').val().trim()){
+                khongthanhcong('Vui lòng nhập đầy đủ thông tin mail');
                 return;
             }
             if(kiemtraketnoi()){
                 // Ajax
                 $.ajax({
-                    url: 'ajax/ajax_them_chuc_danh_khoa_hoc',
+                    url: 'ajax/ajax_cau_hinh_mail.php',
+                    type: 'POST',
+                    data: {
+                        ten:$('#tenmail').val().trim(),
+                        mk:$('#matkhaumail').val().trim()
+                    },
+                    beforeSend: function () {
+                        canhbao('Đang xử lý dữ liệu');
+                    },
+                    success: function (data) {
+                        $.notifyClose();
+                        var mang = $.parseJSON(data);
+                        if(mang.trangthai==1){
+                            thanhcong('Thêm chứ danh thành công');
+                        }
+                        else{
+                            khongthanhcong('Hiện tại bạn đang sử dụng mail này');
+                        }
+                    },
+                    error: function () {
+                        khongthanhcong('Xảy ra lỗi! Vui lòng thử lại');
+                    }
+                });
+            }
+            else
+                khongthanhcong('Không có kết nối internet');
+        });
+        // CHỨC DANH KHOA HỌC
+        $('#themcdkh').on('click',function(){
+            if ($('#tencdkh').val().trim()==''){
+                khongthanhcong('Vui lòng nhập tên chức danh');
+                return;
+            }
+            if(kiemtraketnoi()){
+                // Ajax
+                $.ajax({
+                    url: 'ajax/ajax_them_chuc_danh_khoa_hoc.php',
                     type: 'POST',
                     data: {
                         ten: $('#tencdkh').val().trim()
@@ -1664,7 +1700,7 @@
             if(kiemtraketnoi()){
                 // Ajax
                 $.ajax({
-                    url: 'ajax/ajax_sua_chuc_danh_khoa_hoc',
+                    url: 'ajax/ajax_sua_chuc_danh_khoa_hoc.php',
                     type: 'POST',
                     data: {
                         ten: $('#tencdkhsua').val().trim(),
@@ -1699,7 +1735,7 @@
             if(kiemtraketnoi()){
                 // Ajax
                 $.ajax({
-                    url: 'ajax/ajax_xoa_chuc_danh_khoa_hoc',
+                    url: 'ajax/ajax_xoa_chuc_danh_khoa_hoc.php',
                     type: 'POST',
                     data: {
                         ma: $(thiscdkh).parent('td').attr('id')
@@ -1737,7 +1773,7 @@
             if(kiemtraketnoi()){
                 // Ajax
                 $.ajax({
-                    url: 'ajax/ajax_them_chuc_vu',
+                    url: 'ajax/ajax_them_chuc_vu.php',
                     type: 'POST',
                     data: {
                         ten: $('#tencv').val().trim()
@@ -1775,7 +1811,7 @@
             if(kiemtraketnoi()){
                 // Ajax
                 $.ajax({
-                    url: 'ajax/ajax_sua_chuc_vu',
+                    url: 'ajax/ajax_sua_chuc_vu.php',
                     type: 'POST',
                     data: {
                         ten: $('#tencvsua').val().trim(),
@@ -1810,7 +1846,7 @@
             if(kiemtraketnoi()){
                 // Ajax
                 $.ajax({
-                    url: 'ajax/ajax_xoa_chuc_vu',
+                    url: 'ajax/ajax_xoa_chuc_vu.php',
                     type: 'POST',
                     data: {
                         ma: $(thiscv).parent('td').attr('id')
@@ -1848,7 +1884,7 @@
             if(kiemtraketnoi()){
                 // Ajax
                 $.ajax({
-                    url: 'ajax/ajax_them_cap_bao_khoa_hoc',
+                    url: 'ajax/ajax_them_cap_bao_khoa_hoc.php',
                     type: 'POST',
                     data: {
                         ten: $('#tenc').val().trim()
@@ -1886,7 +1922,7 @@
             if(kiemtraketnoi()){
                 // Ajax
                 $.ajax({
-                    url: 'ajax/ajax_sua_cap_bao_khoa_hoc',
+                    url: 'ajax/ajax_sua_cap_bao_khoa_hoc.php',
                     type: 'POST',
                     data: {
                         ten: $('#tencsua').val().trim(),
@@ -1921,7 +1957,7 @@
             if(kiemtraketnoi()){
                 // Ajax
                 $.ajax({
-                    url: 'ajax/ajax_xoa_cap_bao_khoa_hoc',
+                    url: 'ajax/ajax_xoa_cap_bao_khoa_hoc.php',
                     type: 'POST',
                     data: {
                         ma: $(thisc).parent('td').attr('id')
@@ -1959,7 +1995,7 @@
             if(kiemtraketnoi()){
                 // Ajax
                 $.ajax({
-                    url: 'ajax/ajax_them_cap_nghien_cuu_khoa_hoc',
+                    url: 'ajax/ajax_them_cap_nghien_cuu_khoa_hoc.php',
                     type: 'POST',
                     data: {
                         ten: $('#tencdt').val().trim()
@@ -1997,7 +2033,7 @@
             if(kiemtraketnoi()){
                 // Ajax
                 $.ajax({
-                    url: 'ajax/ajax_sua_cap_de_tai_khoa_hoc',
+                    url: 'ajax/ajax_sua_cap_de_tai_khoa_hoc.php',
                     type: 'POST',
                     data: {
                         ten: $('#tencdtsua').val().trim(),
@@ -2032,7 +2068,7 @@
             if(kiemtraketnoi()){
                 // Ajax
                 $.ajax({
-                    url: 'ajax/ajax_xoa_cap_nghien_cuu_khoa_hoc',
+                    url: 'ajax/ajax_xoa_cap_nghien_cuu_khoa_hoc.php',
                     type: 'POST',
                     data: {
                         ma: $(thiscdt).parent('td').attr('id')
@@ -2070,7 +2106,7 @@
             if(kiemtraketnoi()){
                 // Ajax
                 $.ajax({
-                    url: 'ajax/ajax_them_linh_vuc_nghien_cuu_khoa_hoc',
+                    url: 'ajax/ajax_them_linh_vuc_nghien_cuu_khoa_hoc.php',
                     type: 'POST',
                     data: {
                         ten: $('#tenlv').val().trim()
@@ -2108,7 +2144,7 @@
             if(kiemtraketnoi()){
                 // Ajax
                 $.ajax({
-                    url: 'ajax/ajax_sua_linh_vuc_khoa_hoc',
+                    url: 'ajax/ajax_sua_linh_vuc_khoa_hoc.php',
                     type: 'POST',
                     data: {
                         ten: $('#tenlvsua').val().trim(),
@@ -2143,7 +2179,7 @@
             if(kiemtraketnoi()){
                 // Ajax
                 $.ajax({
-                    url: 'ajax/ajax_xoa_linh_vuc_nghien_cuu_khoa_hoc',
+                    url: 'ajax/ajax_xoa_linh_vuc_nghien_cuu_khoa_hoc.php',
                     type: 'POST',
                     data: {
                         ma: $(thislv).parent('td').attr('id')
@@ -2181,7 +2217,7 @@
             if(kiemtraketnoi()){
                 // Ajax
                 $.ajax({
-                    url: 'ajax/ajax_them_loai_hinh_nghien_cuu_khoa_hoc',
+                    url: 'ajax/ajax_them_loai_hinh_nghien_cuu_khoa_hoc.php',
                     type: 'POST',
                     data: {
                         ten: $('#tenlh').val().trim()
@@ -2219,7 +2255,7 @@
             if(kiemtraketnoi()){
                 // Ajax
                 $.ajax({
-                    url: 'ajax/ajax_sua_loai_hinh_khoa_hoc',
+                    url: 'ajax/ajax_sua_loai_hinh_khoa_hoc.php',
                     type: 'POST',
                     data: {
                         ten: $('#tenlhsua').val().trim(),
@@ -2254,7 +2290,7 @@
             if(kiemtraketnoi()){
                 // Ajax
                 $.ajax({
-                    url: 'ajax/ajax_xoa_loai_hinh_nghien_cuu_khoa_hoc',
+                    url: 'ajax/ajax_xoa_loai_hinh_nghien_cuu_khoa_hoc.php',
                     type: 'POST',
                     data: {
                         ma: $(thislh).parent('td').attr('id')
@@ -2293,7 +2329,7 @@
             if(kiemtraketnoi()){
                 // Ajax
                 $.ajax({
-                    url: 'ajax/ajax_them_so_tiet_qui_doi',
+                    url: 'ajax/ajax_them_so_tiet_qui_doi.php',
                     type: 'POST',
                     data: {
                         tu: $('#tusostqd').val().trim(),
@@ -2333,7 +2369,7 @@
             if(kiemtraketnoi()){
                 // Ajax
                 $.ajax({
-                    url: 'ajax/ajax_sua_so_tiet_qui_doi',
+                    url: 'ajax/ajax_sua_so_tiet_qui_doi.php',
                     type: 'POST',
                     data: {
                         tu: $('#tusostqdsua').val().trim(),
@@ -2371,7 +2407,7 @@
         $('#bxoastqd').on('click',function(){
             if(kiemtraketnoi()){
                 $.ajax({
-                    url: 'ajax/ajax_xoa_so_tiet_qui_doi',
+                    url: 'ajax/ajax_xoa_so_tiet_qui_doi.php',
                     type: 'POST',
                     data: {
                         ma: $(thisstqd).parent('td').attr('id')

@@ -64,7 +64,7 @@ $(document).ready(()=>{
             $('#noidungthongke').html('');
             if (kiemtraketnoi()){
                 $.ajax({
-                    url: 'export/export_tat_ca_de_tai_nghiem_thu',
+                    url: 'export/export_tat_ca_de_tai_nghiem_thu.php',
                     dataType: 'text',
                     type: 'post',
                     data: {_token: '<?php echo $token; ?>'},
@@ -91,7 +91,7 @@ $(document).ready(()=>{
             alert(1);
             if (kiemtraketnoi()){
                 $.ajax({
-                    url: 'export/export_tat_ca_bai_bao_khoa_hoc',
+                    url: 'export/export_tat_ca_bai_bao_khoa_hoc.php',
                     dataType: 'text',
                     type: 'post',
                     data: {_token: '<?php echo $token; ?>'},
@@ -125,7 +125,7 @@ $(document).ready(()=>{
         }
         if (kiemtraketnoi()){
             $.ajax({
-                url: 'export/export_tat_ca_de_tai_nghiem_thu_theo_thoi_gian',
+                url: 'export/export_tat_ca_de_tai_nghiem_thu_theo_thoi_gian.php',
                 dataType: 'text',
                 type: 'post',
                 data: {_token: '<?php echo $token; ?>',bd:bd,kt,kt},

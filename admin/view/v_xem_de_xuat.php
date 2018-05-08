@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Ly Thanh Ngo
- * Date: 12/04/2018
- * Time: 1:49 PM
- */
 if (!isset($_SESSION["token"])) {include_once ("../../loi404.html");exit();}
 ?>
 <?php $trangthaidt = $detai['TRANGTHAI']; ?>
@@ -716,7 +710,7 @@ if (!isset($_SESSION["token"])) {include_once ("../../loi404.html");exit();}
             }
             if (kiemtraketnoi()) {
                 $.ajax({
-                    url : "ajax/ajax_luu_ma_de_tai",
+                    url : "ajax/ajax_luu_ma_de_tai.php",
                     type : "post",
                     dataType:"text",
                     data : {
@@ -748,7 +742,7 @@ if (!isset($_SESSION["token"])) {include_once ("../../loi404.html");exit();}
             }
             if (kiemtraketnoi()) {
                 $.ajax({
-                    url : "ajax/ajax_luu_diem_de_tai",
+                    url : "ajax/ajax_luu_diem_de_tai.php",
                     type : "post",
                     dataType:"text",
                     data : {
@@ -899,7 +893,7 @@ if (!isset($_SESSION["token"])) {include_once ("../../loi404.html");exit();}
             if(!(jQuery.isEmptyObject(btc)) || !(jQuery.isEmptyObject(tvdg))){
                 if (kiemtraketnoi()) {
                     $.ajax({
-                        url : "ajax/ajax_thanh_vien_dang_gia_de_tai",
+                        url : "ajax/ajax_thanh_vien_dang_gia_de_tai.php",
                         type : "post",
                         dataType:"text",
                         data : {
@@ -945,7 +939,7 @@ if (!isset($_SESSION["token"])) {include_once ("../../loi404.html");exit();}
             if(!(jQuery.isEmptyObject(nt))){
                 if (kiemtraketnoi()) {
                     $.ajax({
-                        url : "ajax/ajax_thanh_vien_nghiem_thu_de_tai",
+                        url : "ajax/ajax_thanh_vien_nghiem_thu_de_tai.php",
                         type : "post",
                         dataType:"text",
                         data : {
@@ -980,7 +974,7 @@ if (!isset($_SESSION["token"])) {include_once ("../../loi404.html");exit();}
            }
             if (kiemtraketnoi()) {
                 $.ajax({
-                    url : "ajax/ajax_duyet_de_tai",
+                    url : "ajax/ajax_duyet_de_tai.php",
                     type : "post",
                     dataType:"text",
                     data : {
@@ -1020,7 +1014,7 @@ if (!isset($_SESSION["token"])) {include_once ("../../loi404.html");exit();}
            }
             if (kiemtraketnoi()) {
                 $.ajax({
-                    url : "ajax/ajax_nghiem_thu_de_tai",
+                    url : "ajax/ajax_nghiem_thu_de_tai.php",
                     type : "post",
                     dataType:"text",
                     data : {

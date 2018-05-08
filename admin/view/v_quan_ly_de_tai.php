@@ -126,7 +126,7 @@
         if(kiemtraketnoi()){
             // Ajax
             $.ajax({
-                url: 'ajax/ajax_gui_de_xuat',
+                url: 'ajax/ajax_gui_de_xuat.php',
                 type: 'POST',
                 data: {
                     token: '<?php echo $token; ?>',
@@ -156,7 +156,7 @@
         if(kiemtraketnoi()){
             // Ajax
             $.ajax({
-                url: 'ajax/ajax_xoa_de_tai',
+                url: 'ajax/ajax_xoa_de_tai.php',
                 type: 'POST',
                 data: {
                     token: '<?php echo $token; ?>',

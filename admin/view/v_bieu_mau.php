@@ -135,7 +135,7 @@ if (!isset($_SESSION["token"])) {include_once ("../../loi404.html");exit();}
                 //sử dụng ajax post
                 if (kiemtraketnoi()){
                     $.ajax({
-                        url: 'ajax/ajax_them_bieu_mau', // gửi đến file
+                        url: 'ajax/ajax_them_bieu_mau.php', // gửi đến file
                         dataType: 'text',
                         cache: false,
                         contentType: false,
@@ -184,7 +184,7 @@ if (!isset($_SESSION["token"])) {include_once ("../../loi404.html");exit();}
         if(!dialog) return;
         if (kiemtraketnoi()){
             $.ajax({
-                url: 'ajax/ajax_xoa_bieu_mau', // gửi đến file
+                url: 'ajax/ajax_xoa_bieu_mau.php', // gửi đến file
                 dataType: 'text',
                 type: 'post',
                 data: {

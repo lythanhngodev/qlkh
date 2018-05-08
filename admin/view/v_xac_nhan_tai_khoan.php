@@ -80,7 +80,7 @@
       }
       if(kiemtraketnoi()){
           $.ajax({
-              url: 'ajax/ajax_xac_nhan_tai_khoan',
+              url: 'ajax/ajax_xac_nhan_tai_khoan.php',
               type: 'POST',
               data: {
                   xn: xn

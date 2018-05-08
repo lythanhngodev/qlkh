@@ -635,7 +635,7 @@
                 //sử dụng ajax post
                 if (kiemtraketnoi()){
                     $.ajax({
-                        url: 'ajax/ajax_chu_nhiem_up_file', // gửi đến file upload.php
+                        url: 'ajax/ajax_chu_nhiem_up_file.php', // gửi đến file upload.php
                         dataType: 'text',
                         cache: false,
                         contentType: false,
@@ -888,7 +888,7 @@
             if (kiemtraketnoi()) {
                 // Ajax
                 $.ajax({
-                    url: 'ajax/ajax_sua_de_xuat',
+                    url: 'ajax/ajax_sua_de_xuat.php',
                     type: 'POST',
                     data: {
                         tendetai: tendetai,
@@ -944,7 +944,7 @@
             $('#filetaive').remove();
             // ajax
             $.ajax({
-                url : "ajax/ajax_chu_nhiem_xoa_file",
+                url : "ajax/ajax_chu_nhiem_xoa_file.php",
                 type : "post",
                 dataType:"text",
                 data : {

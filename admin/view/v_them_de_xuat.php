@@ -668,7 +668,7 @@ giao kết quả nghiên cứu đến người sử dụng. Phải nêu được
           if (kiemtraketnoi()) {
               // Ajax
               $.ajax({
-                  url: 'ajax/ajax_them_de_xuat',
+                  url: 'ajax/ajax_them_de_xuat.php',
                   type: 'POST',
                   data: {
                       tendetai: tendetai,

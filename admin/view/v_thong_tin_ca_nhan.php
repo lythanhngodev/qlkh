@@ -408,7 +408,7 @@ if (!isset($_SESSION["token"])) {include_once ("../../loi404.html");exit();}
             if (kiemtraketnoi()) {
                 // Ajax
                 $.ajax({
-                    url: 'ajax/ajax_doi_mat_khau',
+                    url: 'ajax/ajax_doi_mat_khau.php',
                     type: 'POST',
                     data: {
                         mk: mk,
@@ -558,7 +558,7 @@ if (!isset($_SESSION["token"])) {include_once ("../../loi404.html");exit();}
             if (kiemtraketnoi()) {
                 // Ajax
                 $.ajax({
-                    url: 'ajax/ajax_luu_thong_tin_nguoi_dung',
+                    url: 'ajax/ajax_luu_thong_tin_nguoi_dung.php',
                     type: 'POST',
                     data: {
                         ho: ho,

@@ -412,7 +412,7 @@
                 //sử dụng ajax post
                 if (kiemtraketnoi()){
                     $.ajax({
-                        url: 'ajax/ajax_danh_gia_nghiem_thu_up_file', // gửi đến file upload.php
+                        url: 'ajax/ajax_danh_gia_nghiem_thu_up_file.php', // gửi đến file upload.php
                         dataType: 'text',
                         cache: false,
                         contentType: false,
@@ -451,7 +451,7 @@
         $('#luuykien').click(()=>{
           if (kiemtraketnoi()) {
             $.ajax({
-              url : "ajax/ajax_y_kien_nghiem_thu",
+              url : "ajax/ajax_y_kien_nghiem_thu.php",
               type : "post",
               dataType:"text",
               data : {
@@ -473,7 +473,7 @@
             $('#xoafileup').remove();
             // ajax
             $.ajax({
-                url : "ajax/ajax_danh_gia_nghiem_thu_xoa_file",
+                url : "ajax/ajax_danh_gia_nghiem_thu_xoa_file.php",
                 type : "post",
                 dataType:"text",
                 data : {

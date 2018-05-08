@@ -865,7 +865,7 @@ giao kết quả nghiên cứu đến người sử dụng. Phải nêu được
           if (kiemtraketnoi()) {
               // Ajax
               $.ajax({
-                  url: 'ajax/ajax_them_de_tai_da_nghiem_thu',
+                  url: 'ajax/ajax_them_de_tai_da_nghiem_thu.php',
                   type: 'POST',
                   data: {tendetai: tendetai,muctieu: muctieudetai,noidung: noidungdetai,cap: capdetai,moisangtao: moisangtao,thuocchuongtrinh: thuocchuongtrinh,sucanthiet: sucanthiet,tinhhinhnghiencuu: tinhhinhnghiencuu,nghiencuulienquan: nghiencuulienquan,phuongphapkythuat: phuongphapkythuat,kinhphingansach: kinhphingansach,kinhphinguonkhac: kinhphinguonkhac,thangthuchien: thangthuchien,thangnambatdau: thangnambatdau,thangnamketthuc: thangnamketthuc,ketqua: ketqua,loaihinhnghiencuu: loaihinhnghiencuu,linhvuckhoahoc: linhvuckhoahoc,thanhvien: thanhviendetai,file: $('#filetailieu').val().trim(),tochucthamgia: btc,tiendodukien: btd,baocaotiendo: bctd,dgbtc: dgbtc,dgtv: dgtv,nttv: nttv,kinhphichitiet: bkp },
                   beforeSend: ()=>{
@@ -910,7 +910,7 @@ giao kết quả nghiên cứu đến người sử dụng. Phải nêu được
         //sử dụng ajax post
         if (kiemtraketnoi()){
             $.ajax({
-                url: 'ajax/ajax_up_file_da_nghiem_thu', // gửi đến file upload.php
+                url: 'ajax/ajax_up_file_da_nghiem_thu.php', // gửi đến file upload.php
                 dataType: 'text',
                 cache: false,
                 contentType: false,
@@ -954,7 +954,7 @@ giao kết quả nghiên cứu đến người sử dụng. Phải nêu được
         //sử dụng ajax post
         if (kiemtraketnoi()){
             $.ajax({
-                url: 'ajax/ajax_up_file_da_nghiem_thu', // gửi đến file upload.php
+                url: 'ajax/ajax_up_file_da_nghiem_thu.php', // gửi đến file upload.php
                 dataType: 'text',
                 cache: false,
                 contentType: false,
@@ -991,7 +991,7 @@ giao kết quả nghiên cứu đến người sử dụng. Phải nêu được
           $('#xoafileup-'+idid).remove();
           $('#taifilexong-'+idid).show();
           $.ajax({
-              url : "ajax/ajax_xoa_file_da_nghiem_thu",
+              url : "ajax/ajax_xoa_file_da_nghiem_thu.php",
               type : "post",
               dataType:"text",
               data : {
@@ -1012,7 +1012,7 @@ giao kết quả nghiên cứu đến người sử dụng. Phải nêu được
           $('#xoafiletl').remove();
           $('#tailentailieu').show();
           $.ajax({
-              url : "ajax/ajax_xoa_file_da_nghiem_thu",
+              url : "ajax/ajax_xoa_file_da_nghiem_thu.php",
               type : "post",
               dataType:"text",
               data : {

@@ -133,7 +133,7 @@
     $("#luubaiviet").click(function(){
       if (kiemtraketnoi()) {
         $.ajax({
-          url : "ajax/ajax_them_tac_gia",
+          url : "ajax/ajax_them_tac_gia.php",
           type : "post",
           dataType:"text",
           data : {

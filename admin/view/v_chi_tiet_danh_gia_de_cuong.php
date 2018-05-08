@@ -403,7 +403,7 @@
                 //sử dụng ajax post
                 if (kiemtraketnoi()){
                     $.ajax({
-                        url: 'ajax/ajax_danh_gia_de_cuong_up_file', // gửi đến file upload.php
+                        url: 'ajax/ajax_danh_gia_de_cuong_up_file.php', // gửi đến file upload.php
                         dataType: 'text',
                         cache: false,
                         contentType: false,
@@ -445,7 +445,7 @@
             $('#taifile').show();
             // ajax
             $.ajax({
-                url : "ajax/ajax_danh_gia_de_cuong_xoa_file",
+                url : "ajax/ajax_danh_gia_de_cuong_xoa_file.php",
                 type : "post",
                 dataType:"text",
                 data : {

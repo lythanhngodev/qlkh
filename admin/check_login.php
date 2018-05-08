@@ -12,11 +12,11 @@
 		$tdn = $_SESSION['tdn'];
     	$pas = $_SESSION['pas'];
 		if(!($ketnoi->checklogin($tdn,$pas))){
-			header("Location: ".$qlkh['HOSTADMIN']."login");
+			header("Location: ".$qlkh['HOSTADMIN']."login.php");
 		}
 	}
 	else
-		header("Location: ".$qlkh['HOSTADMIN']."login");
+		header("Location: ".$qlkh['HOSTADMIN']."login.php");
 	/*if (isset($_SESSION['LAST_ACTIVITY']) && (time() - $_SESSION['LAST_ACTIVITY'] > 900)) {
 	    // last request was more than 30 minutes ago
 	    session_unset();     // unset $_SESSION variable for the run-time 

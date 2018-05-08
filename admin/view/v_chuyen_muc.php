@@ -149,7 +149,7 @@ if (!isset($_SESSION["token"])) {include_once ("../../loi404.html");exit();}
             if(kiemtraketnoi()){
                 // Ajax
                 $.ajax({
-                    url: 'ajax/ajax_them_chuyen_muc',
+                    url: 'ajax/ajax_them_chuyen_muc.php',
                     type: 'POST',
                     data: {
                         ten: $('#tencm').val().trim(),
@@ -195,7 +195,7 @@ if (!isset($_SESSION["token"])) {include_once ("../../loi404.html");exit();}
             if(kiemtraketnoi()){
                 // Ajax
                 $.ajax({
-                    url: 'ajax/ajax_sua_chuyen_muc',
+                    url: 'ajax/ajax_sua_chuyen_muc.php',
                     type: 'POST',
                     data: {
                         ten: $('#suatencm').val().trim(),
@@ -233,7 +233,7 @@ if (!isset($_SESSION["token"])) {include_once ("../../loi404.html");exit();}
             if(kiemtraketnoi()){
                 // Ajax
                 $.ajax({
-                    url: 'ajax/ajax_xoa_chuyen_muc',
+                    url: 'ajax/ajax_xoa_chuyen_muc.php',
                     type: 'POST',
                     data: {
                         ma: $('#xoaid').val().trim()

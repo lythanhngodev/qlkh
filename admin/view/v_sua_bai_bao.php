@@ -230,7 +230,7 @@
                 //sử dụng ajax post
                 if (kiemtraketnoi()){
                     $.ajax({
-                        url: 'ajax/ajax_file_nguon_bai_bao', // gửi đến file upload.php
+                        url: 'ajax/ajax_file_nguon_bai_bao.php', // gửi đến file upload.php
                         dataType: 'text',
                         cache: false,
                         contentType: false,
@@ -316,7 +316,7 @@
           mtacgia[i]=tacgia[i][1];
         }
         $.ajax({
-          url : "ajax/ajax_sua_bai_bao_khoa_hoc",
+          url : "ajax/ajax_sua_bai_bao_khoa_hoc.php",
           type : "post",
           dataType:"text",
           data : {
@@ -350,7 +350,7 @@
           $('#taifile').show();
           // ajax
           $.ajax({
-              url : "ajax/ajax_xoa_file_nguon_bai_bao",
+              url : "ajax/ajax_xoa_file_nguon_bai_bao.php",
               type : "post",
               dataType:"text",
               data : {

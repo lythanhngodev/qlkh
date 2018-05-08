@@ -4,21 +4,7 @@
 <link rel="stylesheet" href="slider/demo/style.css" type="text/css" media="screen" />
 <div id="cottrai">
     <!-- TRÌNH CHIẾU (SILDER) -->
-    <div class="trinh-chieu" >
-        <div class="slider-wrapper theme-default">
-            <div id="slider" class="nivoSlider"> 
-                <?php 
-                while ($row = mysqli_fetch_assoc($slider)) {
-                ?>
-                    <a href="<?php echo $row['link']; ?>">
-                        <img src="<?php echo $row['hinhanh']; ?>" data-thumb="<?php echo $row['hinhanh']; ?>" data-transition="<?php echo $row['style']; ?>" alt="<?php echo $row['tieude']; ?>" title="<?php echo $row['tieude']; ?>" />
-                    </a>
-                <?php
-                }
-                 ?>
-            </div>
-        </div>  
-    </div>
+    <div class="trinh-chieu" ><div class="slider-wrapper theme-default"><div id="slider" class="nivoSlider"> <?php while ($row = mysqli_fetch_assoc($slider)) { ?><a href="<?php echo $row['link']; ?>"><img src="<?php echo $row['hinhanh']; ?>" data-thumb="<?php echo $row['hinhanh']; ?>" data-transition="<?php echo $row['style']; ?>" alt="<?php echo $row['tieude']; ?>" title="<?php echo $row['tieude']; ?>" /></a><?php } ?></div></div></div>
     <!-- CÁC CÔNG TRÌNH KHOA HỌC ĐÃ CÔNG BỐ -->
     <div class="tieudechinh">
         <div class="tentieudechinh" style="width: 281px;">
