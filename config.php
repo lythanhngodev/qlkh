@@ -1,8 +1,8 @@
 <?php 
 	$qlkh = array(
-		'HOST' => 'http://localhost/qlkh/quanly/',
-		'HOSTGOC' => 'http://localhost/qlkh/',
-		'HOSTADMIN' => 'http://localhost/qlkh/admin/'
+		'HOST' => 'http://115.79.120.115:8080/qlkh/quanly/',
+		'HOSTGOC' => 'http://115.79.120.115:8080/qlkh/',
+		'HOSTADMIN' => 'http://115.79.120.115:8080/qlkh/admin/'
 	);
 	class clsKetnoi
 	{
