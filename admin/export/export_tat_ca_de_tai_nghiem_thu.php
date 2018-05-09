@@ -37,7 +37,7 @@ while ($row = mysqli_fetch_row($esql_stqd)) {
     <div class="card-header">
         <h4>Tất cả đề tài đã nghiệm thu</h4>
         <hr>
-        <form action="export/_export_tat_ca_de_tai_nghiem_thu" method="post">
+        <form action="export/_export_tat_ca_de_tai_nghiem_thu.php" method="post">
             <input type="text" name="alldtnt" hidden="hidden" value="<?php echo $_POST['_token']; ?>">
             <button type="submit" class="btn btn-warning"><i class='far fa-file-excel'></i>&ensp;Xuất excel</button>
         </form>
