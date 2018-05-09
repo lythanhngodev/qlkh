@@ -4,6 +4,8 @@
   var _cdt_ = <?php echo json_encode($rcdt); ?>;
   var _lv_ = <?php echo json_encode($rlv); ?>;
   var _lh_ = <?php echo json_encode($rlh); ?>;
+  var _nddv_ = <?php echo json_encode($rnd_dv); ?>;
+  var _ndtd_ = <?php echo json_encode($rnd_td); ?>;
 </script>
   <div class="card cach background-container">
     <div class="row">
@@ -710,14 +712,18 @@ giao kết quả nghiên cứu đến người sử dụng. Phải nêu được
       });
     _data_.forEach(function(data){
       if (data[0]==$('#chonchunhiem').val()) {
-        $('#chonchunhiem').parent().parent('td').parent('tr').find('td:nth-child(2) textarea').val("- "+data[6]+"\n- "+data[3]+"\n- "+data[4]);
+        var td=""; _ndtd_.forEach(function(d){if (d[0]==idnd) {td = d[1];}});
+        var dv=""; _nddv_.forEach(function(d){if (d[0]==idnd) {dv = d[1];}});
+        $('#chonchunhiem').parent().parent('td').parent('tr').find('td:nth-child(2) textarea').val("- "+td+"\n- "+dv+"\n- "+data[3]);
       }
     });
   });
   function chonthanhvien(t){
     _data_.forEach(function(data){
       if (data[0]==t.value) {
-        $(t).parent().parent('td').parent('tr').find('td:nth-child(2) textarea').val("- "+data[6]+"\n- "+data[3]+"\n- "+data[4]);
+        var td=""; _ndtd_.forEach(function(d){if (d[0]==t.value) {td = d[1];}});
+        var dv=""; _nddv_.forEach(function(d){if (d[0]==t.value) {dv = d[1];}});
+        $(t).parent().parent('td').parent('tr').find('td:nth-child(2) textarea').val("- "+td+"\n- "+dv+"\n- "+data[3]);
         return;
       }
     });

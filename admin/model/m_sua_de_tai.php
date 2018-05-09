@@ -36,7 +36,7 @@ function linh_vuc_khoa_hoc($iddt){
 function thanh_vien_de_tai($iddt){
     $ketnoi = new clsKetnoi();
     $conn = $ketnoi->ketnoi();
-    $query = "SELECT tv.IDTV, CONCAT(nd.HO, ' ', nd.TEN) AS HOTEN, nd.TRINHDOCHUYENMON, nd.DONVICONGTAC, nd.DIENTHOAIDD, tv.CONGVIEC,tv.IDND FROM thanhviendetai tv, nguoidung nd WHERE tv.IDND = nd.IDND AND tv.TRACHNHIEM = N'Thành viên' AND tv.IDDT = '$iddt' ORDER BY tv.IDTV ASC ;";
+    $query = "SELECT tv.IDTV, CONCAT(nd.HO, ' ', nd.TEN) AS HOTEN, tv.CONGVIEC,tv.IDND FROM thanhviendetai tv, nguoidung nd WHERE tv.IDND = nd.IDND AND tv.TRACHNHIEM = N'Thành viên' AND tv.IDDT = '$iddt' ORDER BY tv.IDTV ASC ;";
     $result = mysqli_query($conn, $query);
     mysqli_close($conn);
     return $result;
@@ -44,7 +44,7 @@ function thanh_vien_de_tai($iddt){
 function nguoi_dung(){
     $ketnoi = new clsKetnoi();
     $conn = $ketnoi->ketnoi();
-    $query = "SELECT `IDND`, CONCAT(`HO`,' ',`TEN`) as HOTEN, `NGAYSINH`, `DONVICONGTAC`,`DIENTHOAIDD`, `MAIL`,`TRINHDOCHUYENMON` FROM `nguoidung` WHERE `TRANGTHAI` = N'binhthuong'";
+    $query = "SELECT `IDND`, CONCAT(`HO`,' ',`TEN`) as HOTEN, `NGAYSINH`,`DIENTHOAIDD`, `MAIL` FROM `nguoidung` WHERE `TRANGTHAI` = N'binhthuong'";
     $result = mysqli_query($conn, $query);
     mysqli_close($conn);
     return $result;
@@ -93,7 +93,7 @@ function lay_bao_cao_tien_do($iddt){
 function chu_nhiem_de_tai($iddt){
     $ketnoi = new clsKetnoi();
     $conn = $ketnoi->ketnoi();
-    $query = "SELECT tv.IDTV, CONCAT(nd.HO, ' ', nd.TEN) AS HOTEN, nd.TRINHDOCHUYENMON, nd.DONVICONGTAC, nd.DIENTHOAIDD, tv.CONGVIEC,tv.IDND FROM thanhviendetai tv, nguoidung nd WHERE tv.IDND = nd.IDND AND tv.IDDT = '$iddt' ORDER BY tv.IDTV ASC LIMIT 0,1;";
+    $query = "SELECT tv.IDTV, CONCAT(nd.HO, ' ', nd.TEN) AS HOTEN, nd.DIENTHOAIDD, tv.CONGVIEC,tv.IDND FROM thanhviendetai tv, nguoidung nd WHERE tv.IDND = nd.IDND AND tv.IDDT = '$iddt' ORDER BY tv.IDTV ASC LIMIT 0,1;";
     $result = mysqli_query($conn, $query);
     mysqli_close($conn);
     return $result;
@@ -128,6 +128,22 @@ function linh_vuc_khoa_học(){
     $ketnoi = new clsKetnoi();
     $conn = $ketnoi->ketnoi();
     $hoi = "SELECT * FROM `linhvuc`";
+    $dulieu = mysqli_query($conn, $hoi);
+    mysqli_close($conn);
+    return $dulieu;
+}
+function nguoi_dung_don_vi_cong_tac(){
+    $ketnoi = new clsKetnoi();
+    $conn = $ketnoi->ketnoi();
+    $hoi = "SELECT DISTINCT nk.IDND,k.TENKBM FROM khoabomon k, nguoidung_khoabomon nk WHERE k.IDKBM = nk.IDKBM;";
+    $dulieu = mysqli_query($conn, $hoi);
+    mysqli_close($conn);
+    return $dulieu;
+}
+function nguoi_dung_trinh_do_chuyen_mon(){
+    $ketnoi = new clsKetnoi();
+    $conn = $ketnoi->ketnoi();
+    $hoi = "SELECT DISTINCT nt.IDND, td.TENTRINHDO FROM trinhdochuyenmon td, nguoidung_trinhdochuyenmon nt WHERE td.IDTD = nt.IDTD;";
     $dulieu = mysqli_query($conn, $hoi);
     mysqli_close($conn);
     return $dulieu;

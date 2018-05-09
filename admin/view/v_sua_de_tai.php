@@ -1,6 +1,13 @@
 <?php if (!isset($_SESSION["token"])) {include_once ("../../loi404.html");exit();} ?>
-<script type="text/javascript">var _data_ = <?php echo json_encode($rnd); ?>;
-var _tv_ = <?php echo json_encode($rtv); ?>;var _cdt_ = <?php echo json_encode($rcdt); ?>;var _lv_ = <?php echo json_encode($rlv); ?>;var _lh_ = <?php echo json_encode($rlh); ?>;</script>
+<script type="text/javascript">
+    var _data_ = <?php echo json_encode($rnd); ?>;
+    var _tv_ = <?php echo json_encode($rtv); ?>;
+    var _cdt_ = <?php echo json_encode($rcdt); ?>;
+    var _lv_ = <?php echo json_encode($rlv); ?>;
+    var _lh_ = <?php echo json_encode($rlh); ?>;
+    var _nddv_ = <?php echo json_encode($rnd_dv); ?>;
+    var _ndtd_ = <?php echo json_encode($rnd_td); ?>;
+</script>
 <div class="card cach background-container">
     <div class="row">
         <div class="col-md-12">
@@ -496,6 +503,7 @@ var _tv_ = <?php echo json_encode($rtv); ?>;var _cdt_ = <?php echo json_encode($
             for (var j = 0; j< _data_[i].length; j++)
                 (!_data_[i][j]) ? _data_[i][j] = '' : 1;
         var tr=null;
+
         if (_tv_!=null) {
             _tv_.forEach((tv)=>{
                 _data_.forEach((d)=>{
@@ -935,7 +943,9 @@ var _tv_ = <?php echo json_encode($rtv); ?>;var _cdt_ = <?php echo json_encode($
         });
         _data_.forEach(function(data){
           if (data[0]==$('#chonchunhiem').val()) {
-            $('#chonchunhiem').parent('td').parent('tr').find('td:nth-child(2) textarea').val("- "+data[6]+"\n- "+data[3]+"\n- "+data[4]);
+            var td=""; _ndtd_.forEach(function(d){if (d[0]==$('#chonchunhiem').val()) {td = d[1];}});
+            var dv=""; _nddv_.forEach(function(d){if (d[0]==$('#chonchunhiem').val()) {dv = d[1];}});
+            $('#chonchunhiem').parent('td').parent('tr').find('td:nth-child(2) textarea').val("- "+td+"\n- "+dv+"\n- "+data[3]);
           }
         });
     });
@@ -966,7 +976,9 @@ var _tv_ = <?php echo json_encode($rtv); ?>;var _cdt_ = <?php echo json_encode($
     chonthanhvien = t =>{
         _data_.forEach(function(data){
           if (data[0]==t.value) {
-            $(t).parent().parent('td').parent('tr').find('td:nth-child(2) textarea').val("- "+data[6]+"\n- "+data[3]+"\n- "+data[4]);
+            var td=""; _ndtd_.forEach(function(d){if (d[0]==t.value) {td = d[1];}});
+            var dv=""; _nddv_.forEach(function(d){if (d[0]==t.value) {dv = d[1];}});
+            $(t).parent().parent('td').parent('tr').find('td:nth-child(2) textarea').val("- "+td+"\n- "+dv+"\n- "+data[3]);
             return;
           }
         });

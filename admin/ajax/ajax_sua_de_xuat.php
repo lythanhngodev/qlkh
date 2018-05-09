@@ -59,7 +59,6 @@ function suadetai($tendetai,$muctieu,$noidung,$cap,$moisangtao,$thuocchuongtrinh
         WHERE
             IDDT = '$iddt'
     ";
-    //exit();
     if(mysqli_query($conn, $hoi)===TRUE){
         // Thêm loại hình nghiên cứu thuộc đề tài
         $sql = "DELETE FROM `loaihinhnghiencuu` WHERE `IDDT` = '$iddt';";
@@ -84,6 +83,7 @@ function suadetai($tendetai,$muctieu,$noidung,$cap,$moisangtao,$thuocchuongtrinh
                 
             }
         }
+        echo $sql;
         // Xóa tổ chức thanh gia đề tài
         $sql.= "DELETE FROM `tochucthamgia` WHERE `IDDT` = '$iddt';";
         // Thêm tổ chức tham gia đề tài

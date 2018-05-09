@@ -63,35 +63,47 @@ if (!isset($_SESSION["token"])) {include_once ("../../loi404.html");exit();}
                                             <label for="category" class="font-weight-bold" >Chức danh giảng viên</label>
                                             <select class="form-control" id="chucdanhgiangvien">
                                                 <option value=''>---</option>
-                                            <?php while ($row = mysqli_fetch_assoc($cdgv)) {
-                                                if ($row['TENCHUCDANH']==$nd['CHUCDANHGIANGVIEN'])
-                                                    echo "<option value='".$row['TENCHUCDANH']."' selected>".$row['TENCHUCDANH']."</option>";
+                                            <?php 
+                                            $ndcdgv = lay_nguoi_dung_chuc_danh_giang_vien($idnd);
+                                            $rndcdgv = mysqli_fetch_row($ndcdgv);
+                                            $_ndcdgv = $rndcdgv[0];
+                                            while ($row = mysqli_fetch_assoc($cdgv)) {
+                                                if ($row['IDCD']==$_ndcdgv)
+                                                    echo "<option value='".$row['IDCD']."' selected>".$row['TENCHUCDANH']."</option>";
                                                 else
-                                                    echo "<option value='".$row['TENCHUCDANH']."'>".$row['TENCHUCDANH']."</option>";
+                                                    echo "<option value='".$row['IDCD']."'>".$row['TENCHUCDANH']."</option>";
                                             } ?>
                                             </select>
                                         </div>
                                         <div class="form-group col-md-6">
                                             <label for="category" class="font-weight-bold" >Trình độ chuyên môn</label>
                                             <select class="form-control" id="trinhdochuyenmon">
-                                                <option value=''>---</option>
-                                            <?php while ($row = mysqli_fetch_assoc($tdcm)) {
-                                                if ($row['TENTRINHDO']==$nd['TRINHDOCHUYENMON'])
-                                                    echo "<option value='".$row['TENTRINHDO']."' selected>".$row['TENTRINHDO']."</option>";
+                                                <option value='0'>---</option>
+                                            <?php 
+                                            $ndtdcm = lay_nguoi_dung_trinh_do_chuyen_mon($idnd);
+                                            $rndtdcm = mysqli_fetch_row($ndtdcm);
+                                            $_ndtdcm = $rndtdcm[0];
+                                            while ($row = mysqli_fetch_assoc($tdcm)) {
+                                                if ($row['IDTD']==$_ndtdcm)
+                                                    echo "<option value='".$row['IDTD']."' selected>".$row['TENTRINHDO']."</option>";
                                                 else
-                                                    echo "<option value='".$row['TENTRINHDO']."'>".$row['TENTRINHDO']."</option>";
+                                                    echo "<option value='".$row['IDTD']."'>".$row['TENTRINHDO']."</option>";
                                             } ?>
                                             </select>
                                         </div>
                                         <div class="form-group col-md-6">
                                             <label for="category" class="font-weight-bold" >Học vị cao nhất</label>
                                             <select class="form-control" id="hocvicaonhat">
-                                                <option value=''>---</option>
-                                            <?php while ($row = mysqli_fetch_assoc($hv)) {
-                                                if ($row['TENHOCVI']==$nd['HOCVICAONHAT'])
-                                                    echo "<option value='".$row['TENHOCVI']."' selected>".$row['TENHOCVI']."</option>";
+                                                <option value='0'>---</option>
+                                            <?php 
+                                            $ndhv = lay_nguoi_dung_hoc_vi($idnd);
+                                            $rndhv = mysqli_fetch_row($ndhv);
+                                            $_ndhv = $rndhv[0];
+                                            while ($row = mysqli_fetch_assoc($hv)) {
+                                                if ($row['IDHV']==$_ndhv)
+                                                    echo "<option value='".$row['IDHV']."' selected>".$row['TENHOCVI']."</option>";
                                                 else
-                                                    echo "<option value='".$row['TENHOCVI']."'>".$row['TENHOCVI']."</option>";
+                                                    echo "<option value='".$row['IDHV']."'>".$row['TENHOCVI']."</option>";
                                             } ?>
                                             </select>
                                         </div>
@@ -102,12 +114,16 @@ if (!isset($_SESSION["token"])) {include_once ("../../loi404.html");exit();}
                                         <div class="form-group col-md-6">
                                             <label for="category" class="font-weight-bold" >Chức danh khoa học cao nhất</label>
                                             <select class="form-control" id="chucdanhkhoahoc">
-                                                <option value=''>---</option>
-                                            <?php while ($row = mysqli_fetch_assoc($cdkh)) {
-                                                if ($row['TENCHUCDANH']==$nd['CHUCDANHKHOAHOC'])
-                                                    echo "<option value='".$row['TENCHUCDANH']."' selected>".$row['TENCHUCDANH']."</option>";
+                                                <option value='0'>---</option>
+                                            <?php 
+                                            $ndcd = lay_nguoi_dung_chuc_danh_khoa_hoc($idnd);
+                                            $rndcd = mysqli_fetch_row($ndcd);
+                                            $_ndcd = $rndcd[0];
+                                            while ($row = mysqli_fetch_assoc($cdkh)) {
+                                                if ($row['IDCD']==$_ndcd)
+                                                    echo "<option value='".$row['IDCD']."' selected>".$row['TENCHUCDANH']."</option>";
                                                 else
-                                                    echo "<option value='".$row['TENCHUCDANH']."'>".$row['TENCHUCDANH']."</option>";
+                                                    echo "<option value='".$row['IDCD']."'>".$row['TENCHUCDANH']."</option>";
                                             } ?>
                                             </select>
                                         </div>
@@ -118,24 +134,32 @@ if (!isset($_SESSION["token"])) {include_once ("../../loi404.html");exit();}
                                         <div class="form-group col-md-12">
                                             <label for="category" class="font-weight-bold" >Chức vụ (hiện tại hoặc trước khi nghỉ hưu)</label>
                                             <select class="form-control" id="chucvu">
-                                                <option value=''>---</option>
-                                            <?php while ($row = mysqli_fetch_assoc($cv)) {
-                                                if ($row['TENCHUCVU']==$nd['CHUCVU'])
-                                                    echo "<option value='".$row['TENCHUCVU']."' selected>".$row['TENCHUCVU']."</option>";
+                                                <option value='0'>---</option>
+                                            <?php 
+                                            $ndcv = lay_nguoi_dung_chuc_vu($idnd);
+                                            $rndcv = mysqli_fetch_row($ndcv);
+                                            $_ndcv = $rndcv[0];
+                                            while ($row = mysqli_fetch_assoc($cv)) {
+                                                if ($row['IDCV']==$_ndcv)
+                                                    echo "<option value='".$row['IDCV']."' selected>".$row['TENCHUCVU']."</option>";
                                                 else
-                                                    echo "<option value='".$row['TENCHUCVU']."'>".$row['TENCHUCVU']."</option>";
+                                                    echo "<option value='".$row['IDCV']."'>".$row['TENCHUCVU']."</option>";
                                             } ?>
                                             </select>
                                         </div>
                                         <div class="form-group col-md-12">
                                             <label for="category" class="font-weight-bold" >Đơn vị công tác (hiện tại hoặc trước khi nghỉ hưu)</label>
                                             <select class="form-control" id="donvicongtac">
-                                                <option value=''>---</option>
-                                            <?php while ($row = mysqli_fetch_assoc($kbm)) {
-                                                if ($row['TENKBM']==$nd['DONVICONGTAC'])
-                                                    echo "<option value='".$row['TENKBM']."' selected>".$row['TENKBM']."</option>";
+                                                <option value='0'>---</option>
+                                            <?php 
+                                            $ndkbm = lay_nguoi_dung_don_vi_cong_tac($idnd);
+                                            $rndkbm = mysqli_fetch_row($ndkbm);
+                                            $_ndkbm = $rndkbm[0];
+                                            while ($row = mysqli_fetch_assoc($kbm)) {
+                                                if ($row['IDKBM']==$_ndkbm)
+                                                    echo "<option value='".$row['IDKBM']."' selected>".$row['TENKBM']."</option>";
                                                 else
-                                                    echo "<option value='".$row['TENKBM']."'>".$row['TENKBM']."</option>";
+                                                    echo "<option value='".$row['IDKBM']."'>".$row['TENKBM']."</option>";
                                             } ?>
                                             </select>
                                         </div>
@@ -494,14 +518,6 @@ if (!isset($_SESSION["token"])) {include_once ("../../loi404.html");exit();}
             ten = hoten.substring(hoten.lastIndexOf(' ')+1,hoten.length);
             if(jQuery.isEmptyObject(ngaysinh)){
                 khongthanhcong('Chưa chọn ngày sinh');
-                return;
-            }
-            if(!quequan) {
-                khongthanhcong('Chưa nhập quê quán');
-                return;
-            }
-            if(!dienthoaidd) {
-                khongthanhcong('Chưa nhập điện thoại di động');
                 return;
             }
             // Xét thông tin đại học

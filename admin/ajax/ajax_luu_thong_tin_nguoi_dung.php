@@ -63,12 +63,8 @@ $result = Array(
             `NOISINH`='$noisinh',
             `QUEQUAN`='$quequan',
             `DANTOC`='$dantoc',
-            `HOCVICAONHAT`='$hocvicaonhat',
             `NAMNUOCHOCVI`='$namnuocnhanhocvi',
-            `CHUCDANHKHOAHOC`='$chucdanhkhoahoc',
             `NAMBONHIEM`='$nambonhiem',
-            `CHUCVU`='$chucvu',
-            `DONVICONGTAC`='$donvicongtac',
             `CHOORIENG`='$choorieng',
             `DIENTHOAICQ`='$dienthoaicq',
             `DIENTHOAINR`='$dienthoainr',
@@ -81,12 +77,27 @@ $result = Array(
             `TIENSICHUYENNGANH`='$tiensichuyennganh',
             `NAMCAPBANGTSCN2`='$namcapbangtscn2',
             `NOIDAOTAOTSCN2`='$noidaotaotscn2',
-            `TENLUANAN`='$tenluanan',
-            `CHUCDANHGIANGVIEN`='$chucdanhgiangvien',
-            `TRINHDOCHUYENMON`='$trinhdochuyenmon'
+            `TENLUANAN`='$tenluanan'
         WHERE 
             `IDND` = '$idnd';
     ";
+    $hoi.="DELETE FROM nguoidung_chucdanhgiangvien WHERE IDND = '$idnd';";
+    $hoi.="INSERT INTO nguoidung_chucdanhgiangvien (IDND, IDCD) VALUES ('$idnd', '$chucdanhgiangvien');";
+
+    $hoi.="DELETE FROM nguoidung_trinhdochuyenmon WHERE IDND = '$idnd';";
+    $hoi.="INSERT INTO nguoidung_trinhdochuyenmon (IDND, IDTD) VALUES ('$idnd', '$trinhdochuyenmon');";
+
+    $hoi.="DELETE FROM nguoidung_hocvi WHERE IDND = '$idnd';";
+    $hoi.="INSERT INTO nguoidung_hocvi (IDND, IDHV) VALUES ('$idnd', '$hocvicaonhat');";
+
+    $hoi.="DELETE FROM nguoidung_chucdanhkhoahoc WHERE IDND = '$idnd';";
+    $hoi.="INSERT INTO nguoidung_chucdanhkhoahoc (IDND, IDCD) VALUES ('$idnd', '$chucdanhkhoahoc');";
+
+    $hoi.="DELETE FROM nguoidung_chucvu WHERE IDND = '$idnd';";
+    $hoi.="INSERT INTO nguoidung_chucvu (IDND, IDCV) VALUES ('$idnd', '$chucvu');";
+
+    $hoi.="DELETE FROM nguoidung_khoabomon WHERE IDND = '$idnd';";
+    $hoi.="INSERT INTO nguoidung_khoabomon (IDND, IDKBM) VALUES ('$idnd', '$donvicongtac');";
     $hoi.="DELETE FROM `daihoc` WHERE `IDND` = '$idnd';";
     if($bdt!=null){
         for ($i=0; $i < count($bdt) ; $i++) { 

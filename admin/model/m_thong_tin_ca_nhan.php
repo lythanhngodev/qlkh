@@ -97,4 +97,52 @@ function lay_khoa_phong(){
     mysqli_close($conn);
     return $result;
 }
+function lay_nguoi_dung_chuc_danh_giang_vien($idnd){
+    $ketnoi = new clsKetnoi();
+    $conn = $ketnoi->ketnoi();
+    $query = "SELECT IDCD FROM nguoidung_chucdanhgiangvien WHERE IDND = '$idnd';";
+    $result = mysqli_query($conn, $query);
+    mysqli_close($conn);
+    return $result;
+}
+function lay_nguoi_dung_trinh_do_chuyen_mon($idnd){
+    $ketnoi = new clsKetnoi();
+    $conn = $ketnoi->ketnoi();
+    $query = "SELECT IDTD FROM nguoidung_trinhdochuyenmon WHERE IDND = '$idnd';";
+    $result = mysqli_query($conn, $query);
+    mysqli_close($conn);
+    return $result;
+}
+function lay_nguoi_dung_hoc_vi($idnd){
+    $ketnoi = new clsKetnoi();
+    $conn = $ketnoi->ketnoi();
+    $query = "SELECT IDHV FROM nguoidung_hocvi WHERE IDND = '$idnd';";
+    $result = mysqli_query($conn, $query);
+    mysqli_close($conn);
+    return $result;
+}
+function lay_nguoi_dung_chuc_danh_khoa_hoc($idnd){
+    $ketnoi = new clsKetnoi();
+    $conn = $ketnoi->ketnoi();
+    $query = "SELECT IDCD FROM nguoidung_chucdanhkhoahoc WHERE IDND = '$idnd';";
+    $result = mysqli_query($conn, $query);
+    mysqli_close($conn);
+    return $result;
+}
+function lay_nguoi_dung_chuc_vu($idnd){
+    $ketnoi = new clsKetnoi();
+    $conn = $ketnoi->ketnoi();
+    $query = "SELECT IDCV FROM nguoidung_chucvu WHERE IDND = '$idnd';";
+    $result = mysqli_query($conn, $query);
+    mysqli_close($conn);
+    return $result;
+}
+function lay_nguoi_dung_don_vi_cong_tac($idnd){
+    $ketnoi = new clsKetnoi();
+    $conn = $ketnoi->ketnoi();
+    $query = "SELECT nk.IDKBM FROM nguoidung_khoabomon nk WHERE nk.IDND = '$idnd';";
+    $result = mysqli_query($conn, $query);
+    mysqli_close($conn);
+    return $result;
+}
 ?>
