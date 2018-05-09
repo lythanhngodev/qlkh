@@ -2215,6 +2215,7 @@
     <column id="503" parent="284" name="HINH">
       <Position>32</Position>
       <DataType>varchar(1000)|0</DataType>
+      <DefaultExpression>&apos;user.png&apos;</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
     <column id="504" parent="284" name="TRANGTHAI">

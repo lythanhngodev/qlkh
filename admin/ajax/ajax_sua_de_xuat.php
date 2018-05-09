@@ -20,7 +20,23 @@ if (isset($_SESSION['tdn']) && isset($_SESSION['pas'])) {
 function suadetai($tendetai,$muctieu,$noidung,$cap,$moisangtao,$thuocchuongtrinh,$sucanthiet,$tinhhinhnghiencuu,$nghiencuulienquan,$phuongphapkythuat,$kinhphingansach,$kinhphinguonkhac,$thangthuchien,$thangnambatdau,$thangnamketthuc,$ketqua,$loaihinhnghiencuu,$linhvuckhoahoc,$thanhvien,$tochucthamgia,$tiendodukien,$baocaotiendo,$kinhphichitiet,$idnd,$iddt){
     $ketnoi = new clsKetnoi();
     $conn = $ketnoi->ketnoi();
-    
+    $idnd=mysqli_real_escape_string($conn,$idnd);
+    $tendetai=mysqli_real_escape_string($conn,$tendetai);
+    $muctieu=mysqli_real_escape_string($conn,$muctieu);
+    $noidung=mysqli_real_escape_string($conn,$noidung);
+    $cap=mysqli_real_escape_string($conn,$cap);
+    $moisangtao=mysqli_real_escape_string($conn,$moisangtao);
+    $thuocchuongtrinh=mysqli_real_escape_string($conn,$thuocchuongtrinh);
+    $sucanthiet=mysqli_real_escape_string($conn,$sucanthiet);
+    $tinhhinhnghiencuu=mysqli_real_escape_string($conn,$tinhhinhnghiencuu);
+    $nghiencuulienquan=mysqli_real_escape_string($conn,$nghiencuulienquan);
+    $phuongphapkythuat=mysqli_real_escape_string($conn,$phuongphapkythuat);
+    $kinhphingansach=mysqli_real_escape_string($conn,$kinhphingansach);
+    $kinhphinguonkhac=mysqli_real_escape_string($conn,$kinhphinguonkhac);
+    $thangthuchien=mysqli_real_escape_string($conn,$thangthuchien);
+    $thangnambatdau=mysqli_real_escape_string($conn,$thangnambatdau);
+    $thangnamketthuc=mysqli_real_escape_string($conn,$thangnamketthuc);
+    $ketqua=mysqli_real_escape_string($conn,$ketqua);
     $hoi = "
         UPDATE `detai` 
         SET
@@ -47,15 +63,14 @@ function suadetai($tendetai,$muctieu,$noidung,$cap,$moisangtao,$thuocchuongtrinh
     if(mysqli_query($conn, $hoi)===TRUE){
         // Thêm loại hình nghiên cứu thuộc đề tài
         $sql = "DELETE FROM `loaihinhnghiencuu` WHERE `IDDT` = '$iddt';";
-        foreach ($loaihinhnghiencuu as $value) {
-            //mysqli_query($conn, $x_loaihinh);
-            $sql.= "INSERT INTO `loaihinhnghiencuu`(`IDDT`, `TENLH`) VALUES ('$iddt','$value');";
-            //mysqli_query($conn, $q_loaihinh);
+        // Thêm lĩnh vựa khoa học thuộc đề tài
+        for ($i=0; $i < count($loaihinhnghiencuu); $i++) { 
+            $sql.= "INSERT INTO `loaihinhnghiencuu`(`IDDT`, `TENLH`) VALUES ('$iddt','".$loaihinhnghiencuu[$i]."');";
         }
         $sql.= "DELETE FROM `linhvuckhoahoc` WHERE `IDDT` = '$iddt';";
         // Thêm lĩnh vựa khoa học thuộc đề tài
-        foreach ($linhvuckhoahoc as $value) {
-            $sql.= "INSERT INTO `linhvuckhoahoc`(`IDDT`, `TENLV`) VALUES ('$iddt','$value');";
+        for ($i=0; $i < count($linhvuckhoahoc); $i++) { 
+            $sql.= "INSERT INTO `linhvuckhoahoc`(`IDDT`, `TENLV`) VALUES ('$iddt','".$linhvuckhoahoc[$i]."');";
         }
         // Xóa thanh vien de tai
         $sql.= "DELETE FROM `thanhviendetai` WHERE `IDDT` = '$iddt';";

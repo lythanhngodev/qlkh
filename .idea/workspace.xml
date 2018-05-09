@@ -1,7 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e784096a-f6cb-467c-8cbe-b1eae1f3bf23" name="Default" comment="" />
+    <list default="true" id="e784096a-f6cb-467c-8cbe-b1eae1f3bf23" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/7100f002-45e7-4ecd-b4f9-feb8543b2f12.xml" afterPath="$PROJECT_DIR$/.idea/dataSources/7100f002-45e7-4ecd-b4f9-feb8543b2f12.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/admin/ajax/ajax_sua_de_xuat.php" afterPath="$PROJECT_DIR$/admin/ajax/ajax_sua_de_xuat.php" />
+      <change beforePath="$PROJECT_DIR$/admin/ajax/ajax_them_de_tai_da_nghiem_thu.php" afterPath="$PROJECT_DIR$/admin/ajax/ajax_them_de_tai_da_nghiem_thu.php" />
+      <change beforePath="$PROJECT_DIR$/admin/ajax/ajax_them_de_xuat.php" afterPath="$PROJECT_DIR$/admin/ajax/ajax_them_de_xuat.php" />
+      <change beforePath="$PROJECT_DIR$/admin/control/c_den_han_bai_cao.php" afterPath="$PROJECT_DIR$/admin/control/c_den_han_bai_cao.php" />
+      <change beforePath="$PROJECT_DIR$/admin/control/c_sua_de_tai.php" afterPath="$PROJECT_DIR$/admin/control/c_sua_de_tai.php" />
+      <change beforePath="$PROJECT_DIR$/admin/control/c_them_de_tai_da_nghiem_thu.php" afterPath="$PROJECT_DIR$/admin/control/c_them_de_tai_da_nghiem_thu.php" />
+      <change beforePath="$PROJECT_DIR$/admin/dangky.php" afterPath="$PROJECT_DIR$/admin/dangky.php" />
+      <change beforePath="$PROJECT_DIR$/admin/index.php" afterPath="$PROJECT_DIR$/admin/index.php" />
+      <change beforePath="$PROJECT_DIR$/admin/model/m_den_han_bao_cao.php" afterPath="$PROJECT_DIR$/admin/model/m_den_han_bao_cao.php" />
+      <change beforePath="$PROJECT_DIR$/admin/model/m_quan_ly_de_tai.php" afterPath="$PROJECT_DIR$/admin/model/m_quan_ly_de_tai.php" />
+      <change beforePath="$PROJECT_DIR$/admin/model/m_them_de_tai_da_nghiem_thu.php" afterPath="$PROJECT_DIR$/admin/model/m_them_de_tai_da_nghiem_thu.php" />
+      <change beforePath="$PROJECT_DIR$/admin/view/v_den_han_bao_cao.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/admin/view/v_quan_ly_de_tai_du_an.php" afterPath="$PROJECT_DIR$/admin/view/v_quan_ly_de_tai_du_an.php" />
+      <change beforePath="$PROJECT_DIR$/admin/view/v_sua_de_tai.php" afterPath="$PROJECT_DIR$/admin/view/v_sua_de_tai.php" />
+      <change beforePath="$PROJECT_DIR$/admin/view/v_them_de_tai_da_nghiem_thu.php" afterPath="$PROJECT_DIR$/admin/view/v_them_de_tai_da_nghiem_thu.php" />
+      <change beforePath="$PROJECT_DIR$/admin/view/v_them_de_xuat.php" afterPath="$PROJECT_DIR$/admin/view/v_them_de_xuat.php" />
+      <change beforePath="$PROJECT_DIR$/config.php" afterPath="$PROJECT_DIR$/config.php" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -34,20 +54,6 @@
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="nckh: schema" type="c314c289:MysqlImplModel$Schema" />
       </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="nckh@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="nckh: schema" type="c314c289:MysqlImplModel$Schema" />
-        <item name="loaitaikhoan: table" type="98d5ac3d:MysqlImplModel$Table" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="nckh@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="nckh: schema" type="c314c289:MysqlImplModel$Schema" />
-        <item name="loaitaikhoan_nguoidung: table" type="98d5ac3d:MysqlImplModel$Table" />
-      </path>
     </expand>
     <select />
   </component>
@@ -56,8 +62,8 @@
       <file leaf-file-name="console_2.sql" pinned="false" current-in-tab="true">
         <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/7100f002-45e7-4ecd-b4f9-feb8543b2f12/console_2.sql">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="5" column="64" lean-forward="true" selection-start-line="5" selection-start-column="64" selection-end-line="5" selection-end-column="64" />
+            <state relative-caret-position="297">
+              <caret line="11" column="81" lean-forward="false" selection-start-line="11" selection-start-column="81" selection-end-line="11" selection-end-column="81" />
               <folding />
             </state>
           </provider>
@@ -76,8 +82,9 @@
         <option value="$PROJECT_DIR$/admin/control/c_quan_ly_chung.php" />
         <option value="$PROJECT_DIR$/admin/view/v_quan_ly_chung.php" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/7100f002-45e7-4ecd-b4f9-feb8543b2f12/console_1.sql" />
-        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/7100f002-45e7-4ecd-b4f9-feb8543b2f12/console_2.sql" />
         <option value="$PROJECT_DIR$/admin/ajax/ajax_thay_doi_quyen_truy_cap.php" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/7100f002-45e7-4ecd-b4f9-feb8543b2f12/console_3.sql" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/7100f002-45e7-4ecd-b4f9-feb8543b2f12/console_2.sql" />
       </list>
     </option>
   </component>
@@ -213,6 +220,8 @@
       <workItem from="1525790027611" duration="3939000" />
       <workItem from="1525818123627" duration="6745000" />
       <workItem from="1525832932292" duration="263000" />
+      <workItem from="1525837838942" duration="1448000" />
+      <workItem from="1525849878889" duration="5724000" />
     </task>
     <task id="LOCAL-00001" summary="Start up">
       <created>1525824037964</created>
@@ -232,7 +241,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10947000" />
+    <option name="totallyTimeSpent" value="18119000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="32" width="1936" height="1056" extended-state="6" />
@@ -244,8 +253,8 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2563536" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15511727" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2563536" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.15831557" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2531983" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -278,6 +287,22 @@
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/7100f002-45e7-4ecd-b4f9-feb8543b2f12/console_2.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/7100f002-45e7-4ecd-b4f9-feb8543b2f12/console_2.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/7100f002-45e7-4ecd-b4f9-feb8543b2f12/console_2.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
           <caret line="0" column="79" lean-forward="false" selection-start-line="0" selection-start-column="70" selection-end-line="0" selection-end-column="79" />
           <folding />
         </state>
@@ -287,9 +312,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="432">
           <caret line="16" column="12" lean-forward="false" selection-start-line="16" selection-start-column="12" selection-end-line="16" selection-end-column="12" />
-          <folding>
-            <marker date="1525826870799" expanded="true" signature="727:842" ph="UPDATE loaitaikhoan_nguoidung... " />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -412,6 +434,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/admin/ajax/ajax_thay_doi_quyen_truy_cap.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="353">
+          <caret line="24" column="12" lean-forward="false" selection-start-line="24" selection-start-column="12" selection-end-line="24" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
     <entry file="das://table:/f683da9/7100f002-45e7-4ecd-b4f9-feb8543b2f12/nckh.loaitaikhoan">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
@@ -419,13 +448,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/admin/ajax/ajax_thay_doi_quyen_truy_cap.php">
+    <entry file="das://table:/f683da9/7100f002-45e7-4ecd-b4f9-feb8543b2f12/nckh.capbaibao">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/7100f002-45e7-4ecd-b4f9-feb8543b2f12/console_3.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="353">
-          <caret line="24" column="12" lean-forward="false" selection-start-line="24" selection-start-column="12" selection-end-line="24" selection-end-column="12" />
-          <folding>
-            <marker date="1525826870799" expanded="true" signature="727:842" ph="UPDATE loaitaikhoan_nguoidung... " />
-          </folding>
+        <state relative-caret-position="270">
+          <caret line="10" column="209" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="10" selection-end-column="209" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -436,10 +470,70 @@
         </state>
       </provider>
     </entry>
+    <entry file="das://table:/f683da9/7100f002-45e7-4ecd-b4f9-feb8543b2f12/nckh.nguoidung_khoabomon">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://table:/f683da9/7100f002-45e7-4ecd-b4f9-feb8543b2f12/nckh.linhvuckhoahoc">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://table:/f683da9/7100f002-45e7-4ecd-b4f9-feb8543b2f12/nckh.loaihinh">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/ajax/ajax_sua_de_xuat.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="70" column="46" lean-forward="false" selection-start-line="70" selection-start-column="46" selection-end-line="70" selection-end-column="46" />
+          <folding>
+            <marker date="1525857067692" expanded="true" signature="1984:2749" ph="UPDATE `detai`... " />
+            <marker date="1525857067692" expanded="true" signature="2879:2933" ph="DELETE FROM `loaihinhnghiencuu`... " />
+            <marker date="1525857067692" expanded="true" signature="3064:3158" ph="INSERT INTO `loaihinhnghiencuu`... " />
+            <marker date="1525857067692" expanded="true" signature="3188:3239" ph="DELETE FROM `linhvuckhoahoc`... " />
+            <marker date="1525857067692" expanded="true" signature="3367:3455" ph="INSERT INTO `linhvuckhoahoc`... " />
+            <marker date="1525857067692" expanded="true" signature="3518:3569" ph="DELETE FROM `thanhviendetai`... " />
+            <marker date="1525857067692" expanded="true" signature="3748:3895" ph="INSERT INTO `thanhviendetai`... " />
+            <marker date="1525857067692" expanded="true" signature="3948:4096" ph="INSERT INTO `thanhviendetai`... " />
+            <marker date="1525857067692" expanded="true" signature="4197:4247" ph="DELETE FROM `tochucthamgia`... " />
+            <marker date="1525857067692" expanded="true" signature="4403:4582" ph="INSERT INTO `tochucthamgia`... " />
+            <marker date="1525857067692" expanded="true" signature="4649:4698" ph="DELETE FROM `tiendodukien`... " />
+            <marker date="1525857067692" expanded="true" signature="4813:5023" ph="INSERT INTO `tiendodukien`... " />
+            <marker date="1525857067692" expanded="true" signature="5084:5133" ph="DELETE FROM `baocaotiendo`... " />
+            <marker date="1525857067692" expanded="true" signature="5287:5487" ph="INSERT INTO `baocaotiendo`... " />
+            <marker date="1525857067692" expanded="true" signature="5555:5599" ph="DELETE FROM `kinhphi`... " />
+            <marker date="1525857067692" expanded="true" signature="5974:6129" ph="INSERT INTO `kinhphi`... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://table:/f683da9/7100f002-45e7-4ecd-b4f9-feb8543b2f12/nckh.detai">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://table:/f683da9/7100f002-45e7-4ecd-b4f9-feb8543b2f12/nckh.thanhviendetai">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/7100f002-45e7-4ecd-b4f9-feb8543b2f12/console_2.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="5" column="64" lean-forward="true" selection-start-line="5" selection-start-column="64" selection-end-line="5" selection-end-column="64" />
+        <state relative-caret-position="297">
+          <caret line="11" column="81" lean-forward="false" selection-start-line="11" selection-start-column="81" selection-end-line="11" selection-end-column="81" />
           <folding />
         </state>
       </provider>

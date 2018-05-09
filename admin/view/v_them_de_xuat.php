@@ -324,7 +324,7 @@ giao kết quả nghiên cứu đến người sử dụng. Phải nêu được
           </div>
           <div class="card-footer">
             <div class="pull-right">
-              <button type="button" class="btn btn-primary" id="themdetai"><i class="fas fa-save"></i>&nbsp;&nbsp;Lưu đề xuất</button>
+              <button type="button" class="btn btn-primary" id="themdetai"><i class="fas fa-save"></i>&nbsp;&nbsp;Lưu đề tài</button>
             </div>
           </div>
         </div>
@@ -535,6 +535,7 @@ giao kết quả nghiên cứu đến người sử dụng. Phải nêu được
               khongthanhcong('Chưa chọn lĩnh vực khoa học');
               return;
         }
+        
         // Xét thành viên tham gia đề tài
           //xóa hàng rỗng
           var btv = [];

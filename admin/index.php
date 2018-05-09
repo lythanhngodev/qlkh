@@ -33,6 +33,7 @@ $_SESSION["token"] = $token;
                   <h5 class="sidenav-heading">NGHIÊN CỨU KHOA HỌC</h5>
                   <ul id="side-admin-menu" class="side-menu list-unstyled">
                       <li id="quanlydetaiduan"><a href="?p=quanlydetaiduan"> <i class="fab fa-accusoft"></i>&nbsp;&nbsp;Quản lý đề tài - dự án</a></li>
+                      <li id="quanlydetai"><a href="?p=quanlydetai"> <i class="fas fa-external-link-alt"></i>&nbsp;&nbsp;Quản lý đề tài của tôi</a></li>
                       <li id="themdetaidanghiemthu"><a href="?p=themdetaidanghiemthu"> <i class="fas fa-plus"></i>&nbsp;&nbsp;Nhập đề tài - dự án đã nghiệm thu</a></li>
                       <li id="denhanbaocao"><a href="?p=denhanbaocao"> <i class="far fa-clock"></i>&nbsp;&nbsp;Đến hạn báo cáo</a></li>
                       <li id="tretiendo"><a href="?p=tretiendo"> <i class="fab fa-audible"></i>&nbsp;&nbsp;Trễ tiến độ</a></li>
@@ -79,8 +80,10 @@ $_SESSION["token"] = $token;
                   </ul>
               </div>
           <?php } else { ?>
-            <li id="quanlydetai"><a href="?p=quanlydetai"> <i class="fas fa-external-link-alt"></i>&nbsp;&nbsp;Quản lý đề tài</a></li>
+            <li id="quanlydetai"><a href="?p=quanlydetai"> <i class="fas fa-external-link-alt"></i>&nbsp;&nbsp;Quản lý đề tài của tôi</a></li>
             <li id="themdetaidanghiemthu"><a href="?p=themdetaidanghiemthu"> <i class="fas fa-plus"></i>&nbsp;&nbsp;Nhập đề tài - dự án đã nghiệm thu</a></li>
+            <li id="denhanbaocao"><a href="?p=denhanbaocao"> <i class="far fa-clock"></i>&nbsp;&nbsp;Đến hạn báo cáo</a></li>
+            <li id="tretiendo"><a href="?p=tretiendo"> <i class="fab fa-audible"></i>&nbsp;&nbsp;Trễ tiến độ</a></li>
             <div class="admin-menu">
                   <h5 class="sidenav-heading">Báo khoa học</h5>
                   <ul id="side-admin-menu" class="side-menu list-unstyled">

@@ -1,5 +1,6 @@
 <?php if (!isset($_SESSION["token"])) {include_once ("../../loi404.html");exit();} ?>
-<script type="text/javascript">var _data_ = <?php echo json_encode($rnd); ?>;var _tv_ = <?php echo json_encode($rtv); ?>;var _cdt_ = <?php echo json_encode($rcdt); ?>;var _lv_ = <?php echo json_encode($rlv); ?>;var _lh_ = <?php echo json_encode($rlh); ?>;</script>
+<script type="text/javascript">var _data_ = <?php echo json_encode($rnd); ?>;
+var _tv_ = <?php echo json_encode($rtv); ?>;var _cdt_ = <?php echo json_encode($rcdt); ?>;var _lv_ = <?php echo json_encode($rlv); ?>;var _lh_ = <?php echo json_encode($rlh); ?>;</script>
 <div class="card cach background-container">
     <div class="row">
         <div class="col-md-12">
@@ -495,17 +496,19 @@
             for (var j = 0; j< _data_[i].length; j++)
                 (!_data_[i][j]) ? _data_[i][j] = '' : 1;
         var tr=null;
-        _tv_.forEach((tv)=>{
-            _data_.forEach((d)=>{
-                if (tv[6]==d[0]) {
-                    var option = "<option value=''>Chọn thành viên</option>";
-                        _data_.forEach((i)=>{
-                          (tv[6]==i[0]) ? option+="<option value='"+i[0]+"' selected>"+i[1]+" "+i[2]+"</option>" : option+="<option value='"+i[0]+"'>"+i[1]+" "+i[2]+"</option>";
-                        });
-                    tr+="<tr><td><select class='form-control select-chon'>"+option+"</select></td><td><textarea class='form-control' rows='4' readonly>"+"- "+d[6]+"\n- "+d[3]+"\n- "+d[4]+"</textarea></td><td><textarea class='form-control' rows='4'>"+tv[5]+"</textarea></td><td class='giua'><button class='xoathanhvien'><i class='fas fa-times do'></i></button></td></tr>";
-                }
+        if (_tv_!=null) {
+            _tv_.forEach((tv)=>{
+                _data_.forEach((d)=>{
+                    if (tv[6]==d[0]) {
+                        var option = "<option value=''>Chọn thành viên</option>";
+                            _data_.forEach((i)=>{
+                              (tv[6]==i[0]) ? option+="<option value='"+i[0]+"' selected>"+i[1]+" "+i[2]+"</option>" : option+="<option value='"+i[0]+"'>"+i[1]+" "+i[2]+"</option>";
+                            });
+                        tr+="<tr><td><select class='form-control select-chon'>"+option+"</select></td><td><textarea class='form-control' rows='4' readonly>"+"- "+d[6]+"\n- "+d[3]+"\n- "+d[4]+"</textarea></td><td><textarea class='form-control' rows='4'>"+tv[5]+"</textarea></td><td class='giua'><button class='xoathanhvien'><i class='fas fa-times do'></i></button></td></tr>";
+                    }
+                });
             });
-        });
+        }
         $('#bangthanhvien').append(tr);
         $('.select-chon').addClass('selectpicker');
         $('.selectpicker').selectpicker({ liveSearch: true });

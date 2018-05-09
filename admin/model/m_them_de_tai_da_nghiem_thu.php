@@ -9,4 +9,28 @@ function nguoi_dung(){
     mysqli_close($conn);
     return $dulieu;
 }
+function cap_de_tai(){
+    $ketnoi = new clsKetnoi();
+    $conn = $ketnoi->ketnoi();
+    $hoi = "SELECT * FROM `capdetai`";
+    $dulieu = mysqli_query($conn, $hoi);
+    mysqli_close($conn);
+    return $dulieu;
+}
+function loai_hinh(){
+    $ketnoi = new clsKetnoi();
+    $conn = $ketnoi->ketnoi();
+    $hoi = "SELECT * FROM `loaihinh`";
+    $dulieu = mysqli_query($conn, $hoi);
+    mysqli_close($conn);
+    return $dulieu;
+}
+function linh_vuc_khoa_học(){
+    $ketnoi = new clsKetnoi();
+    $conn = $ketnoi->ketnoi();
+    $hoi = "SELECT * FROM `linhvuc`";
+    $dulieu = mysqli_query($conn, $hoi);
+    mysqli_close($conn);
+    return $dulieu;
+}
 ?>

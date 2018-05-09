@@ -23,11 +23,13 @@ function themdetai($tendetai,$muctieu,$noidung,$cap,$moisangtao,$thuocchuongtrin
         // Thêm loại hình nghiên cứu thuộc đề tài
         $sql="";
         $sql.="INSERT INTO `dexuatdetai` (IDDT) VALUES ('$iddt');";
-        foreach ($loaihinhnghiencuu as $value)
-            $sql.= "INSERT INTO `loaihinhnghiencuu`(`IDDT`, `TENLH`) VALUES ('$iddt','$value');";
+        for ($i=0; $i < count($loaihinhnghiencuu); $i++) { 
+            $sql.= "INSERT INTO `loaihinhnghiencuu`(`IDDT`, `TENLH`) VALUES ('$iddt','".$loaihinhnghiencuu[$i]."');";
+        }
         // Thêm lĩnh vựa khoa học thuộc đề tài
-        foreach ($linhvuckhoahoc as $value)
-            $sql.= "INSERT INTO `linhvuckhoahoc`(`IDDT`, `TENLV`) VALUES ('$iddt','$value');";
+        for ($i=0; $i < count($linhvuckhoahoc); $i++) { 
+            $sql.= "INSERT INTO `linhvuckhoahoc`(`IDDT`, `TENLV`) VALUES ('$iddt','".$linhvuckhoahoc[$i]."');";
+        }
         // Thêm thành viên thuộc đề tài
         if ($thanhvien!=null){
             for($i=0;$i<count($thanhvien);$i++){

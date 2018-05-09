@@ -43,7 +43,7 @@ if (isset($_GET['id'])) {
         while($row = mysqli_fetch_row($nd)) {
             $rnd[] = $row;
         }
-        $rtv = null;
+        $rtv=null;
         // thành viên đè tài
         $thanhvien = thanh_vien_de_tai($iddt);
         $tv = thanh_vien_de_tai($iddt);

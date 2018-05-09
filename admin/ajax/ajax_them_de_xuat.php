@@ -37,7 +37,6 @@ function themdetai($tendetai,$muctieu,$noidung,$cap,$moisangtao,$thuocchuongtrin
     $thangnambatdau=mysqli_real_escape_string($conn,$thangnambatdau);
     $thangnamketthuc=mysqli_real_escape_string($conn,$thangnamketthuc);
     $ketqua=mysqli_real_escape_string($conn,$ketqua);
-
     $hoi="INSERT INTO `detai`(`TENDETAI`, `MUCTIEU`, `NOIDUNG`, `CAPDETAI`, `MOISANGTAO`, `THUOCCHUONGTRINH`, `SUCANTHIET`, `TINHHINHNGHIENCUU`, `NGHIENCUULIENQUAN`, `PHUONGPHAPKYTHUAT`, `KINHPHINGANSACH`, `KINHPHINGUONKHAC`, `THANGTHUCHIEN`, `THANGNAMBD`, `THANGNAMKT`, `KETQUA`) VALUES ('$tendetai','$muctieu','$noidung','$cap','$moisangtao','$thuocchuongtrinh','$sucanthiet','$tinhhinhnghiencuu','$nghiencuulienquan','$phuongphapkythuat','$kinhphingansach','$kinhphinguonkhac','$thangthuchien','$thangnambatdau','$thangnamketthuc','$ketqua')";
     if(mysqli_query($conn, $hoi)===TRUE){
         $iddt = mysqli_insert_id($conn);
@@ -48,14 +47,12 @@ function themdetai($tendetai,$muctieu,$noidung,$cap,$moisangtao,$thuocchuongtrin
         // Thêm người dùng thuộc chủ sở hữu đề tài
         $sql = "INSERT INTO `detai_nguoidung`(`IDDT`, `IDND`) VALUES ('$iddt','$idnd');";
         // Thêm loại hình nghiên cứu thuộc đề tài
-        foreach ($loaihinhnghiencuu as $value) {
-            $value=mysqli_real_escape_string($conn,$value);
-            $sql.= "INSERT INTO `loaihinhnghiencuu`(`IDDT`, `TENLH`) VALUES ('$iddt','$value');";
+        for ($i=0; $i < count($loaihinhnghiencuu); $i++) { 
+            $sql.= "INSERT INTO `loaihinhnghiencuu`(`IDDT`, `TENLH`) VALUES ('$iddt','".$loaihinhnghiencuu[$i]."');";
         }
         // Thêm lĩnh vựa khoa học thuộc đề tài
-        foreach ($linhvuckhoahoc as $value) {
-            $value=mysqli_real_escape_string($conn,$value);
-            $sql.= "INSERT INTO `linhvuckhoahoc`(`IDDT`, `TENLV`) VALUES ('$iddt','$value');";
+        for ($i=0; $i < count($linhvuckhoahoc); $i++) { 
+            $sql.= "INSERT INTO `linhvuckhoahoc`(`IDDT`, `TENLV`) VALUES ('$iddt','".$linhvuckhoahoc[$i]."');";
         }
         // Thêm thành viên thuộc đề tài
         if ($thanhvien!=null){

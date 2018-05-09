@@ -1,4 +1,10 @@
 <?php if (!isset($_SESSION["token"])) {include_once ("../../loi404.html");exit();} ?>
+<script type="text/javascript">
+  var _data_ = <?php echo json_encode($rnd); ?>;
+  var _cdt_ = <?php echo json_encode($rcdt); ?>;
+  var _lv_ = <?php echo json_encode($rlv); ?>;
+  var _lh_ = <?php echo json_encode($rlh); ?>;
+</script>
   <div class="card cach background-container">
     <div class="row">
       <div class="col-md-12">
@@ -47,25 +53,23 @@
                       <div class="form-group col-md-4">
                         <label for="category" class="font-weight-bold" >Cấp đề tài</label>
                           <hr>
-                          <input type="radio" name="capdetai" id="captruongdetai" checked> Cấp trường <br>
-                          <input type="radio" name="capdetai" id="truongtrongdiemdetai"> Cấp Trường trọng điểm
+                          <?php while ($row = mysqli_fetch_assoc($cdt)) { ?>
+                          <input type="radio" name="choncapdetai" id="capdetai-<?php echo $row['IDC'] ?>" value="<?php echo $row['TENCAP'] ?>" > <?php echo $row['TENCAP'] ?> <br>
+                          <?php } ?>
                       </div>
                       <div class="form-group col-md-4">
                         <label for="category" class="font-weight-bold" >Loại hình nghiên cứu</label>
                         <hr>
-                        <input type="checkbox" id="nccbdetai"> Nghiên cứu cơ bản <br>
-                        <input type="checkbox" id="ncuddetai"> Nghiên cứu ứng dụng <br>
-                        <input type="checkbox" id="tktndetai"> Triển khai thực nghiệm
+                        <?php while ($row = mysqli_fetch_assoc($lh)) { ?>
+                        <input type="checkbox" id="loaihinh-<?php echo $row['IDLH'] ?>" value="<?php echo $row['TENLOAI'] ?>" > <?php echo $row['TENLOAI'] ?> <br>
+                        <?php } ?>
                       </div>
                       <div class="form-group col-md-4">
                         <label for="category" class="font-weight-bold" >Lĩnh vực khoa học</label>
                           <hr>
-                          <input type="checkbox" id="khtndetai"> Khoa học tự nhiên <br>
-                          <input type="checkbox" id="ktcndetai"> Kỹ Thuật công nghệ <br>
-                          <input type="checkbox" id="khgđetai"> Khoa học giáo dục <br>
-                          <input type="checkbox" id="xhnvdetai"> Xã hội nhân văn <br>
-                          <input type="checkbox" id="khyddetai"> Khoa học Y - Dược <br>
-                          <input type="checkbox" id="nlndetai"> Nông - Lâm - Ngư nghiệp
+                          <?php while ($row = mysqli_fetch_assoc($lv)) { ?>
+                          <input type="checkbox" id="linhvuc-<?php echo $row['IDLV'] ?>" value="<?php echo $row['TENLINHVUC'] ?>"> <?php echo $row['TENLINHVUC'] ?> <br>
+                          <?php } ?>
                       </div>
                     <div class="col-md-12"><hr></div>
                       <div class="form-group col-md-4">
@@ -576,7 +580,7 @@ giao kết quả nghiên cứu đến người sử dụng. Phải nêu được
         var tendetai = $('#tendetai').val().trim();
         var muctieudetai = $('#muctieudetai').val().trim();
         var noidungdetai = $('#noidungdetai').val().trim();
-        var capdetai = 'Cấp trường';
+        var capdetai;
         var moisangtao = $('#moisangtaodetai').val().trim();
         var thuocchuongtrinh = $('#thuocchuongtrinhdetai').val().trim();
         var sucanthiet = $('#sucanthietdetai').val().trim();
@@ -601,12 +605,9 @@ giao kết quả nghiên cứu đến người sử dụng. Phải nêu được
             khongthanhcong('Nhập nội dung đề tài');
             return;
         }
-        if($('#captruongdetai').is(':checked')){
-            capdetai = 'Cấp trường';
-        }
-        if($('#truongtrongdiemdetai').is(':checked')){
-            capdetai = 'Cấp Trường trọng điểm';
-        }
+        _cdt_.forEach((c)=>{
+          ($('#capdetai-'+c[0]).is(':checked'))?capdetai = $('#capdetai-'+c[0]).val().trim():0;
+        });
         if(!moisangtao){
             khongthanhcong('Chưa phân tích về tính mới, tính sáng tạo của đề tài');
             return;
@@ -657,11 +658,22 @@ giao kết quả nghiên cứu đến người sử dụng. Phải nêu được
         if(!$.isNumeric(kinhphinguonkhac)){
           khongthanhcong('Kinh phí nguồn khác không hợp lệ, kiểm tra lại');return;
         }  
-          var loaihinhnghiencuu=[];if($('#nccbdetai').is(':checked')) loaihinhnghiencuu.push('Nghiên cứu cơ bản');if($('#ncuddetai').is(':checked')) loaihinhnghiencuu.push('Nghiên cứu ứng dụng');if($('#tktndetai').is(':checked')) loaihinhnghiencuu.push('Triển khai thực nghiệm');if(jQuery.isEmptyObject(loaihinhnghiencuu)){
-              khongthanhcong('Chưa chọn loại hình nghiên cứu');return;}var linhvuckhoahoc = [];if($('#khtndetai').is(':checked')) linhvuckhoahoc.push('Khoa học tự nhiên');if($('#ktcndetai').is(':checked')) linhvuckhoahoc.push('Kỹ thuật công nghệ');if($('#khgđetai').is(':checked')) linhvuckhoahoc.push('Khoa học giáo dục');if($('#xhnvdetai').is(':checked')) linhvuckhoahoc.push('Xã hội nhân văn');if($('#khyddetai').is(':checked')) linhvuckhoahoc.push('Khoa học Y - Dược');if($('#nlndetai').is(':checked')) linhvuckhoahoc.push('Nông - Lâm - Ngư nghiệp');if(jQuery.isEmptyObject(linhvuckhoahoc)){
+        var loaihinhnghiencuu = [];
+        _lh_.forEach((c)=>{
+          ($('#loaihinh-'+c[0]).is(':checked'))?loaihinhnghiencuu.push(c[1].trim()):0;
+        });
+        if(jQuery.isEmptyObject(loaihinhnghiencuu)){
+            khongthanhcong('Chưa chọn loại hình nghiên cứu');
+            return;
+        }
+        var linhvuckhoahoc = [];
+        _lv_.forEach((c)=>{
+          ($('#linhvuc-'+c[0]).is(':checked'))?linhvuckhoahoc.push(c[1].trim()):0;
+        });
+        if(jQuery.isEmptyObject(linhvuckhoahoc)){
               khongthanhcong('Chưa chọn lĩnh vực khoa học');
               return;
-          }
+        }
           var btv = [];
           var demdongtv = 1;
           var demdongdungtv = 0;
