@@ -28,6 +28,7 @@ $result = Array(
             WHERE 
                 IDND = '".$xn[$i][4]."' AND XACNHAN = b'0';
         ";
+        
         $hoten = explode(" ",$xn[$i][1]);
         $qmail = "SELECT mail,passmail,portmail FROM caidat";
         $email = mysqli_query($conn,$qmail);
