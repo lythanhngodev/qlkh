@@ -11,21 +11,21 @@ if (!isset($_SESSION["token"])) {include_once ("../../loi404.html");exit();}
                 <div class="card-body">
                     <div class="row">
                         <div class="col-md-12">
-                            <table id="bang-chuyen-muc" class="table table-bordered table-hover">
+                            <table id="bangthanhvien" class="table table-bordered table-hover">
                                 <thead>
                                 <tr style="background:#e9ecef;">
                                     <th class="giua">TT</th>
                                     <th class="giua">Họ & Tên</th>
                                     <th class="giua">Khoa / Phòng</th>
                                     <th class="giua">Loại tài khoản</th>
-                                    <th class="giua" style="width: 80px;">Thao tác</th>
+                                    <th class="giua" style="width: 100px">Thao tác</th>
                                 </tr>
                                 </thead>
                                 <tbody>
                                 <?php $stt = 1;
                                 while ($row = mysqli_fetch_assoc($tv)){ ?>
                                     <tr>
-                                        <th><?php echo $stt; ?></th>
+                                        <th class="giua"><?php echo $stt; ?></th>
                                         <td><?php echo $row['HOTEN'] ?></td>
                                         <td><?php 
                                         $_idnd = $row['IDND'];
@@ -35,15 +35,15 @@ if (!isset($_SESSION["token"])) {include_once ("../../loi404.html");exit();}
                                         }
                                          ?></td>
                                         <td>
-                                            <select class="form-control chonltk">
+                                            <select class="form-control chonltk" lydata="<?php echo $_idnd; ?>">
                                             <?php foreach ($ltk as $l){ ?>
-                                            <option value="<?php echo $l['IDLTK'] ?>"><?php echo $l['TENCHITIETLTK'] ?></option>
+                                            <option value="<?php echo $l['IDLTK'] ?>" <?php if($l['IDLTK']==$row['IDLTK']) echo "selected"; ?>><?php echo $l['TENCHITIETLTK'] ?></option>
                                             <?php } ?>
                                             </select>
                                         </td>
                                         <td>
-                                            <a class='btn btn-primary btn-sm' onclick='sua(this)' title='Sửa' lydata='".$row['IDCM']."'><i class="fas fa-edit"></i></a>
-                                            <button class='btn btn-danger btn-sm xoa' title='Xóa' onclick='xoa(this)' lydata='".$row['IDCM']."'><i class='fas fa-trash'></i></button>
+                                            <a class='btn btn-primary btn-sm' title='Sửa' lydata='".$row['IDCM']."'><i class="fas fa-edit"></i></a>
+                                            <button class='btn btn-danger btn-sm xoa' title='Xóa' lydata='".$row['IDCM']."'><i class='fas fa-trash'></i></button>
                                         </td>
                                     </tr>
                                 <?php $stt++; }
@@ -52,6 +52,11 @@ if (!isset($_SESSION["token"])) {include_once ("../../loi404.html");exit();}
                             </table>
                         </div>
                     </div>
+                </div>
+                <div class="card-footer">
+                  <div>
+                    <button type="button" class="btn btn-primary" id="luuthaydoi"><i class="fas fa-save"></i>&nbsp;&nbsp;Lưu thay đổi</button>
+                  </div>
                 </div>
             </div>
         </div>
@@ -95,142 +100,50 @@ if (!isset($_SESSION["token"])) {include_once ("../../loi404.html");exit();}
         $('#themchuyenmuc').on('click',function () {
             $('#modal-them-chuyen-muc').modal('show');
         });
-        $('#themcm').on('click',function () {
-            if ($('#tencm').val().trim()==''){
-                khongthanhcong('Vui lòng nhập tên chuyên mục'.trim());
+        $('#luuthaydoi').click(function(){
+            var btv = [];
+            $('#bangthanhvien').find('tr:not(:first)').each(function(i, row) {
+              var cols = [];
+              $(this).find('td:not(:last) select').each(function(i, col) {
+                  cols.push($(this).attr('lydata'));
+                  cols.push($(this).val());
+              });
+              btv.push(cols);
+            });
+            var conf = confirm('Bạn có chắc chắc lưu tất cả các thay đổi?');
+            if (!conf) {
                 return;
             }
-            if(kiemtraketnoi()){
-                // Ajax
+            if (kiemtraketnoi()) {
                 $.ajax({
-                    url: 'ajax/ajax_them_chuyen_muc.php',
-                    type: 'POST',
-                    data: {
-                        ten: $('#tencm').val().trim(),
-                        mota: $('#motacm').val().trim()
+                    url : "ajax/ajax_thay_doi_quyen_truy_cap.php",
+                    type : "post",
+                    dataType:"text",
+                    data : {
+                        btv: btv
                     },
-                    beforeSend: function () {
-                        canhbao('Đang xử lý dữ liệu');
+                    beforeSend: function(){
+                        swal('Đợi đã','Vui lòng chờ cho đến khi quá trình hoàn tất','info');
                     },
-                    success: function (data) {
-                        $.notifyClose();
-                        var mang = $.parseJSON(data);
-                        if(mang.trangthai==1){
-                            thanhcong('Thêm chuyên mục thành công');
-                            $('#bang-chuyen-muc').DataTable().row.add([
-                                $('#tencm').val().trim(),
-                                $('#motacm').val().trim(),
-                                "<a class='btn btn-primary btn-sm' onclick='sua(this)' title='Sửa' lydata='"+mang.ma+"'><i class='fas fa-edit'></i></a>" +
-                                "&ensp;<button class='btn btn-danger btn-sm' title='Xóa' onclick='xoa(this)' lydata='"+mang.ma+"'><i class='fas fa-trash'></i></button>"
-                            ]).draw(false);
-                            $('#modal-them-chuyen-muc').find('input').val('');
-                            $('#modal-them-chuyen-muc').find('textarea').val('');
-                            $('#modal-them-chuyen-muc').modal('hide');
+                    success : function (data){
+                        var kq = $.parseJSON(data);
+                        if(kq.trangthai==1){
+                            swal('Tốt','Thay đổi thành công','success');
                         }
-                        else{
-                            khongthanhcong('Xảy ra lỗi! Vui lòng thử lại');
-                        }
+                        else
+                            swal('Ôi! Lỗi','Xảy ra lỗi, vui lòng thử lại','error');
                     },
                     error: function () {
-                        khongthanhcong('Xảy ra lỗi! Vui lòng thử lại');
+                        swal('Ôi! Lỗi','Xảy ra lỗi, vui lòng thử lại','error');
                     }
                 });
             }
             else
-                khongthanhcong('Không có kết nối internet');
-        });
-        // Sửa chuyên mục
-        $('#suacm').on('click',function () {
-            if ($('#suatencm').val().trim()==''){
-                khongthanhcong('Vui lòng nhập tên chuyên mục'.trim());
-                return;
-            }
-            if(jQuery.isEmptyObject(obj)) return;
-            if(kiemtraketnoi()){
-                // Ajax
-                $.ajax({
-                    url: 'ajax/ajax_sua_chuyen_muc.php',
-                    type: 'POST',
-                    data: {
-                        ten: $('#suatencm').val().trim(),
-                        mota: $('#suamotacm').val().trim(),
-                        ma: $('#suaid').val().trim()
-                    },
-                    beforeSend: function () {
-                        canhbao('Đang xử lý dữ liệu');
-                    },
-                    success: function (data) {
-                        $.notifyClose();
-                        var mang = $.parseJSON(data);
-                        if(mang.trangthai==1){
-                            thanhcong('Sửa chuyên mục thành công');
-                            $(obj).parent('td').parent('tr').find('td:nth-child(1)').text($('#suatencm').val().trim());
-                            $(obj).parent('td').parent('tr').find('td:nth-child(2)').text($('#suamotacm').val().trim());
-                            $('#modal-sua-chuyen-muc').find('input').val('');
-                            $('#modal-sua-chuyen-muc').modal('hide');
-                        }
-                        else{
-                            khongthanhcong('Xảy ra lỗi! Vui lòng thử lại');
-                        }
-                    },
-                    error: function () {
-                        khongthanhcong('Xảy ra lỗi! Vui lòng thử lại');
-                    }
-                });
-            }
-            else
-                khongthanhcong('Không có kết nối internet');
-        });
-        // Xóa chuyên mục
-        $('#xoacm').on('click',function () {
-            if(jQuery.isEmptyObject(obk)) return;
-            if(kiemtraketnoi()){
-                // Ajax
-                $.ajax({
-                    url: 'ajax/ajax_xoa_chuyen_muc.php',
-                    type: 'POST',
-                    data: {
-                        ma: $('#xoaid').val().trim()
-                    },
-                    beforeSend: function () {
-                        canhbao('Đang xử lý dữ liệu');
-                    },
-                    success: function (data) {
-                        $.notifyClose();
-                        var mang = $.parseJSON(data);
-                        if(mang.trangthai==1){
-                            thanhcong('Xóa chuyên mục thành công');
-                            location.reload();
-                        }
-                        else{
-                            khongthanhcong('Xảy ra lỗi! Vui lòng thử lại');
-                        }
-                    },
-                    error: function () {
-                        khongthanhcong('Xảy ra lỗi! Vui lòng thử lại');
-                    }
-                });
-            }
-            else
-                khongthanhcong('Không có kết nối internet');
+                swal('Ôi! Lỗi','Không có kết nối internet','error');
         });
     });
-    function sua(t) {
-        lydata=$(t).attr('lydata');
-        $('#suatencm').val($(t).parent('td').parent('tr').find('td:nth-child(1)').text().trim());
-        $('#suamotacm').val($(t).parent('td').parent('tr').find('td:nth-child(2)').text().trim());
-        $('#suaid').val(lydata);
-        obj = t;
-        $('#modal-sua-chuyen-muc').modal('show');
-    }
-    function xoa(t) {
-        lydata=$(t).attr('lydata');
-        $('#xoaten').text($(t).parent('td').parent('tr').find('td:nth-child(1)').text().trim());
-        $('#xoaid').val(lydata);
-        obk = t;
-        $('#modal-xoa-chuyen-muc').modal('show');
-    }
+
     $(document).ready(function() {
-        $('#bang-chuyen-muc').DataTable();
+        $('#bangthanhvien').DataTable();
     } );
 </script>

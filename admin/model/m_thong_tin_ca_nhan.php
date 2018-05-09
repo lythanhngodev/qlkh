@@ -92,7 +92,7 @@ function lay_cong_trinh_nghien_cuu_khoa_hoc($idnd){
 function lay_khoa_phong(){
     $ketnoi = new clsKetnoi();
     $conn = $ketnoi->ketnoi();
-    $query = "SELECT * FROM khoabomon";
+    $query = "SELECT * FROM khoabomon ORDER BY TENKBM";
     $result = mysqli_query($conn, $query);
     mysqli_close($conn);
     return $result;

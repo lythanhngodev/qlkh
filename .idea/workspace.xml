@@ -4,438 +4,10 @@
     <list default="true" id="e784096a-f6cb-467c-8cbe-b1eae1f3bf23" name="Default" comment="Start up">
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/7100f002-45e7-4ecd-b4f9-feb8543b2f12.xml" afterPath="$PROJECT_DIR$/.idea/dataSources/7100f002-45e7-4ecd-b4f9-feb8543b2f12.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/admin/check_login.php" afterPath="$PROJECT_DIR$/admin/check_login.php" />
-      <change beforePath="$PROJECT_DIR$/admin/dangky.php" afterPath="$PROJECT_DIR$/admin/dangky.php" />
-      <change beforePath="$PROJECT_DIR$/admin/login.php" afterPath="$PROJECT_DIR$/admin/login.php" />
-      <change beforePath="$PROJECT_DIR$/admin/quenmatkhau.php" afterPath="$PROJECT_DIR$/admin/quenmatkhau.php" />
-      <change beforePath="$PROJECT_DIR$/admin/reset_pass.php" afterPath="$PROJECT_DIR$/admin/reset_pass.php" />
-      <change beforePath="$PROJECT_DIR$/admin/view/v_bieu_mau.php" afterPath="$PROJECT_DIR$/admin/view/v_bieu_mau.php" />
-      <change beforePath="$PROJECT_DIR$/admin/view/v_chi_tiet_danh_gia_de_cuong.php" afterPath="$PROJECT_DIR$/admin/view/v_chi_tiet_danh_gia_de_cuong.php" />
-      <change beforePath="$PROJECT_DIR$/admin/view/v_chi_tiet_nghiem_thu_de_cuong.php" afterPath="$PROJECT_DIR$/admin/view/v_chi_tiet_nghiem_thu_de_cuong.php" />
-      <change beforePath="$PROJECT_DIR$/admin/view/v_chuyen_muc.php" afterPath="$PROJECT_DIR$/admin/view/v_chuyen_muc.php" />
-      <change beforePath="$PROJECT_DIR$/admin/view/v_quan_ly_chung.php" afterPath="$PROJECT_DIR$/admin/view/v_quan_ly_chung.php" />
-      <change beforePath="$PROJECT_DIR$/admin/view/v_quan_ly_de_tai.php" afterPath="$PROJECT_DIR$/admin/view/v_quan_ly_de_tai.php" />
-      <change beforePath="$PROJECT_DIR$/admin/view/v_sua_bai_bao.php" afterPath="$PROJECT_DIR$/admin/view/v_sua_bai_bao.php" />
-      <change beforePath="$PROJECT_DIR$/admin/view/v_sua_de_tai.php" afterPath="$PROJECT_DIR$/admin/view/v_sua_de_tai.php" />
-      <change beforePath="$PROJECT_DIR$/admin/view/v_them_bao_khoa_hoc.php" afterPath="$PROJECT_DIR$/admin/view/v_them_bao_khoa_hoc.php" />
-      <change beforePath="$PROJECT_DIR$/admin/view/v_them_de_tai_da_nghiem_thu.php" afterPath="$PROJECT_DIR$/admin/view/v_them_de_tai_da_nghiem_thu.php" />
-      <change beforePath="$PROJECT_DIR$/admin/view/v_them_de_xuat.php" afterPath="$PROJECT_DIR$/admin/view/v_them_de_xuat.php" />
-      <change beforePath="$PROJECT_DIR$/admin/view/v_them_tin_tuc.php" afterPath="$PROJECT_DIR$/admin/view/v_them_tin_tuc.php" />
-      <change beforePath="$PROJECT_DIR$/admin/view/v_thong_ke.php" afterPath="$PROJECT_DIR$/admin/view/v_thong_ke.php" />
-      <change beforePath="$PROJECT_DIR$/admin/view/v_thong_tin_ca_nhan.php" afterPath="$PROJECT_DIR$/admin/view/v_thong_tin_ca_nhan.php" />
-      <change beforePath="$PROJECT_DIR$/admin/view/v_xac_nhan_tai_khoan.php" afterPath="$PROJECT_DIR$/admin/view/v_xac_nhan_tai_khoan.php" />
-      <change beforePath="$PROJECT_DIR$/admin/view/v_xem_de_xuat.php" afterPath="$PROJECT_DIR$/admin/view/v_xem_de_xuat.php" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/CHANGES.md" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/LICENSE.md" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/README.md" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/adapters/jquery.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/build-config.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/ckeditor.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/config.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/contents.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/lang/af.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/lang/ar.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/lang/az.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/lang/bg.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/lang/bn.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/lang/bs.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/lang/ca.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/lang/cs.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/lang/cy.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/lang/da.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/lang/de-ch.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/lang/de.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/lang/el.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/lang/en-au.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/lang/en-ca.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/lang/en-gb.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/lang/en.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/lang/eo.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/lang/es-mx.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/lang/es.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/lang/et.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/lang/eu.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/lang/fa.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/lang/fi.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/lang/fo.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/lang/fr-ca.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/lang/fr.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/lang/gl.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/lang/gu.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/lang/he.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/lang/hi.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/lang/hr.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/lang/hu.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/lang/id.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/lang/is.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/lang/it.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/lang/ja.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/lang/ka.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/lang/km.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/lang/ko.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/lang/ku.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/lang/lt.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/lang/lv.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/lang/mk.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/lang/mn.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/lang/ms.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/lang/nb.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/lang/nl.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/lang/no.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/lang/oc.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/lang/pl.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/lang/pt-br.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/lang/pt.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/lang/ro.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/lang/ru.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/lang/si.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/lang/sk.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/lang/sl.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/lang/sq.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/lang/sr-latn.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/lang/sr.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/lang/sv.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/lang/th.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/lang/tr.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/lang/tt.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/lang/ug.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/lang/uk.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/lang/vi.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/lang/zh-cn.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/lang/zh.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/a11yhelp/dialogs/a11yhelp.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/a11yhelp/dialogs/lang/_translationstatus.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/a11yhelp/dialogs/lang/af.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/a11yhelp/dialogs/lang/ar.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/a11yhelp/dialogs/lang/az.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/a11yhelp/dialogs/lang/bg.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/a11yhelp/dialogs/lang/ca.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/a11yhelp/dialogs/lang/cs.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/a11yhelp/dialogs/lang/cy.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/a11yhelp/dialogs/lang/da.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/a11yhelp/dialogs/lang/de-ch.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/a11yhelp/dialogs/lang/de.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/a11yhelp/dialogs/lang/el.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/a11yhelp/dialogs/lang/en-gb.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/a11yhelp/dialogs/lang/en.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/a11yhelp/dialogs/lang/eo.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/a11yhelp/dialogs/lang/es-mx.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/a11yhelp/dialogs/lang/es.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/a11yhelp/dialogs/lang/et.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/a11yhelp/dialogs/lang/eu.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/a11yhelp/dialogs/lang/fa.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/a11yhelp/dialogs/lang/fi.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/a11yhelp/dialogs/lang/fo.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/a11yhelp/dialogs/lang/fr-ca.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/a11yhelp/dialogs/lang/fr.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/a11yhelp/dialogs/lang/gl.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/a11yhelp/dialogs/lang/gu.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/a11yhelp/dialogs/lang/he.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/a11yhelp/dialogs/lang/hi.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/a11yhelp/dialogs/lang/hr.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/a11yhelp/dialogs/lang/hu.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/a11yhelp/dialogs/lang/id.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/a11yhelp/dialogs/lang/it.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/a11yhelp/dialogs/lang/ja.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/a11yhelp/dialogs/lang/km.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/a11yhelp/dialogs/lang/ko.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/a11yhelp/dialogs/lang/ku.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/a11yhelp/dialogs/lang/lt.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/a11yhelp/dialogs/lang/lv.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/a11yhelp/dialogs/lang/mk.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/a11yhelp/dialogs/lang/mn.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/a11yhelp/dialogs/lang/nb.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/a11yhelp/dialogs/lang/nl.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/a11yhelp/dialogs/lang/no.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/a11yhelp/dialogs/lang/oc.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/a11yhelp/dialogs/lang/pl.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/a11yhelp/dialogs/lang/pt-br.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/a11yhelp/dialogs/lang/pt.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/a11yhelp/dialogs/lang/ro.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/a11yhelp/dialogs/lang/ru.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/a11yhelp/dialogs/lang/si.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/a11yhelp/dialogs/lang/sk.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/a11yhelp/dialogs/lang/sl.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/a11yhelp/dialogs/lang/sq.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/a11yhelp/dialogs/lang/sr-latn.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/a11yhelp/dialogs/lang/sr.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/a11yhelp/dialogs/lang/sv.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/a11yhelp/dialogs/lang/th.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/a11yhelp/dialogs/lang/tr.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/a11yhelp/dialogs/lang/tt.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/a11yhelp/dialogs/lang/ug.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/a11yhelp/dialogs/lang/uk.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/a11yhelp/dialogs/lang/vi.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/a11yhelp/dialogs/lang/zh-cn.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/a11yhelp/dialogs/lang/zh.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/about/dialogs/about.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/about/dialogs/hidpi/logo_ckeditor.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/about/dialogs/logo_ckeditor.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/colordialog/dialogs/colordialog.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/colordialog/dialogs/colordialog.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/copyformatting/cursors/cursor-disabled.svg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/copyformatting/cursors/cursor.svg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/copyformatting/styles/copyformatting.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/dialog/dialogDefinition.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/div/dialogs/div.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/find/dialogs/find.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/flash/dialogs/flash.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/flash/images/placeholder.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/forms/dialogs/button.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/forms/dialogs/checkbox.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/forms/dialogs/form.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/forms/dialogs/hiddenfield.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/forms/dialogs/radio.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/forms/dialogs/select.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/forms/dialogs/textarea.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/forms/dialogs/textfield.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/forms/images/hiddenfield.gif" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/icons.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/icons_hidpi.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/iframe/dialogs/iframe.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/iframe/images/placeholder.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/image/dialogs/image.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/image/images/noimage.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/link/dialogs/anchor.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/link/dialogs/link.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/link/images/anchor.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/link/images/hidpi/anchor.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/liststyle/dialogs/liststyle.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/magicline/images/hidpi/icon-rtl.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/magicline/images/hidpi/icon.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/magicline/images/icon-rtl.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/magicline/images/icon.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/pagebreak/images/pagebreak.gif" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/pastefromword/filter/default.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/preview/preview.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/scayt/CHANGELOG.md" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/scayt/LICENSE.md" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/scayt/README.md" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/scayt/dialogs/dialog.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/scayt/dialogs/options.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/scayt/dialogs/toolbar.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/scayt/skins/moono-lisa/scayt.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/showblocks/images/block_address.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/showblocks/images/block_blockquote.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/showblocks/images/block_div.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/showblocks/images/block_h1.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/showblocks/images/block_h2.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/showblocks/images/block_h3.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/showblocks/images/block_h4.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/showblocks/images/block_h5.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/showblocks/images/block_h6.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/showblocks/images/block_p.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/showblocks/images/block_pre.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/smiley/dialogs/smiley.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/smiley/images/angel_smile.gif" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/smiley/images/angel_smile.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/smiley/images/angry_smile.gif" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/smiley/images/angry_smile.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/smiley/images/broken_heart.gif" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/smiley/images/broken_heart.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/smiley/images/confused_smile.gif" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/smiley/images/confused_smile.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/smiley/images/cry_smile.gif" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/smiley/images/cry_smile.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/smiley/images/devil_smile.gif" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/smiley/images/devil_smile.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/smiley/images/embaressed_smile.gif" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/smiley/images/embarrassed_smile.gif" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/smiley/images/embarrassed_smile.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/smiley/images/envelope.gif" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/smiley/images/envelope.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/smiley/images/heart.gif" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/smiley/images/heart.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/smiley/images/kiss.gif" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/smiley/images/kiss.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/smiley/images/lightbulb.gif" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/smiley/images/lightbulb.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/smiley/images/omg_smile.gif" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/smiley/images/omg_smile.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/smiley/images/regular_smile.gif" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/smiley/images/regular_smile.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/smiley/images/sad_smile.gif" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/smiley/images/sad_smile.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/smiley/images/shades_smile.gif" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/smiley/images/shades_smile.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/smiley/images/teeth_smile.gif" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/smiley/images/teeth_smile.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/smiley/images/thumbs_down.gif" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/smiley/images/thumbs_down.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/smiley/images/thumbs_up.gif" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/smiley/images/thumbs_up.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/smiley/images/tongue_smile.gif" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/smiley/images/tongue_smile.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/smiley/images/tounge_smile.gif" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/smiley/images/whatchutalkingabout_smile.gif" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/smiley/images/whatchutalkingabout_smile.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/smiley/images/wink_smile.gif" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/smiley/images/wink_smile.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/specialchar/dialogs/lang/_translationstatus.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/specialchar/dialogs/lang/af.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/specialchar/dialogs/lang/ar.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/specialchar/dialogs/lang/az.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/specialchar/dialogs/lang/bg.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/specialchar/dialogs/lang/ca.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/specialchar/dialogs/lang/cs.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/specialchar/dialogs/lang/cy.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/specialchar/dialogs/lang/da.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/specialchar/dialogs/lang/de-ch.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/specialchar/dialogs/lang/de.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/specialchar/dialogs/lang/el.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/specialchar/dialogs/lang/en-au.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/specialchar/dialogs/lang/en-ca.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/specialchar/dialogs/lang/en-gb.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/specialchar/dialogs/lang/en.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/specialchar/dialogs/lang/eo.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/specialchar/dialogs/lang/es-mx.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/specialchar/dialogs/lang/es.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/specialchar/dialogs/lang/et.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/specialchar/dialogs/lang/eu.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/specialchar/dialogs/lang/fa.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/specialchar/dialogs/lang/fi.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/specialchar/dialogs/lang/fr-ca.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/specialchar/dialogs/lang/fr.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/specialchar/dialogs/lang/gl.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/specialchar/dialogs/lang/he.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/specialchar/dialogs/lang/hr.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/specialchar/dialogs/lang/hu.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/specialchar/dialogs/lang/id.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/specialchar/dialogs/lang/it.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/specialchar/dialogs/lang/ja.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/specialchar/dialogs/lang/km.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/specialchar/dialogs/lang/ko.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/specialchar/dialogs/lang/ku.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/specialchar/dialogs/lang/lt.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/specialchar/dialogs/lang/lv.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/specialchar/dialogs/lang/nb.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/specialchar/dialogs/lang/nl.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/specialchar/dialogs/lang/no.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/specialchar/dialogs/lang/oc.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/specialchar/dialogs/lang/pl.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/specialchar/dialogs/lang/pt-br.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/specialchar/dialogs/lang/pt.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/specialchar/dialogs/lang/ru.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/specialchar/dialogs/lang/si.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/specialchar/dialogs/lang/sk.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/specialchar/dialogs/lang/sl.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/specialchar/dialogs/lang/sq.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/specialchar/dialogs/lang/sv.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/specialchar/dialogs/lang/th.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/specialchar/dialogs/lang/tr.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/specialchar/dialogs/lang/tt.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/specialchar/dialogs/lang/ug.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/specialchar/dialogs/lang/uk.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/specialchar/dialogs/lang/vi.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/specialchar/dialogs/lang/zh-cn.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/specialchar/dialogs/lang/zh.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/specialchar/dialogs/specialchar.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/table/dialogs/table.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/tableselection/styles/tableselection.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/tabletools/dialogs/tableCell.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/templates/dialogs/templates.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/templates/dialogs/templates.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/templates/templates/default.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/templates/templates/images/template1.gif" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/templates/templates/images/template2.gif" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/templates/templates/images/template3.gif" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/wsc/LICENSE.md" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/wsc/README.md" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/wsc/dialogs/ciframe.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/wsc/dialogs/tmpFrameset.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/wsc/dialogs/wsc.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/wsc/dialogs/wsc.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/wsc/dialogs/wsc_ie.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/plugins/wsc/skins/moono-lisa/wsc.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/samples/css/samples.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/samples/img/github-top.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/samples/img/header-bg.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/samples/img/header-separator.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/samples/img/logo.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/samples/img/navigation-tip.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/samples/index.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/samples/js/sample.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/samples/js/sf.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/samples/old/ajax.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/samples/old/api.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/samples/old/appendto.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/samples/old/assets/inlineall/logo.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/samples/old/assets/outputxhtml/outputxhtml.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/samples/old/assets/posteddata.php" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/samples/old/assets/sample.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/samples/old/assets/uilanguages/languages.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/samples/old/datafiltering.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/samples/old/dialog/assets/my_dialog.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/samples/old/dialog/dialog.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/samples/old/divreplace.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/samples/old/enterkey/enterkey.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/samples/old/htmlwriter/assets/outputforflash/outputforflash.fla" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/samples/old/htmlwriter/assets/outputforflash/outputforflash.swf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/samples/old/htmlwriter/assets/outputforflash/swfobject.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/samples/old/htmlwriter/outputforflash.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/samples/old/htmlwriter/outputhtml.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/samples/old/index.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/samples/old/inlineall.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/samples/old/inlinebycode.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/samples/old/inlinetextarea.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/samples/old/jquery.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/samples/old/magicline/magicline.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/samples/old/readonly.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/samples/old/replacebyclass.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/samples/old/replacebycode.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/samples/old/sample.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/samples/old/sample.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/samples/old/sample_posteddata.php" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/samples/old/tabindex.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/samples/old/toolbar/toolbar.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/samples/old/uicolor.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/samples/old/uilanguages.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/samples/old/wysiwygarea/fullpage.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/samples/old/xhtmlstyle.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/samples/toolbarconfigurator/css/fontello.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/samples/toolbarconfigurator/font/LICENSE.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/samples/toolbarconfigurator/font/config.json" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/samples/toolbarconfigurator/font/fontello.eot" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/samples/toolbarconfigurator/font/fontello.svg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/samples/toolbarconfigurator/font/fontello.ttf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/samples/toolbarconfigurator/font/fontello.woff" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/samples/toolbarconfigurator/index.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/samples/toolbarconfigurator/js/abstracttoolbarmodifier.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/samples/toolbarconfigurator/js/fulltoolbareditor.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/samples/toolbarconfigurator/js/toolbarmodifier.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/samples/toolbarconfigurator/js/toolbartextmodifier.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/samples/toolbarconfigurator/lib/codemirror/LICENSE" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/samples/toolbarconfigurator/lib/codemirror/codemirror.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/samples/toolbarconfigurator/lib/codemirror/codemirror.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/samples/toolbarconfigurator/lib/codemirror/javascript.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/samples/toolbarconfigurator/lib/codemirror/neo.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/samples/toolbarconfigurator/lib/codemirror/show-hint.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/samples/toolbarconfigurator/lib/codemirror/show-hint.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/skins/moono-lisa/dialog.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/skins/moono-lisa/dialog_ie.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/skins/moono-lisa/dialog_ie8.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/skins/moono-lisa/dialog_iequirks.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/skins/moono-lisa/editor.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/skins/moono-lisa/editor_gecko.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/skins/moono-lisa/editor_ie.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/skins/moono-lisa/editor_ie8.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/skins/moono-lisa/editor_iequirks.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/skins/moono-lisa/icons.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/skins/moono-lisa/icons_hidpi.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/skins/moono-lisa/images/arrow.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/skins/moono-lisa/images/close.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/skins/moono-lisa/images/hidpi/close.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/skins/moono-lisa/images/hidpi/lock-open.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/skins/moono-lisa/images/hidpi/lock.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/skins/moono-lisa/images/hidpi/refresh.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/skins/moono-lisa/images/lock-open.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/skins/moono-lisa/images/lock.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/skins/moono-lisa/images/refresh.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/skins/moono-lisa/images/spinner.gif" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/skins/moono-lisa/readme.md" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ckeditor1/styles.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
-      <change beforePath="$PROJECT_DIR$/view/v_trang_chu.php" afterPath="$PROJECT_DIR$/view/v_trang_chu.php" />
+      <change beforePath="$PROJECT_DIR$/admin/control/c_quan_ly_de_tai_du_an.php" afterPath="$PROJECT_DIR$/admin/control/c_quan_ly_de_tai_du_an.php" />
+      <change beforePath="$PROJECT_DIR$/admin/model/m_thanh_vien.php" afterPath="$PROJECT_DIR$/admin/model/m_thanh_vien.php" />
+      <change beforePath="$PROJECT_DIR$/admin/model/m_thong_tin_ca_nhan.php" afterPath="$PROJECT_DIR$/admin/model/m_thong_tin_ca_nhan.php" />
+      <change beforePath="$PROJECT_DIR$/admin/view/v_thanh_vien.php" afterPath="$PROJECT_DIR$/admin/view/v_thanh_vien.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -474,13 +46,52 @@
         <item name="nckh@localhost" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="nckh: schema" type="c314c289:MysqlImplModel$Schema" />
-        <item name="caidat: table" type="98d5ac3d:MysqlImplModel$Table" />
+        <item name="loaitaikhoan: table" type="98d5ac3d:MysqlImplModel$Table" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="nckh@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="nckh: schema" type="c314c289:MysqlImplModel$Schema" />
+        <item name="loaitaikhoan_nguoidung: table" type="98d5ac3d:MysqlImplModel$Table" />
       </path>
     </expand>
     <select />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="console_2.sql" pinned="false" current-in-tab="false">
+        <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/7100f002-45e7-4ecd-b4f9-feb8543b2f12/console_2.sql">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="79" lean-forward="false" selection-start-line="0" selection-start-column="70" selection-end-line="0" selection-end-column="79" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ajax_thay_doi_quyen_truy_cap.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/admin/ajax/ajax_thay_doi_quyen_truy_cap.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="203">
+              <caret line="16" column="12" lean-forward="true" selection-start-line="16" selection-start-column="12" selection-end-line="16" selection-end-column="12" />
+              <folding>
+                <marker date="1525826870799" expanded="true" signature="727:842" ph="UPDATE loaitaikhoan_nguoidung... " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="nguoidung" pinned="false" current-in-tab="false">
+        <entry file="das://table:/f683da9/7100f002-45e7-4ecd-b4f9-feb8543b2f12/nckh.nguoidung">
+          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+            <state>
+              <filtering enabled="true" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -493,6 +104,8 @@
         <option value="$PROJECT_DIR$/admin/control/c_quan_ly_chung.php" />
         <option value="$PROJECT_DIR$/admin/view/v_quan_ly_chung.php" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/7100f002-45e7-4ecd-b4f9-feb8543b2f12/console_1.sql" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/7100f002-45e7-4ecd-b4f9-feb8543b2f12/console_2.sql" />
+        <option value="$PROJECT_DIR$/admin/ajax/ajax_thay_doi_quyen_truy_cap.php" />
       </list>
     </option>
   </component>
@@ -561,6 +174,12 @@
               <item name="qlkh" type="b2602c69:ProjectViewProjectNode" />
               <item name="qlkh" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="admin" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="ajax" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="qlkh" type="b2602c69:ProjectViewProjectNode" />
+              <item name="qlkh" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="admin" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="control" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
@@ -620,15 +239,24 @@
       <option name="presentableId" value="Default" />
       <updated>1525790023938</updated>
       <workItem from="1525790027611" duration="3939000" />
-      <workItem from="1525818123627" duration="2155000" />
+      <workItem from="1525818123627" duration="6561000" />
     </task>
+    <task id="LOCAL-00001" summary="Start up">
+      <created>1525824037964</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1525824037964</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6094000" />
+    <option name="totallyTimeSpent" value="10500000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="32" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -636,10 +264,10 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32928178" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2563536" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15351813" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="true" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2531983" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2531983" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -879,6 +507,45 @@
         <state relative-caret-position="325">
           <caret line="20" column="33" lean-forward="false" selection-start-line="20" selection-start-column="33" selection-end-line="20" selection-end-column="33" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://table:/f683da9/7100f002-45e7-4ecd-b4f9-feb8543b2f12/nckh.nguoidung">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://table:/f683da9/7100f002-45e7-4ecd-b4f9-feb8543b2f12/nckh.loaitaikhoan_nguoidung">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://table:/f683da9/7100f002-45e7-4ecd-b4f9-feb8543b2f12/nckh.loaitaikhoan">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/7100f002-45e7-4ecd-b4f9-feb8543b2f12/console_2.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="79" lean-forward="false" selection-start-line="0" selection-start-column="70" selection-end-line="0" selection-end-column="79" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/ajax/ajax_thay_doi_quyen_truy_cap.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="203">
+          <caret line="16" column="12" lean-forward="true" selection-start-line="16" selection-start-column="12" selection-end-line="16" selection-end-column="12" />
+          <folding>
+            <marker date="1525826870799" expanded="true" signature="727:842" ph="UPDATE loaitaikhoan_nguoidung... " />
+          </folding>
         </state>
       </provider>
     </entry>
