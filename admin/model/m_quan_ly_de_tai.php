@@ -12,7 +12,7 @@
 function linh_vuc_de_tai($iddt){
     $ketnoi = new clsKetnoi();
     $conn = $ketnoi->ketnoi();
-    $query = "SELECT TENLV FROM `linhvuckhoahoc` WHERE IDDT = '$iddt' ORDER BY IDLV ASC";
+    $query = "SELECT DISTINCT TENLV FROM `linhvuckhoahoc` WHERE IDDT = '$iddt' ORDER BY IDLV ASC";
     $result = mysqli_query($conn, $query);
     mysqli_close($conn);
     return $result;
