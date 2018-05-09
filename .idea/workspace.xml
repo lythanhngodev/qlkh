@@ -1,13 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e784096a-f6cb-467c-8cbe-b1eae1f3bf23" name="Default" comment="Start up">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/7100f002-45e7-4ecd-b4f9-feb8543b2f12.xml" afterPath="$PROJECT_DIR$/.idea/dataSources/7100f002-45e7-4ecd-b4f9-feb8543b2f12.xml" />
+    <list default="true" id="e784096a-f6cb-467c-8cbe-b1eae1f3bf23" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/admin/control/c_quan_ly_de_tai_du_an.php" afterPath="$PROJECT_DIR$/admin/control/c_quan_ly_de_tai_du_an.php" />
-      <change beforePath="$PROJECT_DIR$/admin/model/m_thanh_vien.php" afterPath="$PROJECT_DIR$/admin/model/m_thanh_vien.php" />
-      <change beforePath="$PROJECT_DIR$/admin/model/m_thong_tin_ca_nhan.php" afterPath="$PROJECT_DIR$/admin/model/m_thong_tin_ca_nhan.php" />
-      <change beforePath="$PROJECT_DIR$/admin/view/v_thanh_vien.php" afterPath="$PROJECT_DIR$/admin/view/v_thanh_vien.php" />
+      <change beforePath="$PROJECT_DIR$/images/red-rocks-park-o.jpg" afterPath="$PROJECT_DIR$/images/red-rocks-park-o.jpg" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -74,7 +70,7 @@
         <entry file="file://$PROJECT_DIR$/admin/ajax/ajax_thay_doi_quyen_truy_cap.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="203">
-              <caret line="16" column="12" lean-forward="true" selection-start-line="16" selection-start-column="12" selection-end-line="16" selection-end-column="12" />
+              <caret line="16" column="12" lean-forward="false" selection-start-line="16" selection-start-column="12" selection-end-line="16" selection-end-column="12" />
               <folding>
                 <marker date="1525826870799" expanded="true" signature="727:842" ph="UPDATE loaitaikhoan_nguoidung... " />
               </folding>
@@ -239,7 +235,7 @@
       <option name="presentableId" value="Default" />
       <updated>1525790023938</updated>
       <workItem from="1525790027611" duration="3939000" />
-      <workItem from="1525818123627" duration="6561000" />
+      <workItem from="1525818123627" duration="6745000" />
     </task>
     <task id="LOCAL-00001" summary="Start up">
       <created>1525824037964</created>
@@ -248,11 +244,18 @@
       <option name="project" value="LOCAL" />
       <updated>1525824037964</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Start up">
+      <created>1525827352750</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1525827352750</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10500000" />
+    <option name="totallyTimeSpent" value="10684000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="32" width="1936" height="1056" extended-state="6" />
@@ -402,6 +405,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="623">
           <caret line="98" column="1" lean-forward="true" selection-start-line="98" selection-start-column="1" selection-end-line="98" selection-end-column="1" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -542,7 +546,7 @@
     <entry file="file://$PROJECT_DIR$/admin/ajax/ajax_thay_doi_quyen_truy_cap.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="203">
-          <caret line="16" column="12" lean-forward="true" selection-start-line="16" selection-start-column="12" selection-end-line="16" selection-end-column="12" />
+          <caret line="16" column="12" lean-forward="false" selection-start-line="16" selection-start-column="12" selection-end-line="16" selection-end-column="12" />
           <folding>
             <marker date="1525826870799" expanded="true" signature="727:842" ph="UPDATE loaitaikhoan_nguoidung... " />
           </folding>
