@@ -116,7 +116,7 @@ function chuc_danh_giang_vien($idnd){
 function thanh_vien_xet_duyet($iddt){
     $ketnoi = new clsKetnoi();
     $conn = $ketnoi->ketnoi();
-    $query = "SELECT nd.IDND,CONCAT(nd.HO,' ',nd.TEN) as HOTEN, nd.NGAYSINH FROM nguoidung nd WHERE nd.IDND NOT IN (SELECT dn.IDND FROM detai_nguoidung dn WHERE dn.IDDT = '$iddt') AND nd.TRANGTHAI = 'binhthuong'";
+    $query = "SELECT nd.IDND,CONCAT(nd.HO,' ',nd.TEN) as HOTEN, nd.NGAYSINH FROM nguoidung nd WHERE nd.IDND NOT IN (SELECT tv.IDND FROM thanhviendetai tv WHERE tv.IDND = '$iddt' AND tv.TRACHNHIEM =N'Chủ nhiệm') AND nd.TRANGTHAI = 'binhthuong'";
     $result = mysqli_query($conn, $query);
     mysqli_close($conn);
     return $result;

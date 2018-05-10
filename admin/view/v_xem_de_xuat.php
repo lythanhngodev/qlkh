@@ -61,7 +61,7 @@ if (!isset($_SESSION["token"])) {include_once ("../../loi404.html");exit();}
                                             <td>
                                                 <?php echo $detai['CAPDETAI']; ?>
                                             </td>
-                                        </tr>
+                                        </tr> 
                                         <tr>
                                             <th colspan="2">2. Chủ nhiệm đề tài</th>
                                         </tr>

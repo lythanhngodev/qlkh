@@ -45,7 +45,7 @@ if (isset($_GET['id'])) {
         // dự kiến tiến độ
         $tiendo = du_kien_tien_do($iddt);
         // kinh phi
-        $kinhphi = kinh_phi($iddt);
+        $kinhphi = kinh_phi($iddt); 
         // thanh viên xét duyệt
         $thanhvienxetduyet = thanh_vien_xet_duyet($iddt);
         // thành viên BTC đã chọn
