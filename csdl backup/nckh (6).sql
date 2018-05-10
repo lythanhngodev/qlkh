@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th5 10, 2018 lúc 04:52 SA
+-- Thời gian đã tạo: Th5 10, 2018 lúc 06:54 SA
 -- Phiên bản máy phục vụ: 5.7.14
 -- Phiên bản PHP: 5.6.25
 
@@ -484,12 +484,12 @@ INSERT INTO `kinhphi` (`IDKP`, `IDDT`, `KHOANCHI`, `NGUONNSNN`, `NGUONTUCO`, `NG
 (79, 10, 'Chi thuê khoán chuyên môn', '0', '0', '0'),
 (80, 10, 'Chi mua nguyên vật liệu', '0', '0', '0'),
 (81, 10, 'Chi sửa chữa, mua sắm TSCĐ', '0', '0', '0'),
-(103, 1, 'Chi thuê khoán chuyên môn', '0', '0', '7'),
-(104, 1, 'Chi mua nguyên vật liệu', '2', '0', '0'),
-(105, 1, 'Chi sửa chữa, mua sắm TSCĐ', '0', '6', '0'),
 (109, 2, 'Chi thuê khoán chuyên môn', '0', '0', '0'),
 (110, 2, 'Chi mua nguyên vật liệu', '0', '0', '0'),
-(111, 2, 'Chi sửa chữa, mua sắm TSCĐ', '0', '0', '0');
+(111, 2, 'Chi sửa chữa, mua sắm TSCĐ', '0', '0', '0'),
+(112, 1, 'Chi thuê khoán chuyên môn', '0', '0', '7'),
+(113, 1, 'Chi mua nguyên vật liệu', '2', '0', '0'),
+(114, 1, 'Chi sửa chữa, mua sắm TSCĐ', '0', '6', '0');
 
 -- --------------------------------------------------------
 
@@ -538,10 +538,9 @@ INSERT INTO `linhvuckhoahoc` (`IDLV`, `IDDT`, `TENLV`) VALUES
 (203, 6, 'Kỹ thuật công nghệ'),
 (204, 6, 'Xã hội nhân văn'),
 (211, 10, 'Khoa học Y - Dược'),
-(226, 1, 'Khoa học tự nhiên'),
-(227, 1, 'Nông - Lâm - Ngư nghiệp'),
 (230, 2, 'Khoa học tự nhiên'),
-(231, 2, 'Khoa học giáo dục');
+(231, 2, 'Khoa học giáo dục'),
+(232, 1, 'Khoa học tự nhiên');
 
 -- --------------------------------------------------------
 
@@ -585,8 +584,8 @@ INSERT INTO `loaihinhnghiencuu` (`IDLH`, `IDDT`, `TENLH`) VALUES
 (150, 8, 'Nghiên cứu ứng dụng'),
 (160, 6, 'Nghiên cứu ứng dụng'),
 (165, 10, 'Triển khai thực nghiệm'),
-(173, 1, 'Triển khai thực nghiệm'),
-(175, 2, 'Nghiên cứu cơ bản');
+(175, 2, 'Nghiên cứu cơ bản'),
+(176, 1, 'Triển khai thực nghiệm');
 
 -- --------------------------------------------------------
 
@@ -627,8 +626,8 @@ CREATE TABLE `loaitaikhoan_nguoidung` (
 
 INSERT INTO `loaitaikhoan_nguoidung` (`IDLTKND`, `IDND`, `IDLTK`) VALUES
 (1, 1, 1),
-(2, 2, 3),
-(3, 3, 2);
+(2, 2, 2),
+(3, 3, 3);
 
 -- --------------------------------------------------------
 
@@ -1188,10 +1187,10 @@ INSERT INTO `thanhviendetai` (`IDTV`, `IDDT`, `IDND`, `CONGVIEC`, `TRACHNHIEM`) 
 (17, 8, 3, 'jh,', 'Chủ nhiệm'),
 (33, 6, 1, '5urt', 'Chủ nhiệm'),
 (38, 10, 1, 'jtyj', 'Chủ nhiệm'),
-(54, 1, 3, 'Code chính', 'Chủ nhiệm'),
-(55, 1, 2, 'yuuuyk', 'Thành viên'),
 (58, 2, 3, 'yukyuku', 'Chủ nhiệm'),
-(59, 2, 1, 'lllllll', 'Thành viên');
+(59, 2, 1, 'lllllll', 'Thành viên'),
+(60, 1, 3, 'Code chính', 'Chủ nhiệm'),
+(61, 1, 2, 'yuuuyk', 'Thành viên');
 
 -- --------------------------------------------------------
 
@@ -1216,8 +1215,8 @@ INSERT INTO `tiendodukien` (`IDDKTD`, `IDDT`, `CONGVIEC`, `SANPHAM`, `THOIGIANBD
 (13, 8, 'j,', 'hjj,j', '2018-08-09', '2018-08-09'),
 (22, 6, 'gh', 'gfhfg', '2018-05-23', '2018-05-18'),
 (27, 10, 'tỵ', 'tỵty', '2018-05-18', '2018-06-28'),
-(35, 1, 'Hoàn thành', 'ok', '2018-05-09', '2018-06-09'),
-(37, 2, '7i6', '6767i7', '2018-05-09', '2018-06-09');
+(37, 2, '7i6', '6767i7', '2018-05-09', '2018-06-09'),
+(38, 1, 'Hoàn thành', 'ok', '2018-05-09', '2018-06-09');
 
 -- --------------------------------------------------------
 
@@ -1241,8 +1240,8 @@ INSERT INTO `tochucthamgia` (`IDTC`, `IDDT`, `THONGTINTC`, `NOIDUNGTHAMGIA`, `KI
 (13, 8, 'jh,', 'jj,', '55'),
 (22, 6, 'hr', 'thtrhth', '1'),
 (27, 10, 'jtyj', 'ỵtyjtyj', '55'),
-(35, 1, 'Trờng dhspkt Vĩnh Long', 'tiếp tế', '222'),
-(37, 2, 'uyk', 'uykyuk', '6767');
+(37, 2, 'uyk', 'uykyuk', '6767'),
+(38, 1, 'Trờng dhspkt Vĩnh Long', 'tiếp tế', '222');
 
 -- --------------------------------------------------------
 
@@ -1733,7 +1732,7 @@ ALTER TABLE `khoabomon`
 -- AUTO_INCREMENT cho bảng `kinhphi`
 --
 ALTER TABLE `kinhphi`
-  MODIFY `IDKP` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=112;
+  MODIFY `IDKP` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=115;
 --
 -- AUTO_INCREMENT cho bảng `linhvuc`
 --
@@ -1743,7 +1742,7 @@ ALTER TABLE `linhvuc`
 -- AUTO_INCREMENT cho bảng `linhvuckhoahoc`
 --
 ALTER TABLE `linhvuckhoahoc`
-  MODIFY `IDLV` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=232;
+  MODIFY `IDLV` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=233;
 --
 -- AUTO_INCREMENT cho bảng `loaihinh`
 --
@@ -1753,7 +1752,7 @@ ALTER TABLE `loaihinh`
 -- AUTO_INCREMENT cho bảng `loaihinhnghiencuu`
 --
 ALTER TABLE `loaihinhnghiencuu`
-  MODIFY `IDLH` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=176;
+  MODIFY `IDLH` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=177;
 --
 -- AUTO_INCREMENT cho bảng `loaitaikhoan`
 --
@@ -1823,17 +1822,17 @@ ALTER TABLE `sotietquidoi`
 -- AUTO_INCREMENT cho bảng `thanhviendetai`
 --
 ALTER TABLE `thanhviendetai`
-  MODIFY `IDTV` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=60;
+  MODIFY `IDTV` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=62;
 --
 -- AUTO_INCREMENT cho bảng `tiendodukien`
 --
 ALTER TABLE `tiendodukien`
-  MODIFY `IDDKTD` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
+  MODIFY `IDDKTD` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
 --
 -- AUTO_INCREMENT cho bảng `tochucthamgia`
 --
 ALTER TABLE `tochucthamgia`
-  MODIFY `IDTC` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
+  MODIFY `IDTC` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
 --
 -- AUTO_INCREMENT cho bảng `trinhdochuyenmon`
 --
