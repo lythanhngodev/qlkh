@@ -23,7 +23,7 @@ if (!isset($_POST['_token']) || !isset($_SESSION['token']) || (isset($_SESSION['
 $conn = $ketnoi->ketnoi();
 $bd = mysqli_real_escape_string($conn,$_POST['bd']);
 $kt = mysqli_real_escape_string($conn,$_POST['kt']);
-$capsql = "SELECT DISTINCT dt.CAPDETAI FROM detai dt, nguoidung nd, detai_nguoidung dn WHERE dt.TRANGTHAI=N'Đã nghiệm thu' AND dt.IDDT=dn.IDDT AND  (DATE_FORMAT(dt.THOIGIANNGHIEMTHU,'%Y-%m') BETWEEN (DATE_FORMAT(CONCAT('$bd','-01'),'%Y-%m')) AND (DATE_FORMAT(CONCAT('$kt','-01'),'%Y-%m')));";
+$capsql = "SELECT DISTINCT dt.CAPDETAI FROM detai dt, nguoidung nd, thanhviendetai tv WHERE dt.TRANGTHAI=N'Đã nghiệm thu' AND dt.IDDT=tv.IDDT AND  (DATE_FORMAT(dt.THOIGIANNGHIEMTHU,'%Y-%m') BETWEEN (DATE_FORMAT(CONCAT('$bd','-01'),'%Y-%m')) AND (DATE_FORMAT(CONCAT('$kt','-01'),'%Y-%m')));";
 $qcapsql = mysqli_query($conn,$capsql);
 $rcapsql = mysqli_num_rows($qcapsql);
 if ($rcapsql==0) {echo "Không có dữ liệu";exit(); }
@@ -51,7 +51,7 @@ while ($row = mysqli_fetch_row($esql_stqd)) {
         <table id="bang-bieu-mau" class="table table-bordered table-hover">
             <thead>
                 <tr style="background:#e9ecef;">
-                    <th class="giua">Thứ tự</th>
+                    <th class="giua">TT</th>
                     <th class="giua">Tên đề tài</th>
                     <th class="giua">Thời gian nghiệm thu</th>
                     <th class="giua">Tên CBVC, Đơn vị</th>
@@ -61,7 +61,7 @@ while ($row = mysqli_fetch_row($esql_stqd)) {
             </thead>
             <tbody>
                 <?php 
-                $sql = "SELECT DISTINCT dt.IDDT, dt.TENDETAI, dt.THOIGIANNGHIEMTHU, dt.DIEM FROM detai dt, nguoidung nd, detai_nguoidung dn WHERE dt.TRANGTHAI=N'Đã nghiệm thu' AND CAPDETAI = N'$capdetai' AND dt.IDDT=dn.IDDT AND  (DATE_FORMAT(dt.THOIGIANNGHIEMTHU,'%Y-%m') BETWEEN (DATE_FORMAT(CONCAT('$bd','-01'),'%Y-%m')) AND (DATE_FORMAT(CONCAT('$kt','-01'),'%Y-%m')))";
+                $sql = "SELECT DISTINCT dt.IDDT, dt.TENDETAI, dt.THOIGIANNGHIEMTHU, dt.DIEM FROM detai dt, nguoidung nd, thanhviendetai tv WHERE dt.TRANGTHAI=N'Đã nghiệm thu' AND CAPDETAI = N'$capdetai' AND dt.IDDT=tv.IDDT AND  (DATE_FORMAT(dt.THOIGIANNGHIEMTHU,'%Y-%m') BETWEEN (DATE_FORMAT(CONCAT('$bd','-01'),'%Y-%m')) AND (DATE_FORMAT(CONCAT('$kt','-01'),'%Y-%m')))";
                 $qsql = mysqli_query($conn,$sql);
                 $stt=1; while ($row = mysqli_fetch_assoc($qsql)) { ?>
                 <tr>

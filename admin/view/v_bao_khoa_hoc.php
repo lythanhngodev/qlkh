@@ -17,7 +17,6 @@
                         <th style="width: 40px;">Điểm</th>
                         <th style="width: 60px;">Số tiết</th>
                         <th style="width: 75px;">Ngày đăng</th>
-                        <th style="width: 55px;">Ẩn/Hiện</th>
                         <th style="width: 90px;">Thao tác</th>
                     </tr>
                 </thead>
@@ -34,14 +33,6 @@
                         <td class="giua"><?php echo $row['DIEM']; ?></td>
                         <td class="giua"><?php echo $row['SOTIET']; ?></td>
                         <td class="giua"><?php echo $row['NGAYDANGBAI']; ?></td>
-                        <td class="giua">
-                            <?php if ($row['ANHIEN']=='1'): ?>
-                                <a class="mat"><i class="fas fa-eye"></i></a>
-                            <?php endif ?>
-                            <?php if ($row['ANHIEN']=='0'): ?>
-                                <a class="mat"><i class="fas fa-eye-slash"></i></a>
-                            <?php endif ?>
-                        </td>
                         <td class="giua">
                             <a href="?p=suabaibao&id=<?php echo $row['IDBAO'] ?>" class="btn btn-primary btn-sm" title="Sửa"><i class="fas fa-edit"></i></a>
                             <button class="btn btn-danger btn-sm" id="" title="Xóa"><i class="fas fa-trash"></i></button>
@@ -60,7 +51,6 @@
                         <th>Điểm</th>
                         <th>Số tiết</th>
                         <th>Ngày đăng</th>
-                        <th>Ẩn/Hiện</th>
                         <th>Thao tác</th>
                     </tr>
                 </tfoot>

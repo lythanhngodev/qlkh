@@ -22,7 +22,7 @@ if (!isset($_POST['_token']) || !isset($_SESSION['token']) || (isset($_SESSION['
 }
 
 $conn = $ketnoi->ketnoi();
-$capsql = "SELECT DISTINCT dt.CAPDETAI FROM detai dt, nguoidung nd, detai_nguoidung dn WHERE dt.TRANGTHAI=N'Đã nghiệm thu' AND dt.IDDT=dn.IDDT;";
+$capsql = "SELECT DISTINCT dt.CAPDETAI FROM detai dt, thanhviendetai tv WHERE dt.TRANGTHAI=N'Đã nghiệm thu' AND tv.IDDT=dt.IDDT;";
 $qcapsql = mysqli_query($conn,$capsql);
 $rcapsql = mysqli_num_rows($qcapsql);
 if ($rcapsql==0) {echo "Không có dữ liệu";exit(); }
@@ -48,7 +48,7 @@ while ($row = mysqli_fetch_row($esql_stqd)) {
         <table id="bang-bieu-mau" class="table table-bordered table-hover">
             <thead>
                 <tr style="background:#e9ecef;">
-                    <th class="giua">Thứ tự</th>
+                    <th class="giua">TT</th>
                     <th class="giua">Tên đề tài</th>
                     <th class="giua">Thời gian nghiệm thu</th>
                     <th class="giua">Tên CBVC, Đơn vị</th>
@@ -58,13 +58,13 @@ while ($row = mysqli_fetch_row($esql_stqd)) {
             </thead>
             <tbody>
                 <?php 
-                $sql = "SELECT DISTINCT dt.IDDT, dt.TENDETAI, dt.THOIGIANNGHIEMTHU, dt.DIEM FROM detai dt, nguoidung nd, detai_nguoidung dn WHERE dt.TRANGTHAI=N'Đã nghiệm thu' AND CAPDETAI = N'$capdetai' AND dt.IDDT=dn.IDDT;";
+                $sql = "SELECT DISTINCT dt.IDDT, dt.TENDETAI, dt.THOIGIANNGHIEMTHU, dt.DIEM FROM detai dt, nguoidung nd, thanhviendetai tv WHERE dt.TRANGTHAI=N'Đã nghiệm thu' AND CAPDETAI = N'$capdetai' AND dt.IDDT=tv.IDDT;";
                 $qsql = mysqli_query($conn,$sql);
                 $stt=1; while ($row = mysqli_fetch_assoc($qsql)) { ?>
                 <tr>
                     <td class="giua"><?php echo $stt; ?></td>
                     <td><?php echo $row['TENDETAI'] ?></td>
-                    <td class="giua"><?php echo date("d-m-Y", strtotime($row['THOIGIANNGHIEMTHU'])); ?></td>
+                    <td class="giua"><?php if(!empty($row['THOIGIANNGHIEMTHU'])){echo date("d-m-Y", strtotime($row['THOIGIANNGHIEMTHU']));} else echo ""; ?></td>
                     <td class="giua">
                         <?php $iddt = $row['IDDT'];
                         $q_kbm = "SELECT DISTINCT k.TENKBM, k.IDKBM FROM thanhviendetai tv, khoabomon k, nguoidung nd, nguoidung_khoabomon nk WHERE tv.IDND = nd.IDND AND nd.IDND = nk.IDND AND  nk.IDKBM = k.IDKBM AND tv.IDDT = '$iddt';";

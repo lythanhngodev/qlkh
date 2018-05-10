@@ -21,13 +21,14 @@ $result = Array(
             TENCAP = '$ten' 
         WHERE 
             IDC = '$ma' AND 
-            (NOT EXISTS (SELECT * FROM (SELECT * FROM capdetai) AS t WHERE t.TENCAP = N'$ten'))
+            (NOT EXISTS (SELECT * FROM (SELECT * FROM capdetai) AS t WHERE t.TENCAP = N'$ten'));
     ";
     if(mysqli_query($conn, $sql)===TRUE){
         $row = mysqli_affected_rows($conn);
         if($row==0) $result['trangthai'] = 0;
-        else
+        else{
             $result['trangthai'] = 1;
+        }
     }
     mysqli_close($conn);
     echo json_encode($result);

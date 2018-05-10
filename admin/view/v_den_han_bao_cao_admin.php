@@ -13,7 +13,7 @@
                         <th class="giua" style="width: 28px;">STT</th>
                         <th>Tên đề tài</th>
                         <th style="width: 160px;">Chủ nhiệm đề tài</th>
-                        <th style="width: 120px;">Thời gian gửi</th>
+                        <th style="width: 120px;">Thời gian báo cáo</th>
                         <th style="width: 100px;">Trạng thái</th>
                         <th style="width: 120px;" class="giua">Gửi thư nhắc nhở</th>
                     </tr>
@@ -38,16 +38,6 @@
                     </tr>
                 <?php $stt++; } ?>
                 </tbody>
-                <tfoot>
-                    <tr>
-                        <th>STT</th>
-                        <th>Tên đề tài</th>
-                        <th>Chủ nhiệm đề tài</th>
-                        <th>Ngày gửi</th>
-                        <th>Trạng thái</th>
-                        <th>Xem xét</th>
-                    </tr>
-                </tfoot>
             </table>
           </div>
         </div>

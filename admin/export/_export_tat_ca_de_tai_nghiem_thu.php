@@ -16,7 +16,7 @@
 	function thong_ke_de_tai_theo_bo(){
 		$ketnoi = new clsKetnoi();
 		$conn = $ketnoi->ketnoi();
-		$query_cap = "SELECT DISTINCT dt.CAPDETAI FROM detai dt, nguoidung nd, detai_nguoidung dn WHERE dt.TRANGTHAI=N'Đã nghiệm thu' AND dt.IDDT=dn.IDDT;";
+		$query_cap = "SELECT DISTINCT dt.CAPDETAI FROM detai dt, thanhviendetai tv WHERE dt.TRANGTHAI=N'Đã nghiệm thu' AND tv.IDDT=dt.IDDT;";
 		$result_cap = mysqli_query($conn, $query_cap);
 		mysqli_close($conn);
 		return $result_cap;
@@ -24,7 +24,7 @@
 	function thong_ke_tat_ca_de_tai($capdetai){
 		$ketnoi = new clsKetnoi();
 		$conn = $ketnoi->ketnoi();
-		$query = "SELECT DISTINCT dt.IDDT, dt.TENDETAI, dt.THOIGIANNGHIEMTHU, dt.DIEM FROM detai dt, nguoidung nd, detai_nguoidung dn WHERE dt.TRANGTHAI=N'Đã nghiệm thu' AND CAPDETAI = N'$capdetai' AND dt.IDDT=dn.IDDT;";
+		$query = "SELECT DISTINCT dt.IDDT, dt.TENDETAI, dt.THOIGIANNGHIEMTHU, dt.DIEM FROM detai dt, nguoidung nd, thanhviendetai tv WHERE dt.TRANGTHAI=N'Đã nghiệm thu' AND CAPDETAI = N'$capdetai' AND dt.IDDT=tv.IDDT;";
 		$result = mysqli_query($conn, $query);
 		mysqli_close($conn);
 		return $result;

@@ -19,11 +19,6 @@
 			include_once "view/v_den_han_bao_cao_truongkhoaphong.php";
 			exit();
 			break;
-		case 'bangiamhieu':
-			$detai = lay_den_han_bao_cao_bangiamhieu($idnd);
-			include_once "view/v_den_han_bao_cao_bangiamhieu.php";
-			exit();
-			break;
 		default:
 			include_once 'view/v_khong_bai_bao.php';
 			exit();

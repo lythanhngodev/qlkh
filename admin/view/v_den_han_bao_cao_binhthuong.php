@@ -13,7 +13,7 @@
                         <th class="giua" style="width: 28px;">STT</th>
                         <th>Tên đề tài</th>
                         <th style="width: 160px;">Chủ nhiệm đề tài</th>
-                        <th style="width: 120px;">Thời gian gửi</th>
+                        <th style="width: 120px;">Thời gian báo cáo</th>
                         <th style="width: 100px;">Trạng thái</th>
                     </tr>
                 </thead>

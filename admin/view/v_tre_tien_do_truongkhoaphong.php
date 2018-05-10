@@ -13,7 +13,7 @@
                         <th class="giua" style="width: 28px;">STT</th>
                         <th>Tên đề tài</th>
                         <th style="width: 160px;">Chủ nhiệm đề tài</th>
-                        <th style="width: 120px;">Thời gian báo cáo</th>
+                        <th>Thời gian kết thúc đề tài</th>
                         <th style="width: 100px;">Trạng thái</th>
                     </tr>
                 </thead>
@@ -21,7 +21,7 @@
                 <?php $stt=1; while ($row = mysqli_fetch_assoc($detai)){ ?>
                     <tr>
                         <th><?php echo $stt; ?></th>
-                        <td><a href="?p=xemdexuat&id=<?php echo $row['IDDT']; ?>"><?php echo $row['TENDETAI']; ?></a></td>
+                        <td><?php echo $row['TENDETAI']; ?></td>
                         <td><?php echo lay_ten_chu_nhiem_de_tai($row['IDDT']); ?></td>
                         <td class="giua"><?php echo date("m-Y", strtotime($row['THANGNAMKT'])); ?></td>
                         <td>
@@ -46,8 +46,8 @@
 <script src="../bootstrap/js/bootstrap.js" type="text/javascript"></script>
 <script type="text/javascript">
   $(document).ready(function(){
-    $('#denhanbaocao').addClass('active');
-    $('.tieude').html('Đề tài đến hạn báo cáo');
+    $('#tretiendo').addClass('active');
+    $('.tieude').html('Đề tài trễ tiến độ');
   });
   $(document).ready(function() {
     $('#example').DataTable();

@@ -13,9 +13,8 @@
                         <th class="giua" style="width: 28px;">STT</th>
                         <th>Tên đề tài</th>
                         <th style="width: 160px;">Chủ nhiệm đề tài</th>
-                        <th style="width: 120px;">Thời gian gửi</th>
+                        <th>Thời gian kết thúc đề tài</th>
                         <th style="width: 100px;">Trạng thái</th>
-                        <th style="width: 120px;" class="giua">Gửi thư nhắc nhở</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -32,22 +31,9 @@
                           echo $row['TRANGTHAI'];
                         } ?>
                         </td>
-                        <td class="giua">
-                            <a class="btn btn-primary btn-sm"><i class="fas fa-paper-plane"></i></a>
-                        </td>
                     </tr>
                 <?php $stt++; } ?>
                 </tbody>
-                <tfoot>
-                    <tr>
-                        <th>STT</th>
-                        <th>Tên đề tài</th>
-                        <th>Chủ nhiệm đề tài</th>
-                        <th>Ngày gửi</th>
-                        <th>Trạng thái</th>
-                        <th>Xem xét</th>
-                    </tr>
-                </tfoot>
             </table>
           </div>
         </div>

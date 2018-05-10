@@ -13,8 +13,9 @@
                         <th class="giua" style="width: 28px;">STT</th>
                         <th>Tên đề tài</th>
                         <th style="width: 160px;">Chủ nhiệm đề tài</th>
-                        <th style="width: 120px;">Thời gian báo cáo</th>
+                        <th>Thời gian kết thúc đề tài</th>
                         <th style="width: 100px;">Trạng thái</th>
+                        <th style="width: 120px;" class="giua">Gửi thư nhắc nhở</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -31,6 +32,9 @@
                           echo $row['TRANGTHAI'];
                         } ?>
                         </td>
+                        <td class="giua">
+                            <a class="btn btn-primary btn-sm"><i class="fas fa-paper-plane"></i></a>
+                        </td>
                     </tr>
                 <?php $stt++; } ?>
                 </tbody>
@@ -46,8 +50,8 @@
 <script src="../bootstrap/js/bootstrap.js" type="text/javascript"></script>
 <script type="text/javascript">
   $(document).ready(function(){
-    $('#denhanbaocao').addClass('active');
-    $('.tieude').html('Đề tài đến hạn báo cáo');
+    $('#tretiendo').addClass('active');
+    $('.tieude').html('Đề tài trễ tiến độ');
   });
   $(document).ready(function() {
     $('#example').DataTable();
