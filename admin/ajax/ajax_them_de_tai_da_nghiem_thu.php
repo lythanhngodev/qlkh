@@ -8,11 +8,28 @@ if (isset($_SESSION['tdn']) && isset($_SESSION['pas'])) {
         exit();
     }
 }
-function themdetai($tendetai,$muctieu,$noidung,$cap,$moisangtao,$thuocchuongtrinh,$sucanthiet,$tinhhinhnghiencuu,$nghiencuulienquan,$phuongphapkythuat,$kinhphingansach,$kinhphinguonkhac,$thangthuchien,$thangnambatdau,$thangnamketthuc,$ketqua,$loaihinhnghiencuu,$linhvuckhoahoc,$thanhvien,$file,$tochucthamgia,$tiendodukien,$baocaotiendo,$kinhphichitiet,$dgbtc,$dgtv,$nttv){
+function themdetai($madetai,$tendetai,$muctieu,$noidung,$cap,$moisangtao,$thuocchuongtrinh,$sucanthiet,$tinhhinhnghiencuu,$nghiencuulienquan,$phuongphapkythuat,$kinhphingansach,$kinhphinguonkhac,$thangthuchien,$thangnambatdau,$thangnamketthuc,$ketqua,$loaihinhnghiencuu,$linhvuckhoahoc,$thanhvien,$file,$tochucthamgia,$tiendodukien,$baocaotiendo,$kinhphichitiet,$dgbtc,$dgtv,$nttv){
     $ketnoi = new clsKetnoi();
     $conn = $ketnoi->ketnoi();
+    $madetai=mysqli_real_escape_string($conn,$madetai);
+    $tendetai=mysqli_real_escape_string($conn,$tendetai);
+    $muctieu=mysqli_real_escape_string($conn,$muctieu);
+    $noidung=mysqli_real_escape_string($conn,$noidung);
+    $cap=mysqli_real_escape_string($conn,$cap);
+    $moisangtao=mysqli_real_escape_string($conn,$moisangtao);
+    $thuocchuongtrinh=mysqli_real_escape_string($conn,$thuocchuongtrinh);
+    $sucanthiet=mysqli_real_escape_string($conn,$sucanthiet);
+    $tinhhinhnghiencuu=mysqli_real_escape_string($conn,$tinhhinhnghiencuu);
+    $nghiencuulienquan=mysqli_real_escape_string($conn,$nghiencuulienquan);
+    $phuongphapkythuat=mysqli_real_escape_string($conn,$phuongphapkythuat);
+    $kinhphingansach=mysqli_real_escape_string($conn,$kinhphingansach);
+    $kinhphinguonkhac=mysqli_real_escape_string($conn,$kinhphinguonkhac);
+    $thangthuchien=mysqli_real_escape_string($conn,$thangthuchien);
+    $thangnambatdau=mysqli_real_escape_string($conn,$thangnambatdau);
+    $thangnamketthuc=mysqli_real_escape_string($conn,$thangnamketthuc);
+    $ketqua=mysqli_real_escape_string($conn,$ketqua);
     // xử lý từ khóa
-    $hoi="INSERT INTO `detai`(`TENDETAI`, `MUCTIEU`, `NOIDUNG`, `CAPDETAI`, `MOISANGTAO`, `THUOCCHUONGTRINH`, `SUCANTHIET`, `TINHHINHNGHIENCUU`, `NGHIENCUULIENQUAN`, `PHUONGPHAPKYTHUAT`, `KINHPHINGANSACH`, `KINHPHINGUONKHAC`, `THANGTHUCHIEN`, `THANGNAMBD`, `THANGNAMKT`, `KETQUA`, `FILE`,`TRANGTHAI`) VALUES ('$tendetai','$muctieu','$noidung','$cap','$moisangtao','$thuocchuongtrinh','$sucanthiet','$tinhhinhnghiencuu','$nghiencuulienquan','$phuongphapkythuat','$kinhphingansach','$kinhphinguonkhac','$thangthuchien','$thangnambatdau','$thangnamketthuc','$ketqua','$file','Đã nghiệm thu')";
+    $hoi="INSERT INTO `detai`(`MADETAI`,`TENDETAI`, `MUCTIEU`, `NOIDUNG`, `CAPDETAI`, `MOISANGTAO`, `THUOCCHUONGTRINH`, `SUCANTHIET`, `TINHHINHNGHIENCUU`, `NGHIENCUULIENQUAN`, `PHUONGPHAPKYTHUAT`, `KINHPHINGANSACH`, `KINHPHINGUONKHAC`, `THANGTHUCHIEN`, `THANGNAMBD`, `THANGNAMKT`, `KETQUA`, `FILE`,`TRANGTHAI`) VALUES ('$tendetai','$muctieu','$noidung','$cap','$moisangtao','$thuocchuongtrinh','$sucanthiet','$tinhhinhnghiencuu','$nghiencuulienquan','$phuongphapkythuat','$kinhphingansach','$kinhphinguonkhac','$thangthuchien','$thangnambatdau','$thangnamketthuc','$ketqua','$file','Đã nghiệm thu')";
     //exit();
     if(mysqli_query($conn, $hoi)===TRUE){
         $dem = mysqli_affected_rows($conn);
@@ -89,7 +106,7 @@ function xettochuc(){
     }else return $_POST['tochucthamgia'];
 }
 
-if (themdetai($_POST['tendetai'],$_POST['muctieu'],$_POST['noidung'],$_POST['cap'],$_POST['moisangtao'],$_POST['thuocchuongtrinh'],$_POST['sucanthiet'],$_POST['tinhhinhnghiencuu'],$_POST['nghiencuulienquan'],$_POST['phuongphapkythuat'],$_POST['kinhphingansach'],$_POST['kinhphinguonkhac'],$_POST['thangthuchien'],$_POST['thangnambatdau'],$_POST['thangnamketthuc'],$_POST['ketqua'],$_POST['loaihinhnghiencuu'],$_POST['linhvuckhoahoc'],$thanhvien=xetthanhvien(),$_POST['file'],$tochuc=xettochuc(),$_POST['tiendodukien'],$_POST['baocaotiendo'],$_POST['kinhphichitiet'],$_POST['dgbtc'],$_POST['dgtv'],$_POST['nttv'])) {
+if (themdetai($_POST['madetai'],$_POST['tendetai'],$_POST['muctieu'],$_POST['noidung'],$_POST['cap'],$_POST['moisangtao'],$_POST['thuocchuongtrinh'],$_POST['sucanthiet'],$_POST['tinhhinhnghiencuu'],$_POST['nghiencuulienquan'],$_POST['phuongphapkythuat'],$_POST['kinhphingansach'],$_POST['kinhphinguonkhac'],$_POST['thangthuchien'],$_POST['thangnambatdau'],$_POST['thangnamketthuc'],$_POST['ketqua'],$_POST['loaihinhnghiencuu'],$_POST['linhvuckhoahoc'],$thanhvien=xetthanhvien(),$_POST['file'],$tochuc=xettochuc(),$_POST['tiendodukien'],$_POST['baocaotiendo'],$_POST['kinhphichitiet'],$_POST['dgbtc'],$_POST['dgtv'],$_POST['nttv'])) {
     ?>
     <script type="text/javascript">
         thanhcong("Đã thêm đề tài!");

@@ -476,12 +476,14 @@
         var tr=null;
         _tv_.forEach((tv)=>{
             _data_.forEach((d)=>{
-                if (tv[6]==d[0]) {
+                if (tv[3]==d[0]) {
                     var option = "<option value=''>Chọn thành viên</option>";
                         _data_.forEach((i)=>{
-                          (tv[6]==i[0]) ? option+="<option value='"+i[0]+"' selected>"+i[1]+" "+i[2]+"</option>" : option+="<option value='"+i[0]+"'>"+i[1]+" "+i[2]+"</option>";
+                          (tv[3]==i[0]) ? option+="<option value='"+i[0]+"' selected>"+i[1]+" "+i[2]+"</option>" : option+="<option value='"+i[0]+"'>"+i[1]+" "+i[2]+"</option>";
                         });
-                    tr+="<tr><td><select class='form-control select-chon' disabled>"+option+"</select></td><td><textarea class='form-control' rows='4' readonly>"+"- "+d[6]+"\n- "+d[3]+"\n- "+d[4]+"</textarea></td><td><textarea class='form-control' rows='4'>"+tv[5]+"</textarea></td><td class='giua'><button class='xoathanhvien'><i class='fas fa-times do'></i></button></td></tr>";
+                    var td=""; _ndtd_.forEach(function(d){if (d[0]==tv[3]) {td = d[1];}});
+                    var dv=""; _nddv_.forEach(function(d){if (d[0]==tv[3]) {dv = d[1];}});
+                    tr+="<tr><td><select class='form-control select-chon' disabled>"+option+"</select></td><td><textarea class='form-control' rows='4' readonly>"+"- "+td+"\n- "+dv+"\n- "+d[3]+"</textarea></td><td><textarea class='form-control' rows='4'>"+tv[2]+"</textarea></td><td class='giua'><button class='xoathanhvien'><i class='fas fa-times do'></i></button></td></tr>";
                 }
             });
         });
@@ -503,16 +505,17 @@
             for (var j = 0; j< _data_[i].length; j++)
                 (!_data_[i][j]) ? _data_[i][j] = '' : 1;
         var tr=null;
-
         if (_tv_!=null) {
             _tv_.forEach((tv)=>{
                 _data_.forEach((d)=>{
-                    if (tv[6]==d[0]) {
+                    if (tv[3]==d[0]) {
                         var option = "<option value=''>Chọn thành viên</option>";
                             _data_.forEach((i)=>{
-                              (tv[6]==i[0]) ? option+="<option value='"+i[0]+"' selected>"+i[1]+" "+i[2]+"</option>" : option+="<option value='"+i[0]+"'>"+i[1]+" "+i[2]+"</option>";
+                              (tv[3]==i[0]) ? option+="<option value='"+i[0]+"' selected>"+i[1]+" "+i[2]+"</option>" : option+="<option value='"+i[0]+"'>"+i[1]+" "+i[2]+"</option>";
                             });
-                        tr+="<tr><td><select class='form-control select-chon'>"+option+"</select></td><td><textarea class='form-control' rows='4' readonly>"+"- "+d[6]+"\n- "+d[3]+"\n- "+d[4]+"</textarea></td><td><textarea class='form-control' rows='4'>"+tv[5]+"</textarea></td><td class='giua'><button class='xoathanhvien'><i class='fas fa-times do'></i></button></td></tr>";
+                        var td=""; _ndtd_.forEach(function(d){if (d[0]==tv[3]) {td = d[1];}});
+                        var dv=""; _nddv_.forEach(function(d){if (d[0]==tv[3]) {dv = d[1];}});
+                        tr+="<tr><td><select class='form-control select-chon'>"+option+"</select></td><td><textarea class='form-control' rows='4' readonly>"+"- "+td+"\n- "+dv+"\n- "+d[3]+"</textarea></td><td><textarea class='form-control' rows='4'>"+tv[2]+"</textarea></td><td class='giua'><button class='xoathanhvien'><i class='fas fa-times do'></i></button></td></tr>";
                     }
                 });
             });

@@ -4,6 +4,8 @@
   var _cdt_ = <?php echo json_encode($rcdt); ?>;
   var _lv_ = <?php echo json_encode($rlv); ?>;
   var _lh_ = <?php echo json_encode($rlh); ?>;
+  var _nddv_ = <?php echo json_encode($rnd_dv); ?>;
+  var _ndtd_ = <?php echo json_encode($rnd_td); ?>;
 </script>
   <div class="card cach background-container">
     <div class="row">
@@ -35,6 +37,10 @@
               <div class="tab-pane show active" id="nav-thong-tin-chung" role="tabpanel" aria-labelledby="nav-home-tab">
                 <div class="col-md-12">
                   <br>
+                  <div class="form-group">
+                      <label for="category" class="font-weight-bold" >Mã đề tài (<span class="text-danger">*</span>)</label>
+                      <input type="text" class="form-control col-md-4" id="madetai" value="">
+                  </div>
                   <div class="form-group">
                     <label for="category" class="font-weight-bold" >Tên đề tài (<span class="text-danger">*</span>)</label>
                     <input type="text" class="form-control" id="tendetai">
@@ -577,6 +583,7 @@ giao kết quả nghiên cứu đến người sử dụng. Phải nêu được
       });
     // Thêm đề tài
       $('#themdetai').click(()=>{
+        var madetai = $('#madetai').val().trim();
         var tendetai = $('#tendetai').val().trim();
         var muctieudetai = $('#muctieudetai').val().trim();
         var noidungdetai = $('#noidungdetai').val().trim();
@@ -593,6 +600,10 @@ giao kết quả nghiên cứu đến người sử dụng. Phải nêu được
         var thangnambatdau = $('#thangnambatdaudetai').val().trim();
         var thangnamketthuc = $('#thangnamketthucdetai').val().trim();
         var ketqua = $('#ketquadetai').val().trim();
+        if(!madetai){
+            khongthanhcong('Chưa nhập mã đề tài');
+            return;
+        }
         if(!tendetai) {
             khongthanhcong('Chưa nhập tên đề tài');
             return;
@@ -879,7 +890,7 @@ giao kết quả nghiên cứu đến người sử dụng. Phải nêu được
               $.ajax({
                   url: 'ajax/ajax_them_de_tai_da_nghiem_thu.php',
                   type: 'POST',
-                  data: {tendetai: tendetai,muctieu: muctieudetai,noidung: noidungdetai,cap: capdetai,moisangtao: moisangtao,thuocchuongtrinh: thuocchuongtrinh,sucanthiet: sucanthiet,tinhhinhnghiencuu: tinhhinhnghiencuu,nghiencuulienquan: nghiencuulienquan,phuongphapkythuat: phuongphapkythuat,kinhphingansach: kinhphingansach,kinhphinguonkhac: kinhphinguonkhac,thangthuchien: thangthuchien,thangnambatdau: thangnambatdau,thangnamketthuc: thangnamketthuc,ketqua: ketqua,loaihinhnghiencuu: loaihinhnghiencuu,linhvuckhoahoc: linhvuckhoahoc,thanhvien: thanhviendetai,file: $('#filetailieu').val().trim(),tochucthamgia: btc,tiendodukien: btd,baocaotiendo: bctd,dgbtc: dgbtc,dgtv: dgtv,nttv: nttv,kinhphichitiet: bkp },
+                  data: {madetai:madetai,tendetai: tendetai,muctieu: muctieudetai,noidung: noidungdetai,cap: capdetai,moisangtao: moisangtao,thuocchuongtrinh: thuocchuongtrinh,sucanthiet: sucanthiet,tinhhinhnghiencuu: tinhhinhnghiencuu,nghiencuulienquan: nghiencuulienquan,phuongphapkythuat: phuongphapkythuat,kinhphingansach: kinhphingansach,kinhphinguonkhac: kinhphinguonkhac,thangthuchien: thangthuchien,thangnambatdau: thangnambatdau,thangnamketthuc: thangnamketthuc,ketqua: ketqua,loaihinhnghiencuu: loaihinhnghiencuu,linhvuckhoahoc: linhvuckhoahoc,thanhvien: thanhviendetai,file: $('#filetailieu').val().trim(),tochucthamgia: btc,tiendodukien: btd,baocaotiendo: bctd,dgbtc: dgbtc,dgtv: dgtv,nttv: nttv,kinhphichitiet: bkp },
                   beforeSend: ()=>{
                       canhbao('Đang xử lý dữ liệu');
                   },
@@ -892,12 +903,20 @@ giao kết quả nghiên cứu đến người sử dụng. Phải nêu được
               });
           } else canhbao('Không có kết nối internet');
       });
-    _data_.forEach((data)=>{if(data[0]==$('#chonchunhiem').val())$('#chonchunhiem').parent().parent('td').parent('tr').find('td:nth-child(2) textarea').val("- "+data[6]+"\n- "+data[3]+"\n- "+data[4]);});
+    _data_.forEach(function(data){
+      if (data[0]==$('#chonchunhiem').val()) {
+        var td=""; _ndtd_.forEach(function(d){if (d[0]==idnd) {td = d[1];}});
+        var dv=""; _nddv_.forEach(function(d){if (d[0]==idnd) {dv = d[1];}});
+        $('#chonchunhiem').parent().parent('td').parent('tr').find('td:nth-child(2) textarea').val("- "+td+"\n- "+dv+"\n- "+data[3]);
+      }
+    });
   });
   function chonthanhvien(t){
-    _data_.forEach((data)=>{
-      if (data[0]==t.value){
-        $(t).parent().parent('td').parent('tr').find('td:nth-child(2) textarea').val("- "+data[6]+"\n- "+data[3]+"\n- "+data[4]);
+    _data_.forEach(function(data){
+      if (data[0]==t.value) {
+        var td=""; _ndtd_.forEach(function(d){if (d[0]==t.value) {td = d[1];}});
+        var dv=""; _nddv_.forEach(function(d){if (d[0]==t.value) {dv = d[1];}});
+        $(t).parent().parent('td').parent('tr').find('td:nth-child(2) textarea').val("- "+td+"\n- "+dv+"\n- "+data[3]);
         return;
       }
     });

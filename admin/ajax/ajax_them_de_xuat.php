@@ -44,8 +44,6 @@ function themdetai($tendetai,$muctieu,$noidung,$cap,$moisangtao,$thuocchuongtrin
         if ($rsql==0){
             return false;
         }
-        // Thêm người dùng thuộc chủ sở hữu đề tài
-        $sql = "INSERT INTO `detai_nguoidung`(`IDDT`, `IDND`) VALUES ('$iddt','$idnd');";
         // Thêm loại hình nghiên cứu thuộc đề tài
         for ($i=0; $i < count($loaihinhnghiencuu); $i++) { 
             $sql.= "INSERT INTO `loaihinhnghiencuu`(`IDDT`, `TENLH`) VALUES ('$iddt','".$loaihinhnghiencuu[$i]."');";

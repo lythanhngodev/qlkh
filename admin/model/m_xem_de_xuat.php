@@ -36,7 +36,7 @@ function linh_vuc_khoa_hoc($iddt){
 function thanh_vien_de_tai($iddt){
     $ketnoi = new clsKetnoi();
     $conn = $ketnoi->ketnoi();
-    $query = "SELECT tv.IDTV, CONCAT(nd.HO, ' ', nd.TEN) AS HOTEN, nd.TRINHDOCHUYENMON, nd.DONVICONGTAC, nd.DIENTHOAIDD, tv.CONGVIEC FROM thanhviendetai tv, nguoidung nd WHERE tv.IDND = nd.IDND AND tv.IDDT = '$iddt' ORDER BY tv.IDTV ASC ;";
+    $query = "SELECT tv.IDTV, CONCAT(nd.HO, ' ', nd.TEN) AS HOTEN, nd.DIENTHOAIDD, tv.CONGVIEC, nd.IDND FROM thanhviendetai tv, nguoidung nd WHERE tv.IDND = nd.IDND AND tv.IDDT = '$iddt' ORDER BY tv.IDTV ASC ;";
     $result = mysqli_query($conn, $query);
     mysqli_close($conn);
     return $result;
@@ -78,7 +78,7 @@ function lay_ten_chu_nhiem_de_tai($iddt){
 function chu_nhiem_de_tai($iddt){
     $ketnoi = new clsKetnoi();
     $conn = $ketnoi->ketnoi();
-    $query = "SELECT CONCAT(nd.HO,' ',nd.TEN) as HOTEN, nd.DIENTHOAIDD,nd.HOCVICAONHAT,nd.TRINHDOCHUYENMON, nd.CHUCDANHGIANGVIEN, nd.MAIL, nd.CHUCDANHKHOAHOC, dt.IDND FROM detai_nguoidung dt, nguoidung nd WHERE dt.IDND = nd.IDND AND dt.IDDT = '$iddt'";
+    $query = "SELECT CONCAT(nd.HO,' ',nd.TEN) as HOTEN, nd.DIENTHOAIDD, nd.MAIL, tv.IDND FROM nguoidung nd, thanhviendetai tv WHERE nd.IDND = tv.IDND AND tv.IDDT = '$iddt' AND tv.TRACHNHIEM=N'Chủ nhiệm'";
     $result = mysqli_query($conn, $query);
     mysqli_close($conn);
     return $result;
@@ -90,6 +90,26 @@ function don_vi_cong_tac($idnd){
     $result = mysqli_query($conn, $query);
     $fetch = mysqli_fetch_assoc($result);
     $dvct = $fetch['TENKBM'];
+    mysqli_close($conn);
+    return $dvct;
+}
+function trinh_do_chuyen_mon($idnd){
+    $ketnoi = new clsKetnoi();
+    $conn = $ketnoi->ketnoi();
+    $query = "SELECT td.TENTRINHDO FROM nguoidung_trinhdochuyenmon nt, trinhdochuyenmon td WHERE nt.IDTD = td.IDTD AND nt.IDND = '$idnd';";
+    $result = mysqli_query($conn, $query);
+    $fetch = mysqli_fetch_assoc($result);
+    $dvct = $fetch['TENTRINHDO'];
+    mysqli_close($conn);
+    return $dvct;
+}
+function chuc_danh_giang_vien($idnd){
+    $ketnoi = new clsKetnoi();
+    $conn = $ketnoi->ketnoi();
+    $query = "SELECT cd.TENCHUCDANH FROM chucdanhgiangvien cd, nguoidung_chucdanhgiangvien nc WHERE cd.IDCD = nc.IDCD AND nc.IDND = '$idnd';";
+    $result = mysqli_query($conn, $query);
+    $fetch = mysqli_fetch_assoc($result);
+    $dvct = $fetch['TENCHUCDANH'];
     mysqli_close($conn);
     return $dvct;
 }
