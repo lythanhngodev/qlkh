@@ -12,7 +12,7 @@ include_once("../config.php");
 function chi_tiet_de_tai($iddt,$idnd){
     $ketnoi = new clsKetnoi();
     $conn = $ketnoi->ketnoi();
-    $query = "SELECT DISTINCT dt.`IDDT`, `TENDETAI`, `MUCTIEU`, `NOIDUNG`, `CAPDETAI`, `MOISANGTAO`, `THUOCCHUONGTRINH`, `SUCANTHIET`, `TINHHINHNGHIENCUU`, `NGHIENCUULIENQUAN`, `PHUONGPHAPKYTHUAT`, `KINHPHINGANSACH`, `KINHPHINGUONKHAC`, `THANGTHUCHIEN`, `THANGNAMBD`, `THANGNAMKT`, `KETQUA`, `FILE`, `NGAYTHEM`, `TRANGTHAI` FROM detai dt, detai_nguoidung dn WHERE dn.IDDT = dt.IDDT AND dn.IDND = '$idnd' AND dn.IDDT = '$iddt'";
+    $query = "SELECT DISTINCT dt.`IDDT`, `TENDETAI`, `MUCTIEU`, `NOIDUNG`, `CAPDETAI`, `MOISANGTAO`, `THUOCCHUONGTRINH`, `SUCANTHIET`, `TINHHINHNGHIENCUU`, `NGHIENCUULIENQUAN`, `PHUONGPHAPKYTHUAT`, `KINHPHINGANSACH`, `KINHPHINGUONKHAC`, `THANGTHUCHIEN`, `THANGNAMBD`, `THANGNAMKT`, `KETQUA`, `FILE`, `NGAYTHEM`, `TRANGTHAI` FROM detai dt, thanhviendetai tv WHERE tv.IDDT = dt.IDDT AND tv.IDND = '$idnd' AND tv.IDDT = '$iddt' AND tv.TRACHNHIEM=N'Chủ nhiệm'";
     $result = mysqli_query($conn, $query);
     mysqli_close($conn);
     return $result;

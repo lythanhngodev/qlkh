@@ -1,6 +1,18 @@
 <?php if (!isset($_SESSION["token"])) {include_once ("../../loi404.html");exit();} ?>
 <div class="cach background-container">
     <div class="row">
+      <div class="col-12">
+        <div class="card card-warning">
+          <div class="card-header" style="border-top: 3px solid #ffc107;">
+            <h4><i class="fas fa-bullhorn"></i>&ensp;Thông báo</h4>
+          </div>
+          <div class="card-body giua">
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
         <div class="col-md-3 col-sm-6">
             <div class="card line-chart-example">
                 <div class="card-header giua">
