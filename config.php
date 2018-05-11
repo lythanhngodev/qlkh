@@ -1,9 +1,9 @@
 <?php 
 	$qlkh = array(
-		//'HOSTGOC' => 'http://localhost/qlkh/',
-		//'HOSTADMIN' => 'http://localhost/qlkh/admin/'
-		'HOSTGOC' => 'http://115.79.120.115:8080/qlkh/',
-		'HOSTADMIN' => 'http://115.79.120.115:8080/qlkh/admin/'
+		'HOSTGOC' => 'http://localhost/qlkh/',
+		'HOSTADMIN' => 'http://localhost/qlkh/admin/'
+		//'HOSTGOC' => 'http://115.79.120.115:8080/qlkh/',
+		//'HOSTADMIN' => 'http://115.79.120.115:8080/qlkh/admin/'
 	);
 	class clsKetnoi
 	{
