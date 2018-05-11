@@ -211,7 +211,7 @@ $_SESSION["token"] = $token;
         <nav class="navbar">
           <div class="container-fluid">
             <div class="navbar-holder d-flex align-items-center justify-content-between">
-              <div class="navbar-header"><a id="toggle-btn" href="#" class="menu-btn"><i class="icon-bars"></i></a><a href="index.html" class="navbar-brand">
+              <div class="navbar-header"><a id="toggle-btn" href="#" class="menu-btn"><i class="icon-bars"></i></a><span style="color: #FFF;font-size: 1.5rem;padding-left: 1rem;font-weight: 500;line-height: 50px;padding-top: 2px;"><img src="../images/logo.png" style="width: 50px;">&ensp;PHẦN MỀM QUẢN LÝ NGHIÊN CỨU KHOA HỌC</span><a href="index.html" class="navbar-brand">
                   <div class="brand-text d-none d-md-inline-block"></div></a></div>
               <ul class="nav-menu list-unstyled d-flex flex-md-row align-items-md-center">
                 <!-- Log out-->
