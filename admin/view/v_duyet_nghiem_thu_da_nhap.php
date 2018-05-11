@@ -48,7 +48,7 @@
 <script src="../bootstrap/js/bootstrap.js" type="text/javascript"></script>
 <script type="text/javascript">
   $(document).ready(function(){
-    $('#dexuatmoi').addClass('active');
+    $('#duyetnghiemthudanhap').addClass('active');
     $('.tieude').html('Duyệt đề tài khoa học từng nghiệm thu trước đây');
   });
   $(document).ready(function() {
