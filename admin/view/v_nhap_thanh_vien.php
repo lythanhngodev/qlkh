@@ -62,7 +62,12 @@ if (!isset($_SESSION["token"])) {include_once ("../../loi404.html");exit();}
             var file_data = $('#filedl').prop('files')[0];
             var type = file_data.type;
             var match = ["application/vnd.ms-excel", "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"];
-            alert(type);
+            if (type==match[0] || type==match[1]) {
+                return;
+            }
+            else{
+                swal('Ôi! Lỗi','Vui lòng chọn định dạng Excel','error');
+            }
         });
         $('#luuthaydoi').click(function(){
             var btv = [];
