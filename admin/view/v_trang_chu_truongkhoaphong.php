@@ -15,7 +15,7 @@
     <div class="row">
         <div class="col-md-3">
             <div class="card">
-              <div class="card-header">
+              <div class="card-header giua">
                 <h4>Nghiên cứu khoa học</h4>
               </div>
               <div class="card-body giua">
@@ -25,7 +25,7 @@
         </div>
         <div class="col-md-3">
             <div class="card">
-              <div class="card-header">
+              <div class="card-header giua">
                 <h4>Bài báo khoa học</h4>
               </div>
               <div class="card-body giua">
@@ -35,7 +35,7 @@
         </div>
         <div class="col-md-3">
             <div class="card">
-              <div class="card-header">
+              <div class="card-header giua">
                 <h4>Thông tin cá nhân</h4>
               </div>
               <div class="card-body giua">

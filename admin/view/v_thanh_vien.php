@@ -96,7 +96,7 @@ if (!isset($_SESSION["token"])) {include_once ("../../loi404.html");exit();}
     var obk;
     $(document).ready(function(){
         $('#thanhvien').addClass('active');
-        $('.tieude').html('Chuyên mục tin tức - sự kiện');
+        $('.tieude').html('Thành viên');
         $('#themchuyenmuc').on('click',function () {
             $('#modal-them-chuyen-muc').modal('show');
         });

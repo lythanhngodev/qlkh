@@ -34,7 +34,6 @@
 						<ul style="display: none; visibility: hidden;">
 							<li><a href="Article/Details/33.html">Nhiệm vụ chiến lược</a></li>
 							<li><a href="Researcher.html">Danh sách nhà khoa học</a></li>
-							<li><a href="Article/Details/35.html">Các phòng thí nghiệm</a></li>
 						</ul>
 					</li>
 					<li class="">
@@ -43,17 +42,10 @@
 							<li><a href="Propose.html">Đề xuất NCKH</a></li>
 							<li class=" "><a href="Theme.html">Đề tài - Dự án NCKH</a></li>
 							<li><a href="ScientificReport.html">Công trình khoa học đã công bố</a></li>
-							<li><a href="FrequentActivity.html">Hoạt động NCKH khác</a></li>
 						</ul>
 					</li>
 					<li>
 						<a href="ket-qua-noi-bat/p.html">Kết quả nổi bật</a>
-					</li>
-					<li>
-						<a href="Document/Dispatch.html">Công văn, thông báo</a>
-					</li>
-					<li>
-						<a href="Document/Legal.html">Văn bản NCKH</a>
 					</li>
 					<li class="">
 						<a href="Article/Index/0.html" class="sf-with-ul">Tin tức</a>
