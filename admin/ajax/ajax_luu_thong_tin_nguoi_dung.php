@@ -25,7 +25,10 @@ $result = Array(
     $ho = mysqli_real_escape_string($conn,$_POST['ho']);
     $ten = mysqli_real_escape_string($conn,$_POST['ten']);
     $gioitinh = mysqli_real_escape_string($conn,$_POST['gioitinh']);
-    $ngaysinh = mysqli_real_escape_string($conn,$_POST['ngaysinh']);
+    $ngaysinh='';
+    if (isset($_POST['ngaysinh'])) {
+        $ngaysinh = mysqli_real_escape_string($conn,$_POST['ngaysinh']);
+    }
     $noisinh = mysqli_real_escape_string($conn,$_POST['noisinh']);
     $quequan = mysqli_real_escape_string($conn,$_POST['quequan']);
     $dantoc = mysqli_real_escape_string($conn,$_POST['dantoc']);
@@ -54,13 +57,15 @@ $result = Array(
     $bdt = (!isset($_POST['bdt'])) ? null : $_POST['bdt'];
     $bct = (!isset($_POST['bct'])) ? null : $_POST['bct'];
     $idnd = $_POST['idnd'];
+    $hoi;
+    if (!empty($ngaysinh)) {
     $hoi = "
         UPDATE `nguoidung` 
         SET 
             `HO`='$ho',
             `TEN`='$ten',
             `GIOITINH`='$gioitinh',
-            `NGAYSINH`='$ngaysinh',
+            `NGAYSINH`= '$ngaysinh',
             `NOISINH`='$noisinh',
             `QUEQUAN`='$quequan',
             `DANTOC`='$dantoc',
@@ -82,6 +87,36 @@ $result = Array(
         WHERE 
             `IDND` = '$idnd';
     ";
+    }else{
+    $hoi = "
+        UPDATE `nguoidung` 
+        SET 
+            `HO`='$ho',
+            `TEN`='$ten',
+            `GIOITINH`='$gioitinh',
+            `NGAYSINH`= null,
+            `NOISINH`='$noisinh',
+            `QUEQUAN`='$quequan',
+            `DANTOC`='$dantoc',
+            `NAMNUOCHOCVI`='$namnuocnhanhocvi',
+            `NAMBONHIEM`='$nambonhiem',
+            `CHOORIENG`='$choorieng',
+            `DIENTHOAICQ`='$dienthoaicq',
+            `DIENTHOAINR`='$dienthoainr',
+            `DIENTHOAIDD`='$dienthoaidd',
+            `FAX`='$fax',
+            `MAIL`='$mail',
+            `THACSICHUYENNGANH`='$thacsichuyennganh',
+            `NAMCAPBANGTSCN`='$namcapbang',
+            `NOIDAOTAOTSCN`='$noidaotaotscn',
+            `TIENSICHUYENNGANH`='$tiensichuyennganh',
+            `NAMCAPBANGTSCN2`='$namcapbangtscn2',
+            `NOIDAOTAOTSCN2`='$noidaotaotscn2',
+            `TENLUANAN`='$tenluanan'
+        WHERE 
+            `IDND` = '$idnd';
+    ";
+    }
     $hoi.="DELETE FROM nguoidung_chucdanhgiangvien WHERE IDND = '$idnd';";
     $hoi.="INSERT INTO nguoidung_chucdanhgiangvien (IDND, IDCD) VALUES ('$idnd', '$chucdanhgiangvien');";
 

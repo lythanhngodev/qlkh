@@ -26,14 +26,17 @@
                         <td><?php echo $row['TENDETAI']; ?></td>
                         <td><?php echo lay_ten_chu_nhiem_de_tai($row['IDDT']); ?></td>
                         <td class="giua"><?php echo date("d-m-Y H:m:s", strtotime($row['NGAYDEXUAT'])); ?></td>
-                        <td>
+                        <td class="giua">
                         <?php if ($row['TRANGTHAI'] == 'Đang xét duyệt'){ ?>
                           <span class="badge badge-dark" style='font-size:1rem;'>Chờ xét duyệt</span>
                         <?php } else{
                           if ($row['TRANGTHAI'] == 'Đang thực hiện'){
                             echo "<span class='badge badge-info' style='font-size:1rem;'>Đang thực hiện</span>";
+                          }else
+                          if ($row['TRANGTHAI'] == 'Đã nghiệm thu' && $row['DUYET'] == 0){
+                            echo "<span class='badge badge-dark' style='font-size:1rem;'>Chờ duyệt đề tài đã từng nghiệm thu</span>";
                           }
-                          if ($row['TRANGTHAI'] == 'Đã nghiệm thu'){
+                          else if ($row['TRANGTHAI'] == 'Đã nghiệm thu'){
                             echo "<span class='badge badge-success' style='font-size:1rem;'>Đã nghiệm thu</span>";
                           }
                         } ?>

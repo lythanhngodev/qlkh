@@ -54,7 +54,6 @@
 				$tv3 = "INSERT INTO `baibao_tukhoa`(`IDKHOA`, `IDBAO`) VALUES ('$idtag','$idbvbvbv')";
 				mysqli_query($conn, $tv3);
 			}
-			print_r(tg);
 			for ($i=0; $i < count($tg); $i++) { 
 				$tv4 = "INSERT INTO `nguoidung_baibao`(`IDBAO`, `IDND`) VALUES ('$idbvbvbv','".$tg[$i]."')";
 				mysqli_query($conn, $tv4);

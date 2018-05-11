@@ -28,13 +28,13 @@ function xoadetai($iddt){
     $rq = mysqli_num_rows($eq);
     if ($rq == 0) return false;
     $sql = "DELETE FROM `detai` WHERE `IDDT` = '$iddt';";
-    $sql.= "DELETE FROM detai_nguoidung WHERE  IDDT = '$iddt';";
     $sql.= "DELETE FROM `loaihinhnghiencuu` WHERE `IDDT` = '$iddt';";
     $sql.= "DELETE FROM `linhvuckhoahoc` WHERE `IDDT` = '$iddt';";
     $sql.= "DELETE FROM `thanhviendetai` WHERE `IDDT` = '$iddt';";
     $sql.= "DELETE FROM `tochucthamgia` WHERE `IDDT` = '$iddt';";
     $sql.= "DELETE FROM `tiendodukien` WHERE `IDDT` = '$iddt';";
     $sql.= "DELETE FROM `kinhphi` WHERE `IDDT` = '$iddt';";
+    $sql.="DELETE FROM dexuatdetai WHERE IDDT = '$iddt';";
     if(mysqli_multi_query($conn, $sql)===TRUE){
         mysqli_close($conn);
         return true;

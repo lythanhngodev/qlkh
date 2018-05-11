@@ -37,6 +37,9 @@ function themdetai($tendetai,$muctieu,$noidung,$cap,$moisangtao,$thuocchuongtrin
     $thangnambatdau=mysqli_real_escape_string($conn,$thangnambatdau);
     $thangnamketthuc=mysqli_real_escape_string($conn,$thangnamketthuc);
     $ketqua=mysqli_real_escape_string($conn,$ketqua);
+    $kinhphingansach = intval($kinhphingansach);
+    $kinhphinguonkhac = intval($kinhphinguonkhac);
+    $thangthuchien = intval($thangthuchien);
     $hoi="INSERT INTO `detai`(`TENDETAI`, `MUCTIEU`, `NOIDUNG`, `CAPDETAI`, `MOISANGTAO`, `THUOCCHUONGTRINH`, `SUCANTHIET`, `TINHHINHNGHIENCUU`, `NGHIENCUULIENQUAN`, `PHUONGPHAPKYTHUAT`, `KINHPHINGANSACH`, `KINHPHINGUONKHAC`, `THANGTHUCHIEN`, `THANGNAMBD`, `THANGNAMKT`, `KETQUA`) VALUES ('$tendetai','$muctieu','$noidung','$cap','$moisangtao','$thuocchuongtrinh','$sucanthiet','$tinhhinhnghiencuu','$nghiencuulienquan','$phuongphapkythuat','$kinhphingansach','$kinhphinguonkhac','$thangthuchien','$thangnambatdau','$thangnamketthuc','$ketqua')";
     if(mysqli_query($conn, $hoi)===TRUE){
         $iddt = mysqli_insert_id($conn);

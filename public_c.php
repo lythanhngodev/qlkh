@@ -1,8 +1,8 @@
 <?php 
 	if (isset($_GET["p"]) && !empty($_GET["p"])) {
 		switch ($_GET["p"]) {
-			case 'thembaokhoahoc':
-				include_once("control/c_them_bao_khoa_hoc.php");
+			case 'xemtin':
+				include_once("control/c_xem_tin.php");
 				break;
 			default:
 				# code...

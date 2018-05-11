@@ -37,9 +37,21 @@
               <div class="tab-pane show active" id="nav-thong-tin-chung" role="tabpanel" aria-labelledby="nav-home-tab">
                 <div class="col-md-12">
                   <br>
-                  <div class="form-group">
-                      <label for="category" class="font-weight-bold" >Mã đề tài (<span class="text-danger">*</span>)</label>
-                      <input type="text" class="form-control col-md-4" id="madetai" value="">
+                  <div class="row">
+                    <div class="form-group col-md-12">
+                      <div class="form-group col-md-4" style="margin: 0;float: left;">
+                        <label for="category" class="font-weight-bold" >Mã đề tài (<span class="text-danger">*</span>)</label>
+                        <input type="text" class="form-control" id="madetai" value="">
+                      </div>
+                      <div class="form-group col-md-4" style="margin: 0;float: left;">
+                        <label for="category" class="font-weight-bold" >Điểm đề tài (<span class="text-danger">*</span>)</label>
+                        <input type="number" class="form-control" id="diemdetai" value="">
+                      </div>
+                      <div class="form-group col-md-4" style="margin: 0;float: left;">
+                        <label for="category" class="font-weight-bold">Ngày nghiệm thu (<span class="text-danger">*</span>)</label>
+                        <input type="date" class="form-control" id="ngaynghiemthu" value="">
+                      </div>
+                    </div>
                   </div>
                   <div class="form-group">
                     <label for="category" class="font-weight-bold" >Tên đề tài (<span class="text-danger">*</span>)</label>
@@ -51,10 +63,6 @@
                         <textarea class="form-control" id="muctieudetai" rows="5"></textarea>
                         <small id="emailHelp" class="form-text text-muted">Ghi mục tiêu tổng quát cần đạt ở mức độ cụ thể hơn tên đề tài và mục tiêu chi tiết nhưng không diễn giải quá cụ thể thay cho nội dung cần thực hiện của đề tài</small>
                       </div>
-                      <!--<div class="form-group col-md-12">
-                        <label for="category" class="font-weight-bold" >Nội dung nghiên cứu (<span class="text-danger">*</span>)</label>
-                        <textarea class="form-control" id="noidungnghiencuudetai" rows="8"></textarea>
-                      </div>-->
                       <div class="col-md-12"><hr></div>
                       <div class="form-group col-md-4">
                         <label for="category" class="font-weight-bold" >Cấp đề tài</label>
@@ -445,7 +453,7 @@ giao kết quả nghiên cứu đến người sử dụng. Phải nêu được
           </div>
           <div class="card-footer">
             <div>
-              <button type="button" class="btn btn-primary" id="themdetai"><i class="fas fa-save"></i>&nbsp;&nbsp;Lưu đề xuất</button>
+              <button type="button" class="btn btn-primary" id="themdetai"><i class="fas fa-save"></i>&nbsp;&nbsp;Lưu đề tài & đợi xét duyệt</button>
             </div>
           </div>
         </div>
@@ -584,6 +592,8 @@ giao kết quả nghiên cứu đến người sử dụng. Phải nêu được
     // Thêm đề tài
       $('#themdetai').click(()=>{
         var madetai = $('#madetai').val().trim();
+        var diemdetai = $('#diemdetai').val().trim();
+        var ngaynghiemthu = $('#ngaynghiemthu').val().trim();
         var tendetai = $('#tendetai').val().trim();
         var muctieudetai = $('#muctieudetai').val().trim();
         var noidungdetai = $('#noidungdetai').val().trim();
@@ -602,6 +612,14 @@ giao kết quả nghiên cứu đến người sử dụng. Phải nêu được
         var ketqua = $('#ketquadetai').val().trim();
         if(!madetai){
             khongthanhcong('Chưa nhập mã đề tài');
+            return;
+        }
+        if(!diemdetai){
+            khongthanhcong('Chưa nhập điểm đề tài');
+            return;
+        }
+        if(!ngaynghiemthu){
+            khongthanhcong('Chưa nhập ngày nghiệm thu');
             return;
         }
         if(!tendetai) {
@@ -883,7 +901,7 @@ giao kết quả nghiên cứu đến người sử dụng. Phải nêu được
               $.ajax({
                   url: 'ajax/ajax_them_de_tai_da_nghiem_thu.php',
                   type: 'POST',
-                  data: {madetai:madetai,tendetai: tendetai,muctieu: muctieudetai,noidung: noidungdetai,cap: capdetai,moisangtao: moisangtao,thuocchuongtrinh: thuocchuongtrinh,sucanthiet: sucanthiet,tinhhinhnghiencuu: tinhhinhnghiencuu,nghiencuulienquan: nghiencuulienquan,phuongphapkythuat: phuongphapkythuat,kinhphingansach: kinhphingansach,kinhphinguonkhac: kinhphinguonkhac,thangthuchien: thangthuchien,thangnambatdau: thangnambatdau,thangnamketthuc: thangnamketthuc,ketqua: ketqua,loaihinhnghiencuu: loaihinhnghiencuu,linhvuckhoahoc: linhvuckhoahoc,thanhvien: thanhviendetai,file: $('#filetailieu').val().trim(),tochucthamgia: btc,tiendodukien: btd,baocaotiendo: bctd,dgbtc: dgbtc,dgtv: dgtv,nttv: nttv,kinhphichitiet: bkp },
+                  data: { diemdetai:diemdetai,madetai:madetai,ngaynghiemthu:ngaynghiemthu,tendetai: tendetai,muctieu: muctieudetai,noidung: noidungdetai,cap: capdetai,moisangtao: moisangtao,thuocchuongtrinh: thuocchuongtrinh,sucanthiet: sucanthiet,tinhhinhnghiencuu: tinhhinhnghiencuu,nghiencuulienquan: nghiencuulienquan,phuongphapkythuat: phuongphapkythuat,kinhphingansach: kinhphingansach,kinhphinguonkhac: kinhphinguonkhac,thangthuchien: thangthuchien,thangnambatdau: thangnambatdau,thangnamketthuc: thangnamketthuc,ketqua: ketqua,loaihinhnghiencuu: loaihinhnghiencuu,linhvuckhoahoc: linhvuckhoahoc,thanhvien: thanhviendetai,file: $('#filetailieu').val().trim(),tochucthamgia: btc,tiendodukien: btd,baocaotiendo: bctd,dgbtc: dgbtc,dgtv: dgtv,nttv: nttv,kinhphichitiet: bkp },
                   beforeSend: ()=>{
                       canhbao('Đang xử lý dữ liệu');
                   },

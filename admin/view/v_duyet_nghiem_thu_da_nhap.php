@@ -11,8 +11,9 @@
                 <thead>
                     <tr style="background:#e9ecef;">
                         <th class="giua" style="width: 28px;">STT</th>
+                        <th class="giua">Mã đề tài</th>
                         <th>Tên đề tài</th>
-                        <th style="width: 160px;">Người đề xuất</th>
+                        <th style="width: 160px;">Chủ nhiệm đề tài</th>
                         <th style="width: 120px;">Thời gian</th>
                         <th style="width: 100px;">Trạng thái</th>
                         <th style="width: 70px;" class="giua">Xem xét</th>
@@ -22,9 +23,10 @@
                 <?php $stt=1; while ($row = mysqli_fetch_assoc($detai)){ ?>
                     <tr>
                         <th><?php echo $stt; ?></th>
+                        <th class="giua"><?php echo $row['MADETAI']; ?></th>
                         <td><?php echo $row['TENDETAI']; ?></td>
                         <td><?php echo lay_ten_chu_nhiem_de_tai($row['IDDT']); ?></td>
-                        <td class="giua"></td>
+                        <td class="giua"><?php if(!empty($row['THOIGIANNGHIEMTHU'])) echo date("d-m-Y", strtotime($row['THOIGIANNGHIEMTHU'])); ?></td>
                         <td>
                           <span class="badge badge-dark" style='font-size:1rem;'>Chờ xét duyệt đã nghiệm thu</span>
                         </td>

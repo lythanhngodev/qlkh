@@ -4,7 +4,7 @@
 	function lay_nghiem_thu_da_nhap(){
 		$ketnoi = new clsKetnoi();
 		$conn = $ketnoi->ketnoi();
-		$query = "SELECT dx.IDDT, dt.MADETAI, dt.THANGNAMKT, `TENDETAI`, `MUCTIEU`, `NOIDUNG`, `CAPDETAI`, `NGAYTHEM`, `TRANGTHAI` FROM dexuatdetai dx, detai dt, thanhviendetai tv WHERE dx.IDDT = dt.IDDT AND tv.IDDT = dx.IDDT AND tv.TRACHNHIEM = N'Chủ nhiệm' AND dt.TRANGTHAI=N'Đã nghiệm thu' AND dt.DUYET=b'0'";
+		$query = "SELECT dx.IDDT, dt.MADETAI, dt.THANGNAMKT, `TENDETAI`, `MUCTIEU`, `NOIDUNG`, `CAPDETAI`, `NGAYTHEM`, `TRANGTHAI`, THOIGIANNGHIEMTHU FROM dexuatdetai dx, detai dt, thanhviendetai tv WHERE dx.IDDT = dt.IDDT AND tv.IDDT = dx.IDDT AND tv.TRACHNHIEM = N'Chủ nhiệm' AND dt.TRANGTHAI=N'Đã nghiệm thu' AND dt.DUYET=b'0'";
 		$result = mysqli_query($conn, $query);
 		mysqli_close($conn);
 		return $result;

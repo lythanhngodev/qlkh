@@ -22,7 +22,7 @@ if (!isset($_SESSION["token"])) {include_once ("../../loi404.html");exit();}
                                 <a class="nav-item nav-link" data-toggle="tab" href="#nav-qua-trinh-dao-tao" role="tab" aria-selected="false">Quá trình đào tạo</a>
                                 <a class="nav-item nav-link" data-toggle="tab" href="#nav-cong-tac-chuyen-mon" role="tab" aria-selected="false">Công tác chuyên môn</a>
                                 <a class="nav-item nav-link" data-toggle="tab" href="#nav-nghien-cuu-khoa-hoc" aria-selected="false">Nghiên cứu khoa học</a>
-                                <a class="nav-item nav-link" data-toggle="tab" href="#nav-bao-mat" aria-selected="false">Bảo mật</a>
+                                <a class="nav-item nav-link" data-toggle="tab" href="#nav-bao-mat" aria-selected="false">Tài khoản &amp; Bảo mật</a>
                             </div>
                         </nav>
                         <div class="tab-content" id="nav-tabContent">
@@ -376,9 +376,20 @@ if (!isset($_SESSION["token"])) {include_once ("../../loi404.html");exit();}
                                 <div class="col-md-12">
                                     <div class="row">
                                         <div class="form-group col-md-4">
+                                            <label for="category" class="font-weight-bold" >Tên đăng nhập</label>
+                                            <input type="text" id="tendangnhap" class="form-control" value="<?php echo $nd['TENDANGNHAP'] ?>" >
+                                        </div>
+                                        <div class="form-group col-md-2">
+                                            <label for="category" class="font-weight-bold">.</label><br>
+                                            <button class="btn btn-primary" id="doitendangnhap">Lưu</button>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <div class="row">
+                                        <div class="form-group col-md-4">
                                             <label for="category" class="font-weight-bold" >Mật khẩu mới</label>
                                             <input type="password" id="mk" class="form-control">
-                                            <span class="input-group-btn">
+                                            
                                         </div>
                                         <div class="form-group col-md-4">
                                             <label for="category" class="font-weight-bold" >Xác nhận mật khẩu mới</label>
@@ -386,7 +397,7 @@ if (!isset($_SESSION["token"])) {include_once ("../../loi404.html");exit();}
                                         </div>
                                         <div class="form-group col-md-2">
                                             <label for="category" class="font-weight-bold">.</label><br>
-                                            <button class="btn btn-primary" id="doimatkhau">Đổi mật khẩu</button>
+                                            <button class="btn btn-primary" id="doimatkhau">Lưu</button>
                                         </div>
                                     </div>
                                 </div>
@@ -446,6 +457,36 @@ if (!isset($_SESSION["token"])) {include_once ("../../loi404.html");exit();}
                         var mang = $.parseJSON(data);
                         if(mang.trangthai==1){
                             swal('Tốt','Mật khẩu đã được thay đổi','success');
+                        }else
+                            swal('Ôi! Lỗi','Xảy ra lỗi, vui lòng thử lại','error');
+                    },
+                    error: function () {
+                        swal('Ôi! Lỗi','Xảy ra lỗi, vui lòng thử lại','error');
+                    }
+                });
+            } else swal('Ôi! Lỗi','Không có kết nối internet','error');
+        });
+        $('#doitendangnhap').click(()=>{
+            var tdn = $('#tendangnhap').val().trim();
+            if(!tdn){khongthanhcong('Vui lòng nhập tên đăng nhập');return;}
+            // Kiểm tra kết nối internet
+            if (kiemtraketnoi()) {
+                // Ajax
+                $.ajax({
+                    url: 'ajax/ajax_doi_ten_dang_nhap.php',
+                    type: 'POST',
+                    data: {
+                        tdn: tdn,
+                        idnd: '<?php echo $idnd; ?>'
+                    },
+                    beforeSend: function () {
+                        canhbao('Đang xử lý dữ liệu');
+                    },
+                    success: function (data) {
+                        $.notifyClose();
+                        var mang = $.parseJSON(data);
+                        if(mang.trangthai==1){
+                            swal('Tốt','Tên đang nhập đã được thay đổi','success');
                         }else
                             swal('Ôi! Lỗi','Xảy ra lỗi, vui lòng thử lại','error');
                     },
@@ -516,10 +557,6 @@ if (!isset($_SESSION["token"])) {include_once ("../../loi404.html");exit();}
             }
             ho = hoten.substring(0,hoten.lastIndexOf(' ')).trim();
             ten = hoten.substring(hoten.lastIndexOf(' ')+1,hoten.length);
-            if(jQuery.isEmptyObject(ngaysinh)){
-                khongthanhcong('Chưa chọn ngày sinh');
-                return;
-            }
             // Xét thông tin đại học
             //xóa hàng rỗng
             var bdt = [];

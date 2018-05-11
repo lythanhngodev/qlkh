@@ -29,6 +29,9 @@ function suadetai($tendetai,$muctieu,$noidung,$cap,$moisangtao,$thuocchuongtrinh
     $thangnambatdau=mysqli_real_escape_string($conn,$thangnambatdau);
     $thangnamketthuc=mysqli_real_escape_string($conn,$thangnamketthuc);
     $ketqua=mysqli_real_escape_string($conn,$ketqua);
+    $kinhphingansach = intval($kinhphingansach);
+    $kinhphinguonkhac = intval($kinhphinguonkhac);
+    $thangthuchien = intval($thangthuchien);
     $hoi = "
         UPDATE `detai` 
         SET

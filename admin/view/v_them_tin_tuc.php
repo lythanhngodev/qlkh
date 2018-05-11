@@ -43,10 +43,9 @@
                                         <div id="f-tukhoa" class="form-group">
                                           <label class="font-weight-bold">Chọn loại tin tức</label>
                                           <select class="form-control" id="loaitin">
-                                            <option value="1">Tin tức sự kiện</option>
-                                            <option value="2">Công nghệ mới</option>
-                                            <option value="3">Khám phá</option>
-                                            <option value="4">Đời sống</option>
+                                            <?php while ($row = mysqli_fetch_assoc($cm)) { ?>
+                                              <option value="<?php echo $row['IDCM'] ?>"><?php echo $row['TENCM'] ?></option>
+                                            <?php } ?>
                                           </select>
                                         </div>
                                       </div>
@@ -62,7 +61,7 @@
                                       <div class="col-md-4">
                                         <div class="form-group">
                                           <label for="tags" class="font-weight-bold" >Ngày đăng bài</label>
-                                            <input type="date" class="form-control">
+                                            <input type="date" class="form-control" id="ngaydang">
                                         </div>
                                       </div>
                                       <div class="col-md-12">
@@ -120,7 +119,6 @@
         document.getElementById('hinh-anh-ht').src = fileUrl;
         var host = "<?php echo $qlkh['HOSTGOC']; ?>";
         host = host.substr(0,host.lastIndexOf("\/"));
-        //alert(fileUrl.substr(host.length+1,fileUrl.length-host.length));
         document.getElementById('linkfile').value=fileUrl.substr(host.length+1,fileUrl.length-host.length);
     }
   $(document).ready(function(){
@@ -131,20 +129,35 @@
       document.getElementById('linkfile').value= '';
     });
     $("#luubaiviet").click(function(){
+      var ten = $('#tenbaibao').val().trim();
+      if(!ten){khongthanhcong('Vui lòng nhập tên bài viết');return;}
+      var mota = $('#mota').val().trim();
+      var tukhoa = $('#tukhoa').val().trim();
+      var loaitin = $('#loaitin').val().trim();
+      var noidung = CKEDITOR.instances['noidungbaibao'].getData();
+      if (!noidung) {khongthanhcong('Vui lòng nhập nội dung');return;}
+      var ngaydang = $('#ngaydang').val().trim();
+      var linkfile = $('#linkfile').val().trim();
       if (kiemtraketnoi()) {
         $.ajax({
-          url : "ajax/ajax_them_tac_gia.php",
+          url : "ajax/ajax_them_bai_viet.php",
           type : "post",
           dataType:"text",
           data : {
-            t: $("#tenbaibao").val().trim(),
-            ns: $("#mota").val().trim(),
-            mt: $("#motatg").val().trim(),
-            dc: $("#diachitg").val().trim()
+            ten: ten,
+            mota: mota,
+            tukhoa: tukhoa,
+            loaitin: loaitin,
+            noidung: noidung,
+            ngaydang: ngaydang,
+            hinhanh: linkfile
           },
           success : function (data){
-              $("body").append(data);
-              //alert(data);
+            var result = $.parseJSON(data);
+            if(result.trangthai == 1){
+                swal('Tốt','Thêm bài viết thành công','success');
+                $('#luubaiviet').hide();
+            }
           }
         });
       }

@@ -9,12 +9,12 @@
 		mysqli_close($conn);
 		return $result;
 	}
-	function lay_ten_tac_gia(){
+	function lay_chuyen_muc(){
 		$ketnoi = new clsKetnoi();
 		$conn = $ketnoi->ketnoi();
-		$query = "SELECT `IDTG`,`TENTG`,`NGAYSINH` FROM `tgbaokhoahoc` ORDER BY `TENTG` ASC";
+		$query = "SELECT * FROM `chuyenmuc`";
 		$result = mysqli_query($conn, $query);
 		mysqli_close($conn);
 		return $result;
 	}
- ?>
+?>

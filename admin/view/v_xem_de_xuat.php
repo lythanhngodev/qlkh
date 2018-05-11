@@ -46,6 +46,15 @@ if (!isset($_SESSION["token"])) {include_once ("../../loi404.html");exit();}
                                             <button class="btn btn-primary" id="luuddt">Lưu điểm</button>
                                         </div>    
                                         <?php } ?>
+                                        <?php if ($detai['DUYET']==0) { ?>
+                                        <div class="form-group col-md-6">
+                                            <label for="category" class="font-weight-bold" >Duyệt đề tài này nếu đề tài này đã từng có trước đây</label><hr>
+                                            <input type="radio" name="đuyetaco" id="duyetdetaidaco" style="transform: scale(1.5); margin: 0px 10px;"> <b>DUYỆT</b><br><br>
+                                            <input type="radio" checked name="đuyetaco" style="transform: scale(1.5); margin: 0px 10px;"> <b>KHÔNG DUYỆT (xóa đề tài)</b>
+                                            <hr>
+                                            <button class="btn btn-primary" id="luudetaidaco">Lưu xác nhận</button>
+                                        </div> 
+                                        <?php } ?>
                                         
                                     </div>
                                     <table class="table table-hover table-bordered" style="background: #fff;">
@@ -1042,6 +1051,41 @@ if (!isset($_SESSION["token"])) {include_once ("../../loi404.html");exit();}
             else
                 swal('Ôi! Lỗi','Không có kết nối internet','error');
         });
-
+        <?php if ($detai['DUYET']==0) { ?>
+        $('#luudetaidaco').on('click',function () {
+            var duyet = 0;
+            var detai = '<?php echo $detai['TENDETAI']; ?>';
+           if($('#duyetdetaidaco').is(':checked')){
+                duyet = 1; //duyet
+           }
+            if (kiemtraketnoi()) {
+                $.ajax({
+                    url : "ajax/ajax_duyet_de_tai_da_co.php",
+                    type : "post",
+                    dataType:"text",
+                    data : {
+                        duyet: duyet,dt: '<?php echo $iddt; ?>',cn: '<?php echo $chunhiem['HOTEN']; ?>',detai: detai.toUpperCase(),mail: '<?php echo $chunhiem['MAIL']; ?>'
+                    },
+                    beforeSend: function(){
+                        swal('Đợi đã','Vui lòng chờ cho đến khi quá trình hoàn tất','info');
+                    },
+                    success : function (data){
+                        var kq = $.parseJSON(data);
+                        if(kq.trangthai==1){
+                            swal('Tốt','Đã duyệt','success');
+                            $('#luudetaidaco').prop("disabled",true);
+                        }
+                        else
+                            swal('Ôi! Lỗi','Xảy ra lỗi, vui lòng thử lại','error');
+                    },
+                    error: function () {
+                        swal('Ôi! Lỗi','Xảy ra lỗi, vui lòng thử lại','error');
+                    }
+                });
+            }
+            else
+                swal('Ôi! Lỗi','Không có kết nối internet','error');
+        });
+        <?php } ?>
     });
 </script>

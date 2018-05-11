@@ -7,56 +7,33 @@
     <div class="trinh-chieu" ><div class="slider-wrapper theme-default"><div id="slider" class="nivoSlider"><?php while ($row = mysqli_fetch_assoc($slider)) { ?><a href="<?php echo $row['link']; ?>"><img src="<?php echo $row['hinhanh']; ?>" data-thumb="<?php echo $row['hinhanh']; ?>" data-transition="<?php echo $row['style']; ?>" alt="<?php echo $row['tieude']; ?>" title="<?php echo $row['tieude']; ?>" /></a><?php } ?></div></div></div>
     <!-- CÁC CÔNG TRÌNH KHOA HỌC ĐÃ CÔNG BỐ -->
     <div class="tieudechinh">
-        <div class="tentieudechinh" style="width: 281px;">
-            <img src="images/chi-muc.png" width="27" height="27" align="absmiddle"><a href="#">Các công trình khoa học đã công bố</a>
+        <div class="tentieudechinh" style="width: 284px;">
+            <img src="images/chi-muc.png" width="27" height="27" align="absmiddle"><a href="#">Các công trình NCKH đã nghiệm thu</a>
         </div>
         <div class="clear"></div>
         <div class="line"></div>
     </div>
     <div class="tin">
-            <div class="noidungtin">
+            <?php $nghiemthu = lay_de_tai_da_cong_bo();
+            while ($row = mysqli_fetch_assoc($nghiemthu)) { ?>
+             <div class="noidungtin">
                 <h3>
-                    <a href="#" title="On the spinor norm in the unitary groups">On the spinor norm in the unitary groups</a>
+                    <a href="#" title="On the spinor norm in the unitary groups"><?php echo $row['TENDETAI'] ?></a>
                 </h3>
                 <div class="thongtinchung">
                     <ul>
-                       <li>Tác giả : Ngô Văn Định</li> 
-                       <li>Nhà xuất bản/ Tạp chí: East-West Journal of Mathematics</li> 
-                       <li>Năm 2018</li>
-                       <li>Lĩnh vực nghiên cứu: Toán học</li>  
+                       <li>Thành viên : <?php echo $row['HOTEN'] ?></li> 
+                       <li>Thời gian nghiệm thu: <?php echo date("d-m-Y H:m:s", strtotime($row['THOIGIANNGHIEMTHU'])); ?></li>
+                       <li>Lĩnh vực nghiên cứu: <?php $lv = linh_vuc_de_tai($row['IDDT']);
+                       while ($rlv = mysqli_fetch_assoc($lv)) {
+                           echo $rlv['TENLV'].", ";
+                       }
+                        ?></li>  
                     </ul>
                 </div>
                 <div class="clear"></div>
            </div>
-            <div class="noidungtin">
-                <h3>
-                    <a href="#" title="Beta extensions and cuspidal types for p-adic spin groups">Beta extensions and cuspidal types for p-adic spin groups</a>
-                </h3>
-                <div class="thongtinchung">
-                    <ul>
-                       <li>Tác giả : Ngô Văn Định</li> 
-                       <li>Nhà xuất bản/ Tạp chí: Manuscripta Mathematica Tập 152 Số 3</li>
-                       <li>Năm 2017</li> 
-                       <li>Lĩnh vực nghiên cứu: Toán học</li>  
-                    </ul>
-                </div>
-                <div class="clear"></div>
-           </div>
-            <div class="noidungtin">
-                <h3>
-                    <a href="#" title="Semisimple characters for $p$-adic spin groups">Semisimple characters for $p$-adic spin groups</a>
-                </h3>
-                <div class="thongtinchung">
-                    <ul>
-                       <li>Tác giả : Ngô Văn Định, 
-                       </li> 
-                       <li>Nhà xuất bản/ Tạp chí: Khoa học và Công nghệ - Đại học Thái Nguyên Tập 155 Số 10</li> 
-                       <li>Năm 2016</li>
-                       <li>Lĩnh vực nghiên cứu: Toán học</li>  
-                    </ul>
-                </div>
-                <div class="clear"></div>
-           </div>
+             <?php } ?>
     </div>
 
     <!-- CÁC CÔNG TRÌNH KHOA HỌC ĐÃ CÔNG BỐ -->
@@ -133,42 +110,16 @@
         <h3>Tin mới</h3>
         <div class="tieudemuccon">
             <div class="tinmoi">
-                <a href="#">
+                <?php 
+                $tinmoi = lay_tin_moi();
+                while ($row = mysqli_fetch_assoc($tinmoi)) { ?>
+                <a href="?p=xemtin&id=<?php echo $row['IDBV']; ?>&tieude=<?php echo $row['TENBV']; ?>">
                     <div class="tincon">
-                        <div class="hinhtin" style="background-image: url('images/news.png');"></div>
-                        <div class="tomtattin">Thông tin kết quả nghiên cứu đề tài KHCN cấp ĐHTN của ThS. Cao Thanh Long và Họp HĐ nghiệm thu</div>
+                        <div class="hinhtin" style="background-image: url('<?php echo $row['HINHANH']; ?>');"></div>
+                        <div class="tomtattin"><?php echo $row['TENBV'] ?></div>
                     </div>  
                 </a>
-                <a href="#">
-                    <div class="tincon">
-                        <div class="hinhtin" style="background-image: url('images/news.png');"></div>
-                        <div class="tomtattin">Thông tin kết quả nghiên cứu đề tài KHCN cấp ĐHTN của ThS. Cao Thanh Long và Họp HĐ nghiệm thu</div>
-                    </div>  
-                </a>
-                <a href="#">
-                    <div class="tincon">
-                        <div class="hinhtin" style="background-image: url('images/news.png');"></div>
-                        <div class="tomtattin">Thông tin kết quả nghiên cứu đề tài KHCN cấp ĐHTN của ThS. Cao Thanh Long và Họp HĐ nghiệm thu</div>
-                    </div>  
-                </a>
-                <a href="#">
-                    <div class="tincon">
-                        <div class="hinhtin" style="background-image: url('images/news.png');"></div>
-                        <div class="tomtattin">Thông tin kết quả nghiên cứu đề tài KHCN cấp ĐHTN của ThS. Cao Thanh Long và Họp HĐ nghiệm thu</div>
-                    </div>  
-                </a>
-                <a href="#">
-                    <div class="tincon">
-                        <div class="hinhtin" style="background-image: url('images/news.png');"></div>
-                        <div class="tomtattin">Thông tin kết quả nghiên cứu đề tài KHCN cấp ĐHTN của ThS. Cao Thanh Long và Họp HĐ nghiệm thu</div>
-                    </div>  
-                </a>
-                <a href="#">
-                    <div class="tincon">
-                        <div class="hinhtin" style="background-image: url('images/news.png');"></div>
-                        <div class="tomtattin">Thông tin kết quả nghiên cứu đề tài KHCN cấp ĐHTN của ThS. Cao Thanh Long và Họp HĐ nghiệm thu</div>
-                    </div>  
-                </a>
+               <?php } ?>
             </div>
         </div>
     </div>
