@@ -75,6 +75,7 @@ $_SESSION["token"] = $token;
                   <ul id="side-admin-menu" class="side-menu list-unstyled">
                       <li id="xacnhantaikhoan"><a href="?p=xacnhantaikhoan"> <i class="far fa-calendar-check"></i>&nbsp;&nbsp;Xác nhận đăng ký tài khoản</a></li>
                       <li id="thanhvien"><a href="?p=thanhvien"> <i class="fas fa-newspaper"></i>&nbsp;&nbsp;Thông tin thành viên</a></li>
+                      <li id="thanhvien"><a href="?p=thanhvien"> <i class="fas fa-newspaper"></i>&nbsp;&nbsp;Thêm thành viên</a></li>
                   </ul>
               </div>
               <div class="admin-menu">
@@ -211,7 +212,7 @@ $_SESSION["token"] = $token;
         <nav class="navbar">
           <div class="container-fluid">
             <div class="navbar-holder d-flex align-items-center justify-content-between">
-              <div class="navbar-header"><a id="toggle-btn" href="#" class="menu-btn"><i class="icon-bars"></i></a><span style="color: #FFF;font-size: 1.5rem;padding-left: 1rem;font-weight: 500;line-height: 50px;padding-top: 2px;"><img src="../images/logo.png" style="width: 50px;">&ensp;PHẦN MỀM QUẢN LÝ NGHIÊN CỨU KHOA HỌC</span><a href="index.html" class="navbar-brand">
+              <div class="navbar-header"><a id="toggle-btn" href="#" class="menu-btn"><i class="icon-bars"></i></a><span style="color: #FFF;font-size: 1.5rem;padding-left: 1rem;font-weight: 500;line-height: 50px;padding-top: 2px;"><img src="../images/logo.png" style="width: 50px;">&ensp;QUẢN LÝ NGHIÊN CỨU KHOA HỌC</span><a href="index.html" class="navbar-brand">
                   <div class="brand-text d-none d-md-inline-block"></div></a></div>
               <ul class="nav-menu list-unstyled d-flex flex-md-row align-items-md-center">
                 <!-- Log out-->
