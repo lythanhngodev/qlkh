@@ -37,11 +37,17 @@
             case 'themdetaidanghiemthu':
                 include_once("control/c_them_de_tai_da_nghiem_thu.php");
                 break;
+            case 'dexuatmoi':
+                include_once("control/c_de_xuat_moi.php");
+                break;
             case 'denhanbaocao':
                 include_once("control/c_den_han_bai_cao.php");
                 break;
             case 'tretiendo':
                 include_once("control/c_tre_tien_do.php");
+                break;
+            case 'duyetnghiemthudanhap':
+                include_once("control/c_duyet_nghiem_thu_da_nhap.php");
                 break;
 			case 'themdexuat':
 				include_once("control/c_them_de_xuat.php");

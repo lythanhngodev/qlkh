@@ -30,6 +30,7 @@ $result = Array(
     $quequan = mysqli_real_escape_string($conn,$_POST['quequan']);
     $dantoc = mysqli_real_escape_string($conn,$_POST['dantoc']);
     $chucdanhgiangvien = mysqli_real_escape_string($conn,$_POST['chucdanhgiangvien']);
+    $chucdanhgiangvien = intval($chucdanhgiangvien);
     $trinhdochuyenmon = mysqli_real_escape_string($conn,$_POST['trinhdochuyenmon']);
     $hocvicaonhat = mysqli_real_escape_string($conn,$_POST['hocvicaonhat']);
     $namnuocnhanhocvi = mysqli_real_escape_string($conn,$_POST['namnuocnhanhocvi']);
@@ -98,6 +99,7 @@ $result = Array(
 
     $hoi.="DELETE FROM nguoidung_khoabomon WHERE IDND = '$idnd';";
     $hoi.="INSERT INTO nguoidung_khoabomon (IDND, IDKBM) VALUES ('$idnd', '$donvicongtac');";
+    
     $hoi.="DELETE FROM `daihoc` WHERE `IDND` = '$idnd';";
     if($bdt!=null){
         for ($i=0; $i < count($bdt) ; $i++) { 

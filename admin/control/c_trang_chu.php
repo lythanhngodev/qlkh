@@ -9,15 +9,12 @@ if (!isset($_SESSION["token"])) {include_once ("../../loi404.html");exit();}
         $ntdt = nghiem_thu_de_tai();
         $_ntdt = mysqli_num_rows($ntdt);
         include_once "view/v_trang_chu_admin.php";
-        exit();
     }
     else if ($loaitaikhoan=='binhthuong'){
         include_once "view/v_trang_chu_binhthuong.php";
-        exit();
     }
     else if ($loaitaikhoan=='truongkhoaphong'){
         include_once "view/v_trang_chu_truongkhoaphong.php";
-        exit();
     }
 ?>
 

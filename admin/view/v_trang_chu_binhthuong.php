@@ -19,7 +19,7 @@
                 <h4>Nghiên cứu khoa học</h4>
               </div>
               <div class="card-body giua">
-                <a href="?p=quanlydetai" class="col-12"><img src="../images/dang-ky-de-tai.png"></a>
+                <a href="?p=quanlydetai" class="col-12"><img src="../images/de-tai-khoa-hoc.png"></a>
               </div>
             </div>
         </div>

@@ -27,7 +27,9 @@ $_SESSION["token"] = $token;
         <div class="main-menu">
           <ul id="side-main-menu" class="side-menu list-unstyled">                  
             <li><a href="<?php echo $qlkh['HOSTADMIN'] ?>"> <i class="icon-home"></i>Trang chủ</a></li>
+
           <?php if ($loaitaikhoan=='admin'){ ?>
+
             <li id="slider"><a href="?p=slider"> <i class="far fa-images"></i>&nbsp;&nbsp;Quản lý slider</a></li>
               <div class="admin-menu">
                   <h5 class="sidenav-heading">NGHIÊN CỨU KHOA HỌC</h5>
@@ -35,6 +37,8 @@ $_SESSION["token"] = $token;
                       <li id="quanlydetaiduan"><a href="?p=quanlydetaiduan"> <i class="fab fa-accusoft"></i>&nbsp;&nbsp;Quản lý đề tài - dự án</a></li>
                       <li id="quanlydetai"><a href="?p=quanlydetai"> <i class="fas fa-external-link-alt"></i>&nbsp;&nbsp;Quản lý đề tài của tôi</a></li>
                       <li id="themdetaidanghiemthu"><a href="?p=themdetaidanghiemthu"> <i class="fas fa-plus"></i>&nbsp;&nbsp;Nhập đề tài - dự án đã nghiệm thu</a></li>
+                      <li id="duyetnghiemthudanhap"><a href="?p=duyetnghiemthudanhap"> <i class="fas fa-check"></i>&nbsp;&nbsp;Duyệt đề tài đã nghiệm thu trước đây</a></li>
+                      <li id="dexuatmoi"><a href="?p=dexuatmoi"> <i class="fas fa-briefcase"></i>&nbsp;&nbsp;Đề xuất mới của trường</a></li>
                       <li id="denhanbaocao"><a href="?p=denhanbaocao"> <i class="far fa-clock"></i>&nbsp;&nbsp;Đến hạn báo cáo</a></li>
                       <li id="tretiendo"><a href="?p=tretiendo"> <i class="fab fa-audible"></i>&nbsp;&nbsp;Trễ tiến độ</a></li>
                   </ul>
@@ -79,7 +83,78 @@ $_SESSION["token"] = $token;
                       <li id="quanlychung"><a href="?p=quanlychung"> <i class="fas fa-newspaper"></i>&nbsp;&nbsp;Quản lý chung</a></li>
                   </ul>
               </div>
-          <?php } else { ?>
+
+
+          <?php } else if($loaitaikhoan=='khoahoc'){ ?>
+
+              <div class="admin-menu">
+                  <h5 class="sidenav-heading">NGHIÊN CỨU KHOA HỌC</h5>
+                  <ul id="side-admin-menu" class="side-menu list-unstyled">
+                      <li id="quanlydetaiduan"><a href="?p=quanlydetaiduan"> <i class="fab fa-accusoft"></i>&nbsp;&nbsp;Quản lý đề tài - dự án</a></li>
+                      <li id="quanlydetai"><a href="?p=quanlydetai"> <i class="fas fa-external-link-alt"></i>&nbsp;&nbsp;Quản lý đề tài của tôi</a></li>
+                      <li id="themdetaidanghiemthu"><a href="?p=themdetaidanghiemthu"> <i class="fas fa-plus"></i>&nbsp;&nbsp;Nhập đề tài - dự án đã nghiệm thu</a></li>
+                      <li id="dexuatmoi"><a href="?p=dexuatmoi"> <i class="fas fa-briefcase"></i>&nbsp;&nbsp;Đề xuất mới của trường</a></li>
+                      <li id="denhanbaocao"><a href="?p=denhanbaocao"> <i class="far fa-clock"></i>&nbsp;&nbsp;Đến hạn báo cáo</a></li>
+                      <li id="tretiendo"><a href="?p=tretiendo"> <i class="fab fa-audible"></i>&nbsp;&nbsp;Trễ tiến độ</a></li>
+                  </ul>
+              </div>
+              <div class="admin-menu">
+                  <h5 class="sidenav-heading">Báo khoa học</h5>
+                  <ul id="side-admin-menu" class="side-menu list-unstyled">
+                      <li id="baokhoahoc"><a href="?p=baokhoahoc"> <i class="fas fa-newspaper"></i>&nbsp;&nbsp;Báo khoa học</a></li>
+                      <li id="thembaokhoahoc"><a href="?p=thembaokhoahoc"> <i class="fas fa-plus"></i>&nbsp;&nbsp;Thêm bài báo khoa học</a></li>
+                  </ul>
+              </div>
+              <div class="admin-menu">
+                  <h5 class="sidenav-heading">Thống kê</h5>
+                  <ul id="side-admin-menu" class="side-menu list-unstyled">
+                      <li id="thongke"><a href="?p=thongke"> <i class="fas fa-newspaper"></i>&nbsp;&nbsp;Thống kê</a></li>
+                  </ul>
+              </div>
+              <div class="admin-menu">
+                  <h5 class="sidenav-heading">Tin tức - Sự kiện</h5>
+                  <ul id="side-admin-menu" class="side-menu list-unstyled">
+                      <li id="chuyenmuc"><a href="?p=chuyenmuc"> <i class="fas fa-list-ul"></i>&nbsp;&nbsp;Chuyên mục</a></li>
+                      <li id="tintuc"><a href="?p=tintuc"> <i class="fas fa-newspaper"></i>&nbsp;&nbsp;Tin tức</a></li>
+                      <li id="themtintuc"><a href="?p=themtintuc"> <i class="fas fa-plus"></i>&nbsp;&nbsp;Thêm tin tức</a></li>
+                  </ul>
+              </div>
+              <div class="admin-menu">
+                  <h5 class="sidenav-heading">Biểu mẫu</h5>
+                  <ul id="side-admin-menu" class="side-menu list-unstyled">
+                      <li id="bieumau"><a href="?p=bieumau"> <i class="fas fa-newspaper"></i>&nbsp;&nbsp;Biểu mẫu</a></li>
+                  </ul>
+              </div>
+              <div class="admin-menu">
+                  <h5 class="sidenav-heading">Quản lý thành viên</h5>
+                  <ul id="side-admin-menu" class="side-menu list-unstyled">
+                      <li id="xacnhantaikhoan"><a href="?p=xacnhantaikhoan"> <i class="far fa-calendar-check"></i>&nbsp;&nbsp;Xác nhận đăng ký tài khoản</a></li>
+                      <li id="thanhvien"><a href="?p=thanhvien"> <i class="fas fa-newspaper"></i>&nbsp;&nbsp;Thông tin thành viên</a></li>
+                  </ul>
+              </div>
+
+
+          <?php } else if($loaitaikhoan=='truongkhoaphong'){ ?>
+
+            <li id="quanlydetai"><a href="?p=quanlydetai"> <i class="fas fa-external-link-alt"></i>&nbsp;&nbsp;Quản lý đề tài của tôi</a></li>
+            <li id="themdetaidanghiemthu"><a href="?p=themdetaidanghiemthu"> <i class="fas fa-plus"></i>&nbsp;&nbsp;Nhập đề tài - dự án đã nghiệm thu</a></li>
+            <li id="dexuatmoi"><a href="?p=dexuatmoi"> <i class="fas fa-briefcase"></i>&nbsp;&nbsp;Đề xuất mới của khoa</a></li>
+            <li id="denhanbaocao"><a href="?p=denhanbaocao"> <i class="far fa-clock"></i>&nbsp;&nbsp;Đến hạn báo cáo</a></li>
+            <li id="tretiendo"><a href="?p=tretiendo"> <i class="fab fa-audible"></i>&nbsp;&nbsp;Trễ tiến độ</a></li>
+            <div class="admin-menu">
+                  <h5 class="sidenav-heading">Báo khoa học</h5>
+                  <ul id="side-admin-menu" class="side-menu list-unstyled">
+                      <li id="baokhoahoc"><a href="?p=baokhoahoc"> <i class="fas fa-newspaper"></i>&nbsp;&nbsp;Báo khoa học</a></li>
+                      <li id="thembaokhoahoc"><a href="?p=thembaokhoahoc"> <i class="fas fa-plus"></i>&nbsp;&nbsp;Thêm bài báo khoa học</a></li>
+                  </ul>
+              </div>
+              <div class="admin-menu">
+                  <h5 class="sidenav-heading">Biểu mẫu</h5>
+                  <ul id="side-admin-menu" class="side-menu list-unstyled">
+                      <li id="xembieumau"><a href="?p=xembieumau"> <i class="fas fa-newspaper"></i>&nbsp;&nbsp;Biểu mẫu</a></li>
+                  </ul>
+              </div>
+          <?php } else if($loaitaikhoan=='binhthuong'){ ?>
             <li id="quanlydetai"><a href="?p=quanlydetai"> <i class="fas fa-external-link-alt"></i>&nbsp;&nbsp;Quản lý đề tài của tôi</a></li>
             <li id="themdetaidanghiemthu"><a href="?p=themdetaidanghiemthu"> <i class="fas fa-plus"></i>&nbsp;&nbsp;Nhập đề tài - dự án đã nghiệm thu</a></li>
             <li id="denhanbaocao"><a href="?p=denhanbaocao"> <i class="far fa-clock"></i>&nbsp;&nbsp;Đến hạn báo cáo</a></li>
@@ -97,7 +172,7 @@ $_SESSION["token"] = $token;
                       <li id="xembieumau"><a href="?p=xembieumau"> <i class="fas fa-newspaper"></i>&nbsp;&nbsp;Biểu mẫu</a></li>
                   </ul>
               </div>
-          <?php } ?>
+            <?php } ?>
               <?php
                     $ketnoi = new  clsKetnoi();
                     $conn = $ketnoi->ketnoi();
@@ -150,8 +225,8 @@ $_SESSION["token"] = $token;
       <div class="breadcrumb-holder">
         <div class="container-fluid">
           <ul class="breadcrumb">
-            <li class="breadcrumb-item"><a href="index">Trang chủ</a></li>
-            <li class="breadcrumb-item active tieude">Trang chủ</li>
+            <li class="breadcrumb-item"><a href="index.php">Trang chủ</a></li>
+            <li class="breadcrumb-item active tieude"></li>
           </ul>
         </div>
       </div>
@@ -160,7 +235,7 @@ $_SESSION["token"] = $token;
         <div class="container-fluid">
           <!-- Page Header-->
           <header> 
-          <h1 class="h3 display tieude">Tables</h1>
+          <h1 class="h3 display tieude"></h1>
           </header>
           <?php include_once "public_c.php"; ?>
         </div>
@@ -172,7 +247,7 @@ $_SESSION["token"] = $token;
               <p>Lý Thanh Ngô &copy; 2018</p>
             </div>
             <div class="col-sm-6 text-right">
-              <p>Phiên bản: <a href="#" class="external">1.0.124</a></p>
+              <p>Phiên bản: <a href="#" class="external">1.0.1 demo</a></p>
             </div>
           </div>
         </div>

@@ -28,16 +28,26 @@ function themdetai($madetai,$tendetai,$muctieu,$noidung,$cap,$moisangtao,$thuocc
     $thangnambatdau=mysqli_real_escape_string($conn,$thangnambatdau);
     $thangnamketthuc=mysqli_real_escape_string($conn,$thangnamketthuc);
     $ketqua=mysqli_real_escape_string($conn,$ketqua);
+    $hoi;
+    $kt = "SELECT * FROM detai WHERE MADETAI=N'$madetai'";
+    $ekt = mysqli_query($conn,$kt);
+    $rkt = mysqli_num_rows($ekt);
+    if ($rkt == 0) {
+        echo "<script type=\"text/javascript\">khongthanhcong(\"<strong>Lỗi!</strong> Mã đề tài bị trùng\")</script>";
+        exit();
+    }
+    if (empty($madetai)) {
     // xử lý từ khóa
-    $hoi="INSERT INTO `detai`(`MADETAI`,`TENDETAI`, `MUCTIEU`, `NOIDUNG`, `CAPDETAI`, `MOISANGTAO`, `THUOCCHUONGTRINH`, `SUCANTHIET`, `TINHHINHNGHIENCUU`, `NGHIENCUULIENQUAN`, `PHUONGPHAPKYTHUAT`, `KINHPHINGANSACH`, `KINHPHINGUONKHAC`, `THANGTHUCHIEN`, `THANGNAMBD`, `THANGNAMKT`, `KETQUA`, `FILE`,`TRANGTHAI`) VALUES ('$tendetai','$muctieu','$noidung','$cap','$moisangtao','$thuocchuongtrinh','$sucanthiet','$tinhhinhnghiencuu','$nghiencuulienquan','$phuongphapkythuat','$kinhphingansach','$kinhphinguonkhac','$thangthuchien','$thangnambatdau','$thangnamketthuc','$ketqua','$file','Đã nghiệm thu')";
+    $hoi="INSERT INTO `detai`(`TENDETAI`, `MUCTIEU`, `NOIDUNG`, `CAPDETAI`, `MOISANGTAO`, `THUOCCHUONGTRINH`, `SUCANTHIET`, `TINHHINHNGHIENCUU`, `NGHIENCUULIENQUAN`, `PHUONGPHAPKYTHUAT`, `KINHPHINGANSACH`, `KINHPHINGUONKHAC`, `THANGTHUCHIEN`, `THANGNAMBD`, `THANGNAMKT`, `KETQUA`, `FILE`,`TRANGTHAI`, `DUYET`) VALUES ('$tendetai','$muctieu','$noidung','$cap','$moisangtao','$thuocchuongtrinh','$sucanthiet','$tinhhinhnghiencuu','$nghiencuulienquan','$phuongphapkythuat','$kinhphingansach','$kinhphinguonkhac','$thangthuchien','$thangnambatdau','$thangnamketthuc','$ketqua','$file','Đã nghiệm thu', b'0');";
+    }else{
+        $hoi="INSERT INTO `detai`(`MADETAI`,`TENDETAI`, `MUCTIEU`, `NOIDUNG`, `CAPDETAI`, `MOISANGTAO`, `THUOCCHUONGTRINH`, `SUCANTHIET`, `TINHHINHNGHIENCUU`, `NGHIENCUULIENQUAN`, `PHUONGPHAPKYTHUAT`, `KINHPHINGANSACH`, `KINHPHINGUONKHAC`, `THANGTHUCHIEN`, `THANGNAMBD`, `THANGNAMKT`, `KETQUA`, `FILE`,`TRANGTHAI`, `DUYET`) VALUES ('$madetai','$tendetai','$muctieu','$noidung','$cap','$moisangtao','$thuocchuongtrinh','$sucanthiet','$tinhhinhnghiencuu','$nghiencuulienquan','$phuongphapkythuat','$kinhphingansach','$kinhphinguonkhac','$thangthuchien','$thangnambatdau','$thangnamketthuc','$ketqua','$file','Đã nghiệm thu', b'0');";
+    }
+    echo $hoi;exit();
     //exit();
     if(mysqli_query($conn, $hoi)===TRUE){
         $dem = mysqli_affected_rows($conn);
         if($dem==0) return false;
         $iddt = mysqli_insert_id($conn);
-        // Thêm người dùng thuộc chủ sở hữu đề tài
-        // $sql= "INSERT INTO `detai_nguoidung`(`IDDT`, `IDND`) VALUES ('$iddt','$idnd');";
-        // Thêm loại hình nghiên cứu thuộc đề tài
         $sql="";
         $sql.="INSERT INTO `dexuatdetai` (IDDT) VALUES ('$iddt');";
         for ($i=0; $i < count($loaihinhnghiencuu); $i++) { 
@@ -51,7 +61,6 @@ function themdetai($madetai,$tendetai,$muctieu,$noidung,$cap,$moisangtao,$thuocc
         if ($thanhvien!=null){
             for($i=0;$i<count($thanhvien);$i++){
                 if ($i==0){
-                    $sql.="INSERT INTO `detai_nguoidung`(`IDDT`, `IDND`) VALUES ('$iddt','".$thanhvien[$i][0]."');";
                     $sql.= "INSERT INTO `thanhviendetai`(`IDDT`, `IDND`, `CONGVIEC`, `TRACHNHIEM`) VALUES ('$iddt','".$thanhvien[$i][0]."','".$thanhvien[$i][2]."','Chủ nhiệm');";
                 }
                 else
@@ -105,8 +114,17 @@ function xettochuc(){
         return null;
     }else return $_POST['tochucthamgia'];
 }
-
-if (themdetai($_POST['madetai'],$_POST['tendetai'],$_POST['muctieu'],$_POST['noidung'],$_POST['cap'],$_POST['moisangtao'],$_POST['thuocchuongtrinh'],$_POST['sucanthiet'],$_POST['tinhhinhnghiencuu'],$_POST['nghiencuulienquan'],$_POST['phuongphapkythuat'],$_POST['kinhphingansach'],$_POST['kinhphinguonkhac'],$_POST['thangthuchien'],$_POST['thangnambatdau'],$_POST['thangnamketthuc'],$_POST['ketqua'],$_POST['loaihinhnghiencuu'],$_POST['linhvuckhoahoc'],$thanhvien=xetthanhvien(),$_POST['file'],$tochuc=xettochuc(),$_POST['tiendodukien'],$_POST['baocaotiendo'],$_POST['kinhphichitiet'],$_POST['dgbtc'],$_POST['dgtv'],$_POST['nttv'])) {
+function xettiendodukien(){
+    if (!isset($_POST['tiendodukien'])){
+        return null;
+    }else return $_POST['tiendodukien'];
+}
+function xetbaocaotiendo(){
+    if (!isset($_POST['baocaotiendo'])){
+        return null;
+    }else return $_POST['baocaotiendo'];
+}
+if (themdetai($_POST['madetai'],$_POST['tendetai'],$_POST['muctieu'],$_POST['noidung'],$_POST['cap'],$_POST['moisangtao'],$_POST['thuocchuongtrinh'],$_POST['sucanthiet'],$_POST['tinhhinhnghiencuu'],$_POST['nghiencuulienquan'],$_POST['phuongphapkythuat'],$_POST['kinhphingansach'],$_POST['kinhphinguonkhac'],$_POST['thangthuchien'],$_POST['thangnambatdau'],$_POST['thangnamketthuc'],$_POST['ketqua'],$_POST['loaihinhnghiencuu'],$_POST['linhvuckhoahoc'],$thanhvien=xetthanhvien(),$_POST['file'],$tochuc=xettochuc(),$tiendodukien=xettiendodukien(),$baocaotiendo=xetbaocaotiendo(),$_POST['kinhphichitiet'],$_POST['dgbtc'],$_POST['dgtv'],$_POST['nttv'])) {
     ?>
     <script type="text/javascript">
         thanhcong("Đã thêm đề tài!");

@@ -698,35 +698,36 @@
             var tinhhinhnghiencuu = $('#tinhinhnghiencuudetai').val().trim();
             var nghiencuulienquan = $('#tinhinhnghiencuudetai').val().trim();
             var phuongphapkythuat = $('#phuongphapnghiencuudetai').val().trim();
-            var kinhphingansach = $('#kinhphingansachdetai').val().trim();
-            var kinhphinguonkhac = $('#kinhphinguonkhacdetai').val().trim();
+            var kinhphingansach = (!$.isNumeric($('#kinhphingansachdetai').val().trim())) ? $('#kinhphingansachdetai').val().trim() : '0';
+        var kinhphinguonkhac = (!$.isNumeric($('#kinhphinguonkhacdetai').val().trim())) ? $('#kinhphinguonkhacdetai').val().trim() : '0';
             var thangthuchien = $('#thangthuchiendetai').val().trim();
             var thangnambatdau = $('#thangnambatdaudetai').val().trim();
             var thangnamketthuc = $('#thangnamketthucdetai').val().trim();
             var ketqua = $('#ketquadetai').val().trim();
             if(!tendetai) {khongthanhcong('Chưa nhập tên đề tài');return;}
-            if(!muctieudetai){khongthanhcong('Chưa nhập mục tiêu đề tài');return;}
-            if(!noidungdetai){khongthanhcong('Nhập nội dung đề tài');return;}
+            /*if(!muctieudetai){khongthanhcong('Chưa nhập mục tiêu đề tài');return;}
+            if(!noidungdetai){khongthanhcong('Nhập nội dung đề tài');return;}*/
             _cdt_.forEach((c)=>{
-              ($('#capdetai-'+c[0]).is(':checked'))?capdetai = $('#capdetai-'+c[0]).val().trim():0;
+              ($('#capdetai-'+c[0]).is(':checked')) ? capdetai = $('#capdetai-'+c[0]).val().trim():0;
             });
             if(!capdetai){
                 khongthanhcong('Chưa chọn cấp đề tài');
                 return;
             }
+            /*
             if(!moisangtao){khongthanhcong('Chưa phân tích về tính mới, tính sáng tạo của đề tài');return;}
             if(!sucanthiet){khongthanhcong('Chưa phân tích sự cần thiết nghiên cứu');return;}
             if(!tinhhinhnghiencuu){khongthanhcong('Chưa nhập tình hình nghiên cứu thuộc lĩnh vực của đề tài');return;}
             if(!nghiencuulienquan){khongthanhcong('Chưa liệt kê danh mục các công trình nghiên cứu có liên quan');return;}
             if(!phuongphapkythuat){khongthanhcong('Chưa nhập cách tiếp cận, phương pháp nghiên cứu, kỹ thuật sẽ sử dụng');return;}
             if(!kinhphingansach){khongthanhcong('Chưa nhập kinh phí dự kiến từ ngân sách');return;}
-            if(!kinhphinguonkhac){khongthanhcong('Chưa nhập kinh phí dự kiến từ nguồn khác');return;}
+            if(!kinhphinguonkhac){khongthanhcong('Chưa nhập kinh phí dự kiến từ nguồn khác');return;}*/
             if (!thangthuchien){khongthanhcong('Chưa nhập số tháng thực hiện đề tài');return;}
             if(!thangnambatdau){khongthanhcong('Chưa nhập tháng năm bắt đầu đề tài');return;}
             if(!thangnamketthuc){khongthanhcong('Chưa nhập tháng năm kêt thúc đề tài');return;}
-            if(!ketqua){khongthanhcong('Chưa nhập dự kiến kết quả đề tài và địa chỉ ứng dụng');return;}
+            /*if(!ketqua){khongthanhcong('Chưa nhập dự kiến kết quả đề tài và địa chỉ ứng dụng');return;}
             if(!$.isNumeric(kinhphingansach)){khongthanhcong('Kinh phí ngân sách không hợp lệ, kiểm tra lại');return;}
-            if(!$.isNumeric(kinhphinguonkhac)){khongthanhcong('Kinh phí nguồn khác không hợp lệ, kiểm tra lại');return;} 
+            if(!$.isNumeric(kinhphinguonkhac)){khongthanhcong('Kinh phí nguồn khác không hợp lệ, kiểm tra lại');return;} */
             // Xét loại hình nghiên cứu
             var loaihinhnghiencuu = [];
             _lh_.forEach((c)=>{
@@ -771,13 +772,13 @@
             });
             // Các thành viên còn lại
             var thanhviendetai = []; // mảng 2 chiều
-            if (btv[0][0]=='' || btv[0][1]=='' || btv[0][2]=='') {
+            if (btv[0][0]=='' || btv[0][1]=='') {
             khongthanhcong('Vui lòng điền đầy đủ thông tin thành viên của đề tài');
             return;
             }
             thanhviendetai.push(btv[0]);
             for(var i = 2;i<demdongdungtv;i++){
-              if(btv[i][0]=='' || btv[i][1] == '' || btv[i][2] == ''){
+              if(btv[i][0]=='' || btv[i][1] == ''){
                   khongthanhcong('Vui lòng điền đầy đủ thông tin thành viên của đề tài');
                   return;
               }
@@ -861,10 +862,6 @@
                 }); // lưu vào bctd[[]];
             }
             //////////////////////////////////////////////////
-            if(jQuery.isEmptyObject(btd)){
-                khongthanhcong('Chưa nhập dự kiến tiến độ của đề tài');
-                return;
-            }
             //  Xét kinh phí
           var  bkp = [],ll=0;
           var demdongdungkp = 0;

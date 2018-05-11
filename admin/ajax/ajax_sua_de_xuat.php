@@ -1,11 +1,3 @@
-<?php
-/**
- * Created by PhpStorm.
- * User: Ly Thanh Ngo
- * Date: 15/04/2018
- * Time: 7:28 PM
- */
-?>
 
 <?php
 include_once("../../config.php");
@@ -138,7 +130,12 @@ function xetbctd(){
         return null;
     }else return $_POST['baocaotiendo'];
 }
-if (suadetai($_POST['tendetai'],$_POST['muctieu'],$_POST['noidung'],$_POST['cap'],$_POST['moisangtao'],$_POST['thuocchuongtrinh'],$_POST['sucanthiet'],$_POST['tinhhinhnghiencuu'],$_POST['nghiencuulienquan'],$_POST['phuongphapkythuat'],$_POST['kinhphingansach'],$_POST['kinhphinguonkhac'],$_POST['thangthuchien'],$_POST['thangnambatdau'],$_POST['thangnamketthuc'],$_POST['ketqua'],$_POST['loaihinhnghiencuu'],$_POST['linhvuckhoahoc'],$thanhvien=xetthanhvien(),$tochuc=xettochuc(),$_POST['tiendodukien'],$baocaotiendo=xetbctd(),$_POST['kinhphichitiet'],$_POST['idnd'],$_POST['iddt'])) {
+function xettiendodukien(){
+    if (!isset($_POST['tiendodukien'])){
+        return null;
+    }else return $_POST['tiendodukien'];
+}
+if (suadetai($_POST['tendetai'],$_POST['muctieu'],$_POST['noidung'],$_POST['cap'],$_POST['moisangtao'],$_POST['thuocchuongtrinh'],$_POST['sucanthiet'],$_POST['tinhhinhnghiencuu'],$_POST['nghiencuulienquan'],$_POST['phuongphapkythuat'],$_POST['kinhphingansach'],$_POST['kinhphinguonkhac'],$_POST['thangthuchien'],$_POST['thangnambatdau'],$_POST['thangnamketthuc'],$_POST['ketqua'],$_POST['loaihinhnghiencuu'],$_POST['linhvuckhoahoc'],$thanhvien=xetthanhvien(),$tochuc=xettochuc(),$tiendodukien=xettiendodukien(),$baocaotiendo=xetbctd(),$_POST['kinhphichitiet'],$_POST['idnd'],$_POST['iddt'])) {
     ?>
     <script type="text/javascript">
         swal('Thành công','Đã sửa đề tài!','success');

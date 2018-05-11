@@ -594,8 +594,8 @@ giao kết quả nghiên cứu đến người sử dụng. Phải nêu được
         var tinhhinhnghiencuu = $('#tinhinhnghiencuudetai').val().trim();
         var nghiencuulienquan = $('#tinhinhnghiencuudetai').val().trim();
         var phuongphapkythuat = $('#phuongphapnghiencuudetai').val().trim();
-        var kinhphingansach = $('#kinhphingansachdetai').val().trim();
-        var kinhphinguonkhac = $('#kinhphinguonkhacdetai').val().trim();
+        var kinhphingansach = (!$.isNumeric($('#kinhphingansachdetai').val().trim())) ? $('#kinhphingansachdetai').val().trim() : '0';
+        var kinhphinguonkhac = (!$.isNumeric($('#kinhphinguonkhacdetai').val().trim())) ? $('#kinhphinguonkhacdetai').val().trim() : '0';
         var thangthuchien = $('#thangthuchiendetai').val().trim();
         var thangnambatdau = $('#thangnambatdaudetai').val().trim();
         var thangnamketthuc = $('#thangnamketthucdetai').val().trim();
@@ -608,18 +608,18 @@ giao kết quả nghiên cứu đến người sử dụng. Phải nêu được
             khongthanhcong('Chưa nhập tên đề tài');
             return;
         }
-        if(!muctieudetai){
+        /*if(!muctieudetai){
             khongthanhcong('Chưa nhập mục tiêu đề tài');
             return;
         }
         if(!noidungdetai){
             khongthanhcong('Nhập nội dung đề tài');
             return;
-        }
+        }*/
         _cdt_.forEach((c)=>{
           ($('#capdetai-'+c[0]).is(':checked'))?capdetai = $('#capdetai-'+c[0]).val().trim():0;
         });
-        if(!moisangtao){
+        /*if(!moisangtao){
             khongthanhcong('Chưa phân tích về tính mới, tính sáng tạo của đề tài');
             return;
         }
@@ -646,7 +646,7 @@ giao kết quả nghiên cứu đến người sử dụng. Phải nêu được
         if(!kinhphinguonkhac){
             khongthanhcong('Chưa nhập kinh phí dự kiến từ nguồn khác');
             return;
-        }
+        }*/
         if (!thangthuchien){
             khongthanhcong('Chưa nhập số tháng thực hiện đề tài');
             return;
@@ -659,6 +659,7 @@ giao kết quả nghiên cứu đến người sử dụng. Phải nêu được
             khongthanhcong('Chưa nhập tháng năm kêt thúc đề tài');
             return;
         }
+        /*
         if(!ketqua){
             khongthanhcong('Chưa nhập dự kiến kết quả đề tài và địa chỉ ứng dụng');
             return;
@@ -668,7 +669,7 @@ giao kết quả nghiên cứu đến người sử dụng. Phải nêu được
         }
         if(!$.isNumeric(kinhphinguonkhac)){
           khongthanhcong('Kinh phí nguồn khác không hợp lệ, kiểm tra lại');return;
-        }  
+        } */ 
         var loaihinhnghiencuu = [];
         _lh_.forEach((c)=>{
           ($('#loaihinh-'+c[0]).is(':checked'))?loaihinhnghiencuu.push(c[1].trim()):0;
@@ -708,7 +709,7 @@ giao kết quả nghiên cứu đến người sử dụng. Phải nêu được
               btv.push(cols);
           });
           var thanhviendetai = [];
-          if (btv[0][0]=='' || btv[0][1]=='' || btv[0][2]=='') {
+          if (btv[0][0]=='' || btv[0][1]=='') {
             khongthanhcong('Vui lòng điền đầy đủ thông tin thành viên của đề tài');
             return;
           }
@@ -769,10 +770,6 @@ giao kết quả nghiên cứu đến người sử dụng. Phải nêu được
                   return;
               }
           }
-          if(jQuery.isEmptyObject(btd)){
-              khongthanhcong('Chưa nhập dự kiến tiến độ của đề tài');
-              return;
-          }
           // Xét dự kiến tiến độ
           var  bctd = [];
           var demongdungbctd = 0;
@@ -796,10 +793,6 @@ giao kết quả nghiên cứu đến người sử dụng. Phải nêu được
               });
               bctd.push(cols);
           }); // lưu vào bctd[[]];
-          if(jQuery.isEmptyObject(bctd)){
-              khongthanhcong('Chưa nhập dự kiến tiến độ của đề tài');
-              return;
-          }
           var  bkp = [];
           var demdongdungkp = 0;
           var demdong2trdau = 0;
