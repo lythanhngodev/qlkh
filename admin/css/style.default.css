@@ -206,6 +206,9 @@ section header {
     padding: 0 3rem;
   }
 }
+.dataTables_wrapper{
+  padding:0;
+}
 
 /*
 * ==========================================================

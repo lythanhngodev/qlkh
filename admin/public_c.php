@@ -85,6 +85,9 @@
             case 'thongke':
                 include_once("control/c_thong_ke.php");
                 break;
+            case 'nhapthanhvien':
+                include("control/c_nhap_thanh_vien.php");
+                break;
 			default:
 				# code...
 				break;
