@@ -15,6 +15,8 @@
 	<meta property="og:type" content="website">
 	<meta property="og:image" content="<?php echo $qlkh['HOSTGOC'] ?>images/vlute.jpg" />
 
+	<link rel="shortcut icon" href="<?php echo $qlkh['HOSTGOC'] ?>images/favicon.ico">
+	
 	<script defer src="fontawesome/svg-with-js/js/fontawesome-all.js"></script>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link rel="stylesheet" type="text/css" href="css/animate.css">
