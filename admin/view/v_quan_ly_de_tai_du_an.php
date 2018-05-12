@@ -42,7 +42,7 @@
                         } ?>
                         </td>
                         <td class="giua">
-                            <a href="?p=xemdexuat&id=<?php echo $row['IDDT']; ?>" class="btn btn-primary"><i class="fas fa-edit"></i></a>
+                            <a href="?p=xemdexuat&id=<?php echo $row['IDDT']; ?>" class="btn btn-primary btn-sm"><i class="fas fa-edit"></i></a>
                         </td>
                     </tr>
                 <?php $stt++; } ?>

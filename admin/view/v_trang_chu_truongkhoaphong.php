@@ -6,7 +6,7 @@
           <div class="card-header" style="border-top: 3px solid #ffc107;">
             <h4><i class="fas fa-bullhorn"></i>&ensp;Thông báo</h4>
           </div>
-          <div class="card-body giua">
+          <div class="card-body" id="thongbao-2bgf">
 
           </div>
         </div>
