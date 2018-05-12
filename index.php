@@ -12,7 +12,7 @@
 	<base href="<?php echo $qlkh['HOSTGOC'] ?>" />
 	<!-- Facebook SEO -->
 	<meta property="og:title" content="Phòng nghiên cứu khoa học - Đại học Sư phạm kỹ thuật Vĩnh Long">
-	<meta property="og:type" content="article">
+	<meta property="og:type" content="website">
 	<meta property="og:image" content="<?php echo $qlkh['HOSTGOC'] ?>/images/vlute.jpg" />
 
 	<script defer src="fontawesome/svg-with-js/js/fontawesome-all.js"></script>
