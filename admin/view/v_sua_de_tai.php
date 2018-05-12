@@ -466,7 +466,7 @@
         $('#linkfile').val('');
         $('#tenfile').html('Chưa chọn file');
     }
-    $(document).ready(()=>{
+    $(document).ready(function(){
         $('#quanlydetai').addClass('active');
         $('.tieude').html('Sửa đề tài NCKH');
     <?php if($trangthaidt=='Đã nghiệm thu'){ ?>
@@ -474,11 +474,11 @@
             for (var j = 0; j< _data_[i].length; j++)
                 (!_data_[i][j]) ? _data_[i][j] = '' : 1;
         var tr=null;
-        _tv_.forEach((tv)=>{
-            _data_.forEach((d)=>{
+        _tv_.forEach(function(tv){
+            _data_.forEach(function(d){
                 if (tv[3]==d[0]) {
                     var option = "<option value=''>Chọn thành viên</option>";
-                        _data_.forEach((i)=>{
+                        _data_.forEach(function(i){
                           (tv[3]==i[0]) ? option+="<option value='"+i[0]+"' selected>"+i[1]+" "+i[2]+"</option>" : option+="<option value='"+i[0]+"'>"+i[1]+" "+i[2]+"</option>";
                         });
                     var td=""; _ndtd_.forEach(function(d){if (d[0]==tv[3]) {td = d[1];}});
@@ -490,7 +490,7 @@
         $('#bangthanhvien').append(tr);
         $('.select-chon').addClass('selectpicker');
         $('.selectpicker').selectpicker({ liveSearch: true });
-        _data_.forEach((data)=>{
+        _data_.forEach(function(data){
           if (data[0]==$('#chonchunhiem').val()) {
             $('#chonchunhiem').parent('td').parent('tr').find('td:nth-child(2) textarea').val("- "+data[6]+"\n- "+data[3]+"\n- "+data[4]);
           }
@@ -506,11 +506,11 @@
                 (!_data_[i][j]) ? _data_[i][j] = '' : 1;
         var tr=null;
         if (_tv_!=null) {
-            _tv_.forEach((tv)=>{
-                _data_.forEach((d)=>{
+            _tv_.forEach(function(tv){
+                _data_.forEach(function(d){
                     if (tv[3]==d[0]) {
                         var option = "<option value=''>Chọn thành viên</option>";
-                            _data_.forEach((i)=>{
+                            _data_.forEach(function(i){
                               (tv[3]==i[0]) ? option+="<option value='"+i[0]+"' selected>"+i[1]+" "+i[2]+"</option>" : option+="<option value='"+i[0]+"'>"+i[1]+" "+i[2]+"</option>";
                             });
                         var td=""; _ndtd_.forEach(function(d){if (d[0]==tv[3]) {td = d[1];}});
@@ -706,7 +706,7 @@
             if(!tendetai) {khongthanhcong('Chưa nhập tên đề tài');return;}
             /*if(!muctieudetai){khongthanhcong('Chưa nhập mục tiêu đề tài');return;}
             if(!noidungdetai){khongthanhcong('Nhập nội dung đề tài');return;}*/
-            _cdt_.forEach((c)=>{
+            _cdt_.forEach(function(c){
               ($('#capdetai-'+c[0]).is(':checked')) ? capdetai = $('#capdetai-'+c[0]).val().trim():0;
             });
             if(!capdetai){
@@ -729,7 +729,7 @@
             if(!$.isNumeric(kinhphinguonkhac)){khongthanhcong('Kinh phí nguồn khác không hợp lệ, kiểm tra lại');return;} */
             // Xét loại hình nghiên cứu
             var loaihinhnghiencuu = [];
-            _lh_.forEach((c)=>{
+            _lh_.forEach(function(c){
               ($('#loaihinh-'+c[0]).is(':checked'))?loaihinhnghiencuu.push(c[1].trim()):0;
             });
             if(jQuery.isEmptyObject(loaihinhnghiencuu)){
@@ -738,7 +738,7 @@
             }
             // Xét lĩnh vực khoa học
             var linhvuckhoahoc = [];
-            _lv_.forEach((c)=>{
+            _lv_.forEach(function(c){
               ($('#linhvuc-'+c[0]).is(':checked'))?linhvuckhoahoc.push(c[1].trim()):0;
             });
             if(jQuery.isEmptyObject(linhvuckhoahoc)){
@@ -972,7 +972,7 @@
         else
             khongthanhcong("Hiện không có kết nối internet");
     }
-    chonthanhvien = t =>{
+    function chonthanhvien(t){
         _data_.forEach(function(data){
           if (data[0]==t.value) {
             var td=""; _ndtd_.forEach(function(d){if (d[0]==t.value) {td = d[1];}});

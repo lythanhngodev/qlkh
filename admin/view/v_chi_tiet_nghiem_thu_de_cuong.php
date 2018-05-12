@@ -448,7 +448,7 @@
             else canhbao("Vui lòng chọn file hình ảnh, pdf hoặc word");
 
         });
-        $('#luuykien').click(()=>{
+        $('#luuykien').click(function(){
           if (kiemtraketnoi()) {
             $.ajax({
               url : "ajax/ajax_y_kien_nghiem_thu.php",

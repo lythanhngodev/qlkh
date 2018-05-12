@@ -619,7 +619,7 @@
             </div>
             <div class="modal-body">
                 <div class="alert alert-danger" role="alert">
-                    <strong>Bạn có chắc xóa học vị này?><hr>
+                    <strong>Bạn có chắc xóa học vị này?</strong><hr>
                     <b>Học vị:</b> <span id="tenhvxoa"></span>
                 </div>
             </div>
@@ -758,7 +758,7 @@
             </div>
             <div class="modal-body">
                 <div class="alert alert-danger" role="alert">
-                    <strong>Bạn có chắc xóa học vị này?><hr>
+                    <strong>Bạn có chắc xóa chức vụ này?</strong><hr>
                     <b>Học vị:</b> <span id="tencvxoa"></span>
                 </div>
             </div>
@@ -1618,7 +1618,7 @@
                 khongthanhcong('Không có kết nối internet');
         });
         // MAIL 
-        $('#bluumail').click(()=>{
+        $('#bluumail').click(function(){
             if(!$('#tenmail').val().trim() || !$('#matkhaumail').val().trim()){
                 khongthanhcong('Vui lòng nhập đầy đủ thông tin mail');
                 return;
@@ -1639,7 +1639,7 @@
                         $.notifyClose();
                         var mang = $.parseJSON(data);
                         if(mang.trangthai==1){
-                            thanhcong('Thêm chứ danh thành công');
+                            thanhcong('Lưu mail thành công');
                         }
                         else{
                             khongthanhcong('Hiện tại bạn đang sử dụng mail này');
@@ -2437,72 +2437,72 @@
                 khongthanhcong('Không có kết nối internet');
         });
     });
-    suakbm=(t)=>{
+    function suakbm(t){
         $('#tenkbmsua').val($(t).parent('td').parent('tr').find('td:nth-child(1)').text().trim());
         thiskbm = t;
         $('#modal-sua-khoa-bo-mon').modal('show');
     }
-    xoakbm=(t)=>{
+    function xoakbm(t){
         $('#tenkbmxoa').text($(t).parent('td').parent('tr').find('td:nth-child(1)').text().trim());
         thiskbm = t;
         $('#modal-xoa-khoa-bo-mon').modal('show');
     }
-    sua=(t)=>{
+    function sua(t){
         $('#tentdcmsua').val($(t).parent('td').parent('tr').find('td:nth-child(1)').text().trim());
         thistdcm = t;
         $('#modal-sua-trinh-do-chuyen-mon').modal('show');
     }
-    xoa=(t)=>{
+    function xoa(t){
         $('#tentdcmxoa').text($(t).parent('td').parent('tr').find('td:nth-child(1)').text().trim());
         thistdcm = t;
         $('#modal-xoa-trinh-do-chuyen-mon').modal('show');
     }
-    suacdgv=(t)=>{
+    function suacdgv(t){
         $('#tencdgvsua').val($(t).parent('td').parent('tr').find('td:nth-child(1)').text().trim());
         thiscdgv = t;
         $('#modal-sua-chuc-danh-giang-vien').modal('show');
     }
-    xoacdgv=(t)=>{
+    function xoacdgv(t){
         $('#tencdgvxoa').text($(t).parent('td').parent('tr').find('td:nth-child(1)').text().trim());
         thiscdgv = t;
         $('#modal-xoa-chuc-danh-giang-vien').modal('show');
     }
-    suahv=(t)=>{
+    function suahv(t){
         $('#tenhvsua').val($(t).parent('td').parent('tr').find('td:nth-child(1)').text().trim());
         thishv = t;
         $('#modal-sua-hoc-vi').modal('show');
     }
-    xoahv=(t)=>{
+    function xoahv(t){
         $('#tenhvxoa').text($(t).parent('td').parent('tr').find('td:nth-child(1)').text().trim());
         thishv = t;
         $('#modal-xoa-hoc-vi').modal('show');
     }
-    suacdkh=(t)=>{$('#tencdkhsua').val($(t).parent('td').parent('tr').find('td:nth-child(1)').text().trim());thiscdkh = t;$('#modal-sua-chuc-danh-khoa-hoc').modal('show');
+    function suacdkh(t){$('#tencdkhsua').val($(t).parent('td').parent('tr').find('td:nth-child(1)').text().trim());thiscdkh = t;$('#modal-sua-chuc-danh-khoa-hoc').modal('show');
     }
-    xoacdkh=(t)=>{$('#tencdkhxoa').text($(t).parent('td').parent('tr').find('td:nth-child(1)').text().trim());thiscdkh = t;$('#modal-xoa-chuc-danh-khoa-hoc').modal('show');
+    function xoacdkh(t){$('#tencdkhxoa').text($(t).parent('td').parent('tr').find('td:nth-child(1)').text().trim());thiscdkh = t;$('#modal-xoa-chuc-danh-khoa-hoc').modal('show');
     }
-    suacv=(t)=>{$('#tencvsua').val($(t).parent('td').parent('tr').find('td:nth-child(1)').text().trim());thiscv = t;$('#modal-sua-chuc-vu').modal('show');
+    function suacv(t){$('#tencvsua').val($(t).parent('td').parent('tr').find('td:nth-child(1)').text().trim());thiscv = t;$('#modal-sua-chuc-vu').modal('show');
     }
-    xoacv=(t)=>{$('#tencvxoa').text($(t).parent('td').parent('tr').find('td:nth-child(1)').text().trim());thiscv = t;$('#modal-xoa-chuc-vu').modal('show');
+    function xoacv(t){$('#tencvxoa').text($(t).parent('td').parent('tr').find('td:nth-child(1)').text().trim());thiscv = t;$('#modal-xoa-chuc-vu').modal('show');
     }
-    suac=(t)=>{$('#tencsua').val($(t).parent('td').parent('tr').find('td:nth-child(1)').text().trim());thisc = t;$('#modal-sua-cap-bai-bao').modal('show');
+    function suac(t){$('#tencsua').val($(t).parent('td').parent('tr').find('td:nth-child(1)').text().trim());thisc = t;$('#modal-sua-cap-bai-bao').modal('show');
     }
-    xoac=(t)=>{$('#tencxoa').text($(t).parent('td').parent('tr').find('td:nth-child(1)').text().trim());thisc = t;$('#modal-xoa-cap-bai-bao').modal('show');
+    function xoac(t){$('#tencxoa').text($(t).parent('td').parent('tr').find('td:nth-child(1)').text().trim());thisc = t;$('#modal-xoa-cap-bai-bao').modal('show');
     }
-    suacdt=(t)=>{$('#tencdtsua').val($(t).parent('td').parent('tr').find('td:nth-child(1)').text().trim());thiscdt = t;$('#modal-sua-cap-de-tai').modal('show');
+    function suacdt(t){$('#tencdtsua').val($(t).parent('td').parent('tr').find('td:nth-child(1)').text().trim());thiscdt = t;$('#modal-sua-cap-de-tai').modal('show');
     }
-    xoacdt=(t)=>{$('#tencdtxoa').text($(t).parent('td').parent('tr').find('td:nth-child(1)').text().trim());thiscdt = t;$('#modal-xoa-cap-de-tai').modal('show');
+    function xoacdt(t){$('#tencdtxoa').text($(t).parent('td').parent('tr').find('td:nth-child(1)').text().trim());thiscdt = t;$('#modal-xoa-cap-de-tai').modal('show');
     }
-    sualv=(t)=>{$('#tenlvsua').val($(t).parent('td').parent('tr').find('td:nth-child(1)').text().trim());thislv = t;$('#modal-sua-linh-vuc-khoa-hoc').modal('show');
+    function sualv(t){$('#tenlvsua').val($(t).parent('td').parent('tr').find('td:nth-child(1)').text().trim());thislv = t;$('#modal-sua-linh-vuc-khoa-hoc').modal('show');
     }
-    xoalv=(t)=>{$('#tenlvxoa').text($(t).parent('td').parent('tr').find('td:nth-child(1)').text().trim());thislv = t;$('#modal-xoa-linh-vuc-khoa-hoc').modal('show');
+    function xoalv(t){$('#tenlvxoa').text($(t).parent('td').parent('tr').find('td:nth-child(1)').text().trim());thislv = t;$('#modal-xoa-linh-vuc-khoa-hoc').modal('show');
     }
-    sualh=(t)=>{$('#tenlhsua').val($(t).parent('td').parent('tr').find('td:nth-child(1)').text().trim());thislh = t;$('#modal-sua-loai-hinh-khoa-hoc').modal('show');
+    function sualh(t){$('#tenlhsua').val($(t).parent('td').parent('tr').find('td:nth-child(1)').text().trim());thislh = t;$('#modal-sua-loai-hinh-khoa-hoc').modal('show');
     }
-    xoalh=(t)=>{$('#tenlhxoa').text($(t).parent('td').parent('tr').find('td:nth-child(1)').text().trim());thislh = t;$('#modal-xoa-loai-hinh-khoa-hoc').modal('show');
+    function xoalh(t){$('#tenlhxoa').text($(t).parent('td').parent('tr').find('td:nth-child(1)').text().trim());thislh = t;$('#modal-xoa-loai-hinh-khoa-hoc').modal('show');
     }
-    suastqd=(t)=>{$('#tusostqdsua').val($(t).parent('td').parent('tr').find('td:nth-child(1)').text().trim());$('#densostqdsua').val($(t).parent('td').parent('tr').find('td:nth-child(2)').text().trim());$('#hesostqdsua').val($(t).parent('td').parent('tr').find('td:nth-child(3)').text().trim());thisstqd = t;$('#modal-sua-so-tiet-qui-doi').modal('show');
+    function suastqd(t){$('#tusostqdsua').val($(t).parent('td').parent('tr').find('td:nth-child(1)').text().trim());$('#densostqdsua').val($(t).parent('td').parent('tr').find('td:nth-child(2)').text().trim());$('#hesostqdsua').val($(t).parent('td').parent('tr').find('td:nth-child(3)').text().trim());thisstqd = t;$('#modal-sua-so-tiet-qui-doi').modal('show');
     }
-    xoastqd=(t)=>{$('#tenstqdxoa').text($(t).parent('td').parent('tr').find('td:nth-child(1)').text().trim());thisstqd = t;$('#modal-xoa-so-tiet-qui-doi').modal('show');
+    function xoastqd(t){$('#tenstqdxoa').text($(t).parent('td').parent('tr').find('td:nth-child(1)').text().trim());thisstqd = t;$('#modal-xoa-so-tiet-qui-doi').modal('show');
     }
 </script>

@@ -520,7 +520,7 @@ giao kết quả nghiên cứu đến người sử dụng. Phải nêu được
             return;
         }*/
         var loaihinhnghiencuu = [];
-        _lh_.forEach((c)=>{
+        _lh_.forEach(function(c){
           ($('#loaihinh-'+c[0]).is(':checked'))?loaihinhnghiencuu.push(c[1].trim()):0;
         });
         if(jQuery.isEmptyObject(loaihinhnghiencuu)){
@@ -528,7 +528,7 @@ giao kết quả nghiên cứu đến người sử dụng. Phải nêu được
             return;
         }
         var linhvuckhoahoc = [];
-        _lv_.forEach((c)=>{
+        _lv_.forEach(function(c){
           ($('#linhvuc-'+c[0]).is(':checked'))?linhvuckhoahoc.push(c[1].trim()):0;
         });
         if(jQuery.isEmptyObject(linhvuckhoahoc)){
