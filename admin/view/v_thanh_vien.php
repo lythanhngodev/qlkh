@@ -11,7 +11,7 @@ if (!isset($_SESSION["token"])) {include_once ("../../loi404.html");exit();}
                 <div class="card-body">
                     <div class="row">
                         <div class="col-md-12">
-                        <a href="?p=nhapthanhvien" class="btn btn-primary btn-sm"><i class="fas fa-plus"></i>&nbsp;&nbsp;Nhập từ file excel</a>
+                        <a href="?p=nhapthanhvien" class="btn btn-primary btn-sm"><i class="fas fa-plus"></i>&nbsp;&nbsp;Nhập thành viên từ file excel</a>
                         <br><br>
                     </div>
                     </div>

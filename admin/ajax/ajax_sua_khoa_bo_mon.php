@@ -21,7 +21,7 @@ $result = Array(
             TENKBM = '$ten' 
         WHERE 
             IDKBM = '$ma' AND 
-            (NOT EXISTS (SELECT * FROM (SELECT * FROM khoabomon) AS t WHERE t.TENKBM = N'$ten'))
+            (NOT EXISTS (SELECT * FROM (SELECT * FROM khoabomon) AS t WHERE BINARY t.TENKBM =  N'$ten'))
     ";
     if(mysqli_query($conn, $sql)===TRUE){
         $row = mysqli_affected_rows($conn);

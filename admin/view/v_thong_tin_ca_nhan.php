@@ -331,7 +331,7 @@ if (!isset($_SESSION["token"])) {include_once ("../../loi404.html");exit();}
                                                 <tr>
                                                     <th class="giua"><?php echo $stt; ?></th>
                                                     <th><?php echo $row['TENDETAI']; ?></th>
-                                                    <td class="giua"><?php echo $row['THANGNAMBD']. "đến ".$row['THANGNAMKT']; ?></td>
+                                                    <td class="giua"><?php echo $row['THANGNAMBD']. " đến ".$row['THANGNAMKT']; ?></td>
                                                     <td class="giua"><?php echo $row['CAPDETAI']; ?></td>
                                                     <td class="giua"><?php echo $row['TRACHNHIEM']; ?></td>
                                                 </tr>

@@ -2,8 +2,19 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>VLUTE</title>
+	<meta charset="utf-8">
+	<meta name="description" content="Phòng nghiên cứu khoa học - Đại học Sư phạm kỹ thuật Vĩnh Long" />
+	<title>Phòng nghiên cứu khoa học - Đại học Sư phạm kỹ thuật Vĩnh Long</title>
+	<!-- Google SEO -->
+	<meta name="google" content="nositelinkssearchbox" />
+	<meta name="google" content="notranslate" />
+	<meta name="keywords" content="Phong nghien cuu khoa hoc truong dai hoc su pham ky thuat vinh long, nckh vlute, VLUTE SCIENTIFIC RESEARCH, VLUTE SCIENTIFIC RESEARCH, SR VLUTE" />
 	<base href="<?php echo $qlkh['HOSTGOC'] ?>" />
+	<!-- Facebook SEO -->
+	<meta property="og:title" content="Phòng nghiên cứu khoa học - Đại học Sư phạm kỹ thuật Vĩnh Long">
+	<meta property="og:type" content="article">
+	<meta property="og:image" content="<?php echo $qlkh['HOSTGOC'] ?>/images/vlute.jpg" />
+
 	<script defer src="fontawesome/svg-with-js/js/fontawesome-all.js"></script>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link rel="stylesheet" type="text/css" href="css/animate.css">

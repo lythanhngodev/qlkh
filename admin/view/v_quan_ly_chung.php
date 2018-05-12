@@ -5,6 +5,7 @@
         <div class="card">
             <div class="card-header">
                 <h4>Khoa / Phòng</h4>
+        </a>
             </div>
             <div class="card-body">
                 <a class="btn btn-primary btn-sm themkbm"><i class="fas fa-plus"></i>&nbsp;&nbsp;Thêm mới</a><br><br>
