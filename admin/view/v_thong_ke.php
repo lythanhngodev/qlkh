@@ -52,7 +52,7 @@
 </div>
 <div class="cach"></div>
 <script>
-$(document).ready(()=>{
+$(document).ready(function(){
     $('#thongke').addClass('active');
     $('.tieude').html('Thống kê');
     $('.list-group-item').click(function() {

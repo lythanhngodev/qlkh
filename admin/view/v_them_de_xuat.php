@@ -468,7 +468,7 @@ giao kết quả nghiên cứu đến người sử dụng. Phải nêu được
             khongthanhcong('Nhập nội dung đề tài');
             return;
         }*/
-        _cdt_.forEach((c)=>{
+        _cdt_.forEach(function(c){
           ($('#capdetai-'+c[0]).is(':checked'))?capdetai = $('#capdetai-'+c[0]).val().trim():0;
         });
         if(!capdetai){

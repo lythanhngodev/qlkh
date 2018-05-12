@@ -434,7 +434,7 @@ if (!isset($_SESSION["token"])) {include_once ("../../loi404.html");exit();}
         $('#bangcongtacchuyenmon').on('click','.xoacongtac',function(){
             $(this).parents('tr').remove();
         });
-        $('#doimatkhau').click(()=>{
+        $('#doimatkhau').click(function(){
             var mk = $('#mk').val().trim();
             var mk2 = $('#mk2').val().trim();
             if(!mk||!mk2){khongthanhcong('Điền đầy đủ thông tin mật khẩu');return;}
@@ -466,7 +466,7 @@ if (!isset($_SESSION["token"])) {include_once ("../../loi404.html");exit();}
                 });
             } else swal('Ôi! Lỗi','Không có kết nối internet','error');
         });
-        $('#doitendangnhap').click(()=>{
+        $('#doitendangnhap').click(function(){
             var tdn = $('#tendangnhap').val().trim();
             if(!tdn){khongthanhcong('Vui lòng nhập tên đăng nhập');return;}
             // Kiểm tra kết nối internet
