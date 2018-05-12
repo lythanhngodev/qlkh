@@ -678,7 +678,6 @@
                             khongthanhcong('Không thể tải file');
                         }
                     });
-
                 } else
                     khongthanhcong("Hiện không có kết nối internet");
             }

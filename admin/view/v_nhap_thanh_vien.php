@@ -13,13 +13,12 @@ if (!isset($_SESSION["token"])) {include_once ("../../loi404.html");exit();}
                         <div class="col-md-12">
                         <button class="btn btn-primary btn-sm" id="nhap"><i class="fas fa-plus"></i>&nbsp;&nbsp;Nhập từ file excel</button>
                         <br><br>
-                        <input type="file" name="" id="filedl" hidden="hidden">
+                        <input type="file" name="" id="filedl" hidden="hidden" accept="application/vnd.ms-excel, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet">
                     </div>
                     </div>
                     <div class="row">
                         <div class="col-md-12">
                             <table id="bangthanhvien" class="table table-bordered table-hover">
-                                <thead>
                                 <tr style="background:#e9ecef;">
                                     <th class="giua">TT</th>
                                     <th class="giua">Họ & Tên</th>
@@ -27,10 +26,6 @@ if (!isset($_SESSION["token"])) {include_once ("../../loi404.html");exit();}
                                     <th class="giua">Loại tài khoản</th>
                                     <th class="giua" style="width: 100px">Thao tác</th>
                                 </tr>
-                                </thead>
-                                <tbody>
-
-                                </tbody>
                             </table>
                         </div>
                     </div>
@@ -63,7 +58,32 @@ if (!isset($_SESSION["token"])) {include_once ("../../loi404.html");exit();}
             var type = file_data.type;
             var match = ["application/vnd.ms-excel", "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"];
             if (type==match[0] || type==match[1]) {
-                return;
+                var form_data = new FormData();
+                //thêm files vào trong form data
+                form_data.append('file', file_data);
+                if (kiemtraketnoi()){
+                    $.ajax({
+                        url: 'ajax/ajax_import_file_thanh_vien.php', // gửi đến file upload.php
+                        dataType: 'text',
+                        cache: false,
+                        contentType: false,
+                        processData: false,
+                        type: 'post',
+                        data: form_data,
+                        beforeSend: function () {
+                            canhbao('Đang xử lý dữ liệu ...');
+                        },
+                        success: function(data){
+                            $.notifyClose();
+                            $('body').append(data);
+                        },
+                        error: function () {
+                            $.notifyClose();
+                            khongthanhcong('Không thể tải file');
+                        }
+                    });
+                } else
+                    khongthanhcong("Hiện không có kết nối internet");
             }
             else{
                 swal('Ôi! Lỗi','Vui lòng chọn định dạng Excel','error');
