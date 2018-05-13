@@ -17,15 +17,17 @@ if (!isset($_SESSION["token"])) {include_once ("../../loi404.html");exit();}
                     </div>
                     </div>
                     <div class="row">
-                        <div class="col-md-12">
+                        <div class="col-md-12" id="bangdanhsach">
                             <table id="bangthanhvien" class="table table-bordered table-hover">
-                                <tr style="background:#e9ecef;">
+                                <thead>
+                                    <tr style="background:#e9ecef;">
                                     <th class="giua">TT</th>
-                                    <th class="giua">Họ & Tên</th>
-                                    <th class="giua">Khoa / Phòng</th>
+                                    <th class="giua">Họ</th>
+                                    <th class="giua">Tên</th>
+                                    <th class="giua">Mail / Tên đăng nhập</th>
                                     <th class="giua">Loại tài khoản</th>
-                                    <th class="giua" style="width: 100px">Thao tác</th>
                                 </tr>
+                                </thead>
                             </table>
                         </div>
                     </div>
@@ -75,7 +77,7 @@ if (!isset($_SESSION["token"])) {include_once ("../../loi404.html");exit();}
                         },
                         success: function(data){
                             $.notifyClose();
-                            $('body').append(data);
+                            $('#bangdanhsach').html(data);
                         },
                         error: function () {
                             $.notifyClose();
@@ -93,9 +95,8 @@ if (!isset($_SESSION["token"])) {include_once ("../../loi404.html");exit();}
             var btv = [];
             $('#bangthanhvien').find('tr:not(:first)').each(function(i, row) {
               var cols = [];
-              $(this).find('td:not(:last) select').each(function(i, col) {
-                  cols.push($(this).attr('lydata'));
-                  cols.push($(this).val());
+              $(this).find('td:not(:first) input, select').each(function(i, col) {
+                  cols.push($(this).val().trim());
               });
               btv.push(cols);
             });
@@ -105,7 +106,7 @@ if (!isset($_SESSION["token"])) {include_once ("../../loi404.html");exit();}
             }
             if (kiemtraketnoi()) {
                 $.ajax({
-                    url : "ajax/ajax_thay_doi_quyen_truy_cap.php",
+                    url : "ajax/ajax_nap_thanh_vien.php",
                     type : "post",
                     dataType:"text",
                     data : {
@@ -117,7 +118,7 @@ if (!isset($_SESSION["token"])) {include_once ("../../loi404.html");exit();}
                     success : function (data){
                         var kq = $.parseJSON(data);
                         if(kq.trangthai==1){
-                            swal('Tốt','Thay đổi thành công','success');
+                            swal('Tốt','Nhập thành công ('+kq.so+' thành viên)','success');
                         }
                         else
                             swal('Ôi! Lỗi','Xảy ra lỗi, vui lòng thử lại','error');
