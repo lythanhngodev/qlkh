@@ -19,6 +19,18 @@ function lay_tac_gia_bai_bao($idb){
     $e_ten = mysqli_query($conn,$q_ten);
     return $e_ten;
 }
+function lay_don_vi($idb){
+    $ketnoi = new clsKetnoi();
+    $conn = $ketnoi->ketnoi();
+    $q_dv = "SELECT DISTINCT k.TENKBM FROM nguoidung_baibao nb, nguoidung_khoabomon nk, khoabomon k
+WHERE nb.IDBAO = '$idb' AND nb.IDND = nk.IDND AND nk.IDKBM = k.IDKBM;";
+    $e_dv = mysqli_query($conn,$q_dv);
+    $r_dv=null;
+    while ($row=mysqli_fetch_assoc($e_dv)) {
+        $r_dv[] = $row['TENKBM'];
+    }
+    return $r_dv;
+}
 $conn = $ketnoi->ketnoi();
 $capsql = "SELECT DISTINCT b.CAPBAIBAO FROM baokhoahoc b WHERE b.ANHIEN=b'1';";
 $qcapsql = mysqli_query($conn,$capsql);
@@ -33,7 +45,7 @@ while ($row = mysqli_fetch_row($esql_stqd)) {
 ?>
 <div class="card line-chart-example">
     <div class="card-header">
-        <h4>Tất cả đề tài đã nghiệm thu</h4>
+        <h4>Thống kê tất cả các bài báo khoa học</h4>
         <hr>
         <form action="export/_export_tat_ca_bai_bao_khoa_hoc.php" method="post">
             <input type="text" name="alldtnt" hidden="hidden" value="<?php echo $_POST['_token']; ?>">
@@ -41,8 +53,8 @@ while ($row = mysqli_fetch_row($esql_stqd)) {
         </form>
     </div>
     <div class="card-body">
-        <?php while ($cap = mysqli_fetch_assoc($qcapsql)) { ?>
-        <h4>Cấp: <?php $capbaibao=$cap['CAPBAIBAO']; echo $capbaibao; ?></h4>
+        <?php $stt_cap=1; while ($cap = mysqli_fetch_assoc($qcapsql)) { ?>
+        <h4><?php echo $ketnoi->ConverToRoman($stt_cap); ?>. Cấp: <?php $capbaibao=$cap['CAPBAIBAO']; echo $capbaibao; ?></h4>
         <table id="bang-bieu-mau" class="table table-bordered table-hover">
             <thead>
                 <tr style="background:#e9ecef;">
@@ -50,8 +62,8 @@ while ($row = mysqli_fetch_row($esql_stqd)) {
                     <th class="giua">Tên bài báo</th>
                     <th class="giua">Tác giả</th>
                     <th class="giua">Đơn vị</th>
-                    <th class="giua">Ghi chú</th>
                     <th class="giua">Số tiết qui đổi</th>
+                    <th class="giua">Ghi chú</th>
                 </tr>
             </thead>
             <tbody>
@@ -63,25 +75,59 @@ while ($row = mysqli_fetch_row($esql_stqd)) {
                     <td class="giua"><?php echo $stt; ?></td>
                     <td><?php echo $row['TENBAO']; ?></td>
                     <td class="giua">
-                    <?php $tg = lay_tac_gia_bai_bao($row['IDBAO']);
-                        while ($_tg = mysqli_fetch_assoc($tg)) {
-                            echo $_tg['HOTEN'];
+                    <?php $r_tg = lay_tac_gia_bai_bao($row['IDBAO']);
+                        $tg = null;
+                        while ($_tg = mysqli_fetch_assoc($r_tg)){
+                            $tg[] = $_tg['HOTEN'];
                         }
+                    switch (count($tg)) {
+                        case 0:
+                            echo "";
+                            break;
+                        case 1:
+                            echo $tg[0];
+                            break;
+                        default:
+                            for ($i=0; $i < count($tg)-1; $i++) { 
+                                echo $tg[$i]."<hr>";
+                            }
+                            echo end($tg);
+                            break;
+                    }
                      ?>
                     </td>
-                    <td class="giua"></td>
-                    <td class="giua"><?php $diem = $row['DIEM'];echo $diem; ?></td>
                     <td class="giua">
+                    <?php 
+                    $dv = lay_don_vi($row['IDBAO']);
+                    switch (count($dv)) {
+                        case 0:
+                            echo "";
+                            break;
+                        case 1:
+                            echo $dv[0];
+                            break;
+                        default:
+                            for ($i=0; $i < count($dv)-1; $i++) { 
+                                echo $dv[$i]."<hr>";
+                            }
+                            echo end($dv);
+                            break;
+                    }
+                     ?>
+                    </td>
+                    <td class="giua">
+                        <?php $diem = $row['DIEM']; ?>
                         <?php foreach ($stqd as $val){
                             if($val[1] <= $diem && $val[2] >= $diem){echo $val[3]*$val[4];break;}
                         } ?>
                     </td>
+                    <td class="giua"></td>
                 </tr>
                 <?php $stt++; } ?>
             </tbody>
         </table>
         <br>
-        <?php } ?>
+        <?php $stt_cap++; } ?>
     </div>
 </div>
 <?php mysqli_close($conn); exit(); ?>
