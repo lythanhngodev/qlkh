@@ -117,6 +117,7 @@
     }
     function SetFileField(fileUrl) {
         document.getElementById('hinh-anh-ht').src = fileUrl;
+        alert(fileUrl);
         var host = "<?php echo $qlkh['HOSTGOC']; ?>";
         host = host.substr(0,host.lastIndexOf("\/"));
         document.getElementById('linkfile').value=fileUrl.substr(host.length+1,fileUrl.length-host.length);

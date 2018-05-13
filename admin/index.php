@@ -76,7 +76,7 @@ $_SESSION["token"] = $token;
                   <ul id="side-admin-menu" class="side-menu list-unstyled">
                       <li id="xacnhantaikhoan"><a href="?p=xacnhantaikhoan"> <i class="far fa-calendar-check"></i>&nbsp;&nbsp;Xác nhận đăng ký tài khoản</a></li>
                       <li id="thanhvien"><a href="?p=thanhvien"> <i class="fas fa-newspaper"></i>&nbsp;&nbsp;Thông tin thành viên</a></li>
-                      <li id="nhapthanhvien"><a href="?p=nhapthanhvien"> <i class="fas fa-newspaper"></i>&nbsp;&nbsp;Nhập thành viên</a></li>
+                      <li id="nhapthanhvien"><a href="?p=nhapthanhvien"> <i class="fas fa-plus"></i>&nbsp;&nbsp;Nhập thành viên</a></li>
                   </ul>
               </div>
               <div class="admin-menu">
@@ -132,7 +132,7 @@ $_SESSION["token"] = $token;
                   <ul id="side-admin-menu" class="side-menu list-unstyled">
                       <li id="xacnhantaikhoan"><a href="?p=xacnhantaikhoan"> <i class="far fa-calendar-check"></i>&nbsp;&nbsp;Xác nhận đăng ký tài khoản</a></li>
                       <li id="thanhvien"><a href="?p=thanhvien"> <i class="fas fa-newspaper"></i>&nbsp;&nbsp;Thông tin thành viên</a></li>
-                      <li id="nhapthanhvien"><a href="?p=nhapthanhvien"> <i class="fas fa-newspaper"></i>&nbsp;&nbsp;Nhập thành viên</a></li>
+                      <li id="nhapthanhvien"><a href="?p=nhapthanhvien"> <i class="fas fa-plus"></i>&nbsp;&nbsp;Nhập thành viên</a></li>
                   </ul>
               </div>
 
