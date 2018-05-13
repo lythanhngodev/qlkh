@@ -26,8 +26,7 @@ $result = Array(
             $hoi = "INSERT INTO nguoidung(HO, TEN, TENDANGNHAP, MAIL, MATKHAU, XACNHAN) VALUES ('".$btv[$i][0]."','".$btv[$i][1]."','".$btv[$i][2]."','".$btv[$i][2]."', '".$sten."', b'1');";
             mysqli_query($conn,$hoi);
             $idnd = mysqli_insert_id($conn);
-            $rkq = mysqli_affected_rows($conn);
-            if ($rkq > 0 && $idnd > 0){
+            if ($idnd > 0){
                 $loai = "INSERT INTO loaitaikhoan_nguoidung(IDND, IDLTK) VALUES ('$idnd','".$btv[$i][3]."');";
                 mysqli_query($conn,$hoi);
                 $idnd = mysqli_insert_id($conn);
