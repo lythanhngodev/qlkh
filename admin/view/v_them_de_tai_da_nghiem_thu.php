@@ -13,7 +13,7 @@
         <div class="card">
           <div class="card-header">
             <h4>(<span class="text-danger">*</span>) Những trường bắt buộc phải điền</h4>
-            <button class="btn btn-primary btn-sm" style="position:  absolute;top: 9px;right: 9px;"><i class="fas fa-edit"></i>&ensp;Điều chỉnh</button>o
+            <button class="btn btn-primary btn-sm" style="position:  absolute;top: 9px;right: 9px;"><i class="fas fa-edit"></i>&ensp;Điều chỉnh</button>
           </div>
           <div class="card-body">
             <div class="col-md-12">

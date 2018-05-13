@@ -86,6 +86,8 @@ $(document).ready(function(){
             $('#tuychon').html('<div class="card"><div class="card-header"><h4>Chọn thời gian</h4></div><div class="card-body"><div class="row"><div class="col-md-4"><div class="form-group"><label for="tags">Tháng năm bắt đầu</label><input type="month" class="form-control" id="batdau"></div>   </div><div class="col-md-4"><div class="form-group"><label for="tags">Tháng năm kết thúc</label><input type="month" class="form-control" id="ketthuc"></div></div></div><button class="btn btn-primary" id="nckh-tg-xemdulieu">Xem thống kê</button></div></div>');
         }
         else if (id=='bkh-tat-ca-da-bao-khoa-hoc'){
+            $('#tuychon').html('');
+            $('#noidungthongke').html('');
             if (kiemtraketnoi()){
                 $.ajax({
                     url: 'export/export_tat_ca_bai_bao_khoa_hoc.php',

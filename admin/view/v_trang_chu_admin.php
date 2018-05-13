@@ -87,7 +87,7 @@
                 <h4>Thống kê</h4>
               </div>
               <div class="card-body giua">
-                <a href="?p=baokhoahoc" class="col-12"><img src="../images/thong-ke.png"></a>
+                <a href="?p=thongke" class="col-12"><img src="../images/thong-ke.png"></a>
               </div>
             </div>
         </div>
