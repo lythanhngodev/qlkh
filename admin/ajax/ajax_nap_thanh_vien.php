@@ -17,7 +17,7 @@ $result = Array(
     $btv = $_POST['btv'];
     $dem = 0;
     for($i=0;$i<count($btv);$i++){
-        if ($btv[$i][0]=="" || $btv[$i][1]==""){
+        if ($btv[$i][0]=="" || $btv[$i][1]==""|| $btv[$i][2]==""){
             continue;
         }else{
             $sten = $ketnoi->to_slug($btv[$i][1]);
@@ -28,9 +28,9 @@ $result = Array(
             $idnd = mysqli_insert_id($conn);
             if ($idnd > 0){
                 $loai = "INSERT INTO loaitaikhoan_nguoidung(IDND, IDLTK) VALUES ('$idnd','".$btv[$i][3]."');";
-                mysqli_query($conn,$hoi);
-                $idnd = mysqli_insert_id($conn);
-                if ($idnd>0) $dem++;
+                mysqli_query($conn,$loai);
+                $id = mysqli_insert_id($conn);
+                if ($id>0) $dem++;
             }
         }
     }
