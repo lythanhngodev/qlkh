@@ -73,10 +73,10 @@ if (!isset($_SESSION["token"])) {include_once ("../../loi404.html");exit();}
                         type: 'post',
                         data: form_data,
                         beforeSend: function () {
-                            canhbao('Đang xử lý dữ liệu ...');
+                            swal("Đợi đã!", "Vui lòng chờ đợi cho đến khi hoàn tất", "info");
                         },
                         success: function(data){
-                            $.notifyClose();
+                            swal("Tốt!", "Tải dữ liệu hoàn tất", "success");
                             $('#bangdanhsach').html(data);
                         },
                         error: function () {
@@ -121,7 +121,7 @@ if (!isset($_SESSION["token"])) {include_once ("../../loi404.html");exit();}
                             swal('Tốt','Nhập thành công ('+kq.so+' thành viên)','success');
                         }
                         else
-                            swal('Ôi! Lỗi','Xảy ra lỗi, vui lòng thử lại','error');
+                            swal('Ôi! Lỗi','Các thành viên này đã tồn tại, vui lòng thử lại','error');
                     },
                     error: function () {
                         swal('Ôi! Lỗi','Xảy ra lỗi, vui lòng thử lại','error');

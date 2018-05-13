@@ -47,14 +47,23 @@ if (!isset($_SESSION["token"])) {include_once ("../../loi404.html");exit();}
                                             <?php } ?>
                                             </select>
                                         </td>
-                                        <td>
-                                            <a class='btn btn-primary btn-sm' title='Sửa' lydata='".$row['IDCM']."'><i class="fas fa-edit"></i></a>
-                                            <button class='btn btn-danger btn-sm xoa' title='Xóa' lydata='".$row['IDCM']."'><i class='fas fa-trash'></i></button>
+                                        <td class="giua">
+                                            <a class='btn btn-primary btn-sm' title='Sửa'><i class="fas fa-edit"></i></a>
+                                            <button class='btn btn-danger btn-sm xoa' title='Xóa'><i class='fas fa-trash'></i></button>
                                         </td>
                                     </tr>
                                 <?php $stt++; }
                                 ?>
                                 </tbody>
+                                <tfoot>
+                                <tr style="background:#e9ecef;">
+                                    <th class="giua">TT</th>
+                                    <th class="giua">Họ & Tên</th>
+                                    <th class="giua">Khoa / Phòng</th>
+                                    <th class="giua">Loại tài khoản</th>
+                                    <th class="giua" style="width: 100px">Thao tác</th>
+                                </tr>
+                                </tfoot>
                             </table>
                         </div>
                     </div>
@@ -150,6 +159,10 @@ if (!isset($_SESSION["token"])) {include_once ("../../loi404.html");exit();}
     });
 
     $(document).ready(function() {
-        $('#bangthanhvien').DataTable();
+        $('#bangthanhvien').DataTable({
+        "scrollY":"350px",
+        "scrollCollapse": true,
+        "paging": false
+        });
     } );
 </script>

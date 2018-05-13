@@ -72,6 +72,11 @@
     $('.tieude').html('Quản lý đề tài');
   });
   $(document).ready(function() {
-    $('#example').DataTable();
+    $('#example').DataTable({
+        "scrollY":"300px",
+        "scrollCollapse": true,
+        "paging": false,
+        responsive : true
+        });
 } );
 </script>

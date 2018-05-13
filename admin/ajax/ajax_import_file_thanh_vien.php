@@ -56,6 +56,11 @@ for($i=0;$i<count($listWorkSheets);$i++){
         <?php $stt++; } ?>
     </tbody>
 </table>
+<style type="text/css">
+.dataTables_filter {
+    display: none; 
+}
+</style>
 <script type="text/javascript">
     $(document).ready(function(){
         $('#bangthanhvien').DataTable({

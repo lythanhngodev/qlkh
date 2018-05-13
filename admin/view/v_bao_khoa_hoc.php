@@ -24,7 +24,7 @@
                     <?php $stt=1; while ($row = mysqli_fetch_assoc($bao)) { ?>
                     <tr>
                         <th class="giua"><?php echo $stt; ?></th>
-                        <td><a href="?p=suabaibao&id=<?php echo $row['IDBAO'] ?>"><?php echo $row['TENBAO']; ?></a></td>
+                        <td><?php echo $row['TENBAO']; ?></td>
                         <td><?php 
                             $tg = lay_tac_gia($row['IDBAO']);
                             while ($row1 = mysqli_fetch_assoc($tg)) {
@@ -72,6 +72,10 @@
     $('.tieude').html('Bài báo khoa học');
   });
   $(document).ready(function() {
-    $('#example').DataTable();
+    $('#example').DataTable({
+        "scrollY":"300px",
+        "scrollCollapse": true,
+        "paging": false
+        });
 } );
 </script>

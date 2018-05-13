@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e784096a-f6cb-467c-8cbe-b1eae1f3bf23" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/admin/control/c_quan_ly_de_tai_du_an.php" afterPath="$PROJECT_DIR$/admin/control/c_quan_ly_de_tai_du_an.php" />
-      <change beforePath="$PROJECT_DIR$/admin/control/c_trang_chu.php" afterPath="$PROJECT_DIR$/admin/control/c_trang_chu.php" />
-    </list>
+    <list default="true" id="e784096a-f6cb-467c-8cbe-b1eae1f3bf23" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -93,7 +89,7 @@
         <entry file="file://$PROJECT_DIR$/admin/ajax/ajax_nap_thanh_vien.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="717">
-              <caret line="39" column="29" lean-forward="true" selection-start-line="39" selection-start-column="29" selection-end-line="39" selection-end-column="29" />
+              <caret line="39" column="29" lean-forward="false" selection-start-line="39" selection-start-column="29" selection-end-line="39" selection-end-column="29" />
               <folding>
                 <marker date="1526234185224" expanded="true" signature="764:821" ph="INSERT INTO nguoidung... " />
                 <marker date="1526234185224" expanded="true" signature="764:931" ph="INSERT INTO nguoidung... " />
@@ -179,7 +175,7 @@
       <path value="C:\wamp64\bin\php" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="953" />
     <option name="y" value="40" />
     <option name="width" value="974" />
@@ -319,7 +315,7 @@
     <option name="totallyTimeSpent" value="68026000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="32" width="1936" height="1056" extended-state="7" />
+    <frame x="-8" y="32" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -711,7 +707,7 @@
     <entry file="file://$PROJECT_DIR$/admin/ajax/ajax_nap_thanh_vien.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="717">
-          <caret line="39" column="29" lean-forward="true" selection-start-line="39" selection-start-column="29" selection-end-line="39" selection-end-column="29" />
+          <caret line="39" column="29" lean-forward="false" selection-start-line="39" selection-start-column="29" selection-end-line="39" selection-end-column="29" />
           <folding>
             <marker date="1526234185224" expanded="true" signature="764:821" ph="INSERT INTO nguoidung... " />
             <marker date="1526234185224" expanded="true" signature="764:931" ph="INSERT INTO nguoidung... " />
