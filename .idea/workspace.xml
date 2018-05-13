@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e784096a-f6cb-467c-8cbe-b1eae1f3bf23" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/admin/ajax/ajax_sua_khoa_bo_mon.php" afterPath="$PROJECT_DIR$/admin/ajax/ajax_sua_khoa_bo_mon.php" />
       <change beforePath="$PROJECT_DIR$/admin/css/style.default.css" afterPath="$PROJECT_DIR$/admin/css/style.default.css" />
+      <change beforePath="$PROJECT_DIR$/admin/view/v_quan_ly_chung.php" afterPath="$PROJECT_DIR$/admin/view/v_quan_ly_chung.php" />
       <change beforePath="$PROJECT_DIR$/admin/view/v_thanh_vien.php" afterPath="$PROJECT_DIR$/admin/view/v_thanh_vien.php" />
       <change beforePath="$PROJECT_DIR$/admin/view/v_thong_tin_ca_nhan.php" afterPath="$PROJECT_DIR$/admin/view/v_thong_tin_ca_nhan.php" />
     </list>
