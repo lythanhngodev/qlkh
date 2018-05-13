@@ -3,7 +3,7 @@ if (!isset($_SESSION["token"])) {include_once ("../../loi404.html");exit();}
 	include_once "model/m_tre_tien_do.php";
 	$detai;
 	switch ($loaitaikhoan) {
-		case 'admin':
+		case 'admin' || 'khoahoc':
 			$detai = lay_tre_tien_do_admin();
 			include_once "view/v_tre_tien_do_admin.php";
 			break;

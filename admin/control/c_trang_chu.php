@@ -1,6 +1,6 @@
 <?php
 if (!isset($_SESSION["token"])) {include_once ("../../loi404.html");exit();}
-    if ($loaitaikhoan=='admin'){
+    if ($loaitaikhoan=='admin' || $loaitaikhoan=='khoahoc'){
         include_once "model/m_trang_chu.php";
         $dknd = dang_ky_nguoi_dung();
         $_dknd = mysqli_num_rows($dknd);

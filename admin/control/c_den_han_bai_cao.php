@@ -4,7 +4,7 @@
 	include_once "model/m_den_han_bao_cao.php";
 	$detai;
 	switch ($loaitaikhoan) {
-		case 'admin':
+		case 'admin' || 'khoahoc':
 			$detai = lay_den_han_bao_cao_admin();
 			include_once "view/v_den_han_bao_cao_admin.php";
 			break;

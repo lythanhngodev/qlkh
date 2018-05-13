@@ -8,7 +8,7 @@
 ?>
 <?php
 if (!isset($_SESSION["token"])) {include_once ("../../loi404.html");exit();}
-if (isset($_GET['id'])) {
+if (isset($_GET['id']) && ($loaitaikhoan=='admin' || $loaitaikhoan=='khoahoc')) {
     $iddt = $_GET['id'];
     $iddt = intval($iddt);
     if($iddt!=0) {
@@ -62,5 +62,9 @@ if (isset($_GET['id'])) {
     }
     else
         include_once 'view/v_khong_bai_bao.php';
+}
+else{
+    include_once 'view/v_khong_bai_bao.php';
+    exit();
 }
 ?>
