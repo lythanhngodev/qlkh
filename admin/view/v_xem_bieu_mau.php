@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Ly Thanh Ngo
- * Date: 16/04/2018
- * Time: 11:22 PM
- */
 if (!isset($_SESSION["token"])) {include_once ("../../loi404.html");exit();}
 ?>
 

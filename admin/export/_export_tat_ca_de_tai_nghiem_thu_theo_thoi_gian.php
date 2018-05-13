@@ -24,7 +24,7 @@
 	function thong_ke_tat_ca_de_tai($capdetai,$bd,$kt){
 		$ketnoi = new clsKetnoi();
 		$conn = $ketnoi->ketnoi();
-		$query = "SELECT DISTINCT dt.IDDT, dt.TENDETAI, dt.THOIGIANNGHIEMTHU, dt.DIEM FROM detai dt, nguoidung nd, thanhviendetai tv WHERE dt.TRANGTHAI=N'Đã nghiệm thu' AND CAPDETAI = N'$capdetai' AND dt.IDDT=tv.IDDT AND  (DATE_FORMAT(dt.THOIGIANNGHIEMTHU,'%Y-%m') BETWEEN (DATE_FORMAT(CONCAT('$bd','-01'),'%Y-%m')) AND (DATE_FORMAT(CONCAT('$kt','-01'),'%Y-%m')))";
+		$query = "SELECT DISTINCT dt.IDDT, dt.TENDETAI, dt.THOIGIANNGHIEMTHU, dt.DIEM FROM detai dt, nguoidung nd, thanhviendetai tv WHERE dt.TRANGTHAI=N'Đã nghiệm thu' AND CAPDETAI = N'$capdetai' AND dt.IDDT=tv.IDDT AND DUYET='1' AND  (DATE_FORMAT(dt.THOIGIANNGHIEMTHU,'%Y-%m') BETWEEN (DATE_FORMAT(CONCAT('$bd','-01'),'%Y-%m')) AND (DATE_FORMAT(CONCAT('$kt','-01'),'%Y-%m')))";
 		$result = mysqli_query($conn, $query);
 		mysqli_close($conn);
 		return $result;
@@ -57,7 +57,8 @@
 	$objPHPExcel->setActiveSheetIndex(0)->mergeCells('F4:F5');
 	// Tieu đề A1
 	$ten = "TK ĐỀ TÀI NCKH ĐÃ NGHIỆM THU $bd - $kt";
-	$sheet->setCellValue('A1','THỐNG KÊ ĐỀ TÀI NGHIÊN CỨU ĐÃ NGHIỆM THU');
+	$sheet->setCellValue('A1',"THỐNG KÊ ĐỀ TÀI NGHIÊN CỨU ĐÃ NGHIỆM THU\nTỪ ".date("m-Y", strtotime($bd))." ĐẾN ".date("m-Y", strtotime($kt)));
+	$objPHPExcel->getActiveSheet()->getStyle('A1')->getAlignment()->setWrapText(true); // xuống nhiều dòng
 	// Canh giữa A1:F4
 	$sheet->getStyle('A1:F4')->getAlignment()->setHorizontal(PHPExcel_Style_Alignment::HORIZONTAL_CENTER);
 	$sheet->getStyle('A1:F4')->getAlignment()->setVertical(PHPExcel_Style_Alignment::VERTICAL_CENTER);
@@ -82,7 +83,7 @@
 		$objPHPExcel->setActiveSheetIndex(0)->mergeCells('A'.$rowCount.':F'.$rowCount.'');
 		$objPHPExcel->getActiveSheet()->getStyle('A'.$rowCount.':F'.$rowCount.'')->getFont()->setBold(true);
 		$capdetai = $row['CAPDETAI'];
-		$sheet->setCellValue('A'.$rowCount.'',$sttcap.". ".$capdetai);
+		$sheet->setCellValue('A'.$rowCount.'',$ketnoi->ConverToRoman($sttcap).". ".$capdetai);
 		$sttcap++;$stt=1;
 		$rul_nt = thong_ke_tat_ca_de_tai($capdetai,$bd,$kt);
 		while ($nt=mysqli_fetch_assoc($rul_nt)) {
@@ -98,11 +99,12 @@
                 $q_cbvc = "SELECT DISTINCT CONCAT(nd.HO, ' ', nd.TEN) AS  HOTEN FROM thanhviendetai tv, khoabomon k, nguoidung nd, nguoidung_khoabomon nk WHERE tv.IDND = nd.IDND AND nd.IDND = nk.IDND AND  nk.IDKBM = k.IDKBM AND tv.IDDT = '$iddt' AND k.IDKBM = '".$r_kbm['IDKBM']."';";
                 $e_cbvc = mysqli_query($conn, $q_cbvc);
                 while ($r_cbvc = mysqli_fetch_assoc($e_cbvc)) {
-                    $chuoi_cbvc.=$r_cbvc['HOTEN'].", ";
+                    $chuoi_cbvc.=$r_cbvc['HOTEN']."\n";
                 }
                 $chuoi_cbvc.=$r_kbm['TENKBM'];
             }
 			$sheet->setCellValue('D'.$rowCount,$chuoi_cbvc);
+
 			$diem = 0;
 			$diem = $nt['DIEM'];
 			$sheet->setCellValue('E'.$rowCount,$diem);
@@ -112,12 +114,11 @@
             }
 			$sheet->setCellValue('F'.$rowCount,$sotiet);
 			$stt++; // đếm số thứ tự
+			$sheet->getStyle("A$rowCount:F$rowCount")->getAlignment()->setVertical(PHPExcel_Style_Alignment::VERTICAL_CENTER);
 		}
+		$objPHPExcel->getActiveSheet()->getStyle('D'.$rowCount)->getAlignment()->setWrapText(true); // xuống nhiều dòng
 		$sheet->getStyle('A'.$rowBD.':A'.$rowCount)->getAlignment()->setHorizontal(PHPExcel_Style_Alignment::HORIZONTAL_CENTER);
-		$sheet->getStyle('C'.$rowBD.':C'.$rowCount)->getAlignment()->setHorizontal(PHPExcel_Style_Alignment::HORIZONTAL_CENTER);
-		$sheet->getStyle('D'.$rowBD.':D'.$rowCount)->getAlignment()->setHorizontal(PHPExcel_Style_Alignment::HORIZONTAL_CENTER);
-		$sheet->getStyle('E'.$rowBD.':E'.$rowCount)->getAlignment()->setHorizontal(PHPExcel_Style_Alignment::HORIZONTAL_CENTER);
-		$sheet->getStyle('F'.$rowBD.':F'.$rowCount)->getAlignment()->setHorizontal(PHPExcel_Style_Alignment::HORIZONTAL_CENTER);
+		$sheet->getStyle('C'.$rowBD.':F'.$rowCount)->getAlignment()->setHorizontal(PHPExcel_Style_Alignment::HORIZONTAL_CENTER);
 		// Canh kích thước các cột
 		$sheet->getColumnDimension('A')->setAutoSize(true);
 		$sheet->getColumnDimension('B')->setAutoSize(true);

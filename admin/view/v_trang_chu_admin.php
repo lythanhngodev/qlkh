@@ -84,6 +84,16 @@
         <div class="col-md-3">
             <div class="card">
               <div class="card-header giua">
+                <h4>Thống kê</h4>
+              </div>
+              <div class="card-body giua">
+                <a href="?p=baokhoahoc" class="col-12"><img src="../images/thong-ke.png"></a>
+              </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card">
+              <div class="card-header giua">
                 <h4>Thông tin cá nhân</h4>
               </div>
               <div class="card-body giua">

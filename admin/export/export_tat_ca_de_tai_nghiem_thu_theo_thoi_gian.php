@@ -36,7 +36,7 @@ while ($row = mysqli_fetch_row($esql_stqd)) {
 ?>
 <div class="card line-chart-example">
     <div class="card-header">
-        <h4>Tất cả đề tài đã nghiệm thu</h4>
+        <h4>Thống kê đề tài đã nghiệm thu từ <?php echo date("m-Y", strtotime($bd))." đến ".date("m-Y", strtotime($kt)); ?></h4>
         <hr>
         <form action="export/_export_tat_ca_de_tai_nghiem_thu_theo_thoi_gian.php" method="post">
             <input type="text" name="alldtnt" hidden="hidden" value="<?php echo $_POST['_token']; ?>">
@@ -46,8 +46,8 @@ while ($row = mysqli_fetch_row($esql_stqd)) {
         </form>
     </div>
     <div class="card-body">
-        <?php while ($cap = mysqli_fetch_assoc($qcapsql)) { ?>
-        <h4>Cấp: <?php $capdetai=$cap['CAPDETAI']; echo $capdetai; ?></h4>
+        <?php $stt_cap=1; while ($cap = mysqli_fetch_assoc($qcapsql)) { ?>
+        <h4><?php echo $ketnoi->ConverToRoman($stt_cap); ?>. Cấp: <?php $capdetai=$cap['CAPDETAI']; echo $capdetai; ?></h4>
         <table id="bang-bieu-mau" class="table table-bordered table-hover">
             <thead>
                 <tr style="background:#e9ecef;">
@@ -61,7 +61,7 @@ while ($row = mysqli_fetch_row($esql_stqd)) {
             </thead>
             <tbody>
                 <?php 
-                $sql = "SELECT DISTINCT dt.IDDT, dt.TENDETAI, dt.THOIGIANNGHIEMTHU, dt.DIEM FROM detai dt, nguoidung nd, thanhviendetai tv WHERE dt.TRANGTHAI=N'Đã nghiệm thu' AND CAPDETAI = N'$capdetai' AND dt.IDDT=tv.IDDT AND  (DATE_FORMAT(dt.THOIGIANNGHIEMTHU,'%Y-%m') BETWEEN (DATE_FORMAT(CONCAT('$bd','-01'),'%Y-%m')) AND (DATE_FORMAT(CONCAT('$kt','-01'),'%Y-%m')))";
+                $sql = "SELECT DISTINCT dt.IDDT, dt.TENDETAI, dt.THOIGIANNGHIEMTHU, dt.DIEM FROM detai dt, nguoidung nd, thanhviendetai tv WHERE dt.TRANGTHAI=N'Đã nghiệm thu' AND CAPDETAI = N'$capdetai' AND dt.IDDT=tv.IDDT AND DUYET='1' AND (DATE_FORMAT(dt.THOIGIANNGHIEMTHU,'%Y-%m') BETWEEN (DATE_FORMAT(CONCAT('$bd','-01'),'%Y-%m')) AND (DATE_FORMAT(CONCAT('$kt','-01'),'%Y-%m')))";
                 $qsql = mysqli_query($conn,$sql);
                 $stt=1; while ($row = mysqli_fetch_assoc($qsql)) { ?>
                 <tr>
@@ -93,7 +93,7 @@ while ($row = mysqli_fetch_row($esql_stqd)) {
             </tbody>
         </table>
         <br>
-        <?php } ?>
+        <?php $stt_cap++; } ?>
     </div>
 </div>
 <?php mysqli_close($conn); exit(); ?>

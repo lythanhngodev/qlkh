@@ -43,9 +43,7 @@
             </div>
         </div>
         <div class="col-md-9 col-sm-8">
-            <div id="tuychon">
-                
-            </div>
+            <div id="tuychon"></div>
             <div id="noidungthongke"></div>
         </div>
     </div>
@@ -107,6 +105,10 @@ $(document).ready(function(){
                 });
             } else
                 swal('Ôi! Lỗi','Không có kết nối internet','error');
+        }else if(id=='bkh-thoi-gian-bao-khoa-hoc'){
+            $('#tuychon').html('');
+            $('#noidungthongke').html('');
+            $('#tuychon').html('<div class="card"><div class="card-header"><h4>Chọn thời gian</h4></div><div class="card-body"><div class="row"><div class="col-md-4"><div class="form-group"><label for="tags">Tháng năm bắt đầu</label><input type="month" class="form-control" id="batdau"></div>   </div><div class="col-md-4"><div class="form-group"><label for="tags">Tháng năm kết thúc</label><input type="month" class="form-control" id="ketthuc"></div></div></div><button class="btn btn-primary" id="bkh-tg-xemdulieu">Xem thống kê</button></div></div>');
         }
     });
     $(document).on('click','#nckh-tg-xemdulieu',function(){
