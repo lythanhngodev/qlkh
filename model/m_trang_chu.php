@@ -27,7 +27,7 @@
 	function lay_bai_bao_khoa_hoc(){
 		$ketnoi = new clsKetnoi();
 		$conn = $ketnoi->ketnoi();
-		$query = "";
+		$query = "SELECT b.IDBAO, b.TENBAO, b.TAPCHI, b.NAMXUATBAN FROM baokhoahoc b WHERE ANHIEN = b'1' ORDER BY IDBAO LIMIT 0,4;";
 		$result = mysqli_query($conn, $query);
 		mysqli_close($conn);
 		return $result;

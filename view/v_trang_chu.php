@@ -45,20 +45,22 @@
         <div class="line"></div>
     </div>
     <div class="tin">
+      <?php $baibao = lay_bai_bao_khoa_hoc();
+      while ($row = mysqli_fetch_assoc($baibao)) { ?>
       <div class="noidungtin">
           <h3>
-              <a href="#" title="On the spinor norm in the unitary groups">On the spinor norm in the unitary groups</a>
+              <a href="#" title="On the spinor norm in the unitary groups"><?php echo $row['TENBAO'] ?></a>
           </h3>
           <div class="thongtinchung">
               <ul>
                  <li>Tác giả : Ngô Văn Định</li> 
-                 <li>Nhà xuất bản/ Tạp chí: East-West Journal of Mathematics</li> 
-                 <li>Năm 2018</li>
-                 <li>Lĩnh vực nghiên cứu: Toán học</li>  
+                 <li>Nhà xuất bản/ Tạp chí: <?php echo $row['TAPCHI'] ?></li> 
+                 <li>Năm: <?php echo $row['NAMXUATBAN'] ?></li> 
               </ul>
           </div>
           <div class="clear"></div>
      </div>
+     <?php } ?>
     </div>
 
 </div>
