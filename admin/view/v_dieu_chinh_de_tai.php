@@ -8,6 +8,7 @@
     var _nddv_ = <?php echo json_encode($rnd_dv); ?>;
     var _ndtd_ = <?php echo json_encode($rnd_td); ?>;
 </script>
+<?php $trangthaidt = $detai['TRANGTHAI']; ?>
 <div class="card cach background-container">
     <div class="row">
         <div class="col-md-12">
@@ -24,12 +25,6 @@
                                 <a class="nav-item nav-link" data-toggle="tab" href="#nav-thanh-vien" role="tab" aria-selected="false">Thành viên</a>
                                 <a class="nav-item nav-link" data-toggle="tab" href="#nav-to-chuc-tham-gia" aria-selected="false">Tổ chức tham gia</a>
                                 <a class="nav-item nav-link" data-toggle="tab" href="#nav-du-kien-tien-do" aria-selected="false">Dự kiến tiến độ</a>
-                                <?php
-                                    $trangthaidt = $detai['TRANGTHAI'];
-                                    if($trangthaidt!='Chờ gửi đề xuất' && $trangthaidt!='Đang xét duyệt'){
-                                        echo "<a class='nav-item nav-link' data-toggle='tab' href='#nav-bao-cao-tien-do' aria-selected='false'>Báo cáo tiến độ</a>";
-                                    }
-                                ?>
                                 <a class="nav-item nav-link" data-toggle="tab" href="#nav-kinh-phi" aria-selected="false">Kinh phí</a>
                                 <a class="nav-item nav-link" data-toggle="tab" href="#nav-ket-qua" aria-selected="false">Kết quả</a>
                                 <a class="nav-item nav-link" data-toggle="tab" href="#nav-tai-lieu-dinh-kem" aria-selected="false">TL đính kèm</a>
@@ -51,19 +46,19 @@
                                             <small id="emailHelp" class="form-text text-muted">Ghi mục tiêu tổng quát cần đạt ở mức độ cụ thể hơn tên đề tài và mục tiêu chi tiết nhưng không diễn giải quá cụ thể thay cho nội dung cần thực hiện của đề tài</small>
                                         </div>
                                         <div class="col-md-12"><hr></div>
-                                        <div class="form-group col-md-4">
-                                            <label for="category" class="font-weight-bold" >Tổng tháng thực hiện (<span class="text-danger">*</span>)</label>
-                                            <input id="thangthuchiendetai" type="number" min="1" max="120" class="form-control giua" value="<?php echo $detai['THANGTHUCHIEN'] ?>">
-                                        </div>
-                                        <div class="form-group col-md-4">
-                                            <label for="category" class="font-weight-bold" >Tháng/Năm bắt đầu (<span class="text-danger">*</span>)</label>
-                                            <input class="form-control" type="month" name="" id="thangnambatdaudetai" value="<?php echo $detai['THANGNAMBD'] ?>">
-                                        </div>
+                                            <div class="form-group col-md-4">
+                                                <label for="category" class="font-weight-bold" >Tổng tháng thực hiện (<span class="text-danger">*</span>)</label>
+                                                <input id="thangthuchiendetai" type="number" min="1" max="120" class="form-control giua" value="<?php echo $detai['THANGTHUCHIEN'] ?>">
+                                            </div>
+                                            <div class="form-group col-md-4">
+                                                <label for="category" class="font-weight-bold" >Tháng/Năm bắt đầu (<span class="text-danger">*</span>)</label>
+                                                <input class="form-control" type="month" name="" id="thangnambatdaudetai" value="<?php echo $detai['THANGNAMBD'] ?>">
+                                            </div>
 
-                                        <div class="form-group col-md-4">
-                                            <label for="category" class="font-weight-bold" >Tháng/Năm kết thúc (<span class="text-danger">*</span>)</label>
-                                            <input class="form-control" type="month" name="" id="thangnamketthucdetai" value="<?php echo $detai['THANGNAMKT'] ?>">
-                                        </div>
+                                            <div class="form-group col-md-4">
+                                                <label for="category" class="font-weight-bold" >Tháng/Năm kết thúc (<span class="text-danger">*</span>)</label>
+                                                <input class="form-control" type="month" name="" id="thangnamketthucdetai" value="<?php echo $detai['THANGNAMKT'] ?>">
+                                            </div>
                                         <div class="col-md-12"><hr></div>
                                         <div class="form-group col-md-4">
                                             <label for="category" class="font-weight-bold" >Cấp đề tài</label>
@@ -345,41 +340,6 @@
                             <?php
                             if($trangthaidt!='Chờ gửi đề xuất' && $trangthaidt!='Đang xét duyệt'){
                             ?>
-                            <div class="tab-pane" id="nav-bao-cao-tien-do" role="tabpanel" aria-labelledby="nav-contact-tab">
-                                <br>
-                                <div class="col-md-12">
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <br>
-                                            <p class="col-md-12"><strong>Bảng báo cáo tiến độ thực hiện</strong></p>
-                                            <hr>
-                                            <table id="bangbctiendo" class="table table-bordered table-hover" style="background: #fff;">
-                                                <tr style="background: #0275d8;color:  #fff; text-align: center;">
-                                                    <th>Công việc đã thực hiện</th>
-                                                    <th>Công việc cần thực hiện</th>
-                                                    <th>Các đề nghị (nếu có)</th>
-                                                    <th>Ngày báo cáo</th>
-                                                    <th style="width: 50px;">Xóa</th>
-                                                </tr>
-                                                <?php 
-                                                    $bctd = lay_bao_cao_tien_do($iddt);
-                                                    while ($row = mysqli_fetch_assoc($bctd)) {
-                                                        echo "<tr>";
-                                                        echo "<td><textarea rows='4' class='form-control'>".$row['CVDATH']."</textarea></td>";
-                                                        echo "<td><textarea rows='4' class='form-control'>".$row['CVCANTH']."</textarea></td>";
-                                                        echo "<td><textarea rows='4' class='form-control'>".$row['DENGHI']."</textarea></td>";
-                                                        echo "<td><input type='date' class='form-control' value='".$row['NGAYBC']."'></td>";
-                                                        echo "<td><button class='xoabctiendo'><i class='fas fa-times do'></i></button></td>";
-                                                        echo "</tr>";
-                                                    }
-                                                 ?>
-                                            </table>
-                                        </div>
-                                        <div class="col-md-2"><button class="btn btn-default" id="thembctiendo">Thêm tiến độ &ensp;<i class="fas fa-long-arrow-alt-right"></i></button></div>
-                                    </div>
-                                </div>
-                                <br>
-                            </div>
                             <?php } ?>
                             <div class="tab-pane" id="nav-tai-lieu-dinh-kem" role="tabpanel" aria-labelledby="nav-contact-tab">
                                 <br>
@@ -405,9 +365,7 @@
                 </div>
                 <div class="card-footer">
                     <div class="pull-right">
-                        <?php if ($trangthaidt=='Chờ gửi đề xuất') { ?>
                         <button type="button" class="btn btn-primary" id="suadetai"><i class="fas fa-save"></i>&nbsp;&nbsp;Lưu thay đổi</button>
-                        <?php } ?>
                     </div>
                 </div>
             </div>
@@ -416,82 +374,16 @@
 </div>
 <div class="cach"></div>
 
-<!-- Modal thêm báo cáo tiến độ -->
-<div class="modal fade" id="modal-them-bao-cao-tien-do" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLongTitle">Thêm báo cáo tiến độ </h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <div class="form-group">
-                    <label for="tags" class="font-weight-bold">Công việc đã thực hiện (<span class="text-danger">*</span>)</label>
-                    <textarea class="form-control" id="cvdathuchien" style="border-radius: 0;" rows="5"></textarea>
-                </div>
-                <div class="form-group">
-                    <label for="tags" class="font-weight-bold">Công việc cần thực hiện (<span class="text-danger">*</span>)</label>
-                    <textarea class="form-control" id="cvcanthuchien" style="border-radius: 0;" rows="5"></textarea>
-                </div>
-                <div class="form-group">
-                    <label for="tags" class="font-weight-bold">Các đề nghị (nếu có)</label>
-                    <textarea class="form-control" id="cvdenghi" style="border-radius: 0;" rows="5"></textarea>
-                </div>
-                <div class="form-group">
-                    <label for="tags" class="font-weight-bold">Ngày báo cáo</label>
-                    <input type="date" class="form-control" id="cvngaybaocao" value="<?php echo date('Y-m-d'); ?>" />
-                </div>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Đóng</button>
-                <button type="button" class="btn btn-primary" id="thembctd">Lưu</button>
-            </div>
-        </div>
-    </div>
-</div>
-
 <script type="text/javascript">
     function xoafile(){
         $('#linkfile').val('');
         $('#tenfile').html('Chưa chọn file');
     }
     $(document).ready(function(){
-        $('#quanlydetai').addClass('active');
-        $('.tieude').html('Sửa đề tài NCKH');
-    <?php if($trangthaidt!='Chờ gửi đề xuất'){ ?>
-        for (var i = 0; i < _data_.length; i++)
-            for (var j = 0; j< _data_[i].length; j++)
-                (!_data_[i][j]) ? _data_[i][j] = '' : 1;
-        var tr=null;
-        if (_tv_!=null) {
-            _tv_.forEach(function(tv){
-                _data_.forEach(function(d){
-                    if (tv[3]==d[0]) {
-                        var option = "<option value=''>Chọn thành viên</option>";
-                            _data_.forEach(function(i){
-                              (tv[3]==i[0]) ? option+="<option value='"+i[0]+"' selected>"+i[1]+" "+i[2]+"</option>" : option+="<option value='"+i[0]+"'>"+i[1]+" "+i[2]+"</option>";
-                            });
-                        var td=""; _ndtd_.forEach(function(d){if (d[0]==tv[3]) {td = d[1];}});
-                        var dv=""; _nddv_.forEach(function(d){if (d[0]==tv[3]) {dv = d[1];}});
-                        tr+="<tr><td><select class='form-control select-chon' disabled>"+option+"</select></td><td><textarea class='form-control' rows='4' readonly>"+"- "+td+"\n- "+dv+"\n- "+d[3]+"</textarea></td><td><textarea class='form-control' rows='4'>"+tv[2]+"</textarea></td><td class='giua'><button class='xoathanhvien'><i class='fas fa-times do'></i></button></td></tr>";
-                    }
-                });
-            });
-        }
-        $('#bangthanhvien').append(tr);
-        $('.select-chon').addClass('selectpicker');
-        $('.selectpicker').selectpicker({ liveSearch: true });
-        _data_.forEach(function(data){
-          if (data[0]==$('#chonchunhiem').val()) {
-            $('#chonchunhiem').parent('td').parent('tr').find('td:nth-child(2) textarea').val("- "+data[6]+"\n- "+data[3]+"\n- "+data[4]);
-          }
-        });
-    <?php } ?>
+        $('#quanlydetaiduan').addClass('active');
+        $('.tieude').html('Điều chỉnh đề tài NCKH');
     });
 </script>
-<?php if($trangthaidt=='Chờ gửi đề xuất'){ ?>
 <script type="text/javascript">
     $(document).ready(function(){
         for (var i = 0; i < _data_.length; i++)
@@ -554,22 +446,6 @@
         // Thêm báo cáo tiến độ
         $('#thembctiendo').on('click',function () {
             $('#modal-them-bao-cao-tien-do').modal('show');
-        });
-        $('#thembctd').on('click',function () {
-            if($('#cvdathuchien').val().trim()!='' && $('#cvcanthuchien').val().trim()!=''){
-                var tr = "<tr>\n" +
-                    "<td><textarea rows='4' class='form-control'>"+$('#cvdathuchien').val().trim()+"</textarea></td>\n" +
-                    "<td><textarea rows='4' class='form-control'>"+$('#cvcanthuchien').val().trim()+"</textarea></td>\n" +
-                    "<td><textarea rows='4' class='form-control'>"+$('#cvdenghi').val()+"</textarea></td>\n" +
-                    "<td><input type='date' value='"+$('#cvngaybaocao').val()+"' class='form-control'></td>\n" +
-                    "<td><button class='xoabctiendo'><i class='fas fa-times do'></i></button></td>\n" +
-                    "</tr>";
-                $('#bangbctiendo').append(tr);
-                $('#modal-them-bao-cao-tien-do').find('textarea').val('');
-                $('#modal-them-bao-cao-tien-do').modal('hide');
-            }
-            else
-                khongthanhcong('Vui lòng điền đầy đủ các trường (*)');
         });
         // Thêm tổ chức tham gia
         $('#themtochuc').click(function () {
@@ -833,29 +709,6 @@
             }
             //////////////////////////////////////////////////
             //  Xét dự kiến tiến độ
-            var  bctd = [];
-            var demongdungbctd = 0;
-            if(bctiendo==1) {
-                // Xóa dòng tổ chức chưa điền
-                $('#bangbctiendo').find('tr:not(:first)').each(function (i, row) {
-                    var cols = [];
-                    $(this).find('td:not(:last) input, textarea').each(function (i, col) {
-                        cols.push($(this).val());
-                    });
-                    if (cols[0] == '' && cols[1] == '' && cols[2] == '' && cols[3] == '') {
-                        $(this).remove();
-                        demongdungbctd--;
-                    }
-                    demongdungbctd++;
-                });
-                $('#bangbctiendo').find('tr:not(:first)').each(function (i, row) {
-                    var cols = [];
-                    $(this).find('td:not(:last) input, textarea').each(function (i, col) {
-                        cols.push($(this).val());
-                    });
-                    bctd.push(cols);
-                }); // lưu vào bctd[[]];
-            }
             //////////////////////////////////////////////////
             //  Xét kinh phí
           var  bkp = [],ll=0;
@@ -894,7 +747,7 @@
             if (kiemtraketnoi()) {
                 // Ajax
                 $.ajax({
-                    url: 'ajax/ajax_sua_de_xuat.php',
+                    url: 'ajax/ajax_dieu_chinh_de_tai.php',
                     type: 'POST',
                     data: {
                         tendetai: tendetai,
@@ -918,7 +771,6 @@
                         thanhvien: thanhviendetai,
                         tochucthamgia: btc,
                         tiendodukien: btd,
-                        baocaotiendo: bctd,
                         kinhphichitiet: bkp,
                         idnd: '<?php echo $idnd; ?>',
                         iddt: '<?php echo $iddt; ?>'
@@ -979,4 +831,3 @@
         });
     }
 </script>
-<?php } ?>

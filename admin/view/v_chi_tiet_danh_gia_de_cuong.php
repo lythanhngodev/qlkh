@@ -47,11 +47,11 @@
                                         </tr>
                                         <tr>
                                             <th>Trình độ chuyên môn</th>
-                                            <td><?php echo $chunhiem['TRINHDOCHUYENMON']; ?></td>
+                                            <td><?php echo trinh_do_chuyen_mon($chunhiem['IDND']); ?></td>
                                         </tr>
                                         <tr>
                                             <th>Chức danh giảng viên</th>
-                                            <td><?php echo $chunhiem['CHUCDANHGIANGVIEN']; ?></td>
+                                            <td><?php echo chuc_danh_giang_vien($chunhiem['IDND']); ?></td>
                                         </tr>
                                         <tr>
                                             <th>Đơn vị công tác</th>

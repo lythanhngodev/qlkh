@@ -47,35 +47,36 @@ function themdetai($tendetai,$muctieu,$noidung,$cap,$moisangtao,$thuocchuongtrin
         if ($rsql==0){
             return false;
         }
+        $sql="";
         // Thêm loại hình nghiên cứu thuộc đề tài
         for ($i=0; $i < count($loaihinhnghiencuu); $i++) { 
-            $sql.= "INSERT INTO `loaihinhnghiencuu`(`IDDT`, `TENLH`) VALUES ('$iddt','".$loaihinhnghiencuu[$i]."');";
+            $sql.= "INSERT INTO loaihinhnghiencuu(IDDT, TENLH) VALUES ('$iddt','".$loaihinhnghiencuu[$i]."');";
         }
         // Thêm lĩnh vựa khoa học thuộc đề tài
         for ($i=0; $i < count($linhvuckhoahoc); $i++) { 
-            $sql.= "INSERT INTO `linhvuckhoahoc`(`IDDT`, `TENLV`) VALUES ('$iddt','".$linhvuckhoahoc[$i]."');";
+            $sql.= "INSERT INTO linhvuckhoahoc(IDDT, TENLV) VALUES ('$iddt','".$linhvuckhoahoc[$i]."');";
         }
         // Thêm thành viên thuộc đề tài
         if ($thanhvien!=null){
             for($i=0;$i<count($thanhvien);$i++){
                 $q;
                 if ($i==0)
-                    $q = "INSERT INTO `thanhviendetai`(`IDDT`, `IDND`, `CONGVIEC`, `TRACHNHIEM`) VALUES ('$iddt','%s','%s','Chủ nhiệm');";
+                    $q = "INSERT INTO thanhviendetai(IDDT, IDND, CONGVIEC, TRACHNHIEM) VALUES ('$iddt','%s','%s','Chủ nhiệm');";
                 else
-                    $q = "INSERT INTO `thanhviendetai`(`IDDT`, `IDND`, `CONGVIEC`, `TRACHNHIEM`) VALUES ('$iddt','%s','%s','Thành viên');";
+                    $q = "INSERT INTO thanhviendetai(IDDT, IDND, CONGVIEC, TRACHNHIEM) VALUES ('$iddt','%s','%s','Thành viên');";
                 $sql.=sprintf($q, mysqli_real_escape_string($conn,$thanhvien[$i][0]), mysqli_real_escape_string($conn,$thanhvien[$i][2]));
             }
         }
         // Thêm tổ chức tham gia đề tài
         if ($tochucthamgia!=null){
             for($i=0;$i<count($tochucthamgia);$i++){
-                $q = "INSERT INTO `tochucthamgia`(`IDDT`, `THONGTINTC`, `NOIDUNGTHAMGIA`, `KINHPHI`) VALUES ('$iddt','%s','%s','%s');";
+                $q = "INSERT INTO tochucthamgia(IDDT, THONGTINTC, NOIDUNGTHAMGIA, KINHPHI) VALUES ('$iddt','%s','%s','%s');";
                 $sql.=sprintf($q, mysqli_real_escape_string($conn,$tochucthamgia[$i][0]), mysqli_real_escape_string($conn,$tochucthamgia[$i][1]), mysqli_real_escape_string($conn,$tochucthamgia[$i][2]));
             }
         }
         // Thêm tiến độ dự kiến của đề tài
         for($i=0;$i<count($tiendodukien);$i++){
-            $q = "INSERT INTO `tiendodukien`(`IDDT`, `CONGVIEC`, `SANPHAM`, `THOIGIANBD`, `THOIGIANKT`) VALUES ('$iddt','".$tiendodukien[$i][0]."','".$tiendodukien[$i][1]."','".$tiendodukien[$i][2]."','".$tiendodukien[$i][3]."');";
+            $q = "INSERT INTO tiendodukien(IDDT, CONGVIEC, SANPHAM, THOIGIANBD, THOIGIANKT) VALUES ('$iddt','".$tiendodukien[$i][0]."','".$tiendodukien[$i][1]."','".$tiendodukien[$i][2]."','".$tiendodukien[$i][3]."');";
             $sql.=sprintf($q, mysqli_real_escape_string($conn,$tiendodukien[$i][0]), mysqli_real_escape_string($conn,$tiendodukien[$i][1]), mysqli_real_escape_string($conn,$tiendodukien[$i][2]), mysqli_real_escape_string($conn,$tiendodukien[$i][3]));
         }
         // Thêm kinh phí thực hiện đề tài
@@ -84,7 +85,7 @@ function themdetai($tendetai,$muctieu,$noidung,$cap,$moisangtao,$thuocchuongtrin
             $nsnn = $kinhphichitiet[$i][1]; $nsnn = intval($nsnn);
             $tuco = $kinhphichitiet[$i][2]; $tuco = intval($tuco);
             $lienket = $kinhphichitiet[$i][3]; $lienket = intval($lienket);
-            $sql.= "INSERT INTO `kinhphi`(`IDDT`, `KHOANCHI`, `NGUONNSNN`, `NGUONTUCO`, `NGUONLIENKET`) VALUES ('$iddt','".$khoanchi."','".$nsnn."','".$tuco."','".$lienket."');";
+            $sql.= "INSERT INTO kinhphi(IDDT, KHOANCHI, NGUONNSNN, NGUONTUCO, NGUONLIENKET) VALUES ('$iddt','".$khoanchi."','".$nsnn."','".$tuco."','".$lienket."');";
         }
         mysqli_multi_query($conn,$sql);
         return true;

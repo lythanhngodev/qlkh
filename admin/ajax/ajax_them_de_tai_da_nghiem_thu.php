@@ -52,8 +52,7 @@ function themdetai($diemdetai,$madetai,$ngaynghiemthu,$tendetai,$muctieu,$noidun
         $dem = mysqli_affected_rows($conn);
         if($dem==0) return false;
         $iddt = mysqli_insert_id($conn);
-        $sql="";
-        $sql.="INSERT INTO `dexuatdetai` (IDDT) VALUES ('$iddt');";
+        $sql="INSERT INTO `dexuatdetai` (IDDT) VALUES ('$iddt');";
         for ($i=0; $i < count($loaihinhnghiencuu); $i++) { 
             $sql.= "INSERT INTO `loaihinhnghiencuu`(`IDDT`, `TENLH`) VALUES ('$iddt','".$loaihinhnghiencuu[$i]."');";
         }

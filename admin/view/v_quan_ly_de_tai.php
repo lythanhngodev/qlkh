@@ -88,7 +88,11 @@
               <div class="modal-body">
                   <div class="alert alert-info" role="alert">
                     <strong>Bạn có chắc gửi đi đề xuất này?</strong><hr>
-                    <b>Đề tài:</b><span id="tendexat"></span>
+                    <b>Đề tài: </b><span id="tendexat"></span>
+                  </div>
+                  <div class="alert alert-warning" role="alert">
+                    <strong>Lưu ý</strong><hr>
+                    <b>Sau khi gửi đề xuất bạn sẽ <u>KHÔNG</u> có quyền chỉnh sửa bất kỳ thông tin gì liên quan đến đề tài.</b>
                   </div>
                   <input type="text" value="" id="iddx" hidden="hidden">
               </div>

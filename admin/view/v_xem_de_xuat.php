@@ -8,7 +8,7 @@ if (!isset($_SESSION["token"])) {include_once ("../../loi404.html");exit();}
             <div class="card">
                 <div class="card-header">
                     <h4>(<span class="text-danger">*</span>) Những trường bắt buộc phải điền</h4>
-                    <button class="btn btn-primary btn-sm" style="position:  absolute;top: 9px;right: 9px;"><i class="fas fa-edit"></i>&ensp;Điều chỉnh</button>
+                    <a href="?p=dieuchinhdetai&id=<?php echo $detai['IDDT'] ?>" class="btn btn-primary btn-sm" style="position:  absolute;top: 9px;right: 9px;"><i class="fas fa-edit"></i>&ensp;Điều chỉnh</a>
                 </div>
                 <div class="card-body">
                     <div class="col-md-12">
@@ -453,7 +453,7 @@ if (!isset($_SESSION["token"])) {include_once ("../../loi404.html");exit();}
                                                     <?php if ($trangthaidt=='Đang xét duyệt'){ ?>
                                                     <div class="col-md-6">
                                                         <label class="font-weight-bold col-md-12">Danh sách thành viên</label>
-                                                        <select id="chontvbtc" class="form-control">
+                                                        <select id="chontvbtc" class="form-control selectpicker" data-live-search="true">
                                                             <option value="btc" selected>---- Chọn thành viên ---</option>
                                                             <?php while ($row = mysqli_fetch_assoc($thanhvienxetduyet)){
                                                                 echo "<option value='".$row['IDND']."'>".$row['HOTEN']." ".$row['NGAYSINH']."</option>";
@@ -494,7 +494,7 @@ if (!isset($_SESSION["token"])) {include_once ("../../loi404.html");exit();}
                                                     <?php if ($trangthaidt=='Đang xét duyệt'){ ?>
                                                     <div class="col-md-6">
                                                         <label class="font-weight-bold col-md-12">Danh sách thành viên</label>
-                                                        <select id="chonbtc" class="form-control">
+                                                        <select id="chonbtc" class="form-control selectpicker" data-live-search="true">
                                                             <option value="btc" selected>---- Chọn thành viên ---</option>
                                                             <?php
                                                             $thanhvienxetduyet = thanh_vien_xet_duyet($iddt);
@@ -604,7 +604,7 @@ if (!isset($_SESSION["token"])) {include_once ("../../loi404.html");exit();}
                                                         <?php if ($trangthaidt=='Đang thực hiện'){ ?>
                                                         <div class="col-md-6">
                                                             <label class="font-weight-bold col-md-12">Danh sách thành viên</label>
-                                                            <select id="chontvnt" class="form-control">
+                                                            <select id="chontvnt" class="form-control selectpicker" data-live-search="true">
                                                                 <option value="bnt" selected>---- Chọn thành viên ---</option>
                                                                 <?php
                                                                 $thanhvienxetduyet = thanh_vien_xet_duyet($iddt);

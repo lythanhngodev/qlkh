@@ -79,7 +79,7 @@ function lay_ten_chu_nhiem_de_tai($iddt){
 function chu_nhiem_de_tai($iddt){
     $ketnoi = new clsKetnoi();
     $conn = $ketnoi->ketnoi();
-    $query = "SELECT CONCAT(nd.HO,' ',nd.TEN) as HOTEN, nd.DIENTHOAIDD, nd.MAIL, tv.IDND FROM thanhviendetai tv, nguoidung nd WHERE tv.IDND = nd.IDND AND tv.IDDT = '$iddt'";
+    $query = "SELECT CONCAT(nd.HO,' ',nd.TEN) as HOTEN, nd.DIENTHOAIDD, nd.MAIL, tv.IDND FROM nguoidung nd, thanhviendetai tv WHERE nd.IDND = tv.IDND AND tv.IDDT = '$iddt' AND tv.TRACHNHIEM=N'Chủ nhiệm'";
     $result = mysqli_query($conn, $query);
     mysqli_close($conn);
     return $result;
@@ -87,10 +87,30 @@ function chu_nhiem_de_tai($iddt){
 function don_vi_cong_tac($idnd){
     $ketnoi = new clsKetnoi();
     $conn = $ketnoi->ketnoi();
-    $query = "SELECT k.TENKBM FROM nguoidung_khoabomon a, nguoidung nd, khoabomon k WHERE a.IDND = nd.IDND AND a.IDKBM = k.IDKBM AND a.IDND = '$idnd'";
+    $query = "SELECT k.TENKBM FROM nguoidung_khoabomon a, nguoidung nd, khoabomon k WHERE a.IDND = nd.IDND AND a.IDKBM = k.IDKBM AND a.IDND = '$idnd';";
     $result = mysqli_query($conn, $query);
     $fetch = mysqli_fetch_assoc($result);
     $dvct = $fetch['TENKBM'];
+    mysqli_close($conn);
+    return $dvct;
+}
+function trinh_do_chuyen_mon($idnd){
+    $ketnoi = new clsKetnoi();
+    $conn = $ketnoi->ketnoi();
+    $query = "SELECT td.TENTRINHDO FROM nguoidung_trinhdochuyenmon nt, trinhdochuyenmon td WHERE nt.IDTD = td.IDTD AND nt.IDND = '$idnd';";
+    $result = mysqli_query($conn, $query);
+    $fetch = mysqli_fetch_assoc($result);
+    $dvct = $fetch['TENTRINHDO'];
+    mysqli_close($conn);
+    return $dvct;
+}
+function chuc_danh_giang_vien($idnd){
+    $ketnoi = new clsKetnoi();
+    $conn = $ketnoi->ketnoi();
+    $query = "SELECT cd.TENCHUCDANH FROM chucdanhgiangvien cd, nguoidung_chucdanhgiangvien nc WHERE cd.IDCD = nc.IDCD AND nc.IDND = '$idnd';";
+    $result = mysqli_query($conn, $query);
+    $fetch = mysqli_fetch_assoc($result);
+    $dvct = $fetch['TENCHUCDANH'];
     mysqli_close($conn);
     return $dvct;
 }

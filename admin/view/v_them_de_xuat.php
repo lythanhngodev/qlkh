@@ -271,16 +271,16 @@ giao kết quả nghiên cứu đến người sử dụng. Phải nêu được
                       <br>
                       <div class="col-md-12">
                           <div class="row">
-                              <div class="form-group col-md-2">
+                              <div class="form-group col-md-3">
                                   <label for="category" class="font-weight-bold" >Tổng tháng thực hiện (<span class="text-danger">*</span>)</label>
                                   <input id="thangthuchiendetai" type="number" min="1" max="120" class="form-control" value="">
                               </div>
-                              <div class="form-group col-md-2">
+                              <div class="form-group col-md-3">
                                   <label for="category" class="font-weight-bold" >Tháng/Năm bắt đầu (<span class="text-danger">*</span>)</label>
                                   <input class="form-control" type="month" name="" id="thangnambatdaudetai">
                               </div>
 
-                              <div class="form-group col-md-2">
+                              <div class="form-group col-md-3">
                                   <label for="category" class="font-weight-bold" >Tháng/Năm kết thúc (<span class="text-danger">*</span>)</label>
                                   <input class="form-control" type="month" name="" id="thangnamketthucdetai">
                               </div>
