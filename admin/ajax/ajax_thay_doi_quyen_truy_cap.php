@@ -16,7 +16,7 @@ $result = Array(
     $btv = $_POST['btv'];
     $sql="";
     print_r($btv);
-    for($i=1;$i<count($btv);$i++){
+    for($i=0;$i<count($btv)-1;$i++){
         $idnd = mysqli_real_escape_string($conn,$btv[$i][0]);
         $idnd = intval($idnd);
         $idltk = mysqli_real_escape_string($conn,$btv[$i][1]);
