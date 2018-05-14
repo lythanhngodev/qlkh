@@ -77,5 +77,6 @@
 <script type="text/javascript">
     $("document").ready(function() {
         $('#bieumau').addClass('current');
+        document.title = "Văn bản - Biểu mẫu";
     });
 </script> 
