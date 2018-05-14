@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /admin/
+Disallow: /ckeditor/
+Disallow: /files/
+Disallow: /csdl-backup/
