@@ -7,8 +7,8 @@
     <div class="trinh-chieu" ><div class="slider-wrapper theme-default"><div id="slider" class="nivoSlider"><?php while ($row = mysqli_fetch_assoc($slider)) { ?><a href="<?php echo $row['link']; ?>"><img src="<?php echo $row['hinhanh']; ?>" data-thumb="<?php echo $row['hinhanh']; ?>" data-transition="<?php echo $row['style']; ?>" alt="<?php echo $row['tieude']; ?>" title="<?php echo $row['tieude']; ?>" /></a><?php } ?></div></div></div>
     <!-- CÁC CÔNG TRÌNH KHOA HỌC ĐÃ CÔNG BỐ -->
     <div class="tieudechinh">
-        <div class="tentieudechinh" style="width: 284px;">
-            <img src="images/chi-muc.png" width="27" height="27" align="absmiddle"><a href="#">Các công trình NCKH đã nghiệm thu</a>
+        <div class="tentieudechinh" style="width: 240px;">
+            <img src="images/chi-muc.png" width="27" height="27" align="absmiddle"><a href="#">Công trình NCKH đã công bố</a>
         </div>
         <div class="clear"></div>
         <div class="line"></div>
@@ -18,12 +18,12 @@
             while ($row = mysqli_fetch_assoc($nghiemthu)) { ?>
              <div class="noidungtin">
                 <h3>
-                    <a href="#" title="On the spinor norm in the unitary groups"><?php echo $row['TENDETAI'] ?></a>
+                    <a href="#" title="<?php echo $row['TENDETAI'] ?>"><?php echo $row['TENDETAI'] ?></a>
                 </h3>
                 <div class="thongtinchung">
                     <ul>
                        <li>Thành viên : <?php echo $row['HOTEN'] ?></li> 
-                       <li>Thời gian nghiệm thu: <?php echo date("d-m-Y H:m:s", strtotime($row['THOIGIANNGHIEMTHU'])); ?></li>
+                       <li>Thời gian nghiệm thu: <?php echo date("d-m-Y", strtotime($row['THOIGIANNGHIEMTHU'])); ?></li>
                        <li>Lĩnh vực nghiên cứu: <?php $lv = linh_vuc_de_tai($row['IDDT']);
                        while ($rlv = mysqli_fetch_assoc($lv)) {
                            echo $rlv['TENLV'].", ";
@@ -45,49 +45,20 @@
         <div class="line"></div>
     </div>
     <div class="tin">
-            <div class="noidungtin">
-                <h3>
-                    <a href="#" title="On the spinor norm in the unitary groups">On the spinor norm in the unitary groups</a>
-                </h3>
-                <div class="thongtinchung">
-                    <ul>
-                       <li>Tác giả : Ngô Văn Định</li> 
-                       <li>Nhà xuất bản/ Tạp chí: East-West Journal of Mathematics</li> 
-                       <li>Năm 2018</li>
-                       <li>Lĩnh vực nghiên cứu: Toán học</li>  
-                    </ul>
-                </div>
-                <div class="clear"></div>
-           </div>
-            <div class="noidungtin">
-                <h3>
-                    <a href="#" title="Beta extensions and cuspidal types for p-adic spin groups">Beta extensions and cuspidal types for p-adic spin groups</a>
-                </h3>
-                <div class="thongtinchung">
-                    <ul>
-                       <li>Tác giả : Ngô Văn Định</li> 
-                       <li>Nhà xuất bản/ Tạp chí: Manuscripta Mathematica Tập 152 Số 3</li>
-                       <li>Năm 2017</li> 
-                       <li>Lĩnh vực nghiên cứu: Toán học</li>  
-                    </ul>
-                </div>
-                <div class="clear"></div>
-           </div>
-            <div class="noidungtin">
-                <h3>
-                    <a href="#" title="Semisimple characters for $p$-adic spin groups">Semisimple characters for $p$-adic spin groups</a>
-                </h3>
-                <div class="thongtinchung">
-                    <ul>
-                       <li>Tác giả : Ngô Văn Định, 
-                       </li> 
-                       <li>Nhà xuất bản/ Tạp chí: Khoa học và Công nghệ - Đại học Thái Nguyên Tập 155 Số 10</li> 
-                       <li>Năm 2016</li>
-                       <li>Lĩnh vực nghiên cứu: Toán học</li>  
-                    </ul>
-                </div>
-                <div class="clear"></div>
-           </div>
+      <div class="noidungtin">
+          <h3>
+              <a href="#" title="On the spinor norm in the unitary groups">On the spinor norm in the unitary groups</a>
+          </h3>
+          <div class="thongtinchung">
+              <ul>
+                 <li>Tác giả : Ngô Văn Định</li> 
+                 <li>Nhà xuất bản/ Tạp chí: East-West Journal of Mathematics</li> 
+                 <li>Năm 2018</li>
+                 <li>Lĩnh vực nghiên cứu: Toán học</li>  
+              </ul>
+          </div>
+          <div class="clear"></div>
+     </div>
     </div>
 
 </div>

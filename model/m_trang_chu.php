@@ -24,6 +24,14 @@
 		mysqli_close($conn);
 		return $result;
 	}
+	function lay_bai_bao_khoa_hoc(){
+		$ketnoi = new clsKetnoi();
+		$conn = $ketnoi->ketnoi();
+		$query = "";
+		$result = mysqli_query($conn, $query);
+		mysqli_close($conn);
+		return $result;
+	}
 	function linh_vuc_de_tai($iddt){
 	    $ketnoi = new clsKetnoi();
 	    $conn = $ketnoi->ketnoi();
