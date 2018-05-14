@@ -45,8 +45,7 @@
 					<li>
 						<a href="#" class="sf-with-ul">Giới thiệu</a>
 						<ul style="display: none; visibility: hidden;">
-							<li><a href="#">Nhiệm vụ chiến lược</a></li>
-							<li><a href="#">Danh sách nhà khoa học</a></li>
+							<li><a href="http://vlute.edu.vn/index.php/nghien-cuu-khoa-hoc">Giới thiệu chung</a></li>
 						</ul>
 					</li>
 					<li id="nckh">
@@ -54,7 +53,7 @@
 						<ul style="display: none; visibility: hidden;">
 							<li><a href="#">Đề xuất NCKH</a></li>
 							<li class=" "><a href="#">Đề tài - Dự án NCKH</a></li>
-							<li><a href="#">Công trình khoa học đã công bố</a></li>
+							<li><a href="?p=detainghiemthu">Công trình khoa học đã công bố</a></li>
 						</ul>
 					</li>
 					<li id="baokhoahoc">
