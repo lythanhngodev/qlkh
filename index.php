@@ -3,13 +3,9 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<meta name="description" content="Phòng nghiên cứu khoa học | Đại học Sư phạm kỹ thuật Vĩnh Long" />
 	<title>Phòng nghiên cứu khoa học | Đại học Sư phạm kỹ thuật Vĩnh Long</title>
 	<!-- Facebook SEO -->
-	<meta property="og:url" content="<?php echo $qlkh['HOSTGOC'] ?>" />
 	<meta property="og:type" content="article" />
-	<meta property="og:title" content='Phòng nghiên cứu khoa học | Đại học Sư phạm kỹ thuật Vĩnh Long' />
-	<meta property="og:image" content="<?php echo $qlkh['HOSTGOC'] ?>images/vlute.jpg" />
 	<link rel="shortcut icon" href="<?php echo $qlkh['HOSTGOC'] ?>images/favicon.ico" />
 	<!-- Google SEO -->
 	<meta name="google" content="nositelinkssearchbox" />
