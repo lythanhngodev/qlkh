@@ -530,3 +530,27 @@ li.sfHover > a > .sf-sub-indicator {
 center{
 	margin-bottom: 1rem;
 }
+.phantrang{
+    list-style-type:  none;
+    display: block;
+}
+.phantrang li{
+    display:  inline-table;
+    padding: 2px 7px;
+    background-color: #f3f3f2;
+    border: 1px solid #2075f7;
+    border-radius: 4px;
+    margin-left: 0.2rem;
+}
+.phantrang li a{
+    text-decoration:  none;
+    display:block;
+    font-family: sans-serif;
+}
+.phantrang li:hover{
+	background-color:#1463e2;
+	color:white;
+}
+.phantrang li a:hover{
+	color:white;
+}

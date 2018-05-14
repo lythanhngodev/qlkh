@@ -8,23 +8,43 @@
         <div class="line"></div>
     </div>
     <div class="tin">
-      <table id="bangbieumau" border="1">
-        <tr style="background: #cee1ff;">
-          <th>STT</th>
-          <th>Mã</th>
-          <th>Tên</th>
-          <th>Tải xuống</th>
-        </tr>
-        <?php $stt=1;
-        while ($row = mysqli_fetch_assoc($bieumau)) { ?>
-        <tr>
-          <td><?php echo $stt; ?></td>
-          <td><?php echo $row['MABM'] ?></td>
-          <td><?php echo $row['TENBM'] ?></td>
-          <td><a href="<?php echo "files/".$row['FILE']; ?>">Tải xuống</a></td>
-        </tr>
-         <?php $stt++; } ?>
-      </table>
+          <?php 
+          $sotin = 8;
+          $bd=1;
+          if (isset($_GET['trang']) && !empty($_GET['trang'])) {
+            $bd = intval($_GET['trang']);
+            if ($bd<1) {
+              $bd=1;
+            }
+          }
+          $tu = ($bd-1)*$sotin;
+          $bao = lay_bao_khoa_hoc($tu,$sotin);
+          while ($row = mysqli_fetch_assoc($bao)) { ?>
+          <div class="noidungtin">
+              <h3>
+                  <a href="#" title="<?php echo $row['TENBAO'] ?>"><?php echo $row['TENBAO'] ?></a>
+              </h3>
+              <div class="thongtinchung">
+                  <ul>
+                     <li>Tác giả : <?php echo lay_ten_tac_gia_bao_khoa_hoc($row['IDBAO']); ?></li> 
+                     <li>Nhà xuất bản/ Tạp chí: <?php echo $row['TAPCHI'] ?></li> 
+                     <li>Năm: <?php echo $row['NAMXUATBAN'] ?></li> 
+                  </ul>
+              </div>
+              <div class="clear"></div>
+         </div>
+           <?php } ?>
+    <center>
+      <ul class="phantrang">
+        <?php $sobaibao = dem_bao_khoa_hoc();
+        if ($sobaibao!=0) {
+          for ($i=1; $i < $sobaibao/$sotin; $i++) { 
+            echo "<li><a href='?p=baokhoahoc&trang=".$i."'>".$i."</a></li>";
+          }
+        }
+        ?>
+      </ul>
+    </center>
     </div>
 
 </div>
@@ -76,7 +96,7 @@
 </div>
 <script type="text/javascript">
     $("document").ready(function() {
-        $('#bieumau').addClass('current');
-        document.title = "Văn bản - Biểu mẫu | Phòng nghiên cứu khoa học & Hợp tác quốc tế VLUTE";
+        $('#baokhoahoc').addClass('current');
+        document.title = "Bài báo khoa học | Phòng nghiên cứu khoa học & Hợp tác quốc tế VLUTE";
     });
 </script> 

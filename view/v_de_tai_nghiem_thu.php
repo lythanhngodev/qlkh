@@ -8,23 +8,47 @@
         <div class="line"></div>
     </div>
     <div class="tin">
-      <table id="bangbieumau" border="1">
-        <tr style="background: #cee1ff;">
-          <th>STT</th>
-          <th>Mã</th>
-          <th>Tên</th>
-          <th>Tải xuống</th>
-        </tr>
-        <?php $stt=1;
-        while ($row = mysqli_fetch_assoc($bieumau)) { ?>
-        <tr>
-          <td><?php echo $stt; ?></td>
-          <td><?php echo $row['MABM'] ?></td>
-          <td><?php echo $row['TENBM'] ?></td>
-          <td><a href="<?php echo "files/".$row['FILE']; ?>">Tải xuống</a></td>
-        </tr>
-         <?php $stt++; } ?>
-      </table>
+          <?php 
+          $sotin = 8;
+          $bd=1;
+          if (isset($_GET['trang']) && !empty($_GET['trang'])) {
+            $bd = intval($_GET['trang']);
+            if ($bd<1) {
+              $bd=1;
+            }
+          }
+          $tu = ($bd-1)*$sotin;
+          $nghiemthu = lay_de_tai_da_cong_bo($tu,$sotin);
+          while ($row = mysqli_fetch_assoc($nghiemthu)) { ?>
+           <div class="noidungtin">
+              <h3>
+                  <a href="#" title="<?php echo $row['TENDETAI'] ?>"><?php echo $row['TENDETAI'] ?></a>
+              </h3>
+              <div class="thongtinchung">
+                  <ul>
+                     <li>Thành viên : <?php echo $row['HOTEN'] ?></li> 
+                     <li>Thời gian nghiệm thu: <?php echo date("d-m-Y", strtotime($row['THOIGIANNGHIEMTHU'])); ?></li>
+                     <li>Lĩnh vực nghiên cứu: <?php $lv = linh_vuc_de_tai($row['IDDT']);
+                     while ($rlv = mysqli_fetch_assoc($lv)) {
+                         echo $rlv['TENLV'].", ";
+                     }
+                      ?></li>  
+                  </ul>
+              </div>
+              <div class="clear"></div>
+         </div>
+           <?php } ?>
+    <center>
+      <ul class="phantrang">
+        <?php $sodetai = dem_de_tai_da_cong_bo();
+        if ($sodetai!=0) {
+          for ($i=1; $i < $sodetai/$sotin; $i++) { 
+            echo "<li><a href='?p=detainghiemthu&trang=".$i."'>".$i."</a></li>";
+          }
+        }
+        ?>
+      </ul>
+    </center>
     </div>
 
 </div>
@@ -76,7 +100,7 @@
 </div>
 <script type="text/javascript">
     $("document").ready(function() {
-        $('#bieumau').addClass('current');
-        document.title = "Văn bản - Biểu mẫu | Phòng nghiên cứu khoa học & Hợp tác quốc tế VLUTE";
+        $('#nckh').addClass('current');
+        document.title = "Công trình NCKH đã công bố | Phòng nghiên cứu khoa học & Hợp tác quốc tế VLUTE";
     });
 </script> 

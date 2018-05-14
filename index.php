@@ -57,8 +57,8 @@
 							<li><a href="#">Công trình khoa học đã công bố</a></li>
 						</ul>
 					</li>
-					<li>
-						<a href="#">Kết quả nổi bật</a>
+					<li id="baokhoahoc">
+						<a href="#">Báo khoa học</a>
 					</li>
 					<li id="bieumau"><a href="?p=bieumau">Văn bản - Biểu mẫu</a></li>
 					<li>

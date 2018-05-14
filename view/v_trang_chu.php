@@ -39,8 +39,8 @@
 
     <!-- CÁC CÔNG TRÌNH KHOA HỌC ĐÃ CÔNG BỐ -->
     <div class="tieudechinh">
-        <div class="tentieudechinh" style="width: 240px;">
-            <img src="images/chi-muc.png" width="27" height="27" align="absmiddle"><a href="?p=baibaocongbo">Đề xuất công trình NCKH mới</a>
+        <div class="tentieudechinh" style="width: 180px;">
+            <img src="images/chi-muc.png" width="27" height="27" align="absmiddle"><a href="?p=baokhoahoc">Bài báo khoa học mới</a>
         </div>
         <div class="clear"></div>
         <div class="line"></div>
@@ -50,7 +50,7 @@
       while ($row = mysqli_fetch_assoc($baibao)) { ?>
       <div class="noidungtin">
           <h3>
-              <a href="#" title="On the spinor norm in the unitary groups"><?php echo $row['TENBAO'] ?></a>
+              <a href="#" title="<?php echo $row['TENBAO'] ?>"><?php echo $row['TENBAO'] ?></a>
           </h3>
           <div class="thongtinchung">
               <ul>
@@ -62,7 +62,7 @@
           <div class="clear"></div>
      </div>
      <?php } ?>
-     <center><a href="?p=baibaocongbo" class="nut-link">XEM THÊM</a></center>
+     <center><a href="?p=baokhoahoc" class="nut-link">XEM THÊM</a></center>
     </div>
 
 </div>
