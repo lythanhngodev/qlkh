@@ -50,7 +50,7 @@ if (!isset($_SESSION["token"])) {include_once ("../../loi404.html");exit();}
                                 }
                                 ?>
                                 <tfoot>
-                                    <tr>
+                                    <tr style="background:#e9ecef;">
                                         <th class="giua">Mã số</th>
                                         <th class="giua">Tên biểu mẫu</th>
                                         <th class="giua">Tải về</th>
@@ -214,7 +214,11 @@ if (!isset($_SESSION["token"])) {include_once ("../../loi404.html");exit();}
             khongthanhcong("Hiện không có kết nối internet");
     };
     $(document).ready(function() {
-        $('#bang-bieu-mau').DataTable();
+        $('#bang-bieu-mau').DataTable({
+        "scrollY":"300px",
+        "scrollCollapse": true,
+        "paging": false
+        });
     } );
 
 </script>

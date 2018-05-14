@@ -88,6 +88,9 @@
             case 'nhapthanhvien':
                 include("control/c_nhap_thanh_vien.php");
                 break;
+            case 'suathanhvien':
+                include("control/c_sua_thanh_vien.php");
+                break;
 			default:
 				# code...
 				break;

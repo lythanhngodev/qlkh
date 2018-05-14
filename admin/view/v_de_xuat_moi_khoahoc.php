@@ -35,13 +35,13 @@
                 <?php $stt++; } ?>
                 </tbody>
                 <tfoot>
-                    <tr>
-                        <th>STT</th>
-                        <th>Tên đề xuất</th>
-                        <th>Người đề xuất</th>
-                        <th>Ngày gửi</th>
-                        <th>Trạng thái</th>
-                        <th>Xem xét</th>
+                    <tr style="background:#e9ecef;">
+                        <th class="giua" style="width: 28px;">STT</th>
+                        <th>Tên đề tài</th>
+                        <th style="width: 160px;">Người đề xuất</th>
+                        <th style="width: 120px;">Thời gian gửi</th>
+                        <th style="width: 100px;">Trạng thái</th>
+                        <th style="width: 70px;" class="giua">Xem xét</th>
                     </tr>
                 </tfoot>
             </table>
@@ -60,6 +60,10 @@
     $('.tieude').html('Đề xuất đề tài nghiên cứu khao học mới');
   });
   $(document).ready(function() {
-    $('#example').DataTable();
+    $('#example').DataTable({
+        "scrollY":"300px",
+        "scrollCollapse": true,
+        "paging": false
+        });
 } );
 </script>

@@ -40,6 +40,13 @@ if (!isset($_SESSION["token"])) {include_once ("../../loi404.html");exit();}
                                 }
                                 ?>
                                 </tbody>
+                                <tfoot>
+                                    <tr style="background:#e9ecef;">
+                                        <th class="giua">Tên chuyên mục</th>
+                                        <th class="giua">Mô tả</th>
+                                        <th class="giua" style="width: 80px;">Thao tác</th>
+                                    </tr>
+                                </tfoot>
                             </table>
                         </div>
                     </div>
@@ -277,6 +284,10 @@ if (!isset($_SESSION["token"])) {include_once ("../../loi404.html");exit();}
         $('#modal-xoa-chuyen-muc').modal('show');
     }
     $(document).ready(function() {
-        $('#bang-chuyen-muc').DataTable();
+        $('#bang-chuyen-muc').DataTable({
+        "scrollY":"300px",
+        "scrollCollapse": true,
+        "paging": false
+        });
     } );
 </script>

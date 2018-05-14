@@ -38,6 +38,16 @@
                     </tr>
                 <?php $stt++; } ?>
                 </tbody>
+                <tfoot>
+                    <tr style="background:#e9ecef;">
+                        <th class="giua" style="width: 28px;">STT</th>
+                        <th>Tên đề tài</th>
+                        <th style="width: 160px;">Chủ nhiệm đề tài</th>
+                        <th>Thời gian kết thúc đề tài</th>
+                        <th style="width: 100px;">Trạng thái</th>
+                        <th style="width: 120px;" class="giua">Gửi thư nhắc nhở</th>
+                    </tr>
+                </tfoot>
             </table>
           </div>
         </div>
@@ -54,6 +64,10 @@
     $('.tieude').html('Đề tài trễ tiến độ');
   });
   $(document).ready(function() {
-    $('#example').DataTable();
+    $('#example').DataTable({
+        "scrollY":"300px",
+        "scrollCollapse": true,
+        "paging": false
+        });
 } );
 </script>

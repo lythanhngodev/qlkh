@@ -12,6 +12,7 @@
                 <thead>
                     <tr style="background:#e9ecef;">
                         <th class="giua" style="width: 28px;">STT</th>
+                        <th class="giua">Mã đề tài</th>
                         <th>Tên đề tài</th>
                         <th style="width: 200px;">Lĩnh vực khoa học</th>
                         <th style="width: 100px;">Ngày tạo</th>
@@ -27,6 +28,7 @@
                 ?>
                     <tr id="dong-<?php echo $row['IDDT']; ?>">
                         <td><?php echo $stt; ?></td>
+                        <th class="giua"><?php echo $row['MADETAI'] ?></th>
                         <td id="tendetai-<?php echo $row['IDDT']; ?>"><?php echo $row['TENDETAI'] ?></td>
                         <td>
                         <?php
@@ -52,6 +54,18 @@
                     </tr>
                 <?php  $stt++; } ?>
                 </tbody>
+                <tfoot>
+                    <tr style="background:#e9ecef;">
+                        <th class="giua" style="width: 28px;">STT</th>
+                        <th class="giua">Mã đề tài</th>
+                        <th>Tên đề tài</th>
+                        <th style="width: 200px;">Lĩnh vực khoa học</th>
+                        <th style="width: 100px;">Ngày tạo</th>
+                        <th style="width: 100px;">Trạng thái</th>
+                        <th style="width: 80px;">Gửi đề xuất</th>
+                        <th style="width: 110px;">Thao tác</th>
+                    </tr>
+                </tfoot>
             </table>
           </div>
           <div class="card-footer">
@@ -184,6 +198,11 @@
     });
   });
   $(document).ready(function() {
-    $('#example').DataTable();
+    $('#example').DataTable({
+        "scrollY":"380px",
+        "scrollCollapse": true,
+        "paging": false,
+        responsive : true
+        });
 } );
 </script>

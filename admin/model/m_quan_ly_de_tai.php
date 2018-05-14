@@ -4,7 +4,7 @@
 	function lay_de_tai($idnd){
 		$ketnoi = new clsKetnoi();
 		$conn = $ketnoi->ketnoi();
-		$query = "SELECT DISTINCT dt.IDDT, `TENDETAI`, `MUCTIEU`, `NOIDUNG`, `CAPDETAI`, `NGAYTHEM`, `TRANGTHAI` FROM detai dt, thanhviendetai tv WHERE tv.IDND = '$idnd' AND dt.IDDT = tv.IDDT AND tv.TRACHNHIEM=N'Chủ nhiệm'";
+		$query = "SELECT DISTINCT dt.IDDT, dt.MADETAI,`TENDETAI`, `MUCTIEU`, `NOIDUNG`, `CAPDETAI`, `NGAYTHEM`, `TRANGTHAI` FROM detai dt, thanhviendetai tv WHERE tv.IDND = '$idnd' AND dt.IDDT = tv.IDDT AND tv.TRACHNHIEM=N'Chủ nhiệm'";
 		$result = mysqli_query($conn, $query);
 		mysqli_close($conn);
 		return $result;

@@ -34,6 +34,15 @@
                     </tr>
                 <?php $stt++; } ?>
                 </tbody>
+                <tfoot>
+                    <tr style="background:#e9ecef;">
+                        <th class="giua" style="width: 28px;">STT</th>
+                        <th>Tên đề tài</th>
+                        <th style="width: 160px;">Chủ nhiệm đề tài</th>
+                        <th style="width: 120px;">Thời gian báo cáo</th>
+                        <th style="width: 100px;">Trạng thái</th>
+                    </tr>
+                </tfoot>
             </table>
           </div>
         </div>
@@ -50,6 +59,10 @@
     $('.tieude').html('Đề tài đến hạn báo cáo');
   });
   $(document).ready(function() {
-    $('#example').DataTable();
+    $('#example').DataTable({
+        "scrollY":"300px",
+        "scrollCollapse": true,
+        "paging": false
+        });
 } );
 </script>

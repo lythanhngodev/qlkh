@@ -11,6 +11,7 @@
                 <thead>
                     <tr style="background:#e9ecef;">
                         <th class="giua" style="width: 28px;">STT</th>
+                        <th class="giua">Mã đề tài</th>
                         <th>Tên đề tài</th>
                         <th style="width: 160px;">Người đề xuất</th>
                         <th style="width: 120px;">Thời gian gửi</th>
@@ -21,7 +22,8 @@
                 <tbody>
                 <?php $stt=1; while ($row = mysqli_fetch_assoc($detai)){ ?>
                     <tr>
-                        <th><?php echo $stt; ?></th>
+                        <th class="giua"><?php echo $stt; ?></th>
+                        <th class="giua"><?php echo $row['MADETAI']; ?></th>
                         <td><?php echo $row['TENDETAI']; ?></td>
                         <td><?php echo lay_ten_chu_nhiem_de_tai($row['IDDT']); ?></td>
                         <td class="giua"><?php echo date("d-m-Y H:m:s", strtotime($row['NGAYDEXUAT'])); ?></td>
@@ -47,8 +49,9 @@
                 <?php $stt++; } ?>
                 </tbody>
                 <tfoot>
-                    <tr>
+                    <tr style="background:#e9ecef;">
                         <th>STT</th>
+                        <th class="giua">Mã đề tài</th>
                         <th>Tên đề xuất</th>
                         <th>Người đề xuất</th>
                         <th>Ngày gửi</th>
@@ -73,7 +76,7 @@
   });
   $(document).ready(function() {
     $('#example').DataTable({
-        "scrollY":"300px",
+        "scrollY":"380px",
         "scrollCollapse": true,
         "paging": false,
         responsive : true

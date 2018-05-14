@@ -31,6 +31,15 @@
                     </tr>
                 <?php  $stt++; } ?>
                 </tbody>
+                <tfoot>
+                    <tr style="background:#e9ecef;">
+                        <th class="giua" style="width: 28px;">STT</th>
+                        <th class="giua" style="width: 140px;"><input type="checkbox" id="checkall" style="transform: scale(1.8);">&ensp;&ensp;Xác nhận</th>
+                        <th>Tên người dùng</th>
+                        <th>Tên đăng nhập</th>
+                        <th>Mail</th>
+                    </tr>
+                </tfoot>
             </table>
           </div>
           <div class="card-footer">
@@ -106,6 +115,10 @@
     });
   });
   $(document).ready(function() {
-    $('#bangxacnhan').DataTable();
+    $('#bangxacnhan').DataTable({
+        "scrollY":"300px",
+        "scrollCollapse": true,
+        "paging": false
+        });
 } );
 </script>

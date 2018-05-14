@@ -36,6 +36,17 @@
                     </tr>
                 <?php $stt++; } ?>
                 </tbody>
+                <tfoot>
+                    <tr style="background:#e9ecef;">
+                        <th class="giua" style="width: 28px;">STT</th>
+                        <th class="giua">Mã đề tài</th>
+                        <th>Tên đề tài</th>
+                        <th style="width: 160px;">Chủ nhiệm đề tài</th>
+                        <th style="width: 120px;">Thời gian</th>
+                        <th style="width: 100px;">Trạng thái</th>
+                        <th style="width: 70px;" class="giua">Xem xét</th>
+                    </tr>
+                </tfoot>
             </table>
           </div>
         </div>
@@ -52,6 +63,10 @@
     $('.tieude').html('Duyệt đề tài khoa học từng nghiệm thu trước đây');
   });
   $(document).ready(function() {
-    $('#example').DataTable();
+    $('#example').DataTable({
+        "scrollY":"300px",
+        "scrollCollapse": true,
+        "paging": false
+        });
 } );
 </script>

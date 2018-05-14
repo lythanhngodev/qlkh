@@ -4,7 +4,7 @@
 	function lay_de_xuat_du_an(){
 		$ketnoi = new clsKetnoi();
 		$conn = $ketnoi->ketnoi();
-		$query = "SELECT dx.IDDT, dx.NGAYDEXUAT, `TENDETAI`, `MUCTIEU`, `NOIDUNG`, `CAPDETAI`, `NGAYTHEM`, `TRANGTHAI`, dt.DUYET FROM dexuatdetai dx, detai dt WHERE dx.IDDT = dt.IDDT ORDER BY dx.IDDX DESC";
+		$query = "SELECT dx.IDDT, dx.NGAYDEXUAT,dt.MADETAI,`TENDETAI`, `MUCTIEU`, `NOIDUNG`, `CAPDETAI`, `NGAYTHEM`, `TRANGTHAI`, dt.DUYET FROM dexuatdetai dx, detai dt WHERE dx.IDDT = dt.IDDT ORDER BY dx.IDDX DESC";
 		$result = mysqli_query($conn, $query);
 		mysqli_close($conn);
 		return $result;

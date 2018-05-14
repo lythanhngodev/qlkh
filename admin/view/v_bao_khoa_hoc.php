@@ -44,14 +44,14 @@
                     <?php  $stt++; } ?>
                 </tbody>
                 <tfoot>
-                    <tr>
-                        <th>STT</th>
+                    <tr style="background:#e9ecef;">
+                        <th class="giua" style="width: 28px;">STT</th>
                         <th>Tên bài báo</th>
-                        <th>Tác giả</th>
-                        <th>Điểm</th>
-                        <th>Số tiết</th>
-                        <th>Ngày đăng</th>
-                        <th>Thao tác</th>
+                        <th style="width: 160px;">Tác giả</th>
+                        <th style="width: 40px;">Điểm</th>
+                        <th style="width: 60px;">Số tiết</th>
+                        <th style="width: 75px;">Ngày đăng</th>
+                        <th style="width: 90px;">Thao tác</th>
                     </tr>
                 </tfoot>
             </table>
