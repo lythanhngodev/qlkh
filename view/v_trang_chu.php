@@ -8,7 +8,7 @@
     <!-- CÁC CÔNG TRÌNH KHOA HỌC ĐÃ CÔNG BỐ -->
     <div class="tieudechinh">
         <div class="tentieudechinh" style="width: 240px;">
-            <img src="images/chi-muc.png" width="27" height="27" align="absmiddle"><a href="#">Công trình NCKH đã công bố</a>
+            <img src="images/chi-muc.png" width="27" height="27" align="absmiddle"><a href="?p=detainghiemthu">Công trình NCKH đã công bố</a>
         </div>
         <div class="clear"></div>
         <div class="line"></div>
@@ -34,12 +34,13 @@
                 <div class="clear"></div>
            </div>
              <?php } ?>
+      <center><a href="?p=detainghiemthu" class="nut-link">XEM THÊM</a></center>
     </div>
 
     <!-- CÁC CÔNG TRÌNH KHOA HỌC ĐÃ CÔNG BỐ -->
     <div class="tieudechinh">
         <div class="tentieudechinh" style="width: 240px;">
-            <img src="images/chi-muc.png" width="27" height="27" align="absmiddle"><a href="#">Đề xuất công trình NCKH mới</a>
+            <img src="images/chi-muc.png" width="27" height="27" align="absmiddle"><a href="?p=baibaocongbo">Đề xuất công trình NCKH mới</a>
         </div>
         <div class="clear"></div>
         <div class="line"></div>
@@ -53,7 +54,7 @@
           </h3>
           <div class="thongtinchung">
               <ul>
-                 <li>Tác giả : Ngô Văn Định</li> 
+                 <li>Tác giả : <?php echo lay_ten_tac_gia_bao_khoa_hoc($row['IDBAO']); ?></li> 
                  <li>Nhà xuất bản/ Tạp chí: <?php echo $row['TAPCHI'] ?></li> 
                  <li>Năm: <?php echo $row['NAMXUATBAN'] ?></li> 
               </ul>
@@ -61,6 +62,7 @@
           <div class="clear"></div>
      </div>
      <?php } ?>
+     <center><a href="?p=baibaocongbo" class="nut-link">XEM THÊM</a></center>
     </div>
 
 </div>
@@ -101,23 +103,10 @@
         <h3>Từ khóa nổi bậc</h3>
         <div class="tieudemuccon">
             <div class="tukhoa">
-                <div><a href="#">Lúa nước</a></div>
-                <div><a href="#">Trái cây</a></div>
-                <div><a href="#">Tưới cây tự động</a></div>
-                <div><a href="#">Ổi</a></div>
-                <div><a href="#">Nhà thông minh</a></div>
-                <div><a href="#">Tự động hóa</a></div>
-                <div><a href="#">Lúa nước</a></div>
-                <div><a href="#">Sản xuất cây ăn trái</a></div>
-                <div><a href="#">Cánh đồng mẫu lớn</a></div>
-                <div><a href="#">Lúa nước</a></div>
-                <div><a href="#">Trái cây</a></div>
-                <div><a href="#">Ổi</a></div>
-                <div><a href="#">Nhà thông minh</a></div>
-                <div><a href="#">Tự động hóa</a></div>
-                <div><a href="#">Lúa nước</a></div>
-                <div><a href="#">Sản xuất cây ăn trái</a></div>
-                <div><a href="#">Cánh đồng mẫu lớn</a></div>
+              <?php $tk = lay_tu_khoa();
+              while ($row=mysqli_fetch_assoc($tk)) { ?>
+              <div><a href="?p=tag&tag=<?php echo $row['IDKHOA'] ?>"><?php echo $row['TENKHOA'] ?></a></div>
+              <?php } ?>
             </div>
         </div>
     </div>

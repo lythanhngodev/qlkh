@@ -217,7 +217,15 @@ ul.sf-menu li li li.sfHover ul {
 	color: #fff;
 	outline:		0;
 }
-
+.nut-link{
+	background-color: #1c71f3;
+	color: #fff;
+	text-decoration: none;
+	font-family: sans-serif;
+	font-size:  14px;
+	padding:  4px 8px;
+	border-radius: 4px;
+}
 .sf-menu li.current a
 {
 	color: #fff;
@@ -334,9 +342,7 @@ li.sfHover > a > .sf-sub-indicator {
 	width: 16px;
 	padding-right: 6px;
 }
-.tin{
-	
-}
+.tin{}
 .noidungtin{
 	float:  left;
 	width: 603px;

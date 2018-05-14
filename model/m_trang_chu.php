@@ -32,10 +32,30 @@
 		mysqli_close($conn);
 		return $result;
 	}
+	function lay_ten_tac_gia_bao_khoa_hoc($idbao){
+		$ketnoi = new clsKetnoi();
+		$conn = $ketnoi->ketnoi();
+		$query = "SELECT CONCAT(nd.HO,' ',nd.TEN) as HOTEN FROM nguoidung_baibao nb, nguoidung nd WHERE nb.IDND = nd.IDND AND nb.IDBAO = '$idbao';";
+		$result = mysqli_query($conn, $query);
+		$tg="";
+		while ($row=mysqli_fetch_assoc($result)) {
+			$tg.= $row['HOTEN'].", ";
+		}
+		mysqli_close($conn);
+		return $tg;
+	}
 	function linh_vuc_de_tai($iddt){
 	    $ketnoi = new clsKetnoi();
 	    $conn = $ketnoi->ketnoi();
 	    $query = "SELECT DISTINCT TENLV FROM `linhvuckhoahoc` WHERE IDDT = '$iddt'";
+	    $result = mysqli_query($conn, $query);
+	    mysqli_close($conn);
+	    return $result;
+	}
+	function lay_tu_khoa(){
+	    $ketnoi = new clsKetnoi();
+	    $conn = $ketnoi->ketnoi();
+	    $query = "SELECT tk.IDKHOA, tk.TENKHOA FROM tukhoa tk WHERE tk.IDKHOA IN (SELECT DISTINCT t.IDKHOA FROM (SELECT IDKHOA FROM baiviet_tukhoa b UNION ALL SELECT IDKHOA FROM baibao_tukhoa) as t GROUP BY t.IDKHOA ORDER BY COUNT(t.IDKHOA) DESC) LIMIT 0,20";
 	    $result = mysqli_query($conn, $query);
 	    mysqli_close($conn);
 	    return $result;

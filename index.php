@@ -41,15 +41,15 @@
 			<div id="nav">
         		<ul class="sf-menu sf-js-enabled sf-shadow">
         			<li id="trangchu">
-						<a href="index.html">Trang chủ</a></li>
-					<li class="">
+						<a href="<?php echo $qlkh['HOSTGOC'] ?>">Trang chủ</a></li>
+					<li>
 						<a href="Article/Details/3.html" class="sf-with-ul">Giới thiệu</a>
 						<ul style="display: none; visibility: hidden;">
 							<li><a href="Article/Details/33.html">Nhiệm vụ chiến lược</a></li>
 							<li><a href="Researcher.html">Danh sách nhà khoa học</a></li>
 						</ul>
 					</li>
-					<li class="">
+					<li>
 						<a href="Theme.html#" class="sf-with-ul">Hoạt động NCKH</a>
 						<ul style="display: none; visibility: hidden;">
 							<li><a href="Propose.html">Đề xuất NCKH</a></li>
@@ -60,7 +60,8 @@
 					<li>
 						<a href="ket-qua-noi-bat/p.html">Kết quả nổi bật</a>
 					</li>
-					<li class="">
+					<li><a href="?p=bieumau">Văn bản - Biểu mẫu</a></li>
+					<li>
 						<a href="Article/Index/0.html" class="sf-with-ul">Tin tức</a>
 						<ul style="display: none; visibility: hidden;">
 							<li><a href="Article/Index/15.html">Tin tức sự kiện</a></li>
@@ -92,10 +93,10 @@
 		<div id="footer">
 			<div id="ft_nav">
 				<ul>
-					<li><a href="/Home">Trang chủ</a></li>
+					<li><a href="<?php echo $qlkh['HOSTGOC'] ?>">Trang chủ</a></li>
 					<li><a href="/Article/Details/4#">Giới thiệu</a></li>
 					<li><a href="/Theme#">Nghiên cứu khoa học</a></li>
-					<li><a href="/Document/Legal#">Văn bản biểu mẫu</a></li>
+					<li><a href="/Document/Legal#">Văn bản - Biểu mẫu</a></li>
 					<li><a href="/Article/Details/6">FAQs</a></li>
 					<li><a href="/Contact" style="border-right: none">Liên hệ</a></li>
 				</ul>

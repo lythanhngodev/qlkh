@@ -32,6 +32,9 @@
 		// xử lý từ khóa
 		$mang = explode(',', $tk);
 		for ($i=0; $i < count($mang); $i++) { 
+			if(empty(trim($mang[$i]))){
+				continue;
+			}
 			$tv = "SELECT * FROM `tukhoa` WHERE `tenkhoa` = N'$mang[$i]'";
 			$kttv = mysqli_query($conn, $tv);
 			$demkq = mysqli_num_rows($kttv);
