@@ -608,8 +608,8 @@ $(document).ready(function(){$('#themdetaidanghiemthu').addClass('active');$('.t
         var tinhhinhnghiencuu = $('#tinhinhnghiencuudetai').val().trim();
         var nghiencuulienquan = $('#tinhinhnghiencuudetai').val().trim();
         var phuongphapkythuat = $('#phuongphapnghiencuudetai').val().trim();
-        var kinhphingansach = (!$.isNumeric($('#kinhphingansachdetai').val().trim())) ? $('#kinhphingansachdetai').val().trim() : '0';
-        var kinhphinguonkhac = (!$.isNumeric($('#kinhphinguonkhacdetai').val().trim())) ? $('#kinhphinguonkhacdetai').val().trim() : '0';
+        var kinhphingansach = ($.isNumeric($('#kinhphingansachdetai').val().trim())) ? $('#kinhphingansachdetai').val().trim() : '0';
+        var kinhphinguonkhac = ($.isNumeric($('#kinhphinguonkhacdetai').val().trim())) ? $('#kinhphinguonkhacdetai').val().trim() : '0';
         var thangthuchien = $('#thangthuchiendetai').val().trim();
         var thangnambatdau = $('#thangnambatdaudetai').val().trim();
         var thangnamketthuc = $('#thangnamketthucdetai').val().trim();
