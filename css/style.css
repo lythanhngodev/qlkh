@@ -515,5 +515,15 @@ li.sfHover > a > .sf-sub-indicator {
 }
 .tinmoi a:hover{
 	color:#2b6dce;
-
+}
+#bangbieumau{
+    border-collapse:  collapse;
+    width: 100%;
+    border: 1px solid #a7a7a7;
+}
+#bangbieumau tr th{
+    padding: 4px;
+}
+#bangbieumau tr td{
+    padding: 8px;
 }

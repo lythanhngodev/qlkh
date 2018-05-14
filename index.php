@@ -43,40 +43,40 @@
         			<li id="trangchu">
 						<a href="<?php echo $qlkh['HOSTGOC'] ?>">Trang chủ</a></li>
 					<li>
-						<a href="Article/Details/3.html" class="sf-with-ul">Giới thiệu</a>
+						<a href="#" class="sf-with-ul">Giới thiệu</a>
 						<ul style="display: none; visibility: hidden;">
-							<li><a href="Article/Details/33.html">Nhiệm vụ chiến lược</a></li>
-							<li><a href="Researcher.html">Danh sách nhà khoa học</a></li>
+							<li><a href="#">Nhiệm vụ chiến lược</a></li>
+							<li><a href="#">Danh sách nhà khoa học</a></li>
 						</ul>
 					</li>
 					<li>
-						<a href="Theme.html#" class="sf-with-ul">Hoạt động NCKH</a>
+						<a href="#" class="sf-with-ul">Hoạt động NCKH</a>
 						<ul style="display: none; visibility: hidden;">
-							<li><a href="Propose.html">Đề xuất NCKH</a></li>
-							<li class=" "><a href="Theme.html">Đề tài - Dự án NCKH</a></li>
-							<li><a href="ScientificReport.html">Công trình khoa học đã công bố</a></li>
+							<li><a href="#">Đề xuất NCKH</a></li>
+							<li class=" "><a href="#">Đề tài - Dự án NCKH</a></li>
+							<li><a href="#">Công trình khoa học đã công bố</a></li>
 						</ul>
 					</li>
 					<li>
-						<a href="ket-qua-noi-bat/p.html">Kết quả nổi bật</a>
+						<a href="#">Kết quả nổi bật</a>
 					</li>
-					<li><a href="?p=bieumau">Văn bản - Biểu mẫu</a></li>
+					<li id="bieumau"><a href="?p=bieumau">Văn bản - Biểu mẫu</a></li>
 					<li>
-						<a href="Article/Index/0.html" class="sf-with-ul">Tin tức</a>
+						<a href="#" class="sf-with-ul">Tin tức</a>
 						<ul style="display: none; visibility: hidden;">
-							<li><a href="Article/Index/15.html">Tin tức sự kiện</a></li>
-							<li><a href="Article/Index/14.html">Công nghệ mới</a></li>
-							<li><a href="Article/Index/16.html">Khám phá</a></li>
-							<li><a href="Article/Index/17.html">Đời sống</a></li>
+							<li><a href="#">Tin tức sự kiện</a></li>
+							<li><a href="#">Công nghệ mới</a></li>
+							<li><a href="#">Khám phá</a></li>
+							<li><a href="#">Đời sống</a></li>
 						</ul>
 					</li>
-					<li><a href="Contact.html">Liên hệ</a></li>
+					<li><a href="#">Liên hệ</a></li>
 				</ul>
 			</div>
 		</div>
 		<div id="sr_bg">		
 			<div align="center" class="sr">
-				<form action="http://qlkh.tnu.edu.vn/Theme" method="post" id="searchForm">
+				<form action="#" method="post" id="searchForm">
 					<strong>Nhập từ khóa tìm kiếm</strong> 
 					<input type="text" name="filterKeyword" id="searchKeyword" class="txtinput">
 					<select class="sl" id="searchType">
@@ -87,6 +87,7 @@
 				</form>
 			</div>
 		</div>
+		<marquee behavior="alternate" scrolldelay="200" style="font-size: 0.8rem; color: white; background: url(images/bg_bar.gif) repeat-x; padding: 3px 0;line-height: 1.3rem;" onmouseover="this.stop();" onmouseout="this.start();" >Phòng Nghiên cứu khoa học &amp; Hợp tác quốc tế - Trường Đại học Sư Phạm Kỹ Thuật Vĩnh Long</marquee>
 		<div id="maincontent">
 			<?php include_once 'public_c.php'; ?>
 		</div>
@@ -94,11 +95,11 @@
 			<div id="ft_nav">
 				<ul>
 					<li><a href="<?php echo $qlkh['HOSTGOC'] ?>">Trang chủ</a></li>
-					<li><a href="/Article/Details/4#">Giới thiệu</a></li>
-					<li><a href="/Theme#">Nghiên cứu khoa học</a></li>
-					<li><a href="/Document/Legal#">Văn bản - Biểu mẫu</a></li>
-					<li><a href="/Article/Details/6">FAQs</a></li>
-					<li><a href="/Contact" style="border-right: none">Liên hệ</a></li>
+					<li><a href="#">Giới thiệu</a></li>
+					<li><a href="#">Nghiên cứu khoa học</a></li>
+					<li><a href="?p=bieumau">Văn bản - Biểu mẫu</a></li>
+					<li><a href="#">FAQs</a></li>
+					<li><a href="#" style="border-right: none">Liên hệ</a></li>
 				</ul>
 			</div>
 			<div class="clear"></div>

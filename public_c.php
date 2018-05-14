@@ -4,8 +4,8 @@
 			case 'xemtin':
 				include_once("control/c_xem_tin.php");
 				break;
-			default:
-				# code...
+			case 'bieumau':
+				include_once("control/c_bieu_mau.php");
 				break;
 		}
 	}
