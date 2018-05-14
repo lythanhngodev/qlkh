@@ -5,7 +5,7 @@ if ($loaitaikhoan!='admin' && $loaitaikhoan!='khoahoc'){
     exit();
 }
 include_once "model/m_thanh_vien.php";
-$tv = lay_thanh_vien();
+$tv = lay_thanh_vien($idnd);
 $_ltk = lay_loai_tai_khoan();
 $ltk = null;
 while ($row = mysqli_fetch_assoc($_ltk)) {

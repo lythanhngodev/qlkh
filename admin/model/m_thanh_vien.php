@@ -1,12 +1,12 @@
 <?php
 if (!isset($_SESSION["token"])) {include_once ("../../loi404.html");exit();}
 include_once("../config.php");
-function lay_thanh_vien(){
+function lay_thanh_vien($idnd){
     $ketnoi = new clsKetnoi();
     $conn = $ketnoi->ketnoi();
     $query = "SELECT DISTINCT nd.IDND, CONCAT(nd.HO, ' ', nd.TEN) as HOTEN, l.TENLTK, l.IDLTK
-        FROM nguoidung nd, loaitaikhoan_nguoidung ln, loaitaikhoan l,nguoidung_khoabomon nk
-        WHERE nd.IDND = ln.IDND AND l.IDLTK = ln.IDLTK; ";
+        FROM nguoidung nd, loaitaikhoan_nguoidung ln, loaitaikhoan l
+        WHERE nd.IDND = ln.IDND AND l.IDLTK = ln.IDLTK AND nd.IDND NOT IN (SELECT IDND FROM nguoidung WHERE IDND = '$idnd'); ";
     $result = mysqli_query($conn, $query);
     mysqli_close($conn);
     return $result;
