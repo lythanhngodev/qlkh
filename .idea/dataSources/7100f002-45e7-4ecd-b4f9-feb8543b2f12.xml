@@ -1000,7 +1000,7 @@
       <Engine>InnoDB</Engine>
     </table>
     <table id="259" parent="15" name="baiviet_tukhoa">
-      <Engine>MyISAM</Engine>
+      <Engine>InnoDB</Engine>
     </table>
     <table id="260" parent="15" name="baocaotiendo">
       <Engine>InnoDB</Engine>
@@ -1081,22 +1081,22 @@
       <Engine>InnoDB</Engine>
     </table>
     <table id="286" parent="15" name="nguoidung_chucdanhgiangvien">
-      <Engine>MyISAM</Engine>
+      <Engine>InnoDB</Engine>
     </table>
     <table id="287" parent="15" name="nguoidung_chucdanhkhoahoc">
-      <Engine>MyISAM</Engine>
+      <Engine>InnoDB</Engine>
     </table>
     <table id="288" parent="15" name="nguoidung_chucvu">
-      <Engine>MyISAM</Engine>
+      <Engine>InnoDB</Engine>
     </table>
     <table id="289" parent="15" name="nguoidung_hocvi">
-      <Engine>MyISAM</Engine>
+      <Engine>InnoDB</Engine>
     </table>
     <table id="290" parent="15" name="nguoidung_khoabomon">
       <Engine>InnoDB</Engine>
     </table>
     <table id="291" parent="15" name="nguoidung_trinhdochuyenmon">
-      <Engine>MyISAM</Engine>
+      <Engine>InnoDB</Engine>
     </table>
     <table id="292" parent="15" name="quocgia">
       <Engine>InnoDB</Engine>
@@ -2083,7 +2083,6 @@
     <column id="479" parent="284" name="HO">
       <Position>2</Position>
       <DataType>varchar(50)|0</DataType>
-      <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
     <column id="480" parent="284" name="TEN">

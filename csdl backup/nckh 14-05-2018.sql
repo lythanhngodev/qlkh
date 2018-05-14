@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th5 14, 2018 lúc 12:40 SA
+-- Thời gian đã tạo: Th5 14, 2018 lúc 01:07 SA
 -- Phiên bản máy phục vụ: 5.7.14
 -- Phiên bản PHP: 5.6.25
 
@@ -608,7 +608,7 @@ CREATE TABLE `ngoaingu` (
 
 CREATE TABLE `nguoidung` (
   `IDND` bigint(20) NOT NULL,
-  `HO` varchar(50) NOT NULL,
+  `HO` varchar(50) DEFAULT NULL,
   `TEN` varchar(50) NOT NULL,
   `GIOITINH` varchar(4) DEFAULT 'Nam',
   `NGAYSINH` date DEFAULT NULL,
@@ -669,6 +669,13 @@ CREATE TABLE `nguoidung_chucdanhgiangvien` (
   `IDCD` bigint(20) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Đang đổ dữ liệu cho bảng `nguoidung_chucdanhgiangvien`
+--
+
+INSERT INTO `nguoidung_chucdanhgiangvien` (`IDNDCDGV`, `IDND`, `IDCD`) VALUES
+(1, 1, 0);
+
 -- --------------------------------------------------------
 
 --
@@ -680,6 +687,13 @@ CREATE TABLE `nguoidung_chucdanhkhoahoc` (
   `IDND` bigint(20) DEFAULT NULL,
   `IDCD` bigint(20) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Đang đổ dữ liệu cho bảng `nguoidung_chucdanhkhoahoc`
+--
+
+INSERT INTO `nguoidung_chucdanhkhoahoc` (`IDNDCD`, `IDND`, `IDCD`) VALUES
+(1, 1, 0);
 
 -- --------------------------------------------------------
 
@@ -693,6 +707,13 @@ CREATE TABLE `nguoidung_chucvu` (
   `IDCV` bigint(20) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Đang đổ dữ liệu cho bảng `nguoidung_chucvu`
+--
+
+INSERT INTO `nguoidung_chucvu` (`IDNDCV`, `IDND`, `IDCV`) VALUES
+(1, 1, 0);
+
 -- --------------------------------------------------------
 
 --
@@ -704,6 +725,13 @@ CREATE TABLE `nguoidung_hocvi` (
   `IDND` bigint(20) DEFAULT NULL,
   `IDHV` bigint(20) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Đang đổ dữ liệu cho bảng `nguoidung_hocvi`
+--
+
+INSERT INTO `nguoidung_hocvi` (`IDNDHV`, `IDND`, `IDHV`) VALUES
+(1, 1, 0);
 
 -- --------------------------------------------------------
 
@@ -717,6 +745,13 @@ CREATE TABLE `nguoidung_khoabomon` (
   `IDKBM` bigint(20) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Đang đổ dữ liệu cho bảng `nguoidung_khoabomon`
+--
+
+INSERT INTO `nguoidung_khoabomon` (`IDNDKBM`, `IDND`, `IDKBM`) VALUES
+(1, 1, 1);
+
 -- --------------------------------------------------------
 
 --
@@ -728,6 +763,13 @@ CREATE TABLE `nguoidung_trinhdochuyenmon` (
   `IDND` bigint(20) DEFAULT NULL,
   `IDTD` bigint(20) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Đang đổ dữ liệu cho bảng `nguoidung_trinhdochuyenmon`
+--
+
+INSERT INTO `nguoidung_trinhdochuyenmon` (`IDNDTDCM`, `IDND`, `IDTD`) VALUES
+(1, 1, 2);
 
 -- --------------------------------------------------------
 
@@ -1633,32 +1675,32 @@ ALTER TABLE `nguoidung_baibao`
 -- AUTO_INCREMENT cho bảng `nguoidung_chucdanhgiangvien`
 --
 ALTER TABLE `nguoidung_chucdanhgiangvien`
-  MODIFY `IDNDCDGV` bigint(20) NOT NULL AUTO_INCREMENT;
+  MODIFY `IDNDCDGV` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT cho bảng `nguoidung_chucdanhkhoahoc`
 --
 ALTER TABLE `nguoidung_chucdanhkhoahoc`
-  MODIFY `IDNDCD` bigint(20) NOT NULL AUTO_INCREMENT;
+  MODIFY `IDNDCD` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT cho bảng `nguoidung_chucvu`
 --
 ALTER TABLE `nguoidung_chucvu`
-  MODIFY `IDNDCV` bigint(20) NOT NULL AUTO_INCREMENT;
+  MODIFY `IDNDCV` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT cho bảng `nguoidung_hocvi`
 --
 ALTER TABLE `nguoidung_hocvi`
-  MODIFY `IDNDHV` bigint(20) NOT NULL AUTO_INCREMENT;
+  MODIFY `IDNDHV` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT cho bảng `nguoidung_khoabomon`
 --
 ALTER TABLE `nguoidung_khoabomon`
-  MODIFY `IDNDKBM` bigint(20) NOT NULL AUTO_INCREMENT;
+  MODIFY `IDNDKBM` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT cho bảng `nguoidung_trinhdochuyenmon`
 --
 ALTER TABLE `nguoidung_trinhdochuyenmon`
-  MODIFY `IDNDTDCM` bigint(20) NOT NULL AUTO_INCREMENT;
+  MODIFY `IDNDTDCM` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT cho bảng `slider`
 --

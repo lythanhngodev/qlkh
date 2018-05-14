@@ -22,6 +22,9 @@ for($i=0;$i<count($listWorkSheets);$i++){
     	$ho = $sheetData[$i]['B'];
         $ten = $sheetData[$i]['C'];
         $mail = $sheetData[$i]['D'];
+        if ($ho=='' || $ten=='' || $mail=='') {
+            continue;
+        }
         $t_ds = [$ho,$ten,$mail];
         $danhsach[] = $t_ds;
     }
@@ -39,6 +42,8 @@ for($i=0;$i<count($listWorkSheets);$i++){
     </thead>
     <tbody>
         <?php $stt=1; foreach ($danhsach as $value) {?>
+        <?php if($value[1]=="null" && $value[2]=="null") echo "";
+        else{ ?>
         <tr>
             <td class="giua"><?php echo $stt; ?></td>
             <td><input type="text" class="form-control" value="<?php if($value[0]=="null") echo ""; else echo $value[0]; ?>"></td>
@@ -54,6 +59,7 @@ for($i=0;$i<count($listWorkSheets);$i++){
             </td>
         </tr>
         <?php $stt++; } ?>
+        <?php } ?>
     </tbody>
 </table>
 <style type="text/css">
