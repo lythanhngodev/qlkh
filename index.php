@@ -49,7 +49,7 @@
 							<li><a href="#">Danh sách nhà khoa học</a></li>
 						</ul>
 					</li>
-					<li>
+					<li id="nckh">
 						<a href="#" class="sf-with-ul">Hoạt động NCKH</a>
 						<ul style="display: none; visibility: hidden;">
 							<li><a href="#">Đề xuất NCKH</a></li>
