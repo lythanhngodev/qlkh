@@ -8,12 +8,12 @@
 ?>
 <?php
 if (!isset($_SESSION["token"])) {include_once ("../../loi404.html");exit();}
-if (isset($_GET['id'])) {
+if (isset($_GET['id']) && ($loaitaikhoan=='admin' || $loaitaikhoan=='khoahoc')) {
     $iddt = $_GET['id'];
     $iddt = intval($iddt);
     if($iddt!=0) {
         include_once "model/m_dieu_chinh_de_tai.php";
-        $dt = chi_tiet_de_tai($iddt, $idnd);
+        $dt = chi_tiet_de_tai($iddt);
         if(!mysqli_num_rows($dt)){
             include_once "view/v_khong_bai_bao.php";
             exit();
