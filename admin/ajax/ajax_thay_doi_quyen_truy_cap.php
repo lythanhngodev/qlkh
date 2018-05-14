@@ -15,6 +15,7 @@ $result = Array(
     $conn = $ketnoi->ketnoi();
     $btv = $_POST['btv'];
     $sql="";
+    print_r($btv);
     for($i=1;$i<count($btv);$i++){
         $idnd = mysqli_real_escape_string($conn,$btv[$i][0]);
         $idnd = intval($idnd);
