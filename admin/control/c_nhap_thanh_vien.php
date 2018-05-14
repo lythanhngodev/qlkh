@@ -7,7 +7,8 @@
     		include_once "view/v_nhap_thanh_vien.php";
     		break;
     	case 'khoahoc':
-    		include_once "view/v_nhap_thanh_vien.php";
+    		//include_once "view/v_nhap_thanh_vien.php";
+            include_once "view/v_khong_bai_bao.php";
     		break;
     	default:
     		include_once "view/v_khong_bai_bao.php";
