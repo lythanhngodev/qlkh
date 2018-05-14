@@ -79,7 +79,7 @@ function lay_ten_chu_nhiem_de_tai($iddt){
 function chu_nhiem_de_tai($iddt){
     $ketnoi = new clsKetnoi();
     $conn = $ketnoi->ketnoi();
-    $query = "SELECT CONCAT(nd.HO,' ',nd.TEN) as HOTEN, nd.DIENTHOAIDD,nd.HOCVICAONHAT,nd.TRINHDOCHUYENMON, nd.CHUCDANHGIANGVIEN, nd.MAIL, nd.CHUCDANHKHOAHOC, dt.IDND FROM detai_nguoidung dt, nguoidung nd WHERE dt.IDND = nd.IDND AND dt.IDDT = '$iddt'";
+    $query = "SELECT CONCAT(nd.HO,' ',nd.TEN) as HOTEN, nd.DIENTHOAIDD, nd.MAIL, tv.IDND FROM thanhviendetai tv, nguoidung nd WHERE tv.IDND = nd.IDND AND tv.IDDT = '$iddt'";
     $result = mysqli_query($conn, $query);
     mysqli_close($conn);
     return $result;
