@@ -78,9 +78,5 @@
     $("document").ready(function() {
         $('#bieumau').addClass('current');
         document.title = "Văn bản - Biểu mẫu";
-        $('head').append('<meta property="og:title" content="Văn bản - Biểu mẫu | Phòng nghiên cứu khoa học | VLUTE" />');
-        $('head').append('<meta name="description" content="Phòng nghiên cứu khoa học | Đại học Sư phạm kỹ thuật Vĩnh Long" />');
-        $('head').append('<meta property="og:url" content="<?php echo $qlkh['HOSTGOC'] ?>" />');
-        $('head').append('<meta property="og:image" content="<?php echo $qlkh['HOSTGOC'] ?>images/vlute.jpg" />');
     });
 </script> 

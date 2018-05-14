@@ -117,9 +117,5 @@
     $("document").ready(function() {
         $('#trangchu').addClass('current');
         $('#slider').nivoSlider();
-        $('head').append('<meta property="og:title" content="Phòng nghiên cứu khoa học | Đại học Sư phạm kỹ thuật Vĩnh Long" />');
-        $('head').append('<meta name="description" content="Phòng nghiên cứu khoa học | Đại học Sư phạm kỹ thuật Vĩnh Long" />');
-        $('head').append('<meta property="og:url" content="<?php echo $qlkh['HOSTGOC'] ?>" />');
-        $('head').append('<meta property="og:image" content="<?php echo $qlkh['HOSTGOC'] ?>images/vlute.jpg" />');
     });
 </script> 
