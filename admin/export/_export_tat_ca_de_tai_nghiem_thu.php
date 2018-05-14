@@ -100,6 +100,7 @@
                 $chuoi_cbvc.=$r_kbm['TENKBM'];
             }
 			$sheet->setCellValue('D'.$rowCount,$chuoi_cbvc);
+			$objPHPExcel->getActiveSheet()->getStyle('D'.$rowCount)->getAlignment()->setWrapText(true); // Cho phép xuống dòng
 			$diem = $nt['DIEM'];
 			$sheet->setCellValue('E'.$rowCount,$diem);
 			$sotiet=0;
@@ -110,7 +111,7 @@
 			$stt++; // đếm số thứ tự
 			$sheet->getStyle("A$rowCount:F$rowCount")->getAlignment()->setVertical(PHPExcel_Style_Alignment::VERTICAL_CENTER);
 		}
-		$objPHPExcel->getActiveSheet()->getStyle('D'.$rowCount)->getAlignment()->setWrapText(true); // Cho phép xuống dòng
+		
 		$sheet->getStyle('A'.$rowBD.':A'.$rowCount)->getAlignment()->setHorizontal(PHPExcel_Style_Alignment::HORIZONTAL_CENTER);
 		$sheet->getStyle('C'.$rowBD.':F'.$rowCount)->getAlignment()->setHorizontal(PHPExcel_Style_Alignment::HORIZONTAL_CENTER);
 		// Canh kích thước các cột
