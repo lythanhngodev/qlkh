@@ -56,17 +56,38 @@
 							<li><a href="?p=detainghiemthu">Công trình khoa học đã công bố</a></li>
 						</ul>
 					</li>
+					<li id="htqt">
+						<a href="#" class="sf-with-ul">Hợp tác quốc tế</a>
+						<ul style="display: none; visibility: hidden;">
+							<?php 
+							$ketnoi = new clsKetnoi();
+							$conn = $ketnoi->ketnoi();
+							$sql = "SELECT DISTINCT * from chuyenmuc where LOAICHUYENMUC = N'hoptacquocte';";
+							$q_sql = mysqli_query($conn,$sql);
+							while ($row = mysqli_fetch_assoc($q_sql)) {
+								echo "<li><a href='?p=hoptacquocte&id=".$row['IDCM']."&ten=".$row['LINKCM']."'>".$row['TENCM']."</a></li>";
+							} 
+							mysqli_close($conn);
+							 ?>
+						</ul>
+					</li>
 					<li id="baokhoahoc">
-						<a href="#">Báo khoa học</a>
+						<a href="?p=baokhoahoc">Báo khoa học</a>
 					</li>
 					<li id="bieumau"><a href="?p=bieumau">Văn bản - Biểu mẫu</a></li>
-					<li>
+					<li id="tintuc">
 						<a href="#" class="sf-with-ul">Tin tức</a>
 						<ul style="display: none; visibility: hidden;">
-							<li><a href="#">Tin tức sự kiện</a></li>
-							<li><a href="#">Công nghệ mới</a></li>
-							<li><a href="#">Khám phá</a></li>
-							<li><a href="#">Đời sống</a></li>
+							<?php 
+							$ketnoi = new clsKetnoi();
+							$conn = $ketnoi->ketnoi();
+							$sql = "SELECT DISTINCT * from chuyenmuc where LOAICHUYENMUC = N'tintuc';";
+							$q_sql = mysqli_query($conn,$sql);
+							while ($row = mysqli_fetch_assoc($q_sql)) {
+								echo "<li><a href='?p=tintuc&id=".$row['IDCM']."&ten=".$row['LINKCM']."'>".$row['TENCM']."</a></li>";
+							} 
+							mysqli_close($conn);
+							 ?>
 						</ul>
 					</li>
 					<li><a href="#">Liên hệ</a></li>
@@ -95,9 +116,7 @@
 				<ul>
 					<li><a href="<?php echo $qlkh['HOSTGOC'] ?>">Trang chủ</a></li>
 					<li><a href="#">Giới thiệu</a></li>
-					<li><a href="#">Nghiên cứu khoa học</a></li>
 					<li><a href="?p=bieumau">Văn bản - Biểu mẫu</a></li>
-					<li><a href="#">FAQs</a></li>
 					<li><a href="#" style="border-right: none">Liên hệ</a></li>
 				</ul>
 			</div>

@@ -23,7 +23,8 @@ $result = Array(
     $ketnoi = new clsKetnoi();
     $conn = $ketnoi->ketnoi();
     $linkcm = $ketnoi->to_slug($_POST['ten']).'-cm';
-    $sql = "INSERT INTO `chuyenmuc`(`TENCM`,`MOTACM`,`LINKCM`) SELECT * FROM (SELECT '".$_POST['ten']."','".$_POST['mota']."','$linkcm') AS tam WHERE NOT EXISTS (SELECT * FROM chuyenmuc WHERE TENCM = N'".$_POST['ten']."')";
+    $loai = $_POST['loai'];
+    $sql = "INSERT INTO `chuyenmuc`(`TENCM`,`MOTACM`,`LINKCM`, `LOAICHUYENMUC`) SELECT * FROM (SELECT '".$_POST['ten']."','".$_POST['mota']."','$linkcm', '$loai') AS tam WHERE NOT EXISTS (SELECT * FROM chuyenmuc WHERE TENCM = N'".$_POST['ten']."')";
     if(mysqli_query($conn, $sql)===TRUE){
         $ma = mysqli_insert_id($conn);
         $result['ma'] = $ma;

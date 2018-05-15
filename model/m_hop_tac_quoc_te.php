@@ -1,19 +1,22 @@
 <?php 
 	include_once("config.php");
-	function lay_chi_tiet_tin($id){
+	function lay_tin($id){
 		$ketnoi = new clsKetnoi();
 		$conn = $ketnoi->ketnoi();
-		$query = "SELECT * from baiviet WHERE HIENTHI=b'1' AND IDBV = '$id';";
+		$query = "SELECT bv.IDBV, bv.TENBV, bv.LINKBV, bv.HINHANH from baiviet bv, chuyenmuc cm, baiviet_chuyenmuc bc WHERE bc.IDBV = bv.IDBV AND bc.IDCM = cm.IDCM AND cm.LOAICHUYENMUC=N'hoptacquocte' AND bv.HIENTHI=b'1' AND bc.IDCM='$id';";
 		$result = mysqli_query($conn, $query);
 		mysqli_close($conn);
 		return $result;
 	}
-	function cong_luot_xem($id){
+	function ten_chuyen_muc($id){
 		$ketnoi = new clsKetnoi();
 		$conn = $ketnoi->ketnoi();
-		$query = "UPDATE baiviet SET LUOTXEM = LUOTXEM + 1 WHERE IDBV = '$id';";
+		$query = "SELECT TENCM from chuyenmuc WHERE IDCM='$id';";
 		$result = mysqli_query($conn, $query);
-		return true;
+		$r = mysqli_fetch_assoc($result);
+		$ten = $r['TENCM'];
+		mysqli_close($conn);
+		return $ten;
 	}
 	function lay_tin_moi(){
 		$ketnoi = new clsKetnoi();

@@ -1,24 +1,37 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: Ly Thanh Ngo
+ * Date: 15/05/2018
+ * Time: 8:28 AM
+ */
+?>
+    <div class="tieudechinh">
+        <div class="tentieudechinh" style="width: fit-content;">
+            <img src="images/chi-muc.png" width="27" height="27" align="absmiddle"><a><?php echo ten_chuyen_muc($id); ?></a>
+        </div>
+        <div class="clear"></div>
+        <div class="line"></div>
+    </div>
 <div id="cottrai">
-    <?php if (empty($bv)) {
-        echo "Không tìm thấy bài viết";
-    }else{  ?>
-    <div class="chi-tiet-bai-viet">
-        <div class="vlu-chi-tiet-header-bai-viet">
-            <article class="vlu-chi-tiet-hinh-anh-tin" style="background-image: url('<?php echo $bv['HINHANH'] ?>')">
-                <a href="?p=xemtin&id=<?php echo $bv['IDBV'] ?>&tieude=<?php echo $bv['LINKBV'] ?>">
-                    <div class="vlu-chi-tiet-link-bai-viet">
-                        <div class="vlu-chi-tieu-tieu-de-bai-viet"><?php echo $bv['TENBV'] ?></div>
-                        <div class="vlu-chi-tiet-thoi-gian-bai-viet"><i class="far fa-clock"></i>&nbsp;
-                            <?php if(empty($bv['NGAYDANG'])) echo "Đang cập nhật"; else echo $bv['NGAYDANG']; ?>&nbsp;&nbsp;|&nbsp;&nbsp;Lượt xem: <?php echo $bv['LUOTXEM'] ?></div>
-                    </div>
-                </a>
-            </article>
-        </div>
-        <div class="vlu-chi-tiet-bai-viet">
-            <?php echo $bv['NOIDUNG'] ?>
-        </div>
-    </div>   
-    <?php } ?>
+    <?php
+    $d_tin = mysqli_num_rows($tin);
+     if ($d_tin==0) {
+        echo "Chuyên mục chưa có bài viết";
+    }else{ 
+        while ($row = mysqli_fetch_assoc($tin)){ ?>
+        <a href="?p=xemtin&id=<?php echo $row['IDBV']?>">
+            <div class="tin-con-phai">
+                <div class="hinh-anh-tin-con-phai" style="background-image: url('<?php echo $row['HINHANH'] ?>');"></div>
+                <div class="tin-con-phai-phai">
+                    <div class="tieu-de-tin-con-phai"><?php echo $row['TENBV'] ?></div>
+                    <div class="ngay-tin-con-phai"><i class="fas fa-calendar"></i>&nbsp;&nbsp;<?php if(empty($row['NGAYDANG'])) echo "Đang cập nhật"; else echo $row['NGAYDANG']; ?></div>
+                </div>
+            </div>
+        </a>
+    <?php 
+        }
+    }   ?>
 
 </div>
 <div id="cotphai">
@@ -65,10 +78,11 @@
             </div>
         </div>
     </div>
+
 </div>
 <script type="text/javascript">
     $("document").ready(function() {
-        $('#tintuc').addClass('current');
-        document.title = "<?php echo $bv['TENBV'] ?> | Phòng nghiên cứu khoa học & Hợp tác quốc tế VLUTE";
+        $('#htqt').addClass('current');
+        document.title = "<?php echo ten_chuyen_muc($id); ?> | Phòng nghiên cứu khoa học & Hợp tác quốc tế VLUTE";
     });
 </script> 

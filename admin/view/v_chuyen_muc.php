@@ -25,7 +25,8 @@ if (!isset($_SESSION["token"])) {include_once ("../../loi404.html");exit();}
                                 <tr style="background:#e9ecef;">
                                     <th class="giua">Tên chuyên mục</th>
                                     <th class="giua">Mô tả</th>
-                                    <th class="giua" style="width: 80px;">Thao tác</th>
+                                    <th class="giua">Loại chuyên mục</th>
+                                    <th class="giua" style="width: 100px;">Thao tác</th>
                                 </tr>
                                 </thead>
                                 <tbody>
@@ -34,6 +35,12 @@ if (!isset($_SESSION["token"])) {include_once ("../../loi404.html");exit();}
                                     echo "<tr>";
                                     echo "<td>".$row['TENCM']."</td>";
                                     echo "<td>".$row['MOTACM']."</td>";
+                                    if ($row['LOAICHUYENMUC']=='tintuc') {
+                                        echo "<td>Tin tức</td>";
+                                    }else
+                                    if ($row['LOAICHUYENMUC']=='hoptacquocte') {
+                                        echo "<td>Hợp tác quốc tế</td>";
+                                    }
                                     echo "<td><a class='btn btn-primary btn-sm' onclick='sua(this)' title='Sửa' lydata='".$row['IDCM']."'><i class=\"fas fa-edit\"></i></a>
                                     &ensp;<button class='btn btn-danger btn-sm xoa' title='Xóa' onclick='xoa(this)' lydata='".$row['IDCM']."'><i class='fas fa-trash'></i></button></td>";
                                     echo "</tr>";
@@ -44,6 +51,7 @@ if (!isset($_SESSION["token"])) {include_once ("../../loi404.html");exit();}
                                     <tr style="background:#e9ecef;">
                                         <th class="giua">Tên chuyên mục</th>
                                         <th class="giua">Mô tả</th>
+                                        <th class="giua">Loại chuyên mục</th>
                                         <th class="giua" style="width: 80px;">Thao tác</th>
                                     </tr>
                                 </tfoot>
@@ -73,8 +81,15 @@ if (!isset($_SESSION["token"])) {include_once ("../../loi404.html");exit();}
                     <input type="text" class="form-control" id="tencm" />
                 </div>
                 <div class="form-group">
-                    <label for="tags">Tên biểu mẫu <span class="text-danger">(*)</span></label>
+                    <label for="tags">Tên chuyên mục <span class="text-danger">(*)</span></label>
                     <textarea id="motacm" rows="4" class="form-control"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="tags">Loại chuyên mục <span class="text-danger">(*)</span></label>
+                    <select class="form-control" id="loaicm">
+                        <option value="tintuc">Tin tức</option>
+                        <option value="hoptacquocte">Hợp tác quốc tế</option>
+                    </select>
                 </div>
             </div>
             <div class="modal-footer">
@@ -100,9 +115,16 @@ if (!isset($_SESSION["token"])) {include_once ("../../loi404.html");exit();}
                     <input type="text" class="form-control" value="frfr" id="suatencm" />
                 </div>
                 <div class="form-group">
-                    <label for="tags">Tên biểu mẫu <span class="text-danger">(*)</span></label>
-                    <textarea id="suamotacm" rows="4" class="form-control">tttt</textarea>
+                    <label for="tags">Tên chuyên mục <span class="text-danger">(*)</span></label>
+                    <textarea id="suamotacm" rows="4" class="form-control"></textarea>
                     <input type="text" id="suaid" hidden="hidden" >
+                </div>
+                <div class="form-group">
+                    <label for="tags">Loại chuyên mục <span class="text-danger">(*)</span></label>
+                    <select class="form-control" id="sualoaicm">
+                        <option value="tintuc">Tin tức</option>
+                        <option value="hoptacquocte">Hợp tác quốc tế</option>
+                    </select>
                 </div>
             </div>
             <div class="modal-footer">
@@ -160,7 +182,8 @@ if (!isset($_SESSION["token"])) {include_once ("../../loi404.html");exit();}
                     type: 'POST',
                     data: {
                         ten: $('#tencm').val().trim(),
-                        mota: $('#motacm').val().trim()
+                        mota: $('#motacm').val().trim(),
+                        loai: $('#loaicm').val().trim()
                     },
                     beforeSend: function () {
                         canhbao('Đang xử lý dữ liệu');
@@ -173,6 +196,7 @@ if (!isset($_SESSION["token"])) {include_once ("../../loi404.html");exit();}
                             $('#bang-chuyen-muc').DataTable().row.add([
                                 $('#tencm').val().trim(),
                                 $('#motacm').val().trim(),
+                                $('#sualoaicm option:selected').text().trim(),
                                 "<a class='btn btn-primary btn-sm' onclick='sua(this)' title='Sửa' lydata='"+mang.ma+"'><i class='fas fa-edit'></i></a>" +
                                 "&ensp;<button class='btn btn-danger btn-sm' title='Xóa' onclick='xoa(this)' lydata='"+mang.ma+"'><i class='fas fa-trash'></i></button>"
                             ]).draw(false);
@@ -207,6 +231,7 @@ if (!isset($_SESSION["token"])) {include_once ("../../loi404.html");exit();}
                     data: {
                         ten: $('#suatencm').val().trim(),
                         mota: $('#suamotacm').val().trim(),
+                        loai: $("#sualoaicm").val().trim(),
                         ma: $('#suaid').val().trim()
                     },
                     beforeSend: function () {
@@ -219,6 +244,7 @@ if (!isset($_SESSION["token"])) {include_once ("../../loi404.html");exit();}
                             thanhcong('Sửa chuyên mục thành công');
                             $(obj).parent('td').parent('tr').find('td:nth-child(1)').text($('#suatencm').val().trim());
                             $(obj).parent('td').parent('tr').find('td:nth-child(2)').text($('#suamotacm').val().trim());
+                            $(obj).parent('td').parent('tr').find('td:nth-child(3)').text($('#sualoaicm option:selected').text().trim());
                             $('#modal-sua-chuyen-muc').find('input').val('');
                             $('#modal-sua-chuyen-muc').modal('hide');
                         }
@@ -272,6 +298,8 @@ if (!isset($_SESSION["token"])) {include_once ("../../loi404.html");exit();}
         lydata=$(t).attr('lydata');
         $('#suatencm').val($(t).parent('td').parent('tr').find('td:nth-child(1)').text().trim());
         $('#suamotacm').val($(t).parent('td').parent('tr').find('td:nth-child(2)').text().trim());
+        var loai = ($(t).parent('td').parent('tr').find('td:nth-child(3)').text().trim()=="Tin tức") ? "tintuc":"hoptacquocte"; 
+        $("#sualoaicm").val(loai).change()
         $('#suaid').val(lydata);
         obj = t;
         $('#modal-sua-chuyen-muc').modal('show');

@@ -88,7 +88,7 @@
                 <?php 
                 $tinmoi = lay_tin_moi();
                 while ($row = mysqli_fetch_assoc($tinmoi)) { ?>
-                <a href="?p=xemtin&id=<?php echo $row['IDBV']; ?>&tieude=<?php echo $row['TENBV']; ?>">
+                <a href="?p=xemtin&id=<?php echo $row['IDBV']; ?>&tieude=<?php echo $row['LINKBV']; ?>">
                     <div class="tincon">
                         <div class="hinhtin" style="background-image: url('<?php echo $row['HINHANH']; ?>');"></div>
                         <div class="tomtattin"><?php echo $row['TENBV'] ?></div>

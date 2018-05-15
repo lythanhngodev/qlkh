@@ -22,7 +22,7 @@
     $ketnoi = new clsKetnoi();
     $conn = $ketnoi->ketnoi();
     $linkcm = $ketnoi->to_slug($_POST['ten']).'-cm';
-    $sql = "UPDATE `chuyenmuc` SET `TENCM`='".$_POST['ten']."',`MOTACM`='".$_POST['mota']."',`LINKCM`='$linkcm' WHERE `IDCM` = '".$_POST['ma']."'";
+    $sql = "UPDATE `chuyenmuc` SET `TENCM`='".$_POST['ten']."',`MOTACM`='".$_POST['mota']."',`LINKCM`='$linkcm', `LOAICHUYENMUC` = '".$_POST['loai']."' WHERE `IDCM` = '".$_POST['ma']."'";
     if(mysqli_query($conn, $sql)===TRUE){
         $result['trangthai'] = 1;
     }
