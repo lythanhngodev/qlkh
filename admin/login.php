@@ -26,7 +26,7 @@
     if (!($ketnoi->tontai("SELECT * FROM nguoidung WHERE (BINARY MAIL = '$tdn' OR BINARY TENDANGNHAP = '$tdn') AND (BINARY MATKHAU = '".md5($pas)."') AND QUYEN!='khoa'"))) {
       ?>
         <script type="text/javascript">
-          $(document).ready(()=>{
+          $(document).ready(function(){
             swal("Ôi! Lỗi", "Tên đăng nhập hoặc mật khẩu chưa chính xác!", "error");
           });
         </script>
@@ -34,6 +34,6 @@
     }
     mysqli_close($conn);
   }
- ?><script src="vendor/jquery/jquery.min.js"></script><script src="vendor/bootstrap/js/bootstrap.min.js"></script><script src="vendor/jquery.cookie/jquery.cookie.js"> </script><script src="vendor/jquery-validation/jquery.validate.min.js"></script><script src="vendor/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"></script><script src="js/front.js"></script><script type="text/javascript">$(document).ready(()=>{var movementStrength = 25;var height = movementStrength / $(window).height();var width = movementStrength / $(window).width();$("#bg").mousemove(function(e){var pageX = e.pageX - ($(window).width() / 2);var pageY = e.pageY - ($(window).height() / 2);var newvalueX = width * pageX * -1 - 25;var newvalueY = height * pageY * -1 - 50;$('#bg').css("background-position", newvalueX+"px "+newvalueY+"px");});});</script>
+ ?><script src="vendor/jquery/jquery.min.js"></script><script src="vendor/bootstrap/js/bootstrap.min.js"></script><script src="vendor/jquery.cookie/jquery.cookie.js"> </script><script src="vendor/jquery-validation/jquery.validate.min.js"></script><script src="vendor/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"></script><script src="js/front.js"></script><script type="text/javascript">$(document).ready(function(){var movementStrength = 25;var height = movementStrength / $(window).height();var width = movementStrength / $(window).width();$("#bg").mousemove(function(e){var pageX = e.pageX - ($(window).width() / 2);var pageY = e.pageY - ($(window).height() / 2);var newvalueX = width * pageX * -1 - 25;var newvalueY = height * pageY * -1 - 50;$('#bg').css("background-position", newvalueX+"px "+newvalueY+"px");});});</script>
   </body>
 </html>
