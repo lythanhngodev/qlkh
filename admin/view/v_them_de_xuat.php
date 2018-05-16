@@ -22,7 +22,6 @@
                     <a class="nav-item nav-link" data-toggle="tab" href="#nav-tong-quan" role="tab" aria-selected="false">Tổng quan</a>
                     <a class="nav-item nav-link" data-toggle="tab" href="#nav-thanh-vien" role="tab" aria-selected="false">Thành viên</a>
                     <a class="nav-item nav-link" data-toggle="tab" href="#nav-to-chuc-tham-gia" aria-selected="false">Tổ chức tham gia</a>
-                    <a class="nav-item nav-link" data-toggle="tab" href="#nav-thoi-gian-thuc-hien" aria-selected="false">Thời gian thực hiện</a>
                     <a class="nav-item nav-link" data-toggle="tab" href="#nav-du-kien-tien-do" aria-selected="false">Dự kiến tiến độ</a>
                     <a class="nav-item nav-link" data-toggle="tab" href="#nav-kinh-phi" aria-selected="false">Kinh phí</a>
                     <a class="nav-item nav-link" data-toggle="tab" href="#nav-ket-qua" aria-selected="false">Kết quả</a>
@@ -43,6 +42,20 @@
                         <label for="category" class="font-weight-bold" >Mục tiêu đề tài (<span class="text-danger">*</span>)</label>
                         <textarea class="form-control" id="muctieudetai" rows="5"></textarea>
                         <small id="emailHelp" class="form-text text-muted">Ghi mục tiêu tổng quát cần đạt ở mức độ cụ thể hơn tên đề tài và mục tiêu chi tiết nhưng không diễn giải quá cụ thể thay cho nội dung cần thực hiện của đề tài</small>
+                      </div>
+                      <div class="col-md-12"><hr></div>
+                      <div class="form-group col-md-4">
+                          <label for="category" class="font-weight-bold" >Tổng tháng thực hiện (<span class="text-danger">*</span>)</label>
+                          <input id="thangthuchiendetai" type="number" min="1" max="120" class="form-control" value="">
+                      </div>
+                      <div class="form-group col-md-4">
+                          <label for="category" class="font-weight-bold" >Tháng/Năm bắt đầu (<span class="text-danger">*</span>)</label>
+                          <input class="form-control" type="month" name="" id="thangnambatdaudetai">
+                      </div>
+
+                      <div class="form-group col-md-4">
+                          <label for="category" class="font-weight-bold" >Tháng/Năm kết thúc (<span class="text-danger">*</span>)</label>
+                          <input class="form-control" type="month" name="" id="thangnamketthucdetai">
                       </div>
                       <div class="col-md-12"><hr></div>
                       <div class="form-group col-md-4">
@@ -267,28 +280,6 @@ giao kết quả nghiên cứu đến người sử dụng. Phải nêu được
                       <br>
                   </div>
 
-                  <div class="tab-pane" id="nav-thoi-gian-thuc-hien" role="tabpanel" aria-labelledby="nav-contact-tab">
-                      <br>
-                      <div class="col-md-12">
-                          <div class="row">
-                              <div class="form-group col-md-3">
-                                  <label for="category" class="font-weight-bold" >Tổng tháng thực hiện (<span class="text-danger">*</span>)</label>
-                                  <input id="thangthuchiendetai" type="number" min="1" max="120" class="form-control" value="">
-                              </div>
-                              <div class="form-group col-md-3">
-                                  <label for="category" class="font-weight-bold" >Tháng/Năm bắt đầu (<span class="text-danger">*</span>)</label>
-                                  <input class="form-control" type="month" name="" id="thangnambatdaudetai">
-                              </div>
-
-                              <div class="form-group col-md-3">
-                                  <label for="category" class="font-weight-bold" >Tháng/Năm kết thúc (<span class="text-danger">*</span>)</label>
-                                  <input class="form-control" type="month" name="" id="thangnamketthucdetai">
-                              </div>
-                          </div>
-                      </div>
-
-                      <br>
-                  </div>
                 <div class="tab-pane" id="nav-du-kien-tien-do" role="tabpanel" aria-labelledby="nav-contact-tab">
                   <br>
                   <div class="col-md-12">
