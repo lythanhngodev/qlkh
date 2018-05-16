@@ -17,6 +17,9 @@
         <div class="vlu-chi-tiet-bai-viet">
             <?php echo $bv['NOIDUNG'] ?>
         </div>
+        <br>
+        <hr>
+        <br>
     </div>   
     <?php } ?>
 
@@ -44,6 +47,24 @@
                 $tinmoi = lay_tin_moi();
                 while ($row = mysqli_fetch_assoc($tinmoi)) { ?>
                 <a href="?p=xemtin&id=<?php echo $row['IDBV']; ?>&tieude=<?php echo $row['TENBV']; ?>">
+                    <div class="tincon">
+                        <div class="hinhtin" style="background-image: url('<?php echo $row['HINHANH']; ?>');"></div>
+                        <div class="tomtattin"><?php echo $row['TENBV'] ?></div>
+                    </div>  
+                </a>
+               <?php } ?>
+            </div>
+        </div>
+    </div>
+    <!-- HOẠT ĐỘNG HỢP TÁC QUỐC TẾ -->
+    <div class="muccon">
+        <h3>HĐ hợp tác quốc tế</h3>
+        <div class="tieudemuccon">
+            <div class="tinmoi">
+                <?php 
+                $htqt = lay_hoat_dong_hop_tac_quoc_te();
+                while ($row = mysqli_fetch_assoc($htqt)) { ?>
+                <a href="?p=xemtin&id=<?php echo $row['IDBV']; ?>&tieude=<?php echo $row['LINKBV']; ?>">
                     <div class="tincon">
                         <div class="hinhtin" style="background-image: url('<?php echo $row['HINHANH']; ?>');"></div>
                         <div class="tomtattin"><?php echo $row['TENBV'] ?></div>
