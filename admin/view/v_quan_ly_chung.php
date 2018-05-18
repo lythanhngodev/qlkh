@@ -13,6 +13,7 @@
                     <thead>
                         <tr style="background:#e9ecef;">
                             <th class="giua">Khoa bộ môn</th>
+                            <th class="giua">Tên viết tắt</th>
                             <th class="giua" style="width: 100px;">Thao tác</th>
                         </tr>
                     </thead>
@@ -20,6 +21,7 @@
                         <?php while ($row = mysqli_fetch_assoc($kbm)) { ?>
                         <tr>
                             <td><?php echo $row['TENKBM'] ?></td>
+                            <td><?php echo $row['TENTAT'] ?></td>
                             <td id="<?php echo $row['IDKBM'] ?>">
                                 <button class='btn btn-primary btn-sm suatdcm' onclick='suakbm(this)' title='Sửa'><i class="fas fa-edit"></i></button>&ensp;
                                 <button class='btn btn-danger btn-sm xoatdcm' onclick='xoakbm(this)' title='Xóa'><i class='fas fa-trash'></i></button>
@@ -370,6 +372,10 @@
                     <label for="tags">Tên khoa bộ môn</label>
                     <input type="text" class="form-control" id="tenkbm" />
                 </div>
+                <div class="form-group">
+                    <label for="tags">Tên viết tắt khoa bộ môn</label>
+                    <input type="text" class="form-control" id="tentatkbm" />
+                </div>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Đóng</button>
@@ -392,6 +398,10 @@
                 <div class="form-group">
                     <label for="tags">Tên khoa bộ môn</label>
                     <input type="text" class="form-control" id="tenkbmsua" />
+                </div>
+                <div class="form-group">
+                    <label for="tags">Tên viết tắt khoa bộ môn</label>
+                    <input type="text" class="form-control" id="tentatkbmsua" />
                 </div>
             </div>
             <div class="modal-footer">
@@ -1180,13 +1190,18 @@
                 khongthanhcong('Vui lòng nhập tên khoa bộ môn');
                 return;
             }
+            if ($('#tentatkbm').val().trim()==''){
+                khongthanhcong('Vui lòng nhập tên viết tắt khoa bộ môn');
+                return;
+            }
             if(kiemtraketnoi()){
                 // Ajax
                 $.ajax({
                     url: 'ajax/ajax_them_khoa_bo_mon.php',
                     type: 'POST',
                     data: {
-                        ten: $('#tenkbm').val().trim()
+                        ten: $('#tenkbm').val().trim(),
+                        tentat: $('#tentatkbm').val().trim()
                     },
                     beforeSend: function () {
                         canhbao('Đang xử lý dữ liệu');
@@ -1195,7 +1210,7 @@
                         $.notifyClose();
                         var mang = $.parseJSON(data);
                         if(mang.trangthai==1 && mang.ma!=0){
-                            var tr = "<tr><td>"+$('#tenkbm').val().trim()+"</td><td id='"+mang.ma+"'><button class='btn btn-primary btn-sm suatdcm' onclick='suakbm(this)' title='Sửa'><i class='fas fa-edit'></i></button>&ensp;<button class='btn btn-danger btn-sm xoatdcm' onclick='xoakbm(this)' title='Xóa'><i class='fas fa-trash'></i></button></td></tr>";
+                            var tr = "<tr><td>"+$('#tenkbm').val().trim()+"</td><td>"+$('#tentatkbm').val().trim()+"</td><td id='"+mang.ma+"'><button class='btn btn-primary btn-sm suatdcm' onclick='suakbm(this)' title='Sửa'><i class='fas fa-edit'></i></button>&ensp;<button class='btn btn-danger btn-sm xoatdcm' onclick='xoakbm(this)' title='Xóa'><i class='fas fa-trash'></i></button></td></tr>";
                             $("#bangkbm tbody").append(tr);
                             thanhcong('Thêm khoa bộ môn thành công');
                             $('#modal-them-khoa-bo-mon').find('input').val('');
@@ -1218,12 +1233,17 @@
                 khongthanhcong('Vui lòng nhập tên khoa bộ môn');
                 return;
             }
+            if ($('#tentatkbmsua').val().trim()==''){
+                khongthanhcong('Vui lòng nhập tên viết tắt khoa bộ môn');
+                return;
+            }
             if(kiemtraketnoi()){
                 $.ajax({
                     url: 'ajax/ajax_sua_khoa_bo_mon.php',
                     type: 'POST',
                     data: {
                         ten: $('#tenkbmsua').val().trim(),
+                        tentat: $('#tentatkbmsua').val().trim(),
                         ma: $(thiskbm).parent('td').attr('id')
                     },
                     beforeSend: function () {
@@ -1234,6 +1254,7 @@
                         var mang = $.parseJSON(data);
                         if(mang.trangthai==1 && mang.ma!=0){
                             $(thiskbm).parent('td').parent('tr').find('td:nth-child(1)').text($('#tenkbmsua').val().trim());
+                            $(thiskbm).parent('td').parent('tr').find('td:nth-child(2)').text($('#tentatkbmsua').val().trim());
                             thiskbm=null;
                             thanhcong('Sửa khoa bộ môn thành công');
                             $('#modal-sua-khoa-bo-mon').find('input').val('');
@@ -2440,6 +2461,7 @@
     });
     function suakbm(t){
         $('#tenkbmsua').val($(t).parent('td').parent('tr').find('td:nth-child(1)').text().trim());
+        $('#tentatkbmsua').val($(t).parent('td').parent('tr').find('td:nth-child(2)').text().trim());
         thiskbm = t;
         $('#modal-sua-khoa-bo-mon').modal('show');
     }

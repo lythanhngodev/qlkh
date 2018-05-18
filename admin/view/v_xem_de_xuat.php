@@ -502,11 +502,11 @@ if (!isset($_SESSION["token"])) {include_once ("../../loi404.html");exit();}
                                             <div class="form-group row">
                                                 <div class="col-md-12">
                                                     <br>
-                                                    <div class="col-md-12"><?php if($detai['DUYET']==1) echo "<span class='badge badge-success' style='font-size: 16px;'>Đề tài đã được duyệt</span>"; ?></div>
+                                                    <div class="col-md-12"><?php if($detai['TRANGTHAI']=='Đang thực hiện') echo "<span class='badge badge-success' style='font-size: 16px;'>Đề tài đã được duyệt</span>"; ?></div>
                                                     <hr>
                                                     <div class="col-md-12">
-                                                        <input type="radio" name="danhdau" <?php if($detai['DUYET']==1) echo "checked"; ?> id="duyet-de-tai" style="transform: scale(2); margin: 0px 10px;"> Đánh dấu nếu <b class="text-primary">DUYỆT</b> đề tài <br><br>
-                                                        <input type="radio" <?php if($detai['DUYET']!=1) echo "checked"; ?> name="danhdau" id="khong-duyet-de-tai" style="transform: scale(2); margin: 0px 10px;"> Đánh dấu nếu <b class="text-danger">KHÔNG DUYỆT</b> đề tài
+                                                        <input type="radio" <?php if($detai['TRANGTHAI']=='Đang thực hiện') echo "checked"; ?>  name="danhdauxd" id="duyet-de-tai" style="transform: scale(2); margin: 0px 10px;"> Đánh dấu nếu <b class="text-primary">DUYỆT</b> đề tài <br><br>
+                                                        <input type="radio" <?php if($detai['TRANGTHAI']!='Đang thực hiện') echo "checked"; ?> name="danhdauxd" id="khong-duyet-de-tai" style="transform: scale(2); margin: 0px 10px;"> Đánh dấu nếu <b class="text-danger">KHÔNG DUYỆT</b> đề tài
                                                         <br>
                                                     </div>
                                                     <table class="table table-bordered table-hover" style="background: #fff;">

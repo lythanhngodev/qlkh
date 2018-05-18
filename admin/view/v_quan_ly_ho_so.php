@@ -25,8 +25,8 @@
                     <div class="card-body">
                         <div id="ls-nckh" class="list-group">
                           <button class="list-group-item" id="phieudanhgiadecuong">Phiếu đánh giá đề cương</button>
-                          <button class="list-group-item" id="">Danh sách HĐ xét chọn đề tài</button>
-                          <button class="list-group-item" id="">Danh sách HĐ xét chọn đề tài</button>
+                          <button class="list-group-item" id="">Danh sách HĐ xét chọn</button>
+                          
                         </div>
                     </div>
                 </div>
@@ -38,6 +38,7 @@
                     </div>
                     <div class="card-body">
                         <div id="ls-nckh" class="list-group">
+                          <button class="list-group-item" id="danhsachhoidongnghiemthu">Danh sách HĐ nghiệm thu</button>
                           <button class="list-group-item" id="">Kế hoạch nghiệm thu đề tài</button>
                           <button class="list-group-item" id="">Phiếu đánh giá nghiệm thu</button>
                           <button class="list-group-item" id="">Tổng hợpHĐ đánh giá NT</button>
@@ -76,6 +77,29 @@
             if (kiemtraketnoi()){
                 $.ajax({
                     url: 'word/_phieudanhgiadecuong.php',
+                    dataType: 'text',
+                    type: 'post',
+                    data: {_token: '<?php echo $token; ?>'},
+                    beforeSend: function () {$('#noidung').html('<div class="progress"><div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div></div>'); },
+                    success: function(data){
+                        $.notifyClose();
+                        swal('Tốt','Tải dữ liệu thành công','success');
+                        $('#noidung').html(data);
+                    },
+                    error: function () {
+                        $.notifyClose();
+                       swal('Ôi! Lỗi','Vui lòng thử lại sau','error');
+                    }
+                });
+            } else
+                swal('Ôi! Lỗi','Không có kết nối internet','error');
+        }
+        else if (id=="danhsachhoidongnghiemthu") {
+            $('#tuychon').html('');
+            $('#noidung').html('');
+            if (kiemtraketnoi()){
+                $.ajax({
+                    url: 'word/_danhsachhoidongnghiemthu.php',
                     dataType: 'text',
                     type: 'post',
                     data: {_token: '<?php echo $token; ?>'},

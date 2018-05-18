@@ -20,7 +20,7 @@
  header("Cache-Control: must-revalidate, post-check=0, pre-check=0");
  header("content-disposition: attachment;filename=TranDucIT.doc");*/
 ?>
-<!DOCTYPE html>
+
 <html>
 <head>
 	<title></title>

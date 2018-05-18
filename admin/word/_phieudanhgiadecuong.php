@@ -1,6 +1,7 @@
 <?php session_start(); if (!isset($_SESSION["token"])) {include_once ("../../loi404.html");exit();} ?>
 <?php include_once "../../config.php"; ?>
 <?php 
+	sleep(1);
 	function lay_de_xuat_du_an(){
 		$ketnoi = new clsKetnoi();
 		$conn = $ketnoi->ketnoi();
@@ -46,7 +47,7 @@
 		            <td><?php echo $row['TENDETAI']; ?></td>
 		            <td><?php echo lay_ten_chu_nhiem_de_tai($row['IDDT']); ?></td>
 		            <td class="giua">
-		                <a href="word/phieu_danh_gia_de_cuong.php?id=<?php echo $row['IDDT']; ?>" target="_blank" class="btn btn-primary btn-sm"><i class="far fa-file-excel"></i> Xuất file</a>
+		                <a href="word/phieu_danh_gia_de_cuong.php?id=<?php echo $row['IDDT']; ?>" target="_blank" class="btn btn-warning btn-sm"><i class="far fa-file-word"></i> Xuất file</a>
 		            </td>
 		        </tr>
 		    <?php $stt++; } ?>

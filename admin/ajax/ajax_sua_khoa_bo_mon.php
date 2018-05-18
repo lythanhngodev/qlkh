@@ -14,11 +14,13 @@ $result = Array(
     $ketnoi = new clsKetnoi();
     $conn = $ketnoi->ketnoi();
     $ten = $_POST['ten'];
+    $tentat = $_POST['tentat'];
     $ma = $_POST['ma'];
     $sql = "
         UPDATE khoabomon 
         SET 
-            TENKBM = '$ten' 
+            TENKBM = '$ten',
+            TENTAT = '$tentat' 
         WHERE 
             IDKBM = '$ma' AND 
             (NOT EXISTS (SELECT * FROM (SELECT * FROM khoabomon) AS t WHERE BINARY t.TENKBM =  N'$ten'))

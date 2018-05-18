@@ -15,7 +15,8 @@ $result = Array(
     $ketnoi = new clsKetnoi();
     $conn = $ketnoi->ketnoi();
     $ten = $_POST['ten'];
-    $sql = "INSERT INTO `khoabomon`(`TENKBM`) SELECT * FROM (SELECT '$ten') AS tam WHERE NOT EXISTS (SELECT * FROM khoabomon WHERE `TENKBM` = N'$ten')";
+    $tentat = $_POST['tentat'];
+    $sql = "INSERT INTO `khoabomon`(`TENKBM`, TENTAT) SELECT * FROM (SELECT '$ten', '$tentat') AS tam WHERE NOT EXISTS (SELECT * FROM khoabomon WHERE `TENKBM` = N'$ten')";
     if(mysqli_query($conn, $sql)===TRUE){
         $ma = mysqli_insert_id($conn);
         $result['ma'] = $ma;
