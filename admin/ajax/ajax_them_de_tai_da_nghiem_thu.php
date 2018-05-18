@@ -85,13 +85,13 @@ function themdetai($diemdetai,$madetai,$ngaynghiemthu,$tendetai,$muctieu,$noidun
             $sql.= "INSERT INTO `baocaotiendo`(`IDDT`, `CVDATH`, `CVCANTH`, `DENGHI`, `NGAYBC`) VALUES ('$iddt','".$baocaotiendo[$i][0]."','".$baocaotiendo[$i][1]."','".$baocaotiendo[$i][2]."','".$baocaotiendo[$i][3]."');";
         // Thêm BTC xét duyệt
         for($i=0;$i<count($dgbtc);$i++)
-            $sql.= "INSERT INTO `xetduyetdetai`(`IDDT`, `IDND`, `VAITRO`, `LOAIHD`, `FILE`) VALUES ('$iddt','".$dgbtc[$i][1]."','".$dgbtc[$i][2]."','1','".$dgbtc[$i][3]."');";
+            $sql.= "INSERT INTO `xetduyetdetai`(`IDDT`, `IDND`, NHIEMVU, `LOAIHD`, `GHICHU`) VALUES ('$iddt','".$dgbtc[$i][1]."','".$dgbtc[$i][2]."','1','".$dgbtc[$i][3]."');";
         // Thêm TV xét duyệt
         for($i=0;$i<count($dgtv);$i++)
-            $sql.= "INSERT INTO `xetduyetdetai`(`IDDT`, `IDND`, `VAITRO`, `LOAIHD`, `FILE`) VALUES ('$iddt','".$dgtv[$i][1]."','".$dgtv[$i][2]."','0','".$dgtv[$i][3]."');";
+            $sql.= "INSERT INTO `xetduyetdetai`(`IDDT`, `IDND`, NHIEMVU, `LOAIHD`, `GHICHU`) VALUES ('$iddt','".$dgtv[$i][1]."','".$dgtv[$i][2]."','0','".$dgtv[$i][3]."');";
         // Thêm TV nghiệm thu
         for($i=0;$i<count($nttv);$i++)
-            $sql.= "INSERT INTO `xetduyetnghiemthu`(`IDDT`, `IDND`, `YKIEN`,`FILE`) VALUES ('$iddt','".$nttv[$i][1]."','".$nttv[$i][2]."','".$nttv[$i][3]."');";
+            $sql.= "INSERT INTO `xetduyetnghiemthu`(`IDDT`, `IDND`, NHIEMVU,`GHICHU`) VALUES ('$iddt','".$nttv[$i][1]."','".$nttv[$i][2]."','".$nttv[$i][3]."');";
         // Thêm kinh phí thực hiện đề tài
         for($i=0;$i<count($kinhphichitiet);$i++){
             $khoanchi = $kinhphichitiet[$i][0];

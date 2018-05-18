@@ -15,7 +15,7 @@
 		}
 		$ketnoi = new clsKetnoi();
 		$conn = $ketnoi->ketnoi();
-		$hoi="UPDATE xetduyetnghiemthu SET `YKIEN` = '$yk' WHERE IDND='$nd' and IDDT = '$dt'";
+		$hoi="UPDATE xetduyetnghiemthu SET NHIEMVU = '$yk' WHERE IDND='$nd' and IDDT = '$dt'";
 		if(mysqli_query($conn, $hoi)===TRUE){
 			$dem = mysqli_affected_rows($conn);
 			if($dem>0) return true;else return false;

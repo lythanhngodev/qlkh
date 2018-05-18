@@ -14,7 +14,7 @@
 	<!-- Google SEO -->
 	<meta name="google" content="nositelinkssearchbox" />
 	<meta name="google" content="notranslate" />
-	<meta name="keywords" content="Phong nghien cuu khoa hoc truong dai hoc su pham ky thuat vinh long, nckh vlute, VLUTE SCIENTIFIC RESEARCH, VLUTE SCIENTIFIC RESEARCH, SR VLUTE" />
+	<meta name="keywords" content="Phong nghien cuu khoa hoc truong dai hoc su pham ky thuat vinh long, nckh vlute, VLUTE SCIENTIFIC RESEARCH, VLUTE SCIENTIFIC RESEARCH, SR VLUTE, nckh vlute, nghien cuu khoa hoc vlute, nghien cuu khoa hoc su pham ky thuat vinh long" />
 	<base href="<?php echo $qlkh['HOSTGOC'] ?>" />
 
 	<script defer src="fontawesome/svg-with-js/js/fontawesome-all.js"></script>

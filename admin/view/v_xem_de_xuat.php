@@ -40,13 +40,11 @@ if (!isset($_SESSION["token"])) {include_once ("../../loi404.html");exit();}
                                             <input type="text" class="form-control" id="madetai" value="<?php echo $detai['MADETAI']; ?>"><hr>
                                             <button class="btn btn-primary" id="luumdt">Lưu mã</button>
                                         </div>
-                                        <?php if ($trangthaidt == 'Đang thực hiện' || $trangthaidt == 'Đã nghiệm thu') { ?>
                                         <div class="form-group col-md-3">
                                             <label for="category" class="font-weight-bold giua" >Điểm đề tài</label>
                                             <input type="number" min="0" max="100" class="form-control giua" id="diemdetai" value="<?php echo $detai['DIEM']; ?>"><hr>
                                             <button class="btn btn-primary" id="luuddt">Lưu điểm</button>
-                                        </div>    
-                                        <?php } ?>
+                                        </div>
                                         <?php if ($detai['DUYET']==0) { ?>
                                         <div class="form-group col-md-6">
                                             <label for="category" class="font-weight-bold" >Duyệt đề tài này nếu đề tài này đã từng có trước đây</label><hr>
@@ -433,7 +431,8 @@ if (!isset($_SESSION["token"])) {include_once ("../../loi404.html");exit();}
                                                             <tr style="background: #009688;color: #fff;">
                                                                 <th class="giua">Tên thành viên</th>
                                                                 <th class="an">IDTV</th>
-                                                                <th>Vai trò</th>
+                                                                <th>Nhiệm vụ</th>
+                                                                <th>Ghi chú</th>
                                                                 <th class="giua" style="width: 50px;">Xóa</th>
                                                             </tr>
                                                             <?php
@@ -442,15 +441,12 @@ if (!isset($_SESSION["token"])) {include_once ("../../loi404.html");exit();}
                                             <tr>
                                                 <td>".$row['HOTEN']." ".$row['NGAYSINH']."</td>
                                                 <td class='an'>".$row['IDND']."</td>
-                                                <td><textarea class='form-control' rows='2'>".$row['VAITRO']."</textarea></td>";
-                                                if ($trangthaidt=='Đang xét duyệt')
+                                                <td><textarea class='form-control' rows='2'>".$row['NHIEMVU']."</textarea></td><td><textarea class='form-control' rows='2'>".$row['GHICHU']."</textarea></td>";
                                                 echo "<td class='giua' style='width:50px;'><button class='xoabtc'><i class='fas fa-times do'></i></button></td></tr>";
-                                            else echo "<td></td></tr>";
                                                             }
                                                             ?>
                                                         </table>
                                                     </div>
-                                                    <?php if ($trangthaidt=='Đang xét duyệt'){ ?>
                                                     <div class="col-md-6">
                                                         <label class="font-weight-bold col-md-12">Danh sách thành viên</label>
                                                         <select id="chontvbtc" class="form-control selectpicker" data-live-search="true">
@@ -460,7 +456,6 @@ if (!isset($_SESSION["token"])) {include_once ("../../loi404.html");exit();}
                                                             } ?>
                                                         </select>
                                                     </div>
-                                                    <?php } ?>
                                                     <div class="col-md-12">
                                                         <label class="font-weight-bold col-md-12">Hội đồng xét duyệt đề tài</label>
                                                         <hr>
@@ -471,7 +466,8 @@ if (!isset($_SESSION["token"])) {include_once ("../../loi404.html");exit();}
                                                             <tr style="background: #009688;color: #fff;">
                                                                 <th class="giua">Tên thành viên</th>
                                                                 <th class="an">IDTV</th>
-                                                                <th>Vai trò</th>
+                                                                <th>Nhiệm vụ</th>
+                                                                <th>Ghi chú</th>
                                                                 <th class="giua" style="width: 50px;">Xóa</th>
                                                             </tr>
                                                             <?php
@@ -480,18 +476,14 @@ if (!isset($_SESSION["token"])) {include_once ("../../loi404.html");exit();}
                                             <tr>
                                                 <td>".$row['HOTEN']." ".$row['NGAYSINH']."</td>
                                                 <td class='an'>".$row['IDND']."</td>
-                                                <td><textarea class='form-control' rows='2'>".$row['VAITRO']."</textarea></td>";
-                                             if ($trangthaidt=='Đang xét duyệt')
+                                                <td><textarea class='form-control' rows='2'>".$row['NHIEMVU']."</textarea></td><td><textarea class='form-control' rows='2'>".$row['GHICHU']."</textarea></td>";
                                                 echo "<td class='giua' style='width:50px;'><button class='xoabtc'><i class='fas fa-times do'></i></button></td></tr>";
-                                            else echo "<td></td></tr>";
                                                             }
                                                             ?>
                                                         </table>
-                                                         <?php if ($trangthaidt=='Đang xét duyệt'){ ?>
                                                         <button class="btn btn-primary" id="luutvdg"><i class="fas fa-save"></i>&ensp;Lưu danh sách</button>
-                                                        <?php } ?>
+                                                        <a class="btn btn-warning" href="word/phieu_danh_gia_de_cuong.php?id=<?php echo $detai['IDDT']; ?>" ><i class="far fa-file-excel"></i>&ensp;Xuất phiếu đánh giá</a>
                                                     </div>
-                                                    <?php if ($trangthaidt=='Đang xét duyệt'){ ?>
                                                     <div class="col-md-6">
                                                         <label class="font-weight-bold col-md-12">Danh sách thành viên</label>
                                                         <select id="chonbtc" class="form-control selectpicker" data-live-search="true">
@@ -503,7 +495,6 @@ if (!isset($_SESSION["token"])) {include_once ("../../loi404.html");exit();}
                                                             } ?>
                                                         </select>
                                                     </div>
-                                                    <?php } ?>
                                                 </div>
                                             </div>
                                         </div>
@@ -511,44 +502,30 @@ if (!isset($_SESSION["token"])) {include_once ("../../loi404.html");exit();}
                                             <div class="form-group row">
                                                 <div class="col-md-12">
                                                     <br>
-                                                    <?php $trangthaidt = $detai['TRANGTHAI'];
-                                                        if($trangthaidt=='Đang thực hiện' || $trangthaidt=='Đã nghiệm thu'){
-                                                        ?>
-                                                    <div class="col-md-12"><?php echo "<span class='badge badge-success' style='font-size: 16px;'>Đề tài đã được duyệt</span>"; ?></div>
+                                                    <div class="col-md-12"><?php if($detai['DUYET']==1) echo "<span class='badge badge-success' style='font-size: 16px;'>Đề tài đã được duyệt</span>"; ?></div>
                                                     <hr>
-                                                    <?php } ?>
                                                     <div class="col-md-12">
-                                                        <?php
-                                                        if($trangthaidt=='Đang xét duyệt'){
-                                                        ?>
-                                                        <input type="radio" name="danhdau" id="duyet-de-tai" style="transform: scale(2); margin: 0px 10px;"> Đánh dấu nếu <b>DUYỆT</b> đề tài <br><br>
-                                                        <input type="radio" checked name="danhdau" id="khong-duyet-de-tai" style="transform: scale(2); margin: 0px 10px;"> Đánh dấu nếu <b>KHÔNG DUYỆT</b> đề tài
-                                                        <?php } ?>
+                                                        <input type="radio" name="danhdau" <?php if($detai['DUYET']==1) echo "checked"; ?> id="duyet-de-tai" style="transform: scale(2); margin: 0px 10px;"> Đánh dấu nếu <b class="text-primary">DUYỆT</b> đề tài <br><br>
+                                                        <input type="radio" <?php if($detai['DUYET']!=1) echo "checked"; ?> name="danhdau" id="khong-duyet-de-tai" style="transform: scale(2); margin: 0px 10px;"> Đánh dấu nếu <b class="text-danger">KHÔNG DUYỆT</b> đề tài
                                                         <br>
                                                     </div>
                                                     <table class="table table-bordered table-hover" style="background: #fff;">
                                                         <tr style="background: #009688;color: #fff;">
                                                             <th class="giua">Tên thành viên</th>
-                                                            <th class="giua">Vai trò</th>
-                                                            <th class="giua">File đánh giá</th>
+                                                            <th class="giua">Nhiệm vụ</th>
+                                                            <th class="giua">Ghi chú</th>
                                                         </tr>
                                                         <?php
                                                         while ($row = mysqli_fetch_assoc($kqxd)){
                                                             echo "<tr>";
                                                             echo "<td>".$row['HOTEN']."</td>";
-                                                            echo "<td>".$row['VAITRO']."</td>";
-                                                            if ($row['FILE']!=''){
-                                                                echo "<td class='giua'><a href='".$qlkh['HOSTGOC']."files/".$row['FILE']."'><i class='fas fa-download faa-float animated'></i>&ensp;Tải về</a></td>";
-                                                            }
-                                                            else
-                                                                echo "<td class='giua'>Không có file</td>";
+                                                            echo "<td>".$row['NHIEMVU']."</td>";
+                                                            echo "<td>".$row['GHICHU']."</td>";
                                                             echo "</tr>";
                                                         }
                                                         ?>
                                                     </table>
-                                                    <?php if ($trangthaidt=='Đang xét duyệt'){
-                                                        echo "<button class=\"btn btn-primary\" id=\"luukqxd\"><i class=\"fas fa-save\"></i>&ensp;Lưu kết quả xét duyệt</button>";
-                                                    } ?>
+                                                        <button class="btn btn-primary" id="luukqxd"><i class="fas fa-save"></i>&ensp;Lưu kết quả xét duyệt</button>
                                                 </div>
                                             </div>
                                         </div>
@@ -557,8 +534,6 @@ if (!isset($_SESSION["token"])) {include_once ("../../loi404.html");exit();}
                                 <br>
                             </div>
                             <!-- NGHIỆM THU ĐỀ TÀI -->
-                            <?php
-                                if($trangthaidt!='Chờ gửi đề xuất' && $trangthaidt!='Đang xét duyệt'){ ?>
                             <div class="tab-pane" id="nav-nghiem-thu" role="tabpanel" aria-labelledby="nav-contact-tab">
                                 <br>
                                 <div class="col-md-12">
@@ -581,30 +556,28 @@ if (!isset($_SESSION["token"])) {include_once ("../../loi404.html");exit();}
                                                             <tr style="background: #009688;color: #fff;">
                                                                 <th class="giua">Tên thành viên</th>
                                                                 <th class="an">IDTV</th>
-                                                                <th>Vai trò</th>
+                                                                <th class="giua">Nhiệm vụ</th>
+                                                                <th class="giua">Ghi chú</th>
                                                                 <th class='giua' style='width: 50px;'>Xóa</th>
                                                             </tr>
                                                             <?php
                                                             while ($row = mysqli_fetch_assoc($tvnt)){
                                                                 echo "
-                                                                    <tr>
+                                                                    <tr style='text-align:center'>
                                                                         <td>".$row['HOTEN']." ".$row['NGAYSINH']."</td>
                                                                         <td class='an'>".$row['IDND']."</td>
-                                                                        <td><textarea class='form-control' rows='2' readonly>Đánh giá viên</textarea></td>";
+                                                                        <td><textarea class='form-control' rows='2'>".$row['NHIEMVU']."</textarea></td><td><textarea class='form-control' rows='2'>".$row['GHICHU']."</textarea></td>";
                                                                 if ($trangthaidt=='Đang thực hiện')
                                                                 echo "<td class='giua' style='width:50px;'><button class='xoatvnt'><i class='fas fa-times do'></i></button></td></tr>";
                                                                 else echo "<td></td></tr>";
                                                                 }
                                                             ?>
                                                         </table>
-                                                        <?php if ($trangthaidt=='Đang thực hiện'){ ?>
                                                         <button class="btn btn-primary" id="luutvnt"><i class="fas fa-save"></i>&ensp;Lưu danh sách</button>
-                                                        <?php } ?>
                                                     </div>
-                                                        <?php if ($trangthaidt=='Đang thực hiện'){ ?>
                                                         <div class="col-md-6">
                                                             <label class="font-weight-bold col-md-12">Danh sách thành viên</label>
-                                                            <select id="chontvnt" class="form-control selectpicker" data-live-search="true">
+                                                            <select id="chontvnt" class="form-control selectpicker" data-live-search="true" >
                                                                 <option value="bnt" selected>---- Chọn thành viên ---</option>
                                                                 <?php
                                                                 $thanhvienxetduyet = thanh_vien_xet_duyet($iddt);
@@ -613,7 +586,6 @@ if (!isset($_SESSION["token"])) {include_once ("../../loi404.html");exit();}
                                                                 } ?>
                                                             </select>
                                                         </div>   
-                                                        <?php } ?>  
                                                 </div>
                                             </div>
                                         </div>
@@ -628,46 +600,32 @@ if (!isset($_SESSION["token"])) {include_once ("../../loi404.html");exit();}
                                                         <div class="col-md-12"><label class="font-weight-bold">Kết quả nghiệm thu&ensp;</label></div>
                                                         <hr>
                                                     <?php } ?>
-                                                    <?php
-                                                        if($trangthaidt=='Đã nghiệm thu'){
-                                                        ?>
                                                     <div class="col-md-12"><?php echo "<span class='badge badge-success' style='font-size: 16px;'>Đề tài đã được nghiệm thu</span>"; ?></div>
                                                     Ngày nghiệm thu: <b><?php echo date("d-m-Y", strtotime($row['THOIGIANNGHIEMTHU'])); ?></b>
                                                     <hr>
-                                                    <?php } ?>
                                                     <div class="col-md-12">
-                                                        <?php
-                                                        if($trangthaidt=='Đang thực hiện'){
-                                                            ?>
-                                                            <input type="radio" name="danhdau" id="nghiem-thu-de-tai" style="transform: scale(2); margin: 0px 10px;"> Đánh dấu nếu <b>NGHIỆM THU</b> đề tài <br><br>
-                                                            <input type="radio" checked name="danhdau" id="khong-nghiem-thu-de-tai" style="transform: scale(2); margin: 0px 10px;"> Đánh dấu nếu <b>KHÔNG NGHIỆM THU</b> đề tài <br><br>
-                                                            Ngày nghiệm thu: <input type="date" name="" id="ngaynghiemthu">
-                                                        <?php } ?>
+                                                        <input type="radio" name="danhdau" id="nghiem-thu-de-tai" style="transform: scale(2); margin: 0px 10px;"> Đánh dấu nếu <b>NGHIỆM THU</b> đề tài <br><br>
+                                                        <input type="radio" checked name="danhdau" id="khong-nghiem-thu-de-tai" style="transform: scale(2); margin: 0px 10px;"> Đánh dấu nếu <b>KHÔNG NGHIỆM THU</b> đề tài <br><br>
+                                                        Ngày nghiệm thu: <input type="date" name="" id="ngaynghiemthu">
                                                         <br>
                                                     </div>
                                                     <table class="table table-bordered table-hover" style="background: #fff;">
                                                         <tr style="background: #009688;color: #fff;">
                                                             <th class="giua">Tên thành viên</th>
-                                                            <th class="giua">Ý kiến</th>
-                                                            <th class="giua">File nghiệm thu</th>
+                                                            <th class="giua">Nhiệm vụ</th>
+                                                            <th class="giua">Ghi chú</th>
                                                         </tr>
                                                         <?php
                                                         while ($row = mysqli_fetch_assoc($kqnt)){
-                                                            echo "<tr>";
+                                                            echo "<tr style='text-align:center'>";
                                                             echo "<td>".$row['HOTEN']."</td>";
-                                                            echo "<td>".$row['YKIEN']."</td>";
-                                                            if ($row['FILE']!=''){
-                                                                echo "<td class='giua'><a href='".$qlkh['HOSTGOC']."files/".$row['FILE']."'><i class='fas fa-download faa-float animated'></i>&ensp;Tải về</a></td>";
-                                                            }
-                                                            else
-                                                                echo "<td class='giua'>Không có file</td>";
+                                                            echo "<td>".$row['NHIEMVU']."</td>";
+                                                            echo "<td>".$row['GHICHU']."</td>";
                                                             echo "</tr>";
                                                         }
                                                         ?>
                                                     </table>
-                                                    <?php if ($trangthaidt=='Đang thực hiện'){
-                                                        echo "<button class=\"btn btn-primary\" id=\"luukqnt\"><i class=\"fas fa-save\"></i>&ensp;Lưu kết quả nghiệm thu</button>";
-                                                    } ?>
+                                                        <button class="btn btn-primary" id="luukqnt"><i class="fas fa-save"></i>&ensp;Lưu kết quả nghiệm thu</button>
                                                 </div>
                                             </div>
                                         </div>
@@ -675,7 +633,6 @@ if (!isset($_SESSION["token"])) {include_once ("../../loi404.html");exit();}
                                 </div>
                                 <br>
                             </div>
-                            <?php } ?>
                             <div class="tab-pane" id="nav-tai-lieu-dinh-kem" role="tabpanel" aria-labelledby="nav-contact-tab">
                                 <br>
                                 <div class="col-md-12 giua">
@@ -801,7 +758,7 @@ if (!isset($_SESSION["token"])) {include_once ("../../loi404.html");exit();}
                 if (tontai==0) {
                     if(sodong<10){
                         //them tac gia vao danh sach
-                        var tr = "<tr><td>"+$('#chonbtc option:selected').text()+"</td><td class='an'>"+$(this).find('option:selected').val()+"</td><td><textarea class='form-control' rows='2'></textarea></td><td class='giua' style='width:50px;'><button class='xoabtc'><i class='fas fa-times do'></i></button></td></tr>";
+                        var tr = "<tr><td>"+$('#chonbtc option:selected').text()+"</td><td class='an'>"+$(this).find('option:selected').val()+"</td><td><textarea class='form-control' rows='2'></textarea></td></td><td><textarea class='form-control' rows='2'></textarea></td><td class='giua' style='width:50px;'><button class='xoabtc'><i class='fas fa-times do'></i></button></td></tr>";
                         $('#bangtvdg').append(tr);
                     }else khongthanhcong('Chỉ được thêm 9 thành viên');
                 }
@@ -831,7 +788,7 @@ if (!isset($_SESSION["token"])) {include_once ("../../loi404.html");exit();}
                 if (tontai==0) {
                     if(sodong<5){
                         //them tac gia vao danh sach
-                        var tr = "<tr><td>"+$('#chontvbtc option:selected').text()+"</td><td class='an'>"+$(this).find('option:selected').val()+"</td><td><textarea class='form-control' rows='2'></textarea></td><td class='giua' style='width:50px;'><button class='xoabtc'><i class='fas fa-times do'></i></button></td></tr>";
+                        var tr = "<tr><td>"+$('#chontvbtc option:selected').text()+"</td><td class='an'>"+$(this).find('option:selected').val()+"</td><td><textarea class='form-control' rows='2'></textarea></td></td><td><textarea class='form-control' rows='2'></textarea></td><td class='giua' style='width:50px;'><button class='xoabtc'><i class='fas fa-times do'></i></button></td></tr>";
                         $('#bangbtc').append(tr);
                     }else khongthanhcong('Chỉ được thêm 4 thành viên');
                 }
@@ -861,7 +818,7 @@ if (!isset($_SESSION["token"])) {include_once ("../../loi404.html");exit();}
                 if (tontai==0) {
                     if(sodong<5){
                         //them tac gia vao danh sach
-                        var tr = "<tr><td>"+$('#chontvnt option:selected').text()+"</td><td class='an'>"+$(this).find('option:selected').val()+"</td><td><textarea class='form-control' rows='2' readonly>Đánh giá viên</textarea></td><td class='giua' style='width:50px;'><button class='xoatvnt'><i class='fas fa-times do'></i></button></td></tr>";
+                        var tr = "<tr><td>"+$('#chontvnt option:selected').text()+"</td><td class='an'>"+$(this).find('option:selected').val()+"</td><td><textarea class='form-control' rows='2'></textarea></td><td><textarea class='form-control' rows='2' ></textarea></td><td class='giua' style='width:50px;'><button class='xoatvnt'><i class='fas fa-times do'></i></button></td></tr>";
                         $('#bangtvnt').append(tr);
                     }else khongthanhcong('Chỉ được thêm 4 thành viên');
                 }
@@ -877,7 +834,7 @@ if (!isset($_SESSION["token"])) {include_once ("../../loi404.html");exit();}
                 var cols = [];
                 var dem = 1;
                 $(this).find('td:not(:last)').each(function(i, col) {
-                    if(dem == 3){
+                    if(dem == 3 || dem == 4){
                         cols.push($(this).find('textarea').val());
                     }
                     else{
@@ -887,12 +844,13 @@ if (!isset($_SESSION["token"])) {include_once ("../../loi404.html");exit();}
                 });
                 btc.push(cols);
             });
+
             var tvdg = [];
             $('#bangtvdg').find('tr:not(:first)').each(function(i, row) {
                 var cols = [];
                 var dem = 1;
                 $(this).find('td:not(:last)').each(function(i, col) {
-                    if(dem == 3){
+                    if(dem == 3 || dem == 4){
                         cols.push($(this).find('textarea').val());
                     }
                     else{
@@ -902,7 +860,7 @@ if (!isset($_SESSION["token"])) {include_once ("../../loi404.html");exit();}
                 });
                 tvdg.push(cols);
             });
-            if(!(jQuery.isEmptyObject(btc)) || !(jQuery.isEmptyObject(tvdg))){
+            if(!(jQuery.isEmptyObject(btc)) && !(jQuery.isEmptyObject(tvdg))){
                 if (kiemtraketnoi()) {
                     $.ajax({
                         url : "ajax/ajax_thanh_vien_dang_gia_de_tai.php",
@@ -916,7 +874,7 @@ if (!isset($_SESSION["token"])) {include_once ("../../loi404.html");exit();}
                         success : function (data){
                             var kq = $.parseJSON(data);
                             if(kq.trangthai==1)
-                                thanhcong('Đã lưu thành viên xét duyệt đề tài');
+                                swal('Tốt', 'Đã lưu thành viên xét duyệt đề tài', 'success');
                             else
                                 khongthanhcong('Đã xảy ra lỗi, vui lòng thử lại');
                         },
@@ -928,7 +886,7 @@ if (!isset($_SESSION["token"])) {include_once ("../../loi404.html");exit();}
                 else
                     canhbao("Hiện không có kết nối internet");
             }
-            else khongthanhcong('Chưa chọn thành viên nghiệm thu đề tài');
+            else khongthanhcong('Chưa chọn thành viên ban tổ chức hoặc thành viên xét duyêt');
         });
         // Ajax nghiệm thu
         $("#luutvnt").click(function(){
@@ -938,7 +896,7 @@ if (!isset($_SESSION["token"])) {include_once ("../../loi404.html");exit();}
                 var cols = [];
                 var dem = 1;
                 $(this).find('td:not(:last)').each(function(i, col) {
-                    if(dem == 3){
+                    if(dem == 3 || dem==4){
                         cols.push($(this).find('textarea').val());
                     }
                     else{
@@ -999,6 +957,9 @@ if (!isset($_SESSION["token"])) {include_once ("../../loi404.html");exit();}
                         var kq = $.parseJSON(data);
                         if(kq.trangthai==1){
                             swal('Tốt','Đã duyệt','success');
+                            setTimeout(function () {
+                                window.location.reload(true);
+                            },800);                            
                             $('#luukqxd').prop("disabled",true);
                         }
                         else
@@ -1039,6 +1000,9 @@ if (!isset($_SESSION["token"])) {include_once ("../../loi404.html");exit();}
                         var kq = $.parseJSON(data);
                         if(kq.trangthai==1){
                             swal('Tốt','Đã nghiệm thu','success');
+                            setTimeout(function () {
+                                window.location.reload(true);
+                            },800);
                             $('#luukqxd').prop("disabled",true);
                         }
                         else

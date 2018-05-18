@@ -94,6 +94,9 @@
             case 'dieuchinhdetai':
                 include("control/c_dieu_chinh_de_tai.php");
                 break;
+            case 'quanlyhoso':
+                include("control/c_quan_ly_ho_so.php");
+                break;
 			default:
 				# code...
 				break;

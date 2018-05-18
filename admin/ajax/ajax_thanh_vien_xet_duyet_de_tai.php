@@ -24,9 +24,9 @@ function themthanhvienxetduyet($tc, $tv, $dt){
     $conn = $ketnoi->ketnoi();
     $sql = "DELETE FROM xetduyetdetai WHERE IDDT = '$dt';";
     for($i=0;$i<count($tc);$i++)
-        $sql.= "INSERT INTO `xetduyetdetai`(`IDDT`, `IDND`, `VAITRO`, `LOAIHD`) VALUES ('$dt','".$tc[$i][1]."','".$tc[$i][2]."','1');";
+        $sql.= "INSERT INTO `xetduyetdetai`(`IDDT`, `IDND`, NHIEMVU, `LOAIHD`) VALUES ('$dt','".$tc[$i][1]."','".$tc[$i][2]."','1');";
     for($i=0;$i<count($tv);$i++)
-        $sql.= "INSERT INTO `xetduyetdetai`(`IDDT`, `IDND`, `VAITRO`) VALUES ('$dt','".$tv[$i][1]."','".$tv[$i][2]."');";
+        $sql.= "INSERT INTO `xetduyetdetai`(`IDDT`, `IDND`, NHIEMVU) VALUES ('$dt','".$tv[$i][1]."','".$tv[$i][2]."');";
     if(mysqli_multi_query($conn,$sql)){
         mysqli_close($conn);
         return true;

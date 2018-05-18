@@ -124,7 +124,7 @@ function thanh_vien_xet_duyet($iddt){
 function thanh_vien_xet_duyet_da_chon($iddt){
     $ketnoi = new clsKetnoi();
     $conn = $ketnoi->ketnoi();
-    $query = "SELECT DISTINCT xd.IDND,CONCAT(nd.HO,' ',nd.TEN) as HOTEN,nd.NGAYSINH,xd.VAITRO FROM xetduyetdetai xd, nguoidung nd WHERE xd.LOAIHD = '0' AND xd.IDND = nd.IDND AND xd.IDDT = '$iddt'";
+    $query = "SELECT DISTINCT xd.IDND,CONCAT(nd.HO,' ',nd.TEN) as HOTEN,nd.NGAYSINH,xd.NHIEMVU, xd.GHICHU FROM xetduyetdetai xd, nguoidung nd WHERE xd.LOAIHD = '0' AND xd.IDND = nd.IDND AND xd.IDDT = '$iddt'";
     $result = mysqli_query($conn, $query);
     mysqli_close($conn);
     return $result;
@@ -132,7 +132,7 @@ function thanh_vien_xet_duyet_da_chon($iddt){
 function thanh_vien_ban_to_chuc_da_chon($iddt){
     $ketnoi = new clsKetnoi();
     $conn = $ketnoi->ketnoi();
-    $query = "SELECT DISTINCT xd.IDND,CONCAT(nd.HO,' ',nd.TEN) as HOTEN,nd.NGAYSINH, xd.VAITRO FROM xetduyetdetai xd, nguoidung nd WHERE xd.LOAIHD = '1' AND xd.IDND = nd.IDND AND xd.IDDT = '$iddt'";
+    $query = "SELECT DISTINCT xd.IDND,CONCAT(nd.HO,' ',nd.TEN) as HOTEN,nd.NGAYSINH, xd.NHIEMVU,xd.GHICHU FROM xetduyetdetai xd, nguoidung nd WHERE xd.LOAIHD = '1' AND xd.IDND = nd.IDND AND xd.IDDT = '$iddt'";
     $result = mysqli_query($conn, $query);
     mysqli_close($conn);
     return $result;
@@ -140,7 +140,7 @@ function thanh_vien_ban_to_chuc_da_chon($iddt){
 function thanh_vien_nghiem_thu_da_chon($iddt){
     $ketnoi = new clsKetnoi();
     $conn = $ketnoi->ketnoi();
-    $query = "SELECT DISTINCT nt.IDND,CONCAT(nd.HO,' ',nd.TEN) as HOTEN,nd.NGAYSINH, nt.YKIEN FROM xetduyetnghiemthu nt, nguoidung nd WHERE nt.IDND = nd.IDND AND nt.IDDT = '$iddt'";
+    $query = "SELECT DISTINCT nt.IDND,CONCAT(nd.HO,' ',nd.TEN) as HOTEN,nd.NGAYSINH, nt.NHIEMVU, nt.GHICHU FROM xetduyetnghiemthu nt, nguoidung nd WHERE nt.IDND = nd.IDND AND nt.IDDT = '$iddt'";
     $result = mysqli_query($conn, $query);
     mysqli_close($conn);
     return $result;
@@ -148,7 +148,7 @@ function thanh_vien_nghiem_thu_da_chon($iddt){
 function ket_qua_xet_duyet($iddt){
     $ketnoi = new clsKetnoi();
     $conn = $ketnoi->ketnoi();
-    $query = "SELECT CONCAT(nd.HO,' ', nd.TEN) as HOTEN, `VAITRO`, `FILE` FROM xetduyetdetai xd, nguoidung nd WHERE xd.IDND = nd.IDND and xd.IDDT = '$iddt' AND xd.LOAIHD = '0'";
+    $query = "SELECT CONCAT(nd.HO,' ', nd.TEN) as HOTEN, NHIEMVU, GHICHU FROM xetduyetdetai xd, nguoidung nd WHERE xd.IDND = nd.IDND and xd.IDDT = '$iddt' AND xd.LOAIHD = '0'";
     $result = mysqli_query($conn, $query);
     mysqli_close($conn);
     return $result;
@@ -156,7 +156,7 @@ function ket_qua_xet_duyet($iddt){
 function ket_qua_nghiem_thu($iddt){
     $ketnoi = new clsKetnoi();
     $conn = $ketnoi->ketnoi();
-    $query = "SELECT CONCAT(nd.HO,' ', nd.TEN) as HOTEN, `FILE`, `YKIEN` FROM xetduyetnghiemthu nt, nguoidung nd WHERE nt.IDND = nd.IDND and nt.IDDT = '$iddt'";
+    $query = "SELECT CONCAT(nd.HO,' ', nd.TEN) as HOTEN, NHIEMVU,GHICHU FROM xetduyetnghiemthu nt, nguoidung nd WHERE nt.IDND = nd.IDND and nt.IDDT = '$iddt'";
     $result = mysqli_query($conn, $query);
     mysqli_close($conn);
     return $result;

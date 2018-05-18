@@ -32,7 +32,7 @@ function themthanhviennghiemthu($nt, $dt){
     $conn = $ketnoi->ketnoi();
     $sql = "DELETE FROM xetduyetnghiemthu WHERE IDDT = '$dt';";
     for($i=0;$i<count($nt);$i++)
-        $sql.= "INSERT INTO `xetduyetnghiemthu`(`IDDT`, `IDND`) VALUES ('$dt','".$nt[$i][1]."');";
+        $sql.= "INSERT INTO `xetduyetnghiemthu`(`IDDT`, `IDND`, `NHIEMVU`, `GHICHU`) VALUES ('$dt','".$nt[$i][1]."','".$nt[$i][2]."','".$nt[$i][3]."');";
     if(mysqli_multi_query($conn,$sql)){
         mysqli_close($conn);
         return true;

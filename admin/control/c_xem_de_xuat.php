@@ -50,6 +50,9 @@ if (isset($_GET['id']) && ($loaitaikhoan=='admin' || $loaitaikhoan=='khoahoc')) 
         $thanhvienxetduyet = thanh_vien_xet_duyet($iddt);
         // thành viên BTC đã chọn
         $tvbtc = thanh_vien_ban_to_chuc_da_chon($iddt);
+        if (empty($tvbtc)) {
+            echo "Chưa chọn";
+        }
         // thành viên duyệt đề xuất đã chọn
         $tvdc = thanh_vien_xet_duyet_da_chon($iddt);
         // Kết quả xét duyệt

@@ -292,8 +292,8 @@ giao kết quả nghiên cứu đến người sử dụng. Phải nêu được
                                       <tr style="background: #009688;color: #fff;">
                                           <th class="giua">Tên thành viên</th>
                                           <th class="an">IDTV</th>
-                                          <th>Vai trò</th>
-                                          <th>File xét duyệt(nếu có)</th>
+                                          <th class="giua">Nhiệm vụ</th>
+                                          <th class="giua">Ghi chú</th>
                                           <th class="giua" style="width: 50px;">Xóa</th>
                                       </tr>
                                   </table>
@@ -314,8 +314,8 @@ giao kết quả nghiên cứu đến người sử dụng. Phải nêu được
                                       <tr style="background: #009688;color: #fff;">
                                           <th class="giua">Tên thành viên</th>
                                           <th class="an">IDTV</th>
-                                          <th>Vai trò</th>
-                                          <th>File xét duyệt(nếu có)</th>
+                                          <th class="giua">Nhiệm vụ</th>
+                                          <th class="giua">Ghi chú</th>
                                           <th class="giua" style="width: 50px;">Xóa</th>
                                       </tr>
                                   </table>
@@ -344,8 +344,8 @@ giao kết quả nghiên cứu đến người sử dụng. Phải nêu được
                                     <tr style="background: #009688;color: #fff;">
                                         <th class="giua">Tên thành viên</th>
                                         <th class="an">IDTV</th>
-                                        <th>Ý kiến</th>
-                                        <th>File nghiệm thu(nếu có)</th>
+                                        <th class="giua">Nhiệm vụ</th>
+                                        <th class="giua">Ghi chú</th>
                                         <th class="giua" style="width: 50px;">Xóa</th>
                                     </tr>
                                 </table>
@@ -516,7 +516,7 @@ $(document).ready(function(){$('#themdetaidanghiemthu').addClass('active');$('.t
               }
               if (tontai==0) {
                       //them tac gia vao danh sach
-                      var tr = "<tr><td>"+$('#chontvbtc option:selected').text()+"</td><td class='an'>"+$(this).find('option:selected').val()+"</td><td><textarea class='form-control' rows='2'></textarea></td><td class='giua' id='duyet-"+idduyet+"'><a class='btn btn-success' onclick='upfileduyet(this)' id='taifilexong-"+idduyet+"'><i class='fas fa-upload'></i>&ensp;Tải lên file</a><input type='file' id='taifile-"+idduyet+"' onchange='tailen(this)' hidden><input type='text' hidden='hidden' id='fileduyet-"+idduyet+"'></td><td class='giua' style='width:50px;'><button class='xoabtc'><i class='fas fa-times do'></i></button></td></tr>";
+                      var tr = "<tr><td>"+$('#chontvbtc option:selected').text()+"</td><td class='an'>"+$(this).find('option:selected').val()+"</td><td><textarea class='form-control' rows='2'></textarea></td><td><textarea class='form-control' rows='2'></textarea></td><td class='giua' style='width:50px;'><button class='xoabtc'><i class='fas fa-times do'></i></button></td></tr>";
                       $('#bangbtc').append(tr);
                       idduyet++;
               }
@@ -546,7 +546,7 @@ $(document).ready(function(){$('#themdetaidanghiemthu').addClass('active');$('.t
               }
               if (tontai==0) {
                       //them tac gia vao danh sach
-                      var tr = "<tr><td>"+$('#chontvdg option:selected').text()+"</td><td class='an'>"+$(this).find('option:selected').val()+"</td><td><textarea class='form-control' rows='2'></textarea></td><td class='giua' id='duyet-"+idduyet+"'><a class='btn btn-success' onclick='upfileduyet(this)' id='taifilexong-"+idduyet+"'><i class='fas fa-upload'></i>&ensp;Tải lên file</a><input type='file' id='taifile-"+idduyet+"' onchange='tailen(this)' hidden><input type='text' hidden='hidden' id='fileduyet-"+idduyet+"'></td><td class='giua' style='width:50px;'><button class='xoatvdg'><i class='fas fa-times do'></i></button></td></tr>";
+                      var tr = "<tr><td>"+$('#chontvdg option:selected').text()+"</td><td class='an'>"+$(this).find('option:selected').val()+"</td><td><textarea class='form-control' rows='2'></textarea></td><td><textarea class='form-control' rows='2'></textarea></td><td class='giua' style='width:50px;'><button class='xoatvdg'><i class='fas fa-times do'></i></button></td></tr>";
                       $('#bangtvdg').append(tr);
                       idduyet++;
               }
@@ -576,7 +576,7 @@ $(document).ready(function(){$('#themdetaidanghiemthu').addClass('active');$('.t
               }
               if (tontai==0) {
                       //them tac gia vao danh sach
-                      var tr = "<tr><td>"+$('#chontvnt option:selected').text()+"</td><td class='an'>"+$(this).find('option:selected').val()+"</td><td><textarea class='form-control' rows='2'></textarea></td><td class='giua' id='duyet-"+idduyet+"'><a class='btn btn-success' onclick='upfileduyet(this)' id='taifilexong-"+idduyet+"'><i class='fas fa-upload'></i>&ensp;Tải lên file</a><input type='file' id='taifile-"+idduyet+"' onchange='tailen(this)' hidden><input type='text' hidden='hidden' id='fileduyet-"+idduyet+"'></td><td class='giua' style='width:50px;'><button class='xoatvnt'><i class='fas fa-times do'></i></button></td></tr>";
+                      var tr = "<tr><td>"+$('#chontvnt option:selected').text()+"</td><td class='an'>"+$(this).find('option:selected').val()+"</td><td><textarea class='form-control' rows='2'></textarea></td><td><textarea class='form-control' rows='2'></textarea></td><td class='giua' style='width:50px;'><button class='xoatvnt'><i class='fas fa-times do'></i></button></td></tr>";
                       $('#bangtvnt').append(tr);
                       idduyet++;
               }
@@ -621,45 +621,9 @@ $(document).ready(function(){$('#themdetaidanghiemthu').addClass('active');$('.t
             khongthanhcong('Chưa nhập tên đề tài');
             return;
         }
-        /*if(!muctieudetai){
-            khongthanhcong('Chưa nhập mục tiêu đề tài');
-            return;
-        }
-        if(!noidungdetai){
-            khongthanhcong('Nhập nội dung đề tài');
-            return;
-        }*/
         _cdt_.forEach(function(c){
           ($('#capdetai-'+c[0]).is(':checked'))?capdetai = $('#capdetai-'+c[0]).val().trim():0;
         });
-        /*if(!moisangtao){
-            khongthanhcong('Chưa phân tích về tính mới, tính sáng tạo của đề tài');
-            return;
-        }
-        if(!sucanthiet){
-            khongthanhcong('Chưa phân tích sự cần thiết nghiên cứu');
-            return;
-        }
-        if(!tinhhinhnghiencuu){
-            khongthanhcong('Chưa nhập tình hình nghiên cứu thuộc lĩnh vực của đề tài');
-            return;
-        }
-        if(!nghiencuulienquan){
-            khongthanhcong('Chưa liệt kê danh mục các công trình nghiên cứu có liên quan');
-            return;
-        }
-        if(!phuongphapkythuat){
-            khongthanhcong('Chưa nhập cách tiếp cận, phương pháp nghiên cứu, kỹ thuật sẽ sử dụng');
-            return;
-        }
-        if(!kinhphingansach){
-            khongthanhcong('Chưa nhập kinh phí dự kiến từ ngân sách');
-            return;
-        }
-        if(!kinhphinguonkhac){
-            khongthanhcong('Chưa nhập kinh phí dự kiến từ nguồn khác');
-            return;
-        }*/
         if (!thangthuchien){
             khongthanhcong('Chưa nhập số tháng thực hiện đề tài');
             return;
@@ -672,17 +636,6 @@ $(document).ready(function(){$('#themdetaidanghiemthu').addClass('active');$('.t
             khongthanhcong('Chưa nhập tháng năm kêt thúc đề tài');
             return;
         }
-        /*
-        if(!ketqua){
-            khongthanhcong('Chưa nhập dự kiến kết quả đề tài và địa chỉ ứng dụng');
-            return;
-        } 
-        if(!$.isNumeric(kinhphingansach)){
-          khongthanhcong('Kinh phí ngân sách không hợp lệ, kiểm tra lại');return;
-        }
-        if(!$.isNumeric(kinhphinguonkhac)){
-          khongthanhcong('Kinh phí nguồn khác không hợp lệ, kiểm tra lại');return;
-        } */ 
         var loaihinhnghiencuu = [];
         _lh_.forEach(function(c){
           ($('#loaihinh-'+c[0]).is(':checked'))?loaihinhnghiencuu.push(c[1].trim()):0;
@@ -845,8 +798,7 @@ $(document).ready(function(){$('#themdetaidanghiemthu').addClass('active');$('.t
               var cols = [];
               var dem = 1;
               $(this).find('td:not(:last)').each(function(i, col) {
-                  if(dem == 3) cols.push($(this).find('textarea').val());
-                  else if(dem == 4) cols.push($(this).find('input[type="text"]').val().trim());
+                  if(dem == 3 || dem==4) cols.push($(this).find('textarea').val());
                   else{
                       cols.push($(this).text().trim());
                   }
@@ -863,8 +815,7 @@ $(document).ready(function(){$('#themdetaidanghiemthu').addClass('active');$('.t
               var cols = [];
               var dem = 1;
               $(this).find('td:not(:last)').each(function(i, col){
-                  if(dem == 3) cols.push($(this).find('textarea').val());
-                  else if(dem == 4) cols.push($(this).find('input[type="text"]').val().trim());
+                  if(dem == 3 || dem==4) cols.push($(this).find('textarea').val());
                   else cols.push($(this).text().trim());
                   dem++;
               });
@@ -879,8 +830,7 @@ $(document).ready(function(){$('#themdetaidanghiemthu').addClass('active');$('.t
               var cols = [];
               var dem = 1;
               $(this).find('td:not(:last)').each(function(i, col){
-                  if(dem == 3) cols.push($(this).find('textarea').val().trim());
-                  else if(dem == 4) cols.push($(this).find('input[type="text"]').val().trim());
+                  if(dem == 3 || dem == 4) cols.push($(this).find('textarea').val().trim());
                   else cols.push($(this).text().trim());
                   dem++;
               });
@@ -927,56 +877,7 @@ $(document).ready(function(){$('#themdetaidanghiemthu').addClass('active');$('.t
       }
     });
   }
-  function upfileduyet(t){
-    //alert($(t).parent('td').find('input').attr('id'));
-    $(t).parent('td').find('input[type="file"]').click();
-  }
-  function tailen(t){
-    //Lấy ra files
-    var file_data = $(t).prop('files')[0];
-    var type = file_data.type;
-    var match = ["application/msword","image/jpeg","image/png","application/pdf","application/vnd.openxmlformats-officedocument.wordprocessingml.document", "application/x-zip-compressed"];
-    var tid = $(t).attr('id');
-    var idid =tid.substr(8,tid.length);
-    //alert(file_data.type);
-    if(type == match[0] || type == match[1] || type == match[2] || type == match[3] || type == match[4] || type == match[5]){
-        //khởi tạo đối tượng form data
-        var form_data = new FormData();
-        //thêm files vào trong form data
-        form_data.append('file', file_data);
-        //sử dụng ajax post
-        if (kiemtraketnoi()){
-            $.ajax({
-                url: 'ajax/ajax_up_file_da_nghiem_thu.php', // gửi đến file upload.php
-                dataType: 'text',
-                cache: false,
-                contentType: false,
-                processData: false,
-                type: 'post',
-                data: form_data,
-                success: function(data){
-                    var mang = JSON.parse(data);
-                    if(mang.trangthai==1){
-                        thanhcong('File đã tải lên');
-                        $('#taifilexong-'+idid).hide();
-                        $('#duyet-'+idid).append("<a id='xoafileup-"+idid+"' class='btn btn-danger' title='Xóa file' onclick='xoafile(this)'><i class='far fa-times-circle' ></i>&ensp;Xóa file</a>");
-                        $('#fileduyet-'+idid).val(mang.tenfile);
-                    }
-                    else if (mang.trangthai==0){
-                        khongthanhcong(mang.thongbao);
-                    }
-                },
-                error: function () {
-                    $.notifyClose();
-                    khongthanhcong('Không thể tải file');
-                }
-            });
 
-        } else
-            khongthanhcong("Hiện không có kết nối internet");
-    }
-    else canhbao("Vui lòng chọn file hình ảnh, pdf hoặc word");
-  };
   function uptl(t){
     //Lấy ra files
     var file_data = $(t).prop('files')[0];

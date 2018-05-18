@@ -38,7 +38,7 @@ $_SESSION["token"] = $token;
                     <li id="quanlydetaiduan"><a href="?p=quanlydetaiduan"> <i class="fab fa-accusoft"></i>&nbsp;&nbsp;Quản lý đề tài - dự án</a></li>
                     <li id="quanlydetai"><a href="?p=quanlydetai"> <i class="fas fa-external-link-alt"></i>&nbsp;&nbsp;Quản lý đề tài của tôi</a></li>
                     <li id="themdetaidanghiemthu"><a href="?p=themdetaidanghiemthu"> <i class="fas fa-plus"></i>&nbsp;&nbsp;Nhập đề tài - dự án đã nghiệm thu</a></li>
-                    <li id="duyetnghiemthudanhap"><a href="?p=duyetnghiemthudanhap"> <i class="fas fa-check"></i>&nbsp;&nbsp;Duyệt đề tài đã nghiệm thu trước đây</a></li>
+                    <li id="quanlyhoso"><a href="?p=quanlyhoso"> <i class="fas fa-briefcase"></i>&nbsp;&nbsp;Quản lý hồ sơ</a></li>
                     <li id="dexuatmoi"><a href="?p=dexuatmoi"> <i class="fas fa-briefcase"></i>&nbsp;&nbsp;Đề xuất mới của trường</a></li>
                     <li id="denhanbaocao"><a href="?p=denhanbaocao"> <i class="far fa-clock"></i>&nbsp;&nbsp;Đến hạn báo cáo</a></li>
                     <li id="tretiendo"><a href="?p=tretiendo"> <i class="fab fa-audible"></i>&nbsp;&nbsp;Trễ tiến độ</a></li>
@@ -127,20 +127,18 @@ $_SESSION["token"] = $token;
                       <li id="bieumau"><a href="?p=bieumau"> <i class="fas fa-newspaper"></i>&nbsp;&nbsp;Biểu mẫu</a></li>
                   </ul>
               </div>
-              <!--<div class="admin-menu">
+              <div class="admin-menu">
                   <h5 class="sidenav-heading">Quản lý thành viên</h5>
                   <ul id="side-admin-menu" class="side-menu list-unstyled">
                       <li id="xacnhantaikhoan"><a href="?p=xacnhantaikhoan"> <i class="far fa-calendar-check"></i>&nbsp;&nbsp;Xác nhận đăng ký tài khoản</a></li>
                       <li id="thanhvien"><a href="?p=thanhvien"> <i class="fas fa-newspaper"></i>&nbsp;&nbsp;Thông tin thành viên</a></li>
                       <li id="nhapthanhvien"><a href="?p=nhapthanhvien"> <i class="fas fa-plus"></i>&nbsp;&nbsp;Nhập thành viên</a></li>
                   </ul>
-              </div>-->
+              </div>
 
 
           <?php } else if($loaitaikhoan=='truongkhoaphong'){ ?>
-
             <li id="quanlydetai"><a href="?p=quanlydetai"> <i class="fas fa-external-link-alt"></i>&nbsp;&nbsp;Quản lý đề tài của tôi</a></li>
-            <li id="themdetaidanghiemthu"><a href="?p=themdetaidanghiemthu"> <i class="fas fa-plus"></i>&nbsp;&nbsp;Nhập đề tài - dự án đã nghiệm thu</a></li>
             <li id="dexuatmoi"><a href="?p=dexuatmoi"> <i class="fas fa-briefcase"></i>&nbsp;&nbsp;Đề xuất mới của khoa</a></li>
             <li id="denhanbaocao"><a href="?p=denhanbaocao"> <i class="far fa-clock"></i>&nbsp;&nbsp;Đến hạn báo cáo khoa</a></li>
             <li id="tretiendo"><a href="?p=tretiendo"> <i class="fab fa-audible"></i>&nbsp;&nbsp;Trễ tiến độ khoa</a></li>
@@ -159,7 +157,6 @@ $_SESSION["token"] = $token;
               </div>
           <?php } else if($loaitaikhoan=='binhthuong'){ ?>
             <li id="quanlydetai"><a href="?p=quanlydetai"> <i class="fas fa-external-link-alt"></i>&nbsp;&nbsp;Quản lý đề tài của tôi</a></li>
-            <li id="themdetaidanghiemthu"><a href="?p=themdetaidanghiemthu"> <i class="fas fa-plus"></i>&nbsp;&nbsp;Nhập đề tài - dự án đã nghiệm thu</a></li>
             <li id="denhanbaocao"><a href="?p=denhanbaocao"> <i class="far fa-clock"></i>&nbsp;&nbsp;Đến hạn báo cáo</a></li>
             <li id="tretiendo"><a href="?p=tretiendo"> <i class="fab fa-audible"></i>&nbsp;&nbsp;Trễ tiến độ</a></li>
             <div class="admin-menu">
@@ -247,7 +244,7 @@ $_SESSION["token"] = $token;
         <div class="container-fluid">
           <div class="row">
             <div class="col-sm-6">
-              <p>Lý Thanh Ngô &copy; 2018</p>
+              <p>&copy; Copyright of Ngô Thanh Lý (Faculty of Information Technology 2014)</p>
             </div>
             <div class="col-sm-6 text-right">
               <p>Phiên bản: <a href="#" class="external">1.0.1 demo</a></p>
@@ -263,6 +260,7 @@ $_SESSION["token"] = $token;
     <!-- Main File-->
     <script src="js/front.js"></script>
     <script type="text/javascript">
+      $('body .dropdown-toggle').dropdown();
       $(document).ready(function(){
         $('#thongbao-2bgf').append('<div class="alert alert-info" role="alert">Vui lòng cập nhật thông tin <b>trình độ chuyên môn, đơn vị công tác, số điện thoại liên lạc</b> tại trang <a href="?p=thongtincanhan" class="alert-link"><u>thông tin cá nhân</u></a>.</div>');
       });

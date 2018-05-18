@@ -13,7 +13,7 @@
                         <th class="giua" style="width: 28px;">STT</th>
                         <th class="giua">Mã đề tài</th>
                         <th>Tên đề tài</th>
-                        <th style="width: 160px;">Người đề xuất</th>
+                        <th style="width: 160px;">Chủ nhiện đề tài</th>
                         <th style="width: 120px;">Thời gian gửi</th>
                         <th style="width: 100px;">Trạng thái</th>
                         <th style="width: 70px;" class="giua">Xem xét</th>

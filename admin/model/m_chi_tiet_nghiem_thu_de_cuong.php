@@ -12,7 +12,7 @@ include_once("../config.php");
 function chi_tiet_de_tai($iddt,$idnd){
     $ketnoi = new clsKetnoi();
     $conn = $ketnoi->ketnoi();
-    $query = "SELECT DISTINCT nt.IDNT, nt.`IDDT`, `TENDETAI`, `MUCTIEU`, `NOIDUNG`, `CAPDETAI`, `MOISANGTAO`, `THUOCCHUONGTRINH`, `SUCANTHIET`, `TINHHINHNGHIENCUU`, `NGHIENCUULIENQUAN`, `PHUONGPHAPKYTHUAT`, `KINHPHINGANSACH`, `KINHPHINGUONKHAC`, `THANGTHUCHIEN`, `THANGNAMBD`, `THANGNAMKT`, `KETQUA`, dt.`FILE`, `NGAYTHEM`, `TRANGTHAI`, nt.FILE as NTFILE,nt.YKIEN FROM detai dt, xetduyetnghiemthu nt WHERE dt.IDDT = nt.IDDT AND nt.IDDT = '$iddt' AND nt.IDND = '$idnd' AND dt.TRANGTHAI = N'Đang thực hiện' LIMIT 0,1";
+    $query = "SELECT DISTINCT nt.IDNT, nt.`IDDT`, `TENDETAI`, `MUCTIEU`, `NOIDUNG`, `CAPDETAI`, `MOISANGTAO`, `THUOCCHUONGTRINH`, `SUCANTHIET`, `TINHHINHNGHIENCUU`, `NGHIENCUULIENQUAN`, `PHUONGPHAPKYTHUAT`, `KINHPHINGANSACH`, `KINHPHINGUONKHAC`, `THANGTHUCHIEN`, `THANGNAMBD`, `THANGNAMKT`, `KETQUA`, dt.`FILE`, `NGAYTHEM`, `TRANGTHAI`,nt.NHIEMVU FROM detai dt, xetduyetnghiemthu nt WHERE dt.IDDT = nt.IDDT AND nt.IDDT = '$iddt' AND nt.IDND = '$idnd' AND dt.TRANGTHAI = N'Đang thực hiện' LIMIT 0,1";
     $result = mysqli_query($conn, $query);
     mysqli_close($conn);
     return $result;
@@ -36,7 +36,7 @@ function linh_vuc_khoa_hoc($iddt){
 function thanh_vien_de_tai($iddt){
     $ketnoi = new clsKetnoi();
     $conn = $ketnoi->ketnoi();
-    $query = "SELECT tv.IDTV, CONCAT(nd.HO, ' ', nd.TEN) AS HOTEN, nd.TRINHDOCHUYENMON, nd.DONVICONGTAC, nd.DIENTHOAIDD, tv.CONGVIEC FROM thanhviendetai tv, nguoidung nd WHERE tv.IDND = nd.IDND AND tv.IDDT = '$iddt' ORDER BY tv.IDTV ASC ;";
+    $query = "SELECT tv.IDTV, CONCAT(nd.HO, ' ', nd.TEN) AS HOTEN, nd.DIENTHOAIDD, tv.CONGVIEC, nd.IDND FROM thanhviendetai tv, nguoidung nd WHERE tv.IDND = nd.IDND AND tv.IDDT = '$iddt' ORDER BY tv.IDTV ASC ;";
     $result = mysqli_query($conn, $query);
     mysqli_close($conn);
     return $result;

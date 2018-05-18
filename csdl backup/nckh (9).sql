@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th5 11, 2018 lúc 07:57 SA
+-- Thời gian đã tạo: Th5 16, 2018 lúc 12:17 SA
 -- Phiên bản máy phục vụ: 5.7.14
 -- Phiên bản PHP: 5.6.25
 
@@ -32,17 +32,6 @@ CREATE TABLE `baibao_tukhoa` (
   `IDBAO` bigint(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
---
--- Đang đổ dữ liệu cho bảng `baibao_tukhoa`
---
-
-INSERT INTO `baibao_tukhoa` (`IDBBTK`, `IDKHOA`, `IDBAO`) VALUES
-(26, 6, 4),
-(29, 4, 1),
-(30, 6, 2),
-(31, 7, 3),
-(32, 1, 1);
-
 -- --------------------------------------------------------
 
 --
@@ -61,13 +50,6 @@ CREATE TABLE `baiviet` (
   `HIENTHI` bit(1) NOT NULL DEFAULT b'1'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
---
--- Đang đổ dữ liệu cho bảng `baiviet`
---
-
-INSERT INTO `baiviet` (`IDBV`, `TENBV`, `HINHANH`, `MOTA`, `NOIDUNG`, `LINKBV`, `LUOTXEM`, `NGAYDANG`, `HIENTHI`) VALUES
-(7, 'Tên bài viết', 'images/news.png', 'mô tả', '<p>noi dung</p>\n', 'ten-bai-viet', 0, NULL, b'1');
-
 -- --------------------------------------------------------
 
 --
@@ -79,13 +61,6 @@ CREATE TABLE `baiviet_chuyenmuc` (
   `IDBV` bigint(20) DEFAULT NULL,
   `IDCM` bigint(20) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Đang đổ dữ liệu cho bảng `baiviet_chuyenmuc`
---
-
-INSERT INTO `baiviet_chuyenmuc` (`IDBVCM`, `IDBV`, `IDCM`) VALUES
-(7, 7, 1);
 
 -- --------------------------------------------------------
 
@@ -109,14 +84,7 @@ CREATE TABLE `baiviet_tukhoa` (
   `IDTKBV` bigint(20) NOT NULL,
   `IDKHOA` bigint(20) DEFAULT NULL,
   `IDBV` bigint(20) DEFAULT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-
---
--- Đang đổ dữ liệu cho bảng `baiviet_tukhoa`
---
-
-INSERT INTO `baiviet_tukhoa` (`IDTKBV`, `IDKHOA`, `IDBV`) VALUES
-(3, 3, 7);
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -132,13 +100,6 @@ CREATE TABLE `baocaotiendo` (
   `DENGHI` text,
   `NGAYBC` date DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Đang đổ dữ liệu cho bảng `baocaotiendo`
---
-
-INSERT INTO `baocaotiendo` (`IDTD`, `IDDT`, `CVDATH`, `CVCANTH`, `DENGHI`, `NGAYBC`) VALUES
-(1, 10, 'ỵt', 'tỵ', 'jtyj', '2018-05-09');
 
 -- --------------------------------------------------------
 
@@ -161,13 +122,6 @@ CREATE TABLE `baokhoahoc` (
   `SOTIET` int(11) DEFAULT NULL,
   `ANHIEN` bit(1) NOT NULL DEFAULT b'1'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Đang đổ dữ liệu cho bảng `baokhoahoc`
---
-
-INSERT INTO `baokhoahoc` (`IDBAO`, `TENBAO`, `CAPBAIBAO`, `TENQG`, `TAPCHI`, `NAMXUATBAN`, `NOIDUNG`, `BIB`, `NGAYDANGBAI`, `FILE`, `DIEM`, `SOTIET`, `ANHIEN`) VALUES
-(1, 'wfqw', 'Cấp quốc gia', 'Vietnam', 'VLUTE', '2018-05-10', '<p>dsdcd</p>\n', 'dcdcsđ', '2018-05-10', '', 85, 80, b'1');
 
 -- --------------------------------------------------------
 
@@ -336,19 +290,22 @@ CREATE TABLE `chuyenmuc` (
   `IDCM` bigint(20) NOT NULL,
   `TENCM` varchar(200) DEFAULT NULL,
   `MOTACM` varchar(200) DEFAULT NULL,
-  `LINKCM` varchar(200) DEFAULT NULL
+  `LINKCM` varchar(200) DEFAULT NULL,
+  `LOAICHUYENMUC` varchar(20) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Đang đổ dữ liệu cho bảng `chuyenmuc`
 --
 
-INSERT INTO `chuyenmuc` (`IDCM`, `TENCM`, `MOTACM`, `LINKCM`) VALUES
-(1, 'Tin tức', 'Trang hiển thị các tin tức', 'tin-tuc'),
-(15, 'Sự kiện', 'Trang chuyên sự kiện', 'su-kien-cm'),
-(16, 'Công nghệ mới', 'Trang chuyên về công nghệ', 'cong-nghe'),
-(17, 'Khám phá', 'Trang khám phá', 'kham-pha'),
-(18, 'Đời sống', 'Trang đời sống', 'doi-song');
+INSERT INTO `chuyenmuc` (`IDCM`, `TENCM`, `MOTACM`, `LINKCM`, `LOAICHUYENMUC`) VALUES
+(1, 'Tin tức', 'Trang hiển thị các tin tức', 'tin-tuc', 'tintuc'),
+(15, 'Sự kiện', 'Trang chuyên sự kiện', 'su-kien-cm', 'tintuc'),
+(16, 'Công nghệ mới', 'Trang chuyên về công nghệ', 'cong-nghe', 'tintuc'),
+(17, 'Khám phá', 'Trang khám phá', 'kham-pha-cm', 'tintuc'),
+(18, 'Đời sống', 'Trang đời sống', 'doi-song', 'tintuc'),
+(19, 'Hoạt động hợp tác quốc tế', 'Trang hoạt động hợp tác quốc tế', 'hoat-dong-hop-tac-quoc-te', 'hoptacquocte'),
+(23, 'Dự án hợp tác', 'Các dự án hợp tác', 'du-an-hop-tac-cm', 'hoptacquocte');
 
 -- --------------------------------------------------------
 
@@ -413,18 +370,6 @@ CREATE TABLE `detai` (
   `DUYET` bit(1) NOT NULL DEFAULT b'1'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
---
--- Đang đổ dữ liệu cho bảng `detai`
---
-
-INSERT INTO `detai` (`IDDT`, `MADETAI`, `TENDETAI`, `MUCTIEU`, `NOIDUNG`, `CAPDETAI`, `MOISANGTAO`, `THUOCCHUONGTRINH`, `SUCANTHIET`, `TINHHINHNGHIENCUU`, `NGHIENCUULIENQUAN`, `PHUONGPHAPKYTHUAT`, `KINHPHINGANSACH`, `KINHPHINGUONKHAC`, `THANGTHUCHIEN`, `THANGNAMBD`, `THANGNAMKT`, `KETQUA`, `FILE`, `NGAYTHEM`, `TRANGTHAI`, `DIEM`, `THOIGIANNGHIEMTHU`, `DUYET`) VALUES
-(1, 'M01', 'Phần mềm quản lý khoa học', 'Tạo ra sản phẩm', 'Nội dung nghiên cứu', 'Cấp trường', 'Phân tích về tính mới, tính sáng tạo của đề tài', 'Không có', 'Phân tích sự cần thiết nghiên cứu', 'Tổng quan tình hình nghiên cứu thuộc lĩnh vực của đề tài', 'Tổng quan tình hình nghiên cứu thuộc lĩnh vực của đề tài', 'Cách tiếp cận, phương pháp nghiên cứu, kỹ thuật sẽ sử dụng', '123', '1234', 6, '2018-02', '2018-11', 'sp phan mem', NULL, '2018-05-09 15:09:23', 'Đang thực hiện', 0, NULL, b'1'),
-(2, NULL, 'Đề tài 1', 'uykuk', 'yukuyku', 'Cấp trường trọng điểm', 'kyukyu', 'jukyuk', 'kuyk', 'yuky', 'yuky', 'yukuy', '677', '6767', 7, '2018-05', '2018-05', '76i7i67i', NULL, '2018-05-09 15:22:39', 'Đang xét duyệt', 0, NULL, b'1'),
-(6, 'M04', 'Đề tài 2', 'jrtjtjr', 'etu', 'Cấp trường trọng điểm', 'gh', 'ghhh', 'fgh', 'gfg', 'gfg', 'fgh', '5', '55', 5, '2018-05', '2018-05', 'ggffg', NULL, '2018-05-09 15:36:49', 'Đã nghiệm thu', 80, '2018-05-10', b'1'),
-(8, NULL, 'Đề tài 3', 'mgghm', 'hj,', 'Cấp trường trọng điểm', 'hj,', 'jm,hj,', 'hj,', 'hj,', 'hj,', 'jh,', '6', '4', 7, '2018-09', '2018-07', 'jh,hj,', NULL, '2018-05-09 15:49:22', 'Chờ gửi đề xuất', 0, NULL, b'1'),
-(10, 'M05', 'Đề tài đã nghiệm thu demo', 'tỵtyj', 'tỵ', 'Cấp tỉnh', 'tỵt', 'tỵ', 'yty', 'tyy', 'tyy', 'tyty', '6', '6', 6566, '2018-06', '2018-06', 'tyy', '', '2018-05-09 16:13:24', 'Đã nghiệm thu', 78, '2018-06-16', b'1'),
-(11, NULL, 'fdff', 'bdfbfb', '', 'Cấp trường', '', 'ggn', '', '', '', '', '0', '0', 5, '2018-05', '2018-08', 'yghm', NULL, '2018-05-11 07:13:18', 'Đang xét duyệt', 0, NULL, b'1');
-
 -- --------------------------------------------------------
 
 --
@@ -436,17 +381,6 @@ CREATE TABLE `dexuatdetai` (
   `IDDT` bigint(20) NOT NULL,
   `NGAYDEXUAT` datetime DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Đang đổ dữ liệu cho bảng `dexuatdetai`
---
-
-INSERT INTO `dexuatdetai` (`IDDX`, `IDDT`, `NGAYDEXUAT`) VALUES
-(1, 10, '2018-05-09 16:13:24'),
-(2, 6, '2018-05-09 16:14:53'),
-(3, 1, '2018-05-10 06:15:25'),
-(5, 2, '2018-05-11 06:38:35'),
-(6, 11, '2018-05-11 07:27:53');
 
 -- --------------------------------------------------------
 
@@ -483,16 +417,24 @@ CREATE TABLE `khoabomon` (
 --
 
 INSERT INTO `khoabomon` (`IDKBM`, `TENKBM`) VALUES
-(1, 'Khoa công nghệ thông tin'),
-(3, 'Khoa học cơ bản'),
-(4, 'Khoa lý luận chính trị'),
+(1, 'Khoa Công nghệ thông tin'),
+(3, 'Khoa Khoa học cơ bản'),
+(4, 'Khoa Lý luận chính trị'),
 (5, 'Khoa Cơ khí Động lực'),
 (6, 'Khoa Cơ khí Chế tạo máy'),
 (7, 'Khoa Điện - Điện tử'),
 (8, 'Khoa Sư phạm'),
 (9, 'Khoa Công nghệ thực phẩm'),
 (10, 'Bộ môn Giáo dục thể chất và Giáo dục quốc phòng'),
-(11, 'Bộ môn ngoại ngữ');
+(11, 'Bộ môn Ngoại ngữ'),
+(13, 'Phòng Đào tạo'),
+(14, 'Phòng Tổ chức – Hành chính'),
+(15, 'Phòng Kế toán – Tài vụ'),
+(16, 'Phòng Nghiên cứu khoa học và Quan hệ quốc tế'),
+(17, 'Phòng Quản trị - Thiết bị'),
+(18, 'Phòng Công tác Học sinh – Sinh viên'),
+(19, 'Phòng Thanh tra'),
+(20, 'Phòng Khảo thí và Đảm bảo chất lượng giáo dục');
 
 -- --------------------------------------------------------
 
@@ -508,30 +450,6 @@ CREATE TABLE `kinhphi` (
   `NGUONTUCO` decimal(10,0) DEFAULT NULL,
   `NGUONLIENKET` decimal(10,0) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Đang đổ dữ liệu cho bảng `kinhphi`
---
-
-INSERT INTO `kinhphi` (`IDKP`, `IDDT`, `KHOANCHI`, `NGUONNSNN`, `NGUONTUCO`, `NGUONLIENKET`) VALUES
-(37, 8, 'Chi thuê khoán chuyên môn', '0', '0', '0'),
-(38, 8, 'Chi mua nguyên vật liệu', '0', '0', '0'),
-(39, 8, 'Chi sửa chữa, mua sắm TSCĐ', '0', '0', '0'),
-(64, 6, 'Chi thuê khoán chuyên môn', '0', '0', '0'),
-(65, 6, 'Chi mua nguyên vật liệu', '0', '0', '0'),
-(66, 6, 'Chi sửa chữa, mua sắm TSCĐ', '0', '0', '0'),
-(79, 10, 'Chi thuê khoán chuyên môn', '0', '0', '0'),
-(80, 10, 'Chi mua nguyên vật liệu', '0', '0', '0'),
-(81, 10, 'Chi sửa chữa, mua sắm TSCĐ', '0', '0', '0'),
-(109, 2, 'Chi thuê khoán chuyên môn', '0', '0', '0'),
-(110, 2, 'Chi mua nguyên vật liệu', '0', '0', '0'),
-(111, 2, 'Chi sửa chữa, mua sắm TSCĐ', '0', '0', '0'),
-(112, 1, 'Chi thuê khoán chuyên môn', '0', '0', '7'),
-(113, 1, 'Chi mua nguyên vật liệu', '2', '0', '0'),
-(114, 1, 'Chi sửa chữa, mua sắm TSCĐ', '0', '6', '0'),
-(130, 11, 'Chi thuê khoán chuyên môn', '0', '0', '0'),
-(131, 11, 'Chi mua nguyên vật liệu', '0', '0', '0'),
-(132, 11, 'Chi sửa chữa, mua sắm TSCĐ', '0', '0', '0');
 
 -- --------------------------------------------------------
 
@@ -568,23 +486,6 @@ CREATE TABLE `linhvuckhoahoc` (
   `TENLV` varchar(100) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
---
--- Đang đổ dữ liệu cho bảng `linhvuckhoahoc`
---
-
-INSERT INTO `linhvuckhoahoc` (`IDLV`, `IDDT`, `TENLV`) VALUES
-(147, 26, 'Khoa học Y - Dược'),
-(171, 29, 'Khoa học giáo dục'),
-(189, 8, 'Khoa học tự nhiên'),
-(190, 8, 'Khoa học Y - Dược'),
-(203, 6, 'Kỹ thuật công nghệ'),
-(204, 6, 'Xã hội nhân văn'),
-(211, 10, 'Khoa học Y - Dược'),
-(230, 2, 'Khoa học tự nhiên'),
-(231, 2, 'Khoa học giáo dục'),
-(232, 1, 'Khoa học tự nhiên'),
-(238, 11, 'Xã hội nhân văn');
-
 -- --------------------------------------------------------
 
 --
@@ -616,20 +517,6 @@ CREATE TABLE `loaihinhnghiencuu` (
   `IDDT` bigint(20) DEFAULT NULL,
   `TENLH` varchar(100) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Đang đổ dữ liệu cho bảng `loaihinhnghiencuu`
---
-
-INSERT INTO `loaihinhnghiencuu` (`IDLH`, `IDDT`, `TENLH`) VALUES
-(109, 26, 'Nghiên cứu ứng dụng'),
-(136, 29, 'Triển khai thực nghiệm'),
-(150, 8, 'Nghiên cứu ứng dụng'),
-(160, 6, 'Nghiên cứu ứng dụng'),
-(165, 10, 'Triển khai thực nghiệm'),
-(175, 2, 'Nghiên cứu cơ bản'),
-(176, 1, 'Triển khai thực nghiệm'),
-(182, 11, 'Nghiên cứu ứng dụng');
 
 -- --------------------------------------------------------
 
@@ -670,9 +557,7 @@ CREATE TABLE `loaitaikhoan_nguoidung` (
 --
 
 INSERT INTO `loaitaikhoan_nguoidung` (`IDLTKND`, `IDND`, `IDLTK`) VALUES
-(1, 1, 1),
-(2, 2, 2),
-(3, 3, 3);
+(1, 1, 1);
 
 -- --------------------------------------------------------
 
@@ -695,7 +580,7 @@ CREATE TABLE `ngoaingu` (
 
 CREATE TABLE `nguoidung` (
   `IDND` bigint(20) NOT NULL,
-  `HO` varchar(50) NOT NULL,
+  `HO` varchar(50) DEFAULT NULL,
   `TEN` varchar(50) NOT NULL,
   `GIOITINH` varchar(4) DEFAULT 'Nam',
   `NGAYSINH` date DEFAULT NULL,
@@ -730,9 +615,7 @@ CREATE TABLE `nguoidung` (
 --
 
 INSERT INTO `nguoidung` (`IDND`, `HO`, `TEN`, `GIOITINH`, `NGAYSINH`, `NOISINH`, `QUEQUAN`, `DANTOC`, `NAMNUOCHOCVI`, `NAMBONHIEM`, `CHOORIENG`, `DIENTHOAICQ`, `DIENTHOAINR`, `DIENTHOAIDD`, `FAX`, `MAIL`, `THACSICHUYENNGANH`, `NAMCAPBANGTSCN`, `NOIDAOTAOTSCN`, `TIENSICHUYENNGANH`, `NAMCAPBANGTSCN2`, `NOIDAOTAOTSCN2`, `TENLUANAN`, `TENDANGNHAP`, `MATKHAU`, `HINH`, `TRANGTHAI`, `XACNHAN`, `TOKEN`) VALUES
-(1, 'Nguyễn Nhựt', 'Nam', 'Nam', NULL, 'Vĩnh Long', 'Vĩnh Long', '', '', '', 'Vĩnh Long', '', '', '01212523635', '', 'lythanhngodev@gmail.com', 'Công nghệ thông tin', '1996', 'VLUTE', 'Công nghệ thông tin', '1996', 'VLUTE', '', 'admin', '827ccb0eea8a706c4c34a16891f84e7b', 'user.png', 'binhthuong', b'1', ''),
-(2, 'Ngô Thanh', 'Lý', 'Nam', NULL, 'Bệnh viện đa khoa Tỉnh Vĩnh Long', 'Vĩnh Long', 'Kinh', '2018', '', 'Vĩnh Long', '', '', '01214967197', '', '14004044@student.vlute.edu.vn', '', '', '', '', '', '', '', 'lythanhngo', '827ccb0eea8a706c4c34a16891f84e7b', 'user.png', 'binhthuong', b'1', NULL),
-(3, 'Phan Anh', 'Cang', 'Nam', NULL, '', 'rthtr', '', '', '', 'trhtrh', '', '', '0123456789', '', 'alphotographyvn@gmail.com', '', '', '', '', '', '', '', 'anhcang', '827ccb0eea8a706c4c34a16891f84e7b', 'user.png', 'binhthuong', b'1', NULL);
+(1, 'Ngô Thanh', 'Lý', 'Nam', '1996-01-06', 'Vĩnh Long', 'Vĩnh Long', '', '', '', 'Vĩnh Long', '', '', '01214967197', '', 'lythanhngodev@gmail.com', 'Công nghệ thông tin', '1996', 'VLUTE', 'Công nghệ thông tin', '1996', 'VLUTE', '', 'admin', '827ccb0eea8a706c4c34a16891f84e7b', 'user.png', 'binhthuong', b'1', '');
 
 -- --------------------------------------------------------
 
@@ -746,13 +629,6 @@ CREATE TABLE `nguoidung_baibao` (
   `IDND` bigint(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
---
--- Đang đổ dữ liệu cho bảng `nguoidung_baibao`
---
-
-INSERT INTO `nguoidung_baibao` (`IDTB`, `IDBAO`, `IDND`) VALUES
-(1, 1, 1);
-
 -- --------------------------------------------------------
 
 --
@@ -763,16 +639,7 @@ CREATE TABLE `nguoidung_chucdanhgiangvien` (
   `IDNDCDGV` bigint(20) NOT NULL,
   `IDND` bigint(20) DEFAULT NULL,
   `IDCD` bigint(20) DEFAULT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-
---
--- Đang đổ dữ liệu cho bảng `nguoidung_chucdanhgiangvien`
---
-
-INSERT INTO `nguoidung_chucdanhgiangvien` (`IDNDCDGV`, `IDND`, `IDCD`) VALUES
-(20, 3, 2),
-(7, 1, 1),
-(31, 2, 0);
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -784,16 +651,7 @@ CREATE TABLE `nguoidung_chucdanhkhoahoc` (
   `IDNDCD` bigint(20) NOT NULL,
   `IDND` bigint(20) DEFAULT NULL,
   `IDCD` bigint(20) DEFAULT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-
---
--- Đang đổ dữ liệu cho bảng `nguoidung_chucdanhkhoahoc`
---
-
-INSERT INTO `nguoidung_chucdanhkhoahoc` (`IDNDCD`, `IDND`, `IDCD`) VALUES
-(34, 3, 1),
-(18, 1, 0),
-(45, 2, 0);
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -805,16 +663,7 @@ CREATE TABLE `nguoidung_chucvu` (
   `IDNDCV` bigint(20) NOT NULL,
   `IDND` bigint(20) DEFAULT NULL,
   `IDCV` bigint(20) DEFAULT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-
---
--- Đang đổ dữ liệu cho bảng `nguoidung_chucvu`
---
-
-INSERT INTO `nguoidung_chucvu` (`IDNDCV`, `IDND`, `IDCV`) VALUES
-(35, 3, 5),
-(19, 1, 7),
-(46, 2, 7);
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -826,16 +675,7 @@ CREATE TABLE `nguoidung_hocvi` (
   `IDNDHV` bigint(20) NOT NULL,
   `IDND` bigint(20) DEFAULT NULL,
   `IDHV` bigint(20) DEFAULT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-
---
--- Đang đổ dữ liệu cho bảng `nguoidung_hocvi`
---
-
-INSERT INTO `nguoidung_hocvi` (`IDNDHV`, `IDND`, `IDHV`) VALUES
-(30, 3, 1),
-(14, 1, 0),
-(41, 2, 0);
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -849,15 +689,6 @@ CREATE TABLE `nguoidung_khoabomon` (
   `IDKBM` bigint(20) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
---
--- Đang đổ dữ liệu cho bảng `nguoidung_khoabomon`
---
-
-INSERT INTO `nguoidung_khoabomon` (`IDNDKBM`, `IDND`, `IDKBM`) VALUES
-(24, 1, 1),
-(40, 3, 1),
-(51, 2, 1);
-
 -- --------------------------------------------------------
 
 --
@@ -868,16 +699,7 @@ CREATE TABLE `nguoidung_trinhdochuyenmon` (
   `IDNDTDCM` bigint(20) NOT NULL,
   `IDND` bigint(20) DEFAULT NULL,
   `IDTD` bigint(20) DEFAULT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-
---
--- Đang đổ dữ liệu cho bảng `nguoidung_trinhdochuyenmon`
---
-
-INSERT INTO `nguoidung_trinhdochuyenmon` (`IDNDTDCM`, `IDND`, `IDTD`) VALUES
-(24, 3, 2),
-(8, 1, 2),
-(35, 2, 0);
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -1229,20 +1051,6 @@ CREATE TABLE `thanhviendetai` (
   `TRACHNHIEM` text
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
---
--- Đang đổ dữ liệu cho bảng `thanhviendetai`
---
-
-INSERT INTO `thanhviendetai` (`IDTV`, `IDDT`, `IDND`, `CONGVIEC`, `TRACHNHIEM`) VALUES
-(17, 8, 3, 'jh,', 'Chủ nhiệm'),
-(33, 6, 1, '5urt', 'Chủ nhiệm'),
-(38, 10, 1, 'jtyj', 'Chủ nhiệm'),
-(58, 2, 3, 'yukyuku', 'Chủ nhiệm'),
-(59, 2, 1, 'lllllll', 'Thành viên'),
-(60, 1, 3, 'Code chính', 'Chủ nhiệm'),
-(61, 1, 2, 'yuuuyk', 'Thành viên'),
-(67, 11, 2, '', 'Chủ nhiệm');
-
 -- --------------------------------------------------------
 
 --
@@ -1258,17 +1066,6 @@ CREATE TABLE `tiendodukien` (
   `THOIGIANKT` date DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
---
--- Đang đổ dữ liệu cho bảng `tiendodukien`
---
-
-INSERT INTO `tiendodukien` (`IDDKTD`, `IDDT`, `CONGVIEC`, `SANPHAM`, `THOIGIANBD`, `THOIGIANKT`) VALUES
-(13, 8, 'j,', 'hjj,j', '2018-08-09', '2018-08-09'),
-(22, 6, 'gh', 'gfhfg', '2018-05-23', '2018-05-18'),
-(27, 10, 'tỵ', 'tỵty', '2018-05-18', '2018-06-28'),
-(37, 2, '7i6', '6767i7', '2018-05-09', '2018-06-09'),
-(38, 1, 'Hoàn thành', 'ok', '2018-05-09', '2018-06-09');
-
 -- --------------------------------------------------------
 
 --
@@ -1282,17 +1079,6 @@ CREATE TABLE `tochucthamgia` (
   `NOIDUNGTHAMGIA` text,
   `KINHPHI` decimal(10,0) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Đang đổ dữ liệu cho bảng `tochucthamgia`
---
-
-INSERT INTO `tochucthamgia` (`IDTC`, `IDDT`, `THONGTINTC`, `NOIDUNGTHAMGIA`, `KINHPHI`) VALUES
-(13, 8, 'jh,', 'jj,', '55'),
-(22, 6, 'hr', 'thtrhth', '1'),
-(27, 10, 'jtyj', 'ỵtyjtyj', '55'),
-(37, 2, 'uyk', 'uykyuk', '6767'),
-(38, 1, 'Trờng dhspkt Vĩnh Long', 'tiếp tế', '222');
 
 -- --------------------------------------------------------
 
@@ -1332,7 +1118,8 @@ CREATE TABLE `tukhoa` (
 --
 
 INSERT INTO `tukhoa` (`IDKHOA`, `TENKHOA`) VALUES
-(3, 'bai viet');
+(2, 'nckh'),
+(1, 'vlute');
 
 -- --------------------------------------------------------
 
@@ -1350,18 +1137,6 @@ CREATE TABLE `xetduyetdetai` (
   `THOIGIANPHANCONG` datetime DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
---
--- Đang đổ dữ liệu cho bảng `xetduyetdetai`
---
-
-INSERT INTO `xetduyetdetai` (`IDXD`, `IDDT`, `IDND`, NHIEMVU, `LOAIHD`, `FILE`, `THOIGIANPHANCONG`) VALUES
-(1, 10, 1, 'tỵ', 1, '', '2018-05-09 16:13:24'),
-(2, 10, 1, 'tỵtyj', 0, '', '2018-05-09 16:13:24'),
-(3, 6, 3, '', 1, NULL, '2018-05-09 16:15:20'),
-(4, 6, 2, '', 0, NULL, '2018-05-09 16:15:20'),
-(5, 12, 2, '', 1, '', '2018-05-11 10:06:49'),
-(6, 12, 2, '', 0, '', '2018-05-11 10:06:49');
-
 -- --------------------------------------------------------
 
 --
@@ -1376,16 +1151,6 @@ CREATE TABLE `xetduyetnghiemthu` (
   `FILE` text,
   `THOIGIANPHANCONG` datetime DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Đang đổ dữ liệu cho bảng `xetduyetnghiemthu`
---
-
-INSERT INTO `xetduyetnghiemthu` (`IDNT`, `IDDT`, `IDND`, NHIEMVU, `FILE`, `THOIGIANPHANCONG`) VALUES
-(1, 10, 2, 'ỵttyjty', '', '2018-05-09 16:13:24'),
-(2, 6, 2, NULL, NULL, '2018-05-10 06:16:56'),
-(3, 12, 2, '', '', '2018-05-11 10:06:49'),
-(4, 12, 3, '', '', '2018-05-11 10:06:49');
 
 --
 -- Chỉ mục cho các bảng đã đổ
@@ -1693,17 +1458,17 @@ ALTER TABLE `xetduyetnghiemthu`
 -- AUTO_INCREMENT cho bảng `baibao_tukhoa`
 --
 ALTER TABLE `baibao_tukhoa`
-  MODIFY `IDBBTK` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
+  MODIFY `IDBBTK` bigint(20) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT cho bảng `baiviet`
 --
 ALTER TABLE `baiviet`
-  MODIFY `IDBV` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `IDBV` bigint(20) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT cho bảng `baiviet_chuyenmuc`
 --
 ALTER TABLE `baiviet_chuyenmuc`
-  MODIFY `IDBVCM` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `IDBVCM` bigint(20) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT cho bảng `baiviet_nguoidung`
 --
@@ -1713,17 +1478,17 @@ ALTER TABLE `baiviet_nguoidung`
 -- AUTO_INCREMENT cho bảng `baiviet_tukhoa`
 --
 ALTER TABLE `baiviet_tukhoa`
-  MODIFY `IDTKBV` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `IDTKBV` bigint(20) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT cho bảng `baocaotiendo`
 --
 ALTER TABLE `baocaotiendo`
-  MODIFY `IDTD` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `IDTD` bigint(20) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT cho bảng `baokhoahoc`
 --
 ALTER TABLE `baokhoahoc`
-  MODIFY `IDBAO` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `IDBAO` bigint(20) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT cho bảng `bieumau`
 --
@@ -1763,7 +1528,7 @@ ALTER TABLE `chucvu`
 -- AUTO_INCREMENT cho bảng `chuyenmuc`
 --
 ALTER TABLE `chuyenmuc`
-  MODIFY `IDCM` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `IDCM` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 --
 -- AUTO_INCREMENT cho bảng `congtacchuyenmon`
 --
@@ -1778,12 +1543,12 @@ ALTER TABLE `daihoc`
 -- AUTO_INCREMENT cho bảng `detai`
 --
 ALTER TABLE `detai`
-  MODIFY `IDDT` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `IDDT` bigint(20) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT cho bảng `dexuatdetai`
 --
 ALTER TABLE `dexuatdetai`
-  MODIFY `IDDX` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `IDDX` bigint(20) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT cho bảng `hocvi`
 --
@@ -1793,12 +1558,12 @@ ALTER TABLE `hocvi`
 -- AUTO_INCREMENT cho bảng `khoabomon`
 --
 ALTER TABLE `khoabomon`
-  MODIFY `IDKBM` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `IDKBM` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 --
 -- AUTO_INCREMENT cho bảng `kinhphi`
 --
 ALTER TABLE `kinhphi`
-  MODIFY `IDKP` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=136;
+  MODIFY `IDKP` bigint(20) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT cho bảng `linhvuc`
 --
@@ -1808,7 +1573,7 @@ ALTER TABLE `linhvuc`
 -- AUTO_INCREMENT cho bảng `linhvuckhoahoc`
 --
 ALTER TABLE `linhvuckhoahoc`
-  MODIFY `IDLV` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=240;
+  MODIFY `IDLV` bigint(20) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT cho bảng `loaihinh`
 --
@@ -1818,7 +1583,7 @@ ALTER TABLE `loaihinh`
 -- AUTO_INCREMENT cho bảng `loaihinhnghiencuu`
 --
 ALTER TABLE `loaihinhnghiencuu`
-  MODIFY `IDLH` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=184;
+  MODIFY `IDLH` bigint(20) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT cho bảng `loaitaikhoan`
 --
@@ -1828,7 +1593,7 @@ ALTER TABLE `loaitaikhoan`
 -- AUTO_INCREMENT cho bảng `loaitaikhoan_nguoidung`
 --
 ALTER TABLE `loaitaikhoan_nguoidung`
-  MODIFY `IDLTKND` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `IDLTKND` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT cho bảng `ngoaingu`
 --
@@ -1838,42 +1603,42 @@ ALTER TABLE `ngoaingu`
 -- AUTO_INCREMENT cho bảng `nguoidung`
 --
 ALTER TABLE `nguoidung`
-  MODIFY `IDND` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `IDND` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT cho bảng `nguoidung_baibao`
 --
 ALTER TABLE `nguoidung_baibao`
-  MODIFY `IDTB` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `IDTB` bigint(20) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT cho bảng `nguoidung_chucdanhgiangvien`
 --
 ALTER TABLE `nguoidung_chucdanhgiangvien`
-  MODIFY `IDNDCDGV` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
+  MODIFY `IDNDCDGV` bigint(20) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT cho bảng `nguoidung_chucdanhkhoahoc`
 --
 ALTER TABLE `nguoidung_chucdanhkhoahoc`
-  MODIFY `IDNDCD` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=46;
+  MODIFY `IDNDCD` bigint(20) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT cho bảng `nguoidung_chucvu`
 --
 ALTER TABLE `nguoidung_chucvu`
-  MODIFY `IDNDCV` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=47;
+  MODIFY `IDNDCV` bigint(20) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT cho bảng `nguoidung_hocvi`
 --
 ALTER TABLE `nguoidung_hocvi`
-  MODIFY `IDNDHV` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=42;
+  MODIFY `IDNDHV` bigint(20) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT cho bảng `nguoidung_khoabomon`
 --
 ALTER TABLE `nguoidung_khoabomon`
-  MODIFY `IDNDKBM` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=52;
+  MODIFY `IDNDKBM` bigint(20) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT cho bảng `nguoidung_trinhdochuyenmon`
 --
 ALTER TABLE `nguoidung_trinhdochuyenmon`
-  MODIFY `IDNDTDCM` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
+  MODIFY `IDNDTDCM` bigint(20) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT cho bảng `slider`
 --
@@ -1888,17 +1653,17 @@ ALTER TABLE `sotietquidoi`
 -- AUTO_INCREMENT cho bảng `thanhviendetai`
 --
 ALTER TABLE `thanhviendetai`
-  MODIFY `IDTV` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=69;
+  MODIFY `IDTV` bigint(20) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT cho bảng `tiendodukien`
 --
 ALTER TABLE `tiendodukien`
-  MODIFY `IDDKTD` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=43;
+  MODIFY `IDDKTD` bigint(20) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT cho bảng `tochucthamgia`
 --
 ALTER TABLE `tochucthamgia`
-  MODIFY `IDTC` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=42;
+  MODIFY `IDTC` bigint(20) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT cho bảng `trinhdochuyenmon`
 --
@@ -1908,17 +1673,17 @@ ALTER TABLE `trinhdochuyenmon`
 -- AUTO_INCREMENT cho bảng `tukhoa`
 --
 ALTER TABLE `tukhoa`
-  MODIFY `IDKHOA` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `IDKHOA` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT cho bảng `xetduyetdetai`
 --
 ALTER TABLE `xetduyetdetai`
-  MODIFY `IDXD` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `IDXD` bigint(20) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT cho bảng `xetduyetnghiemthu`
 --
 ALTER TABLE `xetduyetnghiemthu`
-  MODIFY `IDNT` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `IDNT` bigint(20) NOT NULL AUTO_INCREMENT;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

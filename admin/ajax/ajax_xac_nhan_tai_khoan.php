@@ -1,6 +1,5 @@
 <?php
 include_once("../../config.php");
-include_once("../../config.php");
 include_once ("../mail/guimail.php");
 session_start();
 if (isset($_SESSION['tdn']) && isset($_SESSION['pas'])) {

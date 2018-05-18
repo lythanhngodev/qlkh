@@ -2676,7 +2676,7 @@
       <DataType>int(11)|0</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="590" parent="300" name="VAITRO">
+    <column id="590" parent="300" name="NHIEMVU">
       <Position>4</Position>
       <DataType>text|0</DataType>
       <ColumnKind>normal</ColumnKind>
@@ -2688,15 +2688,15 @@
       <DefaultExpression>&apos;0&apos;</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="592" parent="300" name="FILE">
+    <column id="592" parent="300" name="THOIGIANPHANCONG">
       <Position>6</Position>
-      <DataType>text|0</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="593" parent="300" name="THOIGIANPHANCONG">
-      <Position>7</Position>
       <DataType>datetime|0</DataType>
       <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="593" parent="300" name="GHICHU">
+      <Position>7</Position>
+      <DataType>text|0</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
     <key id="594" parent="300" name="PRIMARY">
@@ -2721,20 +2721,20 @@
       <DataType>bigint(20)|0</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="598" parent="301" name="YKIEN">
+    <column id="598" parent="301" name="NHIEMVU">
       <Position>4</Position>
       <DataType>text|0</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="599" parent="301" name="FILE">
+    <column id="599" parent="301" name="THOIGIANPHANCONG">
       <Position>5</Position>
-      <DataType>text|0</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="600" parent="301" name="THOIGIANPHANCONG">
-      <Position>6</Position>
       <DataType>datetime|0</DataType>
       <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="600" parent="301" name="GHICHU">
+      <Position>6</Position>
+      <DataType>text|0</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
     <key id="601" parent="301" name="PRIMARY">
