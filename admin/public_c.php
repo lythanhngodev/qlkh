@@ -13,6 +13,9 @@
 			case 'suabaibao':
 				include_once("control/c_sua_bai_bao.php");
 				break;
+            case 'suabaiviet':
+                include_once("control/c_sua_bai_viet.php");
+                break;
 			case 'quanlydetaiduan':
 				include_once("control/c_quan_ly_de_tai_du_an.php");
 				break;

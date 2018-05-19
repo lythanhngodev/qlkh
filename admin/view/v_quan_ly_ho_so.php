@@ -40,7 +40,7 @@
                         <div id="ls-nckh" class="list-group">
                           <button class="list-group-item" id="danhsachhoidongnghiemthu">Danh sách HĐ nghiệm thu</button>
                           <button class="list-group-item" id="kehoachnghiemthu">Kế hoạch nghiệm thu đề tài</button>
-                          <button class="list-group-item" id="">Phiếu đánh giá nghiệm thu</button>
+                          <button class="list-group-item" id="phieudanhgianghiemthu">Phiếu đánh giá nghiệm thu</button>
                           <button class="list-group-item" id="">Tổng hợpHĐ đánh giá NT</button>
                           <button class="list-group-item" id="">Bảng kê chi tiền tham dự (NT)</button>
                           <button class="list-group-item" id="phieugiaonhansanpham">Phiếu giao nhận sản phẩm (NT)</button>
@@ -73,174 +73,57 @@
         $('#noidung').html('');
         $(this).addClass('active');
         var id = $(this).attr('id');
-        if (id=="phieudanhgiadecuong") {
-            if (kiemtraketnoi()){
-                $.ajax({
-                    url: 'word/_phieudanhgiadecuong.php',
-                    dataType: 'text',
-                    type: 'post',
-                    data: {_token: '<?php echo $token; ?>'},
-                    beforeSend: function () {$('#noidung').html('<div class="progress"><div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div></div>'); },
-                    success: function(data){
-                        $.notifyClose();
-                        thanhcong('Tải dữ liệu thành công');
-                        $('#noidung').html(data);
-                    },
-                    error: function () {
-                        $.notifyClose();
-                       swal('Ôi! Lỗi','Vui lòng thử lại sau','error');
-                    }
-                });
-            } else
-                swal('Ôi! Lỗi','Không có kết nối internet','error');
-        }
-        else if (id=="kehoachxetchon") {
-            if (kiemtraketnoi()){
-                $.ajax({
-                    url: 'word/_kehoachxetchon.php',
-                    dataType: 'text',
-                    type: 'post',
-                    data: {_token: '<?php echo $token; ?>'},
-                    beforeSend: function () {$('#noidung').html('<div class="progress"><div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div></div>'); },
-                    success: function(data){
-                        $.notifyClose();
-                        thanhcong('Tải dữ liệu thành công');
-                        $('#noidung').html(data);
-                    },
-                    error: function () {
-                        $.notifyClose();
-                       swal('Ôi! Lỗi','Vui lòng thử lại sau','error');
-                    }
-                });
-            } else
-                swal('Ôi! Lỗi','Không có kết nối internet','error');
-        }
-        else if (id=="danhsachhoidongnghiemthu") {
-            if (kiemtraketnoi()){
-                $.ajax({
-                    url: 'word/_danhsachhoidongnghiemthu.php',
-                    dataType: 'text',
-                    type: 'post',
-                    data: {_token: '<?php echo $token; ?>'},
-                    beforeSend: function () {$('#noidung').html('<div class="progress"><div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div></div>'); },
-                    success: function(data){
-                        $.notifyClose();
-                        thanhcong('Tải dữ liệu thành công');
-                        $('#noidung').html(data);
-                    },
-                    error: function () {
-                        $.notifyClose();
-                       swal('Ôi! Lỗi','Vui lòng thử lại sau','error');
-                    }
-                });
-            } else
-                swal('Ôi! Lỗi','Không có kết nối internet','error');
-        }
-        else if (id=="danhsachhoidongxetchon") {
-            if (kiemtraketnoi()){
-                $.ajax({
-                    url: 'word/_danhsachhoidongxetchon.php',
-                    dataType: 'text',
-                    type: 'post',
-                    data: {_token: '<?php echo $token; ?>'},
-                    beforeSend: function () {$('#noidung').html('<div class="progress"><div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div></div>'); },
-                    success: function(data){
-                        $.notifyClose();
-                        thanhcong('Tải dữ liệu thành công');
-                        $('#noidung').html(data);
-                    },
-                    error: function () {
-                        $.notifyClose();
-                       swal('Ôi! Lỗi','Vui lòng thử lại sau','error');
-                    }
-                });
-            } else
-                swal('Ôi! Lỗi','Không có kết nối internet','error');
-        }
-        else if (id=="kehoachnghiemthu") {
-            if (kiemtraketnoi()){
-                $.ajax({
-                    url: 'word/_kehoachnghiemthu.php',
-                    dataType: 'text',
-                    type: 'post',
-                    data: {_token: '<?php echo $token; ?>'},
-                    beforeSend: function () {$('#noidung').html('<div class="progress"><div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div></div>'); },
-                    success: function(data){
-                        $.notifyClose();
-                        thanhcong('Tải dữ liệu thành công');
-                        $('#noidung').html(data);
-                    },
-                    error: function () {
-                        $.notifyClose();
-                       swal('Ôi! Lỗi','Vui lòng thử lại sau','error');
-                    }
-                });
-            } else
-                swal('Ôi! Lỗi','Không có kết nối internet','error');
-        }
-        else if (id=="phieugiaonhansanpham") {
-            if (kiemtraketnoi()){
-                $.ajax({
-                    url: 'word/_phieugiaonhansanpham.php',
-                    dataType: 'text',
-                    type: 'post',
-                    data: {_token: '<?php echo $token; ?>'},
-                    beforeSend: function () {$('#noidung').html('<div class="progress"><div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div></div>'); },
-                    success: function(data){
-                        $.notifyClose();
-                        thanhcong('Tải dữ liệu thành công');
-                        $('#noidung').html(data);
-                    },
-                    error: function () {
-                        $.notifyClose();
-                       swal('Ôi! Lỗi','Vui lòng thử lại sau','error');
-                    }
-                });
-            } else
-                swal('Ôi! Lỗi','Không có kết nối internet','error');
-        }
-        else if (id=="phieugiaonhansanphamthietbi") {
-            if (kiemtraketnoi()){
-                $.ajax({
-                    url: 'word/_phieugiaonhansanphamthietbi.php',
-                    dataType: 'text',
-                    type: 'post',
-                    data: {_token: '<?php echo $token; ?>'},
-                    beforeSend: function () {$('#noidung').html('<div class="progress"><div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div></div>'); },
-                    success: function(data){
-                        $.notifyClose();
-                        thanhcong('Tải dữ liệu thành công');
-                        $('#noidung').html(data);
-                    },
-                    error: function () {
-                        $.notifyClose();
-                       swal('Ôi! Lỗi','Vui lòng thử lại sau','error');
-                    }
-                });
-            } else
-                swal('Ôi! Lỗi','Không có kết nối internet','error');
-        }
-        else if (id=="phieuxacnhantrienkhaiungdung") {
-            if (kiemtraketnoi()){
-                $.ajax({
-                    url: 'word/_phieuxacnhantrienkhaiungdung.php',
-                    dataType: 'text',
-                    type: 'post',
-                    data: {_token: '<?php echo $token; ?>'},
-                    beforeSend: function () {$('#noidung').html('<div class="progress"><div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div></div>'); },
-                    success: function(data){
-                        $.notifyClose();
-                        thanhcong('Tải dữ liệu thành công');
-                        $('#noidung').html(data);
-                    },
-                    error: function () {
-                        $.notifyClose();
-                       swal('Ôi! Lỗi','Vui lòng thử lại sau','error');
-                    }
-                });
-            } else
-                swal('Ôi! Lỗi','Không có kết nối internet','error');
+        switch (id){
+            case "phieudanhgiadecuong":
+                laydulieu(id);
+                break;
+            case "kehoachxetchon":
+                laydulieu(id);
+                break;
+            case "danhsachhoidongnghiemthu":
+                laydulieu(id);
+                break;
+            case "danhsachhoidongxetchon":
+                laydulieu(id);
+                break;
+            case "phieudanhgianghiemthu":
+                laydulieu(id);
+                break;
+            case "kehoachnghiemthu":
+                laydulieu(id);
+                break;
+            case "phieugiaonhansanpham":
+                laydulieu(id);
+                break;
+            case "phieugiaonhansanphamthietbi":
+                laydulieu(id);
+                break;
+            case "phieuxacnhantrienkhaiungdung":
+                laydulieu(id);
+                break;
         }
     });
   });
+function laydulieu(id){
+    if (kiemtraketnoi()){
+        $.ajax({
+            url: 'word/_'+id+'.php',
+            dataType: 'text',
+            type: 'post',
+            beforeSend: function () {$('#noidung').html('<div class="progress"><div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div></div>'); },
+            success: function(data){
+                $.notifyClose();
+                thanhcong('Tải dữ liệu thành công');
+                $('#noidung').html(data);
+            },
+            error: function () {
+                $.notifyClose();
+                $('#tuychon').html('');
+                $('#noidung').html('');
+               swal('Ôi! Lỗi','Vui lòng thử lại sau','error');
+            }
+        });
+    } else
+        swal('Ôi! Lỗi','Không có kết nối internet','error');
+}
 </script>
