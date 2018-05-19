@@ -43,9 +43,9 @@
                           <button class="list-group-item" id="">Phiếu đánh giá nghiệm thu</button>
                           <button class="list-group-item" id="">Tổng hợpHĐ đánh giá NT</button>
                           <button class="list-group-item" id="">Bảng kê chi tiền tham dự (NT)</button>
-                          <button class="list-group-item" id="">Phiếu giao nhận sản phẩm (NT)</button>
-                          <button class="list-group-item" id="">Phiếu giao nhận sản phẩm (NT - Thiết bị)</button>
-                          <button class="list-group-item" id="">Phiếu xác nhận triển khai ứng dụng</button>
+                          <button class="list-group-item" id="phieugiaonhansanpham">Phiếu giao nhận sản phẩm (NT)</button>
+                          <button class="list-group-item" id="phieugiaonhansanphamthietbi">Phiếu giao nhận sản phẩm (NT - Thiết bị)</button>
+                          <button class="list-group-item" id="phieuxacnhantrienkhaiungdung">Phiếu xác nhận triển khai ứng dụng</button>
                         </div>
                     </div>
                 </div>
@@ -83,7 +83,7 @@
                     beforeSend: function () {$('#noidung').html('<div class="progress"><div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div></div>'); },
                     success: function(data){
                         $.notifyClose();
-                        swal('Tốt','Tải dữ liệu thành công','success');
+                        thanhcong('Tải dữ liệu thành công');
                         $('#noidung').html(data);
                     },
                     error: function () {
@@ -104,7 +104,7 @@
                     beforeSend: function () {$('#noidung').html('<div class="progress"><div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div></div>'); },
                     success: function(data){
                         $.notifyClose();
-                        swal('Tốt','Tải dữ liệu thành công','success');
+                        thanhcong('Tải dữ liệu thành công');
                         $('#noidung').html(data);
                     },
                     error: function () {
@@ -125,7 +125,7 @@
                     beforeSend: function () {$('#noidung').html('<div class="progress"><div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div></div>'); },
                     success: function(data){
                         $.notifyClose();
-                        swal('Tốt','Tải dữ liệu thành công','success');
+                        thanhcong('Tải dữ liệu thành công');
                         $('#noidung').html(data);
                     },
                     error: function () {
@@ -146,7 +146,7 @@
                     beforeSend: function () {$('#noidung').html('<div class="progress"><div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div></div>'); },
                     success: function(data){
                         $.notifyClose();
-                        swal('Tốt','Tải dữ liệu thành công','success');
+                        thanhcong('Tải dữ liệu thành công');
                         $('#noidung').html(data);
                     },
                     error: function () {
@@ -167,7 +167,70 @@
                     beforeSend: function () {$('#noidung').html('<div class="progress"><div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div></div>'); },
                     success: function(data){
                         $.notifyClose();
-                        swal('Tốt','Tải dữ liệu thành công','success');
+                        thanhcong('Tải dữ liệu thành công');
+                        $('#noidung').html(data);
+                    },
+                    error: function () {
+                        $.notifyClose();
+                       swal('Ôi! Lỗi','Vui lòng thử lại sau','error');
+                    }
+                });
+            } else
+                swal('Ôi! Lỗi','Không có kết nối internet','error');
+        }
+        else if (id=="phieugiaonhansanpham") {
+            if (kiemtraketnoi()){
+                $.ajax({
+                    url: 'word/_phieugiaonhansanpham.php',
+                    dataType: 'text',
+                    type: 'post',
+                    data: {_token: '<?php echo $token; ?>'},
+                    beforeSend: function () {$('#noidung').html('<div class="progress"><div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div></div>'); },
+                    success: function(data){
+                        $.notifyClose();
+                        thanhcong('Tải dữ liệu thành công');
+                        $('#noidung').html(data);
+                    },
+                    error: function () {
+                        $.notifyClose();
+                       swal('Ôi! Lỗi','Vui lòng thử lại sau','error');
+                    }
+                });
+            } else
+                swal('Ôi! Lỗi','Không có kết nối internet','error');
+        }
+        else if (id=="phieugiaonhansanphamthietbi") {
+            if (kiemtraketnoi()){
+                $.ajax({
+                    url: 'word/_phieugiaonhansanphamthietbi.php',
+                    dataType: 'text',
+                    type: 'post',
+                    data: {_token: '<?php echo $token; ?>'},
+                    beforeSend: function () {$('#noidung').html('<div class="progress"><div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div></div>'); },
+                    success: function(data){
+                        $.notifyClose();
+                        thanhcong('Tải dữ liệu thành công');
+                        $('#noidung').html(data);
+                    },
+                    error: function () {
+                        $.notifyClose();
+                       swal('Ôi! Lỗi','Vui lòng thử lại sau','error');
+                    }
+                });
+            } else
+                swal('Ôi! Lỗi','Không có kết nối internet','error');
+        }
+        else if (id=="phieuxacnhantrienkhaiungdung") {
+            if (kiemtraketnoi()){
+                $.ajax({
+                    url: 'word/_phieuxacnhantrienkhaiungdung.php',
+                    dataType: 'text',
+                    type: 'post',
+                    data: {_token: '<?php echo $token; ?>'},
+                    beforeSend: function () {$('#noidung').html('<div class="progress"><div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div></div>'); },
+                    success: function(data){
+                        $.notifyClose();
+                        thanhcong('Tải dữ liệu thành công');
                         $('#noidung').html(data);
                     },
                     error: function () {

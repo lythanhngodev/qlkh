@@ -22,6 +22,7 @@
 	$thucthi_user = mysqli_query($ketnoi->ketnoi(), $hoi_user);
 	$row_user = mysqli_fetch_assoc($thucthi_user);
 	$idnd = $row_user['IDND'];
+	$_SESSION['_idnd'] = $idnd;
 	$ho = $row_user['HO'];
 	$ten = $row_user['TEN'];
 	$hinh = $row_user['HINH'];
