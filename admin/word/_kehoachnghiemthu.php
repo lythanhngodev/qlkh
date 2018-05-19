@@ -31,7 +31,7 @@
  </style>
  <div class="card">
  	<div class="card-header">
- 		<h4>Danh sách hội đồng nghiệm thu</h4>
+ 		<h4>Kế hoạch xét chọn</h4>
  		<p>(Chọn/Check đề tài sau đó nhấn nút "Xuất file" để tải file về máy)</p>
  	</div>
  	<div class="card-body">
@@ -44,7 +44,7 @@
 		  2. Danh sách các đề tài dưới đây không bao gồm những đề tài chờ xét duyệt hoặc đề tài đã nghiệm thu<br>
 		  3. Chọn/Check vào đề tài sau đó nút "Xuất file" để tải file về máy
 		</div>
-		<form action="word/danh_sach_hoi_dong_nghiem_thu.php" method="POST" target="_blank">
+		<form action="word/ke_hoach_nghiem_thu.php" method="POST" target="_blank">
 			<input type="text" name="dachon" id="i_dachon" hidden="hidden">
 			<span>Số đề tài đã chọn: <b class="dachon">0</b></span><br>
 			<button type="submit" class="btn btn-warning"><i class="far fa-file-word"></i> Xuất file</button>

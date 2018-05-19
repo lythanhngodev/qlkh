@@ -1,12 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Ly Thanh Ngo
- * Date: 12/04/2018
- * Time: 1:49 PM
- */
-?>
-<?php
 if (!isset($_SESSION["token"])) {include_once ("../../loi404.html");exit();}
 include_once("../config.php");
 function chi_tiet_de_tai($iddt){

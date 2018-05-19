@@ -129,10 +129,19 @@ function thanh_vien_xet_duyet_da_chon($iddt){
     mysqli_close($conn);
     return $result;
 }
-function thanh_vien_ban_to_chuc_da_chon($iddt){
+
+function thanh_vien_ban_to_chuc_da_chon(){
     $ketnoi = new clsKetnoi();
     $conn = $ketnoi->ketnoi();
-    $query = "SELECT DISTINCT xd.IDND,CONCAT(nd.HO,' ',nd.TEN) as HOTEN,nd.NGAYSINH, xd.NHIEMVU,xd.GHICHU FROM xetduyetdetai xd, nguoidung nd WHERE xd.LOAIHD = '1' AND xd.IDND = nd.IDND AND xd.IDDT = '$iddt'";
+    $query = "SELECT DISTINCT hd.IDND,CONCAT(nd.HO,' ',nd.TEN) as HOTEN,nd.NGAYSINH, hd.NHIEMVU,hd.GHICHU FROM hoidongxetchon hd, nguoidung nd WHERE hd.IDND = nd.IDND";
+    $result = mysqli_query($conn, $query);
+    mysqli_close($conn);
+    return $result;
+}
+function thanh_vien_xet_duyet_da_chon_truoc_do($iddt){
+    $ketnoi = new clsKetnoi();
+    $conn = $ketnoi->ketnoi();
+    $query = "SELECT DISTINCT xd.IDND,CONCAT(nd.HO,' ',nd.TEN) as HOTEN,nd.NGAYSINH,xd.NHIEMVU, xd.GHICHU FROM xetduyetdetai xd, nguoidung nd WHERE xd.LOAIHD = '1' AND xd.IDND = nd.IDND AND xd.IDDT = '$iddt'";
     $result = mysqli_query($conn, $query);
     mysqli_close($conn);
     return $result;

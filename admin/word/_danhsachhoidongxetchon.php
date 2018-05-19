@@ -5,7 +5,7 @@
 	function lay_de_xuat_du_an(){
 		$ketnoi = new clsKetnoi();
 		$conn = $ketnoi->ketnoi();
-		$query = "SELECT dx.IDDT, dt.MADETAI,`TENDETAI` FROM dexuatdetai dx, detai dt WHERE dx.IDDT = dt.IDDT AND dt.TRANGTHAI = N'Đang thực hiện' ORDER BY dx.IDDX DESC";
+		$query = "SELECT dx.IDDT, dt.MADETAI,`TENDETAI` FROM dexuatdetai dx, detai dt WHERE dx.IDDT = dt.IDDT AND dt.TRANGTHAI = N'Đang xét duyệt' ORDER BY dx.IDDX DESC";
 		$result = mysqli_query($conn, $query);
 		mysqli_close($conn);
 		return $result;
@@ -40,11 +40,11 @@
 		    <span aria-hidden="true">&times;</span>
 		  </button>
 		  <strong>Lưu ý!</strong><br>
-		  1. Cần cập nhật thông tin về HĐ nghiệm thu đề tài tại trang <a href="?p=quanlydetaiduan"><b><u>Quản lý đề tài - dự án</u></b></a> (Tab Xét duyệt)<br>
-		  2. Danh sách các đề tài dưới đây không bao gồm những đề tài chờ xét duyệt hoặc đề tài đã nghiệm thu<br>
+		  1. Cần cập nhật thông tin về HĐ xét duyệt đề tài tại trang <a href="?p=quanlydetaiduan"><b><u>Quản lý đề tài - dự án</u></b></a> (Tab Xét duyệt)<br>
+		  2. Danh sách các đề tài dưới đây chỉ bao gồm những đề tài chờ xét chọn<br>
 		  3. Chọn/Check vào đề tài sau đó nút "Xuất file" để tải file về máy
 		</div>
-		<form action="word/danh_sach_hoi_dong_nghiem_thu.php" method="POST" target="_blank">
+		<form action="word/danh_sach_hoi_dong_xet_chon.php" method="POST" target="_blank">
 			<input type="text" name="dachon" id="i_dachon" hidden="hidden">
 			<span>Số đề tài đã chọn: <b class="dachon">0</b></span><br>
 			<button type="submit" class="btn btn-warning"><i class="far fa-file-word"></i> Xuất file</button>

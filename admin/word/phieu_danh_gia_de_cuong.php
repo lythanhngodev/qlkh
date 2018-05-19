@@ -135,7 +135,6 @@
 						<td style="text-align: center;width: 70mm;"><b>Người đánh giá</b><br><i>(Ký, Ghi rõ họ & tên)</i></td>
 					</tr>
 				</table>
-
 			</div>
 		</div>
 	</div>

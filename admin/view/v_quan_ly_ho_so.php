@@ -20,13 +20,13 @@
             <div class="col-12">
                 <div class="card line-chart-example">
                     <div class="card-header giua">
-                        <h4>XÉT DUYỆT</h4>
+                        <h4>HỒ SƠ XÉT DUYỆT</h4>
                     </div>
                     <div class="card-body">
                         <div id="ls-nckh" class="list-group">
                           <button class="list-group-item" id="phieudanhgiadecuong">Phiếu đánh giá đề cương</button>
-                          <button class="list-group-item" id="">Danh sách HĐ xét chọn</button>
-                          
+                          <button class="list-group-item" id="danhsachhoidongxetchon">Danh sách HĐ xét chọn</button>
+                          <button class="list-group-item" id="kehoachxetchon">Kế hoạch xét duyệt đề tài</button>
                         </div>
                     </div>
                 </div>
@@ -34,12 +34,12 @@
             <div class="col-12">
                 <div class="card line-chart-example">
                     <div class="card-header giua">
-                        <h4>NGHIỆM THU</h4>
+                        <h4>HỒ SƠ NGHIỆM THU</h4>
                     </div>
                     <div class="card-body">
                         <div id="ls-nckh" class="list-group">
                           <button class="list-group-item" id="danhsachhoidongnghiemthu">Danh sách HĐ nghiệm thu</button>
-                          <button class="list-group-item" id="">Kế hoạch nghiệm thu đề tài</button>
+                          <button class="list-group-item" id="kehoachnghiemthu">Kế hoạch nghiệm thu đề tài</button>
                           <button class="list-group-item" id="">Phiếu đánh giá nghiệm thu</button>
                           <button class="list-group-item" id="">Tổng hợpHĐ đánh giá NT</button>
                           <button class="list-group-item" id="">Bảng kê chi tiền tham dự (NT)</button>
@@ -69,11 +69,11 @@
     $('.tieude').html('Quản lý hồ sơ');
     $('.list-group-item').click(function() {
         $('.list-group-item').removeClass('active');
+        $('#tuychon').html('');
+        $('#noidung').html('');
         $(this).addClass('active');
         var id = $(this).attr('id');
         if (id=="phieudanhgiadecuong") {
-            $('#tuychon').html('');
-            $('#noidung').html('');
             if (kiemtraketnoi()){
                 $.ajax({
                     url: 'word/_phieudanhgiadecuong.php',
@@ -94,12 +94,73 @@
             } else
                 swal('Ôi! Lỗi','Không có kết nối internet','error');
         }
+        else if (id=="kehoachxetchon") {
+            if (kiemtraketnoi()){
+                $.ajax({
+                    url: 'word/_kehoachxetchon.php',
+                    dataType: 'text',
+                    type: 'post',
+                    data: {_token: '<?php echo $token; ?>'},
+                    beforeSend: function () {$('#noidung').html('<div class="progress"><div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div></div>'); },
+                    success: function(data){
+                        $.notifyClose();
+                        swal('Tốt','Tải dữ liệu thành công','success');
+                        $('#noidung').html(data);
+                    },
+                    error: function () {
+                        $.notifyClose();
+                       swal('Ôi! Lỗi','Vui lòng thử lại sau','error');
+                    }
+                });
+            } else
+                swal('Ôi! Lỗi','Không có kết nối internet','error');
+        }
         else if (id=="danhsachhoidongnghiemthu") {
-            $('#tuychon').html('');
-            $('#noidung').html('');
             if (kiemtraketnoi()){
                 $.ajax({
                     url: 'word/_danhsachhoidongnghiemthu.php',
+                    dataType: 'text',
+                    type: 'post',
+                    data: {_token: '<?php echo $token; ?>'},
+                    beforeSend: function () {$('#noidung').html('<div class="progress"><div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div></div>'); },
+                    success: function(data){
+                        $.notifyClose();
+                        swal('Tốt','Tải dữ liệu thành công','success');
+                        $('#noidung').html(data);
+                    },
+                    error: function () {
+                        $.notifyClose();
+                       swal('Ôi! Lỗi','Vui lòng thử lại sau','error');
+                    }
+                });
+            } else
+                swal('Ôi! Lỗi','Không có kết nối internet','error');
+        }
+        else if (id=="danhsachhoidongxetchon") {
+            if (kiemtraketnoi()){
+                $.ajax({
+                    url: 'word/_danhsachhoidongxetchon.php',
+                    dataType: 'text',
+                    type: 'post',
+                    data: {_token: '<?php echo $token; ?>'},
+                    beforeSend: function () {$('#noidung').html('<div class="progress"><div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div></div>'); },
+                    success: function(data){
+                        $.notifyClose();
+                        swal('Tốt','Tải dữ liệu thành công','success');
+                        $('#noidung').html(data);
+                    },
+                    error: function () {
+                        $.notifyClose();
+                       swal('Ôi! Lỗi','Vui lòng thử lại sau','error');
+                    }
+                });
+            } else
+                swal('Ôi! Lỗi','Không có kết nối internet','error');
+        }
+        else if (id=="kehoachnghiemthu") {
+            if (kiemtraketnoi()){
+                $.ajax({
+                    url: 'word/_kehoachnghiemthu.php',
                     dataType: 'text',
                     type: 'post',
                     data: {_token: '<?php echo $token; ?>'},
