@@ -4,7 +4,7 @@ include_once("../config.php");
 function lay_thanh_vien($idnd){
     $ketnoi = new clsKetnoi();
     $conn = $ketnoi->ketnoi();
-    $query = "SELECT DISTINCT nd.IDND, CONCAT(nd.HO, ' ', nd.TEN) as HOTEN, l.TENLTK, l.IDLTK
+    $query = "SELECT DISTINCT nd.IDND, CONCAT(nd.HO, ' ', nd.TEN) as HOTEN, l.TENLTK, l.IDLTK, nd.MAIL
         FROM nguoidung nd, loaitaikhoan_nguoidung ln, loaitaikhoan l
         WHERE nd.IDND = ln.IDND AND l.IDLTK = ln.IDLTK AND nd.IDND NOT IN (SELECT IDND FROM nguoidung WHERE IDND = '$idnd'); ";
     $result = mysqli_query($conn, $query);

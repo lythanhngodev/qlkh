@@ -23,6 +23,7 @@ if (!isset($_SESSION["token"])) {include_once ("../../loi404.html");exit();}
                                     <th class="giua">TT</th>
                                     <th class="giua">Họ & Tên</th>
                                     <th class="giua">Khoa / Phòng</th>
+                                    <th class="giua">Mail</th>
                                     <th class="giua">Loại tài khoản</th>
                                     <th class="giua" style="width: 100px">Thao tác</th>
                                 </tr>
@@ -40,6 +41,7 @@ if (!isset($_SESSION["token"])) {include_once ("../../loi404.html");exit();}
                                             echo $_kp['TENKBM'];
                                         }
                                          ?></td>
+                                        <td><?php echo $row['MAIL']; ?></td>
                                         <td>
                                             <select class="form-control chonltk" lydata="<?php echo $_idnd; ?>">
                                             <?php foreach ($ltk as $l){ ?>
