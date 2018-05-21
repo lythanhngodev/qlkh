@@ -16,6 +16,9 @@ if (isset($_SESSION['tdn']) && isset($_SESSION['pas'])) {
         exit();
     }
 }
+else{
+    echo '<script type="text/javascript">location.href = "'.$qlkh['HOSTADMIN'].'"</script>';
+}
 $ketnoi = new clsKetnoi();
 $conn = $ketnoi->ketnoi();
 $hoi = "UPDATE `xetduyetdetai` SET `FILE`='' WHERE `IDXD` = '".$_POST['dt']."'";

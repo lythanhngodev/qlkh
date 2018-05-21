@@ -8,6 +8,9 @@ if (isset($_SESSION['tdn']) && isset($_SESSION['pas'])) {
         exit();
     }
 }
+else{
+    echo '<script type="text/javascript">location.href = "'.$qlkh['HOSTADMIN'].'"</script>';
+}
 $result = Array(
     'trangthai' => 0
 );

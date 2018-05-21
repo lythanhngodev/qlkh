@@ -1,13 +1,15 @@
 <?php 
-	include_once("../../config.php");
-	session_start();
-	if (isset($_SESSION['tdn']) && isset($_SESSION['pas'])) {
-		$ketnoi = new clsKetnoi();
-		if (!($ketnoi->checklogin($_SESSION['tdn'],$_SESSION['pas']))) {
-			echo '<script type="text/javascript">location.href = "'.$qlkh['HOSTADMIN'].'"</script>';
-			exit();
-		}
+include_once("../../config.php");
+session_start();
+if (isset($_SESSION['tdn']) && isset($_SESSION['pas'])) {
+	$ketnoi = new clsKetnoi();
+	if (!($ketnoi->checklogin($_SESSION['tdn'],$_SESSION['pas']))) {
+		echo '<script type="text/javascript">location.href = "'.$qlkh['HOSTADMIN'].'"</script>';
+		exit();
 	}
+}else{
+    echo '<script type="text/javascript">location.href = "'.$qlkh['HOSTADMIN'].'"</script>';
+}
 	function themtacgia($tbb,$tg, $qg, $tc, $namxb, $nd, $bib, $tk,$idbb,$file,$cap, $diem, $sotiet){
 		if (empty($tbb)) {
 			echo "<script type=\"text/javascript\">khongthanhcong(\"Chưa nhập tên bài báo\")</script>";

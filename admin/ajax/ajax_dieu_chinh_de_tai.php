@@ -9,6 +9,9 @@ if (isset($_SESSION['tdn']) && isset($_SESSION['pas'])) {
         exit();
     }
 }
+else{
+    echo '<script type="text/javascript">location.href = "'.$qlkh['HOSTADMIN'].'"</script>';
+}
 function suadetai($tendetai,$muctieu,$noidung,$cap,$moisangtao,$thuocchuongtrinh,$sucanthiet,$tinhhinhnghiencuu,$nghiencuulienquan,$phuongphapkythuat,$kinhphingansach,$kinhphinguonkhac,$thangthuchien,$thangnambatdau,$thangnamketthuc,$ketqua,$loaihinhnghiencuu,$linhvuckhoahoc,$thanhvien,$tochucthamgia,$tiendodukien,$kinhphichitiet,$idnd,$iddt){
     $ketnoi = new clsKetnoi();
     $conn = $ketnoi->ketnoi();

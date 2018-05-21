@@ -15,6 +15,8 @@ if (isset($_SESSION['tdn']) && isset($_SESSION['pas'])) {
         echo '<script type="text/javascript">location.href = "'.$qlkh['HOSTADMIN'].'"</script>';
         exit();
     }
+}else{
+    echo '<script type="text/javascript">location.href = "'.$qlkh['HOSTADMIN'].'"</script>';
 }
 $ma = $_POST['ma'];
 $ten = $_POST['file'];

@@ -7,6 +7,8 @@
 			echo '<script type="text/javascript">location.href = "'.$qlkh['HOSTADMIN'].'"</script>';
 			exit();
 		}
+	}else{
+	    echo '<script type="text/javascript">location.href = "'.$qlkh['HOSTADMIN'].'"</script>';
 	}
 	function themtacgia($t, $ns, $mt, $dc){
 		if (empty($t)) {
