@@ -11,7 +11,7 @@ if (!isset($_SESSION["token"])) {include_once ("../../loi404.html");exit();}
                 <div class="card-body">
                     <div class="row">
                         <div class="col-md-12">
-                        <button class="btn btn-warning btn-sm" id="nhap"><i class="fas fa-excel"></i>&nbsp;&nbsp;Chọn file excel</button><br>
+                        <button class="btn btn-warning btn-sm" id="nhap"><i class="far fa-file-excel"></i>&nbsp;&nbsp;Chọn file excel</button><br>
                         Nếu chưa có mẫu nhập Excel vui lòng <a href="../files/20180514075706-dangkynguoidung.xlsx"><b><i><u>tải xuống.</u></i></b></a>
                         <br><br>
                         <input type="file" name="" id="filedl" hidden="hidden" accept="application/vnd.ms-excel, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet">
