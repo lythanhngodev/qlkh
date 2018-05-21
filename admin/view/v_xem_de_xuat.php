@@ -40,11 +40,14 @@ if (!isset($_SESSION["token"])) {include_once ("../../loi404.html");exit();}
                                             <input type="text" class="form-control" id="madetai" value="<?php echo $detai['MADETAI']; ?>"><hr>
                                             <button class="btn btn-primary" id="luumdt">Lưu mã</button>
                                         </div>
+                                        <?php if ($trangthaidt!='Đang xét duyệt') { ?>
                                         <div class="form-group col-md-3">
                                             <label for="category" class="font-weight-bold giua" >Điểm đề tài</label>
                                             <input type="number" min="0" max="100" class="form-control giua" id="diemdetai" value="<?php echo $detai['DIEM']; ?>"><hr>
                                             <button class="btn btn-primary" id="luuddt">Lưu điểm</button>
                                         </div>
+                                        <?php } ?>
+
                                         <?php if ($detai['DUYET']==0) { ?>
                                         <div class="form-group col-md-6">
                                             <label for="category" class="font-weight-bold" >Duyệt đề tài này nếu đề tài này đã từng có trước đây</label><hr>
