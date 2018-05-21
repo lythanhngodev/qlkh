@@ -64,8 +64,11 @@
             text-align: right;
         }
         @page Section1{
+            mso-footer:f1;
+            mso-footer-margin:0.5in;
             size: 21cm 29.7cm;
             margin: 1.5cm 1.5cm 1.5cm 1.5cm;
+            mso-paper-source:0;
         }
         div.Section1 { page:Section1;}
         p{
@@ -168,7 +171,9 @@
 				</table>
 			</div>
 		</div>
-		
 	</div>
+	<div style='mso-element:footer' id="f1">
+    	<p class="MsoFooter">LLLLLLLLLLLLLLLL</p>
+</div>
 </body>
 </html>

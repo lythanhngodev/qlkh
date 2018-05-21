@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e784096a-f6cb-467c-8cbe-b1eae1f3bf23" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/admin/index.php" afterPath="$PROJECT_DIR$/admin/index.php" />
-      <change beforePath="$PROJECT_DIR$/admin/public_c.php" afterPath="$PROJECT_DIR$/admin/public_c.php" />
-      <change beforePath="$PROJECT_DIR$/admin/view/v_quan_ly_ho_so.php" afterPath="$PROJECT_DIR$/admin/view/v_quan_ly_ho_so.php" />
+      <change beforePath="$PROJECT_DIR$/admin/word/phieu_danh_gia_nghiem_thu.php" afterPath="$PROJECT_DIR$/admin/word/phieu_danh_gia_nghiem_thu.php" />
+      <change beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -339,7 +338,7 @@
       <workItem from="1526613315764" duration="590000" />
       <workItem from="1526617531555" duration="1198000" />
       <workItem from="1526626442694" duration="11832000" />
-      <workItem from="1526689410112" duration="6162000" />
+      <workItem from="1526689410112" duration="6758000" />
     </task>
     <task id="LOCAL-00001" summary="Start up">
       <created>1525824037964</created>
@@ -359,7 +358,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="105661000" />
+    <option name="totallyTimeSpent" value="106257000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="32" width="1936" height="1056" extended-state="6" />
