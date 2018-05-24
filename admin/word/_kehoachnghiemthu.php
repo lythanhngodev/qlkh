@@ -40,14 +40,28 @@
 		    <span aria-hidden="true">&times;</span>
 		  </button>
 		  <strong>Lưu ý!</strong><br>
-		  1. Cần cập nhật thông tin về HĐ nghiệm thu đề tài tại trang <a href="?p=quanlydetaiduan"><b><u>Quản lý đề tài - dự án</u></b></a> (Tab Xét duyệt)<br>
+		  1. Cần cập nhật thông tin về HĐ nghiệm thu đề tài tại trang <a href="?p=quanlydetaiduan"><b><u>Quản lý đề tài - dự án</u></b></a> (Tab nghiệm thu)<br>
 		  2. Danh sách các đề tài dưới đây không bao gồm những đề tài chờ xét duyệt hoặc đề tài đã nghiệm thu<br>
 		  3. Chọn/Check vào đề tài sau đó nút "Xuất file" để tải file về máy
 		</div>
-		<form action="word/ke_hoach_nghiem_thu.php" method="POST" target="_blank">
+		<form action="word/ke_hoach_nghiem_thu.php" method="POST" target="_blank" id="fr_khnt">
 			<input type="text" name="dachon" id="i_dachon" hidden="hidden">
 			<span>Số đề tài đã chọn: <b class="dachon">0</b></span><br>
-			<button type="submit" class="btn btn-warning"><i class="far fa-file-word"></i> Xuất file</button>
+		<a class="btn btn-warning xuat_khnt"><i class="far fa-file-word"></i> Xuất file</a>
+			<div class="row">
+				<div class="col-md-6">
+					<div class="form-group">
+						<label class="font-weight-bold">Ngày / Tháng / Năm lập hội đồng xét chọn</label>
+						<input type="date" name="ngaythang" id="nt" class="form-control">
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="form-group">
+						<label class="font-weight-bold">Thời gian bắt đầu buổi xét chọn</label>
+						<input type="time" name="thoigian" id="tg" class="form-control">
+					</div>
+				</div>		
+			</div>
 			<hr>
 		<table id="bangnoidung" class="table table-hover table-bordered" style="width:100%">
 		    <thead>
@@ -75,7 +89,7 @@
 		</table>
 		<hr>
 		<span>Số đề tài đã chọn: <b class="dachon">0</b></span><br>
-		<button type="submit" class="btn btn-warning"><i class="far fa-file-word"></i> Xuất file</button>
+		<a class="btn btn-warning xuat_khnt"><i class="far fa-file-word"></i> Xuất file</a>
 		</form>
  	</div>
  </div>

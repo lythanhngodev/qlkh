@@ -110,6 +110,7 @@
                                             <br>
                                             <div class="col-md-12"><label for="category" class="font-weight-bold">Các thành viên thực hiện đề tài</label></div>
                                             <hr>
+                                            
                                             <table id="bangthanhvien" class="table table-bordered table-hover" style="background: #fff;">
                                                 <tr style="background: #0275d8;color:  #fff; text-align: center;">
                                                     <th style="width: 200px;">Họ &amp; Tên</th>
@@ -121,8 +122,14 @@
                                                 while ($row = mysqli_fetch_assoc($chunhiem)) { ?>
                                                         <tr>
                                                         <td>Chủ nhiệm đề tài:
-                                                            <select class="form-control" id="chonchunhiem" disabled="" >
-                                                                <option value="<?php echo $row['IDND'] ?>"><?php echo $row['HOTEN']; ?></option>
+                                                            <select class="form-control selectpicker" data-live-search="true" id="chonchunhiem" onchange="chonthanhvien(this)">
+                                                                <?php foreach ($rnd as $nd) {
+                                                                    if ($row['IDND']==$nd[0]) {
+                                                                        echo "<option value='".$nd[0]."' selected >".$row['HOTEN']." ".$nd[2]."</option>";
+                                                                    }else{
+                                                                        echo "<option value='".$nd[0]."'>".$nd[1]." ".$nd[2]."</option>";
+                                                                    }
+                                                                } ?>
                                                             </select>
                                                         </td>
                                                         <td><textarea rows='4' class='form-control' readonly></textarea></td>
@@ -792,7 +799,7 @@
           if (data[0]==$('#chonchunhiem').val()) {
             var td=""; _ndtd_.forEach(function(d){if (d[0]==$('#chonchunhiem').val()) {td = d[1];}});
             var dv=""; _nddv_.forEach(function(d){if (d[0]==$('#chonchunhiem').val()) {dv = d[1];}});
-            $('#chonchunhiem').parent('td').parent('tr').find('td:nth-child(2) textarea').val("- "+td+"\n- "+dv+"\n- "+data[3]);
+            $('#chonchunhiem').parent().parent('td').parent('tr').find('td:nth-child(2) textarea').val("- "+td+"\n- "+dv+"\n- "+data[3]);
           }
         });
     });

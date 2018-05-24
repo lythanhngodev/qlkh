@@ -1,10 +1,24 @@
 <?php include_once "../../config.php"; ?>
-<?php include_once "../../config.php"; ?>
 <?php 
-	if (!isset($_POST['dachon']) || empty($_POST['dachon'])) {
+	if (!isset($_POST['dachon']) || empty($_POST['dachon']) || !isset($_POST['thoigian']) || empty($_POST['thoigian']) || !isset($_POST['ngaythang']) || empty($_POST['ngaythang'])) {
 		echo " Không có dữ liệu";
 		exit();	
 	}
+	function addMinutesToTime( $time) {
+		return date('H:i',strtotime($time . ' +30 minutes'));
+	}
+	function inthoigian($time){
+		$tg = explode(':',$time);
+		$gio = $tg[0];
+		$phut = $tg[1];
+		$kq = $gio."h ".$phut."’";
+		return $kq;
+	}
+	$ngaythang = explode('-', $_POST['ngaythang']);
+	$nam = $ngaythang[0];
+	$thang = $ngaythang[1];
+	$ngay = $ngaythang[2];
+	$thoigian = $_POST['thoigian'];
 	$ds = null;
 	$_ds = explode(',', $_POST['dachon']);
 	for ($i=0; $i < count($_ds); $i++) { 
@@ -24,7 +38,30 @@
 	    mysqli_close($conn);
 	    return $result;
 	}
-	
+	function luu_hoi_dong_nghiem_thu($ds, $thang, $nam){
+		$ketnoi = new clsKetnoi();
+	    $conn = $ketnoi->ketnoi();
+	    foreach ($ds as $iddt) {
+	    	$sql = "SELECT IDDT FROM kehoachxetchonnghiemthu WHERE IDDT = $iddt AND LOAI = b'1'";
+	    	$qsql = mysqli_query($conn, $sql);
+	    	$kt = 0;
+	    	while ($row = mysqli_fetch_row($qsql)) {
+	    		$kt++;
+	    	}
+	    	if ($kt > 0) {
+	    		// Đã có hội đồng trước đó
+	    		$sql_dc = "UPDATE kehoachxetchonnghiemthu SET THANG='$thang',NAM='$nam' WHERE IDDT='$iddt' AND LOAI = b'1'";
+	    		mysqli_query($conn, $sql_dc);
+	    	}
+	    	else{
+	    		// Cưa có hội đồng xét chọn
+	    		$sql_cc = "INSERT INTO kehoachxetchonnghiemthu(IDDT,THANG,NAM,LOAI) VALUES ('$iddt', '$thang', '$nam',b'1')";
+	    		mysqli_query($conn, $sql_cc);
+	    	}
+	    }
+	    mysqli_close($conn);
+	}
+	luu_hoi_dong_nghiem_thu($ds, $thang, $nam);
  ?>
 <?php 
  header("Content-Type: application/vnd.ms-word");
@@ -48,8 +85,6 @@
             font-size: 12.0 pt;
             text-align: right;
         }
-
-
         @page Section1{
             size: 21cm 29.7cm;
             margin: 1cm 1cm 1cm 1cm;
@@ -75,7 +110,7 @@
 				</tr>
 				<tr>
 					<td style="width: 1.4cm;"></td>
-					<td>(Kèm theo Quyết định số: /QĐ-SPKTVL-NCKH, ngày ...... tháng ..... năm ...... của Hiệu trưởng Trường Đại học SPKT Vĩnh Long)</td>
+					<td>(Kèm theo Quyết định số: /QĐ-SPKTVL-NCKH, ngày <?php echo $ngay ?> tháng <?php echo $thang ?> năm <?php echo $nam ?> của Hiệu trưởng Trường Đại học SPKT Vĩnh Long)</td>
 					<td style="width: 1.4cm;"></td>
 				</tr>
 			</table>
@@ -103,7 +138,7 @@
 						<td style="text-align: center;width: 1cm;"><?php echo $stt; ?></td>
 						<td style="padding-left: 0.3cm"><i><?php echo $row['TENDETAI'] ?></i></td>
 						<td style="text-align: center;width: 4cm;"><?php echo $row['HOTEN']; ?></td>
-						<td style="text-align: center;width: 4cm;"></td>
+						<td style="text-align: center;width: 4cm;"><?php echo inthoigian($thoigian) ?> – <?php $thoigian=addMinutesToTime($thoigian); echo inthoigian($thoigian); ?></td>
 					</tr>
 					<?php }
 						$stt++; 
@@ -120,7 +155,7 @@
 				<table style="width: 190mm;">
 					<tr>
 						<td></td>
-						<td style="text-align: center;width: 80mm;"><i>Vĩnh Long, ngày ..... tháng  .....  năm ......</i><br><br><b>BAN TỔ CHỨC</b></td>
+						<td style="text-align: center;width: 80mm;"><i>Vĩnh Long, ngày <?php echo $ngay ?> tháng <?php echo $thang ?> năm <?php echo $nam ?></i><br><br><b>BAN TỔ CHỨC</b></td>
 					</tr>
 				</table>
 			</div>

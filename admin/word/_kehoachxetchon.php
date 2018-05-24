@@ -43,15 +43,15 @@
 		  1. Danh sách các đề tài dưới đây chỉ bao gồm những đề tài chờ xét chọn<br>
 		  2. Chọn/Check vào đề tài sau đó nút "Xuất file" để tải file về máy
 		</div>
-		<form action="word/ke_hoach_xet_chon.php" method="POST" target="_blank">
+		<form action="word/ke_hoach_xet_chon.php" id="fr_khxc" method="POST" target="_blank">
 			<input type="text" name="dachon" id="i_dachon" hidden="hidden">
 			<span>Số đề tài đã chọn: <b class="dachon">0</b></span><br>
-			<button type="submit" class="btn btn-warning"><i class="far fa-file-word"></i> Xuất file</button>
+		<a class="btn btn-warning xuat_khxc"><i class="far fa-file-word"></i> Xuất file</a>
 			<div class="row">
 				<div class="col-md-6">
 					<div class="form-group">
-						<label class="font-weight-bold">Ngày lập hội đồng xét chọn</label>
-						<input type="time" name="thoigian" id="tg" class="form-control">
+						<label class="font-weight-bold">Ngày / Tháng / Năm lập hội đồng xét chọn</label>
+						<input type="date" name="ngaythang" id="nt" class="form-control">
 					</div>
 				</div>
 				<div class="col-md-6">
@@ -88,7 +88,7 @@
 		</table>
 		<hr>
 		<span>Số đề tài đã chọn: <b class="dachon">0</b></span><br>
-		<button type="submit" class="btn btn-warning"><i class="far fa-file-word"></i> Xuất file</button>
+		<a class="btn btn-warning xuat_khxc"><i class="far fa-file-word"></i> Xuất file</a>
 		</form>
  	</div>
  </div>

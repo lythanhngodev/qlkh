@@ -23,7 +23,7 @@
  ?>
  <div class="card">
  	<div class="card-header">
- 		<h4>Phiếu đánh giá nghiệm thu</h4>
+ 		<h4>Tổng hợp HĐ đánh giá NT</h4>
  		<p>(Ấn nút "Xuất file" để tải file về máy)</p>
  	</div>
  	<div class="card-body">
@@ -53,7 +53,7 @@
 		            <td><?php echo $row['TENDETAI']; ?></td>
 		            <td><?php echo lay_ten_chu_nhiem_de_tai($row['IDDT']); ?></td>
 		            <td class="giua">
-		                <a href="word/phieu_danh_gia_nghiem_thu.php?id=<?php echo $row['IDDT']; ?>" target="_blank" class="btn btn-warning btn-sm"><i class="far fa-file-word"></i> Xuất file</a>
+		                <a href="word/tong_hop_danh_gia_nghiem_thu.php?id=<?php echo $row['IDDT']; ?>" target="_blank" class="btn btn-warning btn-sm"><i class="far fa-file-word"></i> Xuất file</a>
 		            </td>
 		        </tr>
 		    <?php $stt++; } ?>

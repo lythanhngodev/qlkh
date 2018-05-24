@@ -54,7 +54,7 @@ if (!isset($_SESSION["token"])) {include_once ("../../loi404.html");exit();}
                                         <th class="giua">Mã số</th>
                                         <th class="giua">Tên biểu mẫu</th>
                                         <th class="giua">Tải về</th>
-                                        <th class="giua">Thao tác</th>
+                                        <th class="giua">Xoá</th>
                                     </tr>
                                 </tfoot>
                                 </tbody>

@@ -359,23 +359,20 @@
                                                     <th>Công việc cần thực hiện</th>
                                                     <th>Các đề nghị (nếu có)</th>
                                                     <th>Ngày báo cáo</th>
-                                                    <th style="width: 50px;">Xóa</th>
                                                 </tr>
                                                 <?php 
                                                     $bctd = lay_bao_cao_tien_do($iddt);
                                                     while ($row = mysqli_fetch_assoc($bctd)) {
                                                         echo "<tr>";
-                                                        echo "<td><textarea rows='4' class='form-control'>".$row['CVDATH']."</textarea></td>";
-                                                        echo "<td><textarea rows='4' class='form-control'>".$row['CVCANTH']."</textarea></td>";
-                                                        echo "<td><textarea rows='4' class='form-control'>".$row['DENGHI']."</textarea></td>";
-                                                        echo "<td><input type='date' class='form-control' value='".$row['NGAYBC']."'></td>";
-                                                        echo "<td><button class='xoabctiendo'><i class='fas fa-times do'></i></button></td>";
+                                                        echo "<td>".$row['CVDATH']."</td>";
+                                                        echo "<td>".$row['CVCANTH']."</td>";
+                                                        echo "<td>".$row['DENGHI']."</td>";
+                                                        echo "<td class='giua'>".date("d-m-Y", strtotime($row['NGAYBC']))."</td>";
                                                         echo "</tr>";
                                                     }
                                                  ?>
                                             </table>
                                         </div>
-                                        <div class="col-md-2"><button class="btn btn-default" id="thembctiendo">Thêm tiến độ &ensp;<i class="fas fa-long-arrow-alt-right"></i></button></div>
                                     </div>
                                 </div>
                                 <br>

@@ -126,7 +126,7 @@
 			</table>
 			<table style="width: 190mm;text-align: center;">
 				<tr>
-					<th colspan="3">DANH SÁCH HỘI ĐỒNG XÉT CHỌN ĐỀ TÀI NCKH CẤP TRƯỜNG<br>Năm học 2017 - 2018</th>
+					<th colspan="3">DANH SÁCH HỘI ĐỒNG XÉT CHỌN ĐỀ TÀI NCKH CẤP TRƯỜNG<br>Năm học 20... - 20...</th>
 				</tr>
 				<tr>
 					<td style="width: 1.4cm;"></td>

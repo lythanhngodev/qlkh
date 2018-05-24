@@ -84,7 +84,7 @@
 				<tr>
 					<td style="text-align: center;width: 20mm"><img src="<?php echo $qlkh['HOSTADMIN'] ?>word/vlute-logo.png" width="70" height="70"></td>
 					<th style="font-size: 18.5px;text-align: center;">PHIẾU ĐÁNH GIÁ NGHIỆM THU ĐỀ TÀI<br>ĐỀ TÀI NCKH CẤP TRƯỜNG<br>NĂM HỌC  20 ... – 20 ...</th>
-					<td style="padding-left: 5mm;width: 45mm;">Mã số: BM-NC-08-00<br>Ngày BH: 04/9/2015</td>
+					<td style="padding-left: 5mm;width: 45mm;">Mã số: BM-NC-08-00<br>Ngày BH: 18/4/2018</td>
 				</tr>
 			</table>
 			<br>

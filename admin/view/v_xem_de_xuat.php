@@ -380,38 +380,41 @@ $nhiemvu_nghiemthu = ['Chủ tịch HĐ', 'Ủy viên', 'Thư ký'];
                             <?php
                             if($trangthaidt!='Chờ gửi đề xuất' && $trangthaidt!='Đang xét duyệt'){
                                 ?>
-                                <div class="tab-pane" id="nav-bao-cao-tien-do" role="tabpanel" aria-labelledby="nav-contact-tab">
-                                    <br>
-                                    <div class="col-md-12">
-                                        <div class="row">
-                                            <div class="col-md-12">
-                                                <br>
-                                                <p class="col-md-12"><strong>Bảng báo cáo tiến độ thực hiện</strong></p>
-                                                <hr>
-                                                <table id="bangbctiendo" class="table table-bordered table-hover" style="background: #fff;">
-                                                    <tr style="background: #0275d8;color:  #fff; text-align: center;">
-                                                        <th>Công việc đã thực hiện</th>
-                                                        <th>Công việc cần thực hiện</th>
-                                                        <th>Các đề nghị (nếu có)</th>
-                                                        <th>Ngày báo cáo</th>
-                                                    </tr>
-                                                    <?php
+                            <div class="tab-pane" id="nav-bao-cao-tien-do" role="tabpanel" aria-labelledby="nav-contact-tab">
+                                <br>
+                                <div class="col-md-12">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <br>
+                                            <p class="col-md-12"><strong>Bảng báo cáo tiến độ thực hiện</strong></p>
+                                            <hr>
+                                            <table id="bangbctiendo" class="table table-bordered table-hover" style="background: #fff;">
+                                                <tr style="background: #0275d8;color:  #fff; text-align: center;">
+                                                    <th>Công việc đã thực hiện</th>
+                                                    <th>Công việc cần thực hiện</th>
+                                                    <th>Các đề nghị (nếu có)</th>
+                                                    <th>Ngày báo cáo</th>
+                                                    <th style="width: 50px;">Xóa</th>
+                                                </tr>
+                                                <?php 
                                                     $bctd = lay_bao_cao_tien_do($iddt);
                                                     while ($row = mysqli_fetch_assoc($bctd)) {
                                                         echo "<tr>";
-                                                        echo "<td><textarea rows='4' class='form-control' readonly>".$row['CVDATH']."</textarea></td>";
-                                                        echo "<td><textarea rows='4' class='form-control' readonly>".$row['CVCANTH']."</textarea></td>";
-                                                        echo "<td><textarea rows='4' class='form-control' readonly>".$row['DENGHI']."</textarea></td>";
-                                                        echo "<td class='giua'>".$row['NGAYBC']."</td>";
+                                                        echo "<td><textarea rows='4' class='form-control'>".$row['CVDATH']."</textarea></td>";
+                                                        echo "<td><textarea rows='4' class='form-control'>".$row['CVCANTH']."</textarea></td>";
+                                                        echo "<td><textarea rows='4' class='form-control'>".$row['DENGHI']."</textarea></td>";
+                                                        echo "<td><input type='date' class='form-control' value='".$row['NGAYBC']."'></td>";
+                                                        echo "<td><button class='xoabctiendo'><i class='fas fa-times do'></i></button></td>";
                                                         echo "</tr>";
                                                     }
-                                                    ?>
-                                                </table>
-                                            </div>
+                                                 ?>
+                                            </table>
                                         </div>
+                                        <div class="col-md-2"><button class="btn btn-default" id="thembctiendo">Thêm tiến độ &ensp;<i class="fas fa-long-arrow-alt-right"></i></button><br><br><button class="btn btn-primary" id="luubctiendo"><i class="fas fa-save"></i>&ensp;Lưu tiến độ</button></div>
                                     </div>
-                                    <br>
                                 </div>
+                                <br>
+                            </div>
                             <?php } ?>
                             <!-- KẾT QUẢ XÉT DUYỆT ĐỀ TÀI -->
                             <div class="tab-pane" id="nav-xet-duyet" role="tabpanel" aria-labelledby="nav-contact-tab">
@@ -686,7 +689,41 @@ $nhiemvu_nghiemthu = ['Chủ tịch HĐ', 'Ủy viên', 'Thư ký'];
     </div>
 </div>
 <div class="cach"></div>
-
+<!-- Modal thêm báo cáo tiến độ -->
+<div class="modal fade" id="modal-them-bao-cao-tien-do" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">Thêm báo cáo tiến độ </h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label for="tags" class="font-weight-bold">Công việc đã thực hiện (<span class="text-danger">*</span>)</label>
+                    <textarea class="form-control" id="cvdathuchien" style="border-radius: 0;" rows="5"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="tags" class="font-weight-bold">Công việc cần thực hiện (<span class="text-danger">*</span>)</label>
+                    <textarea class="form-control" id="cvcanthuchien" style="border-radius: 0;" rows="5"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="tags" class="font-weight-bold">Các đề nghị (nếu có)</label>
+                    <textarea class="form-control" id="cvdenghi" style="border-radius: 0;" rows="5"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="tags" class="font-weight-bold">Ngày báo cáo</label>
+                    <input type="date" class="form-control" id="cvngaybaocao" value="<?php echo date('Y-m-d'); ?>" />
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Đóng</button>
+                <button type="button" class="btn btn-primary" id="thembctd">Lưu</button>
+            </div>
+        </div>
+    </div>
+</div>
 <script type="text/javascript">
     $(document).ready(function(){
         $('#quanlydetaiduan').addClass('active');
@@ -702,6 +739,32 @@ $nhiemvu_nghiemthu = ['Chủ tịch HĐ', 'Ủy viên', 'Thư ký'];
         });
         $('#bangtvnt').on('click','.xoatvnt',function(){
             $(this).parents('tr').remove();
+        });
+        // Xóa báo cáo tiến độ
+        $('#bangbctiendo').on('click','.xoabctiendo',function(){
+            $(this).parents('tr').remove();
+        });
+        // Thêm báo cáo tiến độ
+        $('#thembctiendo').on('click',function () {
+            $('#modal-them-bao-cao-tien-do').modal('show');
+        });
+        var bctiendo = 0;
+        if($('#nav-bao-cao-tien-do').length) bctiendo = 1;
+        $('#thembctd').on('click',function () {
+            if($('#cvdathuchien').val().trim()!='' && $('#cvcanthuchien').val().trim()!=''){
+                var tr = "<tr>\n" +
+                    "<td><textarea rows='4' class='form-control'>"+$('#cvdathuchien').val().trim()+"</textarea></td>\n" +
+                    "<td><textarea rows='4' class='form-control'>"+$('#cvcanthuchien').val().trim()+"</textarea></td>\n" +
+                    "<td><textarea rows='4' class='form-control'>"+$('#cvdenghi').val()+"</textarea></td>\n" +
+                    "<td><input type='date' value='"+$('#cvngaybaocao').val()+"' class='form-control'></td>\n" +
+                    "<td><button class='xoabctiendo'><i class='fas fa-times do'></i></button></td>\n" +
+                    "</tr>";
+                $('#bangbctiendo').append(tr);
+                $('#modal-them-bao-cao-tien-do').find('textarea').val('');
+                $('#modal-them-bao-cao-tien-do').modal('hide');
+            }
+            else
+                khongthanhcong('Vui lòng điền đầy đủ các trường (*)');
         });
         $('#luumdt').click(function(){
             if (!$('#madetai').val().trim()) {
@@ -1048,6 +1111,58 @@ $nhiemvu_nghiemthu = ['Chủ tịch HĐ', 'Ủy viên', 'Thư ký'];
                         }
                         else
                             swal('Ôi! Lỗi','Không có kết nối internet','error');
+                    },
+                    error: function () {
+                        swal('Ôi! Lỗi','Xảy ra lỗi, vui lòng thử lại','error');
+                    }
+                });
+            }
+            else
+                swal('Ôi! Lỗi','Không có kết nối internet','error');
+        });
+        $('#luubctiendo').on('click',function(){
+            //  Xét dự kiến tiến độ
+            var  bctd = [];
+            var demongdungbctd = 0;
+            if(bctiendo==1) {
+                // Xóa dòng tổ chức chưa điền
+                $('#bangbctiendo').find('tr:not(:first)').each(function (i, row) {
+                    var cols = [];
+                    $(this).find('td:not(:last) input, textarea').each(function (i, col) {
+                        cols.push($(this).val());
+                    });
+                    if (cols[0] == '' && cols[1] == '' && cols[2] == '' && cols[3] == '') {
+                        $(this).remove();
+                        demongdungbctd--;
+                    }
+                    demongdungbctd++;
+                });
+                $('#bangbctiendo').find('tr:not(:first)').each(function (i, row) {
+                    var cols = [];
+                    $(this).find('td:not(:last) input, textarea').each(function (i, col) {
+                        cols.push($(this).val());
+                    });
+                    bctd.push(cols);
+                }); // lưu vào bctd[[]];
+            }
+            if (kiemtraketnoi()) {
+                $.ajax({
+                    url : "ajax/ajax_bao_cao_tien_do.php",
+                    type : "post",
+                    dataType:"text",
+                    data : {
+                        bctd: bctd,dt: '<?php echo $iddt; ?>'
+                    },
+                    beforeSend: function(){
+                        swal('Đợi đã','Vui lòng chờ cho đến khi quá trình hoàn tất','info');
+                    },
+                    success : function (data){
+                        var kq = $.parseJSON(data);
+                        if(kq.trangthai==1){
+                            swal('Tốt','Đã lưu báo cáo tiến độ','success');
+                        }
+                        else
+                            swal('Ôi! Lỗi','Xảy ra lỗi, vui lòng thử lại','error');
                     },
                     error: function () {
                         swal('Ôi! Lỗi','Xảy ra lỗi, vui lòng thử lại','error');

@@ -2,7 +2,40 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e784096a-f6cb-467c-8cbe-b1eae1f3bf23" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/7100f002-45e7-4ecd-b4f9-feb8543b2f12.xml" afterPath="$PROJECT_DIR$/.idea/dataSources/7100f002-45e7-4ecd-b4f9-feb8543b2f12.xml" />
+      <change beforePath="$PROJECT_DIR$/admin/ajax/ajax_sua_de_xuat.php" afterPath="$PROJECT_DIR$/admin/ajax/ajax_sua_de_xuat.php" />
+      <change beforePath="$PROJECT_DIR$/admin/view/v_bieu_mau.php" afterPath="$PROJECT_DIR$/admin/view/v_bieu_mau.php" />
+      <change beforePath="$PROJECT_DIR$/admin/view/v_dieu_chinh_de_tai.php" afterPath="$PROJECT_DIR$/admin/view/v_dieu_chinh_de_tai.php" />
+      <change beforePath="$PROJECT_DIR$/admin/view/v_quan_ly_ho_so.php" afterPath="$PROJECT_DIR$/admin/view/v_quan_ly_ho_so.php" />
+      <change beforePath="$PROJECT_DIR$/admin/view/v_sua_de_tai.php" afterPath="$PROJECT_DIR$/admin/view/v_sua_de_tai.php" />
       <change beforePath="$PROJECT_DIR$/admin/view/v_xem_de_xuat.php" afterPath="$PROJECT_DIR$/admin/view/v_xem_de_xuat.php" />
+      <change beforePath="$PROJECT_DIR$/admin/word/_kehoachnghiemthu.php" afterPath="$PROJECT_DIR$/admin/word/_kehoachnghiemthu.php" />
+      <change beforePath="$PROJECT_DIR$/admin/word/_kehoachxetchon.php" afterPath="$PROJECT_DIR$/admin/word/_kehoachxetchon.php" />
+      <change beforePath="$PROJECT_DIR$/admin/word/_phieudanhgianghiemthu.php" afterPath="$PROJECT_DIR$/admin/word/_phieudanhgianghiemthu.php" />
+      <change beforePath="$PROJECT_DIR$/admin/word/danh_sach_hoi_dong_xet_chon.php" afterPath="$PROJECT_DIR$/admin/word/danh_sach_hoi_dong_xet_chon.php" />
+      <change beforePath="$PROJECT_DIR$/admin/word/ke_hoach_nghiem_thu.php" afterPath="$PROJECT_DIR$/admin/word/ke_hoach_nghiem_thu.php" />
+      <change beforePath="$PROJECT_DIR$/admin/word/ke_hoach_xet_chon.php" afterPath="$PROJECT_DIR$/admin/word/ke_hoach_xet_chon.php" />
+      <change beforePath="$PROJECT_DIR$/admin/word/phieu_danh_gia_de_cuong.php" afterPath="$PROJECT_DIR$/admin/word/phieu_danh_gia_de_cuong.php" />
+      <change beforePath="$PROJECT_DIR$/admin/word/phieu_danh_gia_nghiem_thu.php" afterPath="$PROJECT_DIR$/admin/word/phieu_danh_gia_nghiem_thu.php" />
+      <change beforePath="$PROJECT_DIR$/admin/word/phieu_giao_nhan_san_pham.php" afterPath="$PROJECT_DIR$/admin/word/phieu_giao_nhan_san_pham.php" />
+      <change beforePath="$PROJECT_DIR$/admin/word/phieu_giao_nhan_san_pham_thiet_bi.php" afterPath="$PROJECT_DIR$/admin/word/phieu_giao_nhan_san_pham_thiet_bi.php" />
+      <change beforePath="$PROJECT_DIR$/admin/word/phieu_xac_nhan_trien_khai_ung_dung.php" afterPath="$PROJECT_DIR$/admin/word/phieu_xac_nhan_trien_khai_ung_dung.php" />
+      <change beforePath="$PROJECT_DIR$/files/1523903649-M01 - PHIEU DANG KY DE TAI.doc" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/files/1523904040-M02 - DE CUONG DE TAI.doc" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/files/1523904138-M03-PHIEU DANH GIA DE CUONG.docx" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/files/1524107573-M04-BIEN BAN XET DUYET.docx" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/files/1524107718-m05--bao-cao-tien-do-thuc-hien-de-tai.doc" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/files/1524108145-m08---phieu-danh-gia-nghiem-thu.doc" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/files/1524108198-m09--bien-ban-tong-hop-nghiem-thu.doc" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/files/1524108282-m10--bang-ke-chi-tien-cho-nguoi-tham-du-hoi-nghi.doc" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/files/1524108321-m11--phieu-giao-nhan-sp-khcn.doc" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/files/1524108372-m12--phieu-xac-nhan-ung-dung-khcn.doc" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/files/1524108436-don-xin-gia-han-de-tai.docx" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/files/1524108478-hop-dong-nghien-cuu.doc" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/files/1524108509-bien-ban-thanh-ly.doc" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/files/1524108541-maudexuatdetaicaptinh.doc" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/files/1524108578-madexuatdetaicapb.doc" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/files/1524110098-m06--thuyet-minh-de-tai.doc" afterPath="" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -91,7 +124,12 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="108">
               <caret line="4" column="45" lean-forward="false" selection-start-line="4" selection-start-column="45" selection-end-line="4" selection-end-column="45" />
-              <folding />
+              <folding>
+                <marker date="1527171441348" expanded="true" signature="77851:77884" ph="{...}" />
+                <marker date="1527171441348" expanded="true" signature="77851:78046" ph="{&quot;url&quot;: &quot;ajax/ajax_nghiem_thu_de_tai.php&quot;...}" />
+                <marker date="1527171441348" expanded="true" signature="77851:78062" ph="{...}" />
+                <marker date="1527171441348" expanded="true" signature="77851:78158" ph="{...}" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -105,11 +143,55 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="xetduyetdetai" pinned="false" current-in-tab="true">
+      <file leaf-file-name="xetduyetdetai" pinned="false" current-in-tab="false">
         <entry file="das://table:/f683da9/7100f002-45e7-4ecd-b4f9-feb8543b2f12/nckh.xetduyetdetai">
           <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
             <state>
               <filtering enabled="true" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="kehoachxetchon" pinned="false" current-in-tab="false">
+        <entry file="das://table:/f683da9/7100f002-45e7-4ecd-b4f9-feb8543b2f12/nckh.kehoachxetchon">
+          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+            <state>
+              <filtering enabled="true" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="bieumau" pinned="false" current-in-tab="false">
+        <entry file="das://table:/f683da9/7100f002-45e7-4ecd-b4f9-feb8543b2f12/nckh.bieumau">
+          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+            <state>
+              <filtering enabled="true" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="kehoachxetchonnghiemthu" pinned="false" current-in-tab="false">
+        <entry file="das://table:/f683da9/7100f002-45e7-4ecd-b4f9-feb8543b2f12/nckh.kehoachxetchonnghiemthu">
+          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+            <state>
+              <filtering enabled="true" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="tong_hop_danh_gia_nghiem_thu.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/admin/word/tong_hop_danh_gia_nghiem_thu.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="339">
+              <caret line="172" column="110" lean-forward="false" selection-start-line="172" selection-start-column="110" selection-end-line="172" selection-end-column="110" />
+              <folding>
+                <element signature="e#6123#6129#0#HTML" expanded="true" />
+                <element signature="e#6129#6135#0#HTML" expanded="true" />
+                <element signature="e#6135#6153#0#HTML" expanded="true" />
+                <marker date="1527180381414" expanded="true" signature="264:495" ph="SELECT dt.MA... detai" />
+                <marker date="1527180381414" expanded="true" signature="688:875" ph="SELECT tv.ID... thanhviendetai" />
+                <marker date="1527180381414" expanded="true" signature="1174:1277" ph="SELECT k.TEN... nguoidung_khoabomon" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -160,6 +242,7 @@
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/7100f002-45e7-4ecd-b4f9-feb8543b2f12/console_14.sql" />
         <option value="$PROJECT_DIR$/admin/word/danh_sach_hoi_dong_nghiem_thu.php" />
         <option value="$PROJECT_DIR$/admin/view/v_xem_de_xuat.php" />
+        <option value="$PROJECT_DIR$/admin/word/tong_hop_danh_gia_nghiem_thu.php" />
       </list>
     </option>
   </component>
@@ -232,6 +315,12 @@
               <item name="qlkh" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="admin" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="view" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="qlkh" type="b2602c69:ProjectViewProjectNode" />
+              <item name="qlkh" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="admin" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="word" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="qlkh" type="b2602c69:ProjectViewProjectNode" />
@@ -309,7 +398,7 @@
       <workItem from="1526689410112" duration="6758000" />
       <workItem from="1526866182682" duration="613000" />
       <workItem from="1526869273480" duration="1219000" />
-      <workItem from="1527122620753" duration="3654000" />
+      <workItem from="1527122620753" duration="8721000" />
     </task>
     <task id="LOCAL-00001" summary="Start up">
       <created>1525824037964</created>
@@ -329,7 +418,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="111743000" />
+    <option name="totallyTimeSpent" value="116810000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="32" width="1936" height="1056" extended-state="6" />
@@ -340,7 +429,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22014925" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22014925" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -396,27 +485,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="das://table:/f683da9/7100f002-45e7-4ecd-b4f9-feb8543b2f12/nckh.nguoidung_chucdanhkhoahoc">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://table:/f683da9/7100f002-45e7-4ecd-b4f9-feb8543b2f12/nckh.trinhdochuyenmon">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/control/c_them_de_xuat.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="972">
-          <caret line="36" column="15" lean-forward="false" selection-start-line="36" selection-start-column="15" selection-end-line="36" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
     <entry file="das://table:/f683da9/7100f002-45e7-4ecd-b4f9-feb8543b2f12/nckh.detai_nguoidung">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
@@ -558,13 +626,6 @@
       </provider>
     </entry>
     <entry file="das://table:/f683da9/7100f002-45e7-4ecd-b4f9-feb8543b2f12/nckh.tukhoa">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://table:/f683da9/7100f002-45e7-4ecd-b4f9-feb8543b2f12/nckh.bieumau">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
@@ -763,7 +824,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="108">
           <caret line="4" column="45" lean-forward="false" selection-start-line="4" selection-start-column="45" selection-end-line="4" selection-end-column="45" />
-          <folding />
+          <folding>
+            <marker date="1527171441348" expanded="true" signature="77851:77884" ph="{...}" />
+            <marker date="1527171441348" expanded="true" signature="77851:78046" ph="{&quot;url&quot;: &quot;ajax/ajax_nghiem_thu_de_tai.php&quot;...}" />
+            <marker date="1527171441348" expanded="true" signature="77851:78062" ph="{...}" />
+            <marker date="1527171441348" expanded="true" signature="77851:78158" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -778,6 +844,42 @@
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://table:/f683da9/7100f002-45e7-4ecd-b4f9-feb8543b2f12/nckh.kehoachxetchon">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://table:/f683da9/7100f002-45e7-4ecd-b4f9-feb8543b2f12/nckh.bieumau">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://table:/f683da9/7100f002-45e7-4ecd-b4f9-feb8543b2f12/nckh.kehoachxetchonnghiemthu">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/word/tong_hop_danh_gia_nghiem_thu.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="339">
+          <caret line="172" column="110" lean-forward="false" selection-start-line="172" selection-start-column="110" selection-end-line="172" selection-end-column="110" />
+          <folding>
+            <element signature="e#6123#6129#0#HTML" expanded="true" />
+            <element signature="e#6129#6135#0#HTML" expanded="true" />
+            <element signature="e#6135#6153#0#HTML" expanded="true" />
+            <marker date="1527180381414" expanded="true" signature="264:495" ph="SELECT dt.MA... detai" />
+            <marker date="1527180381414" expanded="true" signature="688:875" ph="SELECT tv.ID... thanhviendetai" />
+            <marker date="1527180381414" expanded="true" signature="1174:1277" ph="SELECT k.TEN... nguoidung_khoabomon" />
+          </folding>
         </state>
       </provider>
     </entry>

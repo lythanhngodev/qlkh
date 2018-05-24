@@ -80,7 +80,6 @@ function suadetai($tendetai,$muctieu,$noidung,$cap,$moisangtao,$thuocchuongtrinh
                 
             }
         }
-        echo $sql;
         // Xóa tổ chức thanh gia đề tài
         $sql.= "DELETE FROM `tochucthamgia` WHERE `IDDT` = '$iddt';";
         // Thêm tổ chức tham gia đề tài

@@ -41,7 +41,7 @@
                           <button class="list-group-item" id="danhsachhoidongnghiemthu">Danh sách HĐ nghiệm thu</button>
                           <button class="list-group-item" id="kehoachnghiemthu">Kế hoạch nghiệm thu đề tài</button>
                           <button class="list-group-item" id="phieudanhgianghiemthu">Phiếu đánh giá nghiệm thu</button>
-                          <button class="list-group-item" id="">Tổng hợpHĐ đánh giá NT</button>
+                          <button class="list-group-item" id="tonghopdanhgianghiemthu">Tổng hợp HĐ đánh giá NT</button>
                           <button class="list-group-item" id="">Bảng kê chi tiền tham dự (NT)</button>
                           <button class="list-group-item" id="phieugiaonhansanpham">Phiếu giao nhận sản phẩm (NT)</button>
                           <button class="list-group-item" id="phieugiaonhansanphamthietbi">Phiếu giao nhận sản phẩm (NT - Thiết bị)</button>
@@ -86,6 +86,9 @@
             case "danhsachhoidongxetchon":
                 laydulieu(id);
                 break;
+            case "tonghopdanhgianghiemthu":
+                laydulieu(id);
+                break;
             case "phieudanhgianghiemthu":
                 laydulieu(id);
                 break;
@@ -101,6 +104,7 @@
             case "phieuxacnhantrienkhaiungdung":
                 laydulieu(id);
                 break;
+
         }
     });
   });
@@ -126,4 +130,18 @@ function laydulieu(id){
     } else
         swal('Ôi! Lỗi','Không có kết nối internet','error');
 }
+$(document).on('click', '.xuat_khxc', function(){
+    if (!$('#nt').val() || !$('#tg').val()) {
+        swal('Ôi! Lỗi','Vui lòng nhập thông tin thời gian','error');
+        return;
+    }
+    $('#fr_khxc').submit();
+});
+$(document).on('click', '.xuat_khnt', function(){
+    if (!$('#nt').val() || !$('#tg').val()) {
+        swal('Ôi! Lỗi','Vui lòng nhập thông tin thời gian','error');
+        return;
+    }
+    $('#fr_khnt').submit();
+});
 </script>
