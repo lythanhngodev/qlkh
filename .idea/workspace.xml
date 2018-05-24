@@ -1,42 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e784096a-f6cb-467c-8cbe-b1eae1f3bf23" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/7100f002-45e7-4ecd-b4f9-feb8543b2f12.xml" afterPath="$PROJECT_DIR$/.idea/dataSources/7100f002-45e7-4ecd-b4f9-feb8543b2f12.xml" />
-      <change beforePath="$PROJECT_DIR$/admin/ajax/ajax_sua_de_xuat.php" afterPath="$PROJECT_DIR$/admin/ajax/ajax_sua_de_xuat.php" />
-      <change beforePath="$PROJECT_DIR$/admin/view/v_bieu_mau.php" afterPath="$PROJECT_DIR$/admin/view/v_bieu_mau.php" />
-      <change beforePath="$PROJECT_DIR$/admin/view/v_dieu_chinh_de_tai.php" afterPath="$PROJECT_DIR$/admin/view/v_dieu_chinh_de_tai.php" />
-      <change beforePath="$PROJECT_DIR$/admin/view/v_quan_ly_ho_so.php" afterPath="$PROJECT_DIR$/admin/view/v_quan_ly_ho_so.php" />
-      <change beforePath="$PROJECT_DIR$/admin/view/v_sua_de_tai.php" afterPath="$PROJECT_DIR$/admin/view/v_sua_de_tai.php" />
-      <change beforePath="$PROJECT_DIR$/admin/view/v_xem_de_xuat.php" afterPath="$PROJECT_DIR$/admin/view/v_xem_de_xuat.php" />
-      <change beforePath="$PROJECT_DIR$/admin/word/_kehoachnghiemthu.php" afterPath="$PROJECT_DIR$/admin/word/_kehoachnghiemthu.php" />
-      <change beforePath="$PROJECT_DIR$/admin/word/_kehoachxetchon.php" afterPath="$PROJECT_DIR$/admin/word/_kehoachxetchon.php" />
-      <change beforePath="$PROJECT_DIR$/admin/word/_phieudanhgianghiemthu.php" afterPath="$PROJECT_DIR$/admin/word/_phieudanhgianghiemthu.php" />
-      <change beforePath="$PROJECT_DIR$/admin/word/danh_sach_hoi_dong_xet_chon.php" afterPath="$PROJECT_DIR$/admin/word/danh_sach_hoi_dong_xet_chon.php" />
-      <change beforePath="$PROJECT_DIR$/admin/word/ke_hoach_nghiem_thu.php" afterPath="$PROJECT_DIR$/admin/word/ke_hoach_nghiem_thu.php" />
-      <change beforePath="$PROJECT_DIR$/admin/word/ke_hoach_xet_chon.php" afterPath="$PROJECT_DIR$/admin/word/ke_hoach_xet_chon.php" />
-      <change beforePath="$PROJECT_DIR$/admin/word/phieu_danh_gia_de_cuong.php" afterPath="$PROJECT_DIR$/admin/word/phieu_danh_gia_de_cuong.php" />
-      <change beforePath="$PROJECT_DIR$/admin/word/phieu_danh_gia_nghiem_thu.php" afterPath="$PROJECT_DIR$/admin/word/phieu_danh_gia_nghiem_thu.php" />
-      <change beforePath="$PROJECT_DIR$/admin/word/phieu_giao_nhan_san_pham.php" afterPath="$PROJECT_DIR$/admin/word/phieu_giao_nhan_san_pham.php" />
-      <change beforePath="$PROJECT_DIR$/admin/word/phieu_giao_nhan_san_pham_thiet_bi.php" afterPath="$PROJECT_DIR$/admin/word/phieu_giao_nhan_san_pham_thiet_bi.php" />
-      <change beforePath="$PROJECT_DIR$/admin/word/phieu_xac_nhan_trien_khai_ung_dung.php" afterPath="$PROJECT_DIR$/admin/word/phieu_xac_nhan_trien_khai_ung_dung.php" />
-      <change beforePath="$PROJECT_DIR$/files/1523903649-M01 - PHIEU DANG KY DE TAI.doc" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/files/1523904040-M02 - DE CUONG DE TAI.doc" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/files/1523904138-M03-PHIEU DANH GIA DE CUONG.docx" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/files/1524107573-M04-BIEN BAN XET DUYET.docx" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/files/1524107718-m05--bao-cao-tien-do-thuc-hien-de-tai.doc" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/files/1524108145-m08---phieu-danh-gia-nghiem-thu.doc" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/files/1524108198-m09--bien-ban-tong-hop-nghiem-thu.doc" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/files/1524108282-m10--bang-ke-chi-tien-cho-nguoi-tham-du-hoi-nghi.doc" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/files/1524108321-m11--phieu-giao-nhan-sp-khcn.doc" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/files/1524108372-m12--phieu-xac-nhan-ung-dung-khcn.doc" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/files/1524108436-don-xin-gia-han-de-tai.docx" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/files/1524108478-hop-dong-nghien-cuu.doc" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/files/1524108509-bien-ban-thanh-ly.doc" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/files/1524108541-maudexuatdetaicaptinh.doc" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/files/1524108578-madexuatdetaicapb.doc" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/files/1524110098-m06--thuyet-minh-de-tai.doc" afterPath="" />
-    </list>
+    <list default="true" id="e784096a-f6cb-467c-8cbe-b1eae1f3bf23" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -185,12 +150,25 @@
             <state relative-caret-position="339">
               <caret line="172" column="110" lean-forward="false" selection-start-line="172" selection-start-column="110" selection-end-line="172" selection-end-column="110" />
               <folding>
-                <element signature="e#6123#6129#0#HTML" expanded="true" />
-                <element signature="e#6129#6135#0#HTML" expanded="true" />
-                <element signature="e#6135#6153#0#HTML" expanded="true" />
-                <marker date="1527180381414" expanded="true" signature="264:495" ph="SELECT dt.MA... detai" />
-                <marker date="1527180381414" expanded="true" signature="688:875" ph="SELECT tv.ID... thanhviendetai" />
-                <marker date="1527180381414" expanded="true" signature="1174:1277" ph="SELECT k.TEN... nguoidung_khoabomon" />
+                <element signature="e#2807#2813#0#HTML" expanded="true" />
+                <element signature="e#2878#2884#0#HTML" expanded="true" />
+                <element signature="e#2997#3003#0#HTML" expanded="true" />
+                <element signature="e#3809#3815#0#HTML" expanded="true" />
+                <element signature="e#3815#3821#0#HTML" expanded="true" />
+                <element signature="e#3821#3827#0#HTML" expanded="true" />
+                <element signature="e#3853#3859#0#HTML" expanded="true" />
+                <element signature="e#3859#3865#0#HTML" expanded="true" />
+                <element signature="e#3865#3871#0#HTML" expanded="true" />
+                <element signature="e#6156#6162#0#HTML" expanded="true" />
+                <element signature="e#6273#6279#0#HTML" expanded="true" />
+                <element signature="n#style#0;n#p#14;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#table#2;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#tr#0;n#table#2;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#td#1;n#tr#0;n#table#2;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#15;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <marker date="1527181085045" expanded="true" signature="264:495" ph="SELECT dt.MA... detai" />
+                <marker date="1527181085045" expanded="true" signature="688:875" ph="SELECT tv.ID... thanhviendetai" />
+                <marker date="1527181085045" expanded="true" signature="1174:1277" ph="SELECT k.TEN... nguoidung_khoabomon" />
               </folding>
             </state>
           </provider>
@@ -398,7 +376,7 @@
       <workItem from="1526689410112" duration="6758000" />
       <workItem from="1526866182682" duration="613000" />
       <workItem from="1526869273480" duration="1219000" />
-      <workItem from="1527122620753" duration="8721000" />
+      <workItem from="1527122620753" duration="9878000" />
     </task>
     <task id="LOCAL-00001" summary="Start up">
       <created>1525824037964</created>
@@ -418,14 +396,13 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="116810000" />
+    <option name="totallyTimeSpent" value="117967000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="32" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17803837" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17803837" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -873,12 +850,25 @@
         <state relative-caret-position="339">
           <caret line="172" column="110" lean-forward="false" selection-start-line="172" selection-start-column="110" selection-end-line="172" selection-end-column="110" />
           <folding>
-            <element signature="e#6123#6129#0#HTML" expanded="true" />
-            <element signature="e#6129#6135#0#HTML" expanded="true" />
-            <element signature="e#6135#6153#0#HTML" expanded="true" />
-            <marker date="1527180381414" expanded="true" signature="264:495" ph="SELECT dt.MA... detai" />
-            <marker date="1527180381414" expanded="true" signature="688:875" ph="SELECT tv.ID... thanhviendetai" />
-            <marker date="1527180381414" expanded="true" signature="1174:1277" ph="SELECT k.TEN... nguoidung_khoabomon" />
+            <element signature="e#2807#2813#0#HTML" expanded="true" />
+            <element signature="e#2878#2884#0#HTML" expanded="true" />
+            <element signature="e#2997#3003#0#HTML" expanded="true" />
+            <element signature="e#3809#3815#0#HTML" expanded="true" />
+            <element signature="e#3815#3821#0#HTML" expanded="true" />
+            <element signature="e#3821#3827#0#HTML" expanded="true" />
+            <element signature="e#3853#3859#0#HTML" expanded="true" />
+            <element signature="e#3859#3865#0#HTML" expanded="true" />
+            <element signature="e#3865#3871#0#HTML" expanded="true" />
+            <element signature="e#6156#6162#0#HTML" expanded="true" />
+            <element signature="e#6273#6279#0#HTML" expanded="true" />
+            <element signature="n#style#0;n#p#14;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#table#2;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#tr#0;n#table#2;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#1;n#tr#0;n#table#2;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#15;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <marker date="1527181085045" expanded="true" signature="264:495" ph="SELECT dt.MA... detai" />
+            <marker date="1527181085045" expanded="true" signature="688:875" ph="SELECT tv.ID... thanhviendetai" />
+            <marker date="1527181085045" expanded="true" signature="1174:1277" ph="SELECT k.TEN... nguoidung_khoabomon" />
           </folding>
         </state>
       </provider>
