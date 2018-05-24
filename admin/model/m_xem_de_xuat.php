@@ -130,14 +130,6 @@ function thanh_vien_xet_duyet_da_chon($iddt){
     return $result;
 }
 
-function thanh_vien_ban_to_chuc_da_chon(){
-    $ketnoi = new clsKetnoi();
-    $conn = $ketnoi->ketnoi();
-    $query = "SELECT DISTINCT hd.IDND,CONCAT(nd.HO,' ',nd.TEN) as HOTEN,nd.NGAYSINH, hd.NHIEMVU,hd.GHICHU FROM hoidongxetchon hd, nguoidung nd WHERE hd.IDND = nd.IDND";
-    $result = mysqli_query($conn, $query);
-    mysqli_close($conn);
-    return $result;
-}
 function thanh_vien_xet_duyet_da_chon_truoc_do($iddt){
     $ketnoi = new clsKetnoi();
     $conn = $ketnoi->ketnoi();

@@ -100,12 +100,6 @@
             case 'quanlyhoso':
                 include("control/c_quan_ly_ho_so.php");
                 break;
-            case 'hoidongxetchon':
-                include("control/c_hoi_dong_xet_chon.php");
-                break;
-			default:
-				# code...
-				break;
 		}
 	}
 	else

@@ -1,5 +1,8 @@
 <?php
 if (!isset($_SESSION["token"])) {include_once ("../../loi404.html");exit();}
+$nhiemvu_btc = ['Chủ tịch HĐ', 'Trưởng BTC', 'Phó BTC', 'UV TT', 'Uỷ viên', 'Thư ký'];
+$nhiemvu_hd_duyet = ['Uỷ viên'];
+$nhiemvu_nghiemthu = ['Chủ tịch HĐ', 'Uỷ viên', 'Thư ký'];
 ?>
 <?php $trangthaidt = $detai['TRANGTHAI']; ?>
 <div class="card cach background-container">
@@ -436,17 +439,36 @@ if (!isset($_SESSION["token"])) {include_once ("../../loi404.html");exit();}
                                                                 <th class="an">IDTV</th>
                                                                 <th>Nhiệm vụ</th>
                                                                 <th>Ghi chú</th>
+                                                                <th class="giua" style="width: 50px;">Xóa</th>
                                                             </tr>
                                                             <?php
                                                             while ($row = mysqli_fetch_assoc($tvbtc)){
                                                                 echo "
                                             <tr>
                                                 <td>".$row['HOTEN']." ".$row['NGAYSINH']."</td>
-                                                <td class='an'>".$row['IDND']."</td>
-                                                <td><textarea class='form-control' rows='2' disabled>".$row['NHIEMVU']."</textarea></td><td><textarea class='form-control' rows='2' disabled>".$row['GHICHU']."</textarea></td>";
+                                                <td class='an'>".$row['IDND']."</td><td><select class='form-control'>";
+                                                foreach ($nhiemvu_btc as $value){
+                                                    if ($value==$row['NHIEMVU'])
+                                                        echo "<option value='".$value."' selected >".$value."</option>";
+                                                    else
+                                                        echo "<option value='".$value."' >".$value."</option>";
+                                                }
+                                                echo "</select></td><td><textarea class='form-control' rows='2'>".$row['GHICHU']."</textarea></td>";
+                                                echo "<td class='giua' style='width:50px;'><button class='xoabtc'><i class='fas fa-times do'></i></button></td></tr>";
                                                             }
                                                             ?>
                                                         </table>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <label class="font-weight-bold col-md-12">Danh sách thành viên</label>
+                                                        <select id="chontvbtc" class="form-control selectpicker" data-live-search="true">
+                                                            <option value="btc" selected>---- Chọn thành viên ---</option>
+                                                            <?php
+                                                            $thanhvienxetduyet = thanh_vien_xet_duyet($iddt);
+                                                            while ($row = mysqli_fetch_assoc($thanhvienxetduyet)){
+                                                                echo "<option value='".$row['IDND']."'>".$row['HOTEN']." ".$row['NGAYSINH']."</option>";
+                                                            } ?>
+                                                        </select>
                                                     </div>
                                                     <div class="col-md-12">
                                                         <label class="font-weight-bold col-md-12">Hội đồng xét duyệt đề tài</label>
@@ -467,9 +489,15 @@ if (!isset($_SESSION["token"])) {include_once ("../../loi404.html");exit();}
                                                                 echo "
                                             <tr>
                                                 <td>".$row['HOTEN']." ".$row['NGAYSINH']."</td>
-                                                <td class='an'>".$row['IDND']."</td>
-                                                <td><textarea class='form-control' rows='2'>".$row['NHIEMVU']."</textarea></td><td><textarea class='form-control' rows='2'>".$row['GHICHU']."</textarea></td>";
-                                                echo "<td class='giua' style='width:50px;'><button class='xoabtc'><i class='fas fa-times do'></i></button></td></tr>";
+                                                <td class='an'>".$row['IDND']."</td><td><select class='form-control'>";
+                                                                foreach ($nhiemvu_hd_duyet as $value){
+                                                                    if ($value==$row['NHIEMVU'])
+                                                                        echo "<option value='".$value."' selected >".$value."</option>";
+                                                                    else
+                                                                        echo "<option value='".$value."' >".$value."</option>";
+                                                                }
+                                                                echo "</select></td><td><textarea class='form-control' rows='2'>".$row['GHICHU']."</textarea></td>";
+                                                                echo "<td class='giua' style='width:50px;'><button class='xoabtc'><i class='fas fa-times do'></i></button></td></tr>";
                                                             }
                                                             ?>
                                                         </table>
@@ -558,7 +586,15 @@ if (!isset($_SESSION["token"])) {include_once ("../../loi404.html");exit();}
                                                                     <tr style='text-align:center'>
                                                                         <td>".$row['HOTEN']." ".$row['NGAYSINH']."</td>
                                                                         <td class='an'>".$row['IDND']."</td>
-                                                                        <td><textarea class='form-control' rows='2'>".$row['NHIEMVU']."</textarea></td><td><textarea class='form-control' rows='2'>".$row['GHICHU']."</textarea></td>";
+                                                                        <td><select class='form-control'>";
+                                                                foreach ($nhiemvu_nghiemthu as $value){
+                                                                    if ($value==$row['NHIEMVU'])
+                                                                        echo "<option value='".$value."' selected >".$value."</option>";
+                                                                    else
+                                                                        echo "<option value='".$value."' >".$value."</option>";
+                                                                }
+                                                                //<textarea class='form-control' rows='2'>".$row['NHIEMVU']."</textarea></td>
+                                                                echo "</select></select></td><td><textarea class='form-control' rows='2'>".$row['GHICHU']."</textarea></td>";
                                                                 if ($trangthaidt=='Đang thực hiện')
                                                                 echo "<td class='giua' style='width:50px;'><button class='xoatvnt'><i class='fas fa-times do'></i></button></td></tr>";
                                                                 else echo "<td></td></tr>";
@@ -658,7 +694,9 @@ if (!isset($_SESSION["token"])) {include_once ("../../loi404.html");exit();}
         $('#bangtvdg').on('click','.xoabtc',function(){
             $(this).parents('tr').remove();
         });
-
+        $('#bangbtc').on('click','.xoabtc',function(){
+            $(this).parents('tr').remove();
+        });
         $('#bangtvnt').on('click','.xoatvnt',function(){
             $(this).parents('tr').remove();
         });
@@ -748,9 +786,39 @@ if (!isset($_SESSION["token"])) {include_once ("../../loi404.html");exit();}
                 if (tontai==0) {
                     if(sodong<10){
                         //them tac gia vao danh sach
-                        var tr = "<tr><td>"+$('#chonbtc option:selected').text()+"</td><td class='an'>"+$(this).find('option:selected').val()+"</td><td><textarea class='form-control' rows='2'></textarea></td></td><td><textarea class='form-control' rows='2'></textarea></td><td class='giua' style='width:50px;'><button class='xoabtc'><i class='fas fa-times do'></i></button></td></tr>";
+                        var tr = "<tr><td>"+$('#chonbtc option:selected').text()+"</td><td class='an'>"+$(this).find('option:selected').val()+"</td><td><select class='form-control'><option value='Uỷ viên'>Uỷ viên</option></select></td></td><td><textarea class='form-control' rows='2'></textarea></td><td class='giua' style='width:50px;'><button class='xoabtc'><i class='fas fa-times do'></i></button></td></tr>";
                         $('#bangtvdg').append(tr);
                     }else khongthanhcong('Chỉ được thêm 9 thành viên');
+                }
+                else
+                    khongthanhcong('Bạn đã chọn thành viên này rồi!');
+            }
+        });
+        // Xử lý phần thêm ban tổ chức
+        $('#chontvbtc').change(function(){
+            if($(this).val()!='btc'){
+                // xét thành viên đã tồn tại hay chưa nếu chưa thì thêm vào bảng
+                var table = $('#bangbtc');
+                var data = [];
+                var sodong=0;
+                table.find('tr:not(:first)').each(function(i, row) {
+                    var cols = [];
+                    $(this).find('td:not(:last)').each(function(i, col) {
+                        cols.push($(this).text());
+                    });
+                    sodong++;
+                    data.push(cols);
+                });
+                var tontai = 0;
+                for (var i = 0; i < data.length; i++) {
+                    if ($(this).find('option:selected').val()==data[i][1]){tontai=1;break;};
+                }
+                if (tontai==0) {
+                    if(sodong<5){
+                        //them tac gia vao danh sach
+                        var tr = "<tr><td>"+$('#chontvbtc option:selected').text()+"</td><td class='an'>"+$(this).find('option:selected').val()+"</td><td><select class='form-control'><option value='Chủ tịch HĐ'>Chủ tịch HĐ</option><option value='Trưởng BTC'>Trưởng BTC</option><option value='Phó BTC'>Phó BTC</option><option value='UV TT'>UV TT</option><option value='Uỷ viên'>Uỷ viên</option><option value='Thư ký'>Thư ký</option></select></td><td><textarea class='form-control' rows='2'></textarea></td><td class='giua' style='width:50px;'><button class='xoabtc'><i class='fas fa-times do'></i></button></td></tr>";
+                        $('#bangbtc').append(tr);
+                    }else khongthanhcong('Chỉ được thêm 4 thành viên');
                 }
                 else
                     khongthanhcong('Bạn đã chọn thành viên này rồi!');
@@ -794,8 +862,11 @@ if (!isset($_SESSION["token"])) {include_once ("../../loi404.html");exit();}
             $('#bangbtc').find('tr:not(:first)').each(function(i, row) {
                 var cols = [];
                 var dem = 1;
-                $(this).find('td').each(function(i, col) {
-                    if(dem == 3 || dem == 4){
+                $(this).find('td:not(:last)').each(function(i, col) {
+                    if(dem == 3){
+                        cols.push($(this).find('select').val());
+                    }else
+                    if(dem == 4){
                         cols.push($(this).find('textarea').val());
                     }
                     else{
@@ -811,7 +882,10 @@ if (!isset($_SESSION["token"])) {include_once ("../../loi404.html");exit();}
                 var cols = [];
                 var dem = 1;
                 $(this).find('td:not(:last)').each(function(i, col) {
-                    if(dem == 3 || dem == 4){
+                    if(dem == 3){
+                        cols.push($(this).find('select').val());
+                    }else
+                    if(dem == 4){
                         cols.push($(this).find('textarea').val());
                     }
                     else{

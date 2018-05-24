@@ -2,27 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e784096a-f6cb-467c-8cbe-b1eae1f3bf23" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/admin/ajax/ajax_cau_hinh_mail.php" afterPath="$PROJECT_DIR$/admin/ajax/ajax_cau_hinh_mail.php" />
-      <change beforePath="$PROJECT_DIR$/admin/ajax/ajax_chu_nhiem_up_file.php" afterPath="$PROJECT_DIR$/admin/ajax/ajax_chu_nhiem_up_file.php" />
-      <change beforePath="$PROJECT_DIR$/admin/ajax/ajax_chu_nhiem_xoa_file.php" afterPath="$PROJECT_DIR$/admin/ajax/ajax_chu_nhiem_xoa_file.php" />
-      <change beforePath="$PROJECT_DIR$/admin/ajax/ajax_danh_gia_de_cuong_up_file.php" afterPath="$PROJECT_DIR$/admin/ajax/ajax_danh_gia_de_cuong_up_file.php" />
-      <change beforePath="$PROJECT_DIR$/admin/ajax/ajax_danh_gia_de_cuong_xoa_file.php" afterPath="$PROJECT_DIR$/admin/ajax/ajax_danh_gia_de_cuong_xoa_file.php" />
-      <change beforePath="$PROJECT_DIR$/admin/ajax/ajax_danh_gia_nghiem_thu_up_file.php" afterPath="$PROJECT_DIR$/admin/ajax/ajax_danh_gia_nghiem_thu_up_file.php" />
-      <change beforePath="$PROJECT_DIR$/admin/ajax/ajax_danh_gia_nghiem_thu_xoa_file.php" afterPath="$PROJECT_DIR$/admin/ajax/ajax_danh_gia_nghiem_thu_xoa_file.php" />
-      <change beforePath="$PROJECT_DIR$/admin/ajax/ajax_dieu_chinh_de_tai.php" afterPath="$PROJECT_DIR$/admin/ajax/ajax_dieu_chinh_de_tai.php" />
-      <change beforePath="$PROJECT_DIR$/admin/ajax/ajax_doi_mat_khau.php" afterPath="$PROJECT_DIR$/admin/ajax/ajax_doi_mat_khau.php" />
-      <change beforePath="$PROJECT_DIR$/admin/ajax/ajax_doi_ten_dang_nhap.php" afterPath="$PROJECT_DIR$/admin/ajax/ajax_doi_ten_dang_nhap.php" />
-      <change beforePath="$PROJECT_DIR$/admin/ajax/ajax_duyet_de_tai.php" afterPath="$PROJECT_DIR$/admin/ajax/ajax_duyet_de_tai.php" />
-      <change beforePath="$PROJECT_DIR$/admin/ajax/ajax_duyet_de_tai_da_co.php" afterPath="$PROJECT_DIR$/admin/ajax/ajax_duyet_de_tai_da_co.php" />
-      <change beforePath="$PROJECT_DIR$/admin/ajax/ajax_file_nguon_bai_bao.php" afterPath="$PROJECT_DIR$/admin/ajax/ajax_file_nguon_bai_bao.php" />
-      <change beforePath="$PROJECT_DIR$/admin/ajax/ajax_gui_de_xuat.php" afterPath="$PROJECT_DIR$/admin/ajax/ajax_gui_de_xuat.php" />
-      <change beforePath="$PROJECT_DIR$/admin/ajax/ajax_hoi_dong_xet_chon.php" afterPath="$PROJECT_DIR$/admin/ajax/ajax_hoi_dong_xet_chon.php" />
-      <change beforePath="$PROJECT_DIR$/admin/ajax/ajax_import_file_thanh_vien.php" afterPath="$PROJECT_DIR$/admin/ajax/ajax_import_file_thanh_vien.php" />
-      <change beforePath="$PROJECT_DIR$/admin/ajax/ajax_luu_diem_de_tai.php" afterPath="$PROJECT_DIR$/admin/ajax/ajax_luu_diem_de_tai.php" />
-      <change beforePath="$PROJECT_DIR$/admin/ajax/ajax_luu_ma_de_tai.php" afterPath="$PROJECT_DIR$/admin/ajax/ajax_luu_ma_de_tai.php" />
-      <change beforePath="$PROJECT_DIR$/admin/ajax/ajax_luu_thong_tin_nguoi_dung.php" afterPath="$PROJECT_DIR$/admin/ajax/ajax_luu_thong_tin_nguoi_dung.php" />
-      <change beforePath="$PROJECT_DIR$/admin/ajax/ajax_nap_thanh_vien.php" afterPath="$PROJECT_DIR$/admin/ajax/ajax_nap_thanh_vien.php" />
-      <change beforePath="$PROJECT_DIR$/admin/ajax/ajax_nghiem_thu_de_tai.php" afterPath="$PROJECT_DIR$/admin/ajax/ajax_nghiem_thu_de_tai.php" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/7100f002-45e7-4ecd-b4f9-feb8543b2f12.xml" afterPath="$PROJECT_DIR$/.idea/dataSources/7100f002-45e7-4ecd-b4f9-feb8543b2f12.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/admin/control/c_hoi_dong_xet_chon.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/admin/control/c_xem_de_xuat.php" afterPath="$PROJECT_DIR$/admin/control/c_xem_de_xuat.php" />
+      <change beforePath="$PROJECT_DIR$/admin/index.php" afterPath="$PROJECT_DIR$/admin/index.php" />
+      <change beforePath="$PROJECT_DIR$/admin/model/m_hoi_dong_xet_chon.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/admin/model/m_xem_de_xuat.php" afterPath="$PROJECT_DIR$/admin/model/m_xem_de_xuat.php" />
+      <change beforePath="$PROJECT_DIR$/admin/public_c.php" afterPath="$PROJECT_DIR$/admin/public_c.php" />
+      <change beforePath="$PROJECT_DIR$/admin/view/v_hoi_dong_xet_chon.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/admin/view/v_xem_de_xuat.php" afterPath="$PROJECT_DIR$/admin/view/v_xem_de_xuat.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -61,12 +50,24 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="danh_sach_hoi_dong_nghiem_thu.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="danh_sach_hoi_dong_nghiem_thu.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/admin/word/danh_sach_hoi_dong_nghiem_thu.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="351">
+            <state relative-caret-position="27">
               <caret line="32" column="58" lean-forward="false" selection-start-line="32" selection-start-column="39" selection-end-line="32" selection-end-column="58" />
               <folding>
+                <element signature="e#4091#4097#0#HTML" expanded="true" />
+                <element signature="e#4097#4103#0#HTML" expanded="true" />
+                <element signature="e#4103#4109#0#HTML" expanded="true" />
+                <element signature="e#4109#4115#0#HTML" expanded="true" />
+                <element signature="e#4172#4178#0#HTML" expanded="true" />
+                <element signature="e#4178#4184#0#HTML" expanded="true" />
+                <element signature="e#4184#4190#0#HTML" expanded="true" />
+                <element signature="e#4190#4196#0#HTML" expanded="true" />
+                <element signature="e#4251#4257#0#HTML" expanded="true" />
+                <element signature="e#4257#4263#0#HTML" expanded="true" />
+                <element signature="e#4263#4269#0#HTML" expanded="true" />
+                <element signature="e#4269#4275#0#HTML" expanded="true" />
                 <marker date="1526672439909" expanded="true" signature="492:679" ph="SELECT tv.ID... thanhviendetai" />
                 <marker date="1526672439909" expanded="true" signature="978:1081" ph="SELECT k.TEN... nguoidung_khoabomon" />
                 <marker date="1526672439909" expanded="true" signature="1356:1569" ph="SELECT dt.MA... detai" />
@@ -84,15 +85,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="detai" pinned="false" current-in-tab="false">
-        <entry file="das://table:/f683da9/7100f002-45e7-4ecd-b4f9-feb8543b2f12/nckh.detai">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="console_14.sql" pinned="false" current-in-tab="false">
         <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/7100f002-45e7-4ecd-b4f9-feb8543b2f12/console_14.sql">
           <provider selected="true" editor-type-id="text-editor">
@@ -103,62 +95,89 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="baiviet_chuyenmuc" pinned="false" current-in-tab="false">
-        <entry file="das://table:/f683da9/7100f002-45e7-4ecd-b4f9-feb8543b2f12/nckh.baiviet_chuyenmuc">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="chuyenmuc" pinned="false" current-in-tab="false">
-        <entry file="das://table:/f683da9/7100f002-45e7-4ecd-b4f9-feb8543b2f12/nckh.chuyenmuc">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="baiviet" pinned="false" current-in-tab="false">
-        <entry file="das://table:/f683da9/7100f002-45e7-4ecd-b4f9-feb8543b2f12/nckh.baiviet">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="baiviet_nguoidung" pinned="false" current-in-tab="false">
-        <entry file="das://table:/f683da9/7100f002-45e7-4ecd-b4f9-feb8543b2f12/nckh.baiviet_nguoidung">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="baiviet_tukhoa" pinned="false" current-in-tab="false">
-        <entry file="das://table:/f683da9/7100f002-45e7-4ecd-b4f9-feb8543b2f12/nckh.baiviet_tukhoa">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
+      <file leaf-file-name="v_xem_de_xuat.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/admin/view/v_xem_de_xuat.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="332">
+              <caret line="589" column="103" lean-forward="true" selection-start-line="589" selection-start-column="103" selection-end-line="589" selection-end-column="103" />
+              <folding>
+                <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="e#767#773#0#HTML" expanded="true" />
+                <element signature="n#style#0;n#input#0;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#input#1;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#table#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#th#0;n#tr#0;n#table#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#td#0;n#tr#1;n#table#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="e#6412#6417#0#HTML" expanded="true" />
+                <element signature="n#style#0;n#th#0;n#tr#22;n#table#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="e#11837#11842#0#HTML" expanded="true" />
+                <element signature="n#style#0;n#table#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#tr#0;n#table#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#th#0;n#tr#0;n#table#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="e#14721#14726#0#HTML" expanded="true" />
+                <element signature="n#style#0;n#th#1;n#tr#0;n#table#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#th#2;n#tr#0;n#table#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#table#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#tr#0;n#table#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#th#0;n#tr#0;n#table#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#tr#1;n#table#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#table#0;n#div#0;n#div#0;n#div#0;n#div#3;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#tr#0;n#table#0;n#div#0;n#div#0;n#div#0;n#div#3;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#th#0;n#tr#0;n#table#0;n#div#0;n#div#0;n#div#0;n#div#3;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#th#2;n#tr#0;n#table#0;n#div#0;n#div#0;n#div#0;n#div#3;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#th#3;n#tr#0;n#table#0;n#div#0;n#div#0;n#div#0;n#div#3;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#table#0;n#div#0;n#div#0;n#div#0;n#div#5;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#tr#0;n#table#0;n#div#0;n#div#0;n#div#0;n#div#5;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#th#0;n#tr#0;n#table#0;n#div#0;n#div#0;n#div#0;n#div#5;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#th#3;n#tr#0;n#table#0;n#div#0;n#div#0;n#div#0;n#div#5;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#th#4;n#tr#0;n#table#0;n#div#0;n#div#0;n#div#0;n#div#5;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#table#0;n#div#0;n#div#0;n#div#0;n#div#6;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#tr#0;n#table#0;n#div#0;n#div#0;n#div#0;n#div#6;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#table#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#7;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#tr#0;n#table#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#7;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#th#4;n#tr#0;n#table#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#7;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#table#0;n#div#4;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#7;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#tr#0;n#table#0;n#div#4;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#7;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#th#4;n#tr#0;n#table#0;n#div#4;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#7;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="e#38887#38893#0#HTML" expanded="true" />
+                <element signature="e#39106#39112#0#HTML" expanded="true" />
+                <element signature="n#style#0;n#input#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#7;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#input#1;n#div#1;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#7;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#table#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#7;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#tr#0;n#table#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#7;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="e#43316#43322#0#HTML" expanded="true" />
+                <element signature="n#style#0;n#table#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#8;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#tr#0;n#table#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#8;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#th#4;n#tr#0;n#table#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#8;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="e#48442#48448#0#HTML" expanded="true" />
+                <element signature="e#50505#50511#0#HTML" expanded="true" />
+                <element signature="n#style#0;n#input#0;n#div#2;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#8;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#input#1;n#div#2;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#8;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#table#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#8;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#tr#0;n#table#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#8;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="e#53290#53296#0#HTML" expanded="true" />
+                <element signature="e#54120#54126#0#HTML" expanded="true" />
+                <marker date="1527126302777" expanded="true" signature="33411:33625" ph="..." />
+                <marker date="1527126302777" expanded="true" signature="34359:34370" ph="..." />
+                <marker date="1527126302777" expanded="true" signature="37399:37613" ph="..." />
+                <marker date="1527126302777" expanded="true" signature="38480:38491" ph="..." />
+                <marker date="1527126302777" expanded="true" signature="40955:40971" ph="..." />
+                <marker date="1527126302777" expanded="true" signature="46466:46483" ph="..." />
+                <marker date="1527126302777" expanded="true" signature="46484:46819" ph="..." />
+                <marker date="1527126302777" expanded="true" signature="46484:47740" ph="..." />
+                <marker date="1527126302777" expanded="true" signature="47938:47949" ph="..." />
+                <marker date="1527126302777" expanded="true" signature="50778:50794" ph="..." />
+                <marker date="1527126302777" expanded="true" signature="52600:52617" ph="..." />
+                <marker date="1527126302777" expanded="true" signature="59301:59312" ph="..." />
+                <marker date="1527126302777" expanded="true" signature="61142:61153" ph="..." />
+                <marker date="1527126302777" expanded="true" signature="62789:62800" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="xetduyetnghiemthu" pinned="false" current-in-tab="false">
         <entry file="das://table:/f683da9/7100f002-45e7-4ecd-b4f9-feb8543b2f12/nckh.xetduyetnghiemthu">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="xetduyetdetai" pinned="false" current-in-tab="false">
-        <entry file="das://table:/f683da9/7100f002-45e7-4ecd-b4f9-feb8543b2f12/nckh.xetduyetdetai">
           <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
             <state>
               <filtering enabled="true" />
@@ -208,10 +227,10 @@
         <option value="$PROJECT_DIR$/model/m_trang_chu.php" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/7100f002-45e7-4ecd-b4f9-feb8543b2f12/console_13.sql" />
         <option value="$PROJECT_DIR$/admin/word/phieu_danh_gia_de_cuong.php" />
-        <option value="$PROJECT_DIR$/admin/view/v_xem_de_xuat.php" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/7100f002-45e7-4ecd-b4f9-feb8543b2f12/console_12.sql" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/7100f002-45e7-4ecd-b4f9-feb8543b2f12/console_14.sql" />
         <option value="$PROJECT_DIR$/admin/word/danh_sach_hoi_dong_nghiem_thu.php" />
+        <option value="$PROJECT_DIR$/admin/view/v_xem_de_xuat.php" />
       </list>
     </option>
   </component>
@@ -226,7 +245,7 @@
       <path value="C:\wamp64\bin\php" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="953" />
     <option name="y" value="40" />
     <option name="width" value="974" />
@@ -283,7 +302,7 @@
               <item name="qlkh" type="b2602c69:ProjectViewProjectNode" />
               <item name="qlkh" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="admin" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="word" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="view" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="qlkh" type="b2602c69:ProjectViewProjectNode" />
@@ -360,7 +379,8 @@
       <workItem from="1526626442694" duration="11832000" />
       <workItem from="1526689410112" duration="6758000" />
       <workItem from="1526866182682" duration="613000" />
-      <workItem from="1526869273480" duration="624000" />
+      <workItem from="1526869273480" duration="1219000" />
+      <workItem from="1527122620753" duration="2489000" />
     </task>
     <task id="LOCAL-00001" summary="Start up">
       <created>1525824037964</created>
@@ -380,10 +400,10 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="107494000" />
+    <option name="totallyTimeSpent" value="110578000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="32" width="1936" height="1056" extended-state="7" />
+    <frame x="-8" y="32" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -391,7 +411,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.12260128" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22014925" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -706,13 +726,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/admin/view/v_xem_de_xuat.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21303">
-          <caret line="789" column="0" lean-forward="false" selection-start-line="789" selection-start-column="0" selection-end-line="789" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/7100f002-45e7-4ecd-b4f9-feb8543b2f12/console_12.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -727,13 +740,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="das://table:/f683da9/7100f002-45e7-4ecd-b4f9-feb8543b2f12/nckh.xetduyetnghiemthu">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
     <entry file="das://table:/f683da9/7100f002-45e7-4ecd-b4f9-feb8543b2f12/nckh.detai">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
@@ -742,13 +748,6 @@
       </provider>
     </entry>
     <entry file="das://table:/f683da9/7100f002-45e7-4ecd-b4f9-feb8543b2f12/nckh.khoabomon">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://table:/f683da9/7100f002-45e7-4ecd-b4f9-feb8543b2f12/nckh.xetduyetdetai">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
@@ -800,9 +799,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/admin/word/danh_sach_hoi_dong_nghiem_thu.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
+        <state relative-caret-position="27">
           <caret line="32" column="58" lean-forward="false" selection-start-line="32" selection-start-column="39" selection-end-line="32" selection-end-column="58" />
           <folding>
+            <element signature="e#4091#4097#0#HTML" expanded="true" />
+            <element signature="e#4097#4103#0#HTML" expanded="true" />
+            <element signature="e#4103#4109#0#HTML" expanded="true" />
+            <element signature="e#4109#4115#0#HTML" expanded="true" />
+            <element signature="e#4172#4178#0#HTML" expanded="true" />
+            <element signature="e#4178#4184#0#HTML" expanded="true" />
+            <element signature="e#4184#4190#0#HTML" expanded="true" />
+            <element signature="e#4190#4196#0#HTML" expanded="true" />
+            <element signature="e#4251#4257#0#HTML" expanded="true" />
+            <element signature="e#4257#4263#0#HTML" expanded="true" />
+            <element signature="e#4263#4269#0#HTML" expanded="true" />
+            <element signature="e#4269#4275#0#HTML" expanded="true" />
             <marker date="1526672439909" expanded="true" signature="492:679" ph="SELECT tv.ID... thanhviendetai" />
             <marker date="1526672439909" expanded="true" signature="978:1081" ph="SELECT k.TEN... nguoidung_khoabomon" />
             <marker date="1526672439909" expanded="true" signature="1356:1569" ph="SELECT dt.MA... detai" />
@@ -815,6 +826,99 @@
             <marker date="1526672439909" expanded="true" signature="4790:4796" ph=" " />
             <marker date="1526672439909" expanded="true" signature="4796:4802" ph=" " />
             <marker date="1526672439909" expanded="true" signature="4802:4808" ph=" " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://table:/f683da9/7100f002-45e7-4ecd-b4f9-feb8543b2f12/nckh.xetduyetdetai">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://table:/f683da9/7100f002-45e7-4ecd-b4f9-feb8543b2f12/nckh.xetduyetnghiemthu">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/view/v_xem_de_xuat.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="332">
+          <caret line="589" column="103" lean-forward="true" selection-start-line="589" selection-start-column="103" selection-end-line="589" selection-end-column="103" />
+          <folding>
+            <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="e#767#773#0#HTML" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#1;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#table#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#th#0;n#tr#0;n#table#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#0;n#tr#1;n#table#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="e#6412#6417#0#HTML" expanded="true" />
+            <element signature="n#style#0;n#th#0;n#tr#22;n#table#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="e#11837#11842#0#HTML" expanded="true" />
+            <element signature="n#style#0;n#table#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#tr#0;n#table#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#th#0;n#tr#0;n#table#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="e#14721#14726#0#HTML" expanded="true" />
+            <element signature="n#style#0;n#th#1;n#tr#0;n#table#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#th#2;n#tr#0;n#table#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#table#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#tr#0;n#table#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#th#0;n#tr#0;n#table#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#tr#1;n#table#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#table#0;n#div#0;n#div#0;n#div#0;n#div#3;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#tr#0;n#table#0;n#div#0;n#div#0;n#div#0;n#div#3;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#th#0;n#tr#0;n#table#0;n#div#0;n#div#0;n#div#0;n#div#3;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#th#2;n#tr#0;n#table#0;n#div#0;n#div#0;n#div#0;n#div#3;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#th#3;n#tr#0;n#table#0;n#div#0;n#div#0;n#div#0;n#div#3;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#table#0;n#div#0;n#div#0;n#div#0;n#div#5;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#tr#0;n#table#0;n#div#0;n#div#0;n#div#0;n#div#5;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#th#0;n#tr#0;n#table#0;n#div#0;n#div#0;n#div#0;n#div#5;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#th#3;n#tr#0;n#table#0;n#div#0;n#div#0;n#div#0;n#div#5;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#th#4;n#tr#0;n#table#0;n#div#0;n#div#0;n#div#0;n#div#5;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#table#0;n#div#0;n#div#0;n#div#0;n#div#6;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#tr#0;n#table#0;n#div#0;n#div#0;n#div#0;n#div#6;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#table#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#7;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#tr#0;n#table#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#7;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#th#4;n#tr#0;n#table#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#7;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#table#0;n#div#4;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#7;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#tr#0;n#table#0;n#div#4;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#7;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#th#4;n#tr#0;n#table#0;n#div#4;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#7;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="e#38887#38893#0#HTML" expanded="true" />
+            <element signature="e#39106#39112#0#HTML" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#7;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#1;n#div#1;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#7;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#table#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#7;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#tr#0;n#table#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#7;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="e#43316#43322#0#HTML" expanded="true" />
+            <element signature="n#style#0;n#table#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#8;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#tr#0;n#table#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#8;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#th#4;n#tr#0;n#table#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#8;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="e#48442#48448#0#HTML" expanded="true" />
+            <element signature="e#50505#50511#0#HTML" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#div#2;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#8;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#1;n#div#2;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#8;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#table#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#8;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#tr#0;n#table#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#8;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="e#53290#53296#0#HTML" expanded="true" />
+            <element signature="e#54120#54126#0#HTML" expanded="true" />
+            <marker date="1527126302777" expanded="true" signature="33411:33625" ph="..." />
+            <marker date="1527126302777" expanded="true" signature="34359:34370" ph="..." />
+            <marker date="1527126302777" expanded="true" signature="37399:37613" ph="..." />
+            <marker date="1527126302777" expanded="true" signature="38480:38491" ph="..." />
+            <marker date="1527126302777" expanded="true" signature="40955:40971" ph="..." />
+            <marker date="1527126302777" expanded="true" signature="46466:46483" ph="..." />
+            <marker date="1527126302777" expanded="true" signature="46484:46819" ph="..." />
+            <marker date="1527126302777" expanded="true" signature="46484:47740" ph="..." />
+            <marker date="1527126302777" expanded="true" signature="47938:47949" ph="..." />
+            <marker date="1527126302777" expanded="true" signature="50778:50794" ph="..." />
+            <marker date="1527126302777" expanded="true" signature="52600:52617" ph="..." />
+            <marker date="1527126302777" expanded="true" signature="59301:59312" ph="..." />
+            <marker date="1527126302777" expanded="true" signature="61142:61153" ph="..." />
+            <marker date="1527126302777" expanded="true" signature="62789:62800" ph="..." />
           </folding>
         </state>
       </provider>

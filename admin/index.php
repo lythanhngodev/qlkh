@@ -38,7 +38,6 @@ $_SESSION["token"] = $token;
                     <li id="quanlydetaiduan"><a href="?p=quanlydetaiduan"> <i class="fab fa-accusoft"></i>&nbsp;&nbsp;Quản lý đề tài - dự án</a></li>
                     <li id="quanlydetai"><a href="?p=quanlydetai"> <i class="fas fa-external-link-alt"></i>&nbsp;&nbsp;Quản lý đề tài của tôi</a></li>
                     <li id="themdetaidanghiemthu"><a href="?p=themdetaidanghiemthu"> <i class="fas fa-plus"></i>&nbsp;&nbsp;Nhập đề tài - dự án đã nghiệm thu</a></li>
-                    <li id="hoidongxetchon"><a href="?p=hoidongxetchon"> <i class="fas fa-users"></i>&nbsp;&nbsp;Quản lý HĐ xét chọn</a></li>
                     <li id="quanlyhoso"><a href="?p=quanlyhoso"> <i class="fas fa-briefcase"></i>&nbsp;&nbsp;Quản lý hồ sơ</a></li>
                     <li id="dexuatmoi"><a href="?p=dexuatmoi"> <i class="fas fa-briefcase"></i>&nbsp;&nbsp;Đề xuất mới của trường</a></li>
                     <li id="denhanbaocao"><a href="?p=denhanbaocao"> <i class="far fa-clock"></i>&nbsp;&nbsp;Đến hạn báo cáo</a></li>
@@ -96,7 +95,6 @@ $_SESSION["token"] = $token;
                       <li id="quanlydetaiduan"><a href="?p=quanlydetaiduan"> <i class="fab fa-accusoft"></i>&nbsp;&nbsp;Quản lý đề tài - dự án</a></li>
                       <li id="quanlydetai"><a href="?p=quanlydetai"> <i class="fas fa-external-link-alt"></i>&nbsp;&nbsp;Quản lý đề tài của tôi</a></li>
                       <li id="themdetaidanghiemthu"><a href="?p=themdetaidanghiemthu"> <i class="fas fa-plus"></i>&nbsp;&nbsp;Nhập đề tài - dự án đã nghiệm thu</a></li>
-                      <li id="hoidongxetchon"><a href="?p=hoidongxetchon"> <i class="fas fa-users"></i>&nbsp;&nbsp;Quản lý HĐ xét chọn</a></li>
                       <li id="quanlyhoso"><a href="?p=quanlyhoso"> <i class="fas fa-briefcase"></i>&nbsp;&nbsp;Quản lý hồ sơ</a></li>
                       <li id="dexuatmoi"><a href="?p=dexuatmoi"> <i class="fas fa-briefcase"></i>&nbsp;&nbsp;Đề xuất mới của trường</a></li>
                       <li id="denhanbaocao"><a href="?p=denhanbaocao"> <i class="far fa-clock"></i>&nbsp;&nbsp;Đến hạn báo cáo</a></li>
