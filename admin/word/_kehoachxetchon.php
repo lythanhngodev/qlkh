@@ -47,6 +47,20 @@
 			<input type="text" name="dachon" id="i_dachon" hidden="hidden">
 			<span>Số đề tài đã chọn: <b class="dachon">0</b></span><br>
 			<button type="submit" class="btn btn-warning"><i class="far fa-file-word"></i> Xuất file</button>
+			<div class="row">
+				<div class="col-md-6">
+					<div class="form-group">
+						<label class="font-weight-bold">Ngày lập hội đồng xét chọn</label>
+						<input type="time" name="thoigian" id="tg" class="form-control">
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="form-group">
+						<label class="font-weight-bold">Thời gian bắt đầu buổi xét chọn</label>
+						<input type="time" name="thoigian" id="tg" class="form-control">
+					</div>
+				</div>		
+			</div>
 			<hr>
 		<table id="bangnoidung" class="table table-hover table-bordered" style="width:100%">
 		    <thead>

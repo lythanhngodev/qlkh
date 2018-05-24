@@ -1,7 +1,6 @@
 <?php include_once "../../config.php"; ?>
-<?php include_once "../../config.php"; ?>
 <?php 
-	if (!isset($_POST['dachon']) || empty($_POST['dachon'])) {
+	if (!isset($_POST['dachon']) || empty($_POST['dachon']) || !isset($_POST['thoigian']) || empty($_POST['thoigian'])) {
 		echo " Không có dữ liệu";
 		exit();	
 	}
@@ -24,7 +23,6 @@
 	    mysqli_close($conn);
 	    return $result;
 	}
-	
  ?>
 <?php 
  header("Content-Type: application/vnd.ms-word");

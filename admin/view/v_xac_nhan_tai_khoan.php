@@ -63,6 +63,8 @@
         });
     });
     $('#xacnhan').on('click',function () {
+      var hoi = confirm('Bạn có chắc xoá những mục đã chọn');
+      if (!hoi) {return;}
       var bxn = [],xn = [];
       $('#bangxacnhan').find('tr:not(:first)').each(function(i, row) {
         var cols = [],dem=0;
