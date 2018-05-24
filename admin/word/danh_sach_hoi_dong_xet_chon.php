@@ -16,10 +16,10 @@
 		echo " Không có dữ liệu";
 		exit();	
 	}
-	function lay_hoi_dong(){
+	function lay_hoi_dong($iddt){
 		$ketnoi = new clsKetnoi();
 		$conn = $ketnoi->ketnoi();
-		$query = "SELECT DISTINCT hd.IDND,CONCAT(nd.HO,' ',nd.TEN) as HOTEN,nd.NGAYSINH, hd.NHIEMVU,hd.GHICHU FROM hoidongxetchon hd, nguoidung nd WHERE hd.IDND = nd.IDND";
+		$query = "SELECT DISTINCT xd.IDND,CONCAT(nd.HO,' ',nd.TEN) as HOTEN,nd.NGAYSINH,xd.NHIEMVU, xd.GHICHU FROM xetduyetdetai xd, nguoidung nd WHERE xd.LOAIHD = '1' AND xd.IDND = nd.IDND AND xd.IDDT = '$iddt'";
 		$result = mysqli_query($conn, $query);
 		mysqli_close($conn);
 		return $result;
@@ -145,7 +145,7 @@
 						<th>GHI CHÚ</th>
 					</tr>
 					<?php 
-					$hoidongxetchon = lay_hoi_dong();$stt=1;
+					$hoidongxetchon = lay_hoi_dong($ds[0]);$stt=1;
 					while ($row = mysqli_fetch_assoc($hoidongxetchon)) { ?>
 					<tr>
 						<td style="text-align: center;"><?php echo $stt; ?></td>

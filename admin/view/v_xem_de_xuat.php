@@ -1,7 +1,7 @@
 <?php
 if (!isset($_SESSION["token"])) {include_once ("../../loi404.html");exit();}
-$nhiemvu_btc = ['Chủ tịch HĐ', 'Trưởng BTC', 'Phó BTC', 'UV TT', 'Uỷ viên', 'Thư ký'];
-$nhiemvu_hd_duyet = ['Uỷ viên'];
+$nhiemvu_btc = ['Chủ tịch HĐ', 'Trưởng BTC', 'Phó BTC', 'UV TT', 'Ủy viên', 'Thư ký'];
+$nhiemvu_hd_duyet = ['Ủy viên'];
 $nhiemvu_nghiemthu = ['Chủ tịch HĐ', 'Ủy viên', 'Thư ký'];
 ?>
 <?php $trangthaidt = $detai['TRANGTHAI']; ?>
@@ -789,7 +789,7 @@ $nhiemvu_nghiemthu = ['Chủ tịch HĐ', 'Ủy viên', 'Thư ký'];
                 if (tontai==0) {
                     if(sodong<10){
                         //them tac gia vao danh sach
-                        var tr = "<tr><td>"+$('#chonbtc option:selected').text()+"</td><td class='an'>"+$(this).find('option:selected').val()+"</td><td><select class='form-control'><option value='Uỷ viên'>Uỷ viên</option></select></td></td><td><textarea class='form-control' rows='2'></textarea></td><td class='giua' style='width:50px;'><button class='xoabtc'><i class='fas fa-times do'></i></button></td></tr>";
+                        var tr = "<tr><td>"+$('#chonbtc option:selected').text()+"</td><td class='an'>"+$(this).find('option:selected').val()+"</td><td><select class='form-control'><option value='Ủy viên'>Ủy viên</option></select></td></td><td><textarea class='form-control' rows='2'></textarea></td><td class='giua' style='width:50px;'><button class='xoabtc'><i class='fas fa-times do'></i></button></td></tr>";
                         $('#bangtvdg').append(tr);
                     }else khongthanhcong('Chỉ được thêm 9 thành viên');
                 }
@@ -819,7 +819,7 @@ $nhiemvu_nghiemthu = ['Chủ tịch HĐ', 'Ủy viên', 'Thư ký'];
                 if (tontai==0) {
                     if(sodong<5){
                         //them tac gia vao danh sach
-                        var tr = "<tr><td>"+$('#chontvbtc option:selected').text()+"</td><td class='an'>"+$(this).find('option:selected').val()+"</td><td><select class='form-control'><option value='Chủ tịch HĐ'>Chủ tịch HĐ</option><option value='Trưởng BTC'>Trưởng BTC</option><option value='Phó BTC'>Phó BTC</option><option value='UV TT'>UV TT</option><option value='Uỷ viên'>Uỷ viên</option><option value='Thư ký'>Thư ký</option></select></td><td><textarea class='form-control' rows='2'></textarea></td><td class='giua' style='width:50px;'><button class='xoabtc'><i class='fas fa-times do'></i></button></td></tr>";
+                        var tr = "<tr><td>"+$('#chontvbtc option:selected').text()+"</td><td class='an'>"+$(this).find('option:selected').val()+"</td><td><select class='form-control'><option value='Chủ tịch HĐ'>Chủ tịch HĐ</option><option value='Trưởng BTC'>Trưởng BTC</option><option value='Phó BTC'>Phó BTC</option><option value='UV TT'>UV TT</option><option value='Ủy viên'>Ủy viên</option><option value='Thư ký'>Thư ký</option></select></td><td><textarea class='form-control' rows='2'></textarea></td><td class='giua' style='width:50px;'><button class='xoabtc'><i class='fas fa-times do'></i></button></td></tr>";
                         $('#bangbtc').append(tr);
                     }else khongthanhcong('Chỉ được thêm 4 thành viên');
                 }
@@ -850,7 +850,7 @@ $nhiemvu_nghiemthu = ['Chủ tịch HĐ', 'Ủy viên', 'Thư ký'];
                 if (tontai==0) {
                     if(sodong<5){
                         //them tac gia vao danh sach
-                        var tr = "<tr><td>"+$('#chontvnt option:selected').text()+"</td><td class='an'>"+$(this).find('option:selected').val()+"</td><td><textarea class='form-control' rows='2'></textarea></td><td><textarea class='form-control' rows='2' ></textarea></td><td class='giua' style='width:50px;'><button class='xoatvnt'><i class='fas fa-times do'></i></button></td></tr>";
+                        var tr = "<tr><td>"+$('#chontvnt option:selected').text()+"</td><td class='an'>"+$(this).find('option:selected').val()+"</td><td><select class='form-control'><option value='Chủ tịch HĐ'>Chủ tịch HĐ</option><option value='Ủy viên'>Ủy viên</option><option value='Thư ký'>Thư ký</option></select></td><td><textarea class='form-control' rows='2' ></textarea></td><td class='giua' style='width:50px;'><button class='xoatvnt'><i class='fas fa-times do'></i></button></td></tr>";
                         $('#bangtvnt').append(tr);
                     }else khongthanhcong('Chỉ được thêm 4 thành viên');
                 }

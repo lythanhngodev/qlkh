@@ -516,7 +516,7 @@ $(document).ready(function(){$('#themdetaidanghiemthu').addClass('active');$('.t
               }
               if (tontai==0) {
                       //them tac gia vao danh sach
-                      var tr = "<tr><td>"+$('#chontvbtc option:selected').text()+"</td><td class='an'>"+$(this).find('option:selected').val()+"</td><td><textarea class='form-control' rows='2'></textarea></td><td><textarea class='form-control' rows='2'></textarea></td><td class='giua' style='width:50px;'><button class='xoabtc'><i class='fas fa-times do'></i></button></td></tr>";
+                      var tr = "<tr><td>"+$('#chontvbtc option:selected').text()+"</td><td class='an'>"+$(this).find('option:selected').val()+"</td><td><select class='form-control'><option value='Chủ tịch HĐ'>Chủ tịch HĐ</option><option value='Trưởng BTC'>Trưởng BTC</option><option value='Phó BTC'>Phó BTC</option><option value='UV TT'>UV TT</option><option value='Ủy viên'>Ủy viên</option><option value='Thư ký'>Thư ký</option></select></td><td><textarea class='form-control' rows='2'></textarea></td><td class='giua' style='width:50px;'><button class='xoabtc'><i class='fas fa-times do'></i></button></td></tr>";
                       $('#bangbtc').append(tr);
                       idduyet++;
               }
@@ -546,7 +546,7 @@ $(document).ready(function(){$('#themdetaidanghiemthu').addClass('active');$('.t
               }
               if (tontai==0) {
                       //them tac gia vao danh sach
-                      var tr = "<tr><td>"+$('#chontvdg option:selected').text()+"</td><td class='an'>"+$(this).find('option:selected').val()+"</td><td><textarea class='form-control' rows='2'></textarea></td><td><textarea class='form-control' rows='2'></textarea></td><td class='giua' style='width:50px;'><button class='xoatvdg'><i class='fas fa-times do'></i></button></td></tr>";
+                      var tr = "<tr><td>"+$('#chontvdg option:selected').text()+"</td><td class='an'>"+$(this).find('option:selected').val()+"</td><td><select class='form-control'><option value='Ủy viên'>Ủy viên</option></select></td><td><textarea class='form-control' rows='2'></textarea></td><td class='giua' style='width:50px;'><button class='xoatvdg'><i class='fas fa-times do'></i></button></td></tr>";
                       $('#bangtvdg').append(tr);
                       idduyet++;
               }
@@ -576,7 +576,7 @@ $(document).ready(function(){$('#themdetaidanghiemthu').addClass('active');$('.t
               }
               if (tontai==0) {
                       //them tac gia vao danh sach
-                      var tr = "<tr><td>"+$('#chontvnt option:selected').text()+"</td><td class='an'>"+$(this).find('option:selected').val()+"</td><td><textarea class='form-control' rows='2'></textarea></td><td><textarea class='form-control' rows='2'></textarea></td><td class='giua' style='width:50px;'><button class='xoatvnt'><i class='fas fa-times do'></i></button></td></tr>";
+                      var tr = "<tr><td>"+$('#chontvnt option:selected').text()+"</td><td class='an'>"+$(this).find('option:selected').val()+"</td><td><select class='form-control'><option value='Chủ tịch HĐ'>Chủ tịch HĐ</option><option value='Ủy viên'>Ủy viên</option><option value='Thư ký'>Thư ký</option></select></td><td><textarea class='form-control' rows='2'></textarea></td><td class='giua' style='width:50px;'><button class='xoatvnt'><i class='fas fa-times do'></i></button></td></tr>";
                       $('#bangtvnt').append(tr);
                       idduyet++;
               }
@@ -798,7 +798,12 @@ $(document).ready(function(){$('#themdetaidanghiemthu').addClass('active');$('.t
               var cols = [];
               var dem = 1;
               $(this).find('td:not(:last)').each(function(i, col) {
-                  if(dem == 3 || dem==4) cols.push($(this).find('textarea').val());
+                    if(dem == 3){
+                        cols.push($(this).find('select').val());
+                    }else
+                    if(dem == 4){
+                        cols.push($(this).find('textarea').val());
+                    }
                   else{
                       cols.push($(this).text().trim());
                   }
@@ -815,7 +820,12 @@ $(document).ready(function(){$('#themdetaidanghiemthu').addClass('active');$('.t
               var cols = [];
               var dem = 1;
               $(this).find('td:not(:last)').each(function(i, col){
-                  if(dem == 3 || dem==4) cols.push($(this).find('textarea').val());
+                    if(dem == 3){
+                        cols.push($(this).find('select').val());
+                    }else
+                    if(dem == 4){
+                        cols.push($(this).find('textarea').val());
+                    }
                   else cols.push($(this).text().trim());
                   dem++;
               });
@@ -830,7 +840,12 @@ $(document).ready(function(){$('#themdetaidanghiemthu').addClass('active');$('.t
               var cols = [];
               var dem = 1;
               $(this).find('td:not(:last)').each(function(i, col){
-                  if(dem == 3 || dem == 4) cols.push($(this).find('textarea').val().trim());
+                    if(dem == 3){
+                        cols.push($(this).find('select').val());
+                    }else
+                    if(dem == 4){
+                        cols.push($(this).find('textarea').val());
+                    }
                   else cols.push($(this).text().trim());
                   dem++;
               });
