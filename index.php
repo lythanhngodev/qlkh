@@ -30,12 +30,14 @@
 	</script>
 </head>
 <body>
+<div class="header">
+	<div style="width: 980px;margin: 0 auto;position: relative;">
+		<img src="images/header_vlute.png" style="width: 100%;" />
+		<a href="admin" class="dangnhap">Đăng nhập</a>
+	</div>
+</div>
 <div class="container">
 	<div class="khung">
-		<div class="header">
-			<img src="images/header_vlute.png" style="width: 100%;" />
-			<a href="admin" class="dangnhap">Đăng nhập</a>
-		</div>
 		<div class="menu">
 			<div id="nav">
         		<ul class="sf-menu sf-js-enabled sf-shadow">
