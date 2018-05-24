@@ -34,7 +34,9 @@
             </table>
           </div>
           <div class="card-footer">
-            <button type="button" class="btn btn-primary" id="xacnhan"><i class="fas fa-save"></i>&nbsp;&nbsp;Lưu xác nhận</button>
+            <button type="button" class="btn btn-primary" id="xacnhan"><i class="fas fa-save"></i>&nbsp;&nbsp;Xác nhận mục đã chọn</button>
+            &ensp;
+            <button type="button" class="btn btn-danger" id="xoaxacnhan"><i class="far fa-times-circle"></i>&nbsp;&nbsp;Xoá mục đã chọn</button>
           </div>
         </div>
       </div>
@@ -75,7 +77,7 @@
         if(t[0]==1) xn.push(t);
       });
       if(jQuery.isEmptyObject(xn)){
-          swal('Ôi! Lỗi','Không có người dùng nào được chọn','error');
+          swal('Ôi! Lỗi','Không có mục nào được chọn','error');
           return;
       }
       if(kiemtraketnoi()){
@@ -92,6 +94,52 @@
                   var result = $.parseJSON(data);
                   if(result.trangthai == 1){
                       swal('Thành công','Đã xác nhận người dùng','success');
+                  }
+                  else
+                    swal('Ôi! Lỗi','Xảy ra lỗi, vui lòng thử lại','error');
+              },
+              error: function () {
+                  swal('Ôi! Lỗi','Xảy ra lỗi, vui lòng thử lại','error');
+              }
+          });
+      }
+      else
+          khongthanhcong('Không có kết nối internet');
+    });
+    $('#xoaxacnhan').on('click',function () {
+      var hoi = confirm('Bạn có chắc xoá những mục đã chọn');
+      if (!hoi) {return;}
+      var bxn = [],xn = [];
+      $('#bangxacnhan').find('tr:not(:first)').each(function(i, row) {
+        var cols = [],dem=0;
+        $(this).find('td:not(:first)').each(function(i, col) {
+            if(dem!=0)cols.push($(this).text());
+          else{if($(this).find('input[type="checkbox"]').is(':checked')) cols.push(1); else cols.push(0);}
+            dem++;
+        });cols.push($(this).attr('x'));
+        bxn.push(cols);
+      });
+      bxn.forEach(function(t){
+        if(t[0]==1) xn.push(t);
+      });
+      if(jQuery.isEmptyObject(xn)){
+          swal('Ôi! Lỗi','Không có mục nào được chọn','error');
+          return;
+      }
+      if(kiemtraketnoi()){
+          $.ajax({
+              url: 'ajax/ajax_xoa_xac_nhan_tai_khoan.php',
+              type: 'POST',
+              data: {
+                  xn: xn
+              },
+              beforeSend: function () {
+                  swal("Đợi đã!", "Vui lòng chờ đợi cho đến khi hoàn tất", "info");
+              },
+              success: function (data) {
+                  var result = $.parseJSON(data);
+                  if(result.trangthai == 1){
+                      swal('Thành công','Đã xoá mục đã chọn','success');
                   }
                   else
                     swal('Ôi! Lỗi','Xảy ra lỗi, vui lòng thử lại','error');

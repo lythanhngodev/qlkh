@@ -15,7 +15,7 @@
                         <th style="width: 160px;">Người đề xuất</th>
                         <th style="width: 120px;">Thời gian gửi</th>
                         <th style="width: 100px;">Trạng thái</th>
-                        <th style="width: 70px;" class="giua">Xem xét</th>
+                        <th style="width: 70px;" class="giua">Xem chi tiết</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -24,9 +24,9 @@
                         <th><?php echo $stt; ?></th>
                         <td><?php echo $row['TENDETAI']; ?></td>
                         <td><?php echo lay_ten_chu_nhiem_de_tai($row['IDDT']); ?></td>
-                        <td class="giua"><?php echo date("d-m-Y", strtotime($row['NGAYDEXUAT'])); ?></td>
+                        <td class="giua"><?php echo date("d-m-Y H:m:s", strtotime($row['NGAYDEXUAT'])); ?></td>
                         <td>
-                          <span class="badge badge-info" style="font-size:1rem;">Đang thực hiện</span>
+                          <span class="badge badge-dark" style='font-size:1rem;'>Chờ xét duyệt</span>
                         </td>
                         <td class="giua">
                             <a href="?p=xemdexuat&id=<?php echo $row['IDDT']; ?>" class="btn btn-primary btn-sm"><i class="fas fa-edit"></i></a>
@@ -41,7 +41,7 @@
                         <th style="width: 160px;">Người đề xuất</th>
                         <th style="width: 120px;">Thời gian gửi</th>
                         <th style="width: 100px;">Trạng thái</th>
-                        <th style="width: 70px;" class="giua">Xem xét</th>
+                        <th style="width: 70px;" class="giua">Xem chi tiết</th>
                     </tr>
                 </tfoot>
             </table>
@@ -56,7 +56,7 @@
 <script src="../bootstrap/js/bootstrap.js" type="text/javascript"></script>
 <script type="text/javascript">
   $(document).ready(function(){
-    $('#dexuatmoi').addClass('active');
+    $('#dangthuchien').addClass('active');
     $('.tieude').html('Đề xuất đề tài nghiên cứu khao học mới');
   });
   $(document).ready(function() {

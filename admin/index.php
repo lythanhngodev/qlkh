@@ -39,9 +39,10 @@ $_SESSION["token"] = $token;
                     <li id="quanlydetai"><a href="?p=quanlydetai"> <i class="fas fa-external-link-alt"></i>&nbsp;&nbsp;Quản lý đề tài của tôi</a></li>
                     <li id="themdetaidanghiemthu"><a href="?p=themdetaidanghiemthu"> <i class="fas fa-plus"></i>&nbsp;&nbsp;Nhập đề tài - dự án đã nghiệm thu</a></li>
                     <li id="quanlyhoso"><a href="?p=quanlyhoso"> <i class="fas fa-briefcase"></i>&nbsp;&nbsp;Quản lý hồ sơ</a></li>
-                    <li id="dexuatmoi"><a href="?p=dexuatmoi"> <i class="fas fa-briefcase"></i>&nbsp;&nbsp;Đề xuất mới của trường</a></li>
-                    <li id="denhanbaocao"><a href="?p=denhanbaocao"> <i class="far fa-clock"></i>&nbsp;&nbsp;Đến hạn báo cáo</a></li>
-                    <li id="tretiendo"><a href="?p=tretiendo"> <i class="fab fa-audible"></i>&nbsp;&nbsp;Trễ tiến độ</a></li>
+                    <li id="dexuatmoi"><a href="?p=dexuatmoi"> <i class="fas fa-align-right"></i>&nbsp;&nbsp;Đề tài đang đề xuất</a></li>
+                    <li id="dangthuchien"><a href="?p=dangthuchien"> <i class="fas fa-align-right"></i>&nbsp;&nbsp;Đề tài đang thực hiện</a></li>
+                    <li id="denhanbaocao"><a href="?p=denhanbaocao"> <i class="fas fa-align-right"></i>&nbsp;&nbsp;Đến hạn báo cáo</a></li>
+                    <li id="tretiendo"><a href="?p=tretiendo"> <i class="fas fa-align-right"></i>&nbsp;&nbsp;Trễ tiến độ</a></li>
                 </ul>
             </div>
               <div class="admin-menu">
@@ -54,7 +55,7 @@ $_SESSION["token"] = $token;
               <div class="admin-menu">
                   <h5 class="sidenav-heading">Thống kê</h5>
                   <ul id="side-admin-menu" class="side-menu list-unstyled">
-                      <li id="thongke"><a href="?p=thongke"> <i class="fas fa-newspaper"></i>&nbsp;&nbsp;Thống kê</a></li>
+                      <li id="thongke"><a href="?p=thongke"> <i class="fas fa-chart-pie"></i>&nbsp;&nbsp;Thống kê</a></li>
                   </ul>
               </div>
               <div class="admin-menu">
@@ -96,9 +97,10 @@ $_SESSION["token"] = $token;
                       <li id="quanlydetai"><a href="?p=quanlydetai"> <i class="fas fa-external-link-alt"></i>&nbsp;&nbsp;Quản lý đề tài của tôi</a></li>
                       <li id="themdetaidanghiemthu"><a href="?p=themdetaidanghiemthu"> <i class="fas fa-plus"></i>&nbsp;&nbsp;Nhập đề tài - dự án đã nghiệm thu</a></li>
                       <li id="quanlyhoso"><a href="?p=quanlyhoso"> <i class="fas fa-briefcase"></i>&nbsp;&nbsp;Quản lý hồ sơ</a></li>
-                      <li id="dexuatmoi"><a href="?p=dexuatmoi"> <i class="fas fa-briefcase"></i>&nbsp;&nbsp;Đề xuất mới của trường</a></li>
-                      <li id="denhanbaocao"><a href="?p=denhanbaocao"> <i class="far fa-clock"></i>&nbsp;&nbsp;Đến hạn báo cáo</a></li>
-                      <li id="tretiendo"><a href="?p=tretiendo"> <i class="fab fa-audible"></i>&nbsp;&nbsp;Trễ tiến độ</a></li>
+                      <li id="dexuatmoi"><a href="?p=dexuatmoi"> <i class="fas fa-align-right"></i>&nbsp;&nbsp;Đề tài đang đề xuất</a></li>
+                      <li id="dangthuchien"><a href="?p=dangthuchien"> <i class="fas fa-align-right"></i>&nbsp;&nbsp;Đề tài đang thực hiện</a></li>
+                      <li id="denhanbaocao"><a href="?p=denhanbaocao"> <i class="fas fa-align-right"></i>&nbsp;&nbsp;Đến hạn báo cáo</a></li>
+                      <li id="tretiendo"><a href="?p=tretiendo"> <i class="fas fa-align-right"></i>&nbsp;&nbsp;Trễ tiến độ</a></li>
                   </ul>
               </div>
               <div class="admin-menu">
@@ -111,7 +113,7 @@ $_SESSION["token"] = $token;
               <div class="admin-menu">
                   <h5 class="sidenav-heading">Thống kê</h5>
                   <ul id="side-admin-menu" class="side-menu list-unstyled">
-                      <li id="thongke"><a href="?p=thongke"> <i class="fas fa-newspaper"></i>&nbsp;&nbsp;Thống kê</a></li>
+                      <li id="thongke"><a href="?p=thongke"> <i class="fas fa-chart-pie"></i>&nbsp;&nbsp;Thống kê</a></li>
                   </ul>
               </div>
               <div class="admin-menu">
@@ -140,9 +142,10 @@ $_SESSION["token"] = $token;
 
           <?php } else if($loaitaikhoan=='truongkhoaphong'){ ?>
             <li id="quanlydetai"><a href="?p=quanlydetai"> <i class="fas fa-external-link-alt"></i>&nbsp;&nbsp;Quản lý đề tài của tôi</a></li>
-            <li id="dexuatmoi"><a href="?p=dexuatmoi"> <i class="fas fa-briefcase"></i>&nbsp;&nbsp;Đề xuất mới của khoa</a></li>
-            <li id="denhanbaocao"><a href="?p=denhanbaocao"> <i class="far fa-clock"></i>&nbsp;&nbsp;Đến hạn báo cáo khoa</a></li>
-            <li id="tretiendo"><a href="?p=tretiendo"> <i class="fab fa-audible"></i>&nbsp;&nbsp;Trễ tiến độ khoa</a></li>
+            <li id="dexuatmoi"><a href="?p=dexuatmoi"> <i class="fas fa-align-right"></i>&nbsp;&nbsp;ĐT đang đề xuất khoa</a></li>
+            <li id="dangthuchien"><a href="?p=dangthuchien"> <i class="fas fa-align-right"></i>&nbsp;&nbsp;ĐT đang thực hiện khoa</a></li>
+            <li id="denhanbaocao"><a href="?p=denhanbaocao"> <i class="fas fa-align-right"></i>&nbsp;&nbsp;Đến hạn báo cáo khoa</a></li>
+            <li id="tretiendo"><a href="?p=tretiendo"> <i class="fas fa-align-right"></i>&nbsp;&nbsp;Trễ tiến độ khoa</a></li>
             <div class="admin-menu">
                   <h5 class="sidenav-heading">Báo khoa học</h5>
                   <ul id="side-admin-menu" class="side-menu list-unstyled">

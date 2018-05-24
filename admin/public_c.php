@@ -43,6 +43,9 @@
             case 'dexuatmoi':
                 include_once("control/c_de_xuat_moi.php");
                 break;
+            case 'dangthuchien':
+                include_once("control/c_dang_thuc_hien.php");
+                break;
             case 'denhanbaocao':
                 include_once("control/c_den_han_bai_cao.php");
                 break;

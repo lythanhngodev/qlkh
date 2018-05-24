@@ -15,7 +15,6 @@
                         <th style="width: 160px;">Người đề xuất</th>
                         <th style="width: 120px;">Thời gian gửi</th>
                         <th style="width: 100px;">Trạng thái</th>
-                        <th style="width: 70px;" class="giua">Xem xét</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -26,22 +25,18 @@
                         <td><?php echo lay_ten_chu_nhiem_de_tai($row['IDDT']); ?></td>
                         <td class="giua"><?php echo date("d-m-Y", strtotime($row['NGAYDEXUAT'])); ?></td>
                         <td>
-                          <span class="badge badge-info" style="font-size:1rem;">Đang thực hiện</span>
-                        </td>
-                        <td class="giua">
-                            <a href="?p=xemdexuat&id=<?php echo $row['IDDT']; ?>" class="btn btn-primary btn-sm"><i class="fas fa-edit"></i></a>
+                          <span class="badge badge-info" style='font-size:1rem;'>Đang thực hiện</span>
                         </td>
                     </tr>
                 <?php $stt++; } ?>
                 </tbody>
                 <tfoot>
-                    <tr style="background:#e9ecef;">
-                        <th class="giua" style="width: 28px;">STT</th>
-                        <th>Tên đề tài</th>
-                        <th style="width: 160px;">Người đề xuất</th>
-                        <th style="width: 120px;">Thời gian gửi</th>
-                        <th style="width: 100px;">Trạng thái</th>
-                        <th style="width: 70px;" class="giua">Xem xét</th>
+                    <tr>
+                        <th>STT</th>
+                        <th>Tên đề xuất</th>
+                        <th>Người đề xuất</th>
+                        <th>Ngày gửi</th>
+                        <th>Trạng thái</th>
                     </tr>
                 </tfoot>
             </table>
@@ -60,10 +55,6 @@
     $('.tieude').html('Đề xuất đề tài nghiên cứu khao học mới');
   });
   $(document).ready(function() {
-    $('#example').DataTable({
-        "scrollY":"300px",
-        "scrollCollapse": true,
-        "paging": false
-        });
+    $('#example').DataTable();
 } );
 </script>
