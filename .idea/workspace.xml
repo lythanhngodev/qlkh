@@ -2,15 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e784096a-f6cb-467c-8cbe-b1eae1f3bf23" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/7100f002-45e7-4ecd-b4f9-feb8543b2f12.xml" afterPath="$PROJECT_DIR$/.idea/dataSources/7100f002-45e7-4ecd-b4f9-feb8543b2f12.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/admin/control/c_hoi_dong_xet_chon.php" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/admin/control/c_xem_de_xuat.php" afterPath="$PROJECT_DIR$/admin/control/c_xem_de_xuat.php" />
-      <change beforePath="$PROJECT_DIR$/admin/index.php" afterPath="$PROJECT_DIR$/admin/index.php" />
-      <change beforePath="$PROJECT_DIR$/admin/model/m_hoi_dong_xet_chon.php" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/admin/model/m_xem_de_xuat.php" afterPath="$PROJECT_DIR$/admin/model/m_xem_de_xuat.php" />
-      <change beforePath="$PROJECT_DIR$/admin/public_c.php" afterPath="$PROJECT_DIR$/admin/public_c.php" />
-      <change beforePath="$PROJECT_DIR$/admin/view/v_hoi_dong_xet_chon.php" afterPath="" />
       <change beforePath="$PROJECT_DIR$/admin/view/v_xem_de_xuat.php" afterPath="$PROJECT_DIR$/admin/view/v_xem_de_xuat.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -95,11 +87,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="v_xem_de_xuat.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="v_xem_de_xuat.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/admin/view/v_xem_de_xuat.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="332">
-              <caret line="589" column="103" lean-forward="true" selection-start-line="589" selection-start-column="103" selection-end-line="589" selection-end-column="103" />
+            <state relative-caret-position="108">
+              <caret line="4" column="45" lean-forward="false" selection-start-line="4" selection-start-column="45" selection-end-line="4" selection-end-column="45" />
               <folding>
                 <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="e#767#773#0#HTML" expanded="true" />
@@ -149,34 +141,34 @@
                 <element signature="n#style#0;n#table#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#8;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#tr#0;n#table#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#8;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#th#4;n#tr#0;n#table#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#8;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="e#48442#48448#0#HTML" expanded="true" />
-                <element signature="e#50505#50511#0#HTML" expanded="true" />
+                <element signature="e#48631#48637#0#HTML" expanded="true" />
+                <element signature="e#50694#50700#0#HTML" expanded="true" />
                 <element signature="n#style#0;n#input#0;n#div#2;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#8;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#input#1;n#div#2;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#8;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#table#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#8;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#tr#0;n#table#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#8;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="e#53290#53296#0#HTML" expanded="true" />
-                <element signature="e#54120#54126#0#HTML" expanded="true" />
-                <marker date="1527126302777" expanded="true" signature="33411:33625" ph="..." />
-                <marker date="1527126302777" expanded="true" signature="34359:34370" ph="..." />
-                <marker date="1527126302777" expanded="true" signature="37399:37613" ph="..." />
-                <marker date="1527126302777" expanded="true" signature="38480:38491" ph="..." />
-                <marker date="1527126302777" expanded="true" signature="40955:40971" ph="..." />
-                <marker date="1527126302777" expanded="true" signature="46466:46483" ph="..." />
-                <marker date="1527126302777" expanded="true" signature="46484:46819" ph="..." />
-                <marker date="1527126302777" expanded="true" signature="46484:47740" ph="..." />
-                <marker date="1527126302777" expanded="true" signature="47938:47949" ph="..." />
-                <marker date="1527126302777" expanded="true" signature="50778:50794" ph="..." />
-                <marker date="1527126302777" expanded="true" signature="52600:52617" ph="..." />
-                <marker date="1527126302777" expanded="true" signature="59301:59312" ph="..." />
-                <marker date="1527126302777" expanded="true" signature="61142:61153" ph="..." />
-                <marker date="1527126302777" expanded="true" signature="62789:62800" ph="..." />
+                <element signature="e#53479#53485#0#HTML" expanded="true" />
+                <element signature="e#54309#54315#0#HTML" expanded="true" />
+                <marker date="1527127122818" expanded="true" signature="33411:33625" ph="..." />
+                <marker date="1527127122818" expanded="true" signature="34359:34370" ph="..." />
+                <marker date="1527127122818" expanded="true" signature="37399:37613" ph="..." />
+                <marker date="1527127122818" expanded="true" signature="38480:38491" ph="..." />
+                <marker date="1527127122818" expanded="true" signature="40955:40971" ph="..." />
+                <marker date="1527127122818" expanded="true" signature="46466:46483" ph="..." />
+                <marker date="1527127122818" expanded="true" signature="46484:46819" ph="..." />
+                <marker date="1527127122818" expanded="true" signature="46484:47929" ph="..." />
+                <marker date="1527127122818" expanded="true" signature="48127:48138" ph="..." />
+                <marker date="1527127122818" expanded="true" signature="50967:50983" ph="..." />
+                <marker date="1527127122818" expanded="true" signature="52789:52806" ph="..." />
+                <marker date="1527127122818" expanded="true" signature="59490:59501" ph="..." />
+                <marker date="1527127122818" expanded="true" signature="61331:61342" ph="..." />
+                <marker date="1527127122818" expanded="true" signature="62978:62989" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="xetduyetnghiemthu" pinned="false" current-in-tab="false">
+      <file leaf-file-name="xetduyetnghiemthu" pinned="false" current-in-tab="true">
         <entry file="das://table:/f683da9/7100f002-45e7-4ecd-b4f9-feb8543b2f12/nckh.xetduyetnghiemthu">
           <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
             <state>
@@ -380,7 +372,7 @@
       <workItem from="1526689410112" duration="6758000" />
       <workItem from="1526866182682" duration="613000" />
       <workItem from="1526869273480" duration="1219000" />
-      <workItem from="1527122620753" duration="2489000" />
+      <workItem from="1527122620753" duration="3038000" />
     </task>
     <task id="LOCAL-00001" summary="Start up">
       <created>1525824037964</created>
@@ -400,7 +392,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="110578000" />
+    <option name="totallyTimeSpent" value="111127000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="32" width="1936" height="1056" extended-state="6" />
@@ -837,17 +829,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="das://table:/f683da9/7100f002-45e7-4ecd-b4f9-feb8543b2f12/nckh.xetduyetnghiemthu">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/admin/view/v_xem_de_xuat.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="332">
-          <caret line="589" column="103" lean-forward="true" selection-start-line="589" selection-start-column="103" selection-end-line="589" selection-end-column="103" />
+        <state relative-caret-position="108">
+          <caret line="4" column="45" lean-forward="false" selection-start-line="4" selection-start-column="45" selection-end-line="4" selection-end-column="45" />
           <folding>
             <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
             <element signature="e#767#773#0#HTML" expanded="true" />
@@ -897,29 +882,36 @@
             <element signature="n#style#0;n#table#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#8;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#tr#0;n#table#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#8;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#th#4;n#tr#0;n#table#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#8;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="e#48442#48448#0#HTML" expanded="true" />
-            <element signature="e#50505#50511#0#HTML" expanded="true" />
+            <element signature="e#48631#48637#0#HTML" expanded="true" />
+            <element signature="e#50694#50700#0#HTML" expanded="true" />
             <element signature="n#style#0;n#input#0;n#div#2;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#8;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#input#1;n#div#2;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#8;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#table#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#8;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#tr#0;n#table#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#8;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="e#53290#53296#0#HTML" expanded="true" />
-            <element signature="e#54120#54126#0#HTML" expanded="true" />
-            <marker date="1527126302777" expanded="true" signature="33411:33625" ph="..." />
-            <marker date="1527126302777" expanded="true" signature="34359:34370" ph="..." />
-            <marker date="1527126302777" expanded="true" signature="37399:37613" ph="..." />
-            <marker date="1527126302777" expanded="true" signature="38480:38491" ph="..." />
-            <marker date="1527126302777" expanded="true" signature="40955:40971" ph="..." />
-            <marker date="1527126302777" expanded="true" signature="46466:46483" ph="..." />
-            <marker date="1527126302777" expanded="true" signature="46484:46819" ph="..." />
-            <marker date="1527126302777" expanded="true" signature="46484:47740" ph="..." />
-            <marker date="1527126302777" expanded="true" signature="47938:47949" ph="..." />
-            <marker date="1527126302777" expanded="true" signature="50778:50794" ph="..." />
-            <marker date="1527126302777" expanded="true" signature="52600:52617" ph="..." />
-            <marker date="1527126302777" expanded="true" signature="59301:59312" ph="..." />
-            <marker date="1527126302777" expanded="true" signature="61142:61153" ph="..." />
-            <marker date="1527126302777" expanded="true" signature="62789:62800" ph="..." />
+            <element signature="e#53479#53485#0#HTML" expanded="true" />
+            <element signature="e#54309#54315#0#HTML" expanded="true" />
+            <marker date="1527127122818" expanded="true" signature="33411:33625" ph="..." />
+            <marker date="1527127122818" expanded="true" signature="34359:34370" ph="..." />
+            <marker date="1527127122818" expanded="true" signature="37399:37613" ph="..." />
+            <marker date="1527127122818" expanded="true" signature="38480:38491" ph="..." />
+            <marker date="1527127122818" expanded="true" signature="40955:40971" ph="..." />
+            <marker date="1527127122818" expanded="true" signature="46466:46483" ph="..." />
+            <marker date="1527127122818" expanded="true" signature="46484:46819" ph="..." />
+            <marker date="1527127122818" expanded="true" signature="46484:47929" ph="..." />
+            <marker date="1527127122818" expanded="true" signature="48127:48138" ph="..." />
+            <marker date="1527127122818" expanded="true" signature="50967:50983" ph="..." />
+            <marker date="1527127122818" expanded="true" signature="52789:52806" ph="..." />
+            <marker date="1527127122818" expanded="true" signature="59490:59501" ph="..." />
+            <marker date="1527127122818" expanded="true" signature="61331:61342" ph="..." />
+            <marker date="1527127122818" expanded="true" signature="62978:62989" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://table:/f683da9/7100f002-45e7-4ecd-b4f9-feb8543b2f12/nckh.xetduyetnghiemthu">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
         </state>
       </provider>
     </entry>

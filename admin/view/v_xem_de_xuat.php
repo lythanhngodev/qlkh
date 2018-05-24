@@ -2,7 +2,7 @@
 if (!isset($_SESSION["token"])) {include_once ("../../loi404.html");exit();}
 $nhiemvu_btc = ['Chủ tịch HĐ', 'Trưởng BTC', 'Phó BTC', 'UV TT', 'Uỷ viên', 'Thư ký'];
 $nhiemvu_hd_duyet = ['Uỷ viên'];
-$nhiemvu_nghiemthu = ['Chủ tịch HĐ', 'Uỷ viên', 'Thư ký'];
+$nhiemvu_nghiemthu = ['Chủ tịch HĐ', 'Ủy viên', 'Thư ký'];
 ?>
 <?php $trangthaidt = $detai['TRANGTHAI']; ?>
 <div class="card cach background-container">
@@ -588,8 +588,11 @@ $nhiemvu_nghiemthu = ['Chủ tịch HĐ', 'Uỷ viên', 'Thư ký'];
                                                                         <td class='an'>".$row['IDND']."</td>
                                                                         <td><select class='form-control'>";
                                                                 foreach ($nhiemvu_nghiemthu as $value){
-                                                                    if ($value==$row['NHIEMVU'])
+                                                                    echo "So sánh: ".$value." với ".$row['NHIEMVU'];
+                                                                    if ($value==$row['NHIEMVU']){
+
                                                                         echo "<option value='".$value."' selected >".$value."</option>";
+                                                                    }
                                                                     else
                                                                         echo "<option value='".$value."' >".$value."</option>";
                                                                 }
@@ -931,7 +934,10 @@ $nhiemvu_nghiemthu = ['Chủ tịch HĐ', 'Uỷ viên', 'Thư ký'];
                 var cols = [];
                 var dem = 1;
                 $(this).find('td:not(:last)').each(function(i, col) {
-                    if(dem == 3 || dem==4){
+                    if(dem == 3){
+                        cols.push($(this).find('select').val());
+                    }else
+                    if(dem == 4){
                         cols.push($(this).find('textarea').val());
                     }
                     else{
