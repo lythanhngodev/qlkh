@@ -4,11 +4,17 @@
 			case 'xemtin':
 				include_once("control/c_xem_tin.php");
 				break;
+			case 'xemdetai':
+				include_once("control/c_xem_de_tai.php");
+				break;
+			case 'xembaibao':
+				include_once("control/c_xem_bai_bao.php");
+				break;
 			case 'bieumau':
 				include_once("control/c_bieu_mau.php");
 				break;
-			case 'detainghiemthu':
-				include_once("control/c_de_tai_nghiem_thu.php");
+			case 'nckhdacongbo':
+				include_once("control/c_nckh_da_cong_bo.php");
 				break;
 			case 'baokhoahoc':
 				include_once("control/c_bao_khoa_hoc.php");

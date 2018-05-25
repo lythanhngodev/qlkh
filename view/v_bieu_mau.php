@@ -34,7 +34,7 @@
         <div class="chitietlienhe">
           <h3>Thông tin liên hệ</h3>
           <div style="margin-bottom: 3px">
-            <label>Hotline:</label><span class="t_hotline">&nbsp;0913.847.123</span>
+            <label>Hotline:</label><span class="t_hotline">&nbsp;+84 2703 862457</span>
           </div>
           <div>
             <label>Email:</label>&nbsp;<a href="#" class="gr"><strong>nckh@vlute.edu.vn</strong></a>
