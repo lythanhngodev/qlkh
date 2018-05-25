@@ -1,50 +1,37 @@
 <div id="cottrai">
     <!-- CÁC CÔNG TRÌNH KHOA HỌC ĐÃ CÔNG BỐ -->
     <div class="tieudechinh">
-        <div class="tentieudechinh" style="width:fit-content">
-            <img src="images/chi-muc.png" width="27" height="27" align="absmiddle"><a>Bài báo khoa học</a>
+        <div class="tentieudechinh" style="width: 235px;">
+            <img src="images/chi-muc.png" width="27" height="27" align="absmiddle"><a>Kết quả tìm kiếm: <?php echo $tu; ?></a>
         </div>
         <div class="clear"></div>
         <div class="line"></div>
     </div>
     <div class="tin">
-          <?php 
-          $sotin = 8;
-          $bd=1;
-          if (isset($_GET['trang']) && !empty($_GET['trang'])) {
-            $bd = intval($_GET['trang']);
-            if ($bd<1) {
-              $bd=1;
-            }
-          }
-          $tu = ($bd-1)*$sotin;
-          $bao = lay_bao_khoa_hoc($tu,$sotin);
-          while ($row = mysqli_fetch_assoc($bao)) { ?>
-          <div class="noidungtin">
+      <?php $dem = 0;
+      if (!empty($tu)) {
+          while ($row = mysqli_fetch_assoc($detai)) { ?>
+           <div class="noidungtin">
               <h3>
-                  <a href="?p=xembaibao&id=<?php echo $row['IDBAO'] ?>" title="<?php echo $row['TENBAO'] ?>"><?php echo $row['TENBAO'] ?></a>
+                  <a href="?p=xemdetai&id=<?php echo $row['IDDT'] ?>" title="<?php echo $row['TENDETAI'] ?>"><?php echo $row['TENDETAI'] ?></a>
               </h3>
               <div class="thongtinchung">
                   <ul>
-                     <li>Tác giả : <?php echo lay_ten_tac_gia_bao_khoa_hoc($row['IDBAO']); ?></li> 
-                     <li>Nhà xuất bản/ Tạp chí: <?php echo $row['TAPCHI'] ?></li> 
-                     <li>Năm: <?php echo $row['NAMXUATBAN'] ?></li> 
+                     <li>Thành viên : <?php echo $row['HOTEN'] ?></li> 
+                     <li>Thời gian nghiệm thu: <?php echo date("d-m-Y", strtotime($row['THOIGIANNGHIEMTHU'])); ?></li>
+                     <li>Lĩnh vực nghiên cứu: <?php $lv = linh_vuc_de_tai($row['IDDT']);
+                     while ($rlv = mysqli_fetch_assoc($lv)) {
+                         echo $rlv['TENLV'].", ";
+                     }
+                      ?></li>  
                   </ul>
               </div>
               <div class="clear"></div>
          </div>
-           <?php } ?>
-    <center>
-      <ul class="phantrang">
-        <?php $sobaibao = dem_bao_khoa_hoc();
-        if ($sobaibao!=0) {
-          for ($i=1; $i < $sobaibao/$sotin; $i++) { 
-            echo "<li><a href='?p=baokhoahoc&trang=".$i."'>".$i."</a></li>";
-          }
-        }
-        ?>
-      </ul>
-    </center>
+           <?php $dem++; } if ($dem == 0) {
+             echo "Không đề tài nào được tìm khấy!";
+           }
+      } else echo "Không đề tài nào được tìm khấy!"; ?>
     </div>
 
 </div>
@@ -96,7 +83,7 @@
 </div>
 <script type="text/javascript">
     $("document").ready(function() {
-        $('#baokhoahoc').addClass('current');
-        document.title = "Bài báo khoa học | Phòng nghiên cứu khoa học & Hợp tác quốc tế VLUTE";
+        $('#trangchu').addClass('current');
+        document.title = "Công trình NCKH đã công bố | Phòng nghiên cứu khoa học & Hợp tác quốc tế VLUTE";
     });
 </script> 

@@ -16,6 +16,9 @@
 			case 'nckhdacongbo':
 				include_once("control/c_nckh_da_cong_bo.php");
 				break;
+			case 'nckhdexuatmoi':
+				include_once("control/c_nckh_de_xuat_moi.php");
+				break;
 			case 'baokhoahoc':
 				include_once("control/c_bao_khoa_hoc.php");
 				break;
@@ -24,6 +27,9 @@
 				break;
 			case 'hoptacquocte':
 				include_once("control/c_hop_tac_quoc_te.php");
+				break;
+			case 'timkiem':
+				include_once("control/c_tim_kiem.php");
 				break;
 		}
 	}

@@ -11,7 +11,7 @@
 	function chi_tiet_bai_bao($idbb){
 		$ketnoi = new clsKetnoi();
 		$conn = $ketnoi->ketnoi();
-		$query = "SELECT b.IDBAO, b.TENBAO, b.TAPCHI, b.NAMXUATBAN FROM baokhoahoc b WHERE ANHIEN = b'1' AND IDBAO='$idbb';";
+		$query = "SELECT b.IDBAO, b.TENBAO, b.TAPCHI, b.NAMXUATBAN, b.CAPBAIBAO,b.TENQG,b.NOIDUNG FROM baokhoahoc b WHERE ANHIEN = b'1' AND IDBAO='$idbb';";
 		$result = mysqli_query($conn, $query);
 		mysqli_close($conn);
 		return $result;
@@ -22,8 +22,8 @@
 		$query = "SELECT nd.IDND, CONCAT(nd.HO,' ',nd.TEN) as HOTEN,nd.NGAYSINH FROM `nguoidung_baibao` tgbb, nguoidung nd WHERE nd.IDND = tgbb.IDND AND tgbb.IDBAO = '$idbb'";
 		$result = mysqli_query($conn, $query);
 		$array = null;
-		while ($row = mysqli_fetch_array($result)) {
-			$array[] = null;
+		while ($row = mysqli_fetch_row($result)) {
+			$array[] = $row;
 		}
 		mysqli_close($conn);
 		return $array;

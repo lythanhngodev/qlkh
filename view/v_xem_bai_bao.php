@@ -32,69 +32,43 @@
             <tr>
                 <th>Tác giả</th>
                 <td><?php $b = lay_ten_tac_gia_bai_viet($idbb);
-                print_r($b);
                     switch (count($b)) {
                         case 0:
                             echo "Không";
                             break;
                         case  1:
-                            echo $b[0][0];
+                            echo $b[0][1];
                             break;
                         default:
                             $str = "";
                             for ($i=0; $i < count($b)-1; $i++) { 
-                                $str.=$b[$i][0].", ";
+                                $str.=$b[$i][1].", ";
                             }
-                            $str.=end($b)[0];
+                            $str.=end($b)[1];
                             echo $str;
                             break;
                     }
                  ?></td>
             </tr>
             <tr>
-                <th>Chủ nhiệm đề tài</th>
-                <td><?php echo lay_ten_chu_nhiem_de_tai($iddt); ?></td>
-            </tr>
-            <?php $str="";
-                $tv = thanh_vien_de_tai($iddt);
-                switch (count($tv)) {
-                    case 0:
-                        $str = "Không";
-                        break;
-                    case 1:
-                        $str = "<b>".$tv[0]['HOTEN']."</b>";
-                        break;
-                    default:
-                        for ($ii=0; $ii < count($tv) - 1; $ii++) { 
-                            $str.="<b>".$tv[$ii]['HOTEN']."</b>, ";
-                        }
-                        $str.="<b>".end($tv)['HOTEN']."</b>";
-                        break;
-                }
-             ?>
-            <tr>
-                <th>Thành viên đề tài</th>
-                <td><?php echo $str; ?></td>
+                <th>Tạp chí, Hội nghị, Tổ chức, KH & CN công bố kết quả NC</th>
+                <td><?php echo $bb['TAPCHI'] ?></td>
             </tr>
             <tr>
-                <th>Mục tiêu</th>
-                <td><?php echo $dt['MUCTIEU'] ?></td>
+                <th>Quốc gia</th>
+                <td><?php echo $bb['TENQG'] ?></td>
             </tr>
             <tr>
-                <th>PP nghiên cứu</th>
-                <td><?php echo $dt['PHUONGPHAPKYTHUAT'] ?></td>
+                <th>Cấp bài báo</th>
+                <td><?php echo $bb['CAPBAIBAO'] ?></td>
             </tr>
             <tr>
-                <th>Kết quả & Địa chỉ ứng dụng</th>
-                <td><?php echo $dt['KETQUA'] ?></td>
+                <th>Năm xuất bản</th>
+                <td><?php echo date('m - Y', strtotime($bb['NAMXUATBAN'])) ?></td>
             </tr>
             <tr>
-                <th>Tháng năm bắt đầu</th>
-                <td><?php echo date('m-Y', strtotime($dt['THANGNAMBD'])) ?></td>
-            </tr>
-            <tr>
-                <th>Tháng năm kết thúc</th>
-                <td><?php echo date('m-Y', strtotime($dt['THANGNAMKT'])) ?></td>
+                <th>Nội dung sơ lược</th>
+                <td><?php echo $bb['NOIDUNG'] ?></td>
             </tr>
         </table>
     </div>
@@ -165,7 +139,7 @@
 </div>
 <script type="text/javascript">
     $("document").ready(function() {
-        $('#nckh').addClass('current');
-        document.title = "<?php echo $dt['TENDETAI'] ?> | Phòng nghiên cứu khoa học & Hợp tác quốc tế VLUTE";
+        $('#baokhoahoc').addClass('current');
+        document.title = "<?php echo $bb['TENBAO'] ?> | Phòng nghiên cứu khoa học & Hợp tác quốc tế VLUTE";
     });
 </script> 

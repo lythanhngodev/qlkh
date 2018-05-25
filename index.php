@@ -52,8 +52,7 @@
 					<li id="nckh">
 						<a href="#" class="sf-with-ul">Hoạt động NCKH</a>
 						<ul style="display: none; visibility: hidden;">
-							<li><a href="?p=dexuatmoi">Đề xuất NCKH</a></li>
-							<li class=" "><a href="#">Đề tài - Dự án NCKH</a></li>
+							<li><a href="?p=nckhdexuatmoi">Đề xuất NCKH</a></li>
 							<li><a href="?p=detainghiemthu">Công trình khoa học đã công bố</a></li>
 						</ul>
 					</li>
@@ -97,12 +96,12 @@
 		</div>
 		<div id="sr_bg">		
 			<div align="center" class="sr">
-				<form action="#" method="post" id="searchForm">
+				<form action="?p=timkiem" method="POST" id="searchForm">
 					<strong>Nhập từ khóa tìm kiếm</strong> 
-					<input type="text" name="filterKeyword" id="searchKeyword" class="txtinput">
-					<select class="sl" id="searchType">
-						<option value="">Đề tài NCKH</option>
-						<option value="">Đề xuất NCKH</option>
+					<input type="text" name="tu" id="searchKeyword" class="txtinput">
+					<select class="sl" id="searchType" name="loai">
+						<option value="1">Đề tài NCKH đã công bố</option>
+						<option value="2">Đề xuất NCKH</option>
 					</select>
 					<input type="submit" value="Tìm kiếm" class="btn_">
 				</form>

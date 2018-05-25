@@ -1,8 +1,8 @@
 <div id="cottrai">
     <!-- CÁC CÔNG TRÌNH KHOA HỌC ĐÃ CÔNG BỐ -->
     <div class="tieudechinh">
-        <div class="tentieudechinh" style="width:fit-content">
-            <img src="images/chi-muc.png" width="27" height="27" align="absmiddle"><a>Bài báo khoa học</a>
+        <div class="tentieudechinh" style="width: 235px;">
+            <img src="images/chi-muc.png" width="27" height="27" align="absmiddle"><a>Công trình NCKH đã công bố</a>
         </div>
         <div class="clear"></div>
         <div class="line"></div>
@@ -18,17 +18,21 @@
             }
           }
           $tu = ($bd-1)*$sotin;
-          $bao = lay_bao_khoa_hoc($tu,$sotin);
-          while ($row = mysqli_fetch_assoc($bao)) { ?>
-          <div class="noidungtin">
+          $nghiemthu = lay_de_tai_da_cong_bo($tu,$sotin);
+          while ($row = mysqli_fetch_assoc($nghiemthu)) { ?>
+           <div class="noidungtin">
               <h3>
-                  <a href="?p=xembaibao&id=<?php echo $row['IDBAO'] ?>" title="<?php echo $row['TENBAO'] ?>"><?php echo $row['TENBAO'] ?></a>
+                  <a href="?p=xemdetai&id=<?php echo $row['IDDT'] ?>" title="<?php echo $row['TENDETAI'] ?>"><?php echo $row['TENDETAI'] ?></a>
               </h3>
               <div class="thongtinchung">
                   <ul>
-                     <li>Tác giả : <?php echo lay_ten_tac_gia_bao_khoa_hoc($row['IDBAO']); ?></li> 
-                     <li>Nhà xuất bản/ Tạp chí: <?php echo $row['TAPCHI'] ?></li> 
-                     <li>Năm: <?php echo $row['NAMXUATBAN'] ?></li> 
+                     <li>Thành viên : <?php echo $row['HOTEN'] ?></li> 
+                     <li>Thời gian nghiệm thu: <?php echo date("d-m-Y", strtotime($row['THOIGIANNGHIEMTHU'])); ?></li>
+                     <li>Lĩnh vực nghiên cứu: <?php $lv = linh_vuc_de_tai($row['IDDT']);
+                     while ($rlv = mysqli_fetch_assoc($lv)) {
+                         echo $rlv['TENLV'].", ";
+                     }
+                      ?></li>  
                   </ul>
               </div>
               <div class="clear"></div>
@@ -36,10 +40,10 @@
            <?php } ?>
     <center>
       <ul class="phantrang">
-        <?php $sobaibao = dem_bao_khoa_hoc();
-        if ($sobaibao!=0) {
-          for ($i=1; $i < $sobaibao/$sotin; $i++) { 
-            echo "<li><a href='?p=baokhoahoc&trang=".$i."'>".$i."</a></li>";
+        <?php $sodetai = dem_de_tai_da_cong_bo();
+        if ($sodetai!=0) {
+          for ($i=1; $i < $sodetai/$sotin; $i++) { 
+            echo "<li><a href='?p=detainghiemthu&trang=".$i."'>".$i."</a></li>";
           }
         }
         ?>
@@ -96,7 +100,7 @@
 </div>
 <script type="text/javascript">
     $("document").ready(function() {
-        $('#baokhoahoc').addClass('current');
-        document.title = "Bài báo khoa học | Phòng nghiên cứu khoa học & Hợp tác quốc tế VLUTE";
+        $('#nckh').addClass('current');
+        document.title = "Đề xuất mới nghiên cứu khoa học | Phòng nghiên cứu khoa học & Hợp tác quốc tế VLUTE";
     });
 </script> 
