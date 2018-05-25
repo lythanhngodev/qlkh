@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e784096a-f6cb-467c-8cbe-b1eae1f3bf23" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/admin/export/TK Äá»€ TÃ€I NCKH ÄÃƒ NGHIá»†M THU.xlsx" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/admin/export/export_tat_ca_de_tai_nghiem_thu_theo_thoi_gian.php" afterPath="$PROJECT_DIR$/admin/export/export_tat_ca_de_tai_nghiem_thu_theo_thoi_gian.php" />
-      <change beforePath="$PROJECT_DIR$/admin/word/phieu_danh_gia_nghiem_thu.php" afterPath="$PROJECT_DIR$/admin/word/phieu_danh_gia_nghiem_thu.php" />
-      <change beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
-      <change beforePath="$PROJECT_DIR$/view/v_nckh_de_xuat_moi.php" afterPath="$PROJECT_DIR$/view/v_nckh_de_xuat_moi.php" />
-    </list>
+    <list default="true" id="e784096a-f6cb-467c-8cbe-b1eae1f3bf23" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -203,7 +197,7 @@
       <path value="C:\wamp64\bin\php" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="953" />
     <option name="y" value="40" />
     <option name="width" value="974" />
@@ -345,7 +339,7 @@
       <workItem from="1526866182682" duration="613000" />
       <workItem from="1526869273480" duration="1219000" />
       <workItem from="1527122620753" duration="9878000" />
-      <workItem from="1527214784982" duration="1646000" />
+      <workItem from="1527214784982" duration="2240000" />
     </task>
     <task id="LOCAL-00001" summary="Start up">
       <created>1525824037964</created>
@@ -365,10 +359,10 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="119613000" />
+    <option name="totallyTimeSpent" value="120207000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="32" width="1936" height="1056" extended-state="7" />
+    <frame x="-8" y="32" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
