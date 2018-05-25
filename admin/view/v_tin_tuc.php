@@ -23,7 +23,7 @@
                     <?php $stt=1; while ($row = mysqli_fetch_assoc($tintuc)) { ?>
                     <tr>
                         <th class="giua"><?php echo $stt; ?></th>
-                        <td><a href="?p=suabaibao&id=<?php echo $row['IDBV'] ?>"><?php echo $row['TENBV']; ?></a></td>
+                        <td><a href="?p=suabaiviet&id=<?php echo $row['IDBV'] ?>"><?php echo $row['TENBV']; ?></a></td>
                         <td><?php echo $row['TENBV']; ?></td>
                         <td class="giua"><?php echo $row['NGAYDANG']; ?></td>
                         <td class="giua">
