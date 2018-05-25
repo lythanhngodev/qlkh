@@ -44,6 +44,13 @@ while ($row = mysqli_fetch_row($esql_stqd)) {
             <input type="text" name="kt" hidden="hidden" value="<?php echo $kt ?>">
             <button type="submit" class="btn btn-warning"><i class='far fa-file-excel'></i>&ensp;Xuất excel</button>
         </form>
+        <br>
+        <form action="export/word_tat_ca_de_tai_nghiem_thu_theo_thoi_gian.php" target="_blank" method="post">
+            <input type="text" name="alldtnt" hidden="hidden" value="<?php echo $_POST['_token']; ?>">
+            <input type="text" name="bd" hidden="hidden" value="<?php echo $bd ?>">
+            <input type="text" name="kt" hidden="hidden" value="<?php echo $kt ?>">
+            <button type="submit" class="btn btn-warning"><i class='far fa-file-word'></i>&ensp;Xuất word</button>
+        </form>
     </div>
     <div class="card-body">
         <?php $stt_cap=1; while ($cap = mysqli_fetch_assoc($qcapsql)) { ?>

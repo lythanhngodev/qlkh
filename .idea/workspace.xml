@@ -2,12 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e784096a-f6cb-467c-8cbe-b1eae1f3bf23" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/admin/export/TK Äá»€ TÃ€I NCKH ÄÃƒ NGHIá»†M THU.xlsx" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/admin/export/export_tat_ca_de_tai_nghiem_thu_theo_thoi_gian.php" afterPath="$PROJECT_DIR$/admin/export/export_tat_ca_de_tai_nghiem_thu_theo_thoi_gian.php" />
+      <change beforePath="$PROJECT_DIR$/admin/word/phieu_danh_gia_nghiem_thu.php" afterPath="$PROJECT_DIR$/admin/word/phieu_danh_gia_nghiem_thu.php" />
       <change beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
-      <change beforePath="$PROJECT_DIR$/model/m_xem_bai_bao.php" afterPath="$PROJECT_DIR$/model/m_xem_bai_bao.php" />
-      <change beforePath="$PROJECT_DIR$/public_c.php" afterPath="$PROJECT_DIR$/public_c.php" />
-      <change beforePath="$PROJECT_DIR$/view/v_bao_khoa_hoc.php" afterPath="$PROJECT_DIR$/view/v_bao_khoa_hoc.php" />
-      <change beforePath="$PROJECT_DIR$/view/v_xem_bai_bao.php" afterPath="$PROJECT_DIR$/view/v_xem_bai_bao.php" />
+      <change beforePath="$PROJECT_DIR$/view/v_nckh_de_xuat_moi.php" afterPath="$PROJECT_DIR$/view/v_nckh_de_xuat_moi.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -46,18 +45,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="v_xem_de_xuat.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/admin/view/v_xem_de_xuat.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="4" column="45" lean-forward="false" selection-start-line="4" selection-start-column="45" selection-end-line="4" selection-end-column="45" />
-              <folding>
-                <marker date="1527171441348" expanded="true" signature="77851:77884" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="xetduyetnghiemthu" pinned="false" current-in-tab="false">
         <entry file="das://table:/f683da9/7100f002-45e7-4ecd-b4f9-feb8543b2f12/nckh.xetduyetnghiemthu">
           <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
@@ -112,14 +99,23 @@
         <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/7100f002-45e7-4ecd-b4f9-feb8543b2f12/console_15.sql">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="27">
-              <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+              <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="baibao_tukhoa" pinned="false" current-in-tab="true">
+      <file leaf-file-name="baibao_tukhoa" pinned="false" current-in-tab="false">
         <entry file="das://table:/f683da9/7100f002-45e7-4ecd-b4f9-feb8543b2f12/nckh.baibao_tukhoa">
+          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+            <state>
+              <filtering enabled="true" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="capdetai" pinned="false" current-in-tab="true">
+        <entry file="das://table:/f683da9/7100f002-45e7-4ecd-b4f9-feb8543b2f12/nckh.capdetai">
           <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
             <state>
               <filtering enabled="true" />
@@ -207,7 +203,7 @@
       <path value="C:\wamp64\bin\php" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="953" />
     <option name="y" value="40" />
     <option name="width" value="974" />
@@ -349,7 +345,7 @@
       <workItem from="1526866182682" duration="613000" />
       <workItem from="1526869273480" duration="1219000" />
       <workItem from="1527122620753" duration="9878000" />
-      <workItem from="1527214784982" duration="1044000" />
+      <workItem from="1527214784982" duration="1646000" />
     </task>
     <task id="LOCAL-00001" summary="Start up">
       <created>1525824037964</created>
@@ -369,10 +365,10 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="119011000" />
+    <option name="totallyTimeSpent" value="119613000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="32" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="32" width="1936" height="1056" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -436,13 +432,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/7100f002-45e7-4ecd-b4f9-feb8543b2f12/console_2.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="471">
-          <caret line="43" column="98" lean-forward="true" selection-start-line="43" selection-start-column="98" selection-end-line="43" selection-end-column="98" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/7100f002-45e7-4ecd-b4f9-feb8543b2f12/console_4.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="108">
@@ -791,7 +780,7 @@
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/7100f002-45e7-4ecd-b4f9-feb8543b2f12/console_15.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="27">
-          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -811,6 +800,13 @@
       </provider>
     </entry>
     <entry file="das://table:/f683da9/7100f002-45e7-4ecd-b4f9-feb8543b2f12/nckh.baibao_tukhoa">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://table:/f683da9/7100f002-45e7-4ecd-b4f9-feb8543b2f12/nckh.capdetai">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />

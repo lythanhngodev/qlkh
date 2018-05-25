@@ -53,7 +53,7 @@
 						<a href="#" class="sf-with-ul">Hoạt động NCKH</a>
 						<ul style="display: none; visibility: hidden;">
 							<li><a href="?p=nckhdexuatmoi">Đề xuất NCKH</a></li>
-							<li><a href="?p=detainghiemthu">Công trình khoa học đã công bố</a></li>
+							<li><a href="?p=nckhdacongbo">Công trình khoa học đã công bố</a></li>
 						</ul>
 					</li>
 					<li id="htqt">

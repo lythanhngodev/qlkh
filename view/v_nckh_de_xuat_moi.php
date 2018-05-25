@@ -1,8 +1,8 @@
 <div id="cottrai">
     <!-- CÁC CÔNG TRÌNH KHOA HỌC ĐÃ CÔNG BỐ -->
     <div class="tieudechinh">
-        <div class="tentieudechinh" style="width: 235px;">
-            <img src="images/chi-muc.png" width="27" height="27" align="absmiddle"><a>Công trình NCKH đã công bố</a>
+        <div class="tentieudechinh" style="width: 205px;">
+            <img src="images/chi-muc.png" width="27" height="27" align="absmiddle"><a>Đề xuất công trình NCKH</a>
         </div>
         <div class="clear"></div>
         <div class="line"></div>

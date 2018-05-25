@@ -61,7 +61,8 @@
             margin-bottom: 0001pt;
             mso-pagination:widow-orphan;
             font-size: 12.0 pt;
-            text-align: right;
+            text-align: center;
+            padding: 0 3cm; 
         }
         @page Section1{
             mso-footer:f1;
@@ -173,7 +174,7 @@
 		</div>
 	</div>
 	<div style='mso-element:footer' id="f1">
-    	<p class="MsoFooter">LLLLLLLLLLLLLLLL</p>
-</div>
+    	<p class="MsoFooter">(Ghi chú: Nếu tổng điểm < 55 điểm: đánh giá không đạt; từ 55 đến < 65 điểm: đánh giá đạt; từ 65 đến < 75 điểm: đánh giá khá; từ 75 đến < 95 điểm: đánh giá tốt; từ 95 đến 100 điểm: đánh giá xuất sắc)</p>
+	</div>
 </body>
 </html>
