@@ -23,11 +23,7 @@
     <div class="tin-con-phai">
         <table style="width: 100%;" border="1">
             <tr style="background: #1dadd0;color: #fff;">
-                <th colspan="2" style="text-align: left;padding: 0.5rem;">Thông tin chung</th>
-            </tr>
-            <tr>
-                <th>Tên đề tài</th>
-                <td><?php echo $dt['TENDETAI'] ?></td>
+                <th colspan="2" style="text-align: left;padding: 0.5rem;"><h3>Đề tài: <?php echo $dt['TENDETAI'] ?></h3></th>
             </tr>
             <tr>
                 <th>Cơ quan chủ trì</th>
