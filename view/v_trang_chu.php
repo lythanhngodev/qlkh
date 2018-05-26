@@ -18,7 +18,7 @@
             while ($row = mysqli_fetch_assoc($nghiemthu)) { ?>
              <div class="noidungtin">
                 <h3>
-                    <a href="?p=xemdetai&id=<?php echo $row['IDDT'] ?>" title="<?php echo $row['TENDETAI'] ?>"><?php echo $row['TENDETAI'] ?></a>
+                    <a href="xemdetai/<?php echo to_slug($row['TENDETAI']) ?>-<?php echo $row['IDDT'] ?>.ltn" title="<?php echo $row['TENDETAI'] ?>"><?php echo $row['TENDETAI'] ?></a>
                 </h3>
                 <div class="thongtinchung">
                     <ul>
@@ -88,7 +88,7 @@
                 <?php 
                 $tinmoi = lay_tin_moi();
                 while ($row = mysqli_fetch_assoc($tinmoi)) { ?>
-                <a href="?p=xemtin&id=<?php echo $row['IDBV']; ?>&tieude=<?php echo $row['LINKBV']; ?>">
+                <a href="xemtin/<?php echo $row['LINKBV']; ?>-<?php echo $row['IDBV']; ?>.ltn">
                     <div class="tincon">
                         <div class="hinhtin" style="background-image: url('<?php echo $row['HINHANH']; ?>');"></div>
                         <div class="tomtattin"><?php echo $row['TENBV'] ?></div>
@@ -100,13 +100,13 @@
     </div>
     <!-- HOẠT ĐỘNG HỢP TÁC QUỐC TẾ -->
     <div class="muccon">
-        <h3>HĐ hợp tác quốc tế</h3>
+        <h3>Hoạt động hợp tác quốc tế</h3>
         <div class="tieudemuccon">
             <div class="tinmoi">
                 <?php 
                 $htqt = lay_hoat_dong_hop_tac_quoc_te();
                 while ($row = mysqli_fetch_assoc($htqt)) { ?>
-                <a href="?p=xemtin&id=<?php echo $row['IDBV']; ?>&tieude=<?php echo $row['LINKBV']; ?>">
+                <a href="xemtin/<?php echo $row['LINKBV']; ?>-<?php echo $row['IDBV']; ?>.ltn">
                     <div class="tincon">
                         <div class="hinhtin" style="background-image: url('<?php echo $row['HINHANH']; ?>');"></div>
                         <div class="tomtattin"><?php echo $row['TENBV'] ?></div>

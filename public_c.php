@@ -8,6 +8,7 @@
 				include_once("control/c_xem_de_tai.php");
 				break;
 			case 'xembaibao':
+				// Chưa .htaccess
 				include_once("control/c_xem_bai_bao.php");
 				break;
 			case 'bieumau':

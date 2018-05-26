@@ -1,0 +1,11 @@
+RewriteEngine On
+ErrorDocument 404 "http://qlkh.vlute.edu.vn/loi404.html"
+RewriteRule "^xemtin/(.*)-(.*).ltn$" "?p=xemtin&id=$2&tieude=$1"
+RewriteRule "^xemdetai/(.*)-(.*).ltn$" "?p=xemdetai&id=$2&tieude=$1"
+RewriteRule "^baokhoahoc$" "?p=baokhoahoc"
+RewriteRule "^bieumau$" "?p=bieumau"
+RewriteRule "^nckhdacongbo$" "?p=nckhdacongbo"
+RewriteRule "^nckhdexuatmoi$" "?p=nckhdexuatmoi"
+RewriteRule "^chuyenmuc/(.*)-(.*)$" "?p=tintuc&id=$2&ten=$1"
+RewriteRule "^hoptacquocte/(.*)-(.*)$" "?p=hoptacquocte&id=$2&ten=$1"
+RewriteRule "^timkiem$" "?p=timkiem"

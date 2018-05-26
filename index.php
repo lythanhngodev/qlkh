@@ -54,8 +54,8 @@
 					<li id="nckh">
 						<a href="#" class="sf-with-ul">Hoạt động NCKH</a>
 						<ul style="display: none; visibility: hidden;">
-							<li><a href="?p=nckhdexuatmoi">Đề xuất NCKH</a></li>
-							<li><a href="?p=nckhdacongbo">Công trình khoa học đã công bố</a></li>
+							<li><a href="nckhdexuatmoi">Đề xuất NCKH</a></li>
+							<li><a href="nckhdacongbo">Công trình khoa học đã công bố</a></li>
 						</ul>
 					</li>
 					<li id="htqt">
@@ -67,16 +67,16 @@
 							$sql = "SELECT DISTINCT * from chuyenmuc where LOAICHUYENMUC = N'hoptacquocte';";
 							$q_sql = mysqli_query($conn,$sql);
 							while ($row = mysqli_fetch_assoc($q_sql)) {
-								echo "<li><a href='?p=hoptacquocte&id=".$row['IDCM']."&ten=".$row['LINKCM']."'>".$row['TENCM']."</a></li>";
+								echo "<li><a href='hoptacquocte/".$row['LINKCM']."-".$row['IDCM']."'>".$row['TENCM']."</a></li>";
 							} 
 							mysqli_close($conn);
 							 ?>
 						</ul>
 					</li>
 					<li id="baokhoahoc">
-						<a href="?p=baokhoahoc">Báo khoa học</a>
+						<a href="baokhoahoc">Báo khoa học</a>
 					</li>
-					<li id="bieumau"><a href="?p=bieumau">Văn bản - Biểu mẫu</a></li>
+					<li id="bieumau"><a href="bieumau">Văn bản - Biểu mẫu</a></li>
 					<li id="tintuc">
 						<a href="#" class="sf-with-ul">Tin tức</a>
 						<ul style="display: none; visibility: hidden;">
@@ -86,7 +86,7 @@
 							$sql = "SELECT DISTINCT * from chuyenmuc where LOAICHUYENMUC = N'tintuc';";
 							$q_sql = mysqli_query($conn,$sql);
 							while ($row = mysqli_fetch_assoc($q_sql)) {
-								echo "<li><a href='?p=tintuc&id=".$row['IDCM']."&ten=".$row['LINKCM']."'>".$row['TENCM']."</a></li>";
+								echo "<li><a href='chuyenmuc/".$row['LINKCM']."-".$row['IDCM']."'>".$row['TENCM']."</a></li>";
 							} 
 							mysqli_close($conn);
 							 ?>
@@ -98,7 +98,7 @@
 		</div>
 		<div id="sr_bg">		
 			<div align="center" class="sr">
-				<form action="?p=timkiem" method="POST" id="searchForm">
+				<form action="timkiem" method="POST" id="searchForm">
 					<strong>Nhập từ khóa tìm kiếm</strong> 
 					<input type="text" name="tu" id="searchKeyword" class="txtinput">
 					<select class="sl" id="searchType" name="loai">

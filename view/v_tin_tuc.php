@@ -1,11 +1,3 @@
-<?php
-/**
- * Created by PhpStorm.
- * User: Ly Thanh Ngo
- * Date: 15/05/2018
- * Time: 8:28 AM
- */
-?>
     <div class="tieudechinh">
         <div class="tentieudechinh" style="width: fit-content;">
             <img src="images/chi-muc.png" width="27" height="27" align="absmiddle"><a><?php echo ten_chuyen_muc($id); ?></a>
@@ -20,7 +12,7 @@
         echo "Chuyên mục chưa có bài viết";
     }else{ 
         while ($row = mysqli_fetch_assoc($tin)){ ?>
-        <a href="?p=xemtin&id=<?php echo $row['IDBV']?>">
+        <a href="xemtin/<?php echo $row['LINKBV']; ?>-<?php echo $row['IDBV']; ?>.ltn">
             <div class="tin-con-phai">
                 <div class="hinh-anh-tin-con-phai" style="background-image: url('<?php echo $row['HINHANH'] ?>');"></div>
                 <div class="tin-con-phai-phai">
@@ -56,7 +48,7 @@
                 <?php 
                 $tinmoi = lay_tin_moi();
                 while ($row = mysqli_fetch_assoc($tinmoi)) { ?>
-                <a href="?p=xemtin&id=<?php echo $row['IDBV']; ?>&tieude=<?php echo $row['TENBV']; ?>">
+                <a href="xemtin/<?php echo $row['LINKBV']; ?>-<?php echo $row['IDBV']; ?>.ltn">
                     <div class="tincon">
                         <div class="hinhtin" style="background-image: url('<?php echo $row['HINHANH']; ?>');"></div>
                         <div class="tomtattin"><?php echo $row['TENBV'] ?></div>
@@ -74,7 +66,7 @@
                 <?php 
                 $htqt = lay_hoat_dong_hop_tac_quoc_te();
                 while ($row = mysqli_fetch_assoc($htqt)) { ?>
-                <a href="?p=xemtin&id=<?php echo $row['IDBV']; ?>&tieude=<?php echo $row['LINKBV']; ?>">
+                <a href="xemtin/<?php echo $row['LINKBV']; ?>-<?php echo $row['IDBV']; ?>.ltn">
                     <div class="tincon">
                         <div class="hinhtin" style="background-image: url('<?php echo $row['HINHANH']; ?>');"></div>
                         <div class="tomtattin"><?php echo $row['TENBV'] ?></div>

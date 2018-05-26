@@ -20,7 +20,7 @@
         echo "Chuyên mục chưa có bài viết";
     }else{ 
         while ($row = mysqli_fetch_assoc($tin)){ ?>
-        <a href="?p=xemtin&id=<?php echo $row['IDBV']?>">
+        <a href="xemtin/<?php echo $row['LINKBV']; ?>-<?php echo $row['IDBV']; ?>.ltn">
             <div class="tin-con-phai">
                 <div class="hinh-anh-tin-con-phai" style="background-image: url('<?php echo $row['HINHANH'] ?>');"></div>
                 <div class="tin-con-phai-phai">
