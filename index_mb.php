@@ -28,7 +28,7 @@
 </script>
 <div>
   <div style="width: 100%;margin: 0 auto;position: relative;">
-    <img src="images/header_vlute.png" style="width: 100%;" />
+    <img src="images/header_vlute_mb.jpg" style="width: 100%;" />
   </div>
 </div>
 <nav class="navbar navbar-lg navbar-light">
