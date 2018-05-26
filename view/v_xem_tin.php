@@ -87,8 +87,12 @@
     </div>
 </div>
 <script type="text/javascript">
-    $("document").ready(function() {
+    $(document).ready(function() {
         $('#tintuc').addClass('current');
-        document.title = "<?php echo $bv['TENBV'] ?> | Phòng nghiên cứu khoa học & Hợp tác quốc tế VLUTE";
     });
 </script> 
+<script type="text/javascript">
+    $(document).ready(function() {
+        document.title = "<?php echo addslashes($bv['TENBV']) ?> | Phòng nghiên cứu khoa học & Hợp tác quốc tế VLUTE";
+    });
+</script>
