@@ -13,7 +13,7 @@
     <img src="images/header_vlute_mb.jpg" style="width: 100%;" />
   </div>
 </div>
-<nav class="navbar navbar-lg navbar-light">
+<nav class="navbar navbar-lg navbar-dark bg-primary">
   <a class="navbar-brand" href="#">Menu</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
