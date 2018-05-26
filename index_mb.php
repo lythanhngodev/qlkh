@@ -25,11 +25,11 @@
      fjs.parentNode.insertBefore(js, fjs);
    }(document, 'script', 'facebook-jssdk'));
 </script>
-<div class="header">
+<!--<div class="header">
   <div style="width: 100%;margin: 0 auto;position: relative;">
     <img src="images/header_vlute.png" style="width: 100%;" />
   </div>
-</div>
+</div>-->
 <nav class="navbar navbar-light bg-light">
   <a class="navbar-brand" href="#">Menu</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
