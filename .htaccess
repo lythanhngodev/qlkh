@@ -2,6 +2,7 @@ RewriteEngine On
 ErrorDocument 404 http://qlkh.vlute.edu.vn/loi404.html
 RewriteRule ^xemtin/(.*)-(.*).ltn$ ?p=xemtin&id=$2&tieude=$1
 RewriteRule ^xemdetai/(.*)-(.*).ltn$ ?p=xemdetai&id=$2&tieude=$1
+RewriteRule ^xembaibao/(.*)-(.*).ltn$ ?p=xembaibao&id=$2&tieude=$1
 RewriteRule ^baokhoahoc$ ?p=baokhoahoc
 RewriteRule ^bieumau$ ?p=bieumau
 RewriteRule ^nckhdacongbo$ ?p=nckhdacongbo

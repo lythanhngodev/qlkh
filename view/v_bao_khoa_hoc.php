@@ -22,7 +22,7 @@
           while ($row = mysqli_fetch_assoc($bao)) { ?>
           <div class="noidungtin">
               <h3>
-                  <a href="?p=xembaibao&id=<?php echo $row['IDBAO'] ?>" title="<?php echo $row['TENBAO'] ?>"><?php echo $row['TENBAO'] ?></a>
+                  <a href="xembaibao/<?php echo to_slug($row['TENBAO']) ?>-<?php echo $row['IDBAO'] ?>.ltn" title="<?php echo $row['TENBAO'] ?>"><?php echo $row['TENBAO'] ?></a>
               </h3>
               <div class="thongtinchung">
                   <ul>
