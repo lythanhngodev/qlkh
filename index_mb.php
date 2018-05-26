@@ -3,9 +3,9 @@
 <html>
 <head>
 	<meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 	<?php include_once "header.php" ?>
-	<base href="<?php echo $qlkh['HOSTGOC'] ?>" /><script defer src="fontawesome/svg-with-js/js/fontawesome-all.js"></script><link rel="stylesheet" type="text/css" href="css/style-mb.css"><link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css"><script src="js/jquery-3.3.1.min.js"></script><script type="text/javascript" src="bootstrap/js/bootstrap.js"></script>
+	<base href="<?php echo $qlkh['HOSTGOC'] ?>" /><script defer src="fontawesome/svg-with-js/js/fontawesome-all.js"></script><link rel="stylesheet" type="text/css" href="css/style-mb.css"><link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css"><script src="js/jquery-3.3.1.min.js"></script><script type="text/javascript" src="bootstrap/js/bootstrap.js"></script>
 </head>
 <body>
 <div>
