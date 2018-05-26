@@ -18,7 +18,7 @@
             while ($row = mysqli_fetch_assoc($nghiemthu)) { ?>
              <div class="noidungtin">
                 <h3>
-                    <a href="xemdetai/<?php echo to_slug($row['TENDETAI']) ?>-<?php echo $row['IDDT'] ?>.ltn" title="<?php echo $row['TENDETAI'] ?>"><?php echo $row['TENDETAI'] ?></a>
+                    <a href="xemdetai/<?php echo to_slug($row['TENDETAI']); ?>-<?php echo $row['IDDT'] ?>.ltn" title="<?php echo $row['TENDETAI'] ?>"><?php echo $row['TENDETAI'] ?></a>
                 </h3>
                 <div class="thongtinchung">
                     <ul>
