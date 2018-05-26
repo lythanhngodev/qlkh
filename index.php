@@ -1,4 +1,6 @@
 <?php
+  //require_once('index_pc.php'); // Giao diện trên PC
+  //die();
   $ZERO_PATH = "_m__detect.php";
   require_once($ZERO_PATH);
   $detect = new Mobile_Detect;
