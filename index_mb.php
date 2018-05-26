@@ -3,6 +3,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 	<?php include_once "header.php" ?>
 	<base href="<?php echo $qlkh['HOSTGOC'] ?>" /><script defer src="fontawesome/svg-with-js/js/fontawesome-all.js"></script><link rel="stylesheet" type="text/css" href="css/style-mb.css"><link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css"><script src="js/jquery-3.3.1.min.js"></script><script type="text/javascript" src="bootstrap/js/bootstrap.js"></script>
 </head>
