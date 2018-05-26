@@ -1,13 +1,15 @@
 -- phpMyAdmin SQL Dump
--- version 4.6.4
+-- version 4.8.0
 -- https://www.phpmyadmin.net/
 --
--- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th5 26, 2018 lúc 04:52 SA
--- Phiên bản máy phục vụ: 5.7.14
--- Phiên bản PHP: 5.6.25
+-- Host: 127.0.0.1
+-- Generation Time: May 26, 2018 at 12:01 PM
+-- Server version: 10.1.31-MariaDB
+-- PHP Version: 5.6.35
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -17,13 +19,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Cơ sở dữ liệu: `nckh`
+-- Database: `nckh`
 --
 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `baibao_tukhoa`
+-- Table structure for table `baibao_tukhoa`
 --
 
 CREATE TABLE `baibao_tukhoa` (
@@ -32,10 +34,18 @@ CREATE TABLE `baibao_tukhoa` (
   `IDBAO` bigint(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Dumping data for table `baibao_tukhoa`
+--
+
+INSERT INTO `baibao_tukhoa` (`IDBBTK`, `IDKHOA`, `IDBAO`) VALUES
+(2, 6, 1),
+(3, 7, 2);
+
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `baiviet`
+-- Table structure for table `baiviet`
 --
 
 CREATE TABLE `baiviet` (
@@ -51,22 +61,22 @@ CREATE TABLE `baiviet` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Đang đổ dữ liệu cho bảng `baiviet`
+-- Dumping data for table `baiviet`
 --
 
 INSERT INTO `baiviet` (`IDBV`, `TENBV`, `HINHANH`, `MOTA`, `NOIDUNG`, `LINKBV`, `LUOTXEM`, `NGAYDANG`, `HIENTHI`) VALUES
-(1, 'Liên kết hợp tác các lĩnh vực và chương trình trao đổi sinh viên với đại học KoreaTech', 'images/IMG_2024.JPG', 'Chiều ngày 5/4/2017, lãnh đạo trường Đại học SPKT Vĩnh Long (ĐH SPKTVL) đã có buổi gặp gỡ và làm việc với lãnh đạo trường đại học Kỹ thuật và Giáo dục Hàn Quốc (KoreaTech) bàn về Biên bản ghi nhớ hợp tác ở các lĩnh vực đào tạo, nghiên cứu khoa học, trao đổi sinh viên, việc làm,…', '<p>Chiều ng&agrave;y 5/4/2017, l&atilde;nh đạo trường Đại học SPKT Vĩnh Long (ĐH SPKTVL) đ&atilde; c&oacute; buổi gặp gỡ v&agrave; l&agrave;m việc với l&atilde;nh đạo trường đại học Kỹ thuật v&agrave; Gi&aacute;o dục H&agrave;n Quốc (KoreaTech) b&agrave;n về Bi&ecirc;n bản ghi nhớ hợp t&aacute;c ở c&aacute;c lĩnh vực đ&agrave;o tạo, nghi&ecirc;n cứu khoa học, trao đổi sinh vi&ecirc;n, việc l&agrave;m,&hellip; sắp được k&yacute; kết.</p>\n\n<p><img alt="" src="http://www.vlute.edu.vn/images/2017/04/IMG_2015.JPG" style="height:317px; width:600px" /></p>\n\n<p>Theo đ&oacute;, đại diện trường KoreaTech &ocirc;ng Haiwoong Park &ndash; trưởng ph&ograve;ng Hợp t&aacute;c quốc tế đ&atilde; giới thiệu về trường KoreaTech, cũng như mục đ&iacute;ch chuyến gh&eacute; thăm tại ĐH SPKTVL. Tại buổi l&agrave;m việc &ocirc;ng Haiwoong Park b&agrave;y tỏ quan điểm mong muốn hợp t&aacute;c với ĐH SPKTVL th&ocirc;ng qua 8 điều trong Bi&ecirc;n bản ghi nhớ sẽ được k&yacute; kết trong th&aacute;ng 5/2017 giữa hai b&ecirc;n. Đặc biệt &ocirc;ng Haiwoong Park rất quan t&acirc;m đến chương tr&igrave;nh trao đổi sinh vi&ecirc;n giữa KoreaTech v&agrave; ĐH SPKTVL.</p>\n\n<p><img alt="" src="http://www.vlute.edu.vn/images/2017/04/IMG_2006.JPG" style="height:314px; width:600px" /></p>\n\n<p>PGS.TS. Cao H&ugrave;ng Phi &ndash; Hiệu trưởng nh&agrave; trường đ&atilde; gửi lời cảm ơn &ocirc;ng Haiwoong Park đ&atilde; đến thăm trường, v&agrave; cũng gửi lời ch&uacute;c mừng đến hai trường v&igrave; sự hợp t&aacute;c sắp tới giữa hai b&ecirc;n. Hiệu trưởng mong muốn chương tr&igrave;nh hợp t&aacute;c sẽ ph&aacute;t huy hiệu quả tối đa nhằm tạo điều kiện tốt nhất cho mối quan hệ bền vững giữa hai b&ecirc;n, đặc biệt l&agrave; đẩy nhanh chương tr&igrave;nh trao đổi sinh vi&ecirc;n tạo thuận lợi cho sinh vi&ecirc;n ĐH SPKTVL sang KoreaTech học tập.</p>\n\n<p><img alt="" src="http://www.vlute.edu.vn/images/2017/04/IMG_2024.JPG" style="height:330px; width:600px" /></p>\n\n<table>\n	<tbody>\n		<tr>\n			<td>Trường KoreaTech &ndash; ng&ocirc;i trường đứng đầu về tỉ lệ việc l&agrave;m cho sinh vi&ecirc;n tốt nghiệp, được th&agrave;nh lập bởi Bộ Lao động H&agrave;n Quốc v&agrave;o năm 1991 dựa tr&ecirc;n triết l&yacute; gi&aacute;o dục &ldquo;Seeking truth from the fact&rdquo;, tập trung v&agrave;o kỹ thuật v&agrave; nguồn nh&acirc;n lực ph&aacute;t triển. Trường c&oacute; 3 học khu tọa lạc ở Cheonan, tỉnh Chungcheongnam, c&aacute;ch thủ đ&ocirc; Seoul khoảng 80km. Đặc biệt, đ&acirc;y cũng l&agrave; ng&ocirc;i trường nằm trong top 1% c&aacute;c trường được ưu ti&ecirc;n bởi Đại sứ qu&aacute;n H&agrave;n Quốc. KoreaTech l&agrave; một trong những đối t&aacute;c đ&agrave;o tạo của Samsung, LG. Sinh vi&ecirc;n học tập v&agrave; nghi&ecirc;n cứu tại đ&acirc;y sẽ c&oacute; cơ hội thực tập v&agrave; l&agrave;m việc tại những tập đo&agrave;n h&agrave;ng đầu tr&ecirc;n.</td>\n		</tr>\n	</tbody>\n</table>\n\n<p><img alt="" src="http://www.vlute.edu.vn/images/2017/04/IMG_2030.JPG" style="height:400px; width:600px" /></p>\n\n<p><em>Tham quan cơ sở vật chất tại ĐH SPKT Vĩnh Long</em></p>\n\n<p><img alt="" src="http://www.vlute.edu.vn/images/2017/04/IMG_2041.JPG" style="height:400px; width:600px" /></p>\n', 'lien-ket-hop-tac-cac-linh-vuc-va-chuong-trinh-trao-doi-sinh-vien-voi-dai-hoc-koreatech', 12, '2017-04-05', b'1'),
-(2, 'ĐH SPKT Vĩnh Long: Tăng cường hợp tác tại New Zealand', 'images/tham_dai_su_quan_VN.jpg', 'Nhân chuyến công tác từ ngày 12/3-24/3/2017 tại thủ đô Wellington, trường ĐH SPKT Vĩnh Long đã thiết lập mối quan hệ hợp tác và liên kết đào tạo với Trường Đại học Vicroria, Trường đào tạo nghề Weltec và Tổ chức Skills International Limited ở New Zealand.', '<p><strong><em>Nh&acirc;n chuyến c&ocirc;ng t&aacute;c từ ng&agrave;y 12/3-24/3/2017 tại thủ đ&ocirc; Wellington, trường ĐH SPKT Vĩnh Long đ&atilde; thiết lập mối quan hệ hợp t&aacute;c v&agrave; li&ecirc;n kết đ&agrave;o tạo với Trường Đại học Vicroria, Trường đ&agrave;o tạo nghề Weltec v&agrave; Tổ chức Skills International Limited ở New Zealand.</em></strong></p>\n\n<p>Song song với tham gia kh&oacute;a bồi dưỡng &ldquo;<em>Cải c&aacute;ch h&agrave;nh ch&iacute;nh c&ocirc;ng gắn với hiệu quả, hiệu lực của tổ chức bộ m&aacute;y v&agrave; kỹ năng l&atilde;nh đạo, quản l&yacute; gắn với nội dung lĩnh vực Gi&aacute;o dục nghề nghiệp v&agrave; thị trường lao động tại New Zealand</em>&rdquo;, PGS.TS. Cao H&ugrave;ng Phi - Hiệu trưởng đ&atilde; c&oacute; c&aacute;c chuyến đi khảo s&aacute;t thực tế, thăm v&agrave; l&agrave;m việc tại một số tổ chức trong thủ đ&ocirc; Wellington.</p>\n\n<p>Đối t&aacute;c tổ chức chương tr&igrave;nh học tập l&agrave; Skills International Limited. Đ&acirc;y l&agrave; một đơn vị th&agrave;nh vi&ecirc;n của Tổ chức Kỹ năng, tổ chức đ&agrave;o tạo ng&agrave;nh lớn nhất của New Zealand, cung cấp quản l&yacute; đ&agrave;o tạo v&agrave; hỗ trợ cho hơn 20 ng&agrave;nh kh&aacute;c nhau.&nbsp;Skills International Limited ra đời năm 2006 chuy&ecirc;n cấp chứng chỉ kỹ năng nghề v&agrave; giấy ph&eacute;p h&agrave;nh nghề c&oacute; gi&aacute; trị quốc tế.</p>\n\n<p><em><img alt="" src="http://www.vlute.edu.vn/images/tham_lop_hoc_tai_Wel.jpg" style="height:510px; width:600px" /></em></p>\n\n<p><em>Hiệu trưởng thăm lớp học tại Industry Training Federation</em></p>\n\n<p>Trong chuyến c&ocirc;ng t&aacute;c, Hiệu trưởng đ&atilde; đến thăm v&agrave; l&agrave;m việc tại một số cơ quan như: Bộ Thương mại, cải c&aacute;ch v&agrave; việc l&agrave;m; Bộ Ph&aacute;t triển x&atilde; hội; Ủy ban gi&aacute;o dục đại học; Li&ecirc;n đo&agrave;n đ&agrave;o tạo ng&agrave;nh; Văn ph&ograve;ng quan hệ đối t&aacute;c Ch&iacute;nh phủ...đến thăm Đại sứ qu&aacute;n Việt Nam tại New Zealand.</p>\n\n<p><em><img alt="" src="http://www.vlute.edu.vn/images/tham_quan_Weltect_co_so_Petone.jpg" style="height:371px; width:603px" /></em></p>\n\n<p><em>Tham quan Weltec - cơ sở Petone</em></p>\n\n<p>Đặc biệt, trường Đại học SPKT Vĩnh Long đ&atilde; thiết lập mối quan hệ hợp t&aacute;c v&agrave; li&ecirc;n kết đ&agrave;o tạo với Trường Đại học Victoria, Trường đ&agrave;o tạo nghề Weltec &ndash; cơ sở Petone v&agrave; Tổ chức Skills International Limited ở New Zealand.</p>\n\n<p><em><img alt="" src="http://www.vlute.edu.vn/images/tham_dai_su_quan_VN.jpg" style="height:305px; width:601px" /></em></p>\n\n<p><em>Thăm đại sứ qu&aacute;n Việt Nam</em></p>\n\n<p>Hệ thống khung đ&agrave;o tạo Quốc gia của New Zealand gồm 10 bậc gồm: từ bậc 1-4: chứng nhận (certificates); bậc 5,6: bằng cấp/chứng chỉ (diplomas); bậc 7: bằng tốt nghiệp kỹ sư/cử nh&acirc;n (Bachelor&#39;s degree/Graduate diplomas and certificates); bậc 8: kỹ sư/cử nh&acirc;n danh dự (bachelor honours degree); bậc 9: thạc sĩ; bậc 10: tiến sĩ. C&aacute;c trường v&agrave; c&aacute;c tổ chức đ&agrave;o tạo nghề hoạt động theo cơ chế thị trường, Nh&agrave; nước chỉ hỗ trợ cho nh&oacute;m yếu thế v&agrave; ng&agrave;nh nghề n&agrave;o cần phục vụ cho ph&aacute;t triển kinh tế x&atilde; hội.</p>\n\n<p>Ngo&agrave;i hệ thống bằng cấp, chứng chỉ, tại New Zealand c&ograve;n bị r&agrave;ng buộc bởi chứng chỉ h&agrave;nh nghề n&ecirc;n qu&aacute; tr&igrave;nh vận h&agrave;nh được Nh&agrave; nước quản l&yacute; v&agrave; điều phối ch&iacute;nh x&aacute;c hơn.</p>\n\n<p>Tất cả c&aacute;c hoạt động trong hệ thống gi&aacute;o dục nghề nghiệp được tin học h&oacute;a tối đa từ hệ thống chương tr&igrave;nh, ng&agrave;nh nghề đ&agrave;o tạo, tư vấn hướng nghiệp.</p>\n', 'dh-spkt-vinh-long-tang-cuong-hop-tac-tai-new-zealand', 7, '2015-03-24', b'1'),
-(3, 'Đại học SPKT Vĩnh Long ký kết thỏa thuận song phương với tổ chức Skills International: Cơ hội việc làm tại New Zeland', 'images/ht_skills_international_1.jpg', 'Trong buổi đón tiếp và làm việc với phái đoàn tổ chức Skills International (New Zealand) ngày 7/6/2017, lãnh đạo hai bên đã ký kết bản ghi nhớ về chương trình hợp tác phát triển đào tạo, đánh giá kỹ năng nghề cấp quốc tế, đào tạo nguồn nhân lực chất lượng cao và một số nội dung về tư vấn, trao đổi và giao lưu văn hóa…', '<p><strong><em>Trong buổi đ&oacute;n tiếp v&agrave; l&agrave;m việc với ph&aacute;i đo&agrave;n tổ chức Skills International (New Zealand) ng&agrave;y 7/6/2017, l&atilde;nh đạo hai b&ecirc;n đ&atilde; k&yacute; kết bản ghi nhớ về chương tr&igrave;nh hợp t&aacute;c ph&aacute;t triển đ&agrave;o tạo, đ&aacute;nh gi&aacute; kỹ năng nghề cấp quốc tế, đ&agrave;o tạo nguồn nh&acirc;n lực chất lượng cao v&agrave; một số nội dung về tư vấn, trao đổi v&agrave; giao lưu văn h&oacute;a&hellip;</em></strong></p>\n\n<p><strong><em><img src="http://www.vlute.edu.vn/images/hop_tac_skills_international/ht_skills_international_1.jpg" style="width:600px" /></em></strong></p>\n\n<p><em>B&agrave; Dridget Dennis - Gi&aacute;m đốc điều h&agrave;nh Skills International v&agrave; PGS.TS. Cao H&ugrave;ng Phi &ndash; Hiệu trưởng k&yacute; kết bản ghi nhớ trước sự chứng kiến của l&atilde;nh đạo hai b&ecirc;n</em></p>\n\n<p>Cụ thể trong buổi l&agrave;m việc, b&agrave; Bridget Dennis &ndash; Gi&aacute;m đốc điều h&agrave;nh Skills International cho biết mục đ&iacute;ch của chuyến thăm v&agrave; l&agrave;m việc với Đại học SPKT Vĩnh Long theo lời mời của PGS.TS Cao H&ugrave;ng Phi &ndash; Hiệu trưởng nh&agrave; trường l&agrave; t&igrave;m cơ hội hợp t&aacute;c giữa hai b&ecirc;n. B&ecirc;n cạnh đ&oacute; l&agrave; B&agrave; muốn t&igrave;m hiểu nhiều hơn về Nh&agrave; trường ở c&aacute;c lĩnh vực đ&agrave;o tạo, nh&acirc;n lực v&agrave; đặc biệt l&agrave; Trung t&acirc;m Đ&aacute;nh gi&aacute; Kỹ năng nghề Quốc gia của trường.</p>\n\n<p><em><img src="http://www.vlute.edu.vn/images/hop_tac_skills_international/ht_skills_international_2.jpg" style="width:600px" /></em></p>\n\n<p><em>B&agrave; Dridget Dennis t&igrave;m hiểu về Trường v&agrave;&hellip;</em></p>\n\n<p>Sau trao đổi, l&atilde;nh đạo hai b&ecirc;n đ&atilde; đi đến thống nhất v&agrave; k&yacute; kết bản ghi nhớ về thỏa thuận hợp t&aacute;c giữa tổ chức Skills International (New Zealand) v&agrave; trường Đại học SPKT Vĩnh Long với c&aacute;c điều khoản như: Trao đổi sinh vi&ecirc;n, giảng vi&ecirc;n, c&aacute;n bộ quản l&yacute; chia sẻ về văn h&oacute;a, ng&ocirc;n ngữ, đồng thời trao đổi kinh nghiệm chuy&ecirc;n m&ocirc;n, c&aacute;c phương ph&aacute;p giảng dạy, học tập; Hỗ trợ trung t&acirc;m đ&aacute;nh gi&aacute; kỹ năng nghề quốc gia của trường tiếp cận ti&ecirc;u chuẩn đ&aacute;nh gi&aacute; kỹ năng nghề New Zealand; Skills International hỗ trợ đ&aacute;nh gi&aacute; cấp chứng chỉ h&agrave;nh nghề cấp quốc tế cho sinh vi&ecirc;n, học vi&ecirc;n, th&iacute; sinh của trường; Hỗ trợ việc l&agrave;m cho sinh vi&ecirc;n trường c&oacute; thể l&agrave;m việc tại NewZealand, &Uacute;c;</p>\n\n<p><em><img src="http://www.vlute.edu.vn/images/hop_tac_skills_international/ht_skills_international_3.jpg" style="width:600px" /></em></p>\n\n<p><em>&hellip;giao lưu với sinh vi&ecirc;n trường Đại học SPKT Vĩnh Long</em></p>\n\n<p>Skills International quản l&yacute; bởi Ch&iacute;nh phủ New Zealand v&agrave; Hiệp hội c&aacute;c Doanh nghiệp C&ocirc;ng nghiệp New Zealand, được th&agrave;nh lập v&agrave;o năm 2006 theo y&ecirc;u cầu của c&aacute;c tổ chức quốc tế để chia sẻ c&aacute;ch tiếp cận về gi&aacute;o dục v&agrave; ph&aacute;t triển kỹ năng trong khu&ocirc;n khổ nghề. Skills International thuộc sở hữu Skills Organisation, tổ chức đ&agrave;o tạo ng&agrave;nh c&ocirc;ng nghiệp lớn nhất New Zealand, cung cấp quản l&yacute; đ&agrave;o tạo v&agrave; hỗ trợ cho hơn 20 ng&agrave;nh c&ocirc;ng nghiệp.</p>\n', 'dai-hoc-spkt-vinh-long-ky-ket-thoa-thuan-song-phuong-voi-to-chuc-skills-international-co-hoi-viec-lam-tai-new-zeland', 8, '2017-06-07', b'1'),
-(4, 'Làm việc với đoàn Koica Việt Nam về hoạt động của tình nguyện viên', 'images/tiep_koica_20_6_2017-3.JPG', 'Ngày 20/6/2017, Đại học SPKT Vĩnh Long đã có buổi tiếp và làm việc với đoàn Koica Việt Nam xoay quanh các hoạt động của tình nguyện viên GS. Hong Byung Chul tại Khoa Cơ khí Chế tạo máy và Khoa Điện – Điện tử của trường.', '<p>Ng&agrave;y 20/6/2017, Đại học SPKT Vĩnh Long đ&atilde; c&oacute; buổi tiếp v&agrave; l&agrave;m việc với đo&agrave;n Koica Việt Nam xoay quanh c&aacute;c hoạt động của t&igrave;nh nguyện vi&ecirc;n GS. Hong Byung Chul tại Khoa Cơ kh&iacute; Chế tạo m&aacute;y v&agrave; Khoa Điện &ndash; Điện tử của trường.</p>\n\n<p><img src="http://vlute.edu.vn/images/tiep_koica_20_6_2017-3.JPG" style="width:550px" /></p>\n\n<p>Trao đổi với Koica Việt Nam, TS. L&ecirc; Hồng Kỳ - Ph&oacute; Hiệu trưởng đ&atilde; tr&igrave;nh b&agrave;y c&aacute;c dự &aacute;n đang thực hiện tại trường SPKT Vĩnh Long c&oacute; sự tham gia của t&igrave;nh nguyện vi&ecirc;n GS. Hong đ&atilde; v&agrave; đang mang lại hiệu quả thiết thực. Đặc biệt l&agrave; dự &aacute;n nghi&ecirc;n cứu, cảnh b&aacute;o hiện tượng x&acirc;m nhập mặn ở Vĩnh Long v&agrave; c&aacute;c tỉnh khu vực đồng bằng s&ocirc;ng Cửu Long.</p>\n\n<p><img src="http://vlute.edu.vn/images/tiep_koica_20_6_2017-1.JPG" style="width:550px" /></p>\n\n<p><em>TS. L&ecirc; Hồng Kỳ - Ph&oacute; Hiệu trưởng thống nhất n&acirc;ng tầm c&aacute;c dự &aacute;n nghi&ecirc;n cứu c&oacute; sự hỗ trợ của t&igrave;nh nguyện vi&ecirc;n</em></p>\n\n<p>B&agrave; Kim Huyn Ril &ndash; Quản l&yacute; chương tr&igrave;nh t&igrave;nh nguyện vi&ecirc;n cho biết, mục đ&iacute;ch chuyến đến thăm v&agrave; l&agrave;m việc của Koica lần n&agrave;y l&agrave; kiểm tra hoạt động của t&igrave;nh nguyện vi&ecirc;n Hong, đồng thời chia sẽ, hỗ trợ với trường về c&aacute;c hoạt động sinh hoạt thường nhật của t&igrave;nh nguyện vi&ecirc;n.</p>\n\n<p><img src="http://vlute.edu.vn/images/tiep_koica_20_6_2017-2.JPG" style="width:550px" /></p>\n\n<p><em>B&agrave; Kim Huyn Ril đ&aacute;nh gi&aacute; cao hiệu quả hợp t&aacute;c giữa hai b&ecirc;n</em></p>\n\n<p>Tại buổi l&agrave;m việc, hai b&ecirc;n đ&atilde; đ&aacute;nh gi&aacute; cao hiệu quả mang lại của chương tr&igrave;nh t&igrave;nh nguyện vi&ecirc;n tại Đại học SPKT Vĩnh Long. Song song, hai b&ecirc;n thống nhất sẽ đẩy mạnh hơn nữa chương tr&igrave;nh hợp t&aacute;c t&igrave;nh nguyện vi&ecirc;n, n&acirc;ng tầm c&aacute;c dự &aacute;n nghi&ecirc;n cứu đạt chuẩn quốc gia trong thời gian tới.</p>\n', 'lam-viec-voi-doan-koica-viet-nam-ve-hoat-dong-cua-tinh-nguyen-vien', 10, '2017-06-20', b'1'),
-(5, 'Đánh giá kết quả và hiệu quả các chỉ tiêu kinh tế, kỹ thuật của các thiết bị thu hoạch, chẻ và sấy cây lác', 'images/news.png', 'Đó là nội dung buổi hội thảo khoa học tại Trung tâm kỹ thuật công nghệ cao – Khoa Cơ khí Chế tạo máy - Trường Đại học SPKT Vĩnh Long ngày 27/6/2017.', '<p>Đ&oacute; l&agrave; nội dung buổi hội thảo khoa học tại Trung t&acirc;m kỹ thuật c&ocirc;ng nghệ cao &ndash; Khoa Cơ kh&iacute; Chế tạo m&aacute;y - Trường Đại học SPKT Vĩnh Long ng&agrave;y 27/6/2017.</p>\n\n<p>Hội thảo đ&aacute;nh gi&aacute; đề t&agrave;i &ldquo;Nghi&ecirc;n cứu thiết kế, chế tạo thiết bị thu hoạch v&agrave; thiết bị sấy c&acirc;y l&aacute;c ở tỉnh Vĩnh Long&rdquo; l&agrave; đề t&agrave;i nghi&ecirc;n cứu khoa học cấp Tỉnh, được thực hiện trong 24 th&aacute;ng do PGS.TS. Cao H&ugrave;ng Phi l&agrave;m chủ nhiệm.</p>\n\n<p>&nbsp;</p>\n\n<p>Theo mục ti&ecirc;u ban đầu Trường Đại học SPKT Vĩnh Long&nbsp;đ&atilde; thiết kế, chế tạo thiết bị thu hoạch ph&ugrave; hợp với điều kiện tỉnh Vĩnh Long. Thứ hai l&agrave; chế tạo thiết bị sấy l&aacute;c nhằm đảm bảo hiệu quả sản xuất v&agrave; chất lượng l&aacute;c cao hơn phơi nắng. Sản phẩm thứ ba l&agrave; thiết bị chẻ l&aacute;c đảm bảo hiệu quả v&agrave; năng suất cao hơn phương ph&aacute;p truyền thống.</p>\n\n<p>Tham dự buổi hội thảo c&oacute; đại diện Sở Khoa học &ndash; C&ocirc;ng nghệ tỉnh Vĩnh Long, c&aacute;c doanh nghiệp cơ kh&iacute; trong tỉnh, đại biểu c&aacute;c n&ocirc;ng d&acirc;n trồng L&aacute;c ở huyện Vũng Li&ecirc;m, trung t&acirc;m khuyến c&ocirc;ng, khuyến n&ocirc;ng Tỉnh.</p>\n\n<p>C&aacute;c đại biểu tham dự hội thảo đ&aacute;nh gi&aacute; cao hiệu quả hoạt động của c&aacute;c thiết bị, đặc biệt l&agrave; m&aacute;y sấy l&aacute;c, đ&aacute;p ứng được nhu cầu sấy l&aacute;c trong thời tiết mưa nhiều như hiện nay. Thiết bị chẻ l&aacute;c đảm bảo hiệu quả sản xuất cao hơn c&aacute;c thiết bị truyền thống gấp nhiều lần.</p>\n\n<p>Sau hội thảo, c&aacute;c thiết bị tr&ecirc;n sẽ được đưa về x&atilde; Trung Th&agrave;nh Đ&ocirc;ng (Vũng Li&ecirc;m) để thực nghiệm.</p>\n', 'danh-gia-ket-qua-va-hieu-qua-cac-chi-tieu-kinh-te-ky-thuat-cua-cac-thiet-bi-thu-hoach-che-va-say-cay-lac', 7, '2017-06-27', b'1'),
-(6, 'Hội thảo Khao học tháng 4/2018 với chủ đề: "Tăng cường liên kết giữa trường Đại học với doanh nghiệp trong quá trình đào tạo và giải quyết việc làm cho sinh viên"', 'images/news.png', 'Nhằm tăng cường mối liên kết giữa trường Đại học sư phạm kỹ thuật Vĩnh Long và Doanh nghiệp trong và ngoài Tỉnh để nâng cao chất lượng đào tạo và giải quyết việc làm cho sinh viên, Hội thảo Khao học tháng 4/2018 với  chủ đề: "Tăng cường liên kết giữa trường Đại học với doanh nghiệp trong quá trình đào tạo và giải quyết việc làm cho sinh viên"', '<p>Nhằm tăng cường mối li&ecirc;n kết giữa trường Đại học sư phạm kỹ thuật Vĩnh Long v&agrave; Doanh nghiệp trong v&agrave; ngo&agrave;i Tỉnh để n&acirc;ng cao chất lượng đ&agrave;o tạo v&agrave; giải quyết việc l&agrave;m cho sinh vi&ecirc;n, Hội thảo Khao học th&aacute;ng 4/2018 với&nbsp; chủ đề: &quot;<em>Tăng cường li&ecirc;n kết giữa trường Đại học với doanh nghiệp trong qu&aacute; tr&igrave;nh đ&agrave;o tạo v&agrave; giải quyết việc l&agrave;m cho sinh vi&ecirc;n</em>&quot;</p>\n\n<p>- Thời gian:&nbsp;14 giờ ng&agrave;y 27/4/2018</p>\n\n<p>- Địa điểm: Hội trường C11</p>\n\n<p>- Thanh phần tham dự: L&atilde;nh đạo c&aacute;c doanh nghiệp, l&atilde;nh đạo trường Đại học sư phạm kỹ thuật Vĩnh Long, c&aacute;c c&aacute;n bộ, giảng vi&ecirc;n, sinh vi&ecirc;n,...</p>\n\n<p><img src="http://vlute.edu.vn/images/2018/pdf/hoi_thao_khoa_hoc_4_2018-1.jpg" style="width:650px" /></p>\n\n<p>File đ&iacute;nh k&egrave;m:&nbsp;<a href="http://vlute.edu.vn/images/2018/pdf/hoi_thao_khoa_hoc_4_2018.pdf" target="_blank">Kế hoạch tổ chức hội thảo khoa học 4/2018</a></p>\n', 'hoi-thao-khao-hoc-thang-42018-voi-chu-de-tang-cuong-lien-ket-giua-truong-dai-hoc-voi-doanh-nghiep-trong-qua-trinh-dao-tao-va-giai-quyet-viec-lam-cho-sinh-vien', 38, '2018-04-27', b'1'),
-(7, 'Nghiên cứu ứng dụng công nghệ cao trong sản xuất nông nghiệp', 'images/3egrf%20btr.JPG', 'Chiều 21/4, trường Đại học SPKT Vĩnh Long phối hợp với Công ty cổ phần cơ khí & xây dựng BROSTECH tổ chức buổi báo cáo nghiên cứu về công nghệ cao, thiết bị sản xuất rau quả theo hướng tự động hóa, tương thích điều kiện trồng tại Tây Nam Bộ.', '<p>&nbsp;<strong><em>Chiều 21/4, trường Đại học SPKT Vĩnh Long&nbsp;</em></strong><strong><em>phối hợp với</em></strong>&nbsp;<strong><em>C</em></strong><strong><em>&ocirc;ng ty cổ phần cơ kh&iacute;&nbsp;</em></strong><strong><em>&amp;&nbsp;</em></strong><strong><em>x&acirc;y dựng BROSTECH tổ chức buổi b&aacute;o c&aacute;o nghi&ecirc;n cứu về c&ocirc;ng nghệ cao, thiết bị sản xuất rau quả theo hướng&nbsp;</em></strong><strong><em>tự động h&oacute;a,&nbsp;</em></strong><strong><em>tương th&iacute;ch điều kiện trồng tại T&acirc;y Nam Bộ.</em></strong></p>\n\n<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Buổi b&aacute;o c&aacute;o với sự tham dự của PGS.TS Cao H&ugrave;ng Phi - Hiệu trưởng, TS. Nguyễn Thanh T&ugrave;ng - P.Hiệu trưởng, TS. L&ecirc; Hồng Kỳ - P. Hiệu trưởng v&agrave; qu&yacute; giảng vi&ecirc;n đến từ c&aacute;c ph&ograve;ng, khoa, bộ m&ocirc;n của trường c&ugrave;ng nh&oacute;m nghi&ecirc;n cứu đến từ c&ocirc;ng ty BROSTECH.</p>\n\n<p><img alt="2" src="http://vlute.edu.vn/images/2018/duc/THANG04/2104BROSTECH/2.JPG" style="height:277px; width:600px" /></p>\n\n<p><em>Ứng dụng kỹ thuật v&agrave;o thực tiễn sản xuất được l&atilde;nh đạo quan t&acirc;m thực hiện</em></p>\n\n<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Nhằm thực hiện hỗ trợ người n&ocirc;ng d&acirc;n sản xuất v&agrave; ph&aacute;t triển trong n&ocirc;ng nghiệp theo hướng c&ocirc;ng nghệ cao ph&ugrave; hợp với điều kiện tại T&acirc;y Nam Bộ, nh&oacute;m nghi&ecirc;n cứu của c&ocirc;ng ty BROSTECH đ&atilde; tr&igrave;nh b&agrave;i b&aacute;o c&aacute;o về những nội dung: nghi&ecirc;n cứu x&acirc;y dựng phương &aacute;n xới đất v&agrave; l&ecirc;n liếp (luống), thiết kế chế tạo v&agrave; lập tr&igrave;nh hệ thống tưới nước v&agrave; b&oacute;n ph&acirc;n tự động trong nh&agrave; lưới, thiết kế x&acirc;y dựng lặp đặt hệ thống vườn sản xuất h&agrave;nh h&agrave;nh t&iacute;m c&ocirc;ng nghệ cao cơ giới h&oacute;a, tự động h&oacute;a v&agrave; x&acirc;y dựng phương &aacute;n thu hoạch h&agrave;nh c&ocirc;ng nghệ cao.</p>\n\n<p><img alt="3" src="http://vlute.edu.vn/images/2018/duc/THANG04/2104BROSTECH/3.JPG" style="height:276px; width:600px" /></p>\n\n<p><em>Nh&agrave; khoa học - Nh&agrave; doanh nghiệp kết hợp trong ph&aacute;t triển n&ocirc;ng nghiệp th&ocirc;ng minh</em></p>\n\n<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Qua đ&acirc;y nh&oacute;m đ&atilde; đề ra nhiều phương &aacute;n c&ugrave;ng hợp t&aacute;c với nh&agrave; trường để đưa ra nhiều kế hoạch tối ưu để ứng dụng đưa v&agrave;o đời sống nhằm hỗ trợ cho b&agrave; con n&ocirc;ng d&acirc;n n&acirc;ng cao năng suất lao động, chất lượng sản phẩm, ph&ograve;ng tr&aacute;nh được nhiều rủi ro trong thiệt hai khi sản xuất, qua đ&oacute; từng bước x&acirc;y dựng một nền n&ocirc;ng nghiệp th&ocirc;ng minh.</p>\n', 'nghien-cuu-ung-dung-cong-nghe-cao-trong-san-xuat-nong-nghiep', 14, '2018-04-21', b'1');
+(1, 'Liên kết hợp tác các lĩnh vực và chương trình trao đổi sinh viên với đại học KoreaTech', 'images/IMG_2024.JPG', 'Chiều ngày 5/4/2017, lãnh đạo trường Đại học SPKT Vĩnh Long (ĐH SPKTVL) đã có buổi gặp gỡ và làm việc với lãnh đạo trường đại học Kỹ thuật và Giáo dục Hàn Quốc (KoreaTech) bàn về Biên bản ghi nhớ hợp tác ở các lĩnh vực đào tạo, nghiên cứu khoa học, trao đổi sinh viên, việc làm,…', '<p>Chiều ng&agrave;y 5/4/2017, l&atilde;nh đạo trường Đại học SPKT Vĩnh Long (ĐH SPKTVL) đ&atilde; c&oacute; buổi gặp gỡ v&agrave; l&agrave;m việc với l&atilde;nh đạo trường đại học Kỹ thuật v&agrave; Gi&aacute;o dục H&agrave;n Quốc (KoreaTech) b&agrave;n về Bi&ecirc;n bản ghi nhớ hợp t&aacute;c ở c&aacute;c lĩnh vực đ&agrave;o tạo, nghi&ecirc;n cứu khoa học, trao đổi sinh vi&ecirc;n, việc l&agrave;m,&hellip; sắp được k&yacute; kết.</p>\n\n<p><img alt=\"\" src=\"http://www.vlute.edu.vn/images/2017/04/IMG_2015.JPG\" style=\"height:317px; width:600px\" /></p>\n\n<p>Theo đ&oacute;, đại diện trường KoreaTech &ocirc;ng Haiwoong Park &ndash; trưởng ph&ograve;ng Hợp t&aacute;c quốc tế đ&atilde; giới thiệu về trường KoreaTech, cũng như mục đ&iacute;ch chuyến gh&eacute; thăm tại ĐH SPKTVL. Tại buổi l&agrave;m việc &ocirc;ng Haiwoong Park b&agrave;y tỏ quan điểm mong muốn hợp t&aacute;c với ĐH SPKTVL th&ocirc;ng qua 8 điều trong Bi&ecirc;n bản ghi nhớ sẽ được k&yacute; kết trong th&aacute;ng 5/2017 giữa hai b&ecirc;n. Đặc biệt &ocirc;ng Haiwoong Park rất quan t&acirc;m đến chương tr&igrave;nh trao đổi sinh vi&ecirc;n giữa KoreaTech v&agrave; ĐH SPKTVL.</p>\n\n<p><img alt=\"\" src=\"http://www.vlute.edu.vn/images/2017/04/IMG_2006.JPG\" style=\"height:314px; width:600px\" /></p>\n\n<p>PGS.TS. Cao H&ugrave;ng Phi &ndash; Hiệu trưởng nh&agrave; trường đ&atilde; gửi lời cảm ơn &ocirc;ng Haiwoong Park đ&atilde; đến thăm trường, v&agrave; cũng gửi lời ch&uacute;c mừng đến hai trường v&igrave; sự hợp t&aacute;c sắp tới giữa hai b&ecirc;n. Hiệu trưởng mong muốn chương tr&igrave;nh hợp t&aacute;c sẽ ph&aacute;t huy hiệu quả tối đa nhằm tạo điều kiện tốt nhất cho mối quan hệ bền vững giữa hai b&ecirc;n, đặc biệt l&agrave; đẩy nhanh chương tr&igrave;nh trao đổi sinh vi&ecirc;n tạo thuận lợi cho sinh vi&ecirc;n ĐH SPKTVL sang KoreaTech học tập.</p>\n\n<p><img alt=\"\" src=\"http://www.vlute.edu.vn/images/2017/04/IMG_2024.JPG\" style=\"height:330px; width:600px\" /></p>\n\n<table>\n	<tbody>\n		<tr>\n			<td>Trường KoreaTech &ndash; ng&ocirc;i trường đứng đầu về tỉ lệ việc l&agrave;m cho sinh vi&ecirc;n tốt nghiệp, được th&agrave;nh lập bởi Bộ Lao động H&agrave;n Quốc v&agrave;o năm 1991 dựa tr&ecirc;n triết l&yacute; gi&aacute;o dục &ldquo;Seeking truth from the fact&rdquo;, tập trung v&agrave;o kỹ thuật v&agrave; nguồn nh&acirc;n lực ph&aacute;t triển. Trường c&oacute; 3 học khu tọa lạc ở Cheonan, tỉnh Chungcheongnam, c&aacute;ch thủ đ&ocirc; Seoul khoảng 80km. Đặc biệt, đ&acirc;y cũng l&agrave; ng&ocirc;i trường nằm trong top 1% c&aacute;c trường được ưu ti&ecirc;n bởi Đại sứ qu&aacute;n H&agrave;n Quốc. KoreaTech l&agrave; một trong những đối t&aacute;c đ&agrave;o tạo của Samsung, LG. Sinh vi&ecirc;n học tập v&agrave; nghi&ecirc;n cứu tại đ&acirc;y sẽ c&oacute; cơ hội thực tập v&agrave; l&agrave;m việc tại những tập đo&agrave;n h&agrave;ng đầu tr&ecirc;n.</td>\n		</tr>\n	</tbody>\n</table>\n\n<p><img alt=\"\" src=\"http://www.vlute.edu.vn/images/2017/04/IMG_2030.JPG\" style=\"height:400px; width:600px\" /></p>\n\n<p><em>Tham quan cơ sở vật chất tại ĐH SPKT Vĩnh Long</em></p>\n\n<p><img alt=\"\" src=\"http://www.vlute.edu.vn/images/2017/04/IMG_2041.JPG\" style=\"height:400px; width:600px\" /></p>\n', 'lien-ket-hop-tac-cac-linh-vuc-va-chuong-trinh-trao-doi-sinh-vien-voi-dai-hoc-koreatech', 15, '2017-04-05', b'1'),
+(2, 'ĐH SPKT Vĩnh Long: Tăng cường hợp tác tại New Zealand', 'images/tham_dai_su_quan_VN.jpg', 'Nhân chuyến công tác từ ngày 12/3-24/3/2017 tại thủ đô Wellington, trường ĐH SPKT Vĩnh Long đã thiết lập mối quan hệ hợp tác và liên kết đào tạo với Trường Đại học Vicroria, Trường đào tạo nghề Weltec và Tổ chức Skills International Limited ở New Zealand.', '<p><strong><em>Nh&acirc;n chuyến c&ocirc;ng t&aacute;c từ ng&agrave;y 12/3-24/3/2017 tại thủ đ&ocirc; Wellington, trường ĐH SPKT Vĩnh Long đ&atilde; thiết lập mối quan hệ hợp t&aacute;c v&agrave; li&ecirc;n kết đ&agrave;o tạo với Trường Đại học Vicroria, Trường đ&agrave;o tạo nghề Weltec v&agrave; Tổ chức Skills International Limited ở New Zealand.</em></strong></p>\n\n<p>Song song với tham gia kh&oacute;a bồi dưỡng &ldquo;<em>Cải c&aacute;ch h&agrave;nh ch&iacute;nh c&ocirc;ng gắn với hiệu quả, hiệu lực của tổ chức bộ m&aacute;y v&agrave; kỹ năng l&atilde;nh đạo, quản l&yacute; gắn với nội dung lĩnh vực Gi&aacute;o dục nghề nghiệp v&agrave; thị trường lao động tại New Zealand</em>&rdquo;, PGS.TS. Cao H&ugrave;ng Phi - Hiệu trưởng đ&atilde; c&oacute; c&aacute;c chuyến đi khảo s&aacute;t thực tế, thăm v&agrave; l&agrave;m việc tại một số tổ chức trong thủ đ&ocirc; Wellington.</p>\n\n<p>Đối t&aacute;c tổ chức chương tr&igrave;nh học tập l&agrave; Skills International Limited. Đ&acirc;y l&agrave; một đơn vị th&agrave;nh vi&ecirc;n của Tổ chức Kỹ năng, tổ chức đ&agrave;o tạo ng&agrave;nh lớn nhất của New Zealand, cung cấp quản l&yacute; đ&agrave;o tạo v&agrave; hỗ trợ cho hơn 20 ng&agrave;nh kh&aacute;c nhau.&nbsp;Skills International Limited ra đời năm 2006 chuy&ecirc;n cấp chứng chỉ kỹ năng nghề v&agrave; giấy ph&eacute;p h&agrave;nh nghề c&oacute; gi&aacute; trị quốc tế.</p>\n\n<p><em><img alt=\"\" src=\"http://www.vlute.edu.vn/images/tham_lop_hoc_tai_Wel.jpg\" style=\"height:510px; width:600px\" /></em></p>\n\n<p><em>Hiệu trưởng thăm lớp học tại Industry Training Federation</em></p>\n\n<p>Trong chuyến c&ocirc;ng t&aacute;c, Hiệu trưởng đ&atilde; đến thăm v&agrave; l&agrave;m việc tại một số cơ quan như: Bộ Thương mại, cải c&aacute;ch v&agrave; việc l&agrave;m; Bộ Ph&aacute;t triển x&atilde; hội; Ủy ban gi&aacute;o dục đại học; Li&ecirc;n đo&agrave;n đ&agrave;o tạo ng&agrave;nh; Văn ph&ograve;ng quan hệ đối t&aacute;c Ch&iacute;nh phủ...đến thăm Đại sứ qu&aacute;n Việt Nam tại New Zealand.</p>\n\n<p><em><img alt=\"\" src=\"http://www.vlute.edu.vn/images/tham_quan_Weltect_co_so_Petone.jpg\" style=\"height:371px; width:603px\" /></em></p>\n\n<p><em>Tham quan Weltec - cơ sở Petone</em></p>\n\n<p>Đặc biệt, trường Đại học SPKT Vĩnh Long đ&atilde; thiết lập mối quan hệ hợp t&aacute;c v&agrave; li&ecirc;n kết đ&agrave;o tạo với Trường Đại học Victoria, Trường đ&agrave;o tạo nghề Weltec &ndash; cơ sở Petone v&agrave; Tổ chức Skills International Limited ở New Zealand.</p>\n\n<p><em><img alt=\"\" src=\"http://www.vlute.edu.vn/images/tham_dai_su_quan_VN.jpg\" style=\"height:305px; width:601px\" /></em></p>\n\n<p><em>Thăm đại sứ qu&aacute;n Việt Nam</em></p>\n\n<p>Hệ thống khung đ&agrave;o tạo Quốc gia của New Zealand gồm 10 bậc gồm: từ bậc 1-4: chứng nhận (certificates); bậc 5,6: bằng cấp/chứng chỉ (diplomas); bậc 7: bằng tốt nghiệp kỹ sư/cử nh&acirc;n (Bachelor&#39;s degree/Graduate diplomas and certificates); bậc 8: kỹ sư/cử nh&acirc;n danh dự (bachelor honours degree); bậc 9: thạc sĩ; bậc 10: tiến sĩ. C&aacute;c trường v&agrave; c&aacute;c tổ chức đ&agrave;o tạo nghề hoạt động theo cơ chế thị trường, Nh&agrave; nước chỉ hỗ trợ cho nh&oacute;m yếu thế v&agrave; ng&agrave;nh nghề n&agrave;o cần phục vụ cho ph&aacute;t triển kinh tế x&atilde; hội.</p>\n\n<p>Ngo&agrave;i hệ thống bằng cấp, chứng chỉ, tại New Zealand c&ograve;n bị r&agrave;ng buộc bởi chứng chỉ h&agrave;nh nghề n&ecirc;n qu&aacute; tr&igrave;nh vận h&agrave;nh được Nh&agrave; nước quản l&yacute; v&agrave; điều phối ch&iacute;nh x&aacute;c hơn.</p>\n\n<p>Tất cả c&aacute;c hoạt động trong hệ thống gi&aacute;o dục nghề nghiệp được tin học h&oacute;a tối đa từ hệ thống chương tr&igrave;nh, ng&agrave;nh nghề đ&agrave;o tạo, tư vấn hướng nghiệp.</p>\n', 'dh-spkt-vinh-long-tang-cuong-hop-tac-tai-new-zealand', 9, '2015-03-24', b'1'),
+(3, 'Đại học SPKT Vĩnh Long ký kết thỏa thuận song phương với tổ chức Skills International: Cơ hội việc làm tại New Zeland', 'images/ht_skills_international_1.jpg', 'Trong buổi đón tiếp và làm việc với phái đoàn tổ chức Skills International (New Zealand) ngày 7/6/2017, lãnh đạo hai bên đã ký kết bản ghi nhớ về chương trình hợp tác phát triển đào tạo, đánh giá kỹ năng nghề cấp quốc tế, đào tạo nguồn nhân lực chất lượng cao và một số nội dung về tư vấn, trao đổi và giao lưu văn hóa…', '<p><strong><em>Trong buổi đ&oacute;n tiếp v&agrave; l&agrave;m việc với ph&aacute;i đo&agrave;n tổ chức Skills International (New Zealand) ng&agrave;y 7/6/2017, l&atilde;nh đạo hai b&ecirc;n đ&atilde; k&yacute; kết bản ghi nhớ về chương tr&igrave;nh hợp t&aacute;c ph&aacute;t triển đ&agrave;o tạo, đ&aacute;nh gi&aacute; kỹ năng nghề cấp quốc tế, đ&agrave;o tạo nguồn nh&acirc;n lực chất lượng cao v&agrave; một số nội dung về tư vấn, trao đổi v&agrave; giao lưu văn h&oacute;a&hellip;</em></strong></p>\n\n<p><strong><em><img src=\"http://www.vlute.edu.vn/images/hop_tac_skills_international/ht_skills_international_1.jpg\" style=\"width:600px\" /></em></strong></p>\n\n<p><em>B&agrave; Dridget Dennis - Gi&aacute;m đốc điều h&agrave;nh Skills International v&agrave; PGS.TS. Cao H&ugrave;ng Phi &ndash; Hiệu trưởng k&yacute; kết bản ghi nhớ trước sự chứng kiến của l&atilde;nh đạo hai b&ecirc;n</em></p>\n\n<p>Cụ thể trong buổi l&agrave;m việc, b&agrave; Bridget Dennis &ndash; Gi&aacute;m đốc điều h&agrave;nh Skills International cho biết mục đ&iacute;ch của chuyến thăm v&agrave; l&agrave;m việc với Đại học SPKT Vĩnh Long theo lời mời của PGS.TS Cao H&ugrave;ng Phi &ndash; Hiệu trưởng nh&agrave; trường l&agrave; t&igrave;m cơ hội hợp t&aacute;c giữa hai b&ecirc;n. B&ecirc;n cạnh đ&oacute; l&agrave; B&agrave; muốn t&igrave;m hiểu nhiều hơn về Nh&agrave; trường ở c&aacute;c lĩnh vực đ&agrave;o tạo, nh&acirc;n lực v&agrave; đặc biệt l&agrave; Trung t&acirc;m Đ&aacute;nh gi&aacute; Kỹ năng nghề Quốc gia của trường.</p>\n\n<p><em><img src=\"http://www.vlute.edu.vn/images/hop_tac_skills_international/ht_skills_international_2.jpg\" style=\"width:600px\" /></em></p>\n\n<p><em>B&agrave; Dridget Dennis t&igrave;m hiểu về Trường v&agrave;&hellip;</em></p>\n\n<p>Sau trao đổi, l&atilde;nh đạo hai b&ecirc;n đ&atilde; đi đến thống nhất v&agrave; k&yacute; kết bản ghi nhớ về thỏa thuận hợp t&aacute;c giữa tổ chức Skills International (New Zealand) v&agrave; trường Đại học SPKT Vĩnh Long với c&aacute;c điều khoản như: Trao đổi sinh vi&ecirc;n, giảng vi&ecirc;n, c&aacute;n bộ quản l&yacute; chia sẻ về văn h&oacute;a, ng&ocirc;n ngữ, đồng thời trao đổi kinh nghiệm chuy&ecirc;n m&ocirc;n, c&aacute;c phương ph&aacute;p giảng dạy, học tập; Hỗ trợ trung t&acirc;m đ&aacute;nh gi&aacute; kỹ năng nghề quốc gia của trường tiếp cận ti&ecirc;u chuẩn đ&aacute;nh gi&aacute; kỹ năng nghề New Zealand; Skills International hỗ trợ đ&aacute;nh gi&aacute; cấp chứng chỉ h&agrave;nh nghề cấp quốc tế cho sinh vi&ecirc;n, học vi&ecirc;n, th&iacute; sinh của trường; Hỗ trợ việc l&agrave;m cho sinh vi&ecirc;n trường c&oacute; thể l&agrave;m việc tại NewZealand, &Uacute;c;</p>\n\n<p><em><img src=\"http://www.vlute.edu.vn/images/hop_tac_skills_international/ht_skills_international_3.jpg\" style=\"width:600px\" /></em></p>\n\n<p><em>&hellip;giao lưu với sinh vi&ecirc;n trường Đại học SPKT Vĩnh Long</em></p>\n\n<p>Skills International quản l&yacute; bởi Ch&iacute;nh phủ New Zealand v&agrave; Hiệp hội c&aacute;c Doanh nghiệp C&ocirc;ng nghiệp New Zealand, được th&agrave;nh lập v&agrave;o năm 2006 theo y&ecirc;u cầu của c&aacute;c tổ chức quốc tế để chia sẻ c&aacute;ch tiếp cận về gi&aacute;o dục v&agrave; ph&aacute;t triển kỹ năng trong khu&ocirc;n khổ nghề. Skills International thuộc sở hữu Skills Organisation, tổ chức đ&agrave;o tạo ng&agrave;nh c&ocirc;ng nghiệp lớn nhất New Zealand, cung cấp quản l&yacute; đ&agrave;o tạo v&agrave; hỗ trợ cho hơn 20 ng&agrave;nh c&ocirc;ng nghiệp.</p>\n', 'dai-hoc-spkt-vinh-long-ky-ket-thoa-thuan-song-phuong-voi-to-chuc-skills-international-co-hoi-viec-lam-tai-new-zeland', 15, '2017-06-07', b'1'),
+(4, 'Làm việc với đoàn Koica Việt Nam về hoạt động của tình nguyện viên', 'images/tiep_koica_20_6_2017-3.JPG', 'Ngày 20/6/2017, Đại học SPKT Vĩnh Long đã có buổi tiếp và làm việc với đoàn Koica Việt Nam xoay quanh các hoạt động của tình nguyện viên GS. Hong Byung Chul tại Khoa Cơ khí Chế tạo máy và Khoa Điện – Điện tử của trường.', '<p>Ng&agrave;y 20/6/2017, Đại học SPKT Vĩnh Long đ&atilde; c&oacute; buổi tiếp v&agrave; l&agrave;m việc với đo&agrave;n Koica Việt Nam xoay quanh c&aacute;c hoạt động của t&igrave;nh nguyện vi&ecirc;n GS. Hong Byung Chul tại Khoa Cơ kh&iacute; Chế tạo m&aacute;y v&agrave; Khoa Điện &ndash; Điện tử của trường.</p>\n\n<p><img src=\"http://vlute.edu.vn/images/tiep_koica_20_6_2017-3.JPG\" style=\"width:550px\" /></p>\n\n<p>Trao đổi với Koica Việt Nam, TS. L&ecirc; Hồng Kỳ - Ph&oacute; Hiệu trưởng đ&atilde; tr&igrave;nh b&agrave;y c&aacute;c dự &aacute;n đang thực hiện tại trường SPKT Vĩnh Long c&oacute; sự tham gia của t&igrave;nh nguyện vi&ecirc;n GS. Hong đ&atilde; v&agrave; đang mang lại hiệu quả thiết thực. Đặc biệt l&agrave; dự &aacute;n nghi&ecirc;n cứu, cảnh b&aacute;o hiện tượng x&acirc;m nhập mặn ở Vĩnh Long v&agrave; c&aacute;c tỉnh khu vực đồng bằng s&ocirc;ng Cửu Long.</p>\n\n<p><img src=\"http://vlute.edu.vn/images/tiep_koica_20_6_2017-1.JPG\" style=\"width:550px\" /></p>\n\n<p><em>TS. L&ecirc; Hồng Kỳ - Ph&oacute; Hiệu trưởng thống nhất n&acirc;ng tầm c&aacute;c dự &aacute;n nghi&ecirc;n cứu c&oacute; sự hỗ trợ của t&igrave;nh nguyện vi&ecirc;n</em></p>\n\n<p>B&agrave; Kim Huyn Ril &ndash; Quản l&yacute; chương tr&igrave;nh t&igrave;nh nguyện vi&ecirc;n cho biết, mục đ&iacute;ch chuyến đến thăm v&agrave; l&agrave;m việc của Koica lần n&agrave;y l&agrave; kiểm tra hoạt động của t&igrave;nh nguyện vi&ecirc;n Hong, đồng thời chia sẽ, hỗ trợ với trường về c&aacute;c hoạt động sinh hoạt thường nhật của t&igrave;nh nguyện vi&ecirc;n.</p>\n\n<p><img src=\"http://vlute.edu.vn/images/tiep_koica_20_6_2017-2.JPG\" style=\"width:550px\" /></p>\n\n<p><em>B&agrave; Kim Huyn Ril đ&aacute;nh gi&aacute; cao hiệu quả hợp t&aacute;c giữa hai b&ecirc;n</em></p>\n\n<p>Tại buổi l&agrave;m việc, hai b&ecirc;n đ&atilde; đ&aacute;nh gi&aacute; cao hiệu quả mang lại của chương tr&igrave;nh t&igrave;nh nguyện vi&ecirc;n tại Đại học SPKT Vĩnh Long. Song song, hai b&ecirc;n thống nhất sẽ đẩy mạnh hơn nữa chương tr&igrave;nh hợp t&aacute;c t&igrave;nh nguyện vi&ecirc;n, n&acirc;ng tầm c&aacute;c dự &aacute;n nghi&ecirc;n cứu đạt chuẩn quốc gia trong thời gian tới.</p>\n', 'lam-viec-voi-doan-koica-viet-nam-ve-hoat-dong-cua-tinh-nguyen-vien', 13, '2017-06-20', b'1'),
+(5, 'Đánh giá kết quả và hiệu quả các chỉ tiêu kinh tế, kỹ thuật của các thiết bị thu hoạch, chẻ và sấy cây lác', 'images/news.png', 'Đó là nội dung buổi hội thảo khoa học tại Trung tâm kỹ thuật công nghệ cao – Khoa Cơ khí Chế tạo máy - Trường Đại học SPKT Vĩnh Long ngày 27/6/2017.', '<p>Đ&oacute; l&agrave; nội dung buổi hội thảo khoa học tại Trung t&acirc;m kỹ thuật c&ocirc;ng nghệ cao &ndash; Khoa Cơ kh&iacute; Chế tạo m&aacute;y - Trường Đại học SPKT Vĩnh Long ng&agrave;y 27/6/2017.</p>\n\n<p>Hội thảo đ&aacute;nh gi&aacute; đề t&agrave;i &ldquo;Nghi&ecirc;n cứu thiết kế, chế tạo thiết bị thu hoạch v&agrave; thiết bị sấy c&acirc;y l&aacute;c ở tỉnh Vĩnh Long&rdquo; l&agrave; đề t&agrave;i nghi&ecirc;n cứu khoa học cấp Tỉnh, được thực hiện trong 24 th&aacute;ng do PGS.TS. Cao H&ugrave;ng Phi l&agrave;m chủ nhiệm.</p>\n\n<p>&nbsp;</p>\n\n<p>Theo mục ti&ecirc;u ban đầu Trường Đại học SPKT Vĩnh Long&nbsp;đ&atilde; thiết kế, chế tạo thiết bị thu hoạch ph&ugrave; hợp với điều kiện tỉnh Vĩnh Long. Thứ hai l&agrave; chế tạo thiết bị sấy l&aacute;c nhằm đảm bảo hiệu quả sản xuất v&agrave; chất lượng l&aacute;c cao hơn phơi nắng. Sản phẩm thứ ba l&agrave; thiết bị chẻ l&aacute;c đảm bảo hiệu quả v&agrave; năng suất cao hơn phương ph&aacute;p truyền thống.</p>\n\n<p>Tham dự buổi hội thảo c&oacute; đại diện Sở Khoa học &ndash; C&ocirc;ng nghệ tỉnh Vĩnh Long, c&aacute;c doanh nghiệp cơ kh&iacute; trong tỉnh, đại biểu c&aacute;c n&ocirc;ng d&acirc;n trồng L&aacute;c ở huyện Vũng Li&ecirc;m, trung t&acirc;m khuyến c&ocirc;ng, khuyến n&ocirc;ng Tỉnh.</p>\n\n<p>C&aacute;c đại biểu tham dự hội thảo đ&aacute;nh gi&aacute; cao hiệu quả hoạt động của c&aacute;c thiết bị, đặc biệt l&agrave; m&aacute;y sấy l&aacute;c, đ&aacute;p ứng được nhu cầu sấy l&aacute;c trong thời tiết mưa nhiều như hiện nay. Thiết bị chẻ l&aacute;c đảm bảo hiệu quả sản xuất cao hơn c&aacute;c thiết bị truyền thống gấp nhiều lần.</p>\n\n<p>Sau hội thảo, c&aacute;c thiết bị tr&ecirc;n sẽ được đưa về x&atilde; Trung Th&agrave;nh Đ&ocirc;ng (Vũng Li&ecirc;m) để thực nghiệm.</p>\n', 'danh-gia-ket-qua-va-hieu-qua-cac-chi-tieu-kinh-te-ky-thuat-cua-cac-thiet-bi-thu-hoach-che-va-say-cay-lac', 13, '2017-06-27', b'1'),
+(6, 'Hội thảo Khao học tháng 4/2018 với chủ đề: \"Tăng cường liên kết giữa trường Đại học với doanh nghiệp trong quá trình đào tạo và giải quyết việc làm cho sinh viên\"', 'images/news.png', 'Nhằm tăng cường mối liên kết giữa trường Đại học sư phạm kỹ thuật Vĩnh Long và Doanh nghiệp trong và ngoài Tỉnh để nâng cao chất lượng đào tạo và giải quyết việc làm cho sinh viên, Hội thảo Khao học tháng 4/2018 với  chủ đề: \"Tăng cường liên kết giữa trường Đại học với doanh nghiệp trong quá trình đào tạo và giải quyết việc làm cho sinh viên\"', '<p>Nhằm tăng cường mối li&ecirc;n kết giữa trường Đại học sư phạm kỹ thuật Vĩnh Long v&agrave; Doanh nghiệp trong v&agrave; ngo&agrave;i Tỉnh để n&acirc;ng cao chất lượng đ&agrave;o tạo v&agrave; giải quyết việc l&agrave;m cho sinh vi&ecirc;n, Hội thảo Khao học th&aacute;ng 4/2018 với&nbsp; chủ đề: &quot;<em>Tăng cường li&ecirc;n kết giữa trường Đại học với doanh nghiệp trong qu&aacute; tr&igrave;nh đ&agrave;o tạo v&agrave; giải quyết việc l&agrave;m cho sinh vi&ecirc;n</em>&quot;</p>\n\n<p>- Thời gian:&nbsp;14 giờ ng&agrave;y 27/4/2018</p>\n\n<p>- Địa điểm: Hội trường C11</p>\n\n<p>- Thanh phần tham dự: L&atilde;nh đạo c&aacute;c doanh nghiệp, l&atilde;nh đạo trường Đại học sư phạm kỹ thuật Vĩnh Long, c&aacute;c c&aacute;n bộ, giảng vi&ecirc;n, sinh vi&ecirc;n,...</p>\n\n<p><img src=\"http://vlute.edu.vn/images/2018/pdf/hoi_thao_khoa_hoc_4_2018-1.jpg\" style=\"width:650px\" /></p>\n\n<p>File đ&iacute;nh k&egrave;m:&nbsp;<a href=\"http://vlute.edu.vn/images/2018/pdf/hoi_thao_khoa_hoc_4_2018.pdf\" target=\"_blank\">Kế hoạch tổ chức hội thảo khoa học 4/2018</a></p>\n', 'hoi-thao-khao-hoc-thang-42018-voi-chu-de-tang-cuong-lien-ket-giua-truong-dai-hoc-voi-doanh-nghiep-trong-qua-trinh-dao-tao-va-giai-quyet-viec-lam-cho-sinh-vien', 52, '2018-04-27', b'1'),
+(7, 'Nghiên cứu ứng dụng công nghệ cao trong sản xuất nông nghiệp', 'images/3egrf%20btr.JPG', 'Chiều 21/4, trường Đại học SPKT Vĩnh Long phối hợp với Công ty cổ phần cơ khí & xây dựng BROSTECH tổ chức buổi báo cáo nghiên cứu về công nghệ cao, thiết bị sản xuất rau quả theo hướng tự động hóa, tương thích điều kiện trồng tại Tây Nam Bộ.', '<p>&nbsp;<strong><em>Chiều 21/4, trường Đại học SPKT Vĩnh Long&nbsp;</em></strong><strong><em>phối hợp với</em></strong>&nbsp;<strong><em>C</em></strong><strong><em>&ocirc;ng ty cổ phần cơ kh&iacute;&nbsp;</em></strong><strong><em>&amp;&nbsp;</em></strong><strong><em>x&acirc;y dựng BROSTECH tổ chức buổi b&aacute;o c&aacute;o nghi&ecirc;n cứu về c&ocirc;ng nghệ cao, thiết bị sản xuất rau quả theo hướng&nbsp;</em></strong><strong><em>tự động h&oacute;a,&nbsp;</em></strong><strong><em>tương th&iacute;ch điều kiện trồng tại T&acirc;y Nam Bộ.</em></strong></p>\n\n<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Buổi b&aacute;o c&aacute;o với sự tham dự của PGS.TS Cao H&ugrave;ng Phi - Hiệu trưởng, TS. Nguyễn Thanh T&ugrave;ng - P.Hiệu trưởng, TS. L&ecirc; Hồng Kỳ - P. Hiệu trưởng v&agrave; qu&yacute; giảng vi&ecirc;n đến từ c&aacute;c ph&ograve;ng, khoa, bộ m&ocirc;n của trường c&ugrave;ng nh&oacute;m nghi&ecirc;n cứu đến từ c&ocirc;ng ty BROSTECH.</p>\n\n<p><img alt=\"2\" src=\"http://vlute.edu.vn/images/2018/duc/THANG04/2104BROSTECH/2.JPG\" style=\"height:277px; width:600px\" /></p>\n\n<p><em>Ứng dụng kỹ thuật v&agrave;o thực tiễn sản xuất được l&atilde;nh đạo quan t&acirc;m thực hiện</em></p>\n\n<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Nhằm thực hiện hỗ trợ người n&ocirc;ng d&acirc;n sản xuất v&agrave; ph&aacute;t triển trong n&ocirc;ng nghiệp theo hướng c&ocirc;ng nghệ cao ph&ugrave; hợp với điều kiện tại T&acirc;y Nam Bộ, nh&oacute;m nghi&ecirc;n cứu của c&ocirc;ng ty BROSTECH đ&atilde; tr&igrave;nh b&agrave;i b&aacute;o c&aacute;o về những nội dung: nghi&ecirc;n cứu x&acirc;y dựng phương &aacute;n xới đất v&agrave; l&ecirc;n liếp (luống), thiết kế chế tạo v&agrave; lập tr&igrave;nh hệ thống tưới nước v&agrave; b&oacute;n ph&acirc;n tự động trong nh&agrave; lưới, thiết kế x&acirc;y dựng lặp đặt hệ thống vườn sản xuất h&agrave;nh h&agrave;nh t&iacute;m c&ocirc;ng nghệ cao cơ giới h&oacute;a, tự động h&oacute;a v&agrave; x&acirc;y dựng phương &aacute;n thu hoạch h&agrave;nh c&ocirc;ng nghệ cao.</p>\n\n<p><img alt=\"3\" src=\"http://vlute.edu.vn/images/2018/duc/THANG04/2104BROSTECH/3.JPG\" style=\"height:276px; width:600px\" /></p>\n\n<p><em>Nh&agrave; khoa học - Nh&agrave; doanh nghiệp kết hợp trong ph&aacute;t triển n&ocirc;ng nghiệp th&ocirc;ng minh</em></p>\n\n<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Qua đ&acirc;y nh&oacute;m đ&atilde; đề ra nhiều phương &aacute;n c&ugrave;ng hợp t&aacute;c với nh&agrave; trường để đưa ra nhiều kế hoạch tối ưu để ứng dụng đưa v&agrave;o đời sống nhằm hỗ trợ cho b&agrave; con n&ocirc;ng d&acirc;n n&acirc;ng cao năng suất lao động, chất lượng sản phẩm, ph&ograve;ng tr&aacute;nh được nhiều rủi ro trong thiệt hai khi sản xuất, qua đ&oacute; từng bước x&acirc;y dựng một nền n&ocirc;ng nghiệp th&ocirc;ng minh.</p>\n', 'nghien-cuu-ung-dung-cong-nghe-cao-trong-san-xuat-nong-nghiep', 16, '2018-04-21', b'1');
 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `baiviet_chuyenmuc`
+-- Table structure for table `baiviet_chuyenmuc`
 --
 
 CREATE TABLE `baiviet_chuyenmuc` (
@@ -76,7 +86,7 @@ CREATE TABLE `baiviet_chuyenmuc` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Đang đổ dữ liệu cho bảng `baiviet_chuyenmuc`
+-- Dumping data for table `baiviet_chuyenmuc`
 --
 
 INSERT INTO `baiviet_chuyenmuc` (`IDBVCM`, `IDBV`, `IDCM`) VALUES
@@ -91,7 +101,7 @@ INSERT INTO `baiviet_chuyenmuc` (`IDBVCM`, `IDBV`, `IDCM`) VALUES
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `baiviet_nguoidung`
+-- Table structure for table `baiviet_nguoidung`
 --
 
 CREATE TABLE `baiviet_nguoidung` (
@@ -103,7 +113,7 @@ CREATE TABLE `baiviet_nguoidung` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `baiviet_tukhoa`
+-- Table structure for table `baiviet_tukhoa`
 --
 
 CREATE TABLE `baiviet_tukhoa` (
@@ -113,7 +123,7 @@ CREATE TABLE `baiviet_tukhoa` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Đang đổ dữ liệu cho bảng `baiviet_tukhoa`
+-- Dumping data for table `baiviet_tukhoa`
 --
 
 INSERT INTO `baiviet_tukhoa` (`IDTKBV`, `IDKHOA`, `IDBV`) VALUES
@@ -128,7 +138,7 @@ INSERT INTO `baiviet_tukhoa` (`IDTKBV`, `IDKHOA`, `IDBV`) VALUES
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `baocaotiendo`
+-- Table structure for table `baocaotiendo`
 --
 
 CREATE TABLE `baocaotiendo` (
@@ -143,7 +153,7 @@ CREATE TABLE `baocaotiendo` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `baokhoahoc`
+-- Table structure for table `baokhoahoc`
 --
 
 CREATE TABLE `baokhoahoc` (
@@ -162,10 +172,18 @@ CREATE TABLE `baokhoahoc` (
   `ANHIEN` bit(1) NOT NULL DEFAULT b'1'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Dumping data for table `baokhoahoc`
+--
+
+INSERT INTO `baokhoahoc` (`IDBAO`, `TENBAO`, `CAPBAIBAO`, `TENQG`, `TAPCHI`, `NAMXUATBAN`, `NOIDUNG`, `BIB`, `NGAYDANGBAI`, `FILE`, `DIEM`, `SOTIET`, `ANHIEN`) VALUES
+(1, 'Công tác đào tạo bồi dưỡng  giáo viên dạy nghề tại trường Đh SPKT Vĩnh Long thực trạng và giải pháp', 'Cấp quốc gia', 'Vietnam', 'Bài bái cấp trường', '2016-01-04', '', '', '2018-05-26', '', 0, 10, b'1'),
+(2, 'Ứng dụng Kit Arduion Uno vào hệ thống điều khiển tự động Application Kit Rduino Uno In Automatic Control Systems', 'Cấp quốc gia', 'Vietnam', '', '2016-05-04', '', '', '2018-05-26', '', 0, 20, b'1');
+
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `bieumau`
+-- Table structure for table `bieumau`
 --
 
 CREATE TABLE `bieumau` (
@@ -176,7 +194,7 @@ CREATE TABLE `bieumau` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Đang đổ dữ liệu cho bảng `bieumau`
+-- Dumping data for table `bieumau`
 --
 
 INSERT INTO `bieumau` (`IDBM`, `MABM`, `TENBM`, `FILE`) VALUES
@@ -207,7 +225,7 @@ INSERT INTO `bieumau` (`IDBM`, `MABM`, `TENBM`, `FILE`) VALUES
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `caidat`
+-- Table structure for table `caidat`
 --
 
 CREATE TABLE `caidat` (
@@ -218,7 +236,7 @@ CREATE TABLE `caidat` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
--- Đang đổ dữ liệu cho bảng `caidat`
+-- Dumping data for table `caidat`
 --
 
 INSERT INTO `caidat` (`IDCD`, `mail`, `passmail`, `portmail`) VALUES
@@ -227,7 +245,7 @@ INSERT INTO `caidat` (`IDCD`, `mail`, `passmail`, `portmail`) VALUES
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `capbaibao`
+-- Table structure for table `capbaibao`
 --
 
 CREATE TABLE `capbaibao` (
@@ -236,7 +254,7 @@ CREATE TABLE `capbaibao` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
--- Đang đổ dữ liệu cho bảng `capbaibao`
+-- Dumping data for table `capbaibao`
 --
 
 INSERT INTO `capbaibao` (`IDC`, `TENCAP`) VALUES
@@ -246,7 +264,7 @@ INSERT INTO `capbaibao` (`IDC`, `TENCAP`) VALUES
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `capdetai`
+-- Table structure for table `capdetai`
 --
 
 CREATE TABLE `capdetai` (
@@ -255,7 +273,7 @@ CREATE TABLE `capdetai` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
--- Đang đổ dữ liệu cho bảng `capdetai`
+-- Dumping data for table `capdetai`
 --
 
 INSERT INTO `capdetai` (`IDC`, `TENCAP`) VALUES
@@ -265,7 +283,7 @@ INSERT INTO `capdetai` (`IDC`, `TENCAP`) VALUES
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `chucdanhgiangvien`
+-- Table structure for table `chucdanhgiangvien`
 --
 
 CREATE TABLE `chucdanhgiangvien` (
@@ -274,7 +292,7 @@ CREATE TABLE `chucdanhgiangvien` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
--- Đang đổ dữ liệu cho bảng `chucdanhgiangvien`
+-- Dumping data for table `chucdanhgiangvien`
 --
 
 INSERT INTO `chucdanhgiangvien` (`IDCD`, `TENCHUCDANH`) VALUES
@@ -285,7 +303,7 @@ INSERT INTO `chucdanhgiangvien` (`IDCD`, `TENCHUCDANH`) VALUES
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `chucdanhkhoahoc`
+-- Table structure for table `chucdanhkhoahoc`
 --
 
 CREATE TABLE `chucdanhkhoahoc` (
@@ -294,7 +312,7 @@ CREATE TABLE `chucdanhkhoahoc` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
--- Đang đổ dữ liệu cho bảng `chucdanhkhoahoc`
+-- Dumping data for table `chucdanhkhoahoc`
 --
 
 INSERT INTO `chucdanhkhoahoc` (`IDCD`, `TENCHUCDANH`) VALUES
@@ -304,7 +322,7 @@ INSERT INTO `chucdanhkhoahoc` (`IDCD`, `TENCHUCDANH`) VALUES
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `chucvu`
+-- Table structure for table `chucvu`
 --
 
 CREATE TABLE `chucvu` (
@@ -313,7 +331,7 @@ CREATE TABLE `chucvu` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
--- Đang đổ dữ liệu cho bảng `chucvu`
+-- Dumping data for table `chucvu`
 --
 
 INSERT INTO `chucvu` (`IDCV`, `TENCHUCVU`) VALUES
@@ -326,7 +344,7 @@ INSERT INTO `chucvu` (`IDCV`, `TENCHUCVU`) VALUES
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `chuyenmuc`
+-- Table structure for table `chuyenmuc`
 --
 
 CREATE TABLE `chuyenmuc` (
@@ -338,7 +356,7 @@ CREATE TABLE `chuyenmuc` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Đang đổ dữ liệu cho bảng `chuyenmuc`
+-- Dumping data for table `chuyenmuc`
 --
 
 INSERT INTO `chuyenmuc` (`IDCM`, `TENCM`, `MOTACM`, `LINKCM`, `LOAICHUYENMUC`) VALUES
@@ -353,7 +371,7 @@ INSERT INTO `chuyenmuc` (`IDCM`, `TENCM`, `MOTACM`, `LINKCM`, `LOAICHUYENMUC`) V
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `congtacchuyenmon`
+-- Table structure for table `congtacchuyenmon`
 --
 
 CREATE TABLE `congtacchuyenmon` (
@@ -367,7 +385,7 @@ CREATE TABLE `congtacchuyenmon` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `daihoc`
+-- Table structure for table `daihoc`
 --
 
 CREATE TABLE `daihoc` (
@@ -383,7 +401,7 @@ CREATE TABLE `daihoc` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `detai`
+-- Table structure for table `detai`
 --
 
 CREATE TABLE `detai` (
@@ -414,7 +432,7 @@ CREATE TABLE `detai` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Đang đổ dữ liệu cho bảng `detai`
+-- Dumping data for table `detai`
 --
 
 INSERT INTO `detai` (`IDDT`, `MADETAI`, `TENDETAI`, `MUCTIEU`, `NOIDUNG`, `CAPDETAI`, `MOISANGTAO`, `THUOCCHUONGTRINH`, `SUCANTHIET`, `TINHHINHNGHIENCUU`, `NGHIENCUULIENQUAN`, `PHUONGPHAPKYTHUAT`, `KINHPHINGANSACH`, `KINHPHINGUONKHAC`, `THANGTHUCHIEN`, `THANGNAMBD`, `THANGNAMKT`, `KETQUA`, `FILE`, `NGAYTHEM`, `TRANGTHAI`, `DIEM`, `THOIGIANNGHIEMTHU`, `DUYET`) VALUES
@@ -425,7 +443,7 @@ INSERT INTO `detai` (`IDDT`, `MADETAI`, `TENDETAI`, `MUCTIEU`, `NOIDUNG`, `CAPDE
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `dexuatdetai`
+-- Table structure for table `dexuatdetai`
 --
 
 CREATE TABLE `dexuatdetai` (
@@ -435,7 +453,7 @@ CREATE TABLE `dexuatdetai` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Đang đổ dữ liệu cho bảng `dexuatdetai`
+-- Dumping data for table `dexuatdetai`
 --
 
 INSERT INTO `dexuatdetai` (`IDDX`, `IDDT`, `NGAYDEXUAT`) VALUES
@@ -446,7 +464,7 @@ INSERT INTO `dexuatdetai` (`IDDX`, `IDDT`, `NGAYDEXUAT`) VALUES
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `hocvi`
+-- Table structure for table `hocvi`
 --
 
 CREATE TABLE `hocvi` (
@@ -455,7 +473,7 @@ CREATE TABLE `hocvi` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
--- Đang đổ dữ liệu cho bảng `hocvi`
+-- Dumping data for table `hocvi`
 --
 
 INSERT INTO `hocvi` (`IDHV`, `TENHOCVI`) VALUES
@@ -465,7 +483,7 @@ INSERT INTO `hocvi` (`IDHV`, `TENHOCVI`) VALUES
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `kehoachxetchonnghiemthu`
+-- Table structure for table `kehoachxetchonnghiemthu`
 --
 
 CREATE TABLE `kehoachxetchonnghiemthu` (
@@ -479,7 +497,7 @@ CREATE TABLE `kehoachxetchonnghiemthu` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `khoabomon`
+-- Table structure for table `khoabomon`
 --
 
 CREATE TABLE `khoabomon` (
@@ -489,7 +507,7 @@ CREATE TABLE `khoabomon` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Đang đổ dữ liệu cho bảng `khoabomon`
+-- Dumping data for table `khoabomon`
 --
 
 INSERT INTO `khoabomon` (`IDKBM`, `TENKBM`, `TENTAT`) VALUES
@@ -516,7 +534,7 @@ INSERT INTO `khoabomon` (`IDKBM`, `TENKBM`, `TENTAT`) VALUES
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `kinhphi`
+-- Table structure for table `kinhphi`
 --
 
 CREATE TABLE `kinhphi` (
@@ -529,7 +547,7 @@ CREATE TABLE `kinhphi` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Đang đổ dữ liệu cho bảng `kinhphi`
+-- Dumping data for table `kinhphi`
 --
 
 INSERT INTO `kinhphi` (`IDKP`, `IDDT`, `KHOANCHI`, `NGUONNSNN`, `NGUONTUCO`, `NGUONLIENKET`) VALUES
@@ -546,7 +564,7 @@ INSERT INTO `kinhphi` (`IDKP`, `IDDT`, `KHOANCHI`, `NGUONNSNN`, `NGUONTUCO`, `NG
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `linhvuc`
+-- Table structure for table `linhvuc`
 --
 
 CREATE TABLE `linhvuc` (
@@ -555,7 +573,7 @@ CREATE TABLE `linhvuc` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
--- Đang đổ dữ liệu cho bảng `linhvuc`
+-- Dumping data for table `linhvuc`
 --
 
 INSERT INTO `linhvuc` (`IDLV`, `TENLINHVUC`) VALUES
@@ -569,7 +587,7 @@ INSERT INTO `linhvuc` (`IDLV`, `TENLINHVUC`) VALUES
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `linhvuckhoahoc`
+-- Table structure for table `linhvuckhoahoc`
 --
 
 CREATE TABLE `linhvuckhoahoc` (
@@ -579,7 +597,7 @@ CREATE TABLE `linhvuckhoahoc` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Đang đổ dữ liệu cho bảng `linhvuckhoahoc`
+-- Dumping data for table `linhvuckhoahoc`
 --
 
 INSERT INTO `linhvuckhoahoc` (`IDLV`, `IDDT`, `TENLV`) VALUES
@@ -590,7 +608,7 @@ INSERT INTO `linhvuckhoahoc` (`IDLV`, `IDDT`, `TENLV`) VALUES
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `loaihinh`
+-- Table structure for table `loaihinh`
 --
 
 CREATE TABLE `loaihinh` (
@@ -599,7 +617,7 @@ CREATE TABLE `loaihinh` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
--- Đang đổ dữ liệu cho bảng `loaihinh`
+-- Dumping data for table `loaihinh`
 --
 
 INSERT INTO `loaihinh` (`IDLH`, `TENLOAI`) VALUES
@@ -610,7 +628,7 @@ INSERT INTO `loaihinh` (`IDLH`, `TENLOAI`) VALUES
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `loaihinhnghiencuu`
+-- Table structure for table `loaihinhnghiencuu`
 --
 
 CREATE TABLE `loaihinhnghiencuu` (
@@ -620,7 +638,7 @@ CREATE TABLE `loaihinhnghiencuu` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Đang đổ dữ liệu cho bảng `loaihinhnghiencuu`
+-- Dumping data for table `loaihinhnghiencuu`
 --
 
 INSERT INTO `loaihinhnghiencuu` (`IDLH`, `IDDT`, `TENLH`) VALUES
@@ -631,7 +649,7 @@ INSERT INTO `loaihinhnghiencuu` (`IDLH`, `IDDT`, `TENLH`) VALUES
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `loaitaikhoan`
+-- Table structure for table `loaitaikhoan`
 --
 
 CREATE TABLE `loaitaikhoan` (
@@ -641,7 +659,7 @@ CREATE TABLE `loaitaikhoan` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Đang đổ dữ liệu cho bảng `loaitaikhoan`
+-- Dumping data for table `loaitaikhoan`
 --
 
 INSERT INTO `loaitaikhoan` (`IDLTK`, `TENLTK`, `TENCHITIETLTK`) VALUES
@@ -653,7 +671,7 @@ INSERT INTO `loaitaikhoan` (`IDLTK`, `TENLTK`, `TENCHITIETLTK`) VALUES
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `loaitaikhoan_nguoidung`
+-- Table structure for table `loaitaikhoan_nguoidung`
 --
 
 CREATE TABLE `loaitaikhoan_nguoidung` (
@@ -663,7 +681,7 @@ CREATE TABLE `loaitaikhoan_nguoidung` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Đang đổ dữ liệu cho bảng `loaitaikhoan_nguoidung`
+-- Dumping data for table `loaitaikhoan_nguoidung`
 --
 
 INSERT INTO `loaitaikhoan_nguoidung` (`IDLTKND`, `IDND`, `IDLTK`) VALUES
@@ -874,7 +892,7 @@ INSERT INTO `loaitaikhoan_nguoidung` (`IDLTKND`, `IDND`, `IDLTK`) VALUES
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `ngoaingu`
+-- Table structure for table `ngoaingu`
 --
 
 CREATE TABLE `ngoaingu` (
@@ -887,7 +905,7 @@ CREATE TABLE `ngoaingu` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `nguoidung`
+-- Table structure for table `nguoidung`
 --
 
 CREATE TABLE `nguoidung` (
@@ -923,7 +941,7 @@ CREATE TABLE `nguoidung` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Đang đổ dữ liệu cho bảng `nguoidung`
+-- Dumping data for table `nguoidung`
 --
 
 INSERT INTO `nguoidung` (`IDND`, `HO`, `TEN`, `GIOITINH`, `NGAYSINH`, `NOISINH`, `QUEQUAN`, `DANTOC`, `NAMNUOCHOCVI`, `NAMBONHIEM`, `CHOORIENG`, `DIENTHOAICQ`, `DIENTHOAINR`, `DIENTHOAIDD`, `FAX`, `MAIL`, `THACSICHUYENNGANH`, `NAMCAPBANGTSCN`, `NOIDAOTAOTSCN`, `TIENSICHUYENNGANH`, `NAMCAPBANGTSCN2`, `NOIDAOTAOTSCN2`, `TENLUANAN`, `TENDANGNHAP`, `MATKHAU`, `HINH`, `TRANGTHAI`, `XACNHAN`, `TOKEN`) VALUES
@@ -1135,7 +1153,7 @@ INSERT INTO `nguoidung` (`IDND`, `HO`, `TEN`, `GIOITINH`, `NGAYSINH`, `NOISINH`,
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `nguoidung_baibao`
+-- Table structure for table `nguoidung_baibao`
 --
 
 CREATE TABLE `nguoidung_baibao` (
@@ -1144,10 +1162,19 @@ CREATE TABLE `nguoidung_baibao` (
   `IDND` bigint(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Dumping data for table `nguoidung_baibao`
+--
+
+INSERT INTO `nguoidung_baibao` (`IDTB`, `IDBAO`, `IDND`) VALUES
+(3, 1, 29),
+(4, 1, 110),
+(5, 2, 97);
+
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `nguoidung_chucdanhgiangvien`
+-- Table structure for table `nguoidung_chucdanhgiangvien`
 --
 
 CREATE TABLE `nguoidung_chucdanhgiangvien` (
@@ -1157,7 +1184,7 @@ CREATE TABLE `nguoidung_chucdanhgiangvien` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Đang đổ dữ liệu cho bảng `nguoidung_chucdanhgiangvien`
+-- Dumping data for table `nguoidung_chucdanhgiangvien`
 --
 
 INSERT INTO `nguoidung_chucdanhgiangvien` (`IDNDCDGV`, `IDND`, `IDCD`) VALUES
@@ -1179,12 +1206,12 @@ INSERT INTO `nguoidung_chucdanhgiangvien` (`IDNDCDGV`, `IDND`, `IDCD`) VALUES
 (16, 137, 0),
 (17, 138, 0),
 (18, 139, 0),
-(20, 1, 0);
+(21, 1, 0);
 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `nguoidung_chucdanhkhoahoc`
+-- Table structure for table `nguoidung_chucdanhkhoahoc`
 --
 
 CREATE TABLE `nguoidung_chucdanhkhoahoc` (
@@ -1194,7 +1221,7 @@ CREATE TABLE `nguoidung_chucdanhkhoahoc` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Đang đổ dữ liệu cho bảng `nguoidung_chucdanhkhoahoc`
+-- Dumping data for table `nguoidung_chucdanhkhoahoc`
 --
 
 INSERT INTO `nguoidung_chucdanhkhoahoc` (`IDNDCD`, `IDND`, `IDCD`) VALUES
@@ -1216,12 +1243,12 @@ INSERT INTO `nguoidung_chucdanhkhoahoc` (`IDNDCD`, `IDND`, `IDCD`) VALUES
 (16, 137, 0),
 (17, 138, 0),
 (18, 139, 0),
-(20, 1, 0);
+(21, 1, 0);
 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `nguoidung_chucvu`
+-- Table structure for table `nguoidung_chucvu`
 --
 
 CREATE TABLE `nguoidung_chucvu` (
@@ -1231,7 +1258,7 @@ CREATE TABLE `nguoidung_chucvu` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Đang đổ dữ liệu cho bảng `nguoidung_chucvu`
+-- Dumping data for table `nguoidung_chucvu`
 --
 
 INSERT INTO `nguoidung_chucvu` (`IDNDCV`, `IDND`, `IDCV`) VALUES
@@ -1253,12 +1280,12 @@ INSERT INTO `nguoidung_chucvu` (`IDNDCV`, `IDND`, `IDCV`) VALUES
 (16, 137, 0),
 (17, 138, 0),
 (18, 139, 0),
-(20, 1, 0);
+(21, 1, 0);
 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `nguoidung_hocvi`
+-- Table structure for table `nguoidung_hocvi`
 --
 
 CREATE TABLE `nguoidung_hocvi` (
@@ -1268,7 +1295,7 @@ CREATE TABLE `nguoidung_hocvi` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Đang đổ dữ liệu cho bảng `nguoidung_hocvi`
+-- Dumping data for table `nguoidung_hocvi`
 --
 
 INSERT INTO `nguoidung_hocvi` (`IDNDHV`, `IDND`, `IDHV`) VALUES
@@ -1290,12 +1317,12 @@ INSERT INTO `nguoidung_hocvi` (`IDNDHV`, `IDND`, `IDHV`) VALUES
 (16, 137, 0),
 (17, 138, 0),
 (18, 139, 0),
-(20, 1, 0);
+(21, 1, 0);
 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `nguoidung_khoabomon`
+-- Table structure for table `nguoidung_khoabomon`
 --
 
 CREATE TABLE `nguoidung_khoabomon` (
@@ -1305,7 +1332,7 @@ CREATE TABLE `nguoidung_khoabomon` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Đang đổ dữ liệu cho bảng `nguoidung_khoabomon`
+-- Dumping data for table `nguoidung_khoabomon`
 --
 
 INSERT INTO `nguoidung_khoabomon` (`IDNDKBM`, `IDND`, `IDKBM`) VALUES
@@ -1327,12 +1354,12 @@ INSERT INTO `nguoidung_khoabomon` (`IDNDKBM`, `IDND`, `IDKBM`) VALUES
 (16, 137, 1),
 (17, 138, 1),
 (18, 139, 1),
-(20, 1, 1);
+(21, 1, 1);
 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `nguoidung_trinhdochuyenmon`
+-- Table structure for table `nguoidung_trinhdochuyenmon`
 --
 
 CREATE TABLE `nguoidung_trinhdochuyenmon` (
@@ -1342,7 +1369,7 @@ CREATE TABLE `nguoidung_trinhdochuyenmon` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Đang đổ dữ liệu cho bảng `nguoidung_trinhdochuyenmon`
+-- Dumping data for table `nguoidung_trinhdochuyenmon`
 --
 
 INSERT INTO `nguoidung_trinhdochuyenmon` (`IDNDTDCM`, `IDND`, `IDTD`) VALUES
@@ -1364,12 +1391,12 @@ INSERT INTO `nguoidung_trinhdochuyenmon` (`IDNDTDCM`, `IDND`, `IDTD`) VALUES
 (16, 137, 0),
 (17, 138, 0),
 (18, 139, 0),
-(20, 1, 2);
+(21, 1, 2);
 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `quocgia`
+-- Table structure for table `quocgia`
 --
 
 CREATE TABLE `quocgia` (
@@ -1380,7 +1407,7 @@ CREATE TABLE `quocgia` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 --
--- Đang đổ dữ liệu cho bảng `quocgia`
+-- Dumping data for table `quocgia`
 --
 
 INSERT INTO `quocgia` (`cc_fips`, `cc_iso`, `tld`, `ten`) VALUES
@@ -1657,7 +1684,7 @@ INSERT INTO `quocgia` (`cc_fips`, `cc_iso`, `tld`, `ten`) VALUES
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `slider`
+-- Table structure for table `slider`
 --
 
 CREATE TABLE `slider` (
@@ -1670,19 +1697,19 @@ CREATE TABLE `slider` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Đang đổ dữ liệu cho bảng `slider`
+-- Dumping data for table `slider`
 --
 
 INSERT INTO `slider` (`id`, `tieude`, `link`, `style`, `hinhanh`, `kichhoat`) VALUES
-(1, 'Cán bộ giảng viên', 'can-bo', 'slideInLeft', 'images/up.jpg', b'1'),
-(2, 'Sinh viên đăng ký học phần', 'dang-ky-hoc-phan', 'sliceUp', 'images/tay-nghe-asian-650x330.jpg', b'1'),
+(1, '', '', 'fold', 'images/3egrf%20btr.JPG', b'1'),
+(2, '', '', 'sliceUp', 'images/IMG_2024.JPG', b'1'),
 (3, 'Làm việc với đoàn Koica Việt Nam về hoạt động của tình nguyện viên', '', 'slideInRight', 'images/tiep_koica_20_6_2017-3.JPG', b'1'),
 (7, 'Liên kết hợp tác các lĩnh vực và chương trình trao đổi sinh viên với đại học KoreaTech', '', 'sliceUp', 'images/ht_skills_international_1.jpg', b'1');
 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `sotietquidoi`
+-- Table structure for table `sotietquidoi`
 --
 
 CREATE TABLE `sotietquidoi` (
@@ -1694,7 +1721,7 @@ CREATE TABLE `sotietquidoi` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
--- Đang đổ dữ liệu cho bảng `sotietquidoi`
+-- Dumping data for table `sotietquidoi`
 --
 
 INSERT INTO `sotietquidoi` (`IDS`, `BATDAU`, `KETTHUC`, `HESO`, `TOIDA`) VALUES
@@ -1705,7 +1732,7 @@ INSERT INTO `sotietquidoi` (`IDS`, `BATDAU`, `KETTHUC`, `HESO`, `TOIDA`) VALUES
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `thanhviendetai`
+-- Table structure for table `thanhviendetai`
 --
 
 CREATE TABLE `thanhviendetai` (
@@ -1717,7 +1744,7 @@ CREATE TABLE `thanhviendetai` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Đang đổ dữ liệu cho bảng `thanhviendetai`
+-- Dumping data for table `thanhviendetai`
 --
 
 INSERT INTO `thanhviendetai` (`IDTV`, `IDDT`, `IDND`, `CONGVIEC`, `TRACHNHIEM`) VALUES
@@ -1728,7 +1755,7 @@ INSERT INTO `thanhviendetai` (`IDTV`, `IDDT`, `IDND`, `CONGVIEC`, `TRACHNHIEM`) 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `tiendodukien`
+-- Table structure for table `tiendodukien`
 --
 
 CREATE TABLE `tiendodukien` (
@@ -1743,7 +1770,7 @@ CREATE TABLE `tiendodukien` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `tochucthamgia`
+-- Table structure for table `tochucthamgia`
 --
 
 CREATE TABLE `tochucthamgia` (
@@ -1757,7 +1784,7 @@ CREATE TABLE `tochucthamgia` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `trinhdochuyenmon`
+-- Table structure for table `trinhdochuyenmon`
 --
 
 CREATE TABLE `trinhdochuyenmon` (
@@ -1766,7 +1793,7 @@ CREATE TABLE `trinhdochuyenmon` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
--- Đang đổ dữ liệu cho bảng `trinhdochuyenmon`
+-- Dumping data for table `trinhdochuyenmon`
 --
 
 INSERT INTO `trinhdochuyenmon` (`IDTD`, `TENTRINHDO`) VALUES
@@ -1779,7 +1806,7 @@ INSERT INTO `trinhdochuyenmon` (`IDTD`, `TENTRINHDO`) VALUES
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `tukhoa`
+-- Table structure for table `tukhoa`
 --
 
 CREATE TABLE `tukhoa` (
@@ -1788,16 +1815,18 @@ CREATE TABLE `tukhoa` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Đang đổ dữ liệu cho bảng `tukhoa`
+-- Dumping data for table `tukhoa`
 --
 
 INSERT INTO `tukhoa` (`IDKHOA`, `TENKHOA`) VALUES
-(5, 'hop tac quoc te');
+(6, 'dao tao'),
+(5, 'hop tac quoc te'),
+(7, 'Kit Arduion Uno');
 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `xetduyetdetai`
+-- Table structure for table `xetduyetdetai`
 --
 
 CREATE TABLE `xetduyetdetai` (
@@ -1811,7 +1840,7 @@ CREATE TABLE `xetduyetdetai` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Đang đổ dữ liệu cho bảng `xetduyetdetai`
+-- Dumping data for table `xetduyetdetai`
 --
 
 INSERT INTO `xetduyetdetai` (`IDXD`, `IDDT`, `IDND`, `NHIEMVU`, `LOAIHD`, `THOIGIANPHANCONG`, `GHICHU`) VALUES
@@ -1828,7 +1857,7 @@ INSERT INTO `xetduyetdetai` (`IDXD`, `IDDT`, `IDND`, `NHIEMVU`, `LOAIHD`, `THOIG
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `xetduyetnghiemthu`
+-- Table structure for table `xetduyetnghiemthu`
 --
 
 CREATE TABLE `xetduyetnghiemthu` (
@@ -1841,7 +1870,7 @@ CREATE TABLE `xetduyetnghiemthu` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Đang đổ dữ liệu cho bảng `xetduyetnghiemthu`
+-- Dumping data for table `xetduyetnghiemthu`
 --
 
 INSERT INTO `xetduyetnghiemthu` (`IDNT`, `IDDT`, `IDND`, `NHIEMVU`, `THOIGIANPHANCONG`, `GHICHU`) VALUES
@@ -1853,115 +1882,115 @@ INSERT INTO `xetduyetnghiemthu` (`IDNT`, `IDDT`, `IDND`, `NHIEMVU`, `THOIGIANPHA
 (6, 3, 3, 'Thư ký', '2018-05-25 15:27:32', '');
 
 --
--- Chỉ mục cho các bảng đã đổ
+-- Indexes for dumped tables
 --
 
 --
--- Chỉ mục cho bảng `baibao_tukhoa`
+-- Indexes for table `baibao_tukhoa`
 --
 ALTER TABLE `baibao_tukhoa`
   ADD PRIMARY KEY (`IDBBTK`);
 
 --
--- Chỉ mục cho bảng `baiviet`
+-- Indexes for table `baiviet`
 --
 ALTER TABLE `baiviet`
   ADD PRIMARY KEY (`IDBV`);
 
 --
--- Chỉ mục cho bảng `baiviet_chuyenmuc`
+-- Indexes for table `baiviet_chuyenmuc`
 --
 ALTER TABLE `baiviet_chuyenmuc`
   ADD PRIMARY KEY (`IDBVCM`);
 
 --
--- Chỉ mục cho bảng `baiviet_nguoidung`
+-- Indexes for table `baiviet_nguoidung`
 --
 ALTER TABLE `baiviet_nguoidung`
   ADD PRIMARY KEY (`IDBVND`);
 
 --
--- Chỉ mục cho bảng `baiviet_tukhoa`
+-- Indexes for table `baiviet_tukhoa`
 --
 ALTER TABLE `baiviet_tukhoa`
   ADD PRIMARY KEY (`IDTKBV`);
 
 --
--- Chỉ mục cho bảng `baocaotiendo`
+-- Indexes for table `baocaotiendo`
 --
 ALTER TABLE `baocaotiendo`
   ADD PRIMARY KEY (`IDTD`);
 
 --
--- Chỉ mục cho bảng `baokhoahoc`
+-- Indexes for table `baokhoahoc`
 --
 ALTER TABLE `baokhoahoc`
   ADD PRIMARY KEY (`IDBAO`),
   ADD UNIQUE KEY `TENBAO` (`TENBAO`);
 
 --
--- Chỉ mục cho bảng `bieumau`
+-- Indexes for table `bieumau`
 --
 ALTER TABLE `bieumau`
   ADD PRIMARY KEY (`IDBM`);
 
 --
--- Chỉ mục cho bảng `caidat`
+-- Indexes for table `caidat`
 --
 ALTER TABLE `caidat`
   ADD PRIMARY KEY (`IDCD`);
 
 --
--- Chỉ mục cho bảng `capbaibao`
+-- Indexes for table `capbaibao`
 --
 ALTER TABLE `capbaibao`
   ADD PRIMARY KEY (`IDC`);
 
 --
--- Chỉ mục cho bảng `capdetai`
+-- Indexes for table `capdetai`
 --
 ALTER TABLE `capdetai`
   ADD PRIMARY KEY (`IDC`),
   ADD UNIQUE KEY `TENCAP` (`TENCAP`);
 
 --
--- Chỉ mục cho bảng `chucdanhgiangvien`
+-- Indexes for table `chucdanhgiangvien`
 --
 ALTER TABLE `chucdanhgiangvien`
   ADD PRIMARY KEY (`IDCD`);
 
 --
--- Chỉ mục cho bảng `chucdanhkhoahoc`
+-- Indexes for table `chucdanhkhoahoc`
 --
 ALTER TABLE `chucdanhkhoahoc`
   ADD PRIMARY KEY (`IDCD`);
 
 --
--- Chỉ mục cho bảng `chucvu`
+-- Indexes for table `chucvu`
 --
 ALTER TABLE `chucvu`
   ADD PRIMARY KEY (`IDCV`);
 
 --
--- Chỉ mục cho bảng `chuyenmuc`
+-- Indexes for table `chuyenmuc`
 --
 ALTER TABLE `chuyenmuc`
   ADD PRIMARY KEY (`IDCM`);
 
 --
--- Chỉ mục cho bảng `congtacchuyenmon`
+-- Indexes for table `congtacchuyenmon`
 --
 ALTER TABLE `congtacchuyenmon`
   ADD PRIMARY KEY (`IDCT`);
 
 --
--- Chỉ mục cho bảng `daihoc`
+-- Indexes for table `daihoc`
 --
 ALTER TABLE `daihoc`
   ADD PRIMARY KEY (`IDDH`);
 
 --
--- Chỉ mục cho bảng `detai`
+-- Indexes for table `detai`
 --
 ALTER TABLE `detai`
   ADD PRIMARY KEY (`IDDT`),
@@ -1969,83 +1998,83 @@ ALTER TABLE `detai`
   ADD UNIQUE KEY `detai_MADETAI_uindex` (`MADETAI`);
 
 --
--- Chỉ mục cho bảng `dexuatdetai`
+-- Indexes for table `dexuatdetai`
 --
 ALTER TABLE `dexuatdetai`
   ADD PRIMARY KEY (`IDDX`),
   ADD UNIQUE KEY `dexuatdetai_IDDT_uindex` (`IDDT`);
 
 --
--- Chỉ mục cho bảng `hocvi`
+-- Indexes for table `hocvi`
 --
 ALTER TABLE `hocvi`
   ADD PRIMARY KEY (`IDHV`);
 
 --
--- Chỉ mục cho bảng `kehoachxetchonnghiemthu`
+-- Indexes for table `kehoachxetchonnghiemthu`
 --
 ALTER TABLE `kehoachxetchonnghiemthu`
   ADD PRIMARY KEY (`IDKHXC`);
 
 --
--- Chỉ mục cho bảng `khoabomon`
+-- Indexes for table `khoabomon`
 --
 ALTER TABLE `khoabomon`
   ADD PRIMARY KEY (`IDKBM`);
 
 --
--- Chỉ mục cho bảng `kinhphi`
+-- Indexes for table `kinhphi`
 --
 ALTER TABLE `kinhphi`
   ADD PRIMARY KEY (`IDKP`);
 
 --
--- Chỉ mục cho bảng `linhvuc`
+-- Indexes for table `linhvuc`
 --
 ALTER TABLE `linhvuc`
   ADD PRIMARY KEY (`IDLV`),
   ADD UNIQUE KEY `linhvuc_TENLINHVUC_uindex` (`TENLINHVUC`);
 
 --
--- Chỉ mục cho bảng `linhvuckhoahoc`
+-- Indexes for table `linhvuckhoahoc`
 --
 ALTER TABLE `linhvuckhoahoc`
   ADD PRIMARY KEY (`IDLV`);
 
 --
--- Chỉ mục cho bảng `loaihinh`
+-- Indexes for table `loaihinh`
 --
 ALTER TABLE `loaihinh`
   ADD PRIMARY KEY (`IDLH`),
   ADD UNIQUE KEY `loaihinh_TENLOAI_uindex` (`TENLOAI`);
 
 --
--- Chỉ mục cho bảng `loaihinhnghiencuu`
+-- Indexes for table `loaihinhnghiencuu`
 --
 ALTER TABLE `loaihinhnghiencuu`
   ADD PRIMARY KEY (`IDLH`);
 
 --
--- Chỉ mục cho bảng `loaitaikhoan`
+-- Indexes for table `loaitaikhoan`
 --
 ALTER TABLE `loaitaikhoan`
   ADD PRIMARY KEY (`IDLTK`);
 
 --
--- Chỉ mục cho bảng `loaitaikhoan_nguoidung`
+-- Indexes for table `loaitaikhoan_nguoidung`
 --
 ALTER TABLE `loaitaikhoan_nguoidung`
   ADD PRIMARY KEY (`IDLTKND`),
   ADD UNIQUE KEY `loaitaikhoan_nguoidung_IDND_uindex` (`IDND`);
 
 --
--- Chỉ mục cho bảng `ngoaingu`
+-- Indexes for table `ngoaingu`
 --
 ALTER TABLE `ngoaingu`
   ADD PRIMARY KEY (`IDNN`);
 
 --
--- Chỉ mục cho bảng `nguoidung`
+-- Indexes for table `nguoidung`
 --
 ALTER TABLE `nguoidung`
   ADD PRIMARY KEY (`IDND`),
@@ -2053,348 +2082,396 @@ ALTER TABLE `nguoidung`
   ADD UNIQUE KEY `nguoidung_TENDANGNHAP_uindex` (`TENDANGNHAP`);
 
 --
--- Chỉ mục cho bảng `nguoidung_baibao`
+-- Indexes for table `nguoidung_baibao`
 --
 ALTER TABLE `nguoidung_baibao`
   ADD PRIMARY KEY (`IDTB`);
 
 --
--- Chỉ mục cho bảng `nguoidung_chucdanhgiangvien`
+-- Indexes for table `nguoidung_chucdanhgiangvien`
 --
 ALTER TABLE `nguoidung_chucdanhgiangvien`
   ADD PRIMARY KEY (`IDNDCDGV`);
 
 --
--- Chỉ mục cho bảng `nguoidung_chucdanhkhoahoc`
+-- Indexes for table `nguoidung_chucdanhkhoahoc`
 --
 ALTER TABLE `nguoidung_chucdanhkhoahoc`
   ADD PRIMARY KEY (`IDNDCD`);
 
 --
--- Chỉ mục cho bảng `nguoidung_chucvu`
+-- Indexes for table `nguoidung_chucvu`
 --
 ALTER TABLE `nguoidung_chucvu`
   ADD PRIMARY KEY (`IDNDCV`);
 
 --
--- Chỉ mục cho bảng `nguoidung_hocvi`
+-- Indexes for table `nguoidung_hocvi`
 --
 ALTER TABLE `nguoidung_hocvi`
   ADD PRIMARY KEY (`IDNDHV`);
 
 --
--- Chỉ mục cho bảng `nguoidung_khoabomon`
+-- Indexes for table `nguoidung_khoabomon`
 --
 ALTER TABLE `nguoidung_khoabomon`
   ADD PRIMARY KEY (`IDNDKBM`);
 
 --
--- Chỉ mục cho bảng `nguoidung_trinhdochuyenmon`
+-- Indexes for table `nguoidung_trinhdochuyenmon`
 --
 ALTER TABLE `nguoidung_trinhdochuyenmon`
   ADD PRIMARY KEY (`IDNDTDCM`);
 
 --
--- Chỉ mục cho bảng `quocgia`
+-- Indexes for table `quocgia`
 --
 ALTER TABLE `quocgia`
   ADD KEY `idx_cc_fips` (`cc_fips`),
   ADD KEY `idx_cc_iso` (`cc_iso`);
 
 --
--- Chỉ mục cho bảng `slider`
+-- Indexes for table `slider`
 --
 ALTER TABLE `slider`
   ADD PRIMARY KEY (`id`);
 
 --
--- Chỉ mục cho bảng `sotietquidoi`
+-- Indexes for table `sotietquidoi`
 --
 ALTER TABLE `sotietquidoi`
   ADD PRIMARY KEY (`IDS`);
 
 --
--- Chỉ mục cho bảng `thanhviendetai`
+-- Indexes for table `thanhviendetai`
 --
 ALTER TABLE `thanhviendetai`
   ADD PRIMARY KEY (`IDTV`);
 
 --
--- Chỉ mục cho bảng `tiendodukien`
+-- Indexes for table `tiendodukien`
 --
 ALTER TABLE `tiendodukien`
   ADD PRIMARY KEY (`IDDKTD`);
 
 --
--- Chỉ mục cho bảng `tochucthamgia`
+-- Indexes for table `tochucthamgia`
 --
 ALTER TABLE `tochucthamgia`
   ADD PRIMARY KEY (`IDTC`);
 
 --
--- Chỉ mục cho bảng `trinhdochuyenmon`
+-- Indexes for table `trinhdochuyenmon`
 --
 ALTER TABLE `trinhdochuyenmon`
   ADD PRIMARY KEY (`IDTD`);
 
 --
--- Chỉ mục cho bảng `tukhoa`
+-- Indexes for table `tukhoa`
 --
 ALTER TABLE `tukhoa`
   ADD PRIMARY KEY (`IDKHOA`),
   ADD UNIQUE KEY `TENKHOA` (`TENKHOA`);
 
 --
--- Chỉ mục cho bảng `xetduyetdetai`
+-- Indexes for table `xetduyetdetai`
 --
 ALTER TABLE `xetduyetdetai`
   ADD PRIMARY KEY (`IDXD`);
 
 --
--- Chỉ mục cho bảng `xetduyetnghiemthu`
+-- Indexes for table `xetduyetnghiemthu`
 --
 ALTER TABLE `xetduyetnghiemthu`
   ADD PRIMARY KEY (`IDNT`);
 
 --
--- AUTO_INCREMENT cho các bảng đã đổ
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT cho bảng `baibao_tukhoa`
+-- AUTO_INCREMENT for table `baibao_tukhoa`
 --
 ALTER TABLE `baibao_tukhoa`
-  MODIFY `IDBBTK` bigint(20) NOT NULL AUTO_INCREMENT;
+  MODIFY `IDBBTK` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
 --
--- AUTO_INCREMENT cho bảng `baiviet`
+-- AUTO_INCREMENT for table `baiviet`
 --
 ALTER TABLE `baiviet`
   MODIFY `IDBV` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+
 --
--- AUTO_INCREMENT cho bảng `baiviet_chuyenmuc`
+-- AUTO_INCREMENT for table `baiviet_chuyenmuc`
 --
 ALTER TABLE `baiviet_chuyenmuc`
   MODIFY `IDBVCM` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+
 --
--- AUTO_INCREMENT cho bảng `baiviet_nguoidung`
+-- AUTO_INCREMENT for table `baiviet_nguoidung`
 --
 ALTER TABLE `baiviet_nguoidung`
   MODIFY `IDBVND` bigint(20) NOT NULL AUTO_INCREMENT;
+
 --
--- AUTO_INCREMENT cho bảng `baiviet_tukhoa`
+-- AUTO_INCREMENT for table `baiviet_tukhoa`
 --
 ALTER TABLE `baiviet_tukhoa`
   MODIFY `IDTKBV` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+
 --
--- AUTO_INCREMENT cho bảng `baocaotiendo`
+-- AUTO_INCREMENT for table `baocaotiendo`
 --
 ALTER TABLE `baocaotiendo`
   MODIFY `IDTD` bigint(20) NOT NULL AUTO_INCREMENT;
+
 --
--- AUTO_INCREMENT cho bảng `baokhoahoc`
+-- AUTO_INCREMENT for table `baokhoahoc`
 --
 ALTER TABLE `baokhoahoc`
-  MODIFY `IDBAO` bigint(20) NOT NULL AUTO_INCREMENT;
+  MODIFY `IDBAO` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
 --
--- AUTO_INCREMENT cho bảng `bieumau`
+-- AUTO_INCREMENT for table `bieumau`
 --
 ALTER TABLE `bieumau`
   MODIFY `IDBM` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=53;
+
 --
--- AUTO_INCREMENT cho bảng `caidat`
+-- AUTO_INCREMENT for table `caidat`
 --
 ALTER TABLE `caidat`
   MODIFY `IDCD` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
 --
--- AUTO_INCREMENT cho bảng `capbaibao`
+-- AUTO_INCREMENT for table `capbaibao`
 --
 ALTER TABLE `capbaibao`
   MODIFY `IDC` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
 --
--- AUTO_INCREMENT cho bảng `capdetai`
+-- AUTO_INCREMENT for table `capdetai`
 --
 ALTER TABLE `capdetai`
   MODIFY `IDC` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
 --
--- AUTO_INCREMENT cho bảng `chucdanhgiangvien`
+-- AUTO_INCREMENT for table `chucdanhgiangvien`
 --
 ALTER TABLE `chucdanhgiangvien`
   MODIFY `IDCD` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
 --
--- AUTO_INCREMENT cho bảng `chucdanhkhoahoc`
+-- AUTO_INCREMENT for table `chucdanhkhoahoc`
 --
 ALTER TABLE `chucdanhkhoahoc`
   MODIFY `IDCD` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
 --
--- AUTO_INCREMENT cho bảng `chucvu`
+-- AUTO_INCREMENT for table `chucvu`
 --
 ALTER TABLE `chucvu`
   MODIFY `IDCV` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+
 --
--- AUTO_INCREMENT cho bảng `chuyenmuc`
+-- AUTO_INCREMENT for table `chuyenmuc`
 --
 ALTER TABLE `chuyenmuc`
   MODIFY `IDCM` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+
 --
--- AUTO_INCREMENT cho bảng `congtacchuyenmon`
+-- AUTO_INCREMENT for table `congtacchuyenmon`
 --
 ALTER TABLE `congtacchuyenmon`
   MODIFY `IDCT` bigint(20) NOT NULL AUTO_INCREMENT;
+
 --
--- AUTO_INCREMENT cho bảng `daihoc`
+-- AUTO_INCREMENT for table `daihoc`
 --
 ALTER TABLE `daihoc`
   MODIFY `IDDH` bigint(20) NOT NULL AUTO_INCREMENT;
+
 --
--- AUTO_INCREMENT cho bảng `detai`
+-- AUTO_INCREMENT for table `detai`
 --
 ALTER TABLE `detai`
   MODIFY `IDDT` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
 --
--- AUTO_INCREMENT cho bảng `dexuatdetai`
+-- AUTO_INCREMENT for table `dexuatdetai`
 --
 ALTER TABLE `dexuatdetai`
   MODIFY `IDDX` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
 --
--- AUTO_INCREMENT cho bảng `hocvi`
+-- AUTO_INCREMENT for table `hocvi`
 --
 ALTER TABLE `hocvi`
   MODIFY `IDHV` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
 --
--- AUTO_INCREMENT cho bảng `kehoachxetchonnghiemthu`
+-- AUTO_INCREMENT for table `kehoachxetchonnghiemthu`
 --
 ALTER TABLE `kehoachxetchonnghiemthu`
   MODIFY `IDKHXC` bigint(20) NOT NULL AUTO_INCREMENT;
+
 --
--- AUTO_INCREMENT cho bảng `khoabomon`
+-- AUTO_INCREMENT for table `khoabomon`
 --
 ALTER TABLE `khoabomon`
   MODIFY `IDKBM` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+
 --
--- AUTO_INCREMENT cho bảng `kinhphi`
+-- AUTO_INCREMENT for table `kinhphi`
 --
 ALTER TABLE `kinhphi`
   MODIFY `IDKP` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+
 --
--- AUTO_INCREMENT cho bảng `linhvuc`
+-- AUTO_INCREMENT for table `linhvuc`
 --
 ALTER TABLE `linhvuc`
   MODIFY `IDLV` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+
 --
--- AUTO_INCREMENT cho bảng `linhvuckhoahoc`
+-- AUTO_INCREMENT for table `linhvuckhoahoc`
 --
 ALTER TABLE `linhvuckhoahoc`
   MODIFY `IDLV` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
 --
--- AUTO_INCREMENT cho bảng `loaihinh`
+-- AUTO_INCREMENT for table `loaihinh`
 --
 ALTER TABLE `loaihinh`
   MODIFY `IDLH` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+
 --
--- AUTO_INCREMENT cho bảng `loaihinhnghiencuu`
+-- AUTO_INCREMENT for table `loaihinhnghiencuu`
 --
 ALTER TABLE `loaihinhnghiencuu`
   MODIFY `IDLH` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
 --
--- AUTO_INCREMENT cho bảng `loaitaikhoan`
+-- AUTO_INCREMENT for table `loaitaikhoan`
 --
 ALTER TABLE `loaitaikhoan`
   MODIFY `IDLTK` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
 --
--- AUTO_INCREMENT cho bảng `loaitaikhoan_nguoidung`
+-- AUTO_INCREMENT for table `loaitaikhoan_nguoidung`
 --
 ALTER TABLE `loaitaikhoan_nguoidung`
   MODIFY `IDLTKND` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=214;
+
 --
--- AUTO_INCREMENT cho bảng `ngoaingu`
+-- AUTO_INCREMENT for table `ngoaingu`
 --
 ALTER TABLE `ngoaingu`
   MODIFY `IDNN` bigint(20) NOT NULL AUTO_INCREMENT;
+
 --
--- AUTO_INCREMENT cho bảng `nguoidung`
+-- AUTO_INCREMENT for table `nguoidung`
 --
 ALTER TABLE `nguoidung`
   MODIFY `IDND` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=214;
+
 --
--- AUTO_INCREMENT cho bảng `nguoidung_baibao`
+-- AUTO_INCREMENT for table `nguoidung_baibao`
 --
 ALTER TABLE `nguoidung_baibao`
-  MODIFY `IDTB` bigint(20) NOT NULL AUTO_INCREMENT;
+  MODIFY `IDTB` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
 --
--- AUTO_INCREMENT cho bảng `nguoidung_chucdanhgiangvien`
+-- AUTO_INCREMENT for table `nguoidung_chucdanhgiangvien`
 --
 ALTER TABLE `nguoidung_chucdanhgiangvien`
-  MODIFY `IDNDCDGV` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `IDNDCDGV` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+
 --
--- AUTO_INCREMENT cho bảng `nguoidung_chucdanhkhoahoc`
+-- AUTO_INCREMENT for table `nguoidung_chucdanhkhoahoc`
 --
 ALTER TABLE `nguoidung_chucdanhkhoahoc`
-  MODIFY `IDNDCD` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `IDNDCD` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+
 --
--- AUTO_INCREMENT cho bảng `nguoidung_chucvu`
+-- AUTO_INCREMENT for table `nguoidung_chucvu`
 --
 ALTER TABLE `nguoidung_chucvu`
-  MODIFY `IDNDCV` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `IDNDCV` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+
 --
--- AUTO_INCREMENT cho bảng `nguoidung_hocvi`
+-- AUTO_INCREMENT for table `nguoidung_hocvi`
 --
 ALTER TABLE `nguoidung_hocvi`
-  MODIFY `IDNDHV` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `IDNDHV` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+
 --
--- AUTO_INCREMENT cho bảng `nguoidung_khoabomon`
+-- AUTO_INCREMENT for table `nguoidung_khoabomon`
 --
 ALTER TABLE `nguoidung_khoabomon`
-  MODIFY `IDNDKBM` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `IDNDKBM` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+
 --
--- AUTO_INCREMENT cho bảng `nguoidung_trinhdochuyenmon`
+-- AUTO_INCREMENT for table `nguoidung_trinhdochuyenmon`
 --
 ALTER TABLE `nguoidung_trinhdochuyenmon`
-  MODIFY `IDNDTDCM` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `IDNDTDCM` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+
 --
--- AUTO_INCREMENT cho bảng `slider`
+-- AUTO_INCREMENT for table `slider`
 --
 ALTER TABLE `slider`
   MODIFY `id` bigint(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+
 --
--- AUTO_INCREMENT cho bảng `sotietquidoi`
+-- AUTO_INCREMENT for table `sotietquidoi`
 --
 ALTER TABLE `sotietquidoi`
   MODIFY `IDS` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
 --
--- AUTO_INCREMENT cho bảng `thanhviendetai`
+-- AUTO_INCREMENT for table `thanhviendetai`
 --
 ALTER TABLE `thanhviendetai`
   MODIFY `IDTV` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
 --
--- AUTO_INCREMENT cho bảng `tiendodukien`
+-- AUTO_INCREMENT for table `tiendodukien`
 --
 ALTER TABLE `tiendodukien`
   MODIFY `IDDKTD` bigint(20) NOT NULL AUTO_INCREMENT;
+
 --
--- AUTO_INCREMENT cho bảng `tochucthamgia`
+-- AUTO_INCREMENT for table `tochucthamgia`
 --
 ALTER TABLE `tochucthamgia`
   MODIFY `IDTC` bigint(20) NOT NULL AUTO_INCREMENT;
+
 --
--- AUTO_INCREMENT cho bảng `trinhdochuyenmon`
+-- AUTO_INCREMENT for table `trinhdochuyenmon`
 --
 ALTER TABLE `trinhdochuyenmon`
   MODIFY `IDTD` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+
 --
--- AUTO_INCREMENT cho bảng `tukhoa`
+-- AUTO_INCREMENT for table `tukhoa`
 --
 ALTER TABLE `tukhoa`
-  MODIFY `IDKHOA` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `IDKHOA` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+
 --
--- AUTO_INCREMENT cho bảng `xetduyetdetai`
+-- AUTO_INCREMENT for table `xetduyetdetai`
 --
 ALTER TABLE `xetduyetdetai`
   MODIFY `IDXD` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+
 --
--- AUTO_INCREMENT cho bảng `xetduyetnghiemthu`
+-- AUTO_INCREMENT for table `xetduyetnghiemthu`
 --
 ALTER TABLE `xetduyetnghiemthu`
   MODIFY `IDNT` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+COMMIT;
+
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
