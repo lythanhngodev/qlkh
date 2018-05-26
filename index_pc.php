@@ -4,7 +4,7 @@
 <head>
 <meta charset="utf-8">
 	<?php include_once "header.php" ?>
-	<base href="<?php echo $qlkh['HOSTGOC'] ?>" /><script defer src="fontawesome/svg-with-js/js/fontawesome-all.js"></script><link rel="stylesheet" type="text/css" href="css/style.css"><link rel="stylesheet" type="text/css" href="css/animate.css"><link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css"><script type="text/javascript" src="bootstrap/js/bootstrap.js"></script><script src="js/jquery-3.3.1.min.js"></script><script src="js/jquery-migrate-1.2.1.js"></script>
+	<base href="<?php echo $qlkh['HOSTGOC'] ?>" /><script defer src="fontawesome/svg-with-js/js/fontawesome-all.js"></script><link rel="stylesheet" type="text/css" href="css/style.css"><link rel="stylesheet" type="text/css" href="css/animate.css"><script src="js/jquery-3.3.1.min.js"></script><script src="js/jquery-migrate-1.2.1.js"></script>
 <script src="js/superfish.js" type="text/javascript"></script><script type="text/javascript">$(function() {$('ul.sf-menu').superfish();});</script>
 </head>
 <body>
