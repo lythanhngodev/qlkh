@@ -8,185 +8,138 @@
 
 
 <url>
-  <loc>http://115.79.120.115:8080/qlkh/</loc>
-  <lastmod>2018-05-15T23:42:03+00:00</lastmod>
+  <loc>http://qlkh.vlute.edu.vn/</loc>
+  <lastmod>2018-05-26T10:09:49+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
-  <loc>http://115.79.120.115:8080/qlkh/admin/login.php</loc>
-  <lastmod>2018-05-15T23:42:03+00:00</lastmod>
+  <loc>http://qlkh.vlute.edu.vn/nckhdexuatmoi</loc>
+  <lastmod>2018-05-26T10:09:49+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://115.79.120.115:8080/qlkh/?p=detainghiemthu</loc>
-  <lastmod>2018-05-15T23:42:03+00:00</lastmod>
+  <loc>http://qlkh.vlute.edu.vn/nckhdacongbo</loc>
+  <lastmod>2018-05-26T10:09:49+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://115.79.120.115:8080/qlkh/?p=hoptacquocte&amp;id=19&amp;ten=hoat-dong-hop-tac-quoc-te</loc>
-  <lastmod>2018-05-15T23:42:03+00:00</lastmod>
+  <loc>http://qlkh.vlute.edu.vn/hoptacquocte/hoat-dong-hop-tac-quoc-te-19</loc>
+  <lastmod>2018-05-26T10:09:49+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://115.79.120.115:8080/qlkh/?p=hoptacquocte&amp;id=20&amp;ten=du-an-hop-tac-cm</loc>
-  <lastmod>2018-05-15T23:42:03+00:00</lastmod>
+  <loc>http://qlkh.vlute.edu.vn/hoptacquocte/du-an-hop-tac-cm-23</loc>
+  <lastmod>2018-05-26T10:09:49+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://115.79.120.115:8080/qlkh/?p=baokhoahoc</loc>
-  <lastmod>2018-05-15T23:42:03+00:00</lastmod>
+  <loc>http://qlkh.vlute.edu.vn/baokhoahoc</loc>
+  <lastmod>2018-05-26T10:09:49+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://115.79.120.115:8080/qlkh/?p=bieumau</loc>
-  <lastmod>2018-05-15T23:42:03+00:00</lastmod>
+  <loc>http://qlkh.vlute.edu.vn/bieumau</loc>
+  <lastmod>2018-05-26T10:09:49+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://115.79.120.115:8080/qlkh/?p=tintuc&amp;id=1&amp;ten=tin-tuc</loc>
-  <lastmod>2018-05-15T23:42:03+00:00</lastmod>
+  <loc>http://qlkh.vlute.edu.vn/chuyenmuc/tin-tuc-1</loc>
+  <lastmod>2018-05-26T10:09:49+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://115.79.120.115:8080/qlkh/?p=tintuc&amp;id=15&amp;ten=su-kien-cm</loc>
-  <lastmod>2018-05-15T23:42:03+00:00</lastmod>
+  <loc>http://qlkh.vlute.edu.vn/chuyenmuc/su-kien-cm-15</loc>
+  <lastmod>2018-05-26T10:09:49+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://115.79.120.115:8080/qlkh/?p=tintuc&amp;id=16&amp;ten=cong-nghe</loc>
-  <lastmod>2018-05-15T23:42:03+00:00</lastmod>
+  <loc>http://qlkh.vlute.edu.vn/chuyenmuc/cong-nghe-16</loc>
+  <lastmod>2018-05-26T10:09:49+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://115.79.120.115:8080/qlkh/?p=tintuc&amp;id=17&amp;ten=kham-pha</loc>
-  <lastmod>2018-05-15T23:42:03+00:00</lastmod>
+  <loc>http://qlkh.vlute.edu.vn/chuyenmuc/kham-pha-cm-17</loc>
+  <lastmod>2018-05-26T10:09:49+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://115.79.120.115:8080/qlkh/?p=tintuc&amp;id=18&amp;ten=doi-song</loc>
-  <lastmod>2018-05-15T23:42:03+00:00</lastmod>
+  <loc>http://qlkh.vlute.edu.vn/chuyenmuc/doi-song-18</loc>
+  <lastmod>2018-05-26T10:09:49+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://115.79.120.115:8080/qlkh/?p=xemtin&amp;id=1&amp;tieude=ban-tin-so-1</loc>
-  <lastmod>2018-05-15T23:42:03+00:00</lastmod>
+  <loc>http://qlkh.vlute.edu.vn/nckhdacongbo</loc>
+  <lastmod>2018-05-26T10:09:49+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://115.79.120.115:8080/qlkh/?p=tag&amp;tag=3</loc>
-  <lastmod>2018-05-15T23:42:03+00:00</lastmod>
+  <loc>http://qlkh.vlute.edu.vn/xemdetai/bien-soan-ngan-hang-cau-hoi-trac-nghiem-mon-vat-ly-dai-cuong-he-cao-dang-1.ltn</loc>
+  <lastmod>2018-05-26T10:09:49+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://115.79.120.115:8080/qlkh/?p=tag&amp;tag=2</loc>
-  <lastmod>2018-05-15T23:42:03+00:00</lastmod>
+  <loc>http://qlkh.vlute.edu.vn/xemdetai/ung-dung-phan-mem-test-pro-60-tron-de-thi-trac-nghiem-vat-ly-dai-cuong-2.ltn</loc>
+  <lastmod>2018-05-26T10:09:49+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://115.79.120.115:8080/qlkh/?p=tag&amp;tag=1</loc>
-  <lastmod>2018-05-15T23:42:03+00:00</lastmod>
+  <loc>http://qlkh.vlute.edu.vn/xemdetai/nghien-cuu-phuong-phap-ve-nhanh-bieu-do-noi-luc-trong-mon-hoc-suc-ben-vat-lieu-3.ltn</loc>
+  <lastmod>2018-05-26T10:09:49+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://115.79.120.115:8080/qlkh/admin/dangky.php</loc>
-  <lastmod>2018-05-15T23:42:03+00:00</lastmod>
-  <priority>0.64</priority>
+  <loc>http://qlkh.vlute.edu.vn/?p=baokhoahoc</loc>
+  <lastmod>2018-05-26T10:09:49+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://115.79.120.115:8080/qlkh/admin/quenmatkhau.php</loc>
-  <lastmod>2018-05-15T23:42:03+00:00</lastmod>
-  <priority>0.64</priority>
+  <loc>http://qlkh.vlute.edu.vn/xembaibao/cong-tac-dao-tao-boi-duong-giao-vien-day-nghe-tai-truong-dh-spkt-vinh-long-thuc-trang-va-giai-phap-1.ltn</loc>
+  <lastmod>2018-05-26T10:09:49+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://115.79.120.115:8080/qlkh/?p=xemtin&amp;id=1&amp;tieude=B%E1%BA%A3n%20tin%20s%E1%BB%91%201</loc>
-  <lastmod>2018-05-15T23:42:03+00:00</lastmod>
-  <priority>0.64</priority>
+  <loc>http://qlkh.vlute.edu.vn/xembaibao/ung-dung-kit-arduion-uno-vao-he-thong-dieu-khien-tu-dong-application-kit-rduino-uno-in-automatic-control-systems-2.ltn</loc>
+  <lastmod>2018-05-26T10:09:49+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://115.79.120.115:8080/qlkh/files/1524108436-don-xin-gia-han-de-tai.docx</loc>
-  <lastmod>2018-05-13T15:06:39+00:00</lastmod>
-  <priority>0.64</priority>
+  <loc>http://qlkh.vlute.edu.vn/xemtin/nghien-cuu-ung-dung-cong-nghe-cao-trong-san-xuat-nong-nghiep-7.ltn</loc>
+  <lastmod>2018-05-26T10:09:49+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://115.79.120.115:8080/qlkh/files/1524108478-hop-dong-nghien-cuu.doc</loc>
-  <lastmod>2018-05-13T15:06:39+00:00</lastmod>
-  <priority>0.64</priority>
+  <loc>http://qlkh.vlute.edu.vn/xemtin/hoi-thao-khao-hoc-thang-42018-voi-chu-de-tang-cuong-lien-ket-giua-truong-dai-hoc-voi-doanh-nghiep-trong-qua-trinh-dao-tao-va-giai-quyet-viec-lam-cho-sinh-vien-6.ltn</loc>
+  <lastmod>2018-05-26T10:09:49+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://115.79.120.115:8080/qlkh/files/1524108509-bien-ban-thanh-ly.doc</loc>
-  <lastmod>2018-05-13T15:06:39+00:00</lastmod>
-  <priority>0.64</priority>
+  <loc>http://qlkh.vlute.edu.vn/xemtin/danh-gia-ket-qua-va-hieu-qua-cac-chi-tieu-kinh-te-ky-thuat-cua-cac-thiet-bi-thu-hoach-che-va-say-cay-lac-5.ltn</loc>
+  <lastmod>2018-05-26T10:09:49+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://115.79.120.115:8080/qlkh/files/1524108541-maudexuatdetaicaptinh.doc</loc>
-  <lastmod>2018-05-13T15:06:39+00:00</lastmod>
-  <priority>0.64</priority>
+  <loc>http://qlkh.vlute.edu.vn/xemtin/lam-viec-voi-doan-koica-viet-nam-ve-hoat-dong-cua-tinh-nguyen-vien-4.ltn</loc>
+  <lastmod>2018-05-26T10:09:49+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://115.79.120.115:8080/qlkh/files/1524108578-madexuatdetaicapb.doc</loc>
-  <lastmod>2018-05-13T15:06:39+00:00</lastmod>
-  <priority>0.64</priority>
+  <loc>http://qlkh.vlute.edu.vn/xemtin/dai-hoc-spkt-vinh-long-ky-ket-thoa-thuan-song-phuong-voi-to-chuc-skills-international-co-hoi-viec-lam-tai-new-zeland-3.ltn</loc>
+  <lastmod>2018-05-26T10:09:49+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://115.79.120.115:8080/qlkh/files/1523903649-M01%20-%20PHIEU%20DANG%20KY%20DE%20TAI.doc</loc>
-  <lastmod>2018-05-13T15:06:39+00:00</lastmod>
-  <priority>0.64</priority>
+  <loc>http://qlkh.vlute.edu.vn/xemtin/dh-spkt-vinh-long-tang-cuong-hop-tac-tai-new-zealand-2.ltn</loc>
+  <lastmod>2018-05-26T10:09:49+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://115.79.120.115:8080/qlkh/files/1523904040-M02%20-%20DE%20CUONG%20DE%20TAI.doc</loc>
-  <lastmod>2018-05-13T15:06:39+00:00</lastmod>
-  <priority>0.64</priority>
+  <loc>http://qlkh.vlute.edu.vn/xemtin/lien-ket-hop-tac-cac-linh-vuc-va-chuong-trinh-trao-doi-sinh-vien-voi-dai-hoc-koreatech-1.ltn</loc>
+  <lastmod>2018-05-26T10:09:49+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://115.79.120.115:8080/qlkh/files/1523904138-M03-PHIEU%20DANH%20GIA%20DE%20CUONG.docx</loc>
-  <lastmod>2018-05-13T15:06:39+00:00</lastmod>
-  <priority>0.64</priority>
+  <loc>http://qlkh.vlute.edu.vn/bieumau</loc>
+  <lastmod>2018-05-26T10:09:49+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
-<url>
-  <loc>http://115.79.120.115:8080/qlkh/files/1524107573-M04-BIEN%20BAN%20XET%20DUYET.docx</loc>
-  <lastmod>2018-05-13T15:06:39+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>http://115.79.120.115:8080/qlkh/files/1524107718-m05--bao-cao-tien-do-thuc-hien-de-tai.doc</loc>
-  <lastmod>2018-05-13T15:06:39+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>http://115.79.120.115:8080/qlkh/files/1524110098-m06--thuyet-minh-de-tai.doc</loc>
-  <lastmod>2018-05-13T15:06:39+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>http://115.79.120.115:8080/qlkh/files/1524108145-m08---phieu-danh-gia-nghiem-thu.doc</loc>
-  <lastmod>2018-05-13T15:06:39+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>http://115.79.120.115:8080/qlkh/files/1524108198-m09--bien-ban-tong-hop-nghiem-thu.doc</loc>
-  <lastmod>2018-05-13T15:06:39+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>http://115.79.120.115:8080/qlkh/files/1524108282-m10--bang-ke-chi-tien-cho-nguoi-tham-du-hoi-nghi.doc</loc>
-  <lastmod>2018-05-13T15:06:39+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>http://115.79.120.115:8080/qlkh/files/1524108321-m11--phieu-giao-nhan-sp-khcn.doc</loc>
-  <lastmod>2018-05-13T15:06:39+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>http://115.79.120.115:8080/qlkh/files/1524108372-m12--phieu-xac-nhan-ung-dung-khcn.doc</loc>
-  <lastmod>2018-05-13T15:06:39+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>http://115.79.120.115:8080/qlkh/?p=xemtin&amp;id=1</loc>
-  <lastmod>2018-05-15T23:42:03+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-
-
 </urlset>

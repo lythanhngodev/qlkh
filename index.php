@@ -118,7 +118,7 @@
 				<ul>
 					<li><a href="<?php echo $qlkh['HOSTGOC'] ?>">Trang chủ</a></li>
 					<li><a href="#">Giới thiệu</a></li>
-					<li><a href="?p=bieumau">Văn bản - Biểu mẫu</a></li>
+					<li><a href="bieumau">Văn bản - Biểu mẫu</a></li>
 					<li><a href="#" style="border-right: none">Liên hệ</a></li>
 				</ul>
 			</div>
