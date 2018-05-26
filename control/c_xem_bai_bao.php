@@ -7,6 +7,6 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
 	include_once 'view/v_xem_bai_bao.php';
 }
 else{
-	header("Location: ".$qlkh['HOSTGOC']);
+	trangchu();
 }
 ?>

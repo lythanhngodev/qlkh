@@ -136,6 +136,5 @@
 <script type="text/javascript">
     $("document").ready(function() {
         $('#baokhoahoc').addClass('current');
-        document.title = "<?php echo addslashes($bb['TENBAO']) ?> | Phòng nghiên cứu khoa học & Hợp tác quốc tế VLUTE";
     });
 </script> 

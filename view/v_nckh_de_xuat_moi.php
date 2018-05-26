@@ -101,6 +101,5 @@
 <script type="text/javascript">
     $("document").ready(function() {
         $('#nckh').addClass('current');
-        document.title = "Đề xuất mới nghiên cứu khoa học | Phòng nghiên cứu khoa học & Hợp tác quốc tế VLUTE";
     });
 </script> 

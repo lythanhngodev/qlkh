@@ -2,26 +2,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
-	<meta name="description" content="Phòng nghiên cứu khoa học | Đại học Sư phạm kỹ thuật Vĩnh Long" />
-	<title>Phòng nghiên cứu khoa học | Đại học Sư phạm kỹ thuật Vĩnh Long</title>
-	<!-- Facebook SEO -->
-	<meta property="og:url" content="<?php echo $qlkh['HOSTGOC'] ?>" />
-	<meta property="og:type" content="article" />
-	<meta property="og:title" content='Phòng nghiên cứu khoa học | Đại học Sư phạm kỹ thuật Vĩnh Long' />
-	<meta property="og:image" content="<?php echo $qlkh['HOSTGOC'] ?>images/vlute-o.jpg" />
-	<link rel="shortcut icon" href="<?php echo $qlkh['HOSTGOC'] ?>images/favicon.ico" />
-	<!-- Google SEO -->
-	<meta name="google" content="nositelinkssearchbox" />
-	<meta name="google" content="notranslate" />
-	<meta name="keywords" content="Phong nghien cuu khoa hoc truong dai hoc su pham ky thuat vinh long, nckh vlute, VLUTE SCIENTIFIC RESEARCH, VLUTE SCIENTIFIC RESEARCH, SR VLUTE, nckh vlute, nghien cuu khoa hoc vlute, nghien cuu khoa hoc su pham ky thuat vinh long" />
-	<base href="<?php echo $qlkh['HOSTGOC'] ?>" />
-	<script defer src="fontawesome/svg-with-js/js/fontawesome-all.js"></script>
-	<link rel="stylesheet" type="text/css" href="css/style.css">
-	<link rel="stylesheet" type="text/css" href="css/animate.css">
-	<script src="js/jquery-3.3.1.min.js"></script>
-	<script src="js/jquery-migrate-1.2.1.js"></script>
- 	<script src="js/superfish.js" type="text/javascript"></script>
+<meta charset="utf-8">
+	<?php include_once "header.php" ?>
+	<base href="<?php echo $qlkh['HOSTGOC'] ?>" /><script defer src="fontawesome/svg-with-js/js/fontawesome-all.js"></script><link rel="stylesheet" type="text/css" href="css/style.css"><link rel="stylesheet" type="text/css" href="css/animate.css"><script src="js/jquery-3.3.1.min.js"></script><script src="js/jquery-migrate-1.2.1.js"></script>
+<script src="js/superfish.js" type="text/javascript"></script>
  	<script type="text/javascript">
 		$(function() {
 			// Menu
@@ -54,7 +38,7 @@
 		<a href="admin" class="dangnhap">Đăng nhập</a>
 	</div>
 </div>
-<div class="container">
+<div class="container">	
 	<div class="khung">
 		<div class="menu">
 			<div id="nav">
@@ -64,7 +48,7 @@
 					<li>
 						<a href="#" class="sf-with-ul">Giới thiệu</a>
 						<ul style="display: none; visibility: hidden;">
-							<li><a href="http://vlute.edu.vn/index.php/nghien-cuu-khoa-hoc">Giới thiệu chung</a></li>
+							<li><a href="http://vlute.edu.vn/index.php/nghien-cuu-khoa-hoc" target="_blank">Giới thiệu chung</a></li>
 						</ul>
 					</li>
 					<li id="nckh">

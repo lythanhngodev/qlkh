@@ -83,6 +83,5 @@
 <script type="text/javascript">
     $("document").ready(function() {
         $('#htqt').addClass('current');
-        document.title = "<?php echo ten_chuyen_muc($id); ?> | Phòng nghiên cứu khoa học & Hợp tác quốc tế VLUTE";
     });
 </script> 

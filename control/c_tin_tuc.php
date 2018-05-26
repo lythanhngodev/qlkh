@@ -6,6 +6,6 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
 	include_once 'view/v_tin_tuc.php';
 }
 else{
-	header("Location: ".$qlkh['HOSTGOC']);
+	trangchu();
 }
 ?>

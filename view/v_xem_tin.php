@@ -90,9 +90,4 @@
     $(document).ready(function() {
         $('#tintuc').addClass('current');
     });
-</script> 
-<script type="text/javascript">
-    $(document).ready(function() {
-        document.title = "<?php echo addslashes($bv['TENBV']) ?> | Phòng nghiên cứu khoa học & Hợp tác quốc tế VLUTE";
-    });
 </script>

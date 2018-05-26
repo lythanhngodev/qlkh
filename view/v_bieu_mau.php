@@ -77,6 +77,5 @@
 <script type="text/javascript">
     $("document").ready(function() {
         $('#bieumau').addClass('current');
-        document.title = "Văn bản - Biểu mẫu | Phòng nghiên cứu khoa học & Hợp tác quốc tế VLUTE";
     });
 </script> 

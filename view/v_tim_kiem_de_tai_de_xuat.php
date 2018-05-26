@@ -84,6 +84,5 @@
 <script type="text/javascript">
     $("document").ready(function() {
         $('#trangchu').addClass('current');
-        document.title = "Công trình NCKH đã công bố | Phòng nghiên cứu khoa học & Hợp tác quốc tế VLUTE";
     });
 </script> 

@@ -199,6 +199,5 @@
 <script type="text/javascript">
     $("document").ready(function() {
         $('#nckh').addClass('current');
-        document.title = "<?php echo addslashes($dt['TENDETAI']) ?> | Phòng nghiên cứu khoa học & Hợp tác quốc tế VLUTE";
     });
 </script> 

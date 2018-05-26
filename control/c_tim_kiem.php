@@ -24,6 +24,6 @@ if (isset($_POST['tu']) && !empty($_POST['tu']) || isset($_POST['loai']) && !emp
 	}
 }
 else{
-	header("Location: ".$qlkh['HOSTGOC']);
+	trangchu();
 }
 ?>

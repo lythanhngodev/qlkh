@@ -616,7 +616,7 @@ center{
 #tin-phai a{
   text-decoration: none;
 }
-.tin-con-phai{width: 100%;float: left;margin-bottom: 1.2rem;}
+.tin-con-phai{width: 100%;float: left;margin-bottom: .6rem;border-bottom: 1px dotted #f1f1f1;padding-bottom: .6rem;}
 .tin-con-phai-phai{
 float: left;
 width: 184px;

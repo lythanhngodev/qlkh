@@ -100,6 +100,5 @@
 <script type="text/javascript">
     $("document").ready(function() {
         $('#tintuc').addClass('current');
-        document.title = "<?php echo addslashes(ten_chuyen_muc($id)); ?> | Phòng nghiên cứu khoa học & Hợp tác quốc tế VLUTE";
     });
 </script> 

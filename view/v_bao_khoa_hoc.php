@@ -97,6 +97,5 @@
 <script type="text/javascript">
     $("document").ready(function() {
         $('#baokhoahoc').addClass('current');
-        document.title = "Bài báo khoa học | Phòng nghiên cứu khoa học & Hợp tác quốc tế VLUTE";
     });
 </script> 
