@@ -77,7 +77,7 @@
 	function thanh_vien_de_tai($iddt){
 	    $ketnoi = new clsKetnoi();
 	    $conn = $ketnoi->ketnoi();
-	    $query = "SELECT tv.IDTV, CONCAT(nd.HO, ' ', nd.TEN) AS HOTEN FROM thanhviendetai tv, nguoidung nd WHERE tv.IDND = nd.IDND AND tv.IDDT = '$iddt' AND tv.TRACHNHIEM!=N'Chủ nhiệm' ORDER BY tv.IDTV ASC ;";
+	    $query = "SELECT tv.IDTV, CONCAT(nd.HO, ' ', nd.TEN) AS HOTEN FROM thanhviendetai tv, nguoidung nd WHERE tv.IDND = nd.IDND AND tv.IDDT = '$iddt' AND tv.TRACHNHIEM!=N'Chủ nhiệm' ORDER BY tv.IDTV ASC";
 	    $result = mysqli_query($conn, $query);
 	    $r = null;
 	    while ($row = mysqli_fetch_assoc($result)) {
@@ -85,5 +85,13 @@
 	    }
 	    mysqli_close($conn);
 	    return $r;
+	}
+	function lay_de_tai_lien_quan($iddt, $trangthai){
+		$ketnoi = new clsKetnoi();
+		$conn = $ketnoi->ketnoi();
+		$query = "SELECT DISTINCT dt.IDDT, dt.TENDETAI, dt.THOIGIANNGHIEMTHU, CONCAT(nd.HO, ' ', nd.TEN) AS HOTEN FROM detai dt, dexuatdetai dx, nguoidung nd, thanhviendetai tv WHERE dt.TRANGTHAI = N'$trangthai' AND dt.DUYET = b'1' AND dx.IDDT = dt.IDDT AND tv.IDDT = dt.IDDT AND tv.TRACHNHIEM = N'Chủ nhiệm' AND tv.IDND = nd.IDND AND dt.IDDT!=$iddt ORDER BY dt.THOIGIANNGHIEMTHU LIMIT 0,8";
+		$result = mysqli_query($conn, $query);
+		mysqli_close($conn);
+		return $result;
 	}
  ?>

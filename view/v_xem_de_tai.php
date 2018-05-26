@@ -117,6 +117,19 @@
                 <td><?php echo date('m-Y', strtotime($dt['THANGNAMKT'])) ?></td>
             </tr>
         </table>
+
+        <div class="tin">
+          <div class="detailienquan">Các đề tài liên quan:</div>
+          <?php $baibaolienquan = lay_de_tai_lien_quan($iddt, $dt['TRANGTHAI']);
+          while ($row = mysqli_fetch_assoc($baibaolienquan)) { ?>
+          <div class="lienquan">
+              <h3>
+                  <a href="?p=xemdetai&id=<?php echo $row['IDDT'] ?>" title="<?php echo $row['TENDETAI'] ?>"><?php echo $row['TENDETAI'] ?></a>
+              </h3>
+              <div class="clear"></div>
+         </div>
+         <?php } ?>
+        </div>
     </div>
 </div>
 <div id="cotphai">
