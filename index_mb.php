@@ -85,6 +85,8 @@
     </ul>
   </div>
 </nav>
-
+<div class="container-fluid" style="padding: 0px;">
+  <?php include_once 'public_c_mb.php'; ?>
+</div>
 </body>
 </html>
