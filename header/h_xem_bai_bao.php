@@ -11,7 +11,7 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
 	<meta property="og:url" content="<?php echo "http://". $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'] ?>" />
 	<meta property="og:type" content="article" />
 	<meta property="og:title" content='<?php echo addslashes($hbb['TENBAO']) ?> | Nghiên cứu khoa học &amp; Hợp tác quốc tế VLUTE' />
-	<meta property="og:image" content="<?php echo $qlkh['HOSTGOC'] ?>images/vlute-o.jpg" />
+	<meta property="og:image" content="<?php echo $qlkh['HOSTGOC'] ?>images/news.png" />
 	<meta property="og:description" content="<?php echo addslashes("Thông tin bài báo khoa học: ".$hbb['TENBAO']) ?>" />
 	<link rel="shortcut icon" href="<?php echo $qlkh['HOSTGOC'] ?>images/favicon.ico" />
 	<!-- Google SEO -->

@@ -7,7 +7,7 @@
 <meta property="og:url" content="<?php echo "http://". $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'] ?>" />
 <meta property="og:type" content="article" />
 <meta property="og:title" content='Bài báo khoa học | Nghiên cứu khoa học &amp; Hợp tác quốc tế VLUTE' />
-<meta property="og:image" content="<?php echo $qlkh['HOSTGOC'] ?>images/vlute-o.jpg" />
+<meta property="og:image" content="<?php echo $qlkh['HOSTGOC'] ?>images/news.png" />
 <meta property="fb:app_id" content="2165745763451934" /> 
 <link rel="shortcut icon" href="<?php echo $qlkh['HOSTGOC'] ?>images/favicon.ico" />
 <!-- Google SEO -->
