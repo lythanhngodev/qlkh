@@ -16,6 +16,14 @@
 		mysqli_close($conn);
 		return $result;
 	}
+	function lay_bai_bao_lien_quan($idbb){
+		$ketnoi = new clsKetnoi();
+		$conn = $ketnoi->ketnoi();
+		$query = "SELECT b.IDBAO, b.TENBAO, b.TAPCHI, b.NAMXUATBAN, b.CAPBAIBAO,b.TENQG,b.NOIDUNG FROM baokhoahoc b WHERE ANHIEN = b'1' AND IDBAO!=$idbb LIMIT 0,8";
+		$result = mysqli_query($conn, $query);
+		mysqli_close($conn);
+		return $result;
+	}
 	function lay_ten_tac_gia_bai_viet($idbb){
 		$ketnoi = new clsKetnoi();
 		$conn = $ketnoi->ketnoi();

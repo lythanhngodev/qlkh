@@ -67,6 +67,18 @@
                 <td><?php echo $bb['NOIDUNG'] ?></td>
             </tr>
         </table>
+        <div class="tin">
+          <div class="detailienquan">Các bài báo liên quan:</div>
+          <?php $baibaolienquan = lay_bai_bao_lien_quan($idbb);
+          while ($row = mysqli_fetch_assoc($baibaolienquan)) { ?>
+          <div class="lienquan">
+              <h3>
+                  <a href="xembaibao/<?php echo to_slug($row['TENBAO']) ?>-<?php echo $row['IDBAO'] ?>.ltn"><?php echo $row['TENBAO'] ?></a>
+              </h3>
+              <div class="clear"></div>
+         </div>
+         <?php } ?>
+        </div>
     </div>
 </div>
 <div id="cotphai">

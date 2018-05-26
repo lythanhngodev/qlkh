@@ -34,7 +34,7 @@
                 <div class="clear"></div>
            </div>
              <?php } ?>
-      <center><a href="?p=nckhdacongbo" class="nut-link">XEM THÊM</a></center>
+      <center><a href="nckhdacongbo" class="nut-link">XEM THÊM</a></center>
     </div>
 
     <!-- CÁC CÔNG TRÌNH KHOA HỌC ĐÃ CÔNG BỐ -->
@@ -62,7 +62,7 @@
           <div class="clear"></div>
      </div>
      <?php } ?>
-     <center><a href="?p=baokhoahoc" class="nut-link">XEM THÊM</a></center>
+     <center><a href="baokhoahoc" class="nut-link">XEM THÊM</a></center>
     </div>
 
 </div>
