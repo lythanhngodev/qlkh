@@ -1,4 +1,4 @@
-<?php include_once 'config.php'; ?>
+<?php include_once 'config.php';  ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -85,8 +85,13 @@
     </ul>
   </div>
 </nav>
-<div class="container-fluid" style="padding: 0px;">
+<div class="container-fluid" style="padding: 0px 5px;margin-top: 5px;">
   <?php include_once 'public_c_mb.php'; ?>
 </div>
+<footer class="footer">
+  <div class="container">
+    <span class="text-muted">&copy; Đại học Sư phạm Kỹ thuật Vĩnh Long.</span>
+  </div>
+</footer>
 </body>
 </html>

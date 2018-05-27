@@ -1,1 +1,71 @@
 @charset "utf-8";
+.muccon{
+	width: 100%;
+	border-radius: 6px;
+	border: 1px solid #1d72f4;
+	font-family:  sans-serif;
+	font-size: 13px;
+	float:  left;
+	margin-bottom: 25px;
+	padding-bottom: 25px;
+	position:  relative;
+}
+.muccon h3{
+	background: #007bfd;
+	width: 100%;
+	padding: 6px 0px;
+	font-family: sans-serif;
+	color: #fff;
+	border-radius: 5px 5px 0px 0px;
+	text-align: center;
+	font-size: 18px;
+}
+.tinmoi{
+    width:  100%;
+    float:  left;
+}
+.tincon{float:  left;margin-bottom: 5px;font-family:  sans-serif;font-size: 13px;margin-left: 5px;}
+.tincon .hinhtin{width: 22%;height: 60px;float:  left;margin-right: 5px;background-size: cover;background-position:  center;border-radius: 8px;}
+.tincon .tomtattin{float:  left;width: 75%;}
+.tinmoi a{
+	color:#212121;
+}
+.tinmoi a:hover{
+	color:#2b6dce;
+}
+.tieudemuccon{
+	width:100%;
+	float: left;
+}
+.tieu-de-tin{color: #1c7fe8 !important;font-weight: 600;font-size: 13px;}
+.noidungtin{
+padding: 0px 5px;
+}
+.thongtinchung{
+    margin-top: 5px;
+}
+.thongtinchung ul{
+	margin-bottom: 0px;
+	padding-left: 30px;
+}
+.nut-link{
+	background: #007bfd;
+	color:  #fff;
+	padding: 10px 10px;
+	border-radius: 6px;
+	box-shadow: 2px 2px 8px 0px #cacaca;
+}
+.muccon center{
+	position:absolute;
+	bottom: -9px;
+	left: 0;
+	right: 0;
+}
+.footer {
+    float:  left;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    background-color: #f5f5f5;
+}
