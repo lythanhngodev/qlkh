@@ -15,7 +15,7 @@
 				include_once("control/c_bieu_mau.php");
 				break;
 			case 'nckhdacongbo':
-				include_once("control/c_nckh_da_cong_bo.php");
+				include_once("control_mb/c_nckh_da_cong_bo_mb.php");
 				break;
 			case 'nckhdexuatmoi':
 				include_once("control/c_nckh_de_xuat_moi.php");

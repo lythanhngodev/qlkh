@@ -18,7 +18,7 @@
 
 <div class="row" style="margin: 0 -5px;">
   <div class="col-12">
-    <form action="timkiem" method="POST">
+    <form action="timkiem" method="POST" style="margin-top: 15px;">
       <input class="form-control" type="search" placeholder="Tìm kiếm" name="tu" style="margin-top: 5px;" >
       <select class="form-control" id="searchType" name="loai" style="margin-top: 5px;" >
         <option value="1">Đề tài NCKH đã công bố</option>
@@ -31,7 +31,7 @@
 <hr>
 <!-- TIN MỚI -->
 <div class="muccon">
-    <h3>Tin mới</h3>
+    <h3>Tin tức</h3>
     <div class="tieudemuccon">
         <div class="tinmoi">
             <?php 
@@ -46,6 +46,7 @@
            <?php } ?>
         </div>
     </div>
+    <center><a href="chuyenmuc/tin-tuc-1" class="nut-link">XEM THÊM</a></center>
 </div>
 <!-- HOẠT ĐỘNG HỢP TÁC QUỐC TẾ -->
 <div class="muccon">
@@ -98,7 +99,7 @@
     </div>
 </div>
 
-<!-- CÔNG TRÌNH NGHIÊN CỨU KHOA HỌC -->
+<!-- BÀI BÁO KHOA HỌC -->
 <div class="muccon">
     <h3>Bài báo khoa học mới</h3>
     <div class="tieudemuccon">
@@ -124,3 +125,8 @@
     <center><a href="baokhoahoc" class="nut-link">XEM THÊM</a></center>
     </div>
 </div>
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('#trangchu').addClass('active');
+    });
+</script>

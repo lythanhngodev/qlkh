@@ -7,6 +7,18 @@
 	<?php include_once "header.php" ?>
 	<base href="<?php echo $qlkh['HOSTGOC'] ?>" /><script defer src="fontawesome/svg-with-js/js/fontawesome-all.js"></script><link rel="stylesheet" type="text/css" href="css/style-mb.css"><link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css"><script src="js/jquery-3.3.1.min.js"></script><script type="text/javascript" src="bootstrap/js/bootstrap.js"></script>
 </head>
+<style type="text/css">
+#back-to-top{
+    cursor: pointer;
+    position: fixed;
+    bottom: 10px;
+    right: 15px;
+    display: none;
+    width: 40px;
+    height: 40px;
+    margin: 0 auto;
+}
+</style>
 <body>
 <div>
   <div style="width: 100%;margin: 0 auto;position: relative;">
@@ -93,5 +105,28 @@
     <span class="text-muted">&copy; Đại học Sư phạm Kỹ thuật Vĩnh Long.</span>
   </div>
 </footer>
+<center><img id="back-to-top" src="images/back-to-top.png"></center>
 </body>
+<script type="text/javascript">
+  $(document).ready(function(){
+     $(window).scroll(function () {
+            if ($(this).scrollTop() > 250) {
+                $('#back-to-top').fadeIn();
+            } else {
+                $('#back-to-top').fadeOut();
+            }
+        });
+        // scroll body to 0px on click
+        $('#back-to-top').click(function () {
+            $('#back-to-top').tooltip('hide');
+            $('body,html').animate({
+                scrollTop: 0
+            }, 400);
+            return false;
+        });
+        
+        $('#back-to-top').tooltip('show');
+
+});
+</script>
 </html>

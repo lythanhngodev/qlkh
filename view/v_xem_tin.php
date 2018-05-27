@@ -22,6 +22,28 @@
         <br>
     </div>   
     <?php } ?>
+    <!-- BÀI VIẾT LIÊN QUAN -->
+    <div class="tieudechinh">
+        <div class="tentieudechinh" style="width: 150px;">
+            <img src="images/chi-muc.png" width="27" height="27" align="absmiddle"><a>Bài viết liên quan</a>
+        </div>
+        <div class="clear"></div>
+        <div class="line"></div>
+    </div>
+    <div class="tin">
+      <?php $bvlq = lay_bai_viet_lien_quan($id);
+      while ($row = mysqli_fetch_assoc($bvlq)) { ?>
+      <div class="noidungtin-lq">
+        <a href="xemtin/<?php echo $row['LINKBV']; ?>-<?php echo $row['IDBV']; ?>.ltn">
+            <div class="tincon-lq">
+                <div class="hinhtin-lq" style="background-image: url('<?php echo $row['HINHANH']; ?>');"></div>
+                <div class="tomtattin-lq"><?php echo $row['TENBV'] ?></div>
+            </div>  
+        </a>
+          <div class="clear"></div>
+     </div>
+     <?php } ?>
+    </div>
 </div>
 <div id="cotphai">
     <!-- THÔNG TIN LIÊN HỆ -->

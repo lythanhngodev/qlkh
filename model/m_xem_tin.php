@@ -39,4 +39,12 @@
 	    mysqli_close($conn);
 	    return $result;
 	}
+	function lay_bai_viet_lien_quan($id){
+		$ketnoi = new clsKetnoi();
+		$conn = $ketnoi->ketnoi();
+		$query = "SELECT * from baiviet WHERE HIENTHI=b'1' AND IDBV!=$id AND IDBV IN (SELECT IDBV FROM baiviet_chuyenmuc WHERE IDCM IN (SELECT IDCM FROm baiviet_chuyenmuc WHERE IDBV=$id)) ORDER BY NGAYDANG DESC LIMIT 0,8";
+		$result = mysqli_query($conn, $query);
+		mysqli_close($conn);
+		return $result;
+	}
  ?>

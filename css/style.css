@@ -521,10 +521,22 @@ li.sfHover > a > .sf-sub-indicator {
 }
 .tukhoa{
 }
+.noidungtin-lq{
+	width: 100%;
+	float: left;
+	margin-bottom: 18px;
+}
 .tinmoi{}
 .tincon{width: 308px;float:  left;margin-bottom: 8px;font-family:  sans-serif;font-size: 12.8px;margin-left: 8px;}
 .tincon .hinhtin{width: 50px;height: 50px;float:  left;margin-right: 8px;background-size: cover;background-position:  center;}
 .tincon .tomtattin{float:  left;width: 250px;}
+
+.tincon-lq{width: 100%;float:  left;font-family:  sans-serif;font-size: 13px;padding-left: 10px;}
+.tincon-lq .hinhtin-lq{width: 69px;height: 46px;float:  left;margin-right: 15px;background-size: cover;background-position:  center;}
+.tincon-lq .tomtattin-lq{float:  left;width: 450px;color: #4e4e4e;}
+.tincon-lq .tomtattin-lq:hover{
+	text-decoration: underline;
+}
 .tinmoi a{
 	color:#212121;
 }

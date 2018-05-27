@@ -21,14 +21,14 @@
                                             <div class="form-group">
                                                 <label for="tags" class="font-weight-bold" >
                                                     Tên bài viết <span class="text-danger">(*)</span></label>
-                                                <input type="text" class="form-control" id="tenbaibao" value="<?php echo $baiviet['TENBV'] ?>" />
+                                                <input type="text" class="form-control" id="tenbaibao" value="<?php echo addslashes($baiviet['TENBV']); ?>" />
                                             </div>
                                         </div>
                                         <div class="col" style="padding: 0;">
                                             <div class="form-group">
                                                 <label for="tags" class="font-weight-bold" >
                                                     Mổ tả</label>
-                                                <textarea class="form-control" rows="4" id="mota"><?php echo $baiviet['MOTA'] ?></textarea>
+                                                <textarea class="form-control" rows="4" id="mota"><?php echo addslashes($baiviet['MOTA']) ?></textarea>
                                             </div>
                                         </div>
                                       </div>

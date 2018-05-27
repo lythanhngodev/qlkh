@@ -20,6 +20,23 @@
     <hr>
     <br>
 </div>   
+<!-- TIN MỚI -->
+<div class="muccon">
+    <h3>Bài viết liên quan</h3>
+    <div class="tieudemuccon">
+        <div class="tinmoi">
+      <?php $bvlq = lay_bai_viet_lien_quan($id);
+      while ($row = mysqli_fetch_assoc($bvlq)) { ?>
+            <a href="xemtin/<?php echo $row['LINKBV']; ?>-<?php echo $row['IDBV']; ?>.ltn">
+                <div class="tincon">
+                    <div class="hinhtin" style="background-image: url('<?php echo $row['HINHANH']; ?>');"></div>
+                    <div class="tomtattin"><?php echo $row['TENBV'] ?></div>
+                </div> 
+            </a>
+           <?php } ?>
+        </div>
+    </div>
+</div>
 <?php } ?>
 <script type="text/javascript">
     $(document).ready(function() {
