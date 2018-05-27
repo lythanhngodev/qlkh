@@ -55,6 +55,6 @@
        </div>
          <?php $stt++;} ?>
         </div>
-    <center><a class="nut-link" id="xemthem" style="color:#fff;">XEM THÊM</a></center>
+    <center><botton class="nut-link" id="xemthem" style="color:#fff;">XEM THÊM</botton></center>
     </div>
 </div>
