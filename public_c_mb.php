@@ -2,7 +2,7 @@
 	if (isset($_GET["p"]) && !empty($_GET["p"])) {
 		switch ($_GET["p"]) {
 			case 'xemtin':
-				include_once("control/c_xem_tin.php");
+				include_once("control_mb/c_xem_tin_mb.php");
 				break;
 			case 'xemdetai':
 				include_once("control/c_xem_de_tai.php");

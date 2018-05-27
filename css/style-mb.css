@@ -69,3 +69,52 @@ padding: 0px 5px;
     line-height: 60px;
     background-color: #f5f5f5;
 }
+
+.chi-tiet-bai-viet{
+	width:100% !important;
+	float: left;
+}
+.vlu-chi-tiet-header-bai-viet{
+  width: 100%;
+  float: left;
+  position: relative;
+}
+
+.vlu-chi-tiet-header-bai-viet article{
+  width: 100%;
+  height: 275px;
+  background-position: center;
+  background-size: cover;
+}
+.vlu-chi-tiet-hinh-anh-tin{
+
+}
+.vlu-chi-tiet-hinh-anh-tin a{
+  text-decoration: none;
+}
+.vlu-chi-tiet-link-bai-viet{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.23456789);
+  padding: 10px;
+}
+.vlu-chi-tieu-tieu-de-bai-viet{
+    font-family: sans-serif;
+    font-size: 150%;
+    color: #fff;
+    font-weight: 500;
+}
+.vlu-chi-tiet-link-bai-viet div{
+
+}
+.vlu-chi-tiet-bai-viet{float:  left;padding: 10px 4px;width:  100%;overflow:  -webkit-paged-x;}
+.vlu-chi-tiet-thoi-gian-bai-viet{
+  color: #e0e0e0;
+  font-size: 90%;
+  padding: 6px 2px;
+}
+.vlu-chi-tiet-thoi-gian-bai-viet i{
+  
+}
