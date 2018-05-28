@@ -9,7 +9,7 @@
     </div>
     <div class="tin">
           <?php 
-          $sotin = 8;
+          $sotin = 2;
           $bd=1;
           if (isset($_GET['trang']) && !empty($_GET['trang'])) {
             $bd = intval($_GET['trang']);
@@ -42,8 +42,10 @@
       <ul class="phantrang">
         <?php $sodetai = dem_de_tai_da_cong_bo();
         if ($sodetai!=0) {
-          for ($i=1; $i < $sodetai/$sotin; $i++) { 
-            echo "<li><a href='?p=detainghiemthu&trang=".$i."'>".$i."</a></li>";
+          for ($i=1; $i <= ceil($sodetai/$sotin); $i++) { 
+            $str = "";
+            if($bd==$i) $str = "tranghientai";
+            echo "<li class='".$str."'><a href='?p=nckhdacongbo&trang=".$i."'>".$i."</a></li>";
           }
         }
         ?>

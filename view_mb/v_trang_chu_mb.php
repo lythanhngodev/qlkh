@@ -15,10 +15,10 @@
     <span class="sr-only">Sau</span>
   </a>
 </div>
-
+<hr>
 <div class="row" style="margin: 0 -5px;">
   <div class="col-12">
-    <form action="timkiem" method="POST" style="margin-top: 15px;">
+    <form action="timkiem" method="POST">
       <input class="form-control" type="search" placeholder="Tìm kiếm" name="tu" style="margin-top: 5px;" >
       <select class="form-control" id="searchType" name="loai" style="margin-top: 5px;" >
         <option value="1">Đề tài NCKH đã công bố</option>

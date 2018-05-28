@@ -1,20 +1,22 @@
-<?php
-/**
- * Created by PhpStorm.
- * User: Ly Thanh Ngo
- * Date: 15/05/2018
- * Time: 8:28 AM
- */
-?>
-    <div class="tieudechinh">
-        <div class="tentieudechinh" style="width: fit-content;">
-            <img src="images/chi-muc.png" width="27" height="27" align="absmiddle"><a><?php echo ten_chuyen_muc($id); ?></a>
-        </div>
-        <div class="clear"></div>
-        <div class="line"></div>
+<div class="tieudechinh">
+    <div class="tentieudechinh" style="width: fit-content;">
+        <img src="images/chi-muc.png" width="27" height="27" align="absmiddle"><a><?php echo ten_chuyen_muc($id); ?></a>
     </div>
+    <div class="clear"></div>
+    <div class="line"></div>
+</div>
 <div id="cottrai">
     <?php
+      $sotin = 8;
+      $bd=1;
+      if (isset($_GET['trang']) && !empty($_GET['trang'])) {
+        $bd = intval($_GET['trang']);
+        if ($bd<1) {
+          $bd=1;
+        }
+      }
+      $tu = ($bd-1)*$sotin;
+    $tin = lay_tin_them($id,$tu,$sotin);
     $d_tin = mysqli_num_rows($tin);
      if ($d_tin==0) {
         echo "Chuyên mục chưa có bài viết";
@@ -32,7 +34,19 @@
     <?php 
         }
     }   ?>
-
+    <center>
+      <ul class="phantrang">
+        <?php $sodetai = so_tin($id);
+        if ($sodetai!=0) {
+          for ($i=1; $i <= ceil($sodetai/$sotin); $i++) { 
+            $str = "";
+            if($bd==$i) $str = "tranghientai";
+            echo "<li class='".$str."'><a href='?p=hoptacquocte&id=".$id."&trang=".$i."'>".$i."</a></li>";
+          }
+        }
+        ?>
+      </ul>
+    </center>
 </div>
 <div id="cotphai">
     <!-- THÔNG TIN LIÊN HỆ -->

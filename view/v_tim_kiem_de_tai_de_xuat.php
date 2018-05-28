@@ -13,7 +13,7 @@
           while ($row = mysqli_fetch_assoc($detai)) { ?>
            <div class="noidungtin">
               <h3>
-                  <a href="?p=xemdetai&id=<?php echo $row['IDDT'] ?>" title="<?php echo $row['TENDETAI'] ?>"><?php echo $row['TENDETAI'] ?></a>
+                  <a href="xemdetai/<?php echo $row['TENDETAI'] ?>-id=<?php echo $row['IDDT'] ?>.ltn" title="<?php echo $row['TENDETAI'] ?>"><?php echo $row['TENDETAI'] ?></a>
               </h3>
               <div class="thongtinchung">
                   <ul>

@@ -24,7 +24,7 @@
     width:  100%;
     float:  left;
 }
-.tincon{float:  left;margin-bottom: 5px;font-family:  sans-serif;font-size: 13px;margin-left: 5px;}
+.tincon{float:  left;margin-bottom: 5px;font-family:  sans-serif;font-size: 13px;margin-left: 5px;width: 100%;}
 .tincon .hinhtin{width: 22%;height: 60px;float:  left;margin-right: 5px;background-size: cover;background-position:  center;border-radius: 8px;}
 .tincon .tomtattin{float:  left;width: 75%;}
 .tinmoi a{

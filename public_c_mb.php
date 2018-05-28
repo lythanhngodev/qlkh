@@ -12,22 +12,22 @@
 				include_once("control/c_xem_bai_bao.php");
 				break;
 			case 'bieumau':
-				include_once("control/c_bieu_mau.php");
+				include_once("control_mb/c_bieu_mau_mb.php");
 				break;
 			case 'nckhdacongbo':
 				include_once("control_mb/c_nckh_da_cong_bo_mb.php");
 				break;
 			case 'nckhdexuatmoi':
-				include_once("control/c_nckh_de_xuat_moi.php");
+				include_once("control_mb/c_nckh_de_xuat_moi_mb.php");
 				break;
 			case 'baokhoahoc':
 				include_once("control/c_bao_khoa_hoc.php");
 				break;
 			case 'tintuc':
-				include_once("control/c_tin_tuc.php");
+				include_once("control_mb/c_tin_tuc_mb.php");
 				break;
 			case 'hoptacquocte':
-				include_once("control/c_hop_tac_quoc_te.php");
+				include_once("control_mb/c_hop_tac_quoc_te_mb.php");
 				break;
 			case 'timkiem':
 				include_once("control/c_tim_kiem.php");

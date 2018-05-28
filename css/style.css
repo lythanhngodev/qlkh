@@ -688,3 +688,7 @@ width: 184px;
 .lienquan h3 a:hover{
 	text-decoration: underline;
 }
+.tranghientai{
+	background: #5c99f6 !important;
+	color: #fff !important;
+}

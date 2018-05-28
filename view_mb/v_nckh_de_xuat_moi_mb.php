@@ -30,7 +30,7 @@
 <hr>
 <!-- CÔNG TRÌNH NGHIÊN CỨU KHOA HỌC -->
 <div class="muccon">
-    <h3>Đề NCKH đã công bố</h3>
+    <h3>Đề xuất nghiên cứu khoa học</h3>
     <div class="tieudemuccon">
         <div class="tinmoi">
         <?php $nghiemthu = lay_de_tai_da_cong_bo(0,8);$stt=1;
@@ -64,7 +64,7 @@
     $('#nckh').addClass('active');
     $('#xemthem').on('click',function(){
       $.ajax({
-        url : "ajax/ajax_xem_them_nckh_da_cong_bo_mb.php",
+        url : "ajax/ajax_xem_them_nckh_da_de_xuat_mb.php",
         type : "post",
         dataType:"text",
         data : {
@@ -86,7 +86,7 @@
         error: function () {
             alert('Lỗi khi tải tin');
         }
-    });
+      });
     });
   });
 
