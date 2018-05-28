@@ -22,10 +22,38 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
 		{
 		  "@context": "http://schema.org",
 		  "@type": "NewsArticle",
-		  "url": "<?php echo "http://". $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'] ?>",
+		  "url": "",
 		  "name": "<?php echo addslashes($hbv['TENBV']) ?>",
 		  "image": "<?php echo $qlkh['HOSTGOC'].$hbv['HINHANH'] ?>"
 		}
+
+{
+  "@context": "http://schema.org",
+  "@type": "NewsArticle",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://google.com/article"
+  },
+  "headline": "<?php echo addslashes($hbv['TENBV']) ?>",
+  "image": [
+    "<?php echo $qlkh['HOSTGOC'].$hbv['HINHANH'] ?>"
+   ],
+  "datePublished": "<?php echo $hbv['NGAYDANG'] ?>",
+  "dateModified": "<?php echo $hbv['NGAYDANG'] ?>",
+  "author": {
+    "@type": "Person",
+    "name": "Ngô Thanh Lý"
+  },
+   "publisher": {
+    "@type": "Organization",
+    "name": "<?php echo addslashes($hbv['TENBV']) ?>",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "<?php echo $qlkh['HOSTGOC'].$hbv['HINHANH'] ?>"
+    }
+  },
+  "description": "A most wonderful article"
+}
 	</script>
 <?php }else{ ?>
 	<meta name="description" content="Nghiên cứu khoa học &amp; Hợp tác quốc tế | Đại học Sư phạm Kỹ thuật Vĩnh Long" />
