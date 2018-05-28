@@ -6,12 +6,18 @@
         <div class="line"></div>
     </div>
 <div id="cottrai">
-    <?php 
-    $d_tin = mysqli_num_rows($tin);
-     if ($d_tin==0) {
-        echo "Chuyên mục chưa có bài viết";
-    }else{ 
-        while ($row = mysqli_fetch_assoc($tin)){ ?>
+      <?php 
+      $sotin = 2;
+      $bd=1;
+      if (isset($_GET['trang']) && !empty($_GET['trang'])) {
+        $bd = intval($_GET['trang']);
+        if ($bd<1) {
+          $bd=1;
+        }
+      }
+      $tu = ($bd-1)*$sotin;
+      $nghiemthu = lay_tin_them($id,$tu,$sotin);
+      while ($row = mysqli_fetch_assoc($nghiemthu)) { ?>
         <a href="xemtin/<?php echo $row['LINKBV']; ?>-<?php echo $row['IDBV']; ?>.ltn">
             <div class="tin-con-phai">
                 <div class="hinh-anh-tin-con-phai" style="background-image: url('<?php echo $row['HINHANH'] ?>');"></div>
@@ -21,10 +27,21 @@
                 </div>
             </div>
         </a>
-    <?php 
-        }
+    <?php
     }   ?>
-
+    <center>
+      <ul class="phantrang">
+        <?php $sodetai = dem_de_tai($id);
+        if ($sodetai!=0) {
+          for ($i=1; $i <= ceil($sodetai/$sotin); $i++) { 
+            $str = "";
+            if($bd==$i) $str = "tranghientai";
+            echo "<li class='".$str."'><a href='?p=tintuc&id=".$id."&trang=".$i."'>".$i."</a></li>";
+          }
+        }
+        ?>
+      </ul>
+    </center>
 </div>
 <div id="cotphai">
     <!-- THÔNG TIN LIÊN HỆ -->

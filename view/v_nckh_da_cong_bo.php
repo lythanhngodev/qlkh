@@ -9,7 +9,7 @@
     </div>
     <div class="tin">
           <?php 
-          $sotin = 2;
+          $sotin = 8;
           $bd=1;
           if (isset($_GET['trang']) && !empty($_GET['trang'])) {
             $bd = intval($_GET['trang']);

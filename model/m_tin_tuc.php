@@ -8,6 +8,15 @@
 		mysqli_close($conn);
 		return $result;
 	}
+	function dem_de_tai($id){
+		$ketnoi = new clsKetnoi();
+		$conn = $ketnoi->ketnoi();
+		$query = "SELECT bv.IDBV, bv.TENBV, bv.LINKBV, bv.HINHANH, NGAYDANG from baiviet bv, chuyenmuc cm, baiviet_chuyenmuc bc WHERE bc.IDBV = bv.IDBV AND bc.IDCM = cm.IDCM AND cm.LOAICHUYENMUC=N'tintuc' AND bv.HIENTHI=b'1' AND bc.IDCM='$id';";
+		$result = mysqli_query($conn, $query);
+		$r = mysqli_num_rows($result);
+		mysqli_close($conn);
+		return $r;
+	}
 	function lay_tin_them($id,$bd,$sotin){
 		$ketnoi = new clsKetnoi();
 		$conn = $ketnoi->ketnoi();
