@@ -92,7 +92,7 @@
                     ?></li>  
                 </ul>
             </div>
-       </div>
+        </div>
          <?php $stt++;} ?>
         </div>
     <center><a href="nckhdacongbo" class="nut-link">XEM THÊM</a></center>
@@ -101,7 +101,7 @@
 
 <!-- BÀI BÁO KHOA HỌC -->
 <div class="muccon">
-    <h3>Bài báo khoa học mới</h3>
+    <h3>Báo khoa học</h3>
     <div class="tieudemuccon">
         <div class="tinmoi">
         <?php $baibao = lay_bai_bao_khoa_hoc();$stt=1;

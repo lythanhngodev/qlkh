@@ -1,24 +1,24 @@
 @charset "utf-8";
 .muccon{
-	width: 100%;
-	border-radius: 6px;
-	border: 1px solid #1d72f4;
-	font-family:  sans-serif;
-	font-size: 13px;
-	float:  left;
-	margin-bottom: 25px;
-	padding-bottom: 25px;
-	position:  relative;
+  width: 100%;
+  border-radius: 6px;
+  border: 1px solid #1d72f4;
+  font-family:  sans-serif;
+  font-size: 13px;
+  float:  left;
+  margin-bottom: 25px;
+  padding-bottom: 25px;
+  position:  relative;
 }
 .muccon h3{
-	background: #007bfd;
-	width: 100%;
-	padding: 6px 0px;
-	font-family: sans-serif;
-	color: #fff;
-	border-radius: 5px 5px 0px 0px;
-	text-align: center;
-	font-size: 18px;
+  background: #007bfd;
+  width: 100%;
+  padding: 6px 0px;
+  font-family: sans-serif;
+  color: #fff;
+  border-radius: 5px 5px 0px 0px;
+  text-align: center;
+  font-size: 18px;
 }
 .tinmoi{
     width:  100%;
@@ -28,16 +28,16 @@
 .tincon .hinhtin{width: 22%;height: 60px;float:  left;margin-right: 5px;background-size: cover;background-position:  center;border-radius: 8px;}
 .tincon .tomtattin{float:  left;width: 75%;}
 .tinmoi a{
-	color:#212121;
+  color:#212121;
 }
 .tinmoi a:hover{
-	color:#2b6dce;
+  color:#2b6dce;
 }
 .tieudemuccon{
-	width:100%;
-	float: left;
+  width:100%;
+  float: left;
 }
-.tieu-de-tin{color: #1c7fe8 !important;font-weight: 600;font-size: 13px;}
+.tieu-de-tin{color: #1c7fe8 !important;font-weight: 600;font-size: 14px;}
 .noidungtin{
 padding: 0px 5px;
 }
@@ -45,21 +45,21 @@ padding: 0px 5px;
     margin-top: 5px;
 }
 .thongtinchung ul{
-	margin-bottom: 0px;
-	padding-left: 30px;
+  margin-bottom: 0px;
+  padding-left: 30px;
 }
 .nut-link{
-	background: #007bfd;
-	color:  #fff;
-	padding: 10px 10px;
-	border-radius: 6px;
-	box-shadow: 2px 2px 8px 0px #cacaca;
+  background: #007bfd;
+  color:  #fff;
+  padding: 10px 10px;
+  border-radius: 6px;
+  box-shadow: 2px 2px 8px 0px #cacaca;
 }
 .muccon center{
-	position:absolute;
-	bottom: -9px;
-	left: 0;
-	right: 0;
+  position:absolute;
+  bottom: -9px;
+  left: 0;
+  right: 0;
 }
 .footer {
     float:  left;
@@ -71,8 +71,8 @@ padding: 0px 5px;
 }
 
 .chi-tiet-bai-viet{
-	width:100% !important;
-	float: left;
+  width:100% !important;
+  float: left;
 }
 .vlu-chi-tiet-header-bai-viet{
   width: 100%;
@@ -114,4 +114,28 @@ padding: 0px 5px;
   color: #e0e0e0;
   font-size: 90%;
   padding: 6px 2px;
+}
+.detailienquan{
+    color: #2279fa;
+    font-size: 18px;
+    font-weight: 400;
+    font-family: sans-serif;
+    margin: 1rem 0rem 0.5rem 0rem;
+    text-decoration:  underline;
+}
+.lienquan{
+    margin: 0rem 0.5rem;
+    font-family:  sans-serif;
+    font-weight:  100;
+}
+.lienquan h3{
+    font-weight: 100;
+}
+.lienquan h3 a{
+    color: #212121;
+    text-decoration:  none;
+    font-size: 15px;
+}
+.lienquan h3 a:hover{
+  text-decoration: underline;
 }

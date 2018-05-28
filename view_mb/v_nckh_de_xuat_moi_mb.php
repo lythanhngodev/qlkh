@@ -20,7 +20,7 @@
     <form action="timkiem" method="POST" style="margin-top: 15px;">
       <input class="form-control" type="search" placeholder="Tìm kiếm" name="tu" style="margin-top: 5px;" >
       <select class="form-control" id="searchType" name="loai" style="margin-top: 5px;" hidden="hidden" >
-        <option value="1" selected>Đề tài NCKH đã công bố</option>
+        <option value="2" selected>Đề tài NCKH đã công bố</option>
         <option value="2">Đề xuất NCKH</option>
       </select>
       <center><button class="btn btn-outline-success form-control col-6" type="submit" style="margin-top: 5px;" >Tìm kiếm</button></center>
@@ -62,6 +62,7 @@
   var tin = 2;
   $(document).ready(function(){
     $('#nckh').addClass('active');
+    $('#tieude').html('Đề xuất NCKH');
     $('#xemthem').on('click',function(){
       $.ajax({
         url : "ajax/ajax_xem_them_nckh_da_de_xuat_mb.php",

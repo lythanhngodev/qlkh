@@ -43,6 +43,7 @@
     var tin = 2;
     $("document").ready(function() {
         $('#tintuc').addClass('active');
+        $('#tieude').html('Tin tức');
     $('#xemthem').on('click',function(){
       $.ajax({
         url : "ajax/ajax_xem_them_tin_tuc_mb.php",

@@ -44,5 +44,6 @@
 <script type="text/javascript">
     $("document").ready(function() {
         $('#bieumau').addClass('active');
+        $('#tieude').html('Biểu mẫu');
     });
 </script> 

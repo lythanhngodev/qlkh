@@ -30,7 +30,7 @@
 <hr>
 <!-- CÔNG TRÌNH NGHIÊN CỨU KHOA HỌC -->
 <div class="muccon">
-    <h3>Đề NCKH đã công bố</h3>
+    <h3>Đề tài NCKH đã công bố</h3>
     <div class="tieudemuccon">
         <div class="tinmoi">
         <?php $nghiemthu = lay_de_tai_da_cong_bo(0,8);$stt=1;
@@ -62,6 +62,7 @@
   var tin = 2;
   $(document).ready(function(){
     $('#nckh').addClass('active');
+    $('#tieude').html('NCKH đã công bố');
     $('#xemthem').on('click',function(){
       $.ajax({
         url : "ajax/ajax_xem_them_nckh_da_cong_bo_mb.php",
