@@ -5,8 +5,6 @@
       xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 <!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
-
-
 <url>
   <loc>http://qlkh.vlute.edu.vn/</loc>
   <lastmod>2018-05-26T10:09:49+00:00</lastmod>
@@ -69,71 +67,6 @@
 </url>
 <url>
   <loc>http://qlkh.vlute.edu.vn/nckhdacongbo</loc>
-  <lastmod>2018-05-26T10:09:49+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>http://qlkh.vlute.edu.vn/xemdetai/bien-soan-ngan-hang-cau-hoi-trac-nghiem-mon-vat-ly-dai-cuong-he-cao-dang-1.ltn</loc>
-  <lastmod>2018-05-26T10:09:49+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>http://qlkh.vlute.edu.vn/xemdetai/ung-dung-phan-mem-test-pro-60-tron-de-thi-trac-nghiem-vat-ly-dai-cuong-2.ltn</loc>
-  <lastmod>2018-05-26T10:09:49+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>http://qlkh.vlute.edu.vn/xemdetai/nghien-cuu-phuong-phap-ve-nhanh-bieu-do-noi-luc-trong-mon-hoc-suc-ben-vat-lieu-3.ltn</loc>
-  <lastmod>2018-05-26T10:09:49+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>http://qlkh.vlute.edu.vn/?p=baokhoahoc</loc>
-  <lastmod>2018-05-26T10:09:49+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>http://qlkh.vlute.edu.vn/xembaibao/cong-tac-dao-tao-boi-duong-giao-vien-day-nghe-tai-truong-dh-spkt-vinh-long-thuc-trang-va-giai-phap-1.ltn</loc>
-  <lastmod>2018-05-26T10:09:49+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>http://qlkh.vlute.edu.vn/xembaibao/ung-dung-kit-arduion-uno-vao-he-thong-dieu-khien-tu-dong-application-kit-rduino-uno-in-automatic-control-systems-2.ltn</loc>
-  <lastmod>2018-05-26T10:09:49+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>http://qlkh.vlute.edu.vn/xemtin/nghien-cuu-ung-dung-cong-nghe-cao-trong-san-xuat-nong-nghiep-7.ltn</loc>
-  <lastmod>2018-05-26T10:09:49+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>http://qlkh.vlute.edu.vn/xemtin/hoi-thao-khao-hoc-thang-42018-voi-chu-de-tang-cuong-lien-ket-giua-truong-dai-hoc-voi-doanh-nghiep-trong-qua-trinh-dao-tao-va-giai-quyet-viec-lam-cho-sinh-vien-6.ltn</loc>
-  <lastmod>2018-05-26T10:09:49+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>http://qlkh.vlute.edu.vn/xemtin/danh-gia-ket-qua-va-hieu-qua-cac-chi-tieu-kinh-te-ky-thuat-cua-cac-thiet-bi-thu-hoach-che-va-say-cay-lac-5.ltn</loc>
-  <lastmod>2018-05-26T10:09:49+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>http://qlkh.vlute.edu.vn/xemtin/lam-viec-voi-doan-koica-viet-nam-ve-hoat-dong-cua-tinh-nguyen-vien-4.ltn</loc>
-  <lastmod>2018-05-26T10:09:49+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>http://qlkh.vlute.edu.vn/xemtin/dai-hoc-spkt-vinh-long-ky-ket-thoa-thuan-song-phuong-voi-to-chuc-skills-international-co-hoi-viec-lam-tai-new-zeland-3.ltn</loc>
-  <lastmod>2018-05-26T10:09:49+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>http://qlkh.vlute.edu.vn/xemtin/dh-spkt-vinh-long-tang-cuong-hop-tac-tai-new-zealand-2.ltn</loc>
-  <lastmod>2018-05-26T10:09:49+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>http://qlkh.vlute.edu.vn/xemtin/lien-ket-hop-tac-cac-linh-vuc-va-chuong-trinh-trao-doi-sinh-vien-voi-dai-hoc-koreatech-1.ltn</loc>
   <lastmod>2018-05-26T10:09:49+00:00</lastmod>
   <priority>0.80</priority>
 </url>
