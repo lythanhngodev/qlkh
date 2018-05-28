@@ -18,6 +18,15 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
 	<meta name="google" content="nositelinkssearchbox" />
 	<meta name="google" content="notranslate" />
 	<meta name="keywords" content="Phong nghien cuu khoa hoc truong dai hoc su pham ky thuat vinh long, nckh vlute, VLUTE SCIENTIFIC RESEARCH, VLUTE SCIENTIFIC RESEARCH, SR VLUTE, nckh vlute, nghien cuu khoa hoc vlute, nghien cuu khoa hoc su pham ky thuat vinh long, nghien cuu khoa hoc vlute" />
+	<script type="application/ld+json">
+		{
+		  "@context": "http://schema.org",
+		  "@type": "News",
+		  "url": "<?php echo "http://". $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'] ?>",
+		  "name": "<?php echo addslashes($hbv['TENBV']) ?>",
+		  "image": "<?php echo $qlkh['HOSTGOC'].$hbv['HINHANH'] ?>"
+		}
+	</script>
 <?php }else{ ?>
 	<meta name="description" content="Nghiên cứu khoa học &amp; Hợp tác quốc tế | Đại học Sư phạm Kỹ thuật Vĩnh Long" />
 	<title>Nghiên cứu khoa học &amp; Hợp tác quốc tế | Đại học Sư phạm Kỹ thuật Vĩnh Long</title>
