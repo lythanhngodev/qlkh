@@ -6,6 +6,19 @@
 	<?php include_once "header.php" ?>
 	<base href="<?php echo $qlkh['HOSTGOC'] ?>" /><script defer src="fontawesome/svg-with-js/js/fontawesome-all.js"></script><link rel="stylesheet" type="text/css" href="css/style.css"><link rel="stylesheet" type="text/css" href="css/animate.css"><script src="js/jquery-3.3.1.min.js"></script><script src="js/jquery-migrate-1.2.1.js"></script>
 <script src="js/superfish.js" type="text/javascript"></script><script type="text/javascript">$(function() {$('ul.sf-menu').superfish();});</script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "url": "<?php echo $qlkh['HOSTGOC'] ?>",
+  "logo": "<?php echo $qlkh['HOSTGOC'] ?>images/logo.png",
+  "contactPoint": [{
+    "@type": "ContactPoint",
+    "telephone": "+84 2703 862457",
+    "contactType": "customer service"
+  }]
+}
+</script>
 </head>
 <body>
 <script>
