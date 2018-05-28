@@ -21,7 +21,7 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
 	<script type="application/ld+json">
 		{
 		  "@context": "http://schema.org",
-		  "@type": "News",
+		  "@type": "NewsArticle",
 		  "url": "<?php echo "http://". $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'] ?>",
 		  "name": "<?php echo addslashes($hbv['TENBV']) ?>",
 		  "image": "<?php echo $qlkh['HOSTGOC'].$hbv['HINHANH'] ?>"
