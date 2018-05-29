@@ -4,7 +4,7 @@
 <div class="chi-tiet-bai-viet">
     <div class="vlu-chi-tiet-header-bai-viet">
         <article class="vlu-chi-tiet-hinh-anh-tin" style="background-image: url('<?php echo $bv['HINHANH'] ?>')">
-            <a href="?p=xemtin&id=<?php echo $bv['IDBV'] ?>&tieude=<?php echo $bv['LINKBV'] ?>">
+            <a>
                 <div class="vlu-chi-tiet-link-bai-viet">
                     <div class="vlu-chi-tieu-tieu-de-bai-viet"><?php echo $bv['TENBV'] ?></div>
                     <div class="vlu-chi-tiet-thoi-gian-bai-viet"><i class="far fa-clock"></i>&nbsp;

@@ -32,6 +32,9 @@
 			case 'timkiem':
 				include_once("control/c_tim_kiem.php");
 				break;
+			case 'tag':
+				include_once("control/c_tag.php");
+				break;
 		}
 	}
 	else

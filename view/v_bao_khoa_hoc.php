@@ -87,7 +87,7 @@
             <div class="tukhoa">
               <?php $tk = lay_tu_khoa();
               while ($row=mysqli_fetch_assoc($tk)) { ?>
-              <div><a href="?p=tag&tag=<?php echo $row['IDKHOA'] ?>"><?php echo $row['TENKHOA'] ?></a></div>
+              <div><a href="tag/<?php echo $row['IDKHOA'] ?>"><?php echo $row['TENKHOA'] ?></a></div>
               <?php } ?>
             </div>
         </div>

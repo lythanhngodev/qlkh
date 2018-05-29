@@ -1,37 +1,31 @@
 <div id="cottrai">
     <!-- CÁC CÔNG TRÌNH KHOA HỌC ĐÃ CÔNG BỐ -->
     <div class="tieudechinh">
-        <div class="tentieudechinh" style="width: 235px;">
-            <img src="images/chi-muc.png" width="27" height="27" align="absmiddle"><a>Kết quả tìm kiếm: <?php echo $tu; ?></a>
+        <div class="tentieudechinh" style="width: fit-content;">
+            <img src="images/chi-muc.png" width="27" height="27" align="absmiddle"><a>Kết quả tìm kiếm tag: <span id="tentag"></span></a>
         </div>
         <div class="clear"></div>
         <div class="line"></div>
     </div>
     <div class="tin">
-      <?php $dem = 0;
+      <?php $dem = 0;$tentag="";
       if (!empty($tu)) {
-          while ($row = mysqli_fetch_assoc($detai)) { ?>
+          while ($row = mysqli_fetch_assoc($tag)) { ?>
            <div class="noidungtin">
               <h3>
-                  <a href="xemdetai/<?php echo $row['TENDETAI'] ?>-<?php echo $row['IDDT'] ?>.ltn" title="<?php echo $row['TENDETAI'] ?>"><?php echo $row['TENDETAI'] ?></a>
+                  <?php if($row['LOAI']=='bao'){ $tentag=$row['TENKHOA']; ?>
+                  <a style="color: #252525 !important;" href="xembaibao/<?php echo to_slug($row['TEN']) ?>-<?php echo $row['ID'] ?>.ltn" title="<?php echo $row['TEN'] ?>"><?php echo '<u>Bài báo:</u> '.$row['TEN'] ?></a>
+                  <?php } ?>
+                  <?php if($row['LOAI']=='tin'){ $tentag=$row['TENKHOA']; ?>
+                  <a style="color: #252525 !important;" href="xemdetai/<?php echo to_slug($row['TEN']) ?>-<?php echo $row['ID'] ?>.ltn" title="<?php echo $row['TEN'] ?>"><?php echo '<u>Đề tài:</u> '.$row['TEN'] ?></a><hr style="width:  80%;margin: auto;margin-top: 10px;margin-bottom: 10px;border-top: 1px solid #b5b5b5 !important;border-bottom:  none;">
+                  <?php } ?>
               </h3>
-              <div class="thongtinchung">
-                  <ul>
-                     <li>Thành viên : <?php echo $row['HOTEN'] ?></li> 
-                     <li>Thời gian nghiệm thu: <?php echo date("d-m-Y", strtotime($row['THOIGIANNGHIEMTHU'])); ?></li>
-                     <li>Lĩnh vực nghiên cứu: <?php $lv = linh_vuc_de_tai($row['IDDT']);
-                     while ($rlv = mysqli_fetch_assoc($lv)) {
-                         echo $rlv['TENLV'].", ";
-                     }
-                      ?></li>  
-                  </ul>
-              </div>
               <div class="clear"></div>
          </div>
            <?php $dem++; } if ($dem == 0) {
-             echo "Không đề tài nào được tìm khấy!";
+             echo "Không có kết quả tìm khấy.";
            }
-      } else echo "Không đề tài nào được tìm khấy!"; ?>
+      } else echo "Không có kết quả tìm khấy."; ?>
     </div>
 
 </div>
@@ -84,5 +78,6 @@
 <script type="text/javascript">
     $("document").ready(function() {
         $('#trangchu').addClass('current');
+        $('#tentag').html('<?php echo $tentag ?>');
     });
 </script> 
