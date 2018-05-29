@@ -11,3 +11,4 @@ RewriteRule ^chuyenmuc/(.*)-(.*)$ ?p=tintuc&id=$2&ten=$1
 RewriteRule ^hoptacquocte/(.*)-(.*)$ ?p=hoptacquocte&id=$2&ten=$1
 RewriteRule ^timkiem$ ?p=timkiem
 RewriteRule ^tag/(.*)$ ?p=tag&tag=$1
+RewriteRule ^tintuc/(.*)/(.*)$ ?p=tintuc&id=$1&tag=$2
