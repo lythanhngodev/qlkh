@@ -70,7 +70,7 @@
                                               <label for="tags" class="font-weight-bold" >
                                                   Hình ảnh</label>&nbsp;
                                               <button class="btn btn-success" onclick="duyetfile()">Chọn hình ảnh... </button>&ensp;<button class="btn btn-danger" id="xoahinh"><i class="fas fa-times"></i></button>
-                                              <input type="text" name="" value="" id="linkfile" hidden="hidden">
+                                              <input type="text" name="" value="<?php echo $baiviet['HINHANH'] ?>" id="linkfile" hidden="hidden">
                                           </div>
                                       </div>
                                       <div class="col-md-4">
