@@ -1,26 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e784096a-f6cb-467c-8cbe-b1eae1f3bf23" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/admin/ajax/ajax_luu_thong_tin_nguoi_dung.php" afterPath="$PROJECT_DIR$/admin/ajax/ajax_luu_thong_tin_nguoi_dung.php" />
-      <change beforePath="$PROJECT_DIR$/admin/ajax/ajax_sua_de_xuat.php" afterPath="$PROJECT_DIR$/admin/ajax/ajax_sua_de_xuat.php" />
-      <change beforePath="$PROJECT_DIR$/admin/ajax/ajax_them_bai_bao_khoa_hoc.php" afterPath="$PROJECT_DIR$/admin/ajax/ajax_them_bai_bao_khoa_hoc.php" />
-      <change beforePath="$PROJECT_DIR$/admin/ajax/ajax_xoa_de_tai.php" afterPath="$PROJECT_DIR$/admin/ajax/ajax_xoa_de_tai.php" />
-      <change beforePath="$PROJECT_DIR$/admin/index.php" afterPath="$PROJECT_DIR$/admin/index.php" />
-      <change beforePath="$PROJECT_DIR$/admin/view/v_bao_khoa_hoc.php" afterPath="$PROJECT_DIR$/admin/view/v_bao_khoa_hoc.php" />
-      <change beforePath="$PROJECT_DIR$/admin/view/v_sua_de_tai.php" afterPath="$PROJECT_DIR$/admin/view/v_sua_de_tai.php" />
-      <change beforePath="$PROJECT_DIR$/admin/view/v_them_tin_tuc.php" afterPath="$PROJECT_DIR$/admin/view/v_them_tin_tuc.php" />
-      <change beforePath="$PROJECT_DIR$/admin/view/v_thong_tin_ca_nhan.php" afterPath="$PROJECT_DIR$/admin/view/v_thong_tin_ca_nhan.php" />
-      <change beforePath="$PROJECT_DIR$/admin/view/v_tin_tuc.php" afterPath="$PROJECT_DIR$/admin/view/v_tin_tuc.php" />
-      <change beforePath="$PROJECT_DIR$/admin/word/_danhsachhoidongnghiemthu.php" afterPath="$PROJECT_DIR$/admin/word/_danhsachhoidongnghiemthu.php" />
-      <change beforePath="$PROJECT_DIR$/control/c_hop_tac_quoc_te.php" afterPath="$PROJECT_DIR$/control/c_hop_tac_quoc_te.php" />
-      <change beforePath="$PROJECT_DIR$/control/c_tag.php" afterPath="$PROJECT_DIR$/control/c_tag.php" />
-      <change beforePath="$PROJECT_DIR$/control/c_tim_kiem.php" afterPath="$PROJECT_DIR$/control/c_tim_kiem.php" />
-      <change beforePath="$PROJECT_DIR$/control/c_tin_tuc.php" afterPath="$PROJECT_DIR$/control/c_tin_tuc.php" />
-      <change beforePath="$PROJECT_DIR$/control/c_xem_bai_bao.php" afterPath="$PROJECT_DIR$/control/c_xem_bai_bao.php" />
-      <change beforePath="$PROJECT_DIR$/control/c_xem_de_tai.php" afterPath="$PROJECT_DIR$/control/c_xem_de_tai.php" />
-      <change beforePath="$PROJECT_DIR$/control/c_xem_tin.php" afterPath="$PROJECT_DIR$/control/c_xem_tin.php" />
-    </list>
+    <list default="true" id="e784096a-f6cb-467c-8cbe-b1eae1f3bf23" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -125,8 +106,17 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="baiviet_nguoidung" pinned="false" current-in-tab="true">
+      <file leaf-file-name="baiviet_nguoidung" pinned="false" current-in-tab="false">
         <entry file="das://table:/f683da9/7100f002-45e7-4ecd-b4f9-feb8543b2f12/nckh.baiviet_nguoidung">
+          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+            <state>
+              <filtering enabled="true" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="detai" pinned="false" current-in-tab="true">
+        <entry file="das://table:/f683da9/7100f002-45e7-4ecd-b4f9-feb8543b2f12/nckh.detai">
           <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
             <state>
               <filtering enabled="true" />
@@ -340,6 +330,7 @@
       <workItem from="1527122620753" duration="9878000" />
       <workItem from="1527214784982" duration="2240000" />
       <workItem from="1527591595478" duration="3707000" />
+      <workItem from="1527661483150" duration="23000" />
     </task>
     <task id="LOCAL-00001" summary="Start up">
       <created>1525824037964</created>
@@ -359,28 +350,29 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="123914000" />
+    <option name="totallyTimeSpent" value="123937000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="32" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
+      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17963752" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22014925" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2563536" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17963752" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="true" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22014925" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2563536" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="SQL Generator" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32928178" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -642,13 +634,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="das://table:/f683da9/7100f002-45e7-4ecd-b4f9-feb8543b2f12/nckh.detai">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
     <entry file="das://table:/f683da9/7100f002-45e7-4ecd-b4f9-feb8543b2f12/nckh.khoabomon">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
@@ -782,6 +767,13 @@
       </provider>
     </entry>
     <entry file="das://table:/f683da9/7100f002-45e7-4ecd-b4f9-feb8543b2f12/nckh.baiviet_nguoidung">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://table:/f683da9/7100f002-45e7-4ecd-b4f9-feb8543b2f12/nckh.detai">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
