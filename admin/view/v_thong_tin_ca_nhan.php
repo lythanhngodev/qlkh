@@ -643,8 +643,7 @@ if (!isset($_SESSION["token"])) {include_once ("../../loi404.html");exit();}
                         noidaotaotscn2: noidaotaotscn2,
                         tenluanan: tenluanan,
                         bdt: bdt,
-                        bct: bct,
-                        idnd: '<?php echo $idnd; ?>'
+                        bct: bct
                     },
                     beforeSend: function () {
                         canhbao('Đang xử lý dữ liệu');

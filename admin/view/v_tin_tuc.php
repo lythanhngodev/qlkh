@@ -13,8 +13,8 @@
                     <tr style="background:#e9ecef;">
                         <th class="giua" style="width: 28px;">STT</th>
                         <th>Tên bài báo</th>
-                        <th style="width: 160px;">Mô tả</th>
-                        <th style="width: 40px;">Ngày đăng</th>
+                        <th style="width: 300px;">Mô tả</th>
+                        <th style="width: 90px;">Ngày đăng</th>
                         <th style="width: 55px;">Ẩn/Hiện</th>
                         <th style="width: 90px;">Thao tác</th>
                     </tr>
@@ -36,7 +36,7 @@
                         </td>
                         <td class="giua">
                             <a href="?p=suabaiviet&id=<?php echo $row['IDBV'] ?>" class="btn btn-primary btn-sm" title="Sửa"><i class="fas fa-edit"></i></a>
-                            <button class="btn btn-danger btn-sm" id="" title="Xóa"><i class="fas fa-trash"></i></button>
+                            <button class="btn btn-danger btn-sm" id="" title="Xóa" onclick="xoa(<?php echo $row['IDBV'] ?>)"><i class="fas fa-trash"></i></button>
                         </td>
                     </tr>
                     <?php  $stt++; } ?>
@@ -61,4 +61,31 @@
   $(document).ready(function() {
     $('#example').DataTable();
 } );
+  function xoa(id){
+    if (!confirm('Bạn có chắc xoá bài báo này?')) {
+      return;
+    }
+    $.ajax({
+        url : "ajax/ajax_xoa_bai_viet.php",
+        type : "post",
+        dataType:"text",
+        data : {
+            id: id
+        },
+        success : function (data){
+            $.notifyClose();
+            var mang = $.parseJSON(data);
+            if (mang.trangthai==1) {
+              swal('Tốt', 'Đã xoá bài viết', 'success');
+              setTimeout(function(){
+                  location.reload();
+              }, 2000);
+            }
+            else swal('Ôi lỗi!', 'Xảy ra lỗi, vui lòng thử lại sau', 'error');
+        },
+        error : function(){
+          swal('Ôi lỗi!', 'Xảy ra lỗi, vui lòng thử lại sau', 'error');
+        }
+    });
+  }
 </script>

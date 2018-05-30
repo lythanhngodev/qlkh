@@ -10,6 +10,6 @@ if (isset($_GET['tag']) && !empty($_GET['tag'])) {
 	include_once 'view/v_tag.php';
 }
 else{
-	trangchu();
+	trangchu($qlkh['HOSTGOC']);
 }
 ?>

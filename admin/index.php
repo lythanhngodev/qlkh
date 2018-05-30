@@ -264,7 +264,7 @@ $_SESSION["token"] = $token;
     <!-- Main File-->
     <script src="js/front.js"></script>
     <script type="text/javascript">
-      $('body .dropdown-toggle').dropdown();
+      //$('body .dropdown-toggle').dropdown();
       $(document).ready(function(){
         $('#thongbao-2bgf').append('<div class="alert alert-info" role="alert">Vui lòng cập nhật thông tin <b>trình độ chuyên môn, đơn vị công tác, số điện thoại liên lạc</b> tại trang <a href="?p=thongtincanhan" class="alert-link"><u>thông tin cá nhân</u></a>.</div><div class="alert alert-info" role="alert">Khi xảy ra lỗi hoặc sự cố vui lòng chụp ảnh màn hình gửi đến mail <a href="mailto:lythanhngodev@gmail.com"><u>lythanhngodev@gmail.com</u></a>.</div>');
       });

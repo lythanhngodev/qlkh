@@ -4,11 +4,11 @@
 	if (isset($_SESSION['tdn']) && isset($_SESSION['pas'])) {
 		$ketnoi = new clsKetnoi();
 		if (!($ketnoi->checklogin($_SESSION['tdn'],$_SESSION['pas']))) {
-			echo '<script type="text/javascript">location.href = "'.$qlkh['HOSTADMIN'].'"</script>';
+			trangchu($qlkh['HOSTADMIN']);
 			exit();
 		}
 	}else{
-	    echo '<script type="text/javascript">location.href = "'.$qlkh['HOSTADMIN'].'"</script>';
+	    trangchu($qlkh['HOSTADMIN']);
 	}
 	function themtacgia($tbb,$tg, $qg, $tc, $namxb, $nd, $bib, $tk,$file,$cap,$diem,$sotiet){
 		if (empty($tbb)) {
@@ -73,7 +73,7 @@
 	if (themtacgia($_POST['tbb'],$_POST['tg'],$_POST['qg'],$_POST['tc'],$_POST['namxb'],$_POST['nd'],$_POST['bib'],$_POST['tk'],$_POST['file'], $_POST['cap'], $_POST['diem'], $_POST['sotiet'])) { 
 		?>
 		<script type="text/javascript">
-			thanhcong("Đã thêm bài báo!");
+			swal('Tốt','Thêm bài báo thành công','success');
 			setTimeout(function(){
 	        	location.href = "<?php echo $qlkh['HOSTADMIN']; ?>?p=baokhoahoc";
 		    }, 2000);

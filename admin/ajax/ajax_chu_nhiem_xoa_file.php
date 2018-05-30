@@ -1,23 +1,15 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Ly Thanh Ngo
- * Date: 15/04/2018
- * Time: 5:51 PM
- */
-?>
-<?php
 include_once("../../config.php");
 session_start();
 if (isset($_SESSION['tdn']) && isset($_SESSION['pas'])) {
     $ketnoi = new clsKetnoi();
     if (!($ketnoi->checklogin($_SESSION['tdn'],$_SESSION['pas']))) {
-        echo '<script type="text/javascript">location.href = "'.$qlkh['HOSTADMIN'].'"</script>';
+        trangchu($qlkh['HOSTADMIN']);
         exit();
     }
 }
 else{
-    echo '<script type="text/javascript">location.href = "'.$qlkh['HOSTADMIN'].'"</script>';
+    trangchu($qlkh['HOSTADMIN']);
 }
 $ketnoi = new clsKetnoi();
 $conn = $ketnoi->ketnoi();

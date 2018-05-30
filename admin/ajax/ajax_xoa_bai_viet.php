@@ -15,10 +15,12 @@ $result = Array(
 );
     $ketnoi = new clsKetnoi();
     $conn = $ketnoi->ketnoi();
-    $ma = $_POST['ma'];
+    $id = $_POST['id'];
+    $id = intval($id);
     $sql = "
-        DELETE FROM chucvu WHERE IDCV = '$ma'";
-    if(mysqli_query($conn, $sql)===TRUE){
+        DELETE FROM baiviet WHERE IDBV = '$id';";
+    $sql.="DELETE FROM baiviet_tukhoa WHERE IDBV = '$id';";
+    if(mysqli_multi_query($conn, $sql)===TRUE){
         $row = mysqli_affected_rows($conn);
         if($row==0) $result['trangthai'] = 0;
         else

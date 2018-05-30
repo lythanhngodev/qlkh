@@ -4,11 +4,11 @@ session_start();
 if (isset($_SESSION['tdn']) && isset($_SESSION['pas'])) {
     $ketnoi = new clsKetnoi();
     if (!($ketnoi->checklogin($_SESSION['tdn'],$_SESSION['pas']))) {
-        echo '<script type="text/javascript">location.href = "'.$qlkh['HOSTADMIN'].'"</script>';
+        trangchu($qlkh['HOSTADMIN']);
         exit();
     }
 }else{
-    echo '<script type="text/javascript">location.href = "'.$qlkh['HOSTADMIN'].'"</script>';
+    trangchu($qlkh['HOSTADMIN']);
 }
 function suaslider($id, $tieude, $link, $style, $hinhanh, $kichhoat){
     $ketnoi = new clsKetnoi();

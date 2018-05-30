@@ -917,7 +917,6 @@
                         tiendodukien: btd,
                         baocaotiendo: bctd,
                         kinhphichitiet: bkp,
-                        idnd: '<?php echo $idnd; ?>',
                         iddt: '<?php echo $iddt; ?>'
                     },
                     beforeSend: function () {

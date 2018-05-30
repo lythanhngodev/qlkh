@@ -1,22 +1,14 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Ly Thanh Ngo
- * Date: 11/04/2018
- * Time: 8:28 PM
- */
-?>
-<?php
 include_once("../../config.php");
 session_start();
 if (isset($_SESSION['tdn']) && isset($_SESSION['pas'])) {
     $ketnoi = new clsKetnoi();
     if (!($ketnoi->checklogin($_SESSION['tdn'],$_SESSION['pas']))) {
-        echo '<script type="text/javascript">location.href = "'.$qlkh['HOSTADMIN'].'"</script>';
+        trangchu($qlkh['HOSTADMIN']);
         exit();
     }
 }else{
-    echo '<script type="text/javascript">location.href = "'.$qlkh['HOSTADMIN'].'"</script>';
+    trangchu($qlkh['HOSTADMIN']);
 }
 function themdetai($tendetai,$muctieu,$noidung,$cap,$moisangtao,$thuocchuongtrinh,$sucanthiet,$tinhhinhnghiencuu,$nghiencuulienquan,$phuongphapkythuat,$kinhphingansach,$kinhphinguonkhac,$thangthuchien,$thangnambatdau,$thangnamketthuc,$ketqua,$loaihinhnghiencuu,$linhvuckhoahoc,$thanhvien,$tochucthamgia,$tiendodukien,$kinhphichitiet,$idnd){
     $ketnoi = new clsKetnoi();

@@ -5,6 +5,6 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
 	include_once 'view/v_hop_tac_quoc_te.php';
 }
 else{
-	trangchu();
+	trangchu($qlkh['HOSTGOC']);
 }
 ?>

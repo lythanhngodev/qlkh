@@ -40,7 +40,7 @@
 		    <span aria-hidden="true">&times;</span>
 		  </button>
 		  <strong>Lưu ý!</strong><br>
-		  1. Cần cập nhật thông tin về HĐ nghiệm thu đề tài tại trang <a href="?p=quanlydetaiduan"><b><u>Quản lý đề tài - dự án</u></b></a> (Tab Xét duyệt)<br>
+		  1. Cần cập nhật thông tin về HĐ nghiệm thu đề tài tại trang <a href="?p=quanlydetaiduan"><b><u>Quản lý đề tài - dự án</u></b></a> (Tab nghiệm thu)<br>
 		  2. Danh sách các đề tài dưới đây không bao gồm những đề tài chờ xét duyệt hoặc đề tài đã nghiệm thu<br>
 		  3. Chọn/Check vào đề tài sau đó nút "Xuất file" để tải file về máy
 		</div>

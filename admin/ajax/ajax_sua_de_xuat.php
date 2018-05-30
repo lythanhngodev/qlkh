@@ -5,16 +5,16 @@ session_start();
 if (isset($_SESSION['tdn']) && isset($_SESSION['pas'])) {
     $ketnoi = new clsKetnoi();
     if (!($ketnoi->checklogin($_SESSION['tdn'],$_SESSION['pas']))) {
-        echo '<script type="text/javascript">location.href = "'.$qlkh['HOSTADMIN'].'"</script>';
+        trangchu($qlkh['HOSTADMIN']);
         exit();
     }
 }else{
-    echo '<script type="text/javascript">location.href = "'.$qlkh['HOSTADMIN'].'"</script>';
+    trangchu($qlkh['HOSTADMIN']);
 }
 function suadetai($tendetai,$muctieu,$noidung,$cap,$moisangtao,$thuocchuongtrinh,$sucanthiet,$tinhhinhnghiencuu,$nghiencuulienquan,$phuongphapkythuat,$kinhphingansach,$kinhphinguonkhac,$thangthuchien,$thangnambatdau,$thangnamketthuc,$ketqua,$loaihinhnghiencuu,$linhvuckhoahoc,$thanhvien,$tochucthamgia,$tiendodukien,$baocaotiendo,$kinhphichitiet,$idnd,$iddt){
     $ketnoi = new clsKetnoi();
     $conn = $ketnoi->ketnoi();
-    $idnd=mysqli_real_escape_string($conn,$idnd);
+    $idnd=intval($idnd);
     $tendetai=mysqli_real_escape_string($conn,$tendetai);
     $muctieu=mysqli_real_escape_string($conn,$muctieu);
     $noidung=mysqli_real_escape_string($conn,$noidung);
@@ -54,7 +54,7 @@ function suadetai($tendetai,$muctieu,$noidung,$cap,$moisangtao,$thuocchuongtrinh
             THANGNAMKT = '$thangnamketthuc',
             KETQUA = '$ketqua'
         WHERE
-            IDDT = '$iddt'
+            IDDT = '$iddt' AND EXISTS (SELECT IDND FROM thanhviendetai WHERE IDND = $idnd AND IDDT = $iddt AND TRACHNHIEM=N'Chủ nhiệm')
     ";
     if(mysqli_query($conn, $hoi)===TRUE){
         // Thêm loại hình nghiên cứu thuộc đề tài
@@ -139,7 +139,7 @@ function xettiendodukien(){
         return null;
     }else return $_POST['tiendodukien'];
 }
-if (suadetai($_POST['tendetai'],$_POST['muctieu'],$_POST['noidung'],$_POST['cap'],$_POST['moisangtao'],$_POST['thuocchuongtrinh'],$_POST['sucanthiet'],$_POST['tinhhinhnghiencuu'],$_POST['nghiencuulienquan'],$_POST['phuongphapkythuat'],$_POST['kinhphingansach'],$_POST['kinhphinguonkhac'],$_POST['thangthuchien'],$_POST['thangnambatdau'],$_POST['thangnamketthuc'],$_POST['ketqua'],$_POST['loaihinhnghiencuu'],$_POST['linhvuckhoahoc'],$thanhvien=xetthanhvien(),$tochuc=xettochuc(),$tiendodukien=xettiendodukien(),$baocaotiendo=xetbctd(),$_POST['kinhphichitiet'],$_POST['idnd'],$_POST['iddt'])) {
+if (suadetai($_POST['tendetai'],$_POST['muctieu'],$_POST['noidung'],$_POST['cap'],$_POST['moisangtao'],$_POST['thuocchuongtrinh'],$_POST['sucanthiet'],$_POST['tinhhinhnghiencuu'],$_POST['nghiencuulienquan'],$_POST['phuongphapkythuat'],$_POST['kinhphingansach'],$_POST['kinhphinguonkhac'],$_POST['thangthuchien'],$_POST['thangnambatdau'],$_POST['thangnamketthuc'],$_POST['ketqua'],$_POST['loaihinhnghiencuu'],$_POST['linhvuckhoahoc'],$thanhvien=xetthanhvien(),$tochuc=xettochuc(),$tiendodukien=xettiendodukien(),$baocaotiendo=xetbctd(),$_POST['kinhphichitiet'],$_SESSION['_idnd'],$_POST['iddt'])) {
     ?>
     <script type="text/javascript">
         swal('Thành công','Đã sửa đề tài!','success');

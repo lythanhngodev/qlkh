@@ -8,6 +8,6 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
 	include_once 'view/v_xem_tin.php';
 }
 else{
-	trangchu();
+	trangchu($qlkh['HOSTGOC']);
 }
 ?>

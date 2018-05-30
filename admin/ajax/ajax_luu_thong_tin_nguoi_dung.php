@@ -1,22 +1,15 @@
-<?php
-/**
- * Created by PhpStorm.
- * User: Ly Thanh Ngo
- * Date: 27/04/2018
- * Time: 10:04 AM
- */
-?>
+
 <?php
 include_once("../../config.php");
 session_start();
 if (isset($_SESSION['tdn']) && isset($_SESSION['pas'])) {
     $ketnoi = new clsKetnoi();
     if (!($ketnoi->checklogin($_SESSION['tdn'],$_SESSION['pas']))) {
-        echo '<script type="text/javascript">location.href = "'.$qlkh['HOSTADMIN'].'"</script>';
+        trangchu($qlkh['HOSTADMIN']);
         exit();
     }
 }else{
-    echo '<script type="text/javascript">location.href = "'.$qlkh['HOSTADMIN'].'"</script>';
+    trangchu($qlkh['HOSTADMIN']);
 }
 $result = Array(
     'trangthai' => '0',
@@ -58,7 +51,7 @@ $result = Array(
     $tenluanan = mysqli_real_escape_string($conn,$_POST['tenluanan']);
     $bdt = (!isset($_POST['bdt'])) ? null : $_POST['bdt'];
     $bct = (!isset($_POST['bct'])) ? null : $_POST['bct'];
-    $idnd = $_POST['idnd'];
+    $idnd = $_SESSION['_idnd'];
     $hoi;
     if (!empty($ngaysinh)) {
     $hoi = "
