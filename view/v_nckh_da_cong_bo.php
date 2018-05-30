@@ -45,7 +45,7 @@
           for ($i=1; $i <= ceil($sodetai/$sotin); $i++) { 
             $str = "";
             if($bd==$i) $str = "tranghientai";
-            echo "<li class='".$str."'><a href='?p=nckhdacongbo&trang=".$i."'>".$i."</a></li>";
+            echo "<li class='".$str."'><a href='nckhdacongbo/".$i."'>".$i."</a></li>";
           }
         }
         ?>
