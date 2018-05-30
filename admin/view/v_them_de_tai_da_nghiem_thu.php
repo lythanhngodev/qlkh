@@ -811,10 +811,10 @@ $(document).ready(function(){$('#themdetaidanghiemthu').addClass('active');$('.t
               });
               dgbtc.push(cols);
           });
-          if(jQuery.isEmptyObject(dgbtc)){
+          /*if(jQuery.isEmptyObject(dgbtc)){
               khongthanhcong('Chưa nhập ban tổ chức xét duyệt đề tài');
               return;
-          }
+          }*/
           var dgtv = [];
           $('#bangtvdg').find('tr:not(:first)').each(function(i, row){
               var cols = [];
@@ -831,10 +831,10 @@ $(document).ready(function(){$('#themdetaidanghiemthu').addClass('active');$('.t
               });
               dgtv.push(cols);
           });
-          if(jQuery.isEmptyObject(dgtv)){
+          /*if(jQuery.isEmptyObject(dgtv)){
               khongthanhcong('Chưa nhập thành viên xét duyệt');
               return;
-          }
+          }*/
           var nttv = [];
           $('#bangtvnt').find('tr:not(:first)').each(function(i, row) {
               var cols = [];
@@ -851,10 +851,10 @@ $(document).ready(function(){$('#themdetaidanghiemthu').addClass('active');$('.t
               });
               nttv.push(cols);
           });
-          if(jQuery.isEmptyObject(nttv)){
+          /*if(jQuery.isEmptyObject(nttv)){
               khongthanhcong('Chưa nhập thành viên nghiệm thu');
               return;
-          }
+          }*/
           // Kiểm tra kết nối internet
           if (kiemtraketnoi()) {
               // Ajax

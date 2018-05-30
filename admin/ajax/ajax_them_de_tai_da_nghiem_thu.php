@@ -129,7 +129,22 @@ function xetbaocaotiendo(){
         return null;
     }else return $_POST['baocaotiendo'];
 }
-if (themdetai($_POST['diemdetai'],$_POST['madetai'],$_POST['ngaynghiemthu'],$_POST['tendetai'],$_POST['muctieu'],$_POST['noidung'],$_POST['cap'],$_POST['moisangtao'],$_POST['thuocchuongtrinh'],$_POST['sucanthiet'],$_POST['tinhhinhnghiencuu'],$_POST['nghiencuulienquan'],$_POST['phuongphapkythuat'],$_POST['kinhphingansach'],$_POST['kinhphinguonkhac'],$_POST['thangthuchien'],$_POST['thangnambatdau'],$_POST['thangnamketthuc'],$_POST['ketqua'],$_POST['loaihinhnghiencuu'],$_POST['linhvuckhoahoc'],$thanhvien=xetthanhvien(),$_POST['file'],$tochuc=xettochuc(),$tiendodukien=xettiendodukien(),$baocaotiendo=xetbaocaotiendo(),$_POST['kinhphichitiet'],$_POST['dgbtc'],$_POST['dgtv'],$_POST['nttv'])) {
+function xetdgbtc(){
+    if (!isset($_POST['dgbtc'])){
+        return null;
+    }else return $_POST['dgbtc'];
+}
+function xetdgtv(){
+    if (!isset($_POST['dgtv'])){
+        return null;
+    }else return $_POST['dgtv'];
+}
+function xetnttv(){
+    if (!isset($_POST['nttv'])){
+        return null;
+    }else return $_POST['nttv'];
+}
+if (themdetai($_POST['diemdetai'],$_POST['madetai'],$_POST['ngaynghiemthu'],$_POST['tendetai'],$_POST['muctieu'],$_POST['noidung'],$_POST['cap'],$_POST['moisangtao'],$_POST['thuocchuongtrinh'],$_POST['sucanthiet'],$_POST['tinhhinhnghiencuu'],$_POST['nghiencuulienquan'],$_POST['phuongphapkythuat'],$_POST['kinhphingansach'],$_POST['kinhphinguonkhac'],$_POST['thangthuchien'],$_POST['thangnambatdau'],$_POST['thangnamketthuc'],$_POST['ketqua'],$_POST['loaihinhnghiencuu'],$_POST['linhvuckhoahoc'],$thanhvien=xetthanhvien(),$_POST['file'],$tochuc=xettochuc(),$tiendodukien=xettiendodukien(),$baocaotiendo=xetbaocaotiendo(),$_POST['kinhphichitiet'],$dgbtc=xetdgbtc(),$dgtv=xetdgtv(),$nttv=xetnttv())) {
     ?>
     <script type="text/javascript">
         thanhcong("Đã thêm đề tài!");
