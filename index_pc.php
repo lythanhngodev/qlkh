@@ -106,13 +106,13 @@
 		<div id="sr_bg">		
 			<div align="center" class="sr">
 				<form action="timkiem" method="POST" id="searchForm">
-					<strong>Nhập từ khóa tìm kiếm</strong> 
-					<input type="text" name="tu" id="searchKeyword" class="txtinput">
-					<select class="sl" id="searchType" name="loai">
-						<option value="1">Đề tài NCKH đã công bố</option>
-						<option value="2">Đề xuất NCKH</option>
-					</select>
-					<input type="submit" value="Tìm kiếm" class="btn_">
+				    <strong>Nhập từ khóa tìm kiếm</strong> 
+				    <input type="text" name="tu" id="searchKeyword" class="txtinput" style="border-radius: 6px;border: 1px solid #659cef;padding: 0px 6px;font-size: 15px;">
+				    <select class="sl" id="searchType" name="loai" style="border-radius: 6px;border: 1px solid #659cef;-webkit-appearance:  menulist;font-size: 14px;">
+					<option value="1">Đề tài NCKH đã công bố</option>
+					<option value="2">Đề xuất NCKH</option>
+				    </select>
+				    <input type="submit" value="Tìm kiếm" class="btn_" style="font-size: 13px;border-radius: 6px;border: 1px solid #24c257;padding: 1px 5px;">
 				</form>
 			</div>
 		</div>
