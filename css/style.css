@@ -74,7 +74,7 @@ body{
 	line-height: 30px;
 	text-align:  center;
 }
-#nav ul li a:link, #nav ul li a:visited
+#nav ul li a, #nav ul li a:visited
 {
 	color: #267ae4;
 	font-family: sans-serif;
