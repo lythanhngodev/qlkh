@@ -4,9 +4,11 @@
   $detect = new Mobile_Detect;
   if($detect->isMobile()){
   	require_once('index_mb.php');
+    exit();
   }
   else
   {
     require_once('index_pc.php');
+    exit();
   }
 ?>
