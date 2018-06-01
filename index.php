@@ -1,7 +1,6 @@
 <?php
-  $ZERO_PATH = "_m__detect.php";
-  require_once($ZERO_PATH);
-  $detect = new Mobile_Detect();
+  require_once("_m__detect.php");
+  $detect = null;
   $detect = new Mobile_Detect();
   if($detect->isMobile()){
     require_once('index_mb.php');
