@@ -17,7 +17,7 @@
                   <a style="color: #252525 !important;" href="xembaibao/<?php echo to_slug($row['TEN']) ?>-<?php echo $row['ID'] ?>.ltn" title="<?php echo $row['TEN'] ?>"><?php echo '<u>Bài báo:</u> '.$row['TEN'] ?></a>
                   <?php } ?>
                   <?php if($row['LOAI']=='tin'){ $tentag=$row['TENKHOA']; ?>
-                  <a style="color: #252525 !important;" href="xemdetai/<?php echo to_slug($row['TEN']) ?>-<?php echo $row['ID'] ?>.ltn" title="<?php echo $row['TEN'] ?>"><?php echo '<u>Đề tài:</u> '.$row['TEN'] ?></a><hr style="width:  80%;margin: auto;margin-top: 10px;margin-bottom: 10px;border-top: 1px solid #b5b5b5 !important;border-bottom:  none;">
+                  <a style="color: #252525 !important;" href="xemtin/<?php echo to_slug($row['TEN']) ?>-<?php echo $row['ID'] ?>.ltn" title="<?php echo $row['TEN'] ?>"><?php echo '<u>Bài viết:</u> '.$row['TEN'] ?></a><hr style="width:  80%;margin: auto;margin-top: 10px;margin-bottom: 10px;border-top: 1px solid #b5b5b5 !important;border-bottom:  none;">
                   <?php } ?>
               </h3>
               <div class="clear"></div>
