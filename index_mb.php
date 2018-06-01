@@ -7,18 +7,7 @@
 	<?php include_once "header.php" ?>
 	<base href="<?php echo $qlkh['HOSTGOC'] ?>" /><script defer src="fontawesome/svg-with-js/js/fontawesome-all.js"></script><link rel="stylesheet" type="text/css" href="css/style-mb.css"><link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css"><script src="js/jquery-3.3.1.min.js"></script><script type="text/javascript" src="bootstrap/js/bootstrap.js"></script>
 </head>
-<style type="text/css">
-#back-to-top{
-    cursor: pointer;
-    position: fixed;
-    bottom: 10px;
-    right: 15px;
-    display: none;
-    width: 40px;
-    height: 40px;
-    margin: 0 auto;
-}
-</style>
+<style type="text/css">#back-to-top{cursor: pointer;position: fixed;bottom: 10px;right: 15px;display: none;width: 40px;height: 40px;margin: 0 auto;}</style>
 <body>
 <div>
   <div style="width: 100%;margin: 0 auto;position: relative;">
@@ -97,10 +86,10 @@
     </ul>
   </div>
 </nav>
-<div class="container-fluid" style="padding: 0px 5px;margin-top: 5px;">
+<div class="thantrangmb container-fluid" style="padding: 0px 5px;margin-top: 5px;display: none;">
   <?php include_once 'public_c_mb.php'; ?>
 </div>
-<footer class="footer">
+<footer class="footer thantrangmb" style="display: none;">
   <div class="container">
     <span class="text-muted">&copy; Đại học Sư phạm Kỹ thuật Vĩnh Long.</span>
   </div>
@@ -109,6 +98,7 @@
 </body>
 <script type="text/javascript">
   $(document).ready(function(){
+    $('.thantrangmb').fadeIn(789);
      $(window).scroll(function () {
             if ($(this).scrollTop() > 250) {
                 $('#back-to-top').fadeIn();

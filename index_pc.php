@@ -4,7 +4,7 @@
 <head>
 <meta charset="utf-8">
 	<?php include_once "header.php" ?>
-	<base href="<?php echo $qlkh['HOSTGOC'] ?>" /><script defer src="fontawesome/svg-with-js/js/fontawesome-all.js"></script><link rel="stylesheet" type="text/css" href="css/style.css"><link rel="stylesheet" type="text/css" href="css/animate.css"><script src="js/jquery-3.3.1.min.js"></script><script src="js/jquery-migrate-1.2.1.js"></script>
+	<base href="<?php echo $qlkh['HOSTGOC'] ?>" /><script defer src="fontawesome/svg-with-js/js/fontawesome-all.js"></script><link rel="stylesheet" type="text/css" href="css/style.css"><script src="js/jquery-3.3.1.min.js"></script><script src="js/jquery-migrate-1.2.1.js"></script>
 <script src="js/superfish.js" type="text/javascript"></script><script type="text/javascript">$(function() {$('ul.sf-menu').superfish();});</script>
 <script type="application/ld+json">
 {
@@ -53,20 +53,20 @@
         			<li id="trangchu">
 						<a href="<?php echo $qlkh['HOSTGOC'] ?>">Trang chủ</a></li>
 					<li>
-						<a href="#" class="sf-with-ul">Giới thiệu</a>
+						<a class="sf-with-ul">Giới thiệu</a>
 						<ul style="display: none; visibility: hidden;">
 							<li><a href="http://vlute.edu.vn/index.php/nghien-cuu-khoa-hoc" target="_blank">Giới thiệu chung</a></li>
 						</ul>
 					</li>
 					<li id="nckh">
-						<a href="#" class="sf-with-ul">Hoạt động NCKH</a>
+						<a class="sf-with-ul">Hoạt động NCKH</a>
 						<ul style="display: none; visibility: hidden;">
 							<li><a href="nckhdexuatmoi">Đề xuất NCKH</a></li>
 							<li><a href="nckhdacongbo">Công trình khoa học đã công bố</a></li>
 						</ul>
 					</li>
 					<li id="htqt">
-						<a href="#" class="sf-with-ul">Hợp tác quốc tế</a>
+						<a class="sf-with-ul">Hợp tác quốc tế</a>
 						<ul style="display: none; visibility: hidden;">
 							<?php 
 							$ketnoi = new clsKetnoi();
@@ -85,7 +85,7 @@
 					</li>
 					<li id="bieumau"><a href="bieumau">Văn bản - Biểu mẫu</a></li>
 					<li id="tintuc">
-						<a href="#" class="sf-with-ul">Tin tức</a>
+						<a class="sf-with-ul">Tin tức</a>
 						<ul style="display: none; visibility: hidden;">
 							<?php 
 							$ketnoi = new clsKetnoi();
@@ -117,10 +117,10 @@
 			</div>
 		</div>
 		<marquee behavior="alternate" scrolldelay="200" style="font-size: 0.8rem; color: white; background: url(images/bg_bar.gif) repeat-x; padding: 3px 0;line-height: 1.3rem;border-radius: 8px;" onmouseover="this.stop();" onmouseout="this.start();" >Phòng Nghiên cứu khoa học &amp; Hợp tác quốc tế - Trường Đại học Sư Phạm Kỹ Thuật Vĩnh Long</marquee>
-		<div id="maincontent">
+		<div id="maincontent" class="thantrangpc" style="display: none;">
 			<?php include_once 'public_c.php'; ?>
 		</div>
-		<div id="footer">
+		<div id="footer" class="thantrangpc" style="display: none;">
 			<div id="ft_nav">
 				<ul>
 					<li><a href="<?php echo $qlkh['HOSTGOC'] ?>">Trang chủ</a></li>
@@ -142,5 +142,6 @@
 		</div>
 	</div>
 </div>
+<script type="text/javascript">$(document).ready(function(){$('.thantrangpc').fadeIn(400);});</script>
 </body>
 </html>

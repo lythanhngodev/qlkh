@@ -41,5 +41,6 @@
 <script type="text/javascript">
     $(document).ready(function() {
         $('#tintuc').addClass('active');
+        $('#tieude').html('Tin tức');
     });
 </script>
