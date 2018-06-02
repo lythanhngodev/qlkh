@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e784096a-f6cb-467c-8cbe-b1eae1f3bf23" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
-      <change beforePath="$PROJECT_DIR$/admin/view/v_nhap_thanh_vien.php" afterPath="$PROJECT_DIR$/admin/view/v_nhap_thanh_vien.php" />
-      <change beforePath="$PROJECT_DIR$/admin/view/v_them_de_tai_da_nghiem_thu.php" afterPath="$PROJECT_DIR$/admin/view/v_them_de_tai_da_nghiem_thu.php" />
-      <change beforePath="$PROJECT_DIR$/admin/view/v_them_de_xuat.php" afterPath="$PROJECT_DIR$/admin/view/v_them_de_xuat.php" />
-      <change beforePath="$PROJECT_DIR$/nckh 01-06-2018.sql" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/view/v_xem_tin.php" afterPath="$PROJECT_DIR$/view/v_xem_tin.php" />
-    </list>
+    <list default="true" id="e784096a-f6cb-467c-8cbe-b1eae1f3bf23" name="Default" comment="Bảng kinh phi" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -339,7 +332,7 @@
       <workItem from="1527661483150" duration="619000" />
       <workItem from="1527810342077" duration="594000" />
       <workItem from="1527928614986" duration="150000" />
-      <workItem from="1527928799554" duration="2000" />
+      <workItem from="1527928799554" duration="101000" />
     </task>
     <task id="LOCAL-00001" summary="Start up">
       <created>1525824037964</created>
@@ -355,11 +348,18 @@
       <option name="project" value="LOCAL" />
       <updated>1525827352750</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Bảng kinh phi">
+      <created>1527928820281</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1527928820281</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="125279000" />
+    <option name="totallyTimeSpent" value="125378000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="32" width="1936" height="1056" extended-state="6" />
@@ -419,7 +419,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Start up" />
-    <option name="LAST_COMMIT_MESSAGE" value="Start up" />
+    <MESSAGE value="Bảng kinh phi" />
+    <option name="LAST_COMMIT_MESSAGE" value="Bảng kinh phi" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
