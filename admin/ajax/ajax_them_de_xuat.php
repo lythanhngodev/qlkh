@@ -82,7 +82,6 @@ function themdetai($tendetai,$muctieu,$noidung,$cap,$moisangtao,$thuocchuongtrin
             $loai = $kinhphichitiet[$i][6]; $loai = mysqli_real_escape_string($conn,$loai);
             $sql.= "INSERT INTO kinhphi(IDDT,KHOANCHI,DONVITINH,SOLUONG,DONGIA,GHICHU,LOAI) VALUES('$iddt','$khoanchi','$donvitinh','$soluong','$dongia','$ghichu','$loai');";
         }
-        echo print_r($kinhphichitiet);
         mysqli_multi_query($conn,$sql);
         return true;
     }

@@ -54,7 +54,7 @@ function suadetai($tendetai,$muctieu,$noidung,$cap,$moisangtao,$thuocchuongtrinh
             THANGNAMKT = '$thangnamketthuc',
             KETQUA = '$ketqua'
         WHERE
-            IDDT = '$iddt' AND EXISTS (SELECT IDND FROM thanhviendetai WHERE IDND = $idnd AND IDDT = $iddt AND TRACHNHIEM=N'Chủ nhiệm')
+            IDDT = '$iddt' AND EXISTS (SELECT IDND FROM thanhviendetai WHERE IDND = $idnd AND IDDT = $iddt AND TRACHNHIEM=N'Chủ nhiệm') AND TRANGTHAI=N'Chờ gửi đề xuất'
     ";
     if(mysqli_query($conn, $hoi)===TRUE){
         // Thêm loại hình nghiên cứu thuộc đề tài
@@ -107,11 +107,13 @@ function suadetai($tendetai,$muctieu,$noidung,$cap,$moisangtao,$thuocchuongtrinh
 
         // Thêm kinh phí thực hiện đề tài
         for($i=0;$i<count($kinhphichitiet);$i++){
-            $khoanchi = $kinhphichitiet[$i][0];
-            $nsnn = $kinhphichitiet[$i][1]; $nsnn = intval($nsnn);
-            $tuco = $kinhphichitiet[$i][2]; $tuco = intval($tuco);
-            $lienket = $kinhphichitiet[$i][3]; $lienket = intval($lienket);
-            $sql.= "INSERT INTO `kinhphi`(`IDDT`, `KHOANCHI`, `NGUONNSNN`, `NGUONTUCO`, `NGUONLIENKET`) VALUES ('$iddt','".$khoanchi."','".$nsnn."','".$tuco."','".$lienket."');";
+            $khoanchi = $kinhphichitiet[$i][0]; $khoanchi = mysqli_real_escape_string($conn,$khoanchi);
+            $donvitinh = $kinhphichitiet[$i][1]; $donvitinh = mysqli_real_escape_string($conn,$donvitinh);
+            $soluong = $kinhphichitiet[$i][2]; $soluong = floatval($soluong);
+            $dongia = $kinhphichitiet[$i][3]; $dongia = floatval($dongia);
+            $ghichu = $kinhphichitiet[$i][5]; $ghichu = mysqli_real_escape_string($conn,$ghichu);
+            $loai = $kinhphichitiet[$i][6]; $loai = mysqli_real_escape_string($conn,$loai);
+            $sql.= "INSERT INTO kinhphi(IDDT,KHOANCHI,DONVITINH,SOLUONG,DONGIA,GHICHU,LOAI) VALUES('$iddt','$khoanchi','$donvitinh','$soluong','$dongia','$ghichu','$loai');";
         }
         mysqli_multi_query($conn,$sql);
         return true;
@@ -139,7 +141,17 @@ function xettiendodukien(){
         return null;
     }else return $_POST['tiendodukien'];
 }
-if (suadetai($_POST['tendetai'],$_POST['muctieu'],$_POST['noidung'],$_POST['cap'],$_POST['moisangtao'],$_POST['thuocchuongtrinh'],$_POST['sucanthiet'],$_POST['tinhhinhnghiencuu'],$_POST['nghiencuulienquan'],$_POST['phuongphapkythuat'],$_POST['kinhphingansach'],$_POST['kinhphinguonkhac'],$_POST['thangthuchien'],$_POST['thangnambatdau'],$_POST['thangnamketthuc'],$_POST['ketqua'],$_POST['loaihinhnghiencuu'],$_POST['linhvuckhoahoc'],$thanhvien=xetthanhvien(),$tochuc=xettochuc(),$tiendodukien=xettiendodukien(),$baocaotiendo=xetbctd(),$_POST['kinhphichitiet'],$_SESSION['_idnd'],$_POST['iddt'])) {
+function xetkinhphi(){
+    if (!isset($_POST['kinhphichitiet']) || empty($_POST['kinhphichitiet'])){
+        return null;
+    }else return $_POST['kinhphichitiet'];
+}
+function xetidnd(){
+    if (!isset($_SESSION['_idnd']) || empty($_SESSION['_idnd'])){
+        return 0;
+    }else return $_SESSION['_idnd'];
+}
+if (suadetai($_POST['tendetai'],$_POST['muctieu'],$_POST['noidung'],$_POST['cap'],$_POST['moisangtao'],$_POST['thuocchuongtrinh'],$_POST['sucanthiet'],$_POST['tinhhinhnghiencuu'],$_POST['nghiencuulienquan'],$_POST['phuongphapkythuat'],$_POST['kinhphingansach'],$_POST['kinhphinguonkhac'],$_POST['thangthuchien'],$_POST['thangnambatdau'],$_POST['thangnamketthuc'],$_POST['ketqua'],$_POST['loaihinhnghiencuu'],$_POST['linhvuckhoahoc'],$thanhvien=xetthanhvien(),$tochuc=xettochuc(),$tiendodukien=xettiendodukien(),$baocaotiendo=xetbctd(),$kinhphichitiet=xetkinhphi(),$_idnd=xetidnd(),$_POST['iddt'])) {
     ?>
     <script type="text/javascript">
         swal('Thành công','Đã sửa đề tài!','success');

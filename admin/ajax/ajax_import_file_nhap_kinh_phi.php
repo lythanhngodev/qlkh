@@ -116,7 +116,7 @@ $chikhac = null; $xongchikhac = 0;
         </tr>
     </thead>
     <tbody>
-        <tr style="background: #e6e6e6;">
+        <tr style="background: linear-gradient(141deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);color: #fff;">
             <th class="giua">I</th>
             <th colspan="6">Chi công lao động/ thuê khoán chuyên môn</th>
         </tr>
@@ -131,7 +131,7 @@ $chikhac = null; $xongchikhac = 0;
                 <td><?php echo $conglaodong[$i][5] ?></td>
             </tr>
         <?php } ?>
-        <tr style="background: #e6e6e6;">
+        <tr style="background: linear-gradient(141deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);color: #fff;">
             <th class="giua">II</th>
             <th colspan="6">Chi mua nguyên vật liệu</th>
         </tr>
@@ -146,7 +146,7 @@ $chikhac = null; $xongchikhac = 0;
                 <td><?php echo $nguyenvatlieu[$i][5] ?></td>
             </tr>
         <?php } ?>
-        <tr style="background: #e6e6e6;">
+        <tr style="background: linear-gradient(141deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);color: #fff;">
             <th class="giua">III</th>
             <th colspan="6">Chi sữa chữa, mua sắm Tài sản cố định</th>
         </tr>
@@ -161,7 +161,7 @@ $chikhac = null; $xongchikhac = 0;
                 <td><?php echo $suachua[$i][5] ?></td>
             </tr>
         <?php } ?>
-        <tr style="background: #e6e6e6;">
+        <tr style="background: linear-gradient(141deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);color: #fff;">
             <th class="giua">IV</th>
             <th colspan="6">Chi khác</th>
         </tr>
@@ -176,9 +176,20 @@ $chikhac = null; $xongchikhac = 0;
                 <td><?php echo $chikhac[$i][5] ?></td>
             </tr>
         <?php } ?>
+<?php $chung = array_merge($conglaodong,$nguyenvatlieu,$suachua,$chikhac);
+      $tongkinhphi=0;
+ ?>
+<?php if(!empty($chung)){foreach ($chung as $v) {
+    $tongkinhphi+=floatval($v[2]*$v[3]); 
+}} ?>
+        <tr>
+            <td></td>
+            <th colspan="4"><i>Tổng cộng</i></th>
+            <th class="giua" style="background: #FFF59D;"><?php echo $tongkinhphi ?></th>
+            <td></td>
+        </tr>
     </tbody>
 </table>
-<?php $chung = array_merge($conglaodong,$nguyenvatlieu,$suachua,$chikhac) ?>
 <script type="text/javascript">
     bkp = <?php echo json_encode($chung); ?>;
 </script>

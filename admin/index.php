@@ -69,21 +69,21 @@ $_SESSION["token"] = $token;
               <div class="admin-menu">
                   <h5 class="sidenav-heading">Biểu mẫu</h5>
                   <ul id="side-admin-menu" class="side-menu list-unstyled">
-                      <li id="bieumau"><a href="?p=bieumau"> <i class="fas fa-newspaper"></i>&nbsp;&nbsp;Biểu mẫu</a></li>
+                      <li id="bieumau"><a href="?p=bieumau"> <i class="fas fa-paperclip"></i>&nbsp;&nbsp;Biểu mẫu</a></li>
                   </ul>
               </div>
               <div class="admin-menu">
                   <h5 class="sidenav-heading">Quản lý thành viên</h5>
                   <ul id="side-admin-menu" class="side-menu list-unstyled">
                       <li id="xacnhantaikhoan"><a href="?p=xacnhantaikhoan"> <i class="far fa-calendar-check"></i>&nbsp;&nbsp;Xác nhận đăng ký tài khoản</a></li>
-                      <li id="thanhvien"><a href="?p=thanhvien"> <i class="fas fa-newspaper"></i>&nbsp;&nbsp;Thông tin thành viên</a></li>
-                      <li id="nhapthanhvien"><a href="?p=nhapthanhvien"> <i class="fas fa-plus"></i>&nbsp;&nbsp;Nhập thành viên</a></li>
+                      <li id="thanhvien"><a href="?p=thanhvien"> <i class="fas fa-users"></i>&nbsp;&nbsp;Thông tin thành viên</a></li>
+                      <li id="nhapthanhvien"><a href="?p=nhapthanhvien"> <i class="fas fa-user-plus"></i>&nbsp;&nbsp;Nhập thành viên</a></li>
                   </ul>
               </div>
               <div class="admin-menu">
                   <h5 class="sidenav-heading">Quản lý chung</h5>
                   <ul id="side-admin-menu" class="side-menu list-unstyled">
-                      <li id="quanlychung"><a href="?p=quanlychung"> <i class="fas fa-newspaper"></i>&nbsp;&nbsp;Quản lý chung</a></li>
+                      <li id="quanlychung"><a href="?p=quanlychung"> <i class="fas fa-cogs"></i>&nbsp;&nbsp;Quản lý chung</a></li>
                   </ul>
               </div>
 
@@ -127,7 +127,7 @@ $_SESSION["token"] = $token;
               <div class="admin-menu">
                   <h5 class="sidenav-heading">Biểu mẫu</h5>
                   <ul id="side-admin-menu" class="side-menu list-unstyled">
-                      <li id="bieumau"><a href="?p=bieumau"> <i class="fas fa-newspaper"></i>&nbsp;&nbsp;Biểu mẫu</a></li>
+                      <li id="bieumau"><a href="?p=bieumau"> <i class="fas fa-paperclip"></i>&nbsp;&nbsp;Biểu mẫu</a></li>
                   </ul>
               </div>
               <div class="admin-menu">
@@ -156,7 +156,7 @@ $_SESSION["token"] = $token;
               <div class="admin-menu">
                   <h5 class="sidenav-heading">Biểu mẫu</h5>
                   <ul id="side-admin-menu" class="side-menu list-unstyled">
-                      <li id="xembieumau"><a href="?p=xembieumau"> <i class="fas fa-newspaper"></i>&nbsp;&nbsp;Biểu mẫu</a></li>
+                      <li id="xembieumau"><a href="?p=xembieumau"> <i class="fas fa-paperclip"></i>&nbsp;&nbsp;Biểu mẫu</a></li>
                   </ul>
               </div>
           <?php } else if($loaitaikhoan=='binhthuong'){ ?>
@@ -173,7 +173,7 @@ $_SESSION["token"] = $token;
               <div class="admin-menu">
                   <h5 class="sidenav-heading">Biểu mẫu</h5>
                   <ul id="side-admin-menu" class="side-menu list-unstyled">
-                      <li id="xembieumau"><a href="?p=xembieumau"> <i class="fas fa-newspaper"></i>&nbsp;&nbsp;Biểu mẫu</a></li>
+                      <li id="xembieumau"><a href="?p=xembieumau"> <i class="fas fa-paperclip"></i>&nbsp;&nbsp;Biểu mẫu</a></li>
                   </ul>
               </div>
             <?php } ?>
@@ -201,7 +201,7 @@ $_SESSION["token"] = $token;
               <div class="admin-menu">
                   <h5 class="sidenav-heading">Thông tin cá nhân</h5>
                   <ul id="side-admin-menu" class="side-menu list-unstyled">
-                      <li id="thongtincanhan"><a href="?p=thongtincanhan"> <i class="fas fa-newspaper"></i>&nbsp;&nbsp;Thông tin cá nhân</a></li>
+                      <li id="thongtincanhan"><a href="?p=thongtincanhan"> <i class="far fa-address-book"></i>&nbsp;&nbsp;Thông tin cá nhân</a></li>
                   </ul>
               </div>
           </ul>

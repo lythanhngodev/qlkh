@@ -37,7 +37,11 @@ if (isset($_GET['id'])) {
         // dự kiến tiến độ
         $tiendo = du_kien_tien_do($iddt);
         // kinh phi
-        $kinhphi = kinh_phi($iddt);
+        $_kinhphi = kinh_phi($iddt);
+        $kinhphi = null;
+        while($row = mysqli_fetch_assoc($_kinhphi)) {
+            $kinhphi[] = $row;
+        }
         // thanh viên xét duyệt
         $thanhvienxetduyet = thanh_vien_xet_duyet($iddt);
         // thành viên duyệt đề xuất đã chọn

@@ -36,7 +36,7 @@ $result = Array(
           MADETAI = '$ma'
         WHERE
           IDDT = '$dt' AND
-          ((NOT EXISTS (SELECT * FROM (SELECT * FROM detai) AS t WHERE t.MADETAI = N'$ma') OR EXISTS (SELECT * FROM (SELECT * FROM detai) AS t WHERE t.MADETAI = N'$ma' AND t.IDDT = '$dt')))
+          ((NOT EXISTS (SELECT * FROM (SELECT * FROM detai) AS t WHERE t.MADETAI = N'$ma') OR EXISTS (SELECT * FROM (SELECT * FROM detai) AS t WHERE t.MADETAI = N'$ma' AND t.IDDT = '$dt')));
     ";
     if(mysqli_multi_query($conn, $sql)===TRUE){
         $row = mysqli_affected_rows($conn);

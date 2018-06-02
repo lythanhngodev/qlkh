@@ -225,51 +225,19 @@ giao kết quả nghiên cứu đến người sử dụng. Phải nêu được
                       <div class="col-md-12">
                           <div class="row">
                               <div class="col-md-12">
-                                  <br>
                                   <p class="col-md-12"><strong>Dự kiến kinh phí thực hiện và các khoản chi</strong></p>
                                   <hr>
-                                  <table id="bangkinhphi" class="table table-bordered table-hover" style="background: #fff;">
-                                      <tr style="background: #0275d8;color:  #fff; text-align: center;">
-                                          <th rowspan="2" class="giua">Các khoản chi</th>
-                                          <th rowspan="2" class="giua">Từ nguồn NSNN</th>
-                                          <th colspan="2" class="giua">Nguồn khác</th>
-                                          <th rowspan="2" class="giua">Cộng</th>
-                                          <th rowspan="2" style="width: 50px;" class="giua">Xóa</th>
-                                      </tr>
-                                      <tr style="background: #0275d8;color:  #fff; text-align: center;">
-                                          <th class="giua">Tự có</th>
-                                          <th class="giua">Liên kết</th>
-                                      </tr>
-                                      <tr>
-                                          <td><input type="text" value="Chi thuê khoán chuyên môn" class="form-control" readonly></td>
-                                          <td><input type='number' min='0' class='form-control giua' value="0"></td>
-                                          <td><input type='number' min='0' class='form-control giua' value="0"></td>
-                                          <td><input type='number' min='0' class='form-control giua' value="0"></td>
-                                          <td><input type='number' min='0' class='form-control giua' value="0"></td>
-                                          <td class='giua'></td>
-                                      </tr>
-                                      <tr>
-                                          <td><input type="text" value="Chi mua nguyên vật liệu" class="form-control" readonly></td>
-                                          <td><input type='number' min='0' class='form-control giua' value="0"></td>
-                                          <td><input type='number' min='0' class='form-control giua' value="0"></td>
-                                          <td><input type='number' min='0' class='form-control giua' value="0"></td>
-                                          <td><input type='number' min='0' class='form-control giua' value="0"></td>
-                                          <td class='giua'></td>
-                                      </tr>
-                                      <tr>
-                                          <td><input type="text" value="Chi sửa chữa, mua sắm TSCĐ" class="form-control" readonly></td>
-                                          <td><input type='number' min='0' class='form-control giua' value="0"></td>
-                                          <td><input type='number' min='0' class='form-control giua' value="0"></td>
-                                          <td><input type='number' min='0' class='form-control giua' value="0"></td>
-                                          <td><input type='number' min='0' class='form-control giua' value="0"></td>
-                                          <td class='giua'></td>
-                                      </tr>
-                                  </table>
-                              </div>
-                          </div>
-                          <div class="row">
-                              <div class="col-md-2">
-                                  <button class="btn btn-default" id="themkinhphi">Thêm khoản kinh phí &ensp;<i class="fas fa-long-arrow-alt-right"></i></button>
+                                  <div class="row">
+                                      <div class="col-md-12">
+                                          <button class="btn btn-warning btn-sm" id="nhap-kinh-phi"><i class="far fa-file-excel"></i>&nbsp;&nbsp;Chọn file excel</button><br>
+                                      Nếu chưa có mẫu nhập Excel vui lòng <a href="../files/02062018112112-du-tru-kinh-phi.xlsx"><b><i><u>tải xuống.</u></i></b></a>
+                                          <br><br>
+                                          <input type="file" name="" id="filedl" hidden="hidden" accept="application/vnd.ms-excel, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet">
+                                      </div>
+                                  </div>
+                                  <div id="bangdanhsach">
+                                    
+                                  </div>
                               </div>
                           </div>
                       </div>
@@ -493,7 +461,47 @@ giao kết quả nghiên cứu đến người sử dụng. Phải nêu được
     for (var i = 0; i < _data_.length; i++)
         for (var j = 0; j< _data_[i].length; j++)
             (!_data_[i][j]) ? _data_[i][j] = '' : 1;
-$(document).ready(function(){$('#themdetaidanghiemthu').addClass('active');$('.tieude').html('Thêm đề tài đã được nghiệm thu');var idnd = "<?php echo $idnd; ?>";var _option="<option value=''>Chọn thành viên</option>";_data_.forEach(function(d){_option+="<option value='"+d[0]+"'>"+d[1]+" "+d[2]+"</option>";});for (var i = 0; i < _data_.length; i++)for (var j = 0; j< _data_[i].length; j++)(!_data_[i][j])?_data_[i][j]='':1;var option="<option value=''>Chọn thành viên</option>";_data_.forEach(function(i){ (idnd==i[0])?option+="<option value='"+i[0]+"' selected>"+i[1]+" "+i[2]+"</option>" : option+="<option value='"+i[0]+"'>"+i[1]+" "+i[2]+"</option>"; });$('#chonchunhiem').append(option);$('#chonchunhiem').addClass('selectpicker');$('.selectpicker').selectpicker({ liveSearch: true });$('#bangtiendo').on('click','.xoatiendo',function(){$(this).parents('tr').remove();});$('#bangthanhvien').on('click','.xoathanhvien', function(){$(this).parents('tr').remove();});$('#bangtochuc').on('click','.xoatochuc',function(){$(this).parents('tr').remove();});$('#bangkinhphi').on('click','.xoakinhphi',function(){$(this).parents('tr').remove();});$('#bangbctiendo').on('click','.xoabctiendo',function(){$(this).parents('tr').remove();});$('#bangbtc').on('click','.xoabtc',function(){$(this).parents('tr').remove();});$('#bangtvdg').on('click','.xoatvdg',function(){$(this).parents('tr').remove();});$('#bangtvnt').on('click','.xoatvnt',function(){$(this).parents('tr').remove();});$('#themtochuc').click(function(){var tr="<tr><td><textarea rows='4' class='form-control'></textarea></td><td><textarea rows='4' class='form-control'></textarea></td><td><input type='number' min='0' class='form-control giua'></td><td><button class='xoatochuc'><i class='fas fa-times do'></i></button></td></tr>";$('#bangtochuc').append(tr);});$('#themtiendo').click(function(){var tr="<tr><td><textarea rows='4' class='form-control'></textarea></td><td><textarea rows='4' class='form-control'></textarea></td><td><input type='date' class='form-control'></td><td><input type='date' class='form-control'></td><td><button class='xoatiendo'><i class='fas fa-times do'></i></button></td></tr>";$('#bangtiendo').append(tr);});$('#thembctiendo').on('click',function(){$('#modal-them-bao-cao-tien-do').modal('show');});$('#thembctd').click(function(){if($('#cvdathuchien').val().trim()!=''&&$('#cvcanthuchien').val().trim()!=''){var tr="<tr><td><textarea rows='4' class='form-control'>"+$('#cvdathuchien').val().trim()+"</textarea></td><td><textarea rows='4' class='form-control'>"+$('#cvcanthuchien').val().trim()+"</textarea></td><td><textarea rows='4' class='form-control'>"+$('#cvdenghi').val()+"</textarea></td><td><input type='date' value='"+$('#cvngaybaocao').val()+"' class='form-control'></td><td><button class='xoabctiendo'><i class='fas fa-times do'></i></button></td></tr>";$('#bangbctiendo').append(tr);$('#modal-them-bao-cao-tien-do').find('textarea').val('');$('#modal-them-bao-cao-tien-do').modal('hide');}else khongthanhcong('Vui lòng điền đầy đủ các trường (*)');});$('#themkinhphi').click(function(){var tr="<tr><td><input type='text' class='form-control'></td><td><input type='number' min='0' class='form-control giua' value='0'></td><td><input type='number' min='0' class='form-control giua' value='0'></td><td><input type='number' min='0' class='form-control giua' value='0'></td><td><input type='number' min='0' class='form-control giua' value='0'></td><td class='giua'><button class='xoakinhphi'><i class='fas fa-times do'></i></button></td></tr>";$('#bangkinhphi').append(tr);});var stt_btv=1;$('#themthanhvien').click(function(){stt_btv=stt_btv+1;var tr = "<tr><td><select id='chon"+stt_btv+"' class='form-control' onchange='chonthanhvien(this)'>"+_option+"</select></td><td id='btv-tt-"+stt_btv+"'><textarea class='form-control' rows='4' readonly></textarea></td><td id='btv-cv-"+stt_btv+"'><textarea class='form-control' rows='4'></textarea></td><td class='giua'><button class='xoathanhvien'><i class='fas fa-times do'></i></button></td></tr>";$("#bangthanhvien").append(tr);$('#chon'+stt_btv).addClass('selectpicker');$('.selectpicker').selectpicker({liveSearch:true});});$('#chontvbtc,#chontvdg, #chontvnt').append(_option);$('#chonbtc').append(_option);$('.select-chon').addClass('selectpicker');$('.selectpicker').selectpicker({liveSearch:true});$('#tailentailieu').click(function(){$('#filetl').click();});
+$(document).ready(function(){$('#themdetaidanghiemthu').addClass('active');$('.tieude').html('Thêm đề tài đã được nghiệm thu');var idnd = "<?php echo $idnd; ?>";var _option="<option value=''>Chọn thành viên</option>";_data_.forEach(function(d){_option+="<option value='"+d[0]+"'>"+d[1]+" "+d[2]+"</option>";});for (var i = 0; i < _data_.length; i++)for (var j = 0; j< _data_[i].length; j++)(!_data_[i][j])?_data_[i][j]='':1;var option="<option value=''>Chọn thành viên</option>";_data_.forEach(function(i){ (idnd==i[0])?option+="<option value='"+i[0]+"' selected>"+i[1]+" "+i[2]+"</option>" : option+="<option value='"+i[0]+"'>"+i[1]+" "+i[2]+"</option>"; });$('#chonchunhiem').append(option);$('#chonchunhiem').addClass('selectpicker');$('.selectpicker').selectpicker({ liveSearch: true });$('#bangtiendo').on('click','.xoatiendo',function(){$(this).parents('tr').remove();});$('#bangthanhvien').on('click','.xoathanhvien', function(){$(this).parents('tr').remove();});$('#bangtochuc').on('click','.xoatochuc',function(){$(this).parents('tr').remove();});$('#bangbctiendo').on('click','.xoabctiendo',function(){$(this).parents('tr').remove();});$('#bangbtc').on('click','.xoabtc',function(){$(this).parents('tr').remove();});$('#bangtvdg').on('click','.xoatvdg',function(){$(this).parents('tr').remove();});$('#bangtvnt').on('click','.xoatvnt',function(){$(this).parents('tr').remove();});$('#themtochuc').click(function(){var tr="<tr><td><textarea rows='4' class='form-control'></textarea></td><td><textarea rows='4' class='form-control'></textarea></td><td><input type='number' min='0' class='form-control giua'></td><td><button class='xoatochuc'><i class='fas fa-times do'></i></button></td></tr>";$('#bangtochuc').append(tr);});$('#themtiendo').click(function(){var tr="<tr><td><textarea rows='4' class='form-control'></textarea></td><td><textarea rows='4' class='form-control'></textarea></td><td><input type='date' class='form-control'></td><td><input type='date' class='form-control'></td><td><button class='xoatiendo'><i class='fas fa-times do'></i></button></td></tr>";$('#bangtiendo').append(tr);});$('#thembctiendo').on('click',function(){$('#modal-them-bao-cao-tien-do').modal('show');});$('#thembctd').click(function(){if($('#cvdathuchien').val().trim()!=''&&$('#cvcanthuchien').val().trim()!=''){var tr="<tr><td><textarea rows='4' class='form-control'>"+$('#cvdathuchien').val().trim()+"</textarea></td><td><textarea rows='4' class='form-control'>"+$('#cvcanthuchien').val().trim()+"</textarea></td><td><textarea rows='4' class='form-control'>"+$('#cvdenghi').val()+"</textarea></td><td><input type='date' value='"+$('#cvngaybaocao').val()+"' class='form-control'></td><td><button class='xoabctiendo'><i class='fas fa-times do'></i></button></td></tr>";$('#bangbctiendo').append(tr);$('#modal-them-bao-cao-tien-do').find('textarea').val('');$('#modal-them-bao-cao-tien-do').modal('hide');}else khongthanhcong('Vui lòng điền đầy đủ các trường (*)');});var stt_btv=1;$('#themthanhvien').click(function(){stt_btv=stt_btv+1;var tr = "<tr><td><select id='chon"+stt_btv+"' class='form-control' onchange='chonthanhvien(this)'>"+_option+"</select></td><td id='btv-tt-"+stt_btv+"'><textarea class='form-control' rows='4' readonly></textarea></td><td id='btv-cv-"+stt_btv+"'><textarea class='form-control' rows='4'></textarea></td><td class='giua'><button class='xoathanhvien'><i class='fas fa-times do'></i></button></td></tr>";$("#bangthanhvien").append(tr);$('#chon'+stt_btv).addClass('selectpicker');$('.selectpicker').selectpicker({liveSearch:true});});$('#chontvbtc,#chontvdg, #chontvnt').append(_option);$('#chonbtc').append(_option);$('.select-chon').addClass('selectpicker');$('.selectpicker').selectpicker({liveSearch:true});$('#tailentailieu').click(function(){$('#filetl').click();});
+
+      $('#nhap-kinh-phi').click(function(){
+        $('#filedl').click();
+    });
+    $('#filedl').change(function(){
+        var file_data = $('#filedl').prop('files')[0];
+        var type = file_data.type;
+        var match = ["application/vnd.ms-excel", "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"];
+        if (type==match[0] || type==match[1]) {
+            var form_data = new FormData();
+            form_data.append('file', file_data);
+            if (kiemtraketnoi()){
+                $.ajax({
+                    url: 'ajax/ajax_import_file_nhap_kinh_phi.php',
+                    dataType: 'text',
+                    cache: false,
+                    contentType: false,
+                    processData: false,
+                    type: 'post',
+                    data: form_data,
+                    beforeSend: function () {
+                        swal("Đợi đã!", "Vui lòng chờ đợi cho đến khi hoàn tất", "info");
+                    },
+                    success: function(data){
+                        swal("Tốt!", "Tải dữ liệu hoàn tất", "success");
+                        $('#bangdanhsach').html(data);
+                        $('#filedl').val('');
+                    },
+                    error: function () {
+                        $.notifyClose();
+                        khongthanhcong('Không thể tải file');
+                    }
+                });
+            } else
+                khongthanhcong("Hiện không có kết nối internet");
+        }
+        else{
+            swal('Ôi! Lỗi','Vui lòng chọn định dạng Excel','error');
+        }
+    });
       $('#chontvbtc').change(function(){
           if($('#chontvbtc').val()!=''){
               var data = [];

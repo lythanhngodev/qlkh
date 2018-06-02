@@ -7,6 +7,7 @@
     var _lh_ = <?php echo json_encode($rlh); ?>;
     var _nddv_ = <?php echo json_encode($rnd_dv); ?>;
     var _ndtd_ = <?php echo json_encode($rnd_td); ?>;
+    var bkp = <?php echo json_encode($_kp); ?>;
 </script>
 <div class="card cach background-container">
     <div class="row">
@@ -222,112 +223,113 @@
                                                 </div>
                                             </div>
                                             <div id="bangdanhsach">
-                                            <table id="bangkinhphi" class="table table-bordered table-hover" style="background: #fff;">
-                                                <thead>
-                                                    <tr style="background: #0275d8;color:  #fff; text-align: center;">
-                                                        <th>STT</th>
-                                                        <th>Các khoản chi</th>
-                                                        <th>ĐVT</th>
-                                                        <th>Số lượng</th>
-                                                        <th>Đơn giá</th>
-                                                        <th>Thành tiền</th>
-                                                        <th>Ghi chú</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    <tr style="background: #e6e6e6;">
-                                                        <th class="giua">I</th>
-                                                        <th colspan="6">Chi công lao động/ thuê khoán chuyên môn</th>
-                                                    </tr>
-                                        <?php $stt=1;foreach ($kinhphi as $row) {
-                                                        if($row['LOAI']=='conglaodong'){
-                                                        ?>
-                                                        <tr>
-                                                            <td class="giua"><?php echo $stt; ?></td>
-                                                            <td><?php echo $row['KHOANCHI'] ?></td>
-                                                            <td class="giua"><?php echo $row['DONVITINH'] ?></td>
-                                                            <td class="giua"><?php echo $row['SOLUONG'] ?></td>
-                                                            <td class="giua"><?php echo $row['DONGIA'] ?></td>
-                                                            <td class="giua"><?php echo $row['SOLUONG']*$row['DONGIA'] ?></td>
-                                                            <td><?php echo $row['GHICHU'] ?></td>
+                                                <table id="bangkinhphi" class="table table-bordered table-hover" style="background: #fff;">
+                                                    <thead>
+                                                        <tr style="background: #0275d8;color:  #fff; text-align: center;">
+                                                            <th>STT</th>
+                                                            <th>Các khoản chi</th>
+                                                            <th>ĐVT</th>
+                                                            <th>Số lượng</th>
+                                                            <th>Đơn giá</th>
+                                                            <th>Thành tiền</th>
+                                                            <th>Ghi chú</th>
                                                         </tr>
-                                                    <?php
-                                                            $stt++;  
-                                                        }
-                                                    }
-                                                 ?>
-                                                    <tr style="background: #e6e6e6;">
-                                                        <th class="giua">II</th>
-                                                        <th colspan="6">Chi mua nguyên vật liệu</th>
-                                                    </tr>
-                                        <?php $stt=1;foreach ($kinhphi as $row) {
-                                                        if($row['LOAI']=='nguyenvatlieu'){
-                                                        ?>
-                                                        <tr>
-                                                            <td class="giua"><?php echo $stt; ?></td>
-                                                            <td><?php echo $row['KHOANCHI'] ?></td>
-                                                            <td class="giua"><?php echo $row['DONVITINH'] ?></td>
-                                                            <td class="giua"><?php echo $row['SOLUONG'] ?></td>
-                                                            <td class="giua"><?php echo $row['DONGIA'] ?></td>
-                                                            <td class="giua"><?php echo $row['SOLUONG']*$row['DONGIA'] ?></td>
-                                                            <td><?php echo $row['GHICHU'] ?></td>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr style="background: linear-gradient(141deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);color: #fff;">
+                                                            <th class="giua">I</th>
+                                                            <th colspan="6">Chi công lao động/ thuê khoán chuyên môn</th>
                                                         </tr>
-                                                    <?php
-                                                            $stt++;  
-                                                        }
-                                                    }
-                                                 ?>
-                                                    <tr style="background: #e6e6e6;">
-                                                        <th class="giua">III</th>
-                                                        <th colspan="6">Chi sữa chữa, mua sắm Tài sản cố định</th>
-                                                    </tr>
-                                        <?php $stt=1;foreach ($kinhphi as $row) {
-                                                        if($row['LOAI']=='suachua'){
-                                                        ?>
-                                                        <tr>
-                                                            <td class="giua"><?php echo $stt; ?></td>
-                                                            <td><?php echo $row['KHOANCHI'] ?></td>
-                                                            <td class="giua"><?php echo $row['DONVITINH'] ?></td>
-                                                            <td class="giua"><?php echo $row['SOLUONG'] ?></td>
-                                                            <td class="giua"><?php echo $row['DONGIA'] ?></td>
-                                                            <td class="giua"><?php echo $row['SOLUONG']*$row['DONGIA'] ?></td>
-                                                            <td><?php echo $row['GHICHU'] ?></td>
+                                            <?php $tongkinhphi=0;$stt=1;if(!empty($kinhphi)){foreach ($kinhphi as $row) {
+                                                            if($row['LOAI']=='conglaodong'){
+                                                            ?>
+                                                            <tr>
+                                                                <td class="giua"><?php echo $stt; ?></td>
+                                                                <td><?php echo $row['KHOANCHI'] ?></td>
+                                                                <td class="giua"><?php echo $row['DONVITINH'] ?></td>
+                                                                <td class="giua"><?php echo $row['SOLUONG'] ?></td>
+                                                                <td class="giua"><?php echo $row['DONGIA'] ?></td>
+                                                                <td class="giua"><?php echo $row['THANHTIEN'] ?></td>
+                                                                <td><?php echo $row['GHICHU'] ?></td>
+                                                            </tr>
+                                                        <?php
+                                                                $stt++;  
+                                                            }
+                                                            $tongkinhphi+=$row['SOLUONG']*$row['DONGIA'];
+                                                        }}
+                                                     ?>
+                                                        <tr style="background: linear-gradient(141deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);color: #fff;">
+                                                            <th class="giua">II</th>
+                                                            <th colspan="6">Chi mua nguyên vật liệu</th>
                                                         </tr>
-                                                    <?php
-                                                            $stt++;  
-                                                        }
-                                                    }
-                                                 ?>
-                                                    <tr style="background: #e6e6e6;">
-                                                        <th class="giua">IV</th>
-                                                        <th colspan="6">Chi khác</th>
-                                                    </tr>
-                                        <?php $stt=1;foreach ($kinhphi as $row) {
-                                                        if($row['LOAI']=='chikhac'){
-                                                        ?>
-                                                        <tr>
-                                                            <td class="giua"><?php echo $stt; ?></td>
-                                                            <td><?php echo $row['KHOANCHI'] ?></td>
-                                                            <td class="giua"><?php echo $row['DONVITINH'] ?></td>
-                                                            <td class="giua"><?php echo $row['SOLUONG'] ?></td>
-                                                            <td class="giua"><?php echo $row['DONGIA'] ?></td>
-                                                            <td class="giua"><?php echo $row['SOLUONG']*$row['DONGIA'] ?></td>
-                                                            <td><?php echo $row['GHICHU'] ?></td>
+                                            <?php $stt=1;if(!empty($kinhphi)){foreach ($kinhphi as $row) {
+                                                            if($row['LOAI']=='nguyenvatlieu'){
+                                                            ?>
+                                                            <tr>
+                                                                <td class="giua"><?php echo $stt; ?></td>
+                                                                <td><?php echo $row['KHOANCHI'] ?></td>
+                                                                <td class="giua"><?php echo $row['DONVITINH'] ?></td>
+                                                                <td class="giua"><?php echo $row['SOLUONG'] ?></td>
+                                                                <td class="giua"><?php echo $row['DONGIA'] ?></td>
+                                                                <td class="giua"><?php echo $row['THANHTIEN'] ?></td>
+                                                                <td><?php echo $row['GHICHU'] ?></td>
+                                                            </tr>
+                                                        <?php
+                                                                $stt++;  
+                                                            }
+                                                        }}
+                                                     ?>
+                                                        <tr style="background: linear-gradient(141deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);color: #fff;">
+                                                            <th class="giua">III</th>
+                                                            <th colspan="6">Chi sữa chữa, mua sắm Tài sản cố định</th>
                                                         </tr>
-                                                    <?php
-                                                            $stt++;  
-                                                        }
-                                                    }
-                                                 ?>
-                                                </tbody>
-
-                                            </table>
+                                            <?php $stt=1;if(!empty($kinhphi)){foreach ($kinhphi as $row) {
+                                                            if($row['LOAI']=='suachua'){
+                                                            ?>
+                                                            <tr>
+                                                                <td class="giua"><?php echo $stt; ?></td>
+                                                                <td><?php echo $row['KHOANCHI'] ?></td>
+                                                                <td class="giua"><?php echo $row['DONVITINH'] ?></td>
+                                                                <td class="giua"><?php echo $row['SOLUONG'] ?></td>
+                                                                <td class="giua"><?php echo $row['DONGIA'] ?></td>
+                                                                <td class="giua"><?php echo $row['THANHTIEN'] ?></td>
+                                                                <td><?php echo $row['GHICHU'] ?></td>
+                                                            </tr>
+                                                        <?php
+                                                                $stt++;  
+                                                            }
+                                                        }}
+                                                     ?>
+                                                        <tr style="background: linear-gradient(141deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);color: #fff;">
+                                                            <th class="giua">IV</th>
+                                                            <th colspan="6">Chi khác</th>
+                                                        </tr>
+                                            <?php $stt=1;if(!empty($kinhphi)){foreach ($kinhphi as $row) {
+                                                            if($row['LOAI']=='chikhac'){
+                                                            ?>
+                                                            <tr>
+                                                                <td class="giua"><?php echo $stt; ?></td>
+                                                                <td><?php echo $row['KHOANCHI'] ?></td>
+                                                                <td class="giua"><?php echo $row['DONVITINH'] ?></td>
+                                                                <td class="giua"><?php echo $row['SOLUONG'] ?></td>
+                                                                <td class="giua"><?php echo $row['DONGIA'] ?></td>
+                                                                <td class="giua"><?php echo $row['THANHTIEN'] ?></td>
+                                                                <td><?php echo $row['GHICHU'] ?></td>
+                                                            </tr>
+                                                        <?php
+                                                                $stt++;  
+                                                            }
+                                                        }}
+                                                     ?>
+                                                        <tr>
+                                                            <td></td>
+                                                            <th colspan="4"><i>Tổng cộng</i></th>
+                                                            <th class="giua" style="background: #FFF59D;"><?php echo $tongkinhphi ?></th>
+                                                            <td></td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
                                             </div>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-2">
-                                            <button class="btn btn-default" id="themkinhphi">Thêm khoản kinh phí &ensp;<i class="fas fa-long-arrow-alt-right"></i></button>
                                         </div>
                                     </div>
                                 </div>
@@ -594,6 +596,47 @@
         $('#chon'+stt_btv).addClass('selectpicker');
         $('.selectpicker').selectpicker({ liveSearch: true });
         });
+        $('#nhap-kinh-phi').click(function(){
+            $('#filedl').click();
+        });
+        $('#filedl').change(function(){
+            var file_data = $('#filedl').prop('files')[0];
+            var type = file_data.type;
+            var match = ["application/vnd.ms-excel", "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"];
+            if (type==match[0] || type==match[1]) {
+                var form_data = new FormData();
+                form_data.append('file', file_data);
+                if (kiemtraketnoi()){
+                    $.ajax({
+                        url: 'ajax/ajax_import_file_nhap_kinh_phi.php',
+                        dataType: 'text',
+                        cache: false,
+                        contentType: false,
+                        processData: false,
+                        type: 'post',
+                        data: form_data,
+                        beforeSend: function () {
+                            swal("Đợi đã!", "Vui lòng chờ đợi cho đến khi hoàn tất", "info");
+                        },
+                        success: function(data){
+                            swal("Tốt!", "Tải dữ liệu hoàn tất", "success");
+                            $('#bangdanhsach').html(data);
+                            $('#filedl').val('');
+                        },
+                        error: function () {
+                            $.notifyClose();
+                            khongthanhcong('Không thể tải file');
+                        }
+                    });
+                } else
+                    khongthanhcong("Hiện không có kết nối internet");
+            }
+            else{
+                swal('Ôi! Lỗi','Vui lòng chọn định dạng Excel','error');
+            }
+        });
+
+
         var bctiendo = 0;
         if($('#nav-bao-cao-tien-do').length) bctiendo = 1;
         $('#bangtiendo').on('click','.xoatiendo',function(){
@@ -922,38 +965,6 @@
             }
             //////////////////////////////////////////////////
             //  Xét kinh phí
-          var  bkp = [],ll=0;
-          var demdongdungkp = 0;
-          var demdong2trdau = 0;
-          $('#bangkinhphi').find('tr:not(:first)').each(function(i, row) {
-              var cols = [];
-              if(demdong2trdau>0){
-                  var dem=0;
-                  $(this).find('td:not(:last) input').each(function(i, col) {
-                    if(dem!=0)
-                      if($.isNumeric($(this).val())) cols.push($(this).val()); else {khongthanhcong('Kinh phí nhập chưa hợp lệ, kiểm tra lại');return;}
-                    else cols.push($(this).val());
-                    dem++;
-                  });
-                  if (cols[0]=='' && cols[1]=='' && cols[2]=='' && cols[3]==''){
-                      $(this).remove();
-                      demdongdungkp--;
-                  }
-                  demdongdungkp++;
-              }
-              demdong2trdau++;
-          });
-          demdong2trdau = 0;
-          $('#bangkinhphi').find('tr:not(:first)').each(function(i, row) {
-              var cols = [];
-              if(demdong2trdau>0){
-                  $(this).find('td:not(:last) input').each(function(i, col) {
-                      cols.push($(this).val());
-                  });
-                  bkp.push(cols);
-              }
-              demdong2trdau++;
-          });
             // Kiểm tra kết nối internet
             if (kiemtraketnoi()) {
                 // Ajax

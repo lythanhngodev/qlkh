@@ -55,7 +55,17 @@ if (isset($_GET['id']) && ($loaitaikhoan=='admin' || $loaitaikhoan=='khoahoc')) 
         // dự kiến tiến độ
         $tiendo = du_kien_tien_do($iddt);
         // kinh phi
-        $kinhphi = kinh_phi($iddt);
+        $_kinhphi = kinh_phi($iddt);
+        $__kinhphi = kinh_phi($iddt);
+        $kinhphi = null;
+        $_kp = null;
+        while($row = mysqli_fetch_assoc($_kinhphi)) {
+            $kinhphi[] = $row;
+        }
+        while($row = mysqli_fetch_row($__kinhphi)) {
+            $_kp[] = $row;
+        }
+        // Cáp đề tài
         $cdt = cap_de_tai();
         $_cdt = cap_de_tai();
         $rcdt = null;

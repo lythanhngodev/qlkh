@@ -60,7 +60,7 @@ function du_kien_tien_do($iddt){
 function kinh_phi($iddt){
     $ketnoi = new clsKetnoi();
     $conn = $ketnoi->ketnoi();
-    $query = "SELECT * FROM `kinhphi` WHERE IDDT = '$iddt' ORDER BY IDKP";
+    $query = "SELECT KHOANCHI, DONVITINH, SOLUONG, DONGIA, (SOLUONG*DONGIA) AS THANHTIEN ,GHICHU, LOAI FROM `kinhphi` WHERE IDDT = '$iddt' ORDER BY IDKP ASC";
     $result = mysqli_query($conn, $query);
     mysqli_close($conn);
     return $result;

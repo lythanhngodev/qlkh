@@ -51,7 +51,7 @@
 <script src="../bootstrap/js/bootstrap.js" type="text/javascript"></script>
 <script type="text/javascript">
   $(document).ready(function(){
-    $('#dexuatmoi').addClass('active');
+    $('#dangthuchien').addClass('active');
     $('.tieude').html('Đề xuất đề tài nghiên cứu khao học mới');
   });
   $(document).ready(function() {

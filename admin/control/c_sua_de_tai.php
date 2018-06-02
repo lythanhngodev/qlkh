@@ -48,9 +48,14 @@ if (isset($_GET['id'])) {
         $tiendo = du_kien_tien_do($iddt);
         // kinh phi
         $_kinhphi = kinh_phi($iddt);
+        $__kinhphi = kinh_phi($iddt);
         $kinhphi = null;
+        $_kp = null;
         while($row = mysqli_fetch_assoc($_kinhphi)) {
             $kinhphi[] = $row;
+        }
+        while($row = mysqli_fetch_row($__kinhphi)) {
+            $_kp[] = $row;
         }
         $cdt = cap_de_tai();
         $_cdt = cap_de_tai();
