@@ -1,12 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Ly Thanh Ngo
- * Date: 12/04/2018
- * Time: 1:49 PM
- */
-?>
-<?php
 if (!isset($_SESSION["token"])) {include_once ("../../loi404.html");exit();}
 if (isset($_GET['id'])) {
     $iddt = $_GET['id'];
@@ -55,7 +47,11 @@ if (isset($_GET['id'])) {
         // dự kiến tiến độ
         $tiendo = du_kien_tien_do($iddt);
         // kinh phi
-        $kinhphi = kinh_phi($iddt);
+        $_kinhphi = kinh_phi($iddt);
+        $kinhphi = null;
+        while($row = mysqli_fetch_assoc($_kinhphi)) {
+            $kinhphi[] = $row;
+        }
         $cdt = cap_de_tai();
         $_cdt = cap_de_tai();
         $rcdt = null;
