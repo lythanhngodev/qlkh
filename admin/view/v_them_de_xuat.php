@@ -656,8 +656,7 @@ giao kết quả nghiên cứu đến người sử dụng. Phải nêu được
                       thanhvien: thanhviendetai,
                       tochucthamgia: btc,
                       tiendodukien: btd,
-                      kinhphichitiet: bkp,
-                      idnd: '<?php echo $idnd; ?>'
+                      kinhphichitiet: bkp
                   },
                   beforeSend: function () {
                       canhbao('Đang xử lý dữ liệu');
