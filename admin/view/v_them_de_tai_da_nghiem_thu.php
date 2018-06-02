@@ -110,15 +110,6 @@
                         <small id="emailHelp" class="form-text text-muted">Từ các <strong>nguồn khác</strong></small>
                       </div>
                       <div class="col-md-12"><hr></div>
-                      <div class="form-group col-md-12">
-                        <label for="category" class="font-weight-bold" >Thuộc chương trình (nếu có)</label>
-                        <textarea class="form-control" id="thuocchuongtrinhdetai" rows="5"></textarea>
-                      </div>
-                      <div class="col-md-12"><hr></div>
-                      <div class="form-group col-md-12">
-                        <label for="category" class="font-weight-bold" >Dự kiến kết quả đề tài và địa chỉ ứng dụng</label>
-                        <textarea class="form-control" id="ketquadetai" rows="8"></textarea><br>
-                      </div>
                     </div>
                   </div>
                 </div>
@@ -164,6 +155,15 @@
                 <!-- TỔNG QUAN -->
                 <div class="tab-pane" id="nav-tong-quan" role="tabpanel" aria-labelledby="nav-profile-tab">
                   <br>
+                  <div class="form-group col-md-12">
+                    <label for="category" class="font-weight-bold" >Thuộc chương trình (nếu có)</label>
+                    <textarea class="form-control" id="thuocchuongtrinhdetai" rows="5"></textarea>
+                  </div>
+                  <div class="col-md-12"><hr></div>
+                  <div class="form-group col-md-12">
+                    <label for="category" class="font-weight-bold" >Dự kiến kết quả đề tài và địa chỉ ứng dụng</label>
+                    <textarea class="form-control" id="ketquadetai" rows="8"></textarea><br>
+                  </div>
                     <div class="col-md-12"><label for="category" class="font-weight-bold">Tình hình nghiên cứu trong &amp; ngoài nước</label></div>
 
                   <hr>

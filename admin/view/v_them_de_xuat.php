@@ -90,12 +90,7 @@
                         <input type="number" min="0" class="form-control giua" id="kinhphinguonkhacdetai">
                         <small id="emailHelp" class="form-text text-muted">Từ các <strong>nguồn khác</strong></small>
                       </div>
-                      <div class="col-md-12"><hr></div>
-                      <div class="form-group col-md-12">
-                        <label for="category" class="font-weight-bold" >Thuộc chương trình (nếu có)</label>
-                        <textarea class="form-control" id="thuocchuongtrinhdetai" rows="5"></textarea>
-                      </div>
-                      <br>
+                      <br><br>
                     </div>
                   </div>
                 </div>
@@ -141,8 +136,12 @@
                 <!-- TỔNG QUAN -->
                 <div class="tab-pane" id="nav-tong-quan" role="tabpanel" aria-labelledby="nav-profile-tab">
                   <br>
+                  <div class="form-group col-md-12">
+                    <label for="category" class="font-weight-bold" >Thuộc chương trình (nếu có)</label>
+                    <textarea class="form-control" id="thuocchuongtrinhdetai" rows="5"></textarea>
+                  </div>
+                  <br>
                     <div class="col-md-12"><label for="category" class="font-weight-bold">Tình hình nghiên cứu trong &amp; ngoài nước</label></div>
-
                   <hr>
 
                   <div class="col-md-12"><label for="category" class="font-weight-bold" >a)Tổng quan tình hình nghiên cứu thuộc lĩnh vực của đề tài</label></div>
@@ -205,44 +204,17 @@ giao kết quả nghiên cứu đến người sử dụng. Phải nêu được
                                   <br>
                                   <p class="col-md-12"><strong>Dự kiến kinh phí thực hiện và các khoản chi</strong></p>
                                   <hr>
-                                  <table id="bangkinhphi" class="table table-bordered table-hover" style="background: #fff;">
-                                      <tr style="background: #0275d8;color:  #fff; text-align: center;">
-                                          <th rowspan="2" class="giua">Các khoản chi</th>
-                                          <th rowspan="2" class="giua">Từ nguồn NSNN</th>
-                                          <th colspan="2" class="giua">Nguồn khác</th>
-                                          <th rowspan="2" style="width: 50px;" class="giua">Xóa</th>
-                                      </tr>
-                                      <tr style="background: #0275d8;color:  #fff; text-align: center;">
-                                          <th class="giua">Tự có</th>
-                                          <th class="giua">Liên kết</th>
-                                      </tr>
-                                      <tr>
-                                          <td><input type="text" value="Chi thuê khoán chuyên môn" class="form-control" readonly></td>
-                                          <td><input type='number' min='0' class='form-control giua' value="0"></td>
-                                          <td><input type='number' min='0' class='form-control giua' value="0"></td>
-                                          <td><input type='number' min='0' class='form-control giua' value="0"></td>
-                                          <td class='giua'></td>
-                                      </tr>
-                                      <tr>
-                                          <td><input type="text" value="Chi mua nguyên vật liệu" class="form-control" readonly></td>
-                                          <td><input type='number' min='0' class='form-control giua' value="0"></td>
-                                          <td><input type='number' min='0' class='form-control giua' value="0"></td>
-                                          <td><input type='number' min='0' class='form-control giua' value="0"></td>
-                                          <td class='giua'></td>
-                                      </tr>
-                                      <tr>
-                                          <td><input type="text" value="Chi sửa chữa, mua sắm TSCĐ" class="form-control" readonly></td>
-                                          <td><input type='number' min='0' class='form-control giua' value="0"></td>
-                                          <td><input type='number' min='0' class='form-control giua' value="0"></td>
-                                          <td><input type='number' min='0' class='form-control giua' value="0"></td>
-                                          <td class='giua'></td>
-                                      </tr>
-                                  </table>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <button class="btn btn-warning btn-sm" id="nhap-kinh-phi"><i class="far fa-file-excel"></i>&nbsp;&nbsp;Chọn file excel</button><br>
+                        Nếu chưa có mẫu nhập Excel vui lòng <a href="../files/02062018112112-du-tru-kinh-phi.xlsx"><b><i><u>tải xuống.</u></i></b></a>
+                            <br><br>
+                            <input type="file" name="" id="filedl" hidden="hidden" accept="application/vnd.ms-excel, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet">
+                        </div>
+                    </div>
+                              <div id="bangdanhsach">
+                                
                               </div>
-                          </div>
-                          <div class="row">
-                              <div class="col-md-2">
-                                  <button class="btn btn-default" id="themkinhphi">Thêm khoản kinh phí &ensp;<i class="fas fa-long-arrow-alt-right"></i></button>
                               </div>
                           </div>
                       </div>
@@ -252,7 +224,7 @@ giao kết quả nghiên cứu đến người sử dụng. Phải nêu được
                 <div class="tab-pane" id="nav-ket-qua" role="tabpanel" aria-labelledby="nav-profile-tab">
                   <br>
                   <div class="form-group col-md-12">
-                    <label for="category" class="font-weight-bold" >Dự kiến kết quả đề tài và địa chỉ ứng dụng (<span class="text-danger">*</span>)</label>
+                    <label for="category" class="font-weight-bold" >Dự kiến kết quả đề tài và địa chỉ ứng dụng</label>
                     <textarea class="form-control" id="ketquadetai" rows="8"></textarea>
                   </div>
                   <br>
@@ -325,8 +297,6 @@ giao kết quả nghiên cứu đến người sử dụng. Phải nêu được
     </div>
   </div>
   <div class="cach"></div>
-
-
 <script type="text/javascript">
   function xoafile(){
       $('#linkfile').val('');
@@ -334,6 +304,7 @@ giao kết quả nghiên cứu đến người sử dụng. Phải nêu được
   }
 </script>
 <script type="text/javascript">
+  var bkp=null;
   $(document).ready(function(){
     var idnd = "<?php echo $idnd; ?>";
     for (var i = 0; i < _data_.length; i++)
@@ -345,6 +316,47 @@ giao kết quả nghiên cứu đến người sử dụng. Phải nêu được
       else
         option+="<option value='"+i[0]+"'>"+i[1]+" "+i[2]+"</option>";
     });
+
+    $('#nhap-kinh-phi').click(function(){
+        $('#filedl').click();
+    });
+    $('#filedl').change(function(){
+        var file_data = $('#filedl').prop('files')[0];
+        var type = file_data.type;
+        var match = ["application/vnd.ms-excel", "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"];
+        if (type==match[0] || type==match[1]) {
+            var form_data = new FormData();
+            form_data.append('file', file_data);
+            if (kiemtraketnoi()){
+                $.ajax({
+                    url: 'ajax/ajax_import_file_nhap_kinh_phi.php',
+                    dataType: 'text',
+                    cache: false,
+                    contentType: false,
+                    processData: false,
+                    type: 'post',
+                    data: form_data,
+                    beforeSend: function () {
+                        swal("Đợi đã!", "Vui lòng chờ đợi cho đến khi hoàn tất", "info");
+                    },
+                    success: function(data){
+                        swal("Tốt!", "Tải dữ liệu hoàn tất", "success");
+                        $('#bangdanhsach').html(data);
+                        $('#filedl').val('');
+                    },
+                    error: function () {
+                        $.notifyClose();
+                        khongthanhcong('Không thể tải file');
+                    }
+                });
+            } else
+                khongthanhcong("Hiện không có kết nối internet");
+        }
+        else{
+            swal('Ôi! Lỗi','Vui lòng chọn định dạng Excel','error');
+        }
+    });
+
     $('#chonchunhiem').append(option);
     $('#chonchunhiem').addClass('selectpicker');
     $('.selectpicker').selectpicker({ liveSearch: true });
@@ -614,38 +626,6 @@ giao kết quả nghiên cứu đến người sử dụng. Phải nêu được
               }
           }
           //  Xét kinh phí
-          var  bkp = [],ll=0;
-          var demdongdungkp = 0;
-          var demdong2trdau = 0;
-          $('#bangkinhphi').find('tr:not(:first)').each(function(i, row) {
-              var cols = [];
-              if(demdong2trdau>0){
-                  var dem=0;
-                  $(this).find('td:not(:last) input').each(function(i, col) {
-                    if(dem!=0)
-                      if($.isNumeric($(this).val())) cols.push($(this).val()); else {khongthanhcong('Kinh phí nhập chưa hợp lệ, kiểm tra lại');return;}
-                    else cols.push($(this).val());
-                    dem++;
-                  });
-                  if (cols[0]=='' && cols[1]=='' && cols[2]=='' && cols[3]==''){
-                      $(this).remove();
-                      demdongdungkp--;
-                  }
-                  demdongdungkp++;
-              }
-              demdong2trdau++;
-          });
-          demdong2trdau = 0;
-          $('#bangkinhphi').find('tr:not(:first)').each(function(i, row) {
-              var cols = [];
-              if(demdong2trdau>0){
-                  $(this).find('td:not(:last) input').each(function(i, col) {
-                      cols.push($(this).val());
-                  });
-                  bkp.push(cols);
-              }
-              demdong2trdau++;
-          });
 
           // Kiểm tra kết nối internet
 
