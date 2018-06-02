@@ -12,7 +12,7 @@ $nhiemvu_nghiemthu = ['Chủ tịch HĐ', 'Ủy viên', 'Thư ký'];
                 <div class="card-header">
                     <h4>(<span class="text-danger">*</span>) Những trường bắt buộc phải điền</h4>
                     <span style="position:  absolute;top: 9px;right: 9px;">
-                        <a href="?p=dieuchinhdetai&id=<?php echo $detai['IDDT'] ?>" class="btn btn-primary btn-sm"><i class="far fa-envelope-open"></i>&ensp;Gửi mail thông báo</a>
+                        <a data-toggle="modal" data-target="#modal-mail" class="btn btn-primary btn-sm"><i class="far fa-envelope-open"></i>&ensp;Gửi mail thông báo</a>
                         <a href="?p=dieuchinhdetai&id=<?php echo $detai['IDDT'] ?>" class="btn btn-primary btn-sm"><i class="far fa-edit"></i>&ensp;Điều chỉnh</a>
                     </span>
                 </div>
@@ -794,7 +794,34 @@ $nhiemvu_nghiemthu = ['Chủ tịch HĐ', 'Ủy viên', 'Thư ký'];
         </div>
     </div>
 </div>
+<div class="modal fade" id="modal-mail" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">Gửi mail đến <?php echo $chunhiem['HOTEN']; ?></h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label for="tags" class="font-weight-bold">Tiêu đề (<span class="text-danger">*</span>)</label>
+                    <textarea class="form-control" id="tieudemail" style="border-radius: 0;" rows="2"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="tags" class="font-weight-bold">Nội dung (<span class="text-danger">*</span>)</label>
+                    <textarea class="form-control" id="noidungmail" style="border-radius: 0;" rows="5"></textarea>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Đóng</button>
+                <button type="button" class="btn btn-primary" id="guimail">Lưu</button>
+            </div>
+        </div>
+    </div>
+</div>
 <script type="text/javascript">
+    var mailchunhiem = '<?php echo $chunhiem['MAIL']; ?>';
     $(document).ready(function(){
         $('#quanlydetaiduan').addClass('active');
         $('.tieude').html('Chi tiết đề xuất');
@@ -889,6 +916,49 @@ $nhiemvu_nghiemthu = ['Chủ tịch HĐ', 'Ủy viên', 'Thư ký'];
                         var kq = $.parseJSON(data);
                         if(kq.trangthai==1){
                             swal('Tốt','Đã lưu điểm đề tài','success');
+                        }
+                        else
+                            swal('Ôi! Lỗi','Xảy ra lỗi, vui lòng thử lại','error');
+                    },
+                    error: function () {
+                        swal('Ôi! Lỗi','Xảy ra lỗi, vui lòng thử lại','error');
+                    }
+                });
+            }
+            else
+                swal('Ôi! Lỗi','Không có kết nối internet','error');
+        });
+        $(document).on('click','#guimail',function(){
+            if(!$('#tieudemail').val().trim()){
+                swal('Ôi! Lỗi', 'Vui lòng nhập tiêu đề mail', 'error');
+                return;
+            }
+            if(!$('#noidungmail').val().trim()){
+                swal('Ôi! Lỗi', 'Vui lòng nhập nội dung mail', 'error');
+                return;
+            }
+            if(jQuery.isEmptyObject(mailchunhiem)){
+                swal('Ôi! Lỗi', 'Chủ nhiệm này chưa cập nhật địa chỉ mail', 'error');
+                return;
+            }
+            if (kiemtraketnoi()) {
+                $.ajax({
+                    url : "ajax/ajax_gui_mail_chu_nhiem.php",
+                    type : "post",
+                    dataType:"text",
+                    data : {
+                        tieude: $('#tieudemail').val().trim(),
+                        noidung: $('#noidungmail').val().trim(),
+                        mail: mailchunhiem
+                    },
+                    beforeSend: function(){
+                        swal('Đợi đã','Vui lòng chờ cho đến khi quá trình hoàn tất','info');
+                    },
+                    success : function (data){
+                        var kq = $.parseJSON(data);
+                        if(kq.trangthai==1){
+                            swal('Tốt','Đã gửi mail','success');
+                            $('#modal-mail').modal('hide');
                         }
                         else
                             swal('Ôi! Lỗi','Xảy ra lỗi, vui lòng thử lại','error');

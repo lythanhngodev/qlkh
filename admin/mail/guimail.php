@@ -12,7 +12,7 @@ function guimail($tieude,$than,$dc,$user,$pass,$port){
     $mail->Password = $pass;                 // SMTP password
     $mail->SMTPSecure = 'tls';               // Enable TLS encryption, `ssl` also accepted
     $mail->Port = $port;                       // TCP port to connect to
-    $mail->setFrom($user, 'Phòng nghiên cứu Khoa học VLUTE');
+    $mail->setFrom($user, 'Phòng NCKH & HTQT | ĐH SPKT Vĩnh Long');
     $mail->addAddress($dc);     // Add a recipient
     $mail->isHTML(true);                                  // Set email format to HTML
     $mail->Subject = $tieude;
