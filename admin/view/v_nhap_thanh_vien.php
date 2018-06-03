@@ -67,12 +67,12 @@ if (!isset($_SESSION["token"])) {include_once ("../../loi404.html");exit();}
                 if (kiemtraketnoi()){
                     $.ajax({
                         url: 'ajax/ajax_import_file_thanh_vien.php',
-                        data: form_data,
+                        type: 'post',
                         dataType: 'text',
+                        cache: false,
+                        contentType: false,
                         processData: false,
-                        contentType: 'multipart/form-data',
-                        type: 'POST',
-                        
+                        data: form_data,
                         beforeSend: function () {
                             swal("Đợi đã!", "Vui lòng chờ đợi cho đến khi hoàn tất", "info");
                         },
