@@ -70,7 +70,7 @@ if (!isset($_SESSION["token"])) {include_once ("../../loi404.html");exit();}
                         data: form_data,
                         dataType: 'text',
                         processData: false,
-                        contentType: false,
+                        contentType: 'multipart/form-data',
                         type: 'POST',
                         
                         beforeSend: function () {
