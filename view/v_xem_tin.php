@@ -108,11 +108,28 @@
         </div>
     </div>
 </div>
-<div id="phong-nen" style="float:none;display: block;position: fixed;width: 100%;height: 100%; top: 0;left: 0;bottom: 0;right: 0;display: none;background: #000; opacity: 0.678;"></div>
+<div id="phong-nen" style="float:none;display: block;position: fixed;width: 100%;height: 100%; top: 0;left: 0;bottom: 0;right: 0;display: none;background: #000; opacity: 0.888;"></div>
 <div id="hien-hinh" style="float:none;display: block;position: fixed;width: 100%;height: 100%; top: 0;left: 0;bottom: 0;right: 0;display: none;">
-    <div class="than-hien-hinh" style="position: relative;width: 60%;left: 50%;top: 50%;transform: translate(-50%, -50%);border: 8px outset #e6e8e5;border-radius: 8px;">
+    <div class="than-hien-hinh" style="position: relative;width: 50%;left: 50%;top: 50%;transform: translate(-50%, -50%);border: 8px outset #e6e8e5;border-radius: 8px;">
         <span style="display: block;position: absolute;top: 0;right: 0;color:  #fff;background: #939492;font-size: 20px;padding: 6px 13px;text-align:  center;border-radius: 0 0 0 10px;font-family:  cursive;cursor:  pointer;">X</span>
         <img src="" id="hien-hinh-ct" style="width: 100%; opacity: 1;">
     </div>
 </div>
-<script type="text/javascript">$(document).ready(function() {$('#tintuc').addClass('current');$(document).on('click','.vlu-chi-tiet-bai-viet img', function(){$('#hien-hinh-ct').attr('src',$(this).attr('src'));$('#phong-nen').fadeIn(234);$('#hien-hinh').fadeIn(234);});$(document).on('click','#hien-hinh', function(){$(this).fadeOut(200);$('#phong-nen').fadeOut(200);});$(document).keyup(function(e) {if (e.keyCode == 27) { $('#hien-hinh').fadeOut(200);$('#phong-nen').fadeOut(200);}});});</script>
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('#tintuc').addClass('current');
+        $(document).on('click','.vlu-chi-tiet-bai-viet img', function(){
+            $('#hien-hinh-ct').attr('src',$(this).attr('src'));
+            $('#phong-nen').fadeIn(234);
+            $('#hien-hinh').fadeIn(234);
+        });
+        $(document).on('click','#hien-hinh', function(){
+            $(this).fadeOut(200);$('#phong-nen').fadeOut(200);
+        });
+        $(document).keyup(function(e) {if (e.keyCode == 27) { 
+            $('#hien-hinh').fadeOut(200);
+            $('#phong-nen').fadeOut(200);
+        }
+        });
+    });
+</script>

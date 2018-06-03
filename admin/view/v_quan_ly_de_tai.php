@@ -46,7 +46,7 @@
                           <?php endif ?>
                         </td>
                         <td class="giua">
-                          <a href="?p=suadetai&id=<?php echo $row['IDDT'] ?>" class="btn btn-primary btn-sm" title="Sửa"><i class="fas fa-edit"></i></a>
+                          <a href="?p=suadetai&id=<?php echo $row['IDDT'] ?>" class="btn btn-primary btn-sm" title="Sửa"><i class="far fa-edit"></i></a>
                             <?php if ($row['TRANGTHAI']=='Chờ gửi đề xuất' || $row['TRANGTHAI']=='Không nghiệm thu'){
                                 echo "<button class='btn btn-danger btn-sm xoa' lydata='".$iddtt."' title='Xóa đề tài'><i class='fas fa-trash'></i></button>";
                             } ?>

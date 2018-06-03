@@ -15,6 +15,17 @@ $result = Array(
 );
     $ketnoi = new clsKetnoi();
     $conn = $ketnoi->ketnoi();
+    $idnd = $_SESSION['_idnd'];
+    $idnd=intval($idnd);
+    $ktnd = "SELECT l.TENLTK FROM loaitaikhoan_nguoidung n, loaitaikhoan l WHERE n.IDND = $idnd AND n.IDLTK = l.IDLTK LIMIT 0,1;";
+    $kqktnd = mysqli_query($conn,$ktnd);
+    $rktnd = mysqli_fetch_array($kqktnd);
+    $ltk = $rktnd[0];
+    if ($ltk!='admin' && $ltk!='khoahoc') {
+        mysqli_close($conn);
+        echo json_encode($result);
+        exit();
+    }
     $dt = $_POST['dt'];
     $diem = $_POST['diem'];
     $diem = mysqli_real_escape_string($conn,$diem);
@@ -29,10 +40,7 @@ $result = Array(
           IDDT = '$dt' AND (TRANGTHAI = N'Đang thực hiện' OR TRANGTHAI = N'Đã nghiệm thu')
     ";
     if(mysqli_query($conn, $sql)===TRUE){
-        $row = mysqli_affected_rows($conn);
-        if($row==0) $result['trangthai'] = 0;
-        else
-            $result['trangthai'] = 1;
+        $result['trangthai'] = 1;
     }
     mysqli_close($conn);
     echo json_encode($result);

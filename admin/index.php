@@ -104,6 +104,12 @@ $_SESSION["token"] = $token;
                   </ul>
               </div>
               <div class="admin-menu">
+                  <h5 class="sidenav-heading">Thống kê</h5>
+                  <ul id="side-admin-menu" class="side-menu list-unstyled">
+                      <li id="thongke"><a href="?p=thongke"> <i class="fas fa-chart-pie"></i>&nbsp;&nbsp;Thống kê</a></li>
+                  </ul>
+              </div>
+              <div class="admin-menu">
                   <h5 class="sidenav-heading">Báo khoa học</h5>
                   <ul id="side-admin-menu" class="side-menu list-unstyled">
                       <li id="baokhoahoc"><a href="?p=baokhoahoc"> <i class="fas fa-newspaper"></i>&nbsp;&nbsp;Báo khoa học</a></li>
@@ -111,15 +117,8 @@ $_SESSION["token"] = $token;
                   </ul>
               </div>
               <div class="admin-menu">
-                  <h5 class="sidenav-heading">Thống kê</h5>
-                  <ul id="side-admin-menu" class="side-menu list-unstyled">
-                      <li id="thongke"><a href="?p=thongke"> <i class="fas fa-chart-pie"></i>&nbsp;&nbsp;Thống kê</a></li>
-                  </ul>
-              </div>
-              <div class="admin-menu">
                   <h5 class="sidenav-heading">Tin tức - Sự kiện</h5>
                   <ul id="side-admin-menu" class="side-menu list-unstyled">
-                      <li id="chuyenmuc"><a href="?p=chuyenmuc"> <i class="fas fa-list-ul"></i>&nbsp;&nbsp;Chuyên mục</a></li>
                       <li id="tintuc"><a href="?p=tintuc"> <i class="fas fa-newspaper"></i>&nbsp;&nbsp;Tin tức</a></li>
                       <li id="themtintuc"><a href="?p=themtintuc"> <i class="fas fa-plus"></i>&nbsp;&nbsp;Thêm tin tức</a></li>
                   </ul>
@@ -130,15 +129,6 @@ $_SESSION["token"] = $token;
                       <li id="bieumau"><a href="?p=bieumau"> <i class="fas fa-paperclip"></i>&nbsp;&nbsp;Biểu mẫu</a></li>
                   </ul>
               </div>
-              <div class="admin-menu">
-                  <h5 class="sidenav-heading">Quản lý thành viên</h5>
-                  <ul id="side-admin-menu" class="side-menu list-unstyled">
-                      <li id="xacnhantaikhoan"><a href="?p=xacnhantaikhoan"> <i class="far fa-calendar-check"></i>&nbsp;&nbsp;Xác nhận đăng ký tài khoản</a></li>
-                      <li id="thanhvien"><a href="?p=thanhvien"> <i class="fas fa-newspaper"></i>&nbsp;&nbsp;Thông tin thành viên</a></li>
-                      <li id="nhapthanhvien"><a href="?p=nhapthanhvien"> <i class="fas fa-plus"></i>&nbsp;&nbsp;Nhập thành viên</a></li>
-                  </ul>
-              </div>
-
 
           <?php } else if($loaitaikhoan=='truongkhoaphong'){ ?>
             <li id="quanlydetai"><a href="?p=quanlydetai"> <i class="fas fa-external-link-alt"></i>&nbsp;&nbsp;Quản lý đề tài của tôi</a></li>

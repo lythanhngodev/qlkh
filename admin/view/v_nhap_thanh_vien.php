@@ -62,7 +62,6 @@ if (!isset($_SESSION["token"])) {include_once ("../../loi404.html");exit();}
             var match = ["application/vnd.ms-excel", "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"];
             if (type==match[0] || type==match[1]) {
                 var form_data = new FormData();
-                //thêm files vào trong form data
                 form_data.append('file', file_data);
                 if (kiemtraketnoi()){
                     $.ajax({

@@ -43,31 +43,16 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-3 col-sm-6">
-            <div class="card line-chart-example">
-                <div class="card-header giua">
-                    <h4>Đăng ký tài khoản</h4>
-                </div>
-                <div class="card-body giua">
-                    <a href="?p=xacnhantaikhoan">
-                        <img src="../images/nguoi-dung-moi.png">
-                    </a>
-                </div>
-                <div class="card-footer giua" style="padding: 0;padding-right: 10px;">
-                    <span style="font-size: 2.5rem;color: #000;">&ensp;<?php echo $_dknd; ?></span>
-                </div>
-            </div>
-        </div>
     </div>
     <hr><br>
     <div class="row">
         <div class="col-md-3">
             <div class="card">
               <div class="card-header giua">
-                <h4>Nghiên cứu khoa học</h4>
+                <h4>Quản lý đề tài dự án</h4>
               </div>
               <div class="card-body giua">
-                <a href="?p=quanlydetai" class="col-12"><img src="../images/de-tai-khoa-hoc.png"></a>
+                <a href="?p=quanlydetaiduan" class="col-12"><img src="../images/de-tai-khoa-hoc.png"></a>
               </div>
             </div>
         </div>
@@ -84,20 +69,20 @@
         <div class="col-md-3">
             <div class="card">
               <div class="card-header giua">
-                <h4>Thống kê</h4>
+                <h4>Tin tức</h4>
               </div>
               <div class="card-body giua">
-                <a href="?p=thongke" class="col-12"><img src="../images/thong-ke.png"></a>
+                <a href="?p=tintuc" class="col-12"><img src="../images/bao-khoa-hoc.png"></a>
               </div>
             </div>
         </div>
         <div class="col-md-3">
             <div class="card">
               <div class="card-header giua">
-                <h4>Thông tin cá nhân</h4>
+                <h4>Thống kê</h4>
               </div>
               <div class="card-body giua">
-                <a href="?p=thongtincanhan" class="col-12"><img src="../images/thong-tin-tai-khoan.png"></a>
+                <a href="?p=thongke" class="col-12"><img src="../images/thong-ke.png"></a>
               </div>
             </div>
         </div>

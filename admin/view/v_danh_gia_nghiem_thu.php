@@ -31,7 +31,7 @@
                                     } ?>
                                 </td>
                                 <td class="giua">
-                                    <a href="?p=chitietnghiemthudecuong&id=<?php echo $row['IDDT']; ?>" class="btn btn-primary"><i class="fas fa-balance-scale"></i></a>
+                                    <a href="?p=chitietnghiemthudecuong&id=<?php echo $row['IDDT']; ?>" class="btn btn-primary"><i class="fa fa-balance-scale"></i></a>
                                 </td>
                             </tr>
                             <?php $stt++; } ?>

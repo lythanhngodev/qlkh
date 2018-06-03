@@ -22,7 +22,7 @@
                                     <br>
                                     <table class="table table-hover table-bordered" style="background: #fff;">
                                         <tr>
-                                            <th colspan="2" class="giua" style="background: #009688;color: #fff;">THÔNG TIN CHUNG</th>
+                                            <th colspan="2" style="background: linear-gradient(141deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);color: #fff;color: #fff;">THÔNG TIN CHUNG</th>
                                         </tr>
                                         <tr>
                                             <th style="width: 400px;">1. Tên đề tài</th>
@@ -112,7 +112,7 @@
                                             <td><?php echo $detai['KINHPHINGUONKHAC']; ?></td>
                                         </tr>
                                         <tr>
-                                            <th colspan="2" class="giua" style="background: #009688;color: #fff;">ĐỀ CƯƠNG ĐỀ TÀI</th>
+                                            <th colspan="2" style="background: linear-gradient(141deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);color: #fff;color: #fff;">ĐỀ CƯƠNG ĐỀ TÀI</th>
                                         </tr>
                                         <tr>
                                             <th>10. Thuộc chương trình</th>
