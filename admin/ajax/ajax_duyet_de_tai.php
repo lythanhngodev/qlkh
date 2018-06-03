@@ -49,7 +49,8 @@ if(mysqli_multi_query($conn, $hoi)===TRUE) {
     ";
     }
     guimail('Đăng ký tài khoản', $body, $mail,$rmail[0],$rmail[1],$rmail[2]);
-    $result['trangthai'] = 1;
+    $rsql = mysqli_affected_rows($conn);
+    if($rsql > 0) $result['trangthai'] = 1;
     mysqli_close($conn);
 }
 echo json_encode($result);

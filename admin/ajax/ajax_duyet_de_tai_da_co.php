@@ -53,11 +53,10 @@ if(mysqli_multi_query($conn, $hoi)===TRUE) {
 <div style='width:100%;float:left;background: #f2f2f2;margin-bottom: 3rem;margin-top: 2rem;'><div style='width: 500px;box-shadow: 0px 2px 2px #dfdfdf;margin: 0 auto;margin-top: 2rem;margin-bottom: 3rem;'><div style='background-color: #16a085;border-top: 4px solid #eaa424;color: #fff;'><h2 style='padding: 20px;margin: 0;font-family: sans-serif;font-weight: 500;text-shadow: 1px 1px 2px #757575;'>DUYỆT ĐỀ TÀI ĐÃ TỪNG NGHIỆM THU</h2></div><div style='background-color: #fff;text-align: center;padding: 15px;'><h2 style='font-family:  sans-serif;font-weight: 600;'>Chào ".$cn."!</h2><h2 style='font-family: sans-serif;font-weight: 400;padding: 4px;'>:(</h2><hr><h2 style='font-family: sans-serif;font-weight: 400;padding: 4px;'>Đề tài: ".$detai." <b>không được duyệt</b></h2><br></div><div><div style='float: left;font-family: Open sans,Arial,Sans-serif;font-size: 14px;color: #808e8e;line-height: 28px;'>© 2018 P. NCKH Trường ĐH. SPKT Vĩnh Long</div><div style='float: right;font-family: Open sans,Arial,Sans-serif;font-size: 14px;color: #808e8e;line-height: 28px;'>#1</div></div></div></div>
     ";
     }
-    /*if (!empty($mail)) {
-        echo json_encode($result);
+    if (!empty($mail)) {
+        guimail('Đăng ký tài khoản', $body, $mail,$rmail[0],$rmail[1],$rmail[2]);
         exit();
-    }*/
-    //guimail('Đăng ký tài khoản', $body, $mail,$rmail[0],$rmail[1],$rmail[2]);
+    }
     $result['trangthai'] = 1;
     mysqli_close($conn);
 }
