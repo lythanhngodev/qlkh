@@ -66,13 +66,13 @@ if (!isset($_SESSION["token"])) {include_once ("../../loi404.html");exit();}
                 form_data.append('file', file_data);
                 if (kiemtraketnoi()){
                     $.ajax({
-                        url: 'ajax/ajax_import_file_thanh_vien.php', // gửi đến file upload.php
-                        dataType: 'text',
-                        cache: false,
-                        contentType: false,
-                        processData: false,
-                        type: 'post',
+                        url: 'ajax/ajax_import_file_thanh_vien.php',
                         data: form_data,
+                        dataType: 'text',
+                        processData: false,
+                        contentType: false,
+                        type: 'POST',
+                        
                         beforeSend: function () {
                             swal("Đợi đã!", "Vui lòng chờ đợi cho đến khi hoàn tất", "info");
                         },
