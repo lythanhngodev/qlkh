@@ -1,6 +1,8 @@
 <?php
-include_once("../../config.php");
+error_reporting(E_ALL);
+ini_set("display_errors", 1);
 session_start();
+require_once("../../config.php");
 if (isset($_SESSION['tdn']) && isset($_SESSION['pas'])) {
     $ketnoi = new clsKetnoi();
     if (!($ketnoi->checklogin($_SESSION['tdn'],$_SESSION['pas']))) {
@@ -10,7 +12,7 @@ if (isset($_SESSION['tdn']) && isset($_SESSION['pas'])) {
 }else{
     trangchu($qlkh['HOSTADMIN']);
 }
-include_once "../excel/PHPExcel.php";
+require_once "../excel/PHPExcel.php";
 $file = $_FILES['file']['tmp_name'];
 $objReader = PHPExcel_IOFactory::createReaderForFile($file);
 $listWorkSheets = $objReader->listWorksheetNames($file);
