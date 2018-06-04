@@ -13,12 +13,10 @@
             </a>
         </article>
     </div>
+<div style="float: left;margin-top: 10px;" class="fb-like" data-href="<?php echo "http://". $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'] ?>" data-layout="button_count" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
     <div class="vlu-chi-tiet-bai-viet">
         <?php echo $bv['NOIDUNG'] ?>
     </div>
-    <br>
-    <hr>
-    <br>
 </div>   
 <!-- TIN MỚI -->
 <div class="muccon">

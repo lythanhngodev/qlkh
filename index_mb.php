@@ -9,6 +9,14 @@
 </head>
 <style type="text/css">#back-to-top{cursor: pointer;position: fixed;bottom: 10px;right: 15px;display: none;width: 40px;height: 40px;margin: 0 auto;}.table th, .table td{padding: 0.3rem !important;}</style>
 <body>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = 'https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v3.0&appId=2165745763451934&autoLogAppEvents=1';
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
 <div>
   <div style="width: 100%;margin: 0 auto;position: relative;">
     <img src="images/header_vlute_mb.jpg" style="width: 100%;" />
