@@ -33,7 +33,7 @@
     <h3>Đề xuất nghiên cứu khoa học</h3>
     <div class="tieudemuccon">
         <div class="tinmoi">
-        <?php $nghiemthu = lay_de_tai_da_cong_bo(0,8);$stt=1;
+        <?php $nghiemthu = lay_de_tai_da_cong_bo(0,6);$stt=1;
         while ($row = mysqli_fetch_assoc($nghiemthu)) {
           if($stt!=1){
             echo "<hr style='width: 90%;'>";

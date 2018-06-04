@@ -9,7 +9,7 @@
     </div>
     <div class="tin">
           <?php 
-          $sotin = 8;
+          $sotin = 6;
           $bd=1;
           if (isset($_GET['trang']) && !empty($_GET['trang'])) {
             $bd = intval($_GET['trang']);
@@ -38,7 +38,7 @@
       <ul class="phantrang">
         <?php $sobaibao = dem_bao_khoa_hoc();
         if ($sobaibao!=0) {
-          for ($i=1; $i < $sobaibao/$sotin; $i++) { 
+          for ($i=1; $i <= ceil($sobaibao/$sotin); $i++) { 
             echo "<li><a href='?p=baokhoahoc&trang=".$i."'>".$i."</a></li>";
           }
         }

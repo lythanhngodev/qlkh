@@ -126,7 +126,7 @@
                                           <div class="form-group">
                                               <label for="category" class="font-weight-bold" >
                                                   Năm xuất bản</label>
-                                              <input type="date" class="form-control" id="namxuatban" value="<?php echo $rbaibao['NAMXUATBAN']; ?>" />
+                                              <input type="month" class="form-control" id="namxuatban" value="<?php echo $rbaibao['NAMXUATBAN']; ?>" />
                                           </div>
                                       </div>
                                       <div class="col-md-12">

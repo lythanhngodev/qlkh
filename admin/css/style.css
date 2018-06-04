@@ -2316,12 +2316,7 @@ STYLE SWITCHER FOR DEMO
  * 3. TYPE
  */
 body {
-  font-family: "Roboto", sans-serif;
-  font-size: 1rem;
-  font-weight: 400;
-  line-height: 1.5;
-  color: #3c3c3c;
-  background-color: #fff;
+  font-family: sans-serif !important;
 }
 
 a {
@@ -2875,7 +2870,8 @@ a > code {
   box-shadow: 4px 0px 2px 0px #dedede;
   margin-right: 8px;
   border:  none;
-  font-weight:  800;
+  font-weight: bold;
+  font-family:  sans-serif;
 }
 .tabs-con .nav-link.active{ 
   background:#5caef4; 

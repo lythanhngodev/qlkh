@@ -7,7 +7,7 @@
     </div>
 <div id="cottrai">
       <?php 
-      $sotin = 8;
+      $sotin = 6;
       $bd=1;
       if (isset($_GET['trang']) && !empty($_GET['trang'])) {
         $bd = intval($_GET['trang']);

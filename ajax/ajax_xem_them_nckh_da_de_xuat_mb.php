@@ -16,7 +16,7 @@
 	    return $result;
 	}
  ?>
-<?php $nghiemthu = lay_de_tai_da_cong_bo((intval($_POST['tin'])-1)*8,8);;
+<?php $nghiemthu = lay_de_tai_da_cong_bo((intval($_POST['tin'])-1)*6,6);;
 while ($row = mysqli_fetch_assoc($nghiemthu)) {
  ?>
  <div class="noidungtin">

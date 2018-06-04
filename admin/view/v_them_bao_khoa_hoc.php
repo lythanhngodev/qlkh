@@ -113,7 +113,7 @@
                                           <div class="form-group">
                                               <label for="category" class="font-weight-bold" >
                                                   Thời gian công bố</label>
-                                              <input type="date" class="form-control" id="namxuatban" />
+                                              <input type="month" class="form-control" id="namxuatban" />
                                           </div>
                                       </div>
                                       <div class="col-md-12">

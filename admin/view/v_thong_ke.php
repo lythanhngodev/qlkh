@@ -146,5 +146,38 @@ $(document).ready(function(){
         } else
             swal('Ôi! Lỗi','Không có kết nối internet','error');
     });
+    $(document).on('click','#bkh-tg-xemdulieu',function(){
+        var bd = $('#batdau').val().trim();
+        var kt = $('#ketthuc').val().trim();
+        if(!bd || !kt){
+            swal('Ôi! Lỗi','Vui lòng nhập thông ngày tháng','error');
+            return;
+        }
+        var nbd = new Date(bd);
+        var nkt = new Date(kt);
+        if(nbd > nkt){
+            swal('Ôi! Lỗi','Tháng năm bắt đầu phải nhỏ hơn tháng năm kết thúc','error');
+            return;
+        }
+        if (kiemtraketnoi()){
+            $.ajax({
+                url: 'export/export_tat_ca_bao_khoa_hoc_theo_thoi_gian.php',
+                dataType: 'text',
+                type: 'post',
+                data: {_token: '<?php echo $token; ?>',bd:bd,kt:kt},
+                beforeSend: function () {$('#noidungthongke').html('<div class="progress"><div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div></div>'); },
+                success: function(data){
+                    $.notifyClose();
+                    swal('Tốt','Tải dữ liệu thành công','success');
+                    $('#noidungthongke').html(data);
+                },
+                error: function () {
+                    $.notifyClose();
+                   swal('Ôi! Lỗi','Vui lòng thử lại sau','error');
+                }
+            });
+        } else
+            swal('Ôi! Lỗi','Không có kết nối internet','error');
+    });
 });
 </script>

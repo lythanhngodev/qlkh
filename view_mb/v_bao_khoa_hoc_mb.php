@@ -21,7 +21,7 @@
     <h3>Báo khoa học</h3>
     <div class="tieudemuccon">
         <div class="tinmoi">
-        <?php $baibao = lay_bao_khoa_hoc(0,8);$stt=1;
+        <?php $baibao = lay_bao_khoa_hoc(0,6);$stt=1;
         while ($row = mysqli_fetch_assoc($baibao)) {
           if($stt!=1){
             echo "<hr style='width: 90%;'>";

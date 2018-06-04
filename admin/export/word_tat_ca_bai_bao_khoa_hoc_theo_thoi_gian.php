@@ -21,13 +21,32 @@
 		mysqli_close($conn);
 		return $result_cap;
 	}
-	function thong_ke_tat_ca_de_tai($capdetai,$bd,$kt){
+	function thong_ke_bai_bao_theo_thoi_gian($capbaibao,$bd,$kt){
 		$ketnoi = new clsKetnoi();
 		$conn = $ketnoi->ketnoi();
-		$query = "SELECT DISTINCT dt.IDDT, dt.TENDETAI, dt.THOIGIANNGHIEMTHU, dt.DIEM FROM detai dt, nguoidung nd, thanhviendetai tv WHERE dt.TRANGTHAI=N'Đã nghiệm thu' AND CAPDETAI = N'$capdetai' AND dt.IDDT=tv.IDDT AND DUYET='1' AND  (DATE_FORMAT(dt.THOIGIANNGHIEMTHU,'%Y-%m') BETWEEN (DATE_FORMAT(CONCAT('$bd','-01'),'%Y-%m')) AND (DATE_FORMAT(CONCAT('$kt','-01'),'%Y-%m')))";
+		$query = "SELECT DISTINCT b.IDBAO,b.TENBAO, b.NAMXUATBAN, b.TAPCHI, b.CAPBAIBAO, b.DIEM,b.SOTIET FROM baokhoahoc b, nguoidung_baibao nb WHERE b.ANHIEN=b'1' AND b.CAPBAIBAO = N'$capbaibao' AND (DATE_FORMAT(CONCAT(b.NAMXUATBAN,'-01'),'%Y-%m') BETWEEN (DATE_FORMAT(CONCAT('$bd','-01'),'%Y-%m')) AND (DATE_FORMAT(CONCAT('$kt','-01'),'%Y-%m')))";
 		$result = mysqli_query($conn, $query);
 		mysqli_close($conn);
 		return $result;
+	}
+	function lay_tac_gia_bai_bao($idb){
+	    $ketnoi = new clsKetnoi();
+	    $conn = $ketnoi->ketnoi();
+	    $q_ten = "SELECT CONCAT(nd.HO,' ',nd.TEN) AS  HOTEN FROM baokhoahoc b, nguoidung_baibao nb, nguoidung nd WHERE nb.IDBAO = b.IDBAO AND nb.IDND=nd.IDND AND b.IDBAO='$idb';";
+	    $e_ten = mysqli_query($conn,$q_ten);
+	    return $e_ten;
+	}
+	function lay_don_vi($idb){
+	    $ketnoi = new clsKetnoi();
+	    $conn = $ketnoi->ketnoi();
+	    $q_dv = "SELECT DISTINCT k.TENTAT FROM nguoidung_baibao nb, nguoidung_khoabomon nk, khoabomon k
+	WHERE nb.IDBAO = '$idb' AND nb.IDND = nk.IDND AND nk.IDKBM = k.IDKBM;";
+	    $e_dv = mysqli_query($conn,$q_dv);
+	    $r_dv=null;
+	    while ($row=mysqli_fetch_assoc($e_dv)) {
+	        $r_dv[] = $row['TENTAT'];
+	    }
+	    return $r_dv;
 	}
 	$ketnoi = new clsKetnoi();
 	$conn = $ketnoi->ketnoi();
@@ -43,7 +62,7 @@
 	while ($row = mysqli_fetch_row($esql_stqd)) {
 	    $stqd[]=$row;
 	}
-	$tenfile = "TK de tai NCKH ".$bd." - ".$kt;
+	$tenfile = "TK bai bao khoa hoc ".$bd." - ".$kt;
  ?>
  <?php 
  header("Content-Type: application/vnd.ms-word");
@@ -89,47 +108,68 @@
 				</tr>
 			</table>
 			<div style="width: 267mm;">
-				<p style="padding-left:1cm;">I. Đề tài Nghiên cứu khoa học cấp trường</p>
+				<p style="padding-left:1cm;">I. Bài báo khoa học, sách chuyên khảo</p>
 				<!-- NỘI DUNG ĐÁNH GIÁ -->
 				<table border="1" style="border-collapse: collapse;width: 100%;font-size: 17px;">
 					<tr style="text-align: center;">
 						<th style="width: 1cm;">TT</th>
-						<th>Tên đề tài</th>
-						<th style="width: 3cm;">Thời gian nghiệm thu</th>
-						<th style="width: 4cm;">Tên CBVC, Đơn vị</th>
-						<th style="width: 2cm;">Số điểm</th>
+						<th>Tên bài báo</th>
+						<th style="width: 3cm;">Tác giả</th>
+						<th style="width: 4cm;">Đơn vị</th>
+						<th style="width: 2cm;">Ghi chú</th>
 						<th style="width: 3cm;">Số tiết qui đổi</th>
 					</tr>
-					<?php $detaitk = thong_ke_tat_ca_de_tai('Cấp trường',$bd,$kt); $sttct=1;
-						while ($row = mysqli_fetch_assoc($detaitk)) { ?>
+					<?php $baibaotk = thong_ke_bai_bao_theo_thoi_gian('Cấp trường',$bd,$kt); $sttct=1;
+						while ($row = mysqli_fetch_assoc($baibaotk)) { ?>
 					<tr>
 						<td style="text-align: center;"><?php echo $sttct; ?></td>
-						<td style="padding-left: 0.3cm;"><?php echo $row['TENDETAI'] ?></td>
-						<td style="text-align: center;"><?php echo date('m/Y',strtotime($row['THOIGIANNGHIEMTHU'])) ?></td>
+						<td style="padding-left: 0.3cm;"><?php echo $row['TENBAO'] ?></td>
 						<td style="text-align: center;">
-						<?php 
-	$iddt = $row['IDDT'];
-	$chuoi_cbvc="";
-	$q_kbm = "SELECT DISTINCT k.TENTAT, k.IDKBM FROM thanhviendetai tv, khoabomon k, nguoidung nd, nguoidung_khoabomon nk WHERE tv.IDND = nd.IDND AND nd.IDND = nk.IDND AND  nk.IDKBM = k.IDKBM AND tv.IDDT = '$iddt';";
-	$e_kbm = mysqli_query($conn, $q_kbm);
-	while ($r_kbm = mysqli_fetch_assoc($e_kbm)) {
-	    $q_cbvc = "SELECT DISTINCT CONCAT(nd.HO, ' ', nd.TEN) AS  HOTEN FROM thanhviendetai tv, khoabomon k, nguoidung nd, nguoidung_khoabomon nk WHERE tv.IDND = nd.IDND AND nd.IDND = nk.IDND AND  nk.IDKBM = k.IDKBM AND tv.IDDT = '$iddt' AND k.IDKBM = '".$r_kbm['IDKBM']."';";
-	    $e_cbvc = mysqli_query($conn, $q_cbvc);
-	    while ($r_cbvc = mysqli_fetch_assoc($e_cbvc)) {
-	        $chuoi_cbvc.=$r_cbvc['HOTEN']."<br>";
-	    }
-	    $chuoi_cbvc.=$r_kbm['TENTAT'];
-	}echo $chuoi_cbvc;
-						 ?>
+	                    <?php $r_tg = lay_tac_gia_bai_bao($row['IDBAO']);
+	                        $tg = null;
+	                        while ($_tg = mysqli_fetch_assoc($r_tg)){
+	                            $tg[] = $_tg['HOTEN'];
+	                        }
+	                    switch (count($tg)) {
+	                        case 0:
+	                            echo "";
+	                            break;
+	                        case 1:
+	                            echo $tg[0];
+	                            break;
+	                        default:
+	                            for ($i=0; $i < count($tg)-1; $i++) { 
+	                                echo $tg[$i]."<hr>";
+	                            }
+	                            echo end($tg);
+	                            break;
+	                    }
+	                     ?>
 						</td>
-						<td style="text-align: center;"><?php echo $row['DIEM'] ?></td>
 						<td style="text-align: center;">
-<?php 
-						$sotiet=0;$diem=$row['DIEM'];
-			            foreach ($stqd as $val){
-			                if($val[1] <= $diem && $val[2] >= $diem){$sotiet = $val[3]*$val[4];break;}
-			            }echo $sotiet;
- ?>
+	                    <?php 
+	                    $dv = lay_don_vi($row['IDBAO']);
+	                    switch (count($dv)) {
+	                        case 0:
+	                            echo "";
+	                            break;
+	                        case 1:
+	                            echo $dv[0];
+	                            break;
+	                        default:
+	                            for ($i=0; $i < count($dv)-1; $i++) { 
+	                                echo $dv[$i]."<hr>";
+	                            }
+	                            echo end($dv);
+	                            break;
+	                    }
+	                     ?>
+						</td>
+						<td style="text-align: center;">
+							Tác giả
+						</td>
+						<td style="text-align: center;">
+                        <?php echo $row['SOTIET']; ?>
 						</td>
 					</tr>		
 					<?php $sttct++; } ?>

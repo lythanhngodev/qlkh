@@ -1,12 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Ly Thanh Ngo
- * Date: 12/04/2018
- * Time: 9:42 AM
- */
-?>
-<?php
 include_once("../../config.php");
 sleep(1.5);
 session_start();

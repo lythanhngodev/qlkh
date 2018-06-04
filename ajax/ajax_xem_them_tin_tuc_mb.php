@@ -16,7 +16,7 @@
 	    return $result;
 	}
  ?>
-<?php $nghiemthu = lay_tin_them(intval($_POST['cm']),(intval($_POST['tin'])-1)*8,8);;
+<?php $nghiemthu = lay_tin_them(intval($_POST['cm']),(intval($_POST['tin'])-1)*6,6);;
 while ($row = mysqli_fetch_assoc($nghiemthu)) {
  ?>
 <a href="xemtin/<?php echo $row['LINKBV']; ?>-<?php echo $row['IDBV']; ?>.ltn">

@@ -60,7 +60,7 @@
             </tr>
             <tr>
                 <th>Năm xuất bản</th>
-                <td><?php echo date('m - Y', strtotime($bb['NAMXUATBAN'])) ?></td>
+                <td><?php if(empty($bb['NAMXUATBAN'])||$bb['NAMXUATBAN']=='null') echo "Đang cập nhật"; else echo date('m - Y', strtotime($bb['NAMXUATBAN'])) ?></td>
             </tr>
             <tr>
                 <th>Nội dung sơ lược</th>

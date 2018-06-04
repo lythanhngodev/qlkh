@@ -117,8 +117,7 @@ $chikhac = null; $xongchikhac = 0;
     </thead>
     <tbody>
         <tr style="background: linear-gradient(141deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);color: #fff;">
-            <th class="giua">I</th>
-            <th colspan="6">Chi công lao động/ thuê khoán chuyên môn</th>
+            <th colspan="7">I. Chi công lao động/ thuê khoán chuyên môn</th>
         </tr>
         <?php for ($i=0; $i < count($conglaodong); $i++) {?>
             <tr>
@@ -132,8 +131,7 @@ $chikhac = null; $xongchikhac = 0;
             </tr>
         <?php } ?>
         <tr style="background: linear-gradient(141deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);color: #fff;">
-            <th class="giua">II</th>
-            <th colspan="6">Chi mua nguyên vật liệu</th>
+            <th colspan="7">II. Chi mua nguyên vật liệu</th>
         </tr>
         <?php for ($i=0; $i < count($nguyenvatlieu); $i++) {?>
             <tr>
@@ -147,8 +145,7 @@ $chikhac = null; $xongchikhac = 0;
             </tr>
         <?php } ?>
         <tr style="background: linear-gradient(141deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);color: #fff;">
-            <th class="giua">III</th>
-            <th colspan="6">Chi sữa chữa, mua sắm Tài sản cố định</th>
+            <th colspan="7">III. Chi sữa chữa, mua sắm Tài sản cố định</th>
         </tr>
         <?php for ($i=0; $i < count($suachua); $i++) {?>
             <tr>
@@ -162,8 +159,7 @@ $chikhac = null; $xongchikhac = 0;
             </tr>
         <?php } ?>
         <tr style="background: linear-gradient(141deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);color: #fff;">
-            <th class="giua">IV</th>
-            <th colspan="6">Chi khác</th>
+            <th colspan="7">IV. Chi khác</th>
         </tr>
         <?php for ($i=0; $i < count($chikhac); $i++) {?>
             <tr>
