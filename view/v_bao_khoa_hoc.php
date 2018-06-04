@@ -39,7 +39,10 @@
         <?php $sobaibao = dem_bao_khoa_hoc();
         if ($sobaibao!=0) {
           for ($i=1; $i <= ceil($sobaibao/$sotin); $i++) { 
-            echo "<li><a href='?p=baokhoahoc&trang=".$i."'>".$i."</a></li>";
+            if($i==$bd)
+              echo "<li class='tranghientai'><a href='?p=baokhoahoc&trang=".$i."'>".$i."</a></li>";
+            else 
+              echo "<li><a href='?p=baokhoahoc&trang=".$i."'>".$i."</a></li>";
           }
         }
         ?>

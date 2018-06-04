@@ -73,7 +73,7 @@
           while ($row = mysqli_fetch_assoc($baibaolienquan)) { ?>
           <div class="lienquan">
               <h3>
-                  <a href="xembaibao/<?php echo to_slug($row['TENBAO']) ?>-<?php echo $row['IDBAO'] ?>.ltn"><?php echo $row['TENBAO'] ?></a>
+                  <img src="images/icon_dot.gif" style="width: 25px;float: left;"><a href="xembaibao/<?php echo to_slug($row['TENBAO']) ?>-<?php echo $row['IDBAO'] ?>.ltn"><?php echo $row['TENBAO'] ?></a>
               </h3>
               <div class="clear"></div>
          </div>

@@ -124,7 +124,7 @@
           while ($row = mysqli_fetch_assoc($baibaolienquan)) { ?>
           <div class="lienquan">
               <h3>
-                  <a href="xemdetai/<?php echo to_slug($row['TENDETAI']); ?>-<?php echo $row['IDDT'] ?>.ltn"><?php echo $row['TENDETAI'] ?></a>
+                  <img src="images/icon_dot.gif" style="width: 25px;float: left;"><a href="xemdetai/<?php echo to_slug($row['TENDETAI']); ?>-<?php echo $row['IDDT'] ?>.ltn"><?php echo $row['TENDETAI'] ?></a>
               </h3>
               <div class="clear"></div>
          </div>
