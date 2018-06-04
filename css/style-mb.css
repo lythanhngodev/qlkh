@@ -2,7 +2,7 @@
 .muccon{
   width: 100%;
   border-radius: 6px;
-  border: 1px solid #1d72f4;
+  border: 1px solid #3bbbcc;
   font-family:  sans-serif;
   font-size: 13px;
   float:  left;
@@ -11,7 +11,7 @@
   position:  relative;
 }
 .muccon h3{
-  background: #007bfd;
+  background: linear-gradient(141deg, #24b8ae 0%, #4cbde7 75%);
   width: 100%;
   padding: 6px 0px;
   font-family: sans-serif;
@@ -49,7 +49,7 @@ padding: 0px 5px;
   padding-left: 30px;
 }
 .nut-link{
-  background: #007bfd;
+  background: linear-gradient(141deg, #24b8ae 0%, #49c8d6 51%, #4cbde7 75%);
   color:  #fff;
   padding: 10px 10px;
   border-radius: 6px;

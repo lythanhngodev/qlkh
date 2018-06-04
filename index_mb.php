@@ -14,7 +14,7 @@
     <img src="images/header_vlute_mb.jpg" style="width: 100%;" />
   </div>
 </div>
-<nav class="navbar navbar-lg navbar-dark bg-primary">
+<nav class="navbar navbar-lg navbar-dark bg-primary" style="background: linear-gradient(130deg, #54d7ce 0%, #2b7ce0 100%);">
   <a class="navbar-brand" href="#" id="tieude">Trang chủ</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
