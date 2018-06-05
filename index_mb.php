@@ -18,7 +18,7 @@
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
 <div class="progress" style="z-index: 9999;position: fixed;top: 0px;border-radius:  0;height: 5px;background: transparent;left:  0;right: 0;">
-  <div class="progress-bar" id="daluot" style="width:10%;background: linear-gradient(130deg, #58d9d0 0%, #4a99fa 100%);"></div>
+  <div class="progress-bar" id="daluot" style="background: linear-gradient(130deg, #58d9d0 0%, #4a99fa 100%);"></div>
 </div>
 <div>
   <div style="width: 100%;margin: 0 auto;position: relative;margin-top: 5px;">
@@ -108,14 +108,18 @@
 <center><img id="back-to-top" src="images/back-to-top.png"></center>
 </body>
 <script type="text/javascript">
+function getDocHeight() {var D = document;return Math.max(D.body.scrollHeight, D.documentElement.scrollHeight,D.body.offsetHeight, D.documentElement.offsetHeight,D.body.clientHeight, D.documentElement.clientHeight);}
   $(document).ready(function(){
     $('.thantrangmb').fadeIn(789);
      $(window).scroll(function () {
-        if ($(this).scrollTop() > 250)
+        if ($(this).scrollTop() > 200)
             $('#back-to-top').fadeIn();
         else
             $('#back-to-top').fadeOut();
-        $('#daluot').css("width",(($(this).scrollTop()+$(window).height())/$(document).height()*100)+"%");
+        $('#daluot').css("width",($(window).scrollTop()/($(document).height()-$(window).height())*100)+"%");
+        if ($(window).scrollTop() + $(window).height() + $('.footer').height() + 15 >= getDocHeight()) {
+            $('#daluot').css("width","100%");
+        }
     });
     $('#back-to-top').click(function () {
         $('#back-to-top').tooltip('hide');
