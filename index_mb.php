@@ -21,7 +21,7 @@
   <div class="progress-bar" id="daluot" style="width:10%;background: linear-gradient(130deg, #58d9d0 0%, #4a99fa 100%);"></div>
 </div>
 <div>
-  <div style="width: 100%;margin: 0 auto;position: relative;">
+  <div style="width: 100%;margin: 0 auto;position: relative;margin-top: 5px;">
     <img src="images/header_vlute_mb.jpg" style="width: 100%;" />
   </div>
 </div>
@@ -111,11 +111,10 @@
   $(document).ready(function(){
     $('.thantrangmb').fadeIn(789);
      $(window).scroll(function () {
-        if ($(this).scrollTop() > 250) {
+        if ($(this).scrollTop() > 250)
             $('#back-to-top').fadeIn();
-        } else {
+        else
             $('#back-to-top').fadeOut();
-        }
         $('#daluot').css("width",(($(this).scrollTop()+$(window).height())/$(document).height()*100)+"%");
     });
     $('#back-to-top').click(function () {
