@@ -17,6 +17,9 @@
   js.src = 'https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v3.0&appId=2165745763451934&autoLogAppEvents=1';
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
+<div class="progress" style="z-index: 9999;position: fixed;top: 0px;border-radius:  0;height: 5px;background: transparent;left:  0;right: 0;">
+  <div class="progress-bar" id="daluot" style="width:10%;background: linear-gradient(130deg, #58d9d0 0%, #4a99fa 100%);"></div>
+</div>
 <div>
   <div style="width: 100%;margin: 0 auto;position: relative;">
     <img src="images/header_vlute_mb.jpg" style="width: 100%;" />
@@ -108,31 +111,21 @@
   $(document).ready(function(){
     $('.thantrangmb').fadeIn(789);
      $(window).scroll(function () {
-            if ($(this).scrollTop() > 250) {
-                $('#back-to-top').fadeIn();
-            } else {
-                $('#back-to-top').fadeOut();
-            }
-        });
-        // scroll body to 0px on click
-        $('#back-to-top').click(function () {
-            $('#back-to-top').tooltip('hide');
-            $('body,html').animate({
-                scrollTop: 0
-            }, 400);
-            return false;
-        });
-	$(window).bind('orientationchange resize', function(event){
-	  if (event.orientation) {
-	    if (event.orientation == 'landscape') {
-	      if (window.rotation == 90) {
-		rotate(this, -90);
-	      } else {
-		rotate(this, 90);
-	      }
-	    }
-	  }
-	});
+        if ($(this).scrollTop() > 250) {
+            $('#back-to-top').fadeIn();
+        } else {
+            $('#back-to-top').fadeOut();
+        }
+        $('#daluot').css("width",(($(this).scrollTop()+$(window).height())/$(document).height()*100)+"%");
+    });
+    $('#back-to-top').click(function () {
+        $('#back-to-top').tooltip('hide');
+        $('body,html').animate({
+            scrollTop: 0
+        }, 400);
+        return false;
+    });
+
 });
 </script>
 </html>
