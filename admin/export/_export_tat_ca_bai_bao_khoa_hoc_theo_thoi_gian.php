@@ -178,14 +178,9 @@
 
 	mysqli_close($conn);
 	$objWriter = new PHPExcel_Writer_Excel2007($objPHPExcel);
-	$filename = "$ten.xlsx";
-	$objWriter->save($filename);
-	header('Content-Disposition: attachment; filename="' . $filename . '"');
 	header('Content-Type: application/vnd.openxmlformatsofficedocument.spreadsheetml.sheet');
-	header('Content-Length: ' . filesize($filename));
-	header('Content-Transfer-Encoding: binary');
-	header('Cache-Control: must-revalidate');
-	header('Pragma: no-cache');
-	readfile($filename);
-	return;
+	$filename = "$ten.xlsx";
+	header('Content-Disposition: attachment; filename="' . $filename . '"');
+	header('Cache-Control: max-age=0');
+	$objWriter->save("php://output");
  ?>
