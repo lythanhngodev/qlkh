@@ -23,10 +23,10 @@
                     <?php $stt=1; while ($row = mysqli_fetch_assoc($tintuc)) { ?>
                     <tr>
                         <th class="giua"><?php echo $stt; ?></th>
-                        <td><a href="?p=suabaiviet&id=<?php echo $row['IDBV'] ?>"><?php echo $row['TENBV']; ?></a></td>
+                        <td><?php echo $row['TENBV']; ?></td>
                         <td><?php echo $row['TENBV']; ?></td>
                         <td class="giua"><?php echo $row['NGAYDANG']; ?></td>
-                        <td class="giua">
+                        <td class="giua" onclick="alert('Đang phát triển')">
                             <?php if ($row['HIENTHI']=='1'): ?>
                                 <a class="mat"><i class="fas fa-eye"></i></a>
                             <?php endif ?>

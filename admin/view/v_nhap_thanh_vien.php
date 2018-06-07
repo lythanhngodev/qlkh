@@ -96,7 +96,7 @@ if (!isset($_SESSION["token"])) {include_once ("../../loi404.html");exit();}
             var btv = [];
             $('#bangthanhvien').find('tr:not(:first)').each(function(i, row) {
               var cols = [];
-              $(this).find('td:not(:first) input, select').each(function(i, col) {
+              $(this).find('td:not(:first:last) input, select').each(function(i, col) {
                   cols.push($(this).val().trim());
               });
               btv.push(cols);
@@ -131,6 +131,9 @@ if (!isset($_SESSION["token"])) {include_once ("../../loi404.html");exit();}
             }
             else
                 swal('Ôi! Lỗi','Không có kết nối internet','error');
+        });
+        $(document).on('click','#bangthanhvien .xoa-tv',function(){
+            $('#bangthanhvien').DataTable().row($(this).parents('tr')).remove().draw();
         });
     });
 
