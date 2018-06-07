@@ -15,7 +15,10 @@ if (isset($_SESSION['tdn']) && isset($_SESSION['pas'])) {
 require_once "../excel/PHPExcel.php";
 $file = $_FILES['file']['tmp_name'];
 $objReader = PHPExcel_IOFactory::createReaderForFile($file);
+$listWorkSheets = $objReader->listWorksheetNames($file);
 $danhsach = null;
+for($i=0;$i<count($listWorkSheets);$i++){
+    $objReader->setLoadSheetsOnly($listWorkSheets[$i]);
     $objExcel = $objReader->load($file);
     $sheetData = $objExcel->getActiveSheet()->toArray('null',true,true,true);
     $hightsRow = $objExcel->setActiveSheetIndex()->getHighestRow();
@@ -29,7 +32,7 @@ $danhsach = null;
         $t_ds = [$ho,$ten,$mail];
         $danhsach[] = $t_ds;
     }
-
+}
 ?>
 <table id="bangthanhvien" class="table table-bordered table-hover">
     <thead>
