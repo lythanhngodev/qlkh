@@ -5,7 +5,7 @@ $mang = array(
     'trangthai' => 0,
     'thongbao' => ''
 );
-function dangky($ho,$ten,$tdn,$mail){
+function dangky($ho,$ten,$tdn,$mail,$sv){
     $ketnoi = new clsKetnoi();
     $conn = $ketnoi->ketnoi();
     $matkhau = $ketnoi->chuoingaunhien(8);
@@ -13,7 +13,17 @@ function dangky($ho,$ten,$tdn,$mail){
     $ten = mysqli_real_escape_string($conn,$ten);
     $tdn = mysqli_real_escape_string($conn,$tdn);
     $mail = mysqli_real_escape_string($conn,$mail);
-    $hoi="INSERT INTO `nguoidung`(`HO`, `TEN`, `MAIL`, `TENDANGNHAP`, `MATKHAU`,`XACNHAN`) VALUES ('$ho','$ten','$mail','$tdn','".md5($matkhau)."', b'0')";
+    $sv = mysqli_real_escape_string($conn,$sv);
+    $_sv ="";
+    if ($sv=='true') {
+        $_sv = "0";
+    }else{
+        $_sv = "1";
+    }
+    if ($_sv=="") {
+        return false;
+    }
+    $hoi="INSERT INTO `nguoidung`(`HO`, `TEN`, `MAIL`, `TENDANGNHAP`, `MATKHAU`,`XACNHAN`, `GIAOVIEN`) VALUES ('$ho','$ten','$mail','$tdn','".md5($matkhau)."', b'0', b'$_sv')";
     if(mysqli_query($conn, $hoi)===TRUE){
         $dem = mysqli_affected_rows($conn);
         if ($dem>0){
@@ -32,7 +42,7 @@ function dangky($ho,$ten,$tdn,$mail){
     else
         return false;
 }
-if (dangky($_POST['ho'],$_POST['ten'],$_POST['tdn'],$_POST['mail'])) {
+if (dangky($_POST['ho'],$_POST['ten'],$_POST['tdn'],$_POST['mail'],$_POST['sv'])) {
     $mang['trangthai'] = 1;
     $mang['thongbao'] = 'Đăng ký thành công';
 }

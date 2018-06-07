@@ -96,6 +96,9 @@
                   var result = $.parseJSON(data);
                   if(result.trangthai == 1){
                       swal('Thành công','Đã xác nhận người dùng','success');
+                      setTimeout(function(){
+                          location.reload();
+                      }, 2000);
                   }
                   else
                     swal('Ôi! Lỗi','Xảy ra lỗi, vui lòng thử lại','error');
@@ -142,6 +145,9 @@
                   var result = $.parseJSON(data);
                   if(result.trangthai == 1){
                       swal('Thành công','Đã xoá mục đã chọn','success');
+                      setTimeout(function(){
+                          location.reload();
+                      }, 2000);
                   }
                   else
                     swal('Ôi! Lỗi','Xảy ra lỗi, vui lòng thử lại','error');

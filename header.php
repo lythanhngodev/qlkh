@@ -31,6 +31,9 @@
 			case 'timkiem':
 				include_once("header/h_tim_kiem.php");
 				break;
+			case 'tag':
+				include_once("header/tag.php");
+				break;
 		}
 	}
 	else

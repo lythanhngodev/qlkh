@@ -1,6 +1,6 @@
 <?php include_once("config.php"); ?>
 <meta name="description" content="Phòng nghiên cứu khoa học &amp; Hợp tác quốc tế | Đại học Sư phạm Kỹ thuật Vĩnh Long" />
-<title>Phòng nghiên cứu khoa học &amp; Hợp tác quốc tế | Đại học Sư phạm Kỹ thuật Vĩnh Long</title>
+<title>Trang chủ | Phòng nghiên cứu khoa học &amp; Hợp tác quốc tế Đại học Sư phạm Kỹ thuật Vĩnh Long</title>
 <!-- Facebook SEO -->
 <meta property="og:url" content="<?php echo "http://". $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'] ?>" />
 <meta property="og:type" content="article" />
