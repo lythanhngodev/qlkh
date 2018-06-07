@@ -93,7 +93,7 @@
            ?>
         </div>
       </li>
-      <li class="nav-item" id="lienhe"><a class="nav-link" href="#">Liên hệ</a></li>
+      <li class="nav-item" id="lienhe"><a class="nav-link" target="_blank" href="http://vlute.edu.vn/index.php/lien-he">Liên hệ</a></li>
     </ul>
   </div>
 </nav>

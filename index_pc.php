@@ -99,7 +99,7 @@
 							 ?>
 						</ul>
 					</li>
-					<li><a href="#">Liên hệ</a></li>
+					<li><a href="http://vlute.edu.vn/index.php/lien-he" target="_blank">Liên hệ</a></li>
 				</ul>
 			</div>
 		</div>
