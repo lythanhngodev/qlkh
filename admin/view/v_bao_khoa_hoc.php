@@ -7,7 +7,7 @@
             <h4>Danh sách các bài báo khoa học</h4>
           </div>
           <div class="card-body">
-            <a href="?p=thembaokhoahoc" class="btn btn-primary btn-sm"><i class="fas fa-plus"></i>&nbsp;&nbsp;Thêm mới</a><br><br>
+            <a href="?p=thembaokhoahoc" class="btn btn-success btn-sm"><i class="fa fa-plus"></i>&nbsp;&nbsp;Thêm mới</a><br><br>
               <table id="example" class="table table-hover table-bordered" style="width:100%">
                 <thead>
                     <tr style="background:#e9ecef;">
@@ -34,10 +34,10 @@
                         <td class="giua"><?php echo $row['SOTIET']; ?></td>
                         <td class="giua"><?php echo $row['NGAYDANGBAI']; ?></td>
                         <td class="giua">
-                            <a href="?p=suabaibao&id=<?php echo $row['IDBAO'] ?>" class="btn btn-primary btn-sm" title="Sửa"><i class="fas fa-edit"></i></a>
-                            <button class="btn btn-danger btn-sm" id="" title="Xóa" onclick="xoa(<?php echo $row['IDBAO'] ?>)"><i class="fas fa-trash"></i></button>
+                            <a href="?p=suabaibao&id=<?php echo $row['IDBAO'] ?>" class="btn btn-primary btn-sm" title="Sửa"><i class="far fa-edit"></i></a>
+                            <button class="btn btn-danger btn-sm" id="" title="Xóa" onclick="xoa(<?php echo $row['IDBAO'] ?>)"><i class="fa fa-trash"></i></button>
                             <?php if ($row['FILE']!=''): ?>
-                                <a href="../files/<?php echo $row['FILE'] ?>" title="Tải bài báo" target="_blank" class="btn btn-default btn-sm" ><i class="fas fa-download"></i></a>
+                                <a href="../files/<?php echo $row['FILE'] ?>" title="Tải bài báo" target="_blank" class="btn btn-default btn-sm" ><i class="far fa-download"></i></a>
                             <?php endif ?>
                         </td>
                     </tr>

@@ -812,7 +812,7 @@ $nhiemvu_nghiemthu = ['Chủ tịch HĐ', 'Ủy viên', 'Thư ký'];
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Đóng</button>
-                <button type="button" class="btn btn-primary" id="guimail">Lưu</button>
+                <button type="button" class="btn btn-primary" id="guimail"><i class="fa fa-paper-plane"></i>&ensp;Gửi mail</button>
             </div>
         </div>
     </div>

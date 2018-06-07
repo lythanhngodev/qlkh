@@ -240,7 +240,7 @@ $_SESSION["token"] = $token;
               <p>&copy; Copyright of Ngô Thanh Lý (Faculty of Information Technology 2014)</p>
             </div>
             <div class="col-sm-6 text-right">
-              <p>Phiên bản: <a href="#" class="external">1.0.1 demo</a></p>
+              <p>Phiên bản: <a href="#" class="external">06.09.06.18</a></p>
             </div>
           </div>
         </div>

@@ -20,7 +20,7 @@ if (!isset($_SESSION["token"])) {include_once ("../../loi404.html");exit();}
                     <h4>Danh sách biểu mẫu</h4>
                 </div>
                 <div class="card-body">
-                    <a class="btn btn-primary btn-sm thembm"><i class="fas fa-plus"></i>&nbsp;&nbsp;Thêm mới</a><br><br>
+                    <a class="btn btn-success btn-sm thembm"><i class="fa fa-plus"></i>&nbsp;&nbsp;Thêm mới</a><br><br>
                     <div class="row">
                         <div class="col-md-12">
                             <table id="bang-bieu-mau" class="table table-bordered table-hover">
@@ -45,7 +45,7 @@ if (!isset($_SESSION["token"])) {include_once ("../../loi404.html");exit();}
                                         echo "<td class='giua'>Không có file</td>";
                                     }
                                     echo "<td>
-                            <button class='btn btn-danger btn-sm' onclick='xoabm(this,".$row['IDBM'].")' title='Xóa' lydata='".$row['FILE']."'><i class='fas fa-trash'></i></button></td>";
+                            <button class='btn btn-danger btn-sm' onclick='xoabm(this,".$row['IDBM'].")' title='Xóa' lydata='".$row['FILE']."'><i class='fa fa-trash'></i></button></td>";
                                     echo "</tr>";
                                 }
                                 ?>
@@ -154,7 +154,7 @@ if (!isset($_SESSION["token"])) {include_once ("../../loi404.html");exit();}
                                         ma,
                                         ten,
                                     "<a href='<?php echo $qlkh['HOSTGOC']."files/" ?>"+mang.tenfile+"'>Tải về</a>",
-                                    "<button class='btn btn-danger btn-sm' onclick='xoabm(this,"+mang.ma+")' title='Xóa' lydata='"+mang.tenfile+"' ><i class='fas fa-trash'></i></button>"
+                                    "<button class='btn btn-danger btn-sm' onclick='xoabm(this,"+mang.ma+")' title='Xóa' lydata='"+mang.tenfile+"' ><i class='fa fa-trash'></i></button>"
                                 ] ).draw(false);
 
                                 $('#mabm').val('');
@@ -214,11 +214,6 @@ if (!isset($_SESSION["token"])) {include_once ("../../loi404.html");exit();}
             khongthanhcong("Hiện không có kết nối internet");
     };
     $(document).ready(function() {
-        $('#bang-bieu-mau').DataTable({
-        "scrollY":"300px",
-        "scrollCollapse": true,
-        "paging": false
-        });
+        $('#bang-bieu-mau').DataTable();
     } );
-
 </script>

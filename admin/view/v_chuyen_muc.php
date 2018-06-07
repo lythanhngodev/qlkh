@@ -17,7 +17,7 @@ if (!isset($_SESSION["token"])) {include_once ("../../loi404.html");exit();}
                 <div class="card-body">
                     <div class="row">
                         <div class="col-md-12">
-                            <button id="themchuyenmuc" class="btn btn-primary btn-sm"><i class="fas fa-plus"></i>&nbsp;&nbsp;Thêm mới</button><br><br>
+                            <button id="themchuyenmuc" class="btn btn-success btn-sm"><i class="fa fa-plus"></i>&nbsp;&nbsp;Thêm mới</button><br><br>
                         </div>
                         <div class="col-md-12">
                             <table id="bang-chuyen-muc" class="table table-bordered table-hover">
@@ -41,8 +41,8 @@ if (!isset($_SESSION["token"])) {include_once ("../../loi404.html");exit();}
                                     if ($row['LOAICHUYENMUC']=='hoptacquocte') {
                                         echo "<td>Hợp tác quốc tế</td>";
                                     }
-                                    echo "<td><a class='btn btn-primary btn-sm' onclick='sua(this)' title='Sửa' lydata='".$row['IDCM']."'><i class=\"fas fa-edit\"></i></a>
-                                    &ensp;<button class='btn btn-danger btn-sm xoa' title='Xóa' onclick='xoa(this)' lydata='".$row['IDCM']."'><i class='fas fa-trash'></i></button></td>";
+                                    echo "<td><a class='btn btn-primary btn-sm' onclick='sua(this)' title='Sửa' lydata='".$row['IDCM']."'><i class=\"far fa-edit\"></i></a>
+                                    &ensp;<button class='btn btn-danger btn-sm xoa' title='Xóa' onclick='xoa(this)' lydata='".$row['IDCM']."'><i class='fa fa-trash'></i></button></td>";
                                     echo "</tr>";
                                 }
                                 ?>
@@ -197,8 +197,8 @@ if (!isset($_SESSION["token"])) {include_once ("../../loi404.html");exit();}
                                 $('#tencm').val().trim(),
                                 $('#motacm').val().trim(),
                                 $('#sualoaicm option:selected').text().trim(),
-                                "<a class='btn btn-primary btn-sm' onclick='sua(this)' title='Sửa' lydata='"+mang.ma+"'><i class='fas fa-edit'></i></a>" +
-                                "&ensp;<button class='btn btn-danger btn-sm' title='Xóa' onclick='xoa(this)' lydata='"+mang.ma+"'><i class='fas fa-trash'></i></button>"
+                                "<a class='btn btn-primary btn-sm' onclick='sua(this)' title='Sửa' lydata='"+mang.ma+"'><i class='far fa-edit'></i></a>" +
+                                "&ensp;<button class='btn btn-danger btn-sm' title='Xóa' onclick='xoa(this)' lydata='"+mang.ma+"'><i class='fa fa-trash'></i></button>"
                             ]).draw(false);
                             $('#modal-them-chuyen-muc').find('input').val('');
                             $('#modal-them-chuyen-muc').find('textarea').val('');
@@ -312,10 +312,6 @@ if (!isset($_SESSION["token"])) {include_once ("../../loi404.html");exit();}
         $('#modal-xoa-chuyen-muc').modal('show');
     }
     $(document).ready(function() {
-        $('#bang-chuyen-muc').DataTable({
-        "scrollY":"300px",
-        "scrollCollapse": true,
-        "paging": false
-        });
+        $('#bang-chuyen-muc').DataTable();
     } );
 </script>

@@ -12,11 +12,11 @@
 		$tdn = $_SESSION['tdn'];
     	$pas = $_SESSION['pas'];
 		if(!($ketnoi->checklogin($tdn,$pas))){
-			header("Location: ".$qlkh['HOSTADMIN']."login.php");
+			trangchu($qlkh['HOSTADMIN']."login.php");
 		}
 	}
-	else
-		header("Location: ".$qlkh['HOSTADMIN']."login.php");
+	else 
+		trangchu($qlkh['HOSTADMIN']."login.php");
 	
 	$hoi_user = "SELECT * FROM nguoidung WHERE (BINARY MAIL = '$tdn' OR BINARY TENDANGNHAP = '$tdn') AND (BINARY MATKHAU = '".md5($pas)."')";
 	$thucthi_user = mysqli_query($ketnoi->ketnoi(), $hoi_user);
