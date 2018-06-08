@@ -14,6 +14,22 @@ https://bootstrapious.com/p/bootstrap-4-dashboard
 *     GENERAL
 * ==========================================================
 */
+/* Malihu Custom Scroll */
+.mCSB_scrollTools {
+  width: 2px;
+}
+
+.mCSB_inside > .mCSB_container {
+  margin-right: 0 !important;
+}
+
+.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+  background-color: #579fdc;
+}
+
+.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar:hover {
+  background-color: #0275d8;
+}
 .text-bold {
   font-weight: 700;
 }
@@ -92,7 +108,7 @@ table {
   -webkit-transition: width 0.3s linear;
   transition: width 0.3s linear;
   width: calc(100% - 200px);
-  background-color: #e9ecef;
+  background-color: #efefef;
   min-height: 100vh;
   padding-bottom: 50px;
 }
@@ -133,6 +149,7 @@ h2 {
   font-weight: 300;
   color: #999;
   margin-bottom: 0;
+  background: #efeff0;
 }
 .an{
   display: none;
@@ -391,7 +408,7 @@ nav.navbar a.menu-btn i[class*='icon-'] {
   height: 100%;
   width: 200px;
   text-align: left;
-  background: #0275d8 !important;
+  background: #ffffff !important;
   color: #fff;
   z-index: 999;
   overflow-y: auto;
@@ -425,20 +442,20 @@ nav.navbar a.menu-btn i[class*='icon-'] {
 
 .side-navbar li {
   position: relative;
+  padding-right: 2px;
 }
 
 .side-navbar li a {
   position: relative;
   font-size: .9rem;
   font-weight: 300;
-  color: #fff;
+  color: #595959;
   text-decoration: none;
   width: 100%;
-  padding: 12px;
+  padding: 12px 5px;
 }
 
 .side-navbar li a:focus, .side-navbar li a:hover, .side-navbar li a[aria-expanded="true"] {
-  background: #f4f7fa;
   color: #0275d8;
   text-decoration: none;
 }
@@ -460,8 +477,9 @@ nav.navbar a.menu-btn i[class*='icon-'] {
 }
 
 .side-navbar li.active > a {
-  background: #ffffff;
-  color: #0275d8;
+  background: #efefef;
+  color: #088dff;
+  border-radius: 0px 35px 35px 0px;
 }
 
 .side-navbar li li.active > a {
@@ -487,15 +505,15 @@ nav.navbar a.menu-btn i[class*='icon-'] {
 }
 
 .side-navbar .sidenav-header {
-  background: #f4f7fa;
-  padding: 17px;
+  height: 70px;
+  padding: 4px 0px;
   margin-bottom: 0px;
-  border-bottom: 4px solid #cecece;
+  border-bottom: 1px solid #dfdfdf;
 }
 
 .side-navbar .sidenav-header img {
-  width: 40px;
-  height: 40px;
+  width: 35px;
+  height: 35px;
 }
 
 .side-navbar .sidenav-header span {
@@ -504,9 +522,10 @@ nav.navbar a.menu-btn i[class*='icon-'] {
 }
 
 .side-navbar .sidenav-header h2 {
-  margin: 6px 0 0;
+  margin: 2px 0 0;
   letter-spacing: .1em;
   color: #565656;
+  font-size: 18px;
 }
 
 .side-navbar .sidenav-heading {
@@ -667,23 +686,6 @@ nav.navbar a.menu-btn i[class*='icon-'] {
   .side-navbar .badge {
     display: none;
   }
-}
-
-/* Malihu Custom Scroll */
-.mCSB_scrollTools {
-  width: 4px;
-}
-
-.mCSB_inside > .mCSB_container {
-  margin-right: 0 !important;
-}
-
-.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
-  background-color: #579fdc;
-}
-
-.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar:hover {
-  background-color: #33b35a;
 }
 
 /*
