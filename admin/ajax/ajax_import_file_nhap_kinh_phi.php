@@ -12,6 +12,8 @@ if (isset($_SESSION['tdn']) && isset($_SESSION['pas'])) {
     trangchu($qlkh['HOSTADMIN']);
 }
 include_once "../excel/PHPExcel.php";
+use PHPExcel_Settings;
+PHPExcel_Settings::setZipClass(PHPExcel_Settings::PCLZIP);
 $file = $_FILES['file']['tmp_name'];
 $objReader = PHPExcel_IOFactory::createReaderForFile($file);
 $listWorkSheets = $objReader->listWorksheetNames($file);
