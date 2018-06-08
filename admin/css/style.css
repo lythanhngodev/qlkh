@@ -220,7 +220,7 @@ section header {
 }
 @media (min-width: 768px) {
   .container-fluid {
-    padding: 0 3rem;
+    padding: 0 1rem;
   }
 }
 .dataTables_wrapper{
