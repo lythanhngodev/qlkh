@@ -208,7 +208,8 @@ $_SESSION["token"] = $token;
                   <div class="brand-text d-none d-md-inline-block"></div></a></div>
               <ul class="nav-menu list-unstyled d-flex flex-md-row align-items-md-center">
                 <!-- Log out-->
-                <li class="nav-item"><a href="dangxuat.php" class="nav-link logout"> <span class="d-none d-sm-inline-block">Đăng xuất</span>&nbsp;&nbsp;<i class="fas fa-sign-out-alt"></i></a></li>
+                <li class="nav-item"><a href="?p=thongtincanhan" class="nav-link"><span class="d-none d-sm-inline-block"><i class="fas fa-user"></i>&ensp;Thông tin cá nhân</span></a></li>
+                <li class="nav-item"><a href="dangxuat.php" class="nav-link logout"><span class="d-none d-sm-inline-block"><i class="fas fa-sign-out-alt"></i>&ensp;Đăng xuất</span></a></li>
               </ul>
             </div>
           </div>

@@ -4,21 +4,25 @@
 <head>
 <meta charset="utf-8">
 	<?php include_once "header.php" ?>
-	<base href="<?php echo $qlkh['HOSTGOC'] ?>" /><script defer src="fontawesome/svg-with-js/js/fontawesome-all.js"></script><link rel="stylesheet" type="text/css" href="css/style.css"><script src="js/jquery-3.3.1.min.js"></script><script src="js/jquery-migrate-1.2.1.js"></script>
-<script src="js/superfish.js" type="text/javascript"></script><script type="text/javascript">$(function() {$('ul.sf-menu').superfish();});</script>
-<script type="application/ld+json">
-{
-  "@context": "http://schema.org",
-  "@type": "Organization",
-  "url": "<?php echo $qlkh['HOSTGOC'] ?>",
-  "logo": "<?php echo $qlkh['HOSTGOC'] ?>images/logo.png",
-  "contactPoint": [{
-    "@type": "ContactPoint",
-    "telephone": "+84 2703 862457",
-    "contactType": "customer service"
-  }]
-}
-</script>
+	<base href="<?php echo $qlkh['HOSTGOC'] ?>" />
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="js/jquery-migrate-1.2.1.js" async></script>
+	<script src="js/superfish.js" type="text/javascript"></script>
+	<script type="text/javascript">$(function() {$('ul.sf-menu').superfish();});</script>
+	<script type="application/ld+json">
+		{
+		  "@context": "http://schema.org",
+		  "@type": "Organization",
+		  "url": "<?php echo $qlkh['HOSTGOC'] ?>",
+		  "logo": "<?php echo $qlkh['HOSTGOC'] ?>images/logo.png",
+		  "contactPoint": [{
+		    "@type": "ContactPoint",
+		    "telephone": "+84 2703 862457",
+		    "contactType": "customer service"
+		  }]
+		}
+	</script>
 </head>
 <body>
 <script>
@@ -117,10 +121,10 @@
 			</div>
 		</div>
 		<marquee behavior="alternate" scrolldelay="200" style="font-size: 0.8rem; color: white; background: url(images/bg_bar.gif) repeat-x; padding: 3px 0;line-height: 1.3rem;border-radius: 8px;" onmouseover="this.stop();" onmouseout="this.start();" >Phòng Nghiên cứu khoa học &amp; Hợp tác quốc tế - Trường Đại học Sư Phạm Kỹ Thuật Vĩnh Long</marquee>
-		<div id="maincontent" class="thantrangpc" style="display: none;">
+		<div id="maincontent">
 			<?php include_once 'public_c.php'; ?>
 		</div>
-		<div id="footer" class="thantrangpc" style="display: none;">
+		<div id="footer">
 			<div id="ft_nav">
 				<ul>
 					<li><a href="<?php echo $qlkh['HOSTGOC'] ?>">Trang chủ</a></li>
@@ -142,6 +146,6 @@
 		</div>
 	</div>
 </div>
-<script type="text/javascript">$(document).ready(function(){$('.thantrangpc').fadeIn(400);});</script>
+<script defer src="fontawesome/svg-with-js/js/fontawesome-all.js" async></script>
 </body>
 </html>

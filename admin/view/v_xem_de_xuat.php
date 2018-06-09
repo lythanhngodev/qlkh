@@ -746,11 +746,6 @@ $nhiemvu_nghiemthu = ['Chủ tịch HĐ', 'Ủy viên', 'Thư ký'];
                         </div>
                     </div>
                 </div>
-                <div class="card-footer">
-                    <div class="pull-right">
-                        <a class="btn btn-default" href="?p=quanlydetaiduan"><< Quay lại trang trước</a>
-                    </div>
-                </div>
             </div>
         </div>
     </div>

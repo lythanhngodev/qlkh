@@ -5,7 +5,11 @@
 	<meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 	<?php include_once "header.php" ?>
-	<base href="<?php echo $qlkh['HOSTGOC'] ?>" /><!--<script defer src="fontawesome/svg-with-js/js/fontawesome-all.js"></script>--><link rel="stylesheet" type="text/css" href="css/style-mb.css"><link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css"><script src="js/jquery-3.3.1.min.js"></script><script type="text/javascript" src="bootstrap/js/bootstrap.js"></script>
+	<base href="<?php echo $qlkh['HOSTGOC'] ?>" />
+  <link rel="stylesheet" type="text/css" href="css/style-mb.css">
+  <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css">
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script type="text/javascript" src="bootstrap/js/bootstrap.js" async ></script>
 </head>
 <style type="text/css">#back-to-top{cursor: pointer;position: fixed;bottom: 10px;right: 15px;display: none;width: 40px;height: 40px;margin: 0 auto;}.table th, .table td{padding: 0.3rem !important;}</style>
 <body>
@@ -18,7 +22,7 @@
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
 <div class="progress" style="z-index: 9999;position: fixed;top: 0px;border-radius:  0;height: 5px;background: transparent;left:  0;right: 0;">
-  <div class="progress-bar" id="daluot" style="background: linear-gradient(130deg, #58d9d0 0%, #4a99fa 100%);"></div>
+  <div class="progress-bar" id="daluot" style="background: linear-gradient(130deg, #58d9d0 0%, #4a99fa 100%);transition: none;"></div>
 </div>
 <div>
   <div style="width: 100%;margin: 0 auto;position: relative;margin-top: 5px;">
@@ -110,7 +114,7 @@
 <script type="text/javascript">
 function getDocHeight() {var D = document;return Math.max(D.body.scrollHeight, D.documentElement.scrollHeight,D.body.offsetHeight, D.documentElement.offsetHeight,D.body.clientHeight, D.documentElement.clientHeight);}
   $(document).ready(function(){
-    $('.thantrangmb').fadeIn(789);
+    $('.thantrangmb').fadeIn(200);
      $(window).scroll(function () {
         if ($(this).scrollTop() > 200)
             $('#back-to-top').fadeIn();
@@ -126,7 +130,6 @@ function getDocHeight() {var D = document;return Math.max(D.body.scrollHeight, D
         $('body,html').animate({
             scrollTop: 0
         }, 400);
-        return false;
     });
 
 });

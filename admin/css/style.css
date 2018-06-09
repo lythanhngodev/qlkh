@@ -16,7 +16,7 @@ https://bootstrapious.com/p/bootstrap-4-dashboard
 */
 /* Malihu Custom Scroll */
 .mCSB_scrollTools {
-  width: 2px;
+  width: 5px;
 }
 
 .mCSB_inside > .mCSB_container {
@@ -24,7 +24,7 @@ https://bootstrapious.com/p/bootstrap-4-dashboard
 }
 
 .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
-  background-color: #579fdc;
+  background-color: #509bdb;
 }
 
 .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar:hover {
@@ -408,7 +408,7 @@ nav.navbar a.menu-btn i[class*='icon-'] {
   height: 100%;
   width: 200px;
   text-align: left;
-  background: #ffffff !important;
+  background: #0275d8 !important;
   color: #fff;
   z-index: 999;
   overflow-y: auto;
@@ -449,7 +449,7 @@ nav.navbar a.menu-btn i[class*='icon-'] {
   position: relative;
   font-size: .9rem;
   font-weight: 300;
-  color: #595959;
+  color: #ffffff;
   text-decoration: none;
   width: 100%;
   padding: 12px 5px;
@@ -457,6 +457,7 @@ nav.navbar a.menu-btn i[class*='icon-'] {
 
 .side-navbar li a:focus, .side-navbar li a:hover, .side-navbar li a[aria-expanded="true"] {
   color: #0275d8;
+  background-color: #fff;
   text-decoration: none;
 }
 
@@ -509,6 +510,7 @@ nav.navbar a.menu-btn i[class*='icon-'] {
   padding: 4px 0px;
   margin-bottom: 0px;
   border-bottom: 1px solid #dfdfdf;
+  background:  #fff;
 }
 
 .side-navbar .sidenav-header img {
