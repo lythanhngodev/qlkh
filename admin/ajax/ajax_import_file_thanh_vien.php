@@ -1,5 +1,6 @@
 <?php
 error_reporting(0);
+@ini_set('display_errors', 0);
 session_start();
 require_once("../../config.php");
 if (isset($_SESSION['tdn']) && isset($_SESSION['pas'])) {
@@ -43,6 +44,7 @@ for($i=0;$i<count($listWorkSheets);$i++){
         <th class="giua">Tên</th>
         <th class="giua">Mail / Tên đăng nhập</th>
         <th class="giua">Loại tài khoản</th>
+        <th class="giua">Xoá</th>
     </tr>
     </thead>
     <tbody>
@@ -62,6 +64,7 @@ for($i=0;$i<count($listWorkSheets);$i++){
                     <option value="5">Nhóm quản lý khoa học</option>
                 </select>
             </td>
+            <td class="giua"><button class="xoa-tv"><i class='fas fa-times do'></i></button></td>
         </tr>
         <?php $stt++; } ?>
         <?php } ?>
@@ -75,7 +78,7 @@ for($i=0;$i<count($listWorkSheets);$i++){
 <script type="text/javascript">
     $(document).ready(function(){
         $('#bangthanhvien').DataTable({
-        "scrollY":"300px",
+        "scrollY":"350px",
         "scrollCollapse": true,
         "paging": false
         });

@@ -438,6 +438,7 @@ nav.navbar a.menu-btn i[class*='icon-'] {
 
 .side-navbar a.brand-small strong {
   font-size: 1.5rem;
+  color:  #fff !important;
 }
 
 .side-navbar li {
@@ -479,7 +480,7 @@ nav.navbar a.menu-btn i[class*='icon-'] {
 
 .side-navbar li.active > a {
   background: #efefef;
-  color: #088dff;
+  color: #0275d8;
   border-radius: 0px 35px 35px 0px;
 }
 
@@ -509,8 +510,7 @@ nav.navbar a.menu-btn i[class*='icon-'] {
   height: 70px;
   padding: 4px 0px;
   margin-bottom: 0px;
-  border-bottom: 1px solid #dfdfdf;
-  background:  #fff;
+  background: linear-gradient(148deg, #5cb4ff 0%, #0275d8 100%);
 }
 
 .side-navbar .sidenav-header img {
@@ -526,7 +526,7 @@ nav.navbar a.menu-btn i[class*='icon-'] {
 .side-navbar .sidenav-header h2 {
   margin: 2px 0 0;
   letter-spacing: .1em;
-  color: #565656;
+  color: #fff;
   font-size: 18px;
 }
 

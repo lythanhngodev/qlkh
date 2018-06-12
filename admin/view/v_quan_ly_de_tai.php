@@ -203,10 +203,7 @@
   });
   $(document).ready(function() {
     $('#example').DataTable({
-        "scrollY":"380px",
-        "scrollCollapse": true,
-        "paging": false,
-        responsive : true
+        "scrollX": true
         });
 } );
 </script>

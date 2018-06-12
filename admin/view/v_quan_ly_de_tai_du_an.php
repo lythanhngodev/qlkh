@@ -16,7 +16,7 @@
                         <th style="width: 160px;">Chủ nhiện đề tài</th>
                         <th style="width: 120px;">Thời gian gửi</th>
                         <th style="width: 100px;">Trạng thái</th>
-                        <th style="width: 70px;" class="giua">Xem xét</th>
+                        <th style="width: 70px;" class="giua">Chi tiết</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -76,10 +76,7 @@
   });
   $(document).ready(function() {
     $('#example').DataTable({
-        "scrollY":"380px",
-        "scrollCollapse": true,
-        "paging": false,
-        responsive : true
+        "scrollX": true
         });
 } );
 </script>

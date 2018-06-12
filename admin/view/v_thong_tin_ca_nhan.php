@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Ly Thanh Ngo
- * Date: 26/04/2018
- * Time: 9:52 AM
- */
 if (!isset($_SESSION["token"])) {include_once ("../../loi404.html");exit();}
 ?>
 <div class="card cach background-container">
@@ -31,17 +25,21 @@ if (!isset($_SESSION["token"])) {include_once ("../../loi404.html");exit();}
                                 <div class="col-md-12">
                                     <br>
                                     <div class="row">
-                                        <div class="form-group col-md-6">
+                                        <div class="form-group col-md-4">
                                             <label for="category" class="font-weight-bold" >Họ &amp; Tên (<span class="text-danger">*</span>)</label>
                                             <input type="text" class="form-control" id="hoten" value="<?php echo $nd['HO']." ".$nd['TEN'] ?>">
                                         </div>
-                                        <div class="form-group col-md-6">
+                                        <div class="form-group col-md-4">
                                             <label for="category" class="font-weight-bold" >Gới tính (<span class="text-danger">*</span>)</label>
                                             <select id="gioitinh" class="form-control">
                                                 <option value="Nam" <?php if ($nd['GIOITINH']=='Nam') echo "selected" ?>>Nam</option>
                                                 <option value="Nữ" <?php if ($nd['GIOITINH']=='Nữ') echo "selected" ?>>Nữ</option>
                                                 <option value="Khác" <?php if ($nd['GIOITINH']=='Khác') echo "selected" ?>>Khác</option>
                                             </select>
+                                        </div>
+                                        <div class="form-group col-md-4">
+                                            <label for="category" class="font-weight-bold">Đối tượng</label><br>
+                                            <input type="radio" id="gv" <?php if($nd['GIAOVIEN']==1) echo "checked" ?> name="ltv" style="transform: scale(1.8);">&ensp;Giáo viên&ensp;&ensp;&ensp;<input type="radio" id="sv" name="ltv" <?php if($nd['GIAOVIEN']==0) echo "checked" ?> style="transform: scale(1.8);">&ensp;Sinh viên
                                         </div>
                                         <div class="form-group col-md-4">
                                             <label for="category" class="font-weight-bold" >Ngày, tháng, năm sinh (<span class="text-danger">*</span>)</label>
@@ -61,7 +59,7 @@ if (!isset($_SESSION["token"])) {include_once ("../../loi404.html");exit();}
                                         </div>
                                         <div class="form-group col-md-6">
                                             <label for="category" class="font-weight-bold" >Chức danh giảng viên</label>
-                                            <select class="form-control" id="chucdanhgiangvien">
+                                            <select class="form-control selectpicker" data-live-search="true" id="chucdanhgiangvien">
                                                 <option value=''>---</option>
                                             <?php 
                                             $ndcdgv = lay_nguoi_dung_chuc_danh_giang_vien($idnd);
@@ -77,7 +75,7 @@ if (!isset($_SESSION["token"])) {include_once ("../../loi404.html");exit();}
                                         </div>
                                         <div class="form-group col-md-6">
                                             <label for="category" class="font-weight-bold" >Trình độ chuyên môn</label>
-                                            <select class="form-control" id="trinhdochuyenmon">
+                                            <select class="form-control selectpicker" data-live-search="true" id="trinhdochuyenmon">
                                                 <option value='0'>---</option>
                                             <?php 
                                             $ndtdcm = lay_nguoi_dung_trinh_do_chuyen_mon($idnd);
@@ -93,7 +91,7 @@ if (!isset($_SESSION["token"])) {include_once ("../../loi404.html");exit();}
                                         </div>
                                         <div class="form-group col-md-6">
                                             <label for="category" class="font-weight-bold" >Học vị cao nhất</label>
-                                            <select class="form-control" id="hocvicaonhat">
+                                            <select class="form-control selectpicker" data-live-search="true" id="hocvicaonhat">
                                                 <option value='0'>---</option>
                                             <?php 
                                             $ndhv = lay_nguoi_dung_hoc_vi($idnd);
@@ -113,7 +111,7 @@ if (!isset($_SESSION["token"])) {include_once ("../../loi404.html");exit();}
                                         </div>
                                         <div class="form-group col-md-6">
                                             <label for="category" class="font-weight-bold" >Chức danh khoa học cao nhất</label>
-                                            <select class="form-control" id="chucdanhkhoahoc">
+                                            <select class="form-control selectpicker" data-live-search="true" id="chucdanhkhoahoc">
                                                 <option value='0'>---</option>
                                             <?php 
                                             $ndcd = lay_nguoi_dung_chuc_danh_khoa_hoc($idnd);
@@ -133,7 +131,7 @@ if (!isset($_SESSION["token"])) {include_once ("../../loi404.html");exit();}
                                         </div>
                                         <div class="form-group col-md-12">
                                             <label for="category" class="font-weight-bold" >Chức vụ (hiện tại hoặc trước khi nghỉ hưu)</label>
-                                            <select class="form-control" id="chucvu">
+                                            <select class="form-control selectpicker" data-live-search="true" id="chucvu">
                                                 <option value='0'>---</option>
                                             <?php 
                                             $ndcv = lay_nguoi_dung_chuc_vu($idnd);
@@ -149,7 +147,7 @@ if (!isset($_SESSION["token"])) {include_once ("../../loi404.html");exit();}
                                         </div>
                                         <div class="form-group col-md-12">
                                             <label for="category" class="font-weight-bold" >Đơn vị công tác (hiện tại hoặc trước khi nghỉ hưu)</label>
-                                            <select class="form-control" id="donvicongtac">
+                                            <select class="form-control selectpicker" data-live-search="true" id="donvicongtac">
                                                 <option value='0'>---</option>
                                             <?php 
                                             $ndkbm = lay_nguoi_dung_don_vi_cong_tac($idnd);
@@ -523,6 +521,7 @@ if (!isset($_SESSION["token"])) {include_once ("../../loi404.html");exit();}
         $('#luuthongtin').click(function () {
             var ho, ten;
             var hoten = $('#hoten').val().trim();
+            var doituong = ($('#gv').is(':checked')) ? 1 : 0;
             var gioitinh = $('#gioitinh').val().trim();
             var ngaysinh = $('#ngaysinh').val().trim();
             var noisinh = $('#noisinh').val().trim();
@@ -617,6 +616,7 @@ if (!isset($_SESSION["token"])) {include_once ("../../loi404.html");exit();}
                     data: {
                         ho: ho,
                         ten: ten,
+                        doituong: doituong,
                         gioitinh: gioitinh,
                         ngaysinh: ngaysinh,
                         noisinh: noisinh,

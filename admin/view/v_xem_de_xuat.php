@@ -158,9 +158,9 @@ $nhiemvu_nghiemthu = ['Chủ tịch HĐ', 'Ủy viên', 'Thư ký'];
                                             <th>Kinh phí dự kiến từ nguồn khác</th>
                                             <td><?php echo $detai['KINHPHINGUONKHAC']; ?></td>
                                         </tr>
-                                        <!--
+                                        
                                         <tr>
-                                            <th colspan="2" class="giua" style="background: #009688;color: #fff;">ĐỀ CƯƠNG ĐỀ TÀI</th>
+                                            <th colspan="2" style="background: linear-gradient(141deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);color: #fff;color: #fff;">ĐỀ CƯƠNG ĐỀ TÀI</th>
                                         </tr>
                                         <tr>
                                             <th>10. Thuộc chương trình</th>
@@ -192,7 +192,7 @@ $nhiemvu_nghiemthu = ['Chủ tịch HĐ', 'Ủy viên', 'Thư ký'];
                                         <tr>
                                             <th>13. Nội dung nghiên cứu</th>
                                             <td><?php echo $detai['NOIDUNG']; ?></td>
-                                        </tr>-->
+                                        </tr>
                                     </table>
                                     <br>
                                 </div>

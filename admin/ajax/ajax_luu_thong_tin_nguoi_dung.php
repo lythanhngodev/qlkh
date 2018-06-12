@@ -1,4 +1,3 @@
-
 <?php
 include_once("../../config.php");
 session_start();
@@ -11,6 +10,7 @@ if (isset($_SESSION['tdn']) && isset($_SESSION['pas'])) {
 }else{
     trangchu($qlkh['HOSTADMIN']);
 }
+
 $result = Array(
     'trangthai' => '0',
     'thongbao' => ''
@@ -19,6 +19,7 @@ $result = Array(
     $conn = $ketnoi->ketnoi();
     $ho = mysqli_real_escape_string($conn,$_POST['ho']);
     $ten = mysqli_real_escape_string($conn,$_POST['ten']);
+    $doituong = boolval($_POST['doituong']);
     $gioitinh = mysqli_real_escape_string($conn,$_POST['gioitinh']);
     $ngaysinh='';
     if (isset($_POST['ngaysinh'])) {
@@ -78,7 +79,8 @@ $result = Array(
             `TIENSICHUYENNGANH`='$tiensichuyennganh',
             `NAMCAPBANGTSCN2`='$namcapbangtscn2',
             `NOIDAOTAOTSCN2`='$noidaotaotscn2',
-            `TENLUANAN`='$tenluanan'
+            `TENLUANAN`='$tenluanan',
+            `GIAOVIEN`=b'$doituong'
         WHERE 
             `IDND` = '$idnd';
     ";
@@ -149,6 +151,7 @@ $result = Array(
         mysqli_close($conn);
     }else{
         $result['thongbao'] = 'Xảy ra lỗi! Vui lòng thử lại sau';
+        mysqli_close($conn);
     }
 echo json_encode($result);
 exit();
