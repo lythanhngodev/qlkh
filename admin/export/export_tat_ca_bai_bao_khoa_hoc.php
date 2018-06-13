@@ -1,6 +1,5 @@
 <?php
 include_once("../../config.php");
-sleep(1.5);
 session_start();
 $ketnoi = new clsKetnoi();
 if (isset($_SESSION['tdn']) && isset($_SESSION['pas'])) {
@@ -43,6 +42,11 @@ while ($row = mysqli_fetch_row($esql_stqd)) {
     $stqd[]=$row;
 }
 ?>
+<style type="text/css">
+    hr{
+        margin: 4px !important;
+    }
+</style>
 <div class="card line-chart-example">
     <div class="card-header">
         <h4>Thống kê tất cả các bài báo khoa học</h4>
@@ -55,12 +59,12 @@ while ($row = mysqli_fetch_row($esql_stqd)) {
     <div class="card-body">
         <?php $stt_cap=1; while ($cap = mysqli_fetch_assoc($qcapsql)) { ?>
         <h4><?php echo $ketnoi->ConverToRoman($stt_cap); ?>. Cấp: <?php $capbaibao=$cap['CAPBAIBAO']; echo $capbaibao; ?></h4>
-        <table id="bang-bieu-mau" class="table table-bordered table-hover">
+        <table id="bang-bieu-mau" class="table table-bordered table-hover table-responsive">
             <thead>
                 <tr style="background:#e9ecef;">
                     <th class="giua">TT</th>
                     <th class="giua">Tên bài báo</th>
-                    <th class="giua">Tác giả</th>
+                    <th class="giua" style="width: 200px;">Tác giả</th>
                     <th class="giua">Đơn vị</th>
                     <th class="giua">Số tiết qui đổi</th>
                     <th class="giua">Ghi chú</th>

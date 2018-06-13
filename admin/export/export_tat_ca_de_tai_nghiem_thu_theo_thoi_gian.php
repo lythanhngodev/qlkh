@@ -1,6 +1,5 @@
 <?php
 include_once("../../config.php");
-sleep(1.5);
 session_start();
 $ketnoi = new clsKetnoi();
 if (isset($_SESSION['tdn']) && isset($_SESSION['pas'])) {
