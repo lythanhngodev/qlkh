@@ -24,6 +24,14 @@
 		mysqli_close($conn);
 		return $result;
 	}
+	function tim_bao_khoa_hoc($chuoi){
+		$ketnoi = new clsKetnoi();
+		$conn = $ketnoi->ketnoi();
+		$query = "";
+		$result = mysqli_query($conn, $query);
+		mysqli_close($conn);
+		return $result;
+	}
 	function dem_de_tai_da_cong_bo(){
 		$ketnoi = new clsKetnoi();
 		$conn = $ketnoi->ketnoi();

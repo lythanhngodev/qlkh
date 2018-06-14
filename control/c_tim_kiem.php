@@ -18,6 +18,11 @@ if (isset($_POST['tu']) && !empty($_POST['tu']) || isset($_POST['loai']) && !emp
 			$detai = tim_de_tai_de_xuat($tu);
 			include_once 'view/v_tim_kiem_de_tai_de_xuat.php';
 			break;
+		case 3:
+			// tìm đã nghiệm thu
+			$detai = tim_bao_khoa_hoc($tu);
+			include_once 'view/v_tim_kiem_bao_khoa_hoc.php';
+			break;
 		default:
 			// tim de xuat moi
 			break;

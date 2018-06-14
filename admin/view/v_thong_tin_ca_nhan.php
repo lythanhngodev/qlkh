@@ -38,7 +38,8 @@ if (!isset($_SESSION["token"])) {include_once ("../../loi404.html");exit();}
                                             </select>
                                         </div>
                                         <div class="form-group col-md-4">
-                                            <label for="category" class="font-weight-bold">Đối tượng</label><br>
+                                            <label for="category" class="font-weight-bold">Đối tượng</label>
+                                            <hr style="margin:  0;margin-bottom: 8px;">
                                             <input type="radio" id="gv" <?php if($nd['GIAOVIEN']==1) echo "checked" ?> name="ltv" style="transform: scale(1.8);">&ensp;Giáo viên&ensp;&ensp;&ensp;<input type="radio" id="sv" name="ltv" <?php if($nd['GIAOVIEN']==0) echo "checked" ?> style="transform: scale(1.8);">&ensp;Sinh viên
                                         </div>
                                         <div class="form-group col-md-4">
@@ -129,7 +130,7 @@ if (!isset($_SESSION["token"])) {include_once ("../../loi404.html");exit();}
                                             <label for="category" class="font-weight-bold" >Năm bổ nhiệm</label>
                                             <input type="text" class="form-control" id="nambonhiem" value="<?php echo $nd['NAMBONHIEM'] ?>">
                                         </div>
-                                        <div class="form-group col-md-12">
+                                        <div class="form-group col-md-6">
                                             <label for="category" class="font-weight-bold" >Chức vụ (hiện tại hoặc trước khi nghỉ hưu)</label>
                                             <select class="form-control selectpicker" data-live-search="true" id="chucvu">
                                                 <option value='0'>---</option>
@@ -145,7 +146,7 @@ if (!isset($_SESSION["token"])) {include_once ("../../loi404.html");exit();}
                                             } ?>
                                             </select>
                                         </div>
-                                        <div class="form-group col-md-12">
+                                        <div class="form-group col-md-6">
                                             <label for="category" class="font-weight-bold" >Đơn vị công tác (hiện tại hoặc trước khi nghỉ hưu)</label>
                                             <select class="form-control selectpicker" data-live-search="true" id="donvicongtac">
                                                 <option value='0'>---</option>

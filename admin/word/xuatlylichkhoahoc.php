@@ -294,7 +294,7 @@ function lay_nguoi_dung_don_vi_cong_tac($idnd){
 				<tr>
 					<td style="text-align: center;"><?php echo $demdt ?></td>
 					<td style="padding-left: 0.3cm;"><?php echo $row['TENDETAI'] ?></td>
-					<td style="text-align: center;"><?php echo $row['THANGNAMBD']. " đến ".$row['THANGNAMKT']; ?></td>
+					<td style="text-align: center;"><?php echo date('m-Y',strtotime($row['THANGNAMBD'])). " đến ".date('m-Y',strtotime($row['THANGNAMKT'])); ?></td>
 					<td style="text-align: center;"><?php echo $row['CAPDETAI']; ?></td>
 					<td style="text-align: center;"><?php echo $row['TRACHNGHIEM'] ?></td>
 				</tr>
@@ -322,7 +322,7 @@ function lay_nguoi_dung_don_vi_cong_tac($idnd){
 				<tr>
 					<td style="text-align: center;"><?php echo $dembb ?></td>
 					<td style="padding-left: 0.3cm;"><?php echo $row['TENBAO'] ?></td>
-					<td style="text-align: center;"><?php echo $row['NAMXUATBAN'] ?></td>
+					<td style="text-align: center;"><?php echo date('m-Y',strtotime($row['NAMXUATBAN'])); ?></td>
 					<td style="padding-left: 0.3cm;"><?php echo $row['TAPCHI'] ?></td>
 				</tr>
 				<?php $dembb++;}

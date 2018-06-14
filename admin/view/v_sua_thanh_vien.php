@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Ly Thanh Ngo
- * Date: 26/04/2018
- * Time: 9:52 AM
- */
 if (!isset($_SESSION["token"])) {include_once ("../../loi404.html");exit();}
 ?>
 <div class="card cach background-container">
@@ -22,6 +16,7 @@ if (!isset($_SESSION["token"])) {include_once ("../../loi404.html");exit();}
                                 <a class="nav-item nav-link" data-toggle="tab" href="#nav-qua-trinh-dao-tao" role="tab" aria-selected="false">Quá trình đào tạo</a>
                                 <a class="nav-item nav-link" data-toggle="tab" href="#nav-cong-tac-chuyen-mon" role="tab" aria-selected="false">Công tác chuyên môn</a>
                                 <a class="nav-item nav-link" data-toggle="tab" href="#nav-nghien-cuu-khoa-hoc" aria-selected="false">Nghiên cứu khoa học</a>
+                                <a class="nav-item nav-link" data-toggle="tab" href="#nav-bao-mat" aria-selected="false">Tài khoản</a>
                             </div>
                         </nav>
                         <div class="tab-content" id="nav-tabContent">
@@ -30,17 +25,22 @@ if (!isset($_SESSION["token"])) {include_once ("../../loi404.html");exit();}
                                 <div class="col-md-12">
                                     <br>
                                     <div class="row">
-                                        <div class="form-group col-md-6">
+                                        <div class="form-group col-md-4">
                                             <label for="category" class="font-weight-bold" >Họ &amp; Tên (<span class="text-danger">*</span>)</label>
                                             <input type="text" class="form-control" id="hoten" value="<?php echo $nd['HO']." ".$nd['TEN'] ?>">
                                         </div>
-                                        <div class="form-group col-md-6">
+                                        <div class="form-group col-md-4">
                                             <label for="category" class="font-weight-bold" >Gới tính (<span class="text-danger">*</span>)</label>
                                             <select id="gioitinh" class="form-control">
                                                 <option value="Nam" <?php if ($nd['GIOITINH']=='Nam') echo "selected" ?>>Nam</option>
                                                 <option value="Nữ" <?php if ($nd['GIOITINH']=='Nữ') echo "selected" ?>>Nữ</option>
                                                 <option value="Khác" <?php if ($nd['GIOITINH']=='Khác') echo "selected" ?>>Khác</option>
                                             </select>
+                                        </div>
+                                        <div class="form-group col-md-4">
+                                            <label for="category" class="font-weight-bold">Đối tượng</label>
+                                            <hr style="margin:  0;margin-bottom: 8px;">
+                                            <input type="radio" id="gv" <?php if($nd['GIAOVIEN']==1) echo "checked" ?> name="ltv" style="transform: scale(1.8);">&ensp;Giáo viên&ensp;&ensp;&ensp;<input type="radio" id="sv" name="ltv" <?php if($nd['GIAOVIEN']==0) echo "checked" ?> style="transform: scale(1.8);">&ensp;Sinh viên
                                         </div>
                                         <div class="form-group col-md-4">
                                             <label for="category" class="font-weight-bold" >Ngày, tháng, năm sinh (<span class="text-danger">*</span>)</label>
@@ -60,7 +60,7 @@ if (!isset($_SESSION["token"])) {include_once ("../../loi404.html");exit();}
                                         </div>
                                         <div class="form-group col-md-6">
                                             <label for="category" class="font-weight-bold" >Chức danh giảng viên</label>
-                                            <select class="form-control" id="chucdanhgiangvien">
+                                            <select class="form-control selectpicker" data-live-search="true" id="chucdanhgiangvien">
                                                 <option value=''>---</option>
                                             <?php 
                                             $ndcdgv = lay_nguoi_dung_chuc_danh_giang_vien($idnd);
@@ -76,7 +76,7 @@ if (!isset($_SESSION["token"])) {include_once ("../../loi404.html");exit();}
                                         </div>
                                         <div class="form-group col-md-6">
                                             <label for="category" class="font-weight-bold" >Trình độ chuyên môn</label>
-                                            <select class="form-control" id="trinhdochuyenmon">
+                                            <select class="form-control selectpicker" data-live-search="true" id="trinhdochuyenmon">
                                                 <option value='0'>---</option>
                                             <?php 
                                             $ndtdcm = lay_nguoi_dung_trinh_do_chuyen_mon($idnd);
@@ -92,7 +92,7 @@ if (!isset($_SESSION["token"])) {include_once ("../../loi404.html");exit();}
                                         </div>
                                         <div class="form-group col-md-6">
                                             <label for="category" class="font-weight-bold" >Học vị cao nhất</label>
-                                            <select class="form-control" id="hocvicaonhat">
+                                            <select class="form-control selectpicker" data-live-search="true" id="hocvicaonhat">
                                                 <option value='0'>---</option>
                                             <?php 
                                             $ndhv = lay_nguoi_dung_hoc_vi($idnd);
@@ -112,7 +112,7 @@ if (!isset($_SESSION["token"])) {include_once ("../../loi404.html");exit();}
                                         </div>
                                         <div class="form-group col-md-6">
                                             <label for="category" class="font-weight-bold" >Chức danh khoa học cao nhất</label>
-                                            <select class="form-control" id="chucdanhkhoahoc">
+                                            <select class="form-control selectpicker" data-live-search="true" id="chucdanhkhoahoc">
                                                 <option value='0'>---</option>
                                             <?php 
                                             $ndcd = lay_nguoi_dung_chuc_danh_khoa_hoc($idnd);
@@ -130,9 +130,9 @@ if (!isset($_SESSION["token"])) {include_once ("../../loi404.html");exit();}
                                             <label for="category" class="font-weight-bold" >Năm bổ nhiệm</label>
                                             <input type="text" class="form-control" id="nambonhiem" value="<?php echo $nd['NAMBONHIEM'] ?>">
                                         </div>
-                                        <div class="form-group col-md-12">
+                                        <div class="form-group col-md-6">
                                             <label for="category" class="font-weight-bold" >Chức vụ (hiện tại hoặc trước khi nghỉ hưu)</label>
-                                            <select class="form-control" id="chucvu">
+                                            <select class="form-control selectpicker" data-live-search="true" id="chucvu">
                                                 <option value='0'>---</option>
                                             <?php 
                                             $ndcv = lay_nguoi_dung_chuc_vu($idnd);
@@ -146,9 +146,9 @@ if (!isset($_SESSION["token"])) {include_once ("../../loi404.html");exit();}
                                             } ?>
                                             </select>
                                         </div>
-                                        <div class="form-group col-md-12">
+                                        <div class="form-group col-md-6">
                                             <label for="category" class="font-weight-bold" >Đơn vị công tác (hiện tại hoặc trước khi nghỉ hưu)</label>
-                                            <select class="form-control" id="donvicongtac">
+                                            <select class="form-control selectpicker" data-live-search="true" id="donvicongtac">
                                                 <option value='0'>---</option>
                                             <?php 
                                             $ndkbm = lay_nguoi_dung_don_vi_cong_tac($idnd);
@@ -369,12 +369,30 @@ if (!isset($_SESSION["token"])) {include_once ("../../loi404.html");exit();}
                                     </div>
                                 </div>
                             </div>
+                            <!-- BẢO MẬT -->
+                            <div class="tab-pane" id="nav-bao-mat" role="tabpanel" aria-labelledby="nav-contact-tab">
+                                <br>
+                                <div class="col-md-12">
+                                    <div class="row">
+                                        <div class="form-group col-md-4">
+                                            <label for="category" class="font-weight-bold" >Tên đăng nhập</label>
+                                            <input type="text" id="tendangnhap" class="form-control" value="<?php echo $nd['TENDANGNHAP'] ?>" >
+                                        </div>
+                                        <div class="form-group col-md-2">
+                                            <label for="category" class="font-weight-bold">.</label><br>
+                                            <button class="btn btn-primary" id="doitendangnhap">Lưu</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <br>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="card-footer">
                     <div class="pull-right">
                         <button type="button" class="btn btn-primary" id="luuthongtin"><i class="fas fa-save"></i>&nbsp;&nbsp;Lưu thông tin</button>
+                        <a href="word/xuatlylichkhoahoc.php" target="_blank" class="btn btn-warning" ><i class="fas fa-file-word"></i>&nbsp;&nbsp;Xuất lý lịch khoa học</a>
                     </div>
                 </div>
             </div>
@@ -392,13 +410,43 @@ if (!isset($_SESSION["token"])) {include_once ("../../loi404.html");exit();}
 </script>
 <script type="text/javascript">
     $(document).ready(function(){
-        $('#thongtincanhan').addClass('active');
+        $('#thanhvien').addClass('active');
         $('.tieude').html('Thông tin cá nhân');
         $('#bangdaotaodaihoc').on('click','.xoadaotao',function(){
             $(this).parents('tr').remove();
         });
         $('#bangcongtacchuyenmon').on('click','.xoacongtac',function(){
             $(this).parents('tr').remove();
+        });
+        $('#doitendangnhap').click(function(){
+            var tdn = $('#tendangnhap').val().trim();
+            if(!tdn){khongthanhcong('Vui lòng nhập tên đăng nhập');return;}
+            // Kiểm tra kết nối internet
+            if (kiemtraketnoi()) {
+                // Ajax
+                $.ajax({
+                    url: 'ajax/ajax_doi_ten_dang_nhap_cc.php',
+                    type: 'POST',
+                    data: {
+                        tdn: tdn,
+                        idnd: '<?php echo $idnd; ?>'
+                    },
+                    beforeSend: function () {
+                        canhbao('Đang xử lý dữ liệu');
+                    },
+                    success: function (data) {
+                        $.notifyClose();
+                        var mang = $.parseJSON(data);
+                        if(mang.trangthai==1){
+                            swal('Tốt','Tên đang nhập đã được thay đổi','success');
+                        }else
+                            swal('Ôi! Lỗi','Xảy ra lỗi, vui lòng thử lại','error');
+                    },
+                    error: function () {
+                        swal('Ôi! Lỗi','Xảy ra lỗi, vui lòng thử lại','error');
+                    }
+                });
+            } else swal('Ôi! Lỗi','Không có kết nối internet','error');
         });
         // Thêm tổ chức đào tạo đại học
         $('#themdaotaodaihoc').click(function () {
@@ -426,6 +474,7 @@ if (!isset($_SESSION["token"])) {include_once ("../../loi404.html");exit();}
         $('#luuthongtin').click(function () {
             var ho, ten;
             var hoten = $('#hoten').val().trim();
+            var doituong = ($('#gv').is(':checked')) ? 1 : 0;
             var gioitinh = $('#gioitinh').val().trim();
             var ngaysinh = $('#ngaysinh').val().trim();
             var noisinh = $('#noisinh').val().trim();
@@ -515,11 +564,12 @@ if (!isset($_SESSION["token"])) {include_once ("../../loi404.html");exit();}
             if (kiemtraketnoi()) {
                 // Ajax
                 $.ajax({
-                    url: 'ajax/ajax_luu_thong_tin_nguoi_dung.php',
+                    url: 'ajax/ajax_luu_thong_tin_nguoi_dung_cc.php',
                     type: 'POST',
                     data: {
                         ho: ho,
                         ten: ten,
+                        doituong: doituong,
                         gioitinh: gioitinh,
                         ngaysinh: ngaysinh,
                         noisinh: noisinh,
@@ -548,7 +598,7 @@ if (!isset($_SESSION["token"])) {include_once ("../../loi404.html");exit();}
                         tenluanan: tenluanan,
                         bdt: bdt,
                         bct: bct,
-                        idnd: '<?php echo $idnd; ?>'
+                        idnd: <?php echo intval($nd['IDND']); ?>
                     },
                     beforeSend: function () {
                         canhbao('Đang xử lý dữ liệu');

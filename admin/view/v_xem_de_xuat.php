@@ -219,13 +219,13 @@ $nhiemvu_nghiemthu = ['Chủ tịch HĐ', 'Ủy viên', 'Thư ký'];
                                                         if($stt==1){
                                                             echo "<tr>";
                                                             echo "<td>1 - Chủ nhiệm đề tài <br><b>".$row['HOTEN']."</b></td>";
-                                                            echo "<td>- ".trinh_do_chuyen_mon($row['IDND'])."<br>- ".chuc_danh_giang_vien($row['IDND'])."<br>- ".$row['DIENTHOAIDD']."</td>";
+                                                            echo "<td>- ".trinh_do_chuyen_mon($row['IDND'])."<br>- ".don_vi_cong_tac($row['IDND'])."<br>- ".$row['DIENTHOAIDD']."</td>";
                                                             echo "<td>".$row['CONGVIEC']."</td>";
                                                             echo "<tr><td colspan='4'>Thành viên tham gia:</td></tr>";
                                                         }else{
                                                             echo "<tr>";
                                                             echo "<th>".$stt." - ".$row['HOTEN']."</th>";
-                                                            echo "<td>- ".trinh_do_chuyen_mon($row['IDND'])."<br>- ".chuc_danh_giang_vien($row['IDND'])."<br>- ".$row['DIENTHOAIDD']."</td>";
+                                                            echo "<td>- ".trinh_do_chuyen_mon($row['IDND'])."<br>- ".don_vi_cong_tac($row['IDND'])."<br>- ".$row['DIENTHOAIDD']."</td>";
                                                             echo "<td>".$row['CONGVIEC']."</td>";
                                                         } ?>
                                                         

@@ -1,12 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Ly Thanh Ngo
- * Date: 26/04/2018
- * Time: 9:51 AM
- */
-?>
-<?php
 if (!isset($_SESSION["token"])) {include_once ("../../loi404.html");exit();}
     if ($loaitaikhoan=='admin' || $loaitaikhoan == 'khoahoc' && (isset($_GET['id']) && (!empty($_GET['id'])) && (intval($_GET['id']) > 0))) {
         if (!isset($_GET['id'])) {
@@ -31,7 +23,7 @@ if (!isset($_SESSION["token"])) {include_once ("../../loi404.html");exit();}
         $nckh = lay_de_tai_nghien_cuu_khoa_hoc($idnd);
         $ntnc = lay_cong_trinh_nghien_cuu_khoa_hoc($idnd);
         $kbm = lay_khoa_phong();
-        include_once "view/v_thong_tin_ca_nhan.php";
+        include_once "view/v_sua_thanh_vien.php";
     }else{
         include_once('view/v_khong_bai_bao.php');
     }

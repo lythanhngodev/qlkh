@@ -23,6 +23,7 @@
       <select class="form-control" id="searchType" name="loai" style="margin-top: 5px;" >
         <option value="1">Đề tài NCKH đã công bố</option>
         <option value="2">Đề xuất NCKH</option>
+        <!--<option value="3">Bài báo khoa học</option>-->
       </select>
       <center><button class="btn btn-outline-success form-control col-6" type="submit" style="margin-top: 5px;" >Tìm kiếm</button></center>
     </form>

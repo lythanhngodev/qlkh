@@ -1,7 +1,7 @@
 <?php
 include_once("../../config.php");
 session_start();
-if (isset($_SESSION['tdn']) && isset($_SESSION['pas'])) {
+if (isset($_SESSION['tdn']) && isset($_SESSION['pas']) && isset($_SESSION['_loaitaikhoan']) && ($_SESSION['_loaitaikhoan']=='admin' || $_SESSION['_loaitaikhoan']=='khoahoc')) {
     $ketnoi = new clsKetnoi();
     if (!($ketnoi->checklogin($_SESSION['tdn'],$_SESSION['pas']))) {
         trangchu($qlkh['HOSTADMIN']);
@@ -10,7 +10,6 @@ if (isset($_SESSION['tdn']) && isset($_SESSION['pas'])) {
 }else{
     trangchu($qlkh['HOSTADMIN']);
 }
-
 $result = Array(
     'trangthai' => '0',
     'thongbao' => ''
@@ -52,7 +51,7 @@ $result = Array(
     $tenluanan = mysqli_real_escape_string($conn,$_POST['tenluanan']);
     $bdt = (!isset($_POST['bdt'])) ? null : $_POST['bdt'];
     $bct = (!isset($_POST['bct'])) ? null : $_POST['bct'];
-    $idnd = $_SESSION['_idnd'];
+    $idnd = intval($_POST['idnd']);
     $hoi;
     if (!empty($ngaysinh)) {
     $hoi = "
