@@ -7,9 +7,7 @@
 	<?php include_once "header.php" ?>
 	<base href="<?php echo $qlkh['HOSTGOC'] ?>" />
   <link rel="stylesheet" type="text/css" href="css/style-mb.css">
-  <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css">
-  <script src="js/jquery-3.3.1.min.js"></script>
-  <script type="text/javascript" src="bootstrap/js/bootstrap.js" async ></script>
+    <script src="js/jquery-3.3.1.min.js"></script>
 </head>
 <style type="text/css">#back-to-top{cursor: pointer;position: fixed;bottom: 10px;right: 15px;display: none;width: 40px;height: 40px;margin: 0 auto;}.table th, .table td{padding: 0.3rem !important;}</style>
 <body>
@@ -34,7 +32,6 @@
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav">
       <li class="nav-item" id="trangchu">
@@ -101,20 +98,21 @@
     </ul>
   </div>
 </nav>
-<div class="thantrangmb container-fluid" style="padding: 0px 5px;margin-top: 5px;display: none;">
+<div class="thantrangmb container-fluid" style="padding: 0px 5px;margin-top: 5px;/*display: none;">
   <?php include_once 'public_c_mb.php'; ?>
 </div>
-<footer class="footer thantrangmb" style="display: none;">
+<footer class="footer thantrangmb" style="/*display: none;">
   <div class="container">
-    <span class="text-muted">&copy; Đại học Sư phạm Kỹ thuật Vĩnh Long.</span>
+    <span class="text-muted">&copy;2018 P. NCKH &amp; HTQT - VLUTE</span>
   </div>
 </footer>
-<center><img id="back-to-top" src="images/back-to-top.png"></center>
+<center><img async id="back-to-top" src="images/back-to-top.png"></center>
 </body>
+  <script async type="text/javascript" src="js/bootstrap.js" ></script>
 <script type="text/javascript">
 function getDocHeight() {var D = document;return Math.max(D.body.scrollHeight, D.documentElement.scrollHeight,D.body.offsetHeight, D.documentElement.offsetHeight,D.body.clientHeight, D.documentElement.clientHeight);}
   $(document).ready(function(){
-    $('.thantrangmb').fadeIn(200);
+    //$('.thantrangmb').fadeIn(200);
      $(window).scroll(function () {
         if ($(this).scrollTop() > 200)
             $('#back-to-top').fadeIn();
@@ -131,7 +129,6 @@ function getDocHeight() {var D = document;return Math.max(D.body.scrollHeight, D
             scrollTop: 0
         }, 400);
     });
-
 });
 </script>
 </html>

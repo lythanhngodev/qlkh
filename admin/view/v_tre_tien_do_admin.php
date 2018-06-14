@@ -33,7 +33,7 @@
                         } ?>
                         </td>
                         <td class="giua">
-                            <a class="btn btn-primary btn-sm"><i class="fas fa-paper-plane"></i></a>
+                            <a class="btn btn-primary btn-sm" mail="<?php echo lay_mail_chu_nhiem_de_tai($row['IDDT']); ?>"><i class="fas fa-paper-plane"></i></a>
                         </td>
                     </tr>
                 <?php $stt++; } ?>

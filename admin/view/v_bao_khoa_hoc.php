@@ -72,11 +72,7 @@
     $('.tieude').html('Bài báo khoa học');
   });
   $(document).ready(function() {
-    $('#example').DataTable({
-        "scrollY":"300px",
-        "scrollCollapse": true,
-        "paging": false
-        });
+    $('#example').DataTable();
 } );
   function xoa(id){
     if (!confirm('Bạn có chắc xoá bài báo này?')) {

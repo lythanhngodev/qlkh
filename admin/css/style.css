@@ -1232,10 +1232,6 @@ label {
   font-size: .9rem;
 }
 
-input.form-control {
-  border-radius: 0;
-}
-
 input.form-control::-moz-placeholder {
   font-size: 0.75em;
   font-weight: 400;
@@ -1258,7 +1254,6 @@ input.form-control:-ms-input-placeholder {
 }
 
 select.form-control {
-  border-radius: 0;
   border-color: #ddd;
   font-weight: 300;
   font-family: "Roboto", sans-serif;
@@ -2296,7 +2291,6 @@ STYLE SWITCHER FOR DEMO
   padding: 0.25rem 0.5rem;
   font-size: 0.875rem;
   line-height: 1.5;
-  border-radius: 0;
 }
 
 /*

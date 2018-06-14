@@ -56,7 +56,7 @@
                         <th>Người đề xuất</th>
                         <th>Ngày gửi</th>
                         <th>Trạng thái</th>
-                        <th>Xem xét</th>
+                        <th>Chi tiết</th>
                     </tr>
                 </tfoot>
             </table>

@@ -13,15 +13,17 @@ $_SESSION["token"] = $token;
     <nav class="side-navbar">
       <div class="side-navbar-wrapper">
         <!-- Sidebar Header    -->
-        <div class="sidenav-header d-flex align-items-center justify-content-center">
+        <div class="sidenav-header d-flex" style="position: relative;">
           <!-- User Info-->
           <a href="?p=thongtincanhan">
-          <div class="sidenav-header-inner text-center"><img src="../images/user/<?php echo $hinh; ?>" alt="person" class="img-fluid rounded-circle">
-            <h2 class="h5">Chào! <?php echo mb_strtoupper($ten); ?></h2>
-          </div>
-        </a>
+            <div class="sidenav-header-inner">
+              <img src="../images/user/<?php echo $hinh; ?>" alt="person" class="img-fluid rounded-circle" style="position:  absolute;top: 10px;left: 8px;">
+              <h5 style="position:  absolute;top: 17px;left: 52px;color: #fff;font-size: 20px;"><?php echo $ten; ?></h5>
+              <h5 style="position:  absolute;bottom: -3px;left: 10px;color: #fff;font-size: 11px;"><?php echo $email; ?></h5>
+            </div>
+          </a>
           <!-- Small Brand information, appears on minimized sidebar-->
-          <div class="sidenav-header-logo"><a href="index.html" class="brand-small text-center"> <strong>S</strong><strong class="text-primary">R</strong></a></div>
+          <div class="sidenav-header-logo"><a href="?p=thongtincanhan" class="brand-small text-center"><img src="../images/user/<?php echo $hinh; ?>" alt="person" class="img-fluid rounded-circle" style="position:  absolute;left:  18px;top: 15px;"></a></div>
         </div>
         <!-- Sidebar Navigation Menus-->
         <div class="main-menu">

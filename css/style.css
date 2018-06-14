@@ -491,15 +491,15 @@ li.sfHover > a > .sf-sub-indicator {
 	text-align: center;
 }
 .tukhoa div{
-    background: #61b92f;
+    background: #7a7a7a;
     color: #fff;
     width:  fit-content;
     width: -webkit-fix-content;
     float:  left;
-    margin-right: 5px;
+    margin-right: 4px;
     margin-bottom: 5px;
-    padding: 4px 7px;
-    border-radius: 6px;
+    padding: 4px 5px;
+    border-radius: 8px;
 }
 .tukhoa div a{
 	text-decoration:none;
@@ -512,7 +512,7 @@ li.sfHover > a > .sf-sub-indicator {
 	-moz-transition: all 0.222s;
 	text-decoration:underline;
 	color:#fff;
-	background:#565656;
+	background: #2a7ffd;
 	display:  block;
 }
 .tieudemuccon{
@@ -528,10 +528,9 @@ li.sfHover > a > .sf-sub-indicator {
 	margin-bottom: 18px;
 }
 .tinmoi{}
-.tincon{width: 308px;float:  left;margin-bottom: 8px;font-family:  sans-serif;font-size: 12.8px;margin-left: 8px;}
-.tincon .hinhtin{width: 50px;height: 50px;float:  left;margin-right: 8px;background-size: cover;background-position:  center;}
-.tincon .tomtattin{float:  left;width: 250px;}
-
+.tincon{width: 308px;float:  left;margin-bottom: 14px;font-family:  sans-serif;font-size: 12.8px;margin-left: 4px;}
+.tincon .hinhtin{width: 75px;height: 50px;float:  left;margin-right: 8px;background-size: cover;background-position:  center;}
+.tincon .tomtattin{float:  left;width: 225px;}
 .tincon-lq{width: 100%;float:  left;font-family:  sans-serif;font-size: 13px;padding-left: 10px;}
 .tincon-lq .hinhtin-lq{width: 69px;height: 46px;float:  left;margin-right: 15px;background-size: cover;background-position:  center;}
 .tincon-lq .tomtattin-lq{float:  left;width: 450px;color: #4e4e4e;}
@@ -614,10 +613,7 @@ center{
     color: #fff;
     font-weight: 500;
 }
-.vlu-chi-tiet-link-bai-viet div{
-
-}
-.vlu-chi-tiet-bai-viet{float:  left;padding: 10px 4px;width:  100%;}
+.vlu-chi-tiet-bai-viet{float:  left;padding: 10px 0px;width:  100%;}
 .vlu-chi-tiet-thoi-gian-bai-viet{
   color: #e0e0e0;
   font-size: 90%;

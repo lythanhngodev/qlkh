@@ -10,10 +10,11 @@ $nhiemvu_nghiemthu = ['Chủ tịch HĐ', 'Ủy viên', 'Thư ký'];
         <div class="col-md-12">
             <div class="card">
                 <div class="card-header">
-                    <h4>(<span class="text-danger">*</span>) Những trường bắt buộc phải điền</h4>
+                    <h4>Đề tài: <?php echo $detai['TENDETAI'] ?></h4>
                     <span style="position:  absolute;top: 9px;right: 9px;">
-                        <a data-toggle="modal" data-target="#modal-mail" class="btn btn-primary btn-sm"><i class="far fa-envelope-open"></i>&ensp;Gửi mail thông báo</a>
+                        <button data-toggle="modal" data-target="#modal-mail" class="btn btn-primary btn-sm"><i class="far fa-envelope-open"></i>&ensp;Gửi mail thông báo</button>
                         <a href="?p=dieuchinhdetai&id=<?php echo $detai['IDDT'] ?>" class="btn btn-primary btn-sm"><i class="far fa-edit"></i>&ensp;Điều chỉnh</a>
+                        <button class="btn btn-danger btn-sm" data-toggle="modal" data-target="#modal-xoa-de-tai"><i class="fa fa-trash"></i>&ensp;Xoá đề tài</button>
                     </span>
                 </div>
                 <div class="card-body">
@@ -786,7 +787,7 @@ $nhiemvu_nghiemthu = ['Chủ tịch HĐ', 'Ủy viên', 'Thư ký'];
         </div>
     </div>
 </div>
-<div class="modal fade" id="modal-mail" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+<div class="modal" id="modal-mail" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
         <div class="modal-content">
             <div class="modal-header">
@@ -797,12 +798,12 @@ $nhiemvu_nghiemthu = ['Chủ tịch HĐ', 'Ủy viên', 'Thư ký'];
             </div>
             <div class="modal-body">
                 <div class="form-group">
-                    <label for="tags" class="font-weight-bold">Tiêu đề (<span class="text-danger">*</span>)</label>
-                    <textarea class="form-control" id="tieudemail" style="border-radius: 0;" rows="2"></textarea>
+                    <label for="tags" class="font-weight-bold">Tiêu đề mail</label>
+                    <textarea class="form-control" id="tieudemail" rows="2"></textarea>
                 </div>
                 <div class="form-group">
-                    <label for="tags" class="font-weight-bold">Nội dung (<span class="text-danger">*</span>)</label>
-                    <textarea class="form-control" id="noidungmail" style="border-radius: 0;" rows="5"></textarea>
+                    <label for="tags" class="font-weight-bold">Nội dung mail</label>
+                    <textarea class="form-control" id="noidungmail" rows="5"></textarea>
                 </div>
             </div>
             <div class="modal-footer">
@@ -812,6 +813,29 @@ $nhiemvu_nghiemthu = ['Chủ tịch HĐ', 'Ủy viên', 'Thư ký'];
         </div>
     </div>
 </div>
+  <!-- Modal -->
+  <div class="modal" id="modal-xoa-de-tai" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLongTitle">Xoá đề tài</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                  </button>
+              </div>
+              <div class="modal-body">
+                  <div class="alert alert-danger" role="alert">
+                    <strong>Bạn có chắc xoá vĩnh viễn đề tài này?</strong><hr>
+                    <b>Đề tài: </b><span><?php echo $detai['TENDETAI'] ?></span>
+                  </div>
+              </div>
+              <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Đóng</button>
+                  <button type="button" class="btn btn-danger" id="xoadetai">Xoá</button>
+              </div>
+          </div>
+      </div>
+  </div>
 <script type="text/javascript">
     var mailchunhiem = '<?php echo $chunhiem['MAIL']; ?>';
     $(document).ready(function(){
@@ -1341,5 +1365,36 @@ $nhiemvu_nghiemthu = ['Chủ tịch HĐ', 'Ủy viên', 'Thư ký'];
                 swal('Ôi! Lỗi','Không có kết nối internet','error');
         });
         <?php } ?>
+        $('#xoadetai').on('click',function () {
+            if(kiemtraketnoi()){
+                // Ajax
+                $.ajax({
+                    url: 'ajax/ajax_xoa_de_tai_du_an.php',
+                    type: 'POST',
+                    data: {
+                        token: '<?php echo $token; ?>',
+                        id: '<?php echo $detai['IDDT']; ?>'
+                    },
+                    beforeSend: function () {
+                        canhbao('Đang xử lý dữ liệu');
+                    },
+                    success: function (data) {
+                        $.notifyClose();
+                        var result = $.parseJSON(data);
+                        if(result.trangthai == 1){
+                            swal('Tốt','Xóa đề tài thành công','success');
+                            setTimeout(function(){
+                                location.href = '<?php echo $qlkh['HOSTADMIN']."?p=quanlydetaiduan" ?>';
+                            }, 3000);
+                        }
+                    },
+                    error: function () {
+                        swal('Ôi! Lỗi','Xảy ra lỗi, vui lòng thử lại','error');
+                    }
+                });
+            }
+            else
+                swal('Ôi! Lỗi','Không có kết nối internet','error');
+        });
     });
 </script>

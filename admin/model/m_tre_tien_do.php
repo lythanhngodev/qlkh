@@ -35,4 +35,14 @@
         mysqli_close($conn);
         return $hotenchunhiem;
     }
+    function lay_mail_chu_nhiem_de_tai($iddt){
+        $ketnoi = new clsKetnoi();
+        $conn = $ketnoi->ketnoi();
+        $query = "SELECT MAIL FROM thanhviendetai tv, nguoidung nd WHERE tv.IDND = nd.IDND AND tv.IDDT = '$iddt' AND tv.TRACHNHIEM=N'Chủ nhiệm'";
+        $result = mysqli_query($conn, $query);
+        $fetch = mysqli_fetch_assoc($result);
+        $mail = $fetch['MAIL'];
+        mysqli_close($conn);
+        return $mail;
+    }
  ?>

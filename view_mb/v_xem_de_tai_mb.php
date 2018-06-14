@@ -1,8 +1,7 @@
-
     <div class="tin-con-phai">
         <table class="table table-hover table-bordered" border="1">
             <tr style="background: #1dadd0;color: #fff;">
-                <th colspan="2" style="text-align: left;padding: 0.5rem;"><h4><u>Đề tài:</u> <?php echo $dt['TENDETAI'] ?></h4></th>
+                <th colspan="2" style="text-align: left;background: linear-gradient(120deg, #3693f1 0%, #54b1d3 100%);"><h4 style="font-size: 1.2rem;"><u>Đề tài:</u> <?php echo $dt['TENDETAI'] ?></h4></th>
             </tr>
             <tr>
                 <th>Cơ quan chủ trì</th>

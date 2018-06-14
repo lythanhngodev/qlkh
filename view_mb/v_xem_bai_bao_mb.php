@@ -2,10 +2,10 @@
     <div class="tin-con-phai">
         <table class="table table-hover table-bordered" border="1">
             <tr style="background: #1dadd0;color: #fff;">
-                <th colspan="2" style="text-align: left;padding: 0.5rem;"><h4><u>Bài báo:</u> <?php echo $bb['TENBAO'] ?></h4></th>
+                <th colspan="2" style="text-align: left;background: linear-gradient(120deg, #3693f1 0%, #54b1d3 100%);"><h4 style="font-size: 1.2rem;"><u>Bài báo:</u> <?php echo $bb['TENBAO'] ?></h4></th>
             </tr>
             <tr>
-                <th style="width: 200px;">Tác giả</th>
+                <th>Tác giả</th>
                 <td><?php $b = lay_ten_tac_gia_bai_viet($idbb);
                     switch (count($b)) {
                         case 0:

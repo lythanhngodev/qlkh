@@ -2,7 +2,7 @@
   <div class="carousel-inner">
     <?php $stt=1;$slider=lay_slider(); while ($row = mysqli_fetch_assoc($slider)) { ?>
     <div class="carousel-item <?php if($stt==1) echo "active"; ?>">
-      <img class="d-block w-100" src="<?php echo $row['hinhanh']; ?>" alt="<?php echo $row['tieude']; ?>" style="width: 100%" >
+      <img async class="d-block w-100" src="<?php echo $row['hinhanh']; ?>" alt="<?php echo $row['tieude']; ?>" style="width: 100%" >
     </div>
     <?php $stt++; } ?>
   </div>
@@ -30,7 +30,7 @@
             <a href="xemtin/<?php echo $row['LINKBV']; ?>-<?php echo $row['IDBV']; ?>.ltn">
                 <div class="tincon">
                     <div class="hinhtin" style="background-image: url('<?php echo $row['HINHANH']; ?>');"></div>
-                    <div class="tomtattin"><?php echo $row['TENBV'] ?></div>
+                    <div class="tomtattin"><?php echo $row['TENBV'] ?><br><?php echo thoigiandangbai($row['NGAYDANG']); ?></div>
                 </div>  
             </a>
            <?php } ?>

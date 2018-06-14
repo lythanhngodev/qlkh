@@ -15,7 +15,7 @@
                         <th style="width: 160px;">Người đề xuất</th>
                         <th style="width: 120px;">Thời gian gửi</th>
                         <th style="width: 100px;">Trạng thái</th>
-                        <th style="width: 70px;" class="giua">Xem xét</th>
+                        <th style="width: 70px;" class="giua">Chi tiết</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -41,7 +41,7 @@
                         <th style="width: 160px;">Người đề xuất</th>
                         <th style="width: 120px;">Thời gian gửi</th>
                         <th style="width: 100px;">Trạng thái</th>
-                        <th style="width: 70px;" class="giua">Xem xét</th>
+                        <th style="width: 70px;" class="giua">Chi tiết</th>
                     </tr>
                 </tfoot>
             </table>

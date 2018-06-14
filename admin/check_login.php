@@ -26,13 +26,12 @@
 	$ho = $row_user['HO'];
 	$ten = $row_user['TEN'];
 	$hinh = $row_user['HINH'];
-
+	$email = $row_user['MAIL'];
 	$q_trinhdo = "SELECT td.TENTRINHDO FROM trinhdochuyenmon td, nguoidung_trinhdochuyenmon nt WHERE td.IDTD = nt.IDTD AND nt.IDND = '$idnd';";
 	$t_trinhdo = mysqli_query($ketnoi->ketnoi(), $q_trinhdo);
 	$r_trinhdo = mysqli_fetch_row($t_trinhdo);
 	$sodienthoai = $row_user['DIENTHOAIDD'];
 	$trinhdo = $r_trinhdo[0];
-
 	// đơn vị công tác (khoa bộ môn)
     $hoi_kbm = "SELECT k.TENKBM FROM `nguoidung_khoabomon` nk, khoabomon k, nguoidung nd WHERE nk.IDND = nd.IDND AND nk.IDKBM = k.IDKBM AND nk.IDND = '$idnd'";
     $thucthi_kbm = mysqli_query($ketnoi->ketnoi(), $hoi_kbm);
@@ -43,5 +42,6 @@
     $thucthi_ltk = mysqli_query($ketnoi->ketnoi(), $hoi_ltk);
     $row_ltk = mysqli_fetch_assoc($thucthi_ltk);
     $loaitaikhoan = $row_ltk['TENLTK'];
+    $_SESSION['_loaitaikhoan'] = $row_ltk['TENLTK'];
     mysqli_close($ketnoi->ketnoi());
  ?>
