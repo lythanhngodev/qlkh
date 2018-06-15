@@ -20,6 +20,16 @@
   js.src = 'https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v3.0&appId=2165745763451934&autoLogAppEvents=1';
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-77436024-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-77436024-2');
+</script>
+
 <div class="progress" style="z-index: 9999;position: fixed;bottom: 0;border-radius:  0;height: 5px;background: transparent;left:  0;right: 0;">
   <div class="progress-bar" id="daluot" style="background: linear-gradient(130deg, #58d9d0 0%, #4a99fa 100%);transition: none;"></div>
 </div>

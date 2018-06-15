@@ -9,8 +9,8 @@
 	<base href="<?php echo $qlkh['HOSTGOC'] ?>" />
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<script src="js/jquery-3.3.1.min.js"></script>
-	<script src="js/jquery-migrate-1.2.1.js" async></script>
 	<script src="js/superfish.js" type="text/javascript"></script>
+	<script src="js/jquery-migrate-1.2.1.js" async></script>
 	<script type="text/javascript">$(function() {$('ul.sf-menu').superfish();});</script>
 	<script type="application/ld+json">
 		{
@@ -36,7 +36,6 @@
     });
     FB.AppEvents.logPageView();
   };
-
   (function(d, s, id){
      var js, fjs = d.getElementsByTagName(s)[0];
      if (d.getElementById(id)) {return;}
@@ -45,6 +44,16 @@
      fjs.parentNode.insertBefore(js, fjs);
    }(document, 'script', 'facebook-jssdk'));
 </script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-77436024-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-77436024-2');
+</script>
+
 <div class="header">
 	<div style="width: 980px;margin: 0 auto;position: relative;">
 		<img src="images/header_vlute.png" style="width: 100%;" />
@@ -67,8 +76,8 @@
 					<li id="nckh">
 						<a class="sf-with-ul">Hoạt động NCKH</a>
 						<ul style="display: none; visibility: hidden;">
-							<li><a href="nckhdexuatmoi">Đề xuất NCKH</a></li>
-							<li><a href="nckhdacongbo">Công trình khoa học đã công bố</a></li>
+							<li><a href="nckhdexuatmoi" >Đề xuất NCKH</a></li>
+							<li><a href="nckhdacongbo" >Công trình khoa học đã công bố</a></li>
 						</ul>
 					</li>
 					<li id="htqt">
