@@ -840,7 +840,7 @@ $nhiemvu_nghiemthu = ['Chủ tịch HĐ', 'Ủy viên', 'Thư ký'];
     var mailchunhiem = '<?php echo $chunhiem['MAIL']; ?>';
     $(document).ready(function(){
         $('#quanlydetaiduan').addClass('active');
-        $('.tieude').html('Chi tiết đề xuất');
+        $('.tieude').html('Chi tiết đề tài');
         $(function () {
             $('[data-toggle="tooltip"]').tooltip('show');
         });

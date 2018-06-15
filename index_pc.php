@@ -1,9 +1,11 @@
 <?php include_once 'config.php'; ?>
 <!DOCTYPE html>
-<html>
+<html lang='vi'>
 <head>
 <meta charset="utf-8">
 	<?php include_once "header.php" ?>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="theme-color" content="#2b7ce0">
 	<base href="<?php echo $qlkh['HOSTGOC'] ?>" />
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<script src="js/jquery-3.3.1.min.js"></script>

@@ -417,7 +417,6 @@ if (!isset($_SESSION["token"])) {include_once ("../../loi404.html");exit();}
 </div>
 <div class="cach"></div>
 
-
 <script type="text/javascript">
     function xoafile(){
         $('#linkfile').val('');

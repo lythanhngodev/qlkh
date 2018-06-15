@@ -1,9 +1,10 @@
 <?php include_once 'config.php';  ?>
 <!DOCTYPE html>
-<html>
+<html lang="vi">
 <head>
 	<meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="theme-color" content="#2b7ce0">
 	<?php include_once "header.php" ?>
 	<base href="<?php echo $qlkh['HOSTGOC'] ?>" />
   <link rel="stylesheet" type="text/css" href="css/style-mb.css">
@@ -24,7 +25,7 @@
 </div>
 <div>
   <div style="width: 100%;margin: 0 auto;position: relative;margin-top: 5px;">
-    <img src="images/header_vlute_mb.jpg" style="width: 100%;" />
+    <img src="images/header_vlute_mb.png" style="width: 100%;" />
   </div>
 </div>
 <nav class="navbar navbar-lg navbar-dark bg-primary" style="background: linear-gradient(130deg, #54d7ce 0%, #2b7ce0 100%);">

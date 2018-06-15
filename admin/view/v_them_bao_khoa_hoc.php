@@ -116,13 +116,14 @@
                                               <input type="month" class="form-control" id="namxuatban" />
                                           </div>
                                       </div>
-                                      <div class="col-md-12">
+                                      <div class="col-md-6">
                                           <div class="form-group">
                                               <label for="tags" class="font-weight-bold" >
                                                   Nội dung tóm tắt</label>
                                               <textarea class="form-control" rows="5" id="noidungbaibao"></textarea>
                                           </div>
                                       </div>
+                                      <div class="col-md-12"></div>
                                       <div class="col-md-6">
                                         <div class="form-group">
                                           <label for="tags" class="font-weight-bold" >Code Bib Text</label>
