@@ -1452,11 +1452,11 @@ $nhiemvu_nghiemthu = ['Chủ tịch HĐ', 'Ủy viên', 'Thư ký'];
         });
         $('#antientrinh').click(function(){
             if($('#antientrinh').text().trim()=='Ẩn tiến trình'){
-                $('#caytientrinh').hide();
+                $('#caytientrinh').hide(400);
                 $('#antientrinh u').text('Hiện tiến trình');
             }
             else{
-                $('#caytientrinh').show();
+                $('#caytientrinh').show(400);
                 $('#antientrinh u').text('Ẩn tiến trình');
             }
         });
