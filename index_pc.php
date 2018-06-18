@@ -67,10 +67,7 @@
         			<li id="trangchu">
 						<a href="<?php echo $qlkh['HOSTGOC'] ?>">Trang chủ</a></li>
 					<li>
-						<a class="sf-with-ul">Giới thiệu</a>
-						<ul style="display: none; visibility: hidden;">
-							<li><a href="http://vlute.edu.vn/index.php/nghien-cuu-khoa-hoc" target="_blank">Giới thiệu chung</a></li>
-						</ul>
+						<a href="http://vlute.edu.vn/index.php/nghien-cuu-khoa-hoc" class="sf-with-ul" target="_blank">Giới thiệu</a>
 					</li>
 					<li id="nckh">
 						<a class="sf-with-ul">Hoạt động NCKH</a>
@@ -138,9 +135,9 @@
 			<div id="ft_nav">
 				<ul>
 					<li><a href="<?php echo $qlkh['HOSTGOC'] ?>">Trang chủ</a></li>
-					<li><a href="#">Giới thiệu</a></li>
+					<li><a href="http://vlute.edu.vn/index.php/nghien-cuu-khoa-hoc" target="_blank">Giới thiệu</a></li>
 					<li><a href="bieumau">Văn bản - Biểu mẫu</a></li>
-					<li><a href="#" style="border-right: none">Liên hệ</a></li>
+					<li><a href="http://vlute.edu.vn/index.php/lien-he" style="border-right: none" target="_blank">Liên hệ</a></li>
 				</ul>
 			</div>
 			<div class="clear"></div>
@@ -155,6 +152,20 @@
 			</div>
 		</div>
 	</div>
+		<div id="timkiemgg">
+			<script>
+			  (function() {
+			    var cx = '011375218569618766485:2vgaz9qfk-w';
+			    var gcse = document.createElement('script');
+			    gcse.type = 'text/javascript';
+			    gcse.async = true;
+			    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+			    var s = document.getElementsByTagName('script')[0];
+			    s.parentNode.insertBefore(gcse, s);
+			  })();
+			</script>
+			<gcse:search enableAutoComplete="true"></gcse:search>
+		</div>
 </div>
 </body>
 </html>

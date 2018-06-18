@@ -42,7 +42,7 @@
             if($i==$bd)
               echo "<li class='tranghientai'><a href='?p=baokhoahoc&trang=".$i."'>".$i."</a></li>";
             else 
-              echo "<li><a href='?p=baokhoahoc&trang=".$i."'>".$i."</a></li>";
+              echo "<li><a href='baokhoahoc/".$i."'>".$i."</a></li>";
           }
         }
         ?>

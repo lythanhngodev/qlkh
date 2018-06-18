@@ -1,3 +1,4 @@
+<div id="cottrai">
     <div class="tieudechinh">
         <div class="tentieudechinh" style="width: fit-content;">
             <img src="images/chi-muc.png" width="27" height="27" align="absmiddle"><a><?php echo ten_chuyen_muc($id); ?></a>
@@ -5,7 +6,6 @@
         <div class="clear"></div>
         <div class="line"></div>
     </div>
-<div id="cottrai">
       <?php 
       $sotin = 6;
       $bd=1;
