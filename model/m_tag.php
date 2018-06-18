@@ -66,4 +66,12 @@
 	    mysqli_close($conn);
 	    return $result;
 	}
+	function lay_hoat_dong_hop_tac_quoc_te(){
+		$ketnoi = new clsKetnoi();
+		$conn = $ketnoi->ketnoi();
+		$query = "SELECT bv.IDBV, bv.TENBV, bv.LINKBV, bv.HINHANH from baiviet bv, baiviet_chuyenmuc bc, chuyenmuc cm WHERE bv.IDBV = bc.IDBV AND bc.IDCM = cm.IDCM AND cm.LOAICHUYENMUC = N'hoptacquocte' AND HIENTHI=b'1' ORDER BY IDBV DESC LIMIT 0,5;";
+		$result = mysqli_query($conn, $query);
+		mysqli_close($conn);
+		return $result;
+	}
  ?>

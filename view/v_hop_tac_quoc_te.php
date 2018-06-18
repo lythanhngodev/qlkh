@@ -7,7 +7,7 @@
 </div>
 <div id="cottrai">
     <?php
-      $sotin = 8;
+      $sotin = 10;
       $bd=1;
       if (isset($_GET['trang']) && !empty($_GET['trang'])) {
         $bd = intval($_GET['trang']);
@@ -72,7 +72,25 @@
                 while ($row = mysqli_fetch_assoc($tinmoi)) { ?>
                 <a href="?p=xemtin&id=<?php echo $row['IDBV']; ?>&tieude=<?php echo $row['TENBV']; ?>">
                     <div class="tincon">
-                        <div class="hinhtin" style="background-image: url('<?php echo $row['HINHANH']; ?>');"></div>
+                        <div class="hinhtin" style="background-image: url('_thumbs/<?php echo $row['HINHANH']; ?>');"></div>
+                        <div class="tomtattin"><?php echo $row['TENBV'] ?></div>
+                    </div>  
+                </a>
+               <?php } ?>
+            </div>
+        </div>
+    </div>
+    <!-- HOẠT ĐỘNG HỢP TÁC QUỐC TẾ -->
+    <div class="muccon">
+        <h3>HĐ hợp tác quốc tế</h3>
+        <div class="tieudemuccon">
+            <div class="tinmoi">
+                <?php 
+                $htqt = lay_hoat_dong_hop_tac_quoc_te();
+                while ($row = mysqli_fetch_assoc($htqt)) { ?>
+                <a href="xemtin/<?php echo $row['LINKBV']; ?>-<?php echo $row['IDBV']; ?>.ltn">
+                    <div class="tincon">
+                        <div class="hinhtin" style="background-image: url('_thumbs/<?php echo $row['HINHANH']; ?>');"></div>
                         <div class="tomtattin"><?php echo $row['TENBV'] ?></div>
                     </div>  
                 </a>
