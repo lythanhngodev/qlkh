@@ -1,3 +1,4 @@
+@charset 'utf-8';
 /* width */
 ::-webkit-scrollbar {
     width: 6px;
@@ -2991,7 +2992,7 @@ a > code {
 .timeline ol {
   font-size: 0;
   width: 100%;
-  padding: 88px 0;
+  padding: 100px 0;
   transition: all 1s;
 }
 .timeline ol li {
@@ -3019,12 +3020,12 @@ a > code {
 .timeline ol li div {
   position: absolute;
   left: calc(100% + 7px);
-  width: 200px;
+  width: 169px;
   padding: 15px;
   font-size: 1rem;
   white-space: normal;
   color: black;
-  background: white;
+  background: #c5e4ff;
 }
 .timeline ol li div::before {
   content: '';
@@ -3038,20 +3039,22 @@ a > code {
 .timeline ol li:nth-child(odd) div {
   top: -16px;
   transform: translateY(-100%);
+  border-radius: 10px 10px 10px 0px;
+  box-shadow: 2px 2px 4px -2px #b6b6b6;
 }
 
 .timeline ol li:nth-child(odd) div::before {
   top: 100%;
   border-width: 8px 8px 0 0;
-  border-color: white transparent transparent transparent;
+  border-color: #c5e4fe transparent transparent transparent;
 }
 
-.timeline ol li:nth-child(even) div { top: calc(100% + 16px); }
+.timeline ol li:nth-child(even) div {top: calc(100% + 16px);border-radius: 0px 10px 10px 10px;box-shadow: 2px 2px 4px -2px #b6b6b6;}
 
 .timeline ol li:nth-child(even) div::before {
   top: -8px;
   border-width: 8px 0 0 8px;
-  border-color: transparent transparent transparent white;
+  border-color: transparent transparent transparent #c5e4fe;
 }
 
 .timeline time {

@@ -11,7 +11,7 @@ $nhiemvu_nghiemthu = ['Chủ tịch HĐ', 'Ủy viên', 'Thư ký'];
         <ol>
             <li>
                 <div>
-                    <time>Tạo đề tài&ensp;<i class="text-success fas fa-check-circle"></i></time>
+                    Tạo đề tài&ensp;<i class="text-success fas fa-check-circle"></i>
                 </div>
             </li>
             <?php if ($trangthaidt=='Đang xét duyệt') { ?>
@@ -25,8 +25,8 @@ $nhiemvu_nghiemthu = ['Chủ tịch HĐ', 'Ủy viên', 'Thư ký'];
             <?php if ($trangthaidt=='Đang thực hiện') { ?>
             <li>
                 <div>
-                    <time><?php echo thoi_gian_duyet($detai['IDDT']); ?>&ensp;<i class="text-success fas fa-check-circle"></i></time>
-                    Xét duyệt
+                    <time><?php echo thoi_gian_duyet($detai['IDDT']); ?></time>
+                    Xét duyệt&ensp;<i class="text-success fas fa-check-circle"></i>
                 </div>
             </li>
             <li>
@@ -39,19 +39,19 @@ $nhiemvu_nghiemthu = ['Chủ tịch HĐ', 'Ủy viên', 'Thư ký'];
             <?php if ($trangthaidt=='Đã nghiệm thu') { ?>
             <li>
                 <div>
-                    <time><?php echo thoi_gian_duyet($detai['IDDT']); ?>&ensp;<i class="text-success fas fa-check-circle"></i></time>
-                    Xét duyệt
+                    <time><?php echo thoi_gian_duyet($detai['IDDT']); ?></time>
+                    Xét duyệt&ensp;<i class="text-success fas fa-check-circle"></i>
                 </div>
             </li>
             <li>
                 <div>
-                    <time><?php echo thoi_gian_nghiem_thu($detai['IDDT']); ?>&ensp;<i class="text-success fas fa-check-circle"></i></time>
-                    Nghiệm thu
+                    <time><?php echo thoi_gian_nghiem_thu($detai['IDDT']); ?></time>
+                    Nghiệm thu&ensp;<i class="text-success fas fa-check-circle"></i>
                 </div>
             </li>
             <li>
                 <div>
-                    <time>Đã nghiệm thu&ensp;<i class="text-success fas fa-check-circle"></i></time>
+                    Đã nghiệm thu&ensp;<i class="text-success fas fa-check-circle"></i>
                 </div>
             </li>
             <?php } ?>
