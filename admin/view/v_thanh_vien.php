@@ -50,7 +50,7 @@ if (!isset($_SESSION["token"])) {include_once ("../../loi404.html");exit();}
                                             </select>
                                         </td>
                                         <td class="giua">
-                                            <a href="?p=suathanhvien&id=<?php echo $row['IDND'] ?>" class='btn btn-primary btn-sm' title='Sửa'><i class="fas fa-edit"></i></a>
+                                            <a href="?p=suathanhvien&id=<?php echo $row['IDND'] ?>" class='btn btn-primary btn-sm' title='Sửa'><i class="far fa-edit"></i></a>
                                             <button class='btn btn-danger btn-sm xoa' title='Xóa'><i class='fas fa-trash'></i></button>
                                         </td>
                                     </tr>

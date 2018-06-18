@@ -8,9 +8,9 @@
 	<meta name="theme-color" content="#2b7ce0">
 	<base href="<?php echo $qlkh['HOSTGOC'] ?>" />
 	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="fontawesome/web-fonts-with-css/css/fontawesome-all.css">
 	<script src="js/jquery-3.3.1.min.js"></script>
 	<script src="js/superfish.js" type="text/javascript"></script>
-	<script src="js/jquery-migrate-1.2.1.js" async></script>
 	<script type="text/javascript">$(function() {$('ul.sf-menu').superfish();});</script>
 	<script type="application/ld+json">
 		{
@@ -157,6 +157,5 @@
 		</div>
 	</div>
 </div>
-<script defer src="fontawesome/svg-with-js/js/fontawesome-all.js" async></script>
 </body>
 </html>

@@ -5,6 +5,60 @@ $nhiemvu_hd_duyet = ['Ủy viên'];
 $nhiemvu_nghiemthu = ['Chủ tịch HĐ', 'Ủy viên', 'Thư ký'];
 ?>
 <?php $trangthaidt = $detai['TRANGTHAI']; ?>
+<header style="position: relative;">
+    <a id="antientrinh" style="position: absolute;top: 0;right: 0;cursor: pointer;"><u>Ẩn tiến trình</u></a>
+    <section class="timeline" id="caytientrinh">
+        <ol>
+            <li>
+                <div>
+                    <time>Tạo đề tài&ensp;<i class="text-success fas fa-check-circle"></i></time>
+                </div>
+            </li>
+            <?php if ($trangthaidt=='Đang xét duyệt') { ?>
+            <li>
+                <div>
+                    <time><?php echo thoi_gian_duyet($detai['IDDT']); ?></time>
+                    Xét duyệt
+                </div>
+            </li>
+            <?php } ?>
+            <?php if ($trangthaidt=='Đang thực hiện') { ?>
+            <li>
+                <div>
+                    <time><?php echo thoi_gian_duyet($detai['IDDT']); ?>&ensp;<i class="text-success fas fa-check-circle"></i></time>
+                    Xét duyệt
+                </div>
+            </li>
+            <li>
+                <div>
+                    <time><?php echo thoi_gian_nghiem_thu($detai['IDDT']); ?></time>
+                    Nghiệm thu
+                </div>
+            </li>
+            <?php } ?>
+            <?php if ($trangthaidt=='Đã nghiệm thu') { ?>
+            <li>
+                <div>
+                    <time><?php echo thoi_gian_duyet($detai['IDDT']); ?>&ensp;<i class="text-success fas fa-check-circle"></i></time>
+                    Xét duyệt
+                </div>
+            </li>
+            <li>
+                <div>
+                    <time><?php echo thoi_gian_nghiem_thu($detai['IDDT']); ?>&ensp;<i class="text-success fas fa-check-circle"></i></time>
+                    Nghiệm thu
+                </div>
+            </li>
+            <li>
+                <div>
+                    <time>Đã nghiệm thu&ensp;<i class="text-success fas fa-check-circle"></i></time>
+                </div>
+            </li>
+            <?php } ?>
+            <li></li>
+        </ol>
+    </section>
+</header>
 <div class="card cach background-container">
     <div class="row">
         <div class="col-md-12">
@@ -1395,6 +1449,16 @@ $nhiemvu_nghiemthu = ['Chủ tịch HĐ', 'Ủy viên', 'Thư ký'];
             }
             else
                 swal('Ôi! Lỗi','Không có kết nối internet','error');
+        });
+        $('#antientrinh').click(function(){
+            if($('#antientrinh').text().trim()=='Ẩn tiến trình'){
+                $('#caytientrinh').hide();
+                $('#antientrinh u').text('Hiện tiến trình');
+            }
+            else{
+                $('#caytientrinh').show();
+                $('#antientrinh u').text('Ẩn tiến trình');
+            }
         });
     });
 </script>
