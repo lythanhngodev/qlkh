@@ -6,27 +6,12 @@
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 <!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
 <url>
-  <loc>http://qlkh.vlute.edu.vn/</loc>
-  <lastmod>2018-05-26T10:09:49+00:00</lastmod>
-  <priority>1.00</priority>
-</url>
-<url>
-  <loc>http://qlkh.vlute.edu.vn/nckhdexuatmoi</loc>
-  <lastmod>2018-05-26T10:09:49+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
   <loc>http://qlkh.vlute.edu.vn/nckhdacongbo</loc>
   <lastmod>2018-05-26T10:09:49+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>http://qlkh.vlute.edu.vn/hoptacquocte/hoat-dong-hop-tac-quoc-te-19</loc>
-  <lastmod>2018-05-26T10:09:49+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>http://qlkh.vlute.edu.vn/hoptacquocte/du-an-hop-tac-cm-23</loc>
   <lastmod>2018-05-26T10:09:49+00:00</lastmod>
   <priority>0.80</priority>
 </url>
@@ -42,26 +27,6 @@
 </url>
 <url>
   <loc>http://qlkh.vlute.edu.vn/chuyenmuc/tin-tuc-1</loc>
-  <lastmod>2018-05-26T10:09:49+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>http://qlkh.vlute.edu.vn/chuyenmuc/su-kien-cm-15</loc>
-  <lastmod>2018-05-26T10:09:49+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>http://qlkh.vlute.edu.vn/chuyenmuc/cong-nghe-16</loc>
-  <lastmod>2018-05-26T10:09:49+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>http://qlkh.vlute.edu.vn/chuyenmuc/kham-pha-cm-17</loc>
-  <lastmod>2018-05-26T10:09:49+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>http://qlkh.vlute.edu.vn/chuyenmuc/doi-song-18</loc>
   <lastmod>2018-05-26T10:09:49+00:00</lastmod>
   <priority>0.80</priority>
 </url>
