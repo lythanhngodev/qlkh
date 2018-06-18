@@ -8,9 +8,11 @@
 	<?php include_once "header.php" ?>
 	<base href="<?php echo $qlkh['HOSTGOC'] ?>" />
   <link rel="stylesheet" type="text/css" href="css/style-mb.css">
-    <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <style type="text/css">
+#back-to-top{cursor: pointer;position: fixed;bottom: 10px;right: 15px;display: none;width: 40px;height: 40px;margin: 0 auto;}.table th, .table td{padding: 0.3rem !important;}
+  </style>
 </head>
-<style type="text/css">#back-to-top{cursor: pointer;position: fixed;bottom: 10px;right: 15px;display: none;width: 40px;height: 40px;margin: 0 auto;}.table th, .table td{padding: 0.3rem !important;}</style>
 <body>
 <div id="fb-root"></div>
 <script>(function(d, s, id) {
