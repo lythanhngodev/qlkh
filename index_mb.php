@@ -142,6 +142,5 @@ function getDocHeight() {var D = document;return Math.max(D.body.scrollHeight, D
         }, 400);
     });
 });
-});
 </script>
 </html>
