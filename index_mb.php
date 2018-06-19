@@ -5,6 +5,10 @@
 	<meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
   <meta name="theme-color" content="#2b7ce0">
+  <meta http-equiv="cache-control" content="max-age=3600" />
+  <meta HTTP-EQUIV="CACHE-CONTROL" content="NO-STORE">
+  <meta name="COPYRIGHT" content="&copy; 2018 P. NCKH &amp; HTQT SPKT Vĩnh Long">
+  <meta name="Designer" content="Ngô Thanh Lý | lythanhngodev@gmail.com">
 	<?php include_once "header.php" ?>
 	<base href="<?php echo $qlkh['HOSTGOC'] ?>" />
   <link rel="stylesheet" type="text/css" href="css/style-mb.css">
