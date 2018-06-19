@@ -10,8 +10,7 @@
   <link rel="stylesheet" type="text/css" href="css/style-mb.css">
   <script src="js/jquery-3.3.1.min.js"></script>
   <style type="text/css">
-#back-to-top{cursor: pointer;position: fixed;bottom: 10px;right: 15px;display: none;width: 40px;height: 40px;margin: 0 auto;}.table th, .table td{padding: 0.3rem !important;}
-  </style>
+#back-to-top{cursor: pointer;position: fixed;bottom: 10px;right: 15px;display: none;width: 40px;height: 40px;margin: 0 auto;}.table th, .table td{padding: 0.3rem !important;}.hidden{visibility: hidden;}</style>
 </head>
 <body>
 <div id="fb-root"></div>
@@ -142,6 +141,28 @@ function getDocHeight() {var D = document;return Math.max(D.body.scrollHeight, D
             scrollTop: 0
         }, 400);
     });
+});
+  function isScrolledIntoView(elem)
+  {
+      var docViewTop = $(window).scrollTop();
+      var docViewBottom = docViewTop + $(window).height();
+      var elemTop = $(elem).offset().top;
+      var elemBottom = elemTop + $(elem).height();
+      return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
+  }
+  $(document).ready(function(){
+       $('.content').map(function(){
+          if(!isScrolledIntoView($(this))){
+              $(this).addClass('hidden');
+          }
+      });
+  $(document).on('scroll', function(){
+      $('.hidden').map(function(){
+          if(isScrolledIntoView($(this))){
+              $(this).removeClass('hidden').css({ 'display' : 'none' }).fadeIn(400);
+          }
+      });
+  });
 });
 </script>
 </html>

@@ -6,7 +6,7 @@
   <?php $dem = 0;
   if (!empty($tu)) {
       while ($row = mysqli_fetch_assoc($detai)) { ?>
-       <div class="noidungtin">
+       <div class="noidungtin content">
           <h3>
               <a href="xemdetai/<?php echo $row['TENDETAI'] ?>-id=<?php echo $row['IDDT'] ?>.ltn" title="<?php echo $row['TENDETAI'] ?>"><?php echo $row['TENDETAI'] ?></a>
           </h3>

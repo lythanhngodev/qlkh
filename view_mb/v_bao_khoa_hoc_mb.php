@@ -27,7 +27,7 @@
             echo "<hr style='width: 90%;'>";
           }
          ?>
-         <div class="noidungtin">
+         <div class="noidungtin content">
             <a class="tieu-de-tin" href="xembaibao/<?php echo to_slug($row['TENBAO']) ?>-<?php echo $row['IDBAO'] ?>.ltn" title="<?php echo $row['TENBAO'] ?>"><?php echo $row['TENBAO'] ?></a>
             <div class="thongtinchung">
               <ul>

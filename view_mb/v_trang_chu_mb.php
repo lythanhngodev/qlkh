@@ -39,7 +39,7 @@
             $tinmoi = lay_tin_moi();
             while ($row = mysqli_fetch_assoc($tinmoi)) { ?>
             <a href="xemtin/<?php echo $row['LINKBV']; ?>-<?php echo $row['IDBV']; ?>.ltn">
-                <div class="tincon">
+                <div class="tincon content">
                     <div class="hinhtin" style="background-image: url('_thumbs/<?php echo $row['HINHANH']; ?>');"></div>
                     <div class="tomtattin"><?php echo $row['TENBV'] ?><br><?php echo thoigiandangbai($row['NGAYDANG']); ?></div>
                 </div> 
@@ -58,7 +58,7 @@
             $htqt = lay_hoat_dong_hop_tac_quoc_te();
             while ($row = mysqli_fetch_assoc($htqt)) { ?>
             <a href="xemtin/<?php echo $row['LINKBV']; ?>-<?php echo $row['IDBV']; ?>.ltn">
-                <div class="tincon">
+                <div class="tincon content">
                     <div class="hinhtin" style="background-image: url('_thumbs/<?php echo $row['HINHANH']; ?>');"></div>
                     <div class="tomtattin"><?php echo $row['TENBV'] ?><br><?php echo thoigiandangbai($row['NGAYDANG']); ?></div>
                 </div>  
@@ -80,7 +80,7 @@
             echo "<hr style='width: 90%;'>";
           }
          ?>
-         <div class="noidungtin">
+         <div class="noidungtin content">
             <a class="tieu-de-tin" href="xemdetai/<?php echo to_slug($row['TENDETAI']); ?>-<?php echo $row['IDDT'] ?>.ltn" title="<?php echo $row['TENDETAI'] ?>"><?php echo $row['TENDETAI'] ?></a>
             <div class="thongtinchung">
                 <ul>
@@ -111,7 +111,7 @@
             echo "<hr style='width: 90%;'>";
           }
          ?>
-         <div class="noidungtin">
+         <div class="noidungtin content">
             <a class="tieu-de-tin" href="xembaibao/<?php echo to_slug($row['TENBAO']) ?>-<?php echo $row['IDBAO'] ?>.ltn" title="<?php echo $row['TENBAO'] ?>"><?php echo $row['TENBAO'] ?></a>
             <div class="thongtinchung">
               <ul>

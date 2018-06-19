@@ -50,7 +50,7 @@
           <div class="detailienquan">Các bài báo liên quan:</div>
           <?php $baibaolienquan = lay_bai_bao_lien_quan($idbb);
           while ($row = mysqli_fetch_assoc($baibaolienquan)) { ?>
-          <div class="lienquan">
+          <div class="lienquan content">
               <h3><a href="xembaibao/<?php echo to_slug($row['TENBAO']) ?>-<?php echo $row['IDBAO'] ?>.ltn"><img src="images/icon_dot.gif" style="width: 25px;margin-top: -5px;"><?php echo $row['TENBAO'] ?></a>
               </h3>
               <div class="clear"></div>

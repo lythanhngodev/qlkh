@@ -28,7 +28,7 @@
         }else{ 
             while ($row = mysqli_fetch_assoc($tin)){ ?>
             <a href="xemtin/<?php echo $row['LINKBV']; ?>-<?php echo $row['IDBV']; ?>.ltn">
-                <div class="tincon">
+                <div class="tincon content">
                     <div class="hinhtin" style="background-image: url('_thumbs/<?php echo $row['HINHANH']; ?>');"></div>
                     <div class="tomtattin"><?php echo $row['TENBV'] ?><br><?php echo thoigiandangbai($row['NGAYDANG']); ?></div>
                 </div>  

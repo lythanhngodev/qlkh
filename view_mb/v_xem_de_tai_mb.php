@@ -100,7 +100,7 @@
           <div class="detailienquan">Các đề tài liên quan:</div>
           <?php $baibaolienquan = lay_de_tai_lien_quan($iddt, $dt['TRANGTHAI']);
           while ($row = mysqli_fetch_assoc($baibaolienquan)) { ?>
-          <div class="lienquan">
+          <div class="lienquan content">
               <h3>
                   <a href="xemdetai/<?php echo to_slug($row['TENDETAI']); ?>-<?php echo $row['IDDT'] ?>.ltn"><img src="images/icon_dot.gif" style="width: 25px;margin-top: -5px;"><?php echo $row['TENDETAI'] ?></a>
               </h3>

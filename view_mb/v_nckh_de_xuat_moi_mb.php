@@ -39,7 +39,7 @@
             echo "<hr style='width: 90%;'>";
           }
          ?>
-         <div class="noidungtin">
+         <div class="noidungtin content">
             <a class="tieu-de-tin" href="xemdetai/<?php echo to_slug($row['TENDETAI']); ?>-<?php echo $row['IDDT'] ?>.ltn" title="<?php echo $row['TENDETAI'] ?>"><?php echo $row['TENDETAI'] ?></a>
             <div class="thongtinchung">
                 <ul>
