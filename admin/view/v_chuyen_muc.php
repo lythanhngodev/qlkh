@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Ly Thanh Ngo
- * Date: 19/04/2018
- * Time: 5:03 PM
- */
 if (!isset($_SESSION["token"])) {include_once ("../../loi404.html");exit();}
 ?>
 <div class="card cach background-container">
@@ -165,7 +159,7 @@ if (!isset($_SESSION["token"])) {include_once ("../../loi404.html");exit();}
     var obj;
     var obk;
     $(document).ready(function(){
-        $('#xembieumau').addClass('active');
+        $('#chuyenmuc').addClass('active');
         $('.tieude').html('Chuyên mục tin tức - sự kiện');
         $('#themchuyenmuc').on('click',function () {
             $('#modal-them-chuyen-muc').modal('show');

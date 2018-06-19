@@ -58,7 +58,7 @@
 	    	}
 	    	else{
 	    		// Cưa có hội đồng xét chọn
-	    		$sql_cc = "INSERT INTO kehoachxetchonnghiemthu(IDDT,THANG,NAM) VALUES ('$iddt', '$thang', '$nam')";
+	    		$sql_cc = "INSERT INTO kehoachxetchonnghiemthu(IDDT,THANG,NAM, LOAI) VALUES ('$iddt', '$thang', '$nam', b'0')";
 	    		mysqli_query($conn, $sql_cc);
 	    	}
 	    }

@@ -181,7 +181,7 @@ function lay_bao_cao_tien_do($iddt){
 function thoi_gian_duyet($iddt){
     $ketnoi = new clsKetnoi();
     $conn = $ketnoi->ketnoi();
-    $query = "SELECT CONCAT(THANG,' - ',NAM) AS THOIGIAN FROM kehoachxetchonnghiemthu WHERE IDDT = '$iddt' AND LOAI = b'0' LIMIT  0,1";
+    $query = "SELECT CONCAT('Tháng ',THANG,' - ',NAM) AS THOIGIAN FROM kehoachxetchonnghiemthu WHERE IDDT = '$iddt' AND LOAI = b'0' LIMIT  0,1";
     $result = mysqli_query($conn, $query);
     $thoigian="";
     while ($row = mysqli_fetch_assoc($result)) {
