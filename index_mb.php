@@ -142,27 +142,6 @@ function getDocHeight() {var D = document;return Math.max(D.body.scrollHeight, D
         }, 400);
     });
 });
-  function isScrolledIntoView(elem)
-  {
-      var docViewTop = $(window).scrollTop();
-      var docViewBottom = docViewTop + $(window).height();
-      var elemTop = $(elem).offset().top;
-      var elemBottom = elemTop + $(elem).height();
-      return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
-  }
-  $(document).ready(function(){
-       $('.content').map(function(){
-          if(!isScrolledIntoView($(this))){
-              $(this).addClass('hidden');
-          }
-      });
-  $(document).on('scroll', function(){
-      $('.hidden').map(function(){
-          if(isScrolledIntoView($(this))){
-              $(this).removeClass('hidden').css({ 'display' : 'none' }).fadeIn(400);
-          }
-      });
-  });
 });
 </script>
 </html>
