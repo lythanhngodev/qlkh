@@ -6,10 +6,12 @@
 	<?php include_once "header.php" ?>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="theme-color" content="#2b7ce0">
+	<meta content="INDEX,FOLLOW" name="robots" />
 	<meta http-equiv="cache-control" content="max-age=3600" />
 	<meta HTTP-EQUIV="CACHE-CONTROL" content="NO-STORE">
 	<meta name="COPYRIGHT" content="&copy; 2018 P. NCKH &amp; HTQT SPKT Vĩnh Long">
 	<meta name="Designer" content="Ngô Thanh Lý | lythanhngodev@gmail.com">
+	<meta name="GENERATOR" content="NCKH & HTQT VLUTE" />
 	<base href="<?php echo $qlkh['HOSTGOC'] ?>" />
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link rel="stylesheet" type="text/css" href="fontawesome/web-fonts-with-css/css/fontawesome-all.css">

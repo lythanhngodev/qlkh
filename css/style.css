@@ -1,4 +1,5 @@
-@charset "utf-8";.container{width:980px;margin:0 auto;margin-top:0;padding:0px 5px;box-shadow:0px 0px 4px 2px #e6e6e6;}
+@charset "utf-8";
+.container{width:980px;margin:0 auto;margin-top:0;padding:0px 5px;box-shadow:0px 0px 4px 2px #e6e6e6;}
 .cach{margin-top:1rem;}
 .header{position:relative;float:left;width:100%;text-align:center;background:#ffffff;height:103px;box-shadow:0px 0px 10px -2px #8c8c8c;z-index:-99999;margin-bottom:0.72rem;}
 *{padding:0;margin:0;}
@@ -115,39 +116,9 @@ li.sfHover > a > .sf-sub-indicator{background-position:-10px -100px;}
 .tincon-lq .hinhtin-lq{width:69px;height:46px;float:left;margin-right:15px;background-size:cover;background-position:center;}
 .tincon-lq .tomtattin-lq{float:left;width:450px;color:#4e4e4e;}
 .tincon-lq .tomtattin-lq:hover{text-decoration:underline;}
-.tinmoi a{color:#212121;}
-.tinmoi a:hover{color:#2b6dce;}
-#bangbieumau{border-collapse:collapse;width:100%;border:1px solid #a7a7a7;}
-#bangbieumau tr th{padding:4px;}
-#bangbieumau tr td{padding:8px;}
-center{margin-bottom:1rem;}
-.phantrang{list-style-type:none;display:block;}
-.phantrang li{display:inline-table;padding:2px 7px;background-color:#f3f3f2;border:1px solid #2075f7;border-radius:4px;margin-left:0.2rem;}
-.phantrang li a{text-decoration:none;display:block;font-family:sans-serif;}
-.phantrang li:hover{background-color:#1463e2;color:white;}
-.phantrang li a:hover{color:white;}
-.vlu-chi-tiet-header-bai-viet{width:100%;float:left;position:relative;}
-.vlu-chi-tiet-header-bai-viet article{width:100%;height:275px;background-position:center;background-size:cover;}
-.vlu-chi-tiet-hinh-anh-tin{}
-.vlu-chi-tiet-hinh-anh-tin a{text-decoration:none;}
-.vlu-chi-tiet-link-bai-viet{position:absolute;bottom:0;left:0;right:0;background-color:rgba(0, 0, 0, 0.23456789);padding:10px;}
-.vlu-chi-tieu-tieu-de-bai-viet{font-family:sans-serif;font-size:150%;color:#fff;font-weight:500;}
-.vlu-chi-tiet-bai-viet{float:left;padding:10px 0px;width:100%;}
-.vlu-chi-tiet-thoi-gian-bai-viet{color:#e0e0e0;font-size:90%;padding:6px 2px;}
-.vlu-chi-tiet-thoi-gian-bai-viet i{}
-#tin-phai a{text-decoration:none;}
-.tin-con-phai{width:100%;float:left;margin-bottom:.6rem;border-bottom:1px dotted #c1c1c1;padding-bottom:.6rem;}
-.tin-con-phai-phai{float:left;width:184px;}
-.hinh-anh-tin-con-phai{width:110px;height:66px;float:left;background-position:center;background-size:cover;}
-.tin-con-phai:hover > .hinh-anh-tin-con-phai{opacity:0.888;}
-.tieu-de-tin-con-phai{float:left;width:507px;color:#33322f;font-family:sans-serif;line-height:20px;padding:0px 0px 0px 8px;}
-.tieu-de-tin-con-phai:hover{color:var(--main-dochudao);}
-.ngay-tin-con-phai{float:left;font-size:13px;color:#484848;padding:5px 8px;}
-.ngay-tin-con-phai i{font-size:12px;color:#484848;}
-.detailienquan{color:#2279fa;font-size:18px;font-weight:400;font-family:sans-serif;margin:1rem 0rem 0.5rem 0rem;text-decoration:underline;}
-.lienquan{margin:0.3rem 0.5rem;font-family:sans-serif;font-weight:100;}
-.lienquan h3{font-weight:100;}
-.lienquan h3 a{color:#212121;text-decoration:none;font-size:15px;}
-.lienquan h3 a:hover{text-decoration:underline;}
-.tranghientai{background:#5c99f6 !important;color:#fff !important;}
-#timkiemgg{width: 100%;float: left;box-shadow: 0px 0px 4px 2px #e6e6e6;margin-bottom: 1rem;}
+.tinmoi a{color:#212121;}.tinmoi a:hover{color:#2b6dce;}#bangbieumau{border-collapse:collapse;width:100%;border:1px solid #a7a7a7;}#bangbieumau tr th{padding:4px;}#bangbieumau tr td{padding:8px;}center{margin-bottom:1rem;}.phantrang{list-style-type:none;display:block;}.phantrang li{display:inline-table;padding:2px 7px;background-color:#f3f3f2;border:1px solid #2075f7;border-radius:4px;margin-left:0.2rem;}
+.phantrang li a{text-decoration:none;display:block;font-family:sans-serif;}.phantrang li:hover{background-color:#1463e2;color:white;}.phantrang li a:hover{color:white;}.vlu-chi-tiet-header-bai-viet{width:100%;float:left;position:relative;}.vlu-chi-tiet-header-bai-viet article{width:100%;height:275px;background-position:center;background-size:cover;}.vlu-chi-tiet-hinh-anh-tin a{text-decoration:none;}.vlu-chi-tiet-link-bai-viet{position:absolute;bottom:0;left:0;right:0;background-color:rgba(0, 0, 0, 0.23456789);padding:10px;}
+.vlu-chi-tieu-tieu-de-bai-viet{font-family:sans-serif;font-size:150%;color:#fff;font-weight:500;}.vlu-chi-tiet-bai-viet{float:left;padding:10px 0px;width:100%;}.vlu-chi-tiet-thoi-gian-bai-viet{color:#e0e0e0;font-size:90%;padding:6px 2px;}#tin-phai a{text-decoration:none;}.tin-con-phai{width:100%;float:left;margin-bottom:.6rem;border-bottom:1px dotted #c1c1c1;padding-bottom:.6rem;}
+.tin-con-phai-phai{float:left;width:184px;}.hinh-anh-tin-con-phai{width:110px;height:66px;float:left;background-position:center;background-size:cover;}
+.tin-con-phai:hover > .hinh-anh-tin-con-phai{opacity:0.888;}.tieu-de-tin-con-phai{float:left;width:507px;color:#33322f;font-family:sans-serif;line-height:20px;padding:0px 0px 0px 8px;}
+.tieu-de-tin-con-phai:hover{color:var(--main-dochudao);}.ngay-tin-con-phai{float:left;font-size:13px;color:#484848;padding:5px 8px;}.ngay-tin-con-phai i{font-size:12px;color:#484848;}.detailienquan{color:#2279fa;font-size:18px;font-weight:400;font-family:sans-serif;margin:1rem 0rem 0.5rem 0rem;text-decoration:underline;}.lienquan{margin:0.3rem 0.5rem;font-family:sans-serif;font-weight:100;}.lienquan h3{font-weight:100;}.lienquan h3 a{color:#212121;text-decoration:none;font-size:15px;}.lienquan h3 a:hover{text-decoration:underline;}.tranghientai{background:#5c99f6 !important;color:#fff !important;}#timkiemgg{width: 100%;float: left;box-shadow: 0px 0px 4px 2px #e6e6e6;margin-bottom: 1rem;}

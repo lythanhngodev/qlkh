@@ -5,16 +5,16 @@
 	<meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
   <meta name="theme-color" content="#2b7ce0">
+  <meta content="INDEX,FOLLOW" name="robots" />
   <meta http-equiv="cache-control" content="max-age=3600" />
   <meta HTTP-EQUIV="CACHE-CONTROL" content="NO-STORE">
   <meta name="COPYRIGHT" content="&copy; 2018 P. NCKH &amp; HTQT SPKT Vĩnh Long">
   <meta name="Designer" content="Ngô Thanh Lý | lythanhngodev@gmail.com">
+  <meta name="GENERATOR" content="NCKH & HTQT VLUTE" />
 	<?php include_once "header.php" ?>
 	<base href="<?php echo $qlkh['HOSTGOC'] ?>" />
   <link rel="stylesheet" type="text/css" href="css/style-mb.css">
   <script src="js/jquery-3.3.1.min.js"></script>
-  <style type="text/css">
-#back-to-top{cursor: pointer;position: fixed;bottom: 10px;right: 15px;display: none;width: 40px;height: 40px;margin: 0 auto;}.table th, .table td{padding: 0.3rem !important;}.hidden{visibility: hidden;}</style>
 </head>
 <body>
 <div id="fb-root"></div>
