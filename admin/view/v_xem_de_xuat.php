@@ -62,14 +62,22 @@ $nhiemvu_nghiemthu = ['Chủ tịch HĐ', 'Ủy viên', 'Thư ký'];
 <div class="card cach background-container">
     <div class="row">
         <div class="col-md-12">
+            <div class="card" style="margin: 0;">
+                <div class="card-body" style="padding-bottom: 0;">
+                    <span style="float: right;top: 9px;right: 9px;">
+                        <button data-toggle="modal" data-target="#modal-mail" class="btn btn-primary btn-sm"><i class="far fa-envelope-open"></i>&ensp;Gửi mail thông báo</button>
+                        <a href="?p=dieuchinhdetai&amp;id=2" class="btn btn-primary btn-sm"><i class="far fa-edit"></i>&ensp;Điều chỉnh</a>
+                        <button class="btn btn-danger btn-sm" data-toggle="modal" data-target="#modal-xoa-de-tai"><i class="fa fa-trash"></i>&ensp;Xoá đề tài</button>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
             <div class="card">
                 <div class="card-header">
                     <h4>Đề tài: <?php echo $detai['TENDETAI'] ?></h4>
-                    <span style="position:  absolute;top: 9px;right: 9px;">
-                        <button data-toggle="modal" data-target="#modal-mail" class="btn btn-primary btn-sm"><i class="far fa-envelope-open"></i>&ensp;Gửi mail thông báo</button>
-                        <a href="?p=dieuchinhdetai&id=<?php echo $detai['IDDT'] ?>" class="btn btn-primary btn-sm"><i class="far fa-edit"></i>&ensp;Điều chỉnh</a>
-                        <button class="btn btn-danger btn-sm" data-toggle="modal" data-target="#modal-xoa-de-tai"><i class="fa fa-trash"></i>&ensp;Xoá đề tài</button>
-                    </span>
                 </div>
                 <div class="card-body">
                     <div class="col-md-12">
