@@ -6,9 +6,7 @@ $_SESSION["token"] = $token;
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>VLUTE Scientific Research</title><meta name="description" content=""><meta name="viewport" content="width=device-width, initial-scale=1"><base href="<?php echo $qlkh['HOSTADMIN']; ?>"><!-- Bootstrap CSS--><link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css"><!-- Font Awesome CSS-->
-    <link rel="stylesheet" type="text/css" href="../fontawesome/web-fonts-with-css/css/fontawesome-all.css">
-    <!--<script defer src="../fontawesome/svg-with-js/js/fontawesome-all.js"></script><!-- Fontastic Custom icon font--><link rel="stylesheet" href="css/fontastic.css"><link rel="stylesheet" href="css/grasp_mobile_progress_circle-1.0.0.min.css"><link rel="stylesheet" href="css/style.css" id="theme-stylesheet"><!-- Custom stylesheet - for your changes--><link rel="stylesheet" href="css/custom.css"><!-- Animated CSS Font Awesome --><link rel="stylesheet" href="../css/font-awesome-animation.min.css"><!-- Favicon--><link rel="shortcut icon" href="../images/favicon.ico"><script type="text/javascript" src="../js/sweetalert.min.js"></script><script src="vendor/jquery/jquery.min.js"></script><script async src="js/popper.js" type="text/javascript"></script><script async src="vendor/bootstrap/js/bootstrap.min.js"></script><link rel="stylesheet" type="text/css" href="../bootstrap/css/bootstrap-select.min.css"><script type="text/javascript">function kiemtraketnoi(){var xhr = new XMLHttpRequest();var file='<?php echo $qlkh['HOSTGOC']; ?>test-connect-internet.png';var r=3000;xhr.open('HEAD',file+'?subins='+r,false);try{xhr.send();if(xhr.status>=200&&xhr.status<304)return true;else return false;}catch(e){return false;}};function dongmodal(id){$("#"+id).modal('hide');};function khongthanhcong(chuoi){$.notify(chuoi,{animate:{enter:'animated fadeIn',exit:'animated fadeOut'},placement:{from:'top',align:'right'},type:'danger',delay:4000});};function canhbao(chuoi){$.notify(chuoi,{animate:{enter:'animated fadeIn',exit:'animated fadeOut'},placement:{from:'top',align:'right'},type:'warning',delay: 2000});};function thanhcong(chuoi){$.notify(chuoi,{animate:{enter:'animated fadeIn',exit:'animated fadeOut'},placement:{from:'top',align:'right'},type:'success',delay:3000});}</script>
+    <meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>VLUTE Scientific Research</title><meta name="description" content=""><meta name="viewport" content="width=device-width, initial-scale=1"><base href="<?php echo $qlkh['HOSTADMIN']; ?>"><link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css"><link rel="stylesheet" type="text/css" href="../fontawesome/web-fonts-with-css/css/fontawesome-all.css"><link rel="stylesheet" href="css/fontastic.css"><link rel="stylesheet" href="css/grasp_mobile_progress_circle-1.0.0.min.css"><link rel="stylesheet" href="css/style.css" id="theme-stylesheet"><link rel="stylesheet" href="css/custom.css"><link rel="stylesheet" href="../css/font-awesome-animation.min.css"><link rel="shortcut icon" href="../images/favicon.ico"><script  type="text/javascript" src="../js/sweetalert.min.js"></script><script src="vendor/jquery/jquery.min.js"></script><script src="js/popper.js" type="text/javascript"></script><script src="vendor/bootstrap/js/bootstrap.min.js"></script><link rel="stylesheet" type="text/css" href="../bootstrap/css/bootstrap-select.min.css"><script type="text/javascript">function kiemtraketnoi(){var xhr = new XMLHttpRequest();var file='<?php echo $qlkh['HOSTGOC']; ?>test-connect-internet.png';var r=3000;xhr.open('HEAD',file+'?subins='+r,false);try{xhr.send();if(xhr.status>=200&&xhr.status<304)return true;else return false;}catch(e){return false;}};function dongmodal(id){$("#"+id).modal('hide');};function khongthanhcong(chuoi){$.notify(chuoi,{animate:{enter:'animated fadeIn',exit:'animated fadeOut'},placement:{from:'top',align:'right'},type:'danger',delay:4000});};function canhbao(chuoi){$.notify(chuoi,{animate:{enter:'animated fadeIn',exit:'animated fadeOut'},placement:{from:'top',align:'right'},type:'warning',delay: 2000});};function thanhcong(chuoi){$.notify(chuoi,{animate:{enter:'animated fadeIn',exit:'animated fadeOut'},placement:{from:'top',align:'right'},type:'success',delay:3000});}</script>
   </head>
   <body>
     <!-- Side Navbar -->
@@ -34,6 +32,7 @@ $_SESSION["token"] = $token;
 
           <?php if ($loaitaikhoan=='admin'){ ?>
             <li id="slider"><a href="?p=slider"> <i class="far fa-images"></i>Quản lý slider</a></li>
+            <li id="phatthongbao"><a href="?p=phatthongbao"> <i class="fas fa-bullhorn"></i>Phát thông báo</a></li>
             <div class="admin-menu">
                 <h5 class="sidenav-heading">NGHIÊN CỨU KHOA HỌC</h5>
                 <ul id="side-admin-menu" class="side-menu list-unstyled">
@@ -91,7 +90,7 @@ $_SESSION["token"] = $token;
 
 
           <?php } else if($loaitaikhoan=='khoahoc'){ ?>
-
+              <li id="phatthongbao"><a href="?p=phatthongbao"> <i class="fas fa-bullhorn"></i>Phát thông báo</a></li>
               <div class="admin-menu">
                   <h5 class="sidenav-heading">NGHIÊN CỨU KHOA HỌC</h5>
                   <ul id="side-admin-menu" class="side-menu list-unstyled">
@@ -250,7 +249,7 @@ $_SESSION["token"] = $token;
         </div>
       </footer>
     </div>
-    <script async src="../bootstrap/js/bootstrap-select.min.js"></script>
+    <script src="../bootstrap/js/bootstrap-select.min.js"></script>
     <script src="vendor/jquery-validation/jquery.validate.min.js"></script>
     <script src="js/front.js"></script>
     <script type="text/javascript">
@@ -259,6 +258,6 @@ $_SESSION["token"] = $token;
         $('#thongbao-2bgf').append('<div class="alert alert-info" role="alert">Vui lòng cập nhật thông tin <b>trình độ chuyên môn, đơn vị công tác, số điện thoại liên lạc</b> tại trang <a href="?p=thongtincanhan" class="alert-link"><u>thông tin cá nhân</u></a>.</div><div class="alert alert-info" role="alert">Khi xảy ra lỗi hoặc sự cố vui lòng chụp ảnh màn hình gửi đến mail <a href="mailto:lythanhngodev@gmail.com"><u>lythanhngodev@gmail.com</u></a>.</div>');
       });
     </script>
-    <script async src="nonti/bootstrap-notify.min.js"></script>
+    <script src="nonti/bootstrap-notify.min.js"></script>
   </body>
 </html>

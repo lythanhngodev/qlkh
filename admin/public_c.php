@@ -7,7 +7,10 @@
 			case 'thembaokhoahoc':
 				include_once("control/c_them_bao_khoa_hoc.php");
 				break;
-			case 'baokhoahoc':
+			case 'phatthongbao':
+                include_once("control/c_phat_thong_bao.php");
+                break;
+            case 'baokhoahoc':
 				include_once("control/c_bao_khoa_hoc.php");
 				break;
 			case 'suabaibao':

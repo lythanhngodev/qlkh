@@ -2,7 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e784096a-f6cb-467c-8cbe-b1eae1f3bf23" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/admin/view/v_chuyen_muc.php" afterPath="$PROJECT_DIR$/admin/view/v_chuyen_muc.php" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/admin/css/style.css" afterPath="$PROJECT_DIR$/admin/css/style.css" />
+      <change beforePath="$PROJECT_DIR$/admin/index.php" afterPath="$PROJECT_DIR$/admin/index.php" />
+      <change beforePath="$PROJECT_DIR$/admin/public_c.php" afterPath="$PROJECT_DIR$/admin/public_c.php" />
+      <change beforePath="$PROJECT_DIR$/admin/view/v_dieu_chinh_de_tai.php" afterPath="$PROJECT_DIR$/admin/view/v_dieu_chinh_de_tai.php" />
+      <change beforePath="$PROJECT_DIR$/admin/view/v_xem_de_xuat.php" afterPath="$PROJECT_DIR$/admin/view/v_xem_de_xuat.php" />
+      <change beforePath="$PROJECT_DIR$/index_mb.php" afterPath="$PROJECT_DIR$/index_mb.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -67,11 +73,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="console_17.sql" pinned="false" current-in-tab="true">
+      <file leaf-file-name="console_17.sql" pinned="false" current-in-tab="false">
         <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/7100f002-45e7-4ecd-b4f9-feb8543b2f12/console_17.sql">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="115" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="v_phat_thong_bao.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/admin/view/v_phat_thong_bao.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="108">
+              <caret line="61" column="50" lean-forward="false" selection-start-line="61" selection-start-column="50" selection-end-line="61" selection-end-column="50" />
               <folding />
             </state>
           </provider>
@@ -129,6 +145,7 @@
         <option value="$PROJECT_DIR$/admin/test.php" />
         <option value="$PROJECT_DIR$/admin/view/v_xem_de_xuat.php" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/7100f002-45e7-4ecd-b4f9-feb8543b2f12/console_17.sql" />
+        <option value="$PROJECT_DIR$/admin/view/v_phat_thong_bao.php" />
       </list>
     </option>
   </component>
@@ -183,6 +200,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
@@ -217,7 +235,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -296,6 +313,8 @@
       <workItem from="1528074963842" duration="599000" />
       <workItem from="1529306026359" duration="2080000" />
       <workItem from="1529385809219" duration="596000" />
+      <workItem from="1529545150124" duration="332000" />
+      <workItem from="1529592941118" duration="73000" />
     </task>
     <task id="LOCAL-00001" summary="Start up">
       <created>1525824037964</created>
@@ -329,7 +348,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="133022000" />
+    <option name="totallyTimeSpent" value="133427000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="32" width="1936" height="1056" extended-state="6" />
@@ -398,13 +417,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/7100f002-45e7-4ecd-b4f9-feb8543b2f12/console_7.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="56" lean-forward="false" selection-start-line="0" selection-start-column="56" selection-end-line="0" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/7100f002-45e7-4ecd-b4f9-feb8543b2f12/console_8.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
@@ -747,6 +759,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="115" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/view/v_phat_thong_bao.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="61" column="50" lean-forward="false" selection-start-line="61" selection-start-column="50" selection-end-line="61" selection-end-column="50" />
           <folding />
         </state>
       </provider>

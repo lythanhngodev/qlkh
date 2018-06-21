@@ -66,7 +66,7 @@ $nhiemvu_nghiemthu = ['Chủ tịch HĐ', 'Ủy viên', 'Thư ký'];
                 <div class="card-body" style="padding-bottom: 0;">
                     <span style="float: right;top: 9px;right: 9px;">
                         <button data-toggle="modal" data-target="#modal-mail" class="btn btn-primary btn-sm"><i class="far fa-envelope-open"></i>&ensp;Gửi mail thông báo</button>
-                        <a href="?p=dieuchinhdetai&amp;id=2" class="btn btn-primary btn-sm"><i class="far fa-edit"></i>&ensp;Điều chỉnh</a>
+                        <a href="?p=dieuchinhdetai&id=<?php echo $iddt; ?>" class="btn btn-primary btn-sm"><i class="far fa-edit"></i>&ensp;Điều chỉnh</a>
                         <button class="btn btn-danger btn-sm" data-toggle="modal" data-target="#modal-xoa-de-tai"><i class="fa fa-trash"></i>&ensp;Xoá đề tài</button>
                     </span>
                 </div>

@@ -479,7 +479,6 @@
         $('#bangthanhvien').append(tr);
         $('.select-chon').addClass('selectpicker');
         $('.selectpicker').selectpicker({ liveSearch: true });
-
         // Thêm thành viên thực hiện đề tài
         var option="<option value=''>Chọn thành viên</option>";
         _data_.forEach(function(i){
