@@ -6,7 +6,15 @@ function lay_thanh_vien($idnd){
     $conn = $ketnoi->ketnoi();
     $query = "SELECT DISTINCT nd.IDND, CONCAT(nd.HO, ' ', nd.TEN) as HOTEN, l.TENLTK, l.IDLTK, nd.MAIL
         FROM nguoidung nd, loaitaikhoan_nguoidung ln, loaitaikhoan l
-        WHERE nd.IDND = ln.IDND AND l.IDLTK = ln.IDLTK AND nd.IDND NOT IN (SELECT IDND FROM nguoidung WHERE IDND = '$idnd'); ";
+        WHERE nd.IDND = ln.IDND AND l.IDLTK = ln.IDLTK";
+    $result = mysqli_query($conn, $query);
+    mysqli_close($conn);
+    return $result;
+}
+function lay_nhom_thong_bao(){
+    $ketnoi = new clsKetnoi();
+    $conn = $ketnoi->ketnoi();
+    $query = "SELECT * FROM nhomthongbao ORDER BY IDNTB DESC";
     $result = mysqli_query($conn, $query);
     mysqli_close($conn);
     return $result;

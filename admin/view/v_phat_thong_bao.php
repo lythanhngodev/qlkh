@@ -6,12 +6,29 @@ if (!isset($_SESSION["token"])) {include_once ("../../loi404.html");exit();}
 </style>
 <script src="../ckeditor/ckeditor.js" type="text/javascript"></script>
 <script src="../ckfinder/ckfinder.js" type="text/javascript"></script> 
-<div class="card cach background-container">
+<div class="cach background-container">
     <div class="row">
+        <div class="col-md-12">
+            <div class="card">                
+                <div class="card-header">
+                    <h4>Phát thông báo nhóm</h4>
+                </div>
+                <div class="card-body">
+                    <?php 
+                    $nhom = lay_nhom_thong_bao();
+                    while ($row = mysqli_fetch_assoc($nhom)) { ?>
+                        <span class="tb-nhom" lydata="<?php echo $row['IDNTB'] ?>"><?php echo $row['TENNHOM'] ?> <button class="btn btn-success btn-sm guinhom"><i class="fa fa-paper-plane"></i></button> <button class="btn btn-danger btn-sm xoanhom"><i class="fa fa-times"></i></button></span>
+                    <?php }
+                     ?>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row" style="margin-top: 1rem;">
         <div class="col-md-12">
             <div class="card">
                 <div class="card-header">
-                    <h4>Danh sách thành viên</h4>
+                    <h4>Phát thông báo thành viên</h4>
                 </div>
                 <div class="card-body">
                     <div class="row">
@@ -49,8 +66,9 @@ if (!isset($_SESSION["token"])) {include_once ("../../loi404.html");exit();}
                 </div>
                 <div class="card-footer">
                   <div>
-                    <button type="button" class="btn btn-primary" id="xacnhan"><i class="fas fa-save"></i>&nbsp;&nbsp;Phát thông báo mục đã chọn</button>
-                    &ensp;<a id="bocheckall"><u>Bỏ chọn tất cả</u></a>
+                    <button type="button" class="btn btn-primary" id="xacnhan">Phát thông báo mục đã chọn (<span class="soluong">0</span>)</button>
+                    &ensp;<a id="taonhom" class="btn btn-primary">Tạo nhóm mục đã chọn (<span class="soluong">0</span>)</a>
+                    &ensp;<a id="bocheckall" class="btn btn-primary">Bỏ chọn tất cả (<span class="soluong">0</span>)</a>
                   </div>
                 </div>
             </div>
@@ -58,21 +76,56 @@ if (!isset($_SESSION["token"])) {include_once ("../../loi404.html");exit();}
     </div>
 </div>
 <div class="cach"></div>
-<div class="modal" id="modal-mail" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
+
+<div class="modal" id="modal-tao-nhom" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLongTitle">Nội dung thông báo</h5>
+                <h5 class="modal-title" id="exampleModalLongTitle">Tạo nhóm</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
             <div class="modal-body">
-                <textarea class="form-control" id="noidungmail"></textarea>
+                <div class="form-group">
+                    <label>Tên nhóm</label>
+                    <input type="text" class="form-control" id="ten-nhom">
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-md-12" id="body-tao-nhom"></div>
+                </div>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Đóng</button>
-                <button type="button" class="btn btn-primary" id="guimail"><i class="fa fa-paper-plane"></i>&ensp;Gửi mail</button>
+                <button type="button" class="btn btn-primary" id="themnhom">Tạo nhóm</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal" id="modal-mail" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">Thông tin thông báo</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label class="text-bold">Tiêu đề</label>
+                    <input type="text" class="form-control" id="tieudemail">
+                </div>
+                <div class="form-group">
+                    <label class="text-bold">Nội dung</label>
+                    <textarea class="form-control" id="noidungmail"></textarea>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Đóng</button>
+                <button type="button" class="btn btn-primary" id="guimail"><i class="fa fa-paper-plane"></i>&ensp;Gửi thông báo</button>
             </div>
         </div>
     </div>
@@ -94,7 +147,7 @@ if (!isset($_SESSION["token"])) {include_once ("../../loi404.html");exit();}
         $('#phatthongbao').addClass('active');
         $('.tieude').html('Phát thông báo');
         $('#checkall').on('click',function(){
-            $(':checkbox').each(function() {
+            $(':checkbox').map(function() {
                 if($('#checkall').is(':checked')) this.checked = true;
                 else this.checked = false;
             });
@@ -103,12 +156,25 @@ if (!isset($_SESSION["token"])) {include_once ("../../loi404.html");exit();}
             $(':checkbox').map(function() {
                 this.checked = false;
             });
+            $('.soluong').html('0');
         });
-    $('#xacnhan').on('click',function () {
-        $('#modal-mail').modal('show');
-        return;
-      var hoi = confirm('Bạn có chắc phát thông báo những mục đã chọn');
-      if (!hoi) {return;}
+    $(document).on('click','input[type="checkbox"]',function(){
+      var bxn = [], d=0;
+      $('#bangxacnhan').find('tr:not(:first)').each(function(i, row) {
+        var cols = [],dem=0;
+        $(this).find('td').each(function(i, col) {
+           if(dem==0){if($(this).find('input[type="checkbox"]').is(':checked')) cols.push(1); else cols.push(0);}
+            dem++;
+        });
+        bxn.push(cols);
+      });
+      bxn.forEach(function(t){
+        if(t[0]==1) d++;
+      });
+      $('.soluong').html(d);
+    });
+    $(document).on('click','#taonhom',function () {
+      $('#body-tao-nhom').html('');
       var bxn = [],xn = [];
       $('#bangxacnhan').find('tr:not(:first)').each(function(i, row) {
         var cols = [],dem=0;
@@ -126,20 +192,47 @@ if (!isset($_SESSION["token"])) {include_once ("../../loi404.html");exit();}
           swal('Ôi! Lỗi','Không có mục nào được chọn','error');
           return;
       }
+      xn.map(function(v){
+        if (!jQuery.isEmptyObject(v)) {
+            $('#body-tao-nhom').append('<span class="tb-tao-nhom">'+v+' <button class="btn btn-danger btn-sm xoa-tv-nhom"><i class="fa fa-times"></i></button></span>');
+        }
+      });
+      $('#modal-tao-nhom').modal('show');
+    });
+    $(document).on('click','.xoa-tv-nhom',function(){
+        $(this).parent('span').remove();
+    });
+    $(document).on('click','#themnhom',function(){
+        if($('#ten-nhom').val().trim()==''){
+            swal('Ôi! Lỗi','Vui lòng nhập tên nhóm','error');
+            return;
+        }
+        var tv=$('#body-tao-nhom').find('.tb-tao-nhom').map(function(){
+            return($(this).text().trim());
+        }).toArray();
+        if(jQuery.isEmptyObject(tv)){
+            swal('Ôi! Lỗi','Nhóm chưa có thành viên, vui lòng làm lại','error');
+            $('#modal-tao-nhom').modal('hide');
+            return;
+        }
       if(kiemtraketnoi()){
           $.ajax({
-              url: 'ajax/ajax_phat_thong_bao.php',
+              url: 'ajax/ajax_tao_nhom_phat_thong_bao.php',
               type: 'POST',
               data: {
-                  xn: xn
+                  tv: tv,
+                  tennhom: $('#ten-nhom').val().trim()
               },
               beforeSend: function () {
-                  swal("Đợi đã!", "Vui lòng chờ đợi cho đến khi hoàn tất. Quá trình này có thể mất vài phút", "info");
+                  swal("Đợi đã!", "Vui lòng chờ đợi cho đến khi hoàn tất.", "info");
               },
               success: function (data) {
                   var result = $.parseJSON(data);
                   if(result.trangthai == 1){
-                      swal('Thành công','Đã phát thông báo thành công','success');
+                      swal('Thành công','Đã tạo nhóm thành công','success');
+                      setTimeout(function(){
+                        location.reload();
+                    }, 2000);
                   }
                   else
                     swal('Ôi! Lỗi','Xảy ra lỗi, vui lòng thử lại','error');
@@ -151,6 +244,52 @@ if (!isset($_SESSION["token"])) {include_once ("../../loi404.html");exit();}
       }
       else
           khongthanhcong('Không có kết nối internet');
+    });
+    $(document).on('click','.guinhom',function(){
+      if($('#modal-chi-tiet-nhom').length) $('#modal-chi-tiet-nhom').remove();  
+      $.ajax({
+          url: 'ajax/ajax_chi_tiet_nhom.php',
+          type: 'POST',
+          data: {
+              tennhom: $(this).parent('span').text().trim(),
+              nhom: $(this).parent('span').attr('lydata')
+          },
+          success: function (data) {
+              $('body').append(data);
+              $('#modal-chi-tiet-nhom').modal('show');
+                CKEDITOR.replace( 'noidungmail2', {
+                  filebrowserBrowseUrl : '../ckfinder/ckfinder.html',
+                  filebrowserImageBrowseUrl : '../ckfinder/ckfinder.html?type=Images',
+                  filebrowserFlashBrowseUrl : '../ckfinder/ckfinder.html?type=Flash',
+                  filebrowserImageUploadUrl : '../ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Images',
+                  filebrowserFlashUploadUrl : '../ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Flash'
+                });
+          },
+          error: function () {
+              swal('Ôi! Lỗi','Xảy ra lỗi, vui lòng thử lại','error');
+          }
+      });
+    });
+    $('#xacnhan').on('click',function () {
+      var bxn = [],xn = [];
+      $('#bangxacnhan').find('tr:not(:first)').each(function(i, row) {
+        var cols = [],dem=0;
+        $(this).find('td').each(function(i, col) {
+           if(dem==0){if($(this).find('input[type="checkbox"]').is(':checked')) cols.push(1); else cols.push(0);}
+           else if(dem==3)cols.push($(this).text());
+            dem++;
+        });
+        bxn.push(cols);
+      });
+      bxn.forEach(function(t){
+        if(t[0]==1) xn.push(t[1]);
+      });
+      if(jQuery.isEmptyObject(xn)){
+          swal('Ôi! Lỗi','Không có mục nào được chọn','error');
+          return;
+      }
+      $('#modal-mail').modal('show');
+      //var noidung =  CKEDITOR.instances['noidungmail'].getData();
     });
     });
     $(document).ready(function() {
