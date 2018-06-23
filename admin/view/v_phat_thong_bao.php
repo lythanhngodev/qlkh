@@ -104,7 +104,7 @@ if (!isset($_SESSION["token"])) {include_once ("../../loi404.html");exit();}
     </div>
 </div>
 
-<div class="modal animated fadeIn" id="modal-mail" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+<div class="modal" id="modal-mail" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
         <div class="modal-content">
             <div class="modal-header">
@@ -172,7 +172,7 @@ if (!isset($_SESSION["token"])) {include_once ("../../loi404.html");exit();}
         });
         bxn.push(cols);
       });
-      bxn.forEach(function(t){
+      bxn.map(function(t){
         if(t[0]==1) d++;
       });
       $('.soluong').html(d);
@@ -189,7 +189,7 @@ if (!isset($_SESSION["token"])) {include_once ("../../loi404.html");exit();}
         });
         bxn.push(cols);
       });
-      bxn.forEach(function(t){
+      bxn.map(function(t){
         if(t[0]==1) xn.push(t[1]);
       });
       if(jQuery.isEmptyObject(xn)){
@@ -296,7 +296,7 @@ if (!isset($_SESSION["token"])) {include_once ("../../loi404.html");exit();}
         });
         bxn.push(cols);
       });
-      bxn.forEach(function(t){
+      bxn.map(function(t){
         if(t[0]==1) xn.push(t[1]);
       });
       if(jQuery.isEmptyObject(xn)){

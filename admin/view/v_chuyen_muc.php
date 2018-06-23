@@ -60,7 +60,7 @@ if (!isset($_SESSION["token"])) {include_once ("../../loi404.html");exit();}
 <div class="cach"></div>
 
 <!-- Modal thêm -->
-<div class="modal fade" id="modal-them-chuyen-muc" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+<div class="modal" id="modal-them-chuyen-muc" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
             <div class="modal-header">
@@ -94,7 +94,7 @@ if (!isset($_SESSION["token"])) {include_once ("../../loi404.html");exit();}
     </div>
 </div>
 <!-- Modal sửa -->
-<div class="modal fade" id="modal-sua-chuyen-muc" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+<div class="modal" id="modal-sua-chuyen-muc" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
             <div class="modal-header">
@@ -129,7 +129,7 @@ if (!isset($_SESSION["token"])) {include_once ("../../loi404.html");exit();}
     </div>
 </div>
 <!-- Modal xóa chuyên mục -->
-<div class="modal fade" id="modal-xoa-chuyen-muc" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+<div class="modal" id="modal-xoa-chuyen-muc" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
             <div class="modal-header">

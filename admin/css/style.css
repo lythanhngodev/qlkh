@@ -3036,3 +3036,34 @@ a > code {
 .tb-nhom,.tb-tao-nhom,.danhsachmail{transition: all 0.4s;padding: 4px 4px 4px 8px;b;margin: 0px 0px 10px 6px;color: #363636;border-radius: 25px;border: 1px solid #b8b8b8;}
 .chi-tiet-nhom{transition: all 0.4s;padding: 4px 8px 4px 8px;b;margin: 0px 0px 10px 6px;background: #eff7ff;color: #363636;border-radius: 25px;border: 1px solid #b8b8b8;}
 .tb-nhom .btn,.tb-tao-nhom .btn,.danhsachmail .btn{border-radius:50% !important}
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale3d(.85, .85, .85);
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+.modal{
+  animation-duration: 0.4s !important;
+  animation-fill-mode: both;
+}
+.modal.show{
+  animation-name: zoomIn !important;
+}
+@keyframes zoomOut {
+  from {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+    transform: scale3d(.85, .85, .85);
+  }
+
+  to {
+    opacity: 0;
+  }
+}
