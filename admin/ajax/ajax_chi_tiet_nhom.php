@@ -29,9 +29,11 @@ $ex_sql = mysqli_query($conn, $sql);
                 </button>
             </div>
             <div class="modal-body">
-                <?php while ($row = mysqli_fetch_assoc($ex_sql)) { ?>
-                <span class="chi-tiet-nhom"><?php echo $row['MAIL'] ?></span>
-                <?php } ?>
+                <div id="ct-tv-nhom" style="height: 130px;overflow-y: scroll;padding: 4px;border: 1px solid #ced4da;border-radius: 13px 0px 0px 10px;">
+                    <?php while ($row = mysqli_fetch_assoc($ex_sql)) { ?>
+                    <span class="chi-tiet-nhom"><?php echo $row['MAIL'] ?></span>
+                    <?php } ?>
+                </div>
                 <hr>
                 <div class="form-group">
                     <label class="text-bold">Tiêu đề</label>

@@ -92,8 +92,9 @@ if (!isset($_SESSION["token"])) {include_once ("../../loi404.html");exit();}
                     <input type="text" class="form-control" id="ten-nhom">
                 </div>
                 <hr>
-                <div class="row">
-                    <div class="col-md-12" id="body-tao-nhom"></div>
+                <div class="form-group">
+                    <label class="text-bold">Đã chọn</label>
+                    <div class="col-md-12" id="body-tao-nhom" style="height: 300px;overflow-y: scroll;padding: 4px;border: 1px solid #ced4da;border-radius: 13px 0px 0px 10px;"></div>
                 </div>
             </div>
             <div class="modal-footer">
@@ -114,8 +115,9 @@ if (!isset($_SESSION["token"])) {include_once ("../../loi404.html");exit();}
                 </button>
             </div>
             <div class="modal-body">
-                <div class="row">
-                    <div class="col-md-12" id="danh-sach-mail"></div>
+                <div class="form-group">
+                    <label class="text-bold">Đã chọn</label>
+                    <div class="col-md-12" id="danh-sach-mail" style="height: 130px;overflow-y: scroll;padding: 4px;border: 1px solid #ced4da;border-radius: 13px 0px 0px 10px;"></div>
                 </div>
                 <hr>
                 <div class="form-group">
