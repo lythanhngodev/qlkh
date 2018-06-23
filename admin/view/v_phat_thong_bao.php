@@ -104,7 +104,7 @@ if (!isset($_SESSION["token"])) {include_once ("../../loi404.html");exit();}
     </div>
 </div>
 
-<div class="modal" id="modal-mail" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+<div class="modal animated fadeIn" id="modal-mail" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
         <div class="modal-content">
             <div class="modal-header">
@@ -114,6 +114,10 @@ if (!isset($_SESSION["token"])) {include_once ("../../loi404.html");exit();}
                 </button>
             </div>
             <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-12" id="danh-sach-mail"></div>
+                </div>
+                <hr>
                 <div class="form-group">
                     <label class="text-bold">Tiêu đề</label>
                     <input type="text" class="form-control" id="tieudemail">
@@ -192,6 +196,11 @@ if (!isset($_SESSION["token"])) {include_once ("../../loi404.html");exit();}
           swal('Ôi! Lỗi','Không có mục nào được chọn','error');
           return;
       }
+      if(xn.length==1){
+            swal('Ôi! Lỗi','Nhóm ít nhất 2 thành viên, vui lòng làm lại','error');
+            $('#modal-tao-nhom').modal('hide');
+            return;
+        }
       xn.map(function(v){
         if (!jQuery.isEmptyObject(v)) {
             $('#body-tao-nhom').append('<span class="tb-tao-nhom">'+v+' <button class="btn btn-danger btn-sm xoa-tv-nhom"><i class="fa fa-times"></i></button></span>');
@@ -212,6 +221,11 @@ if (!isset($_SESSION["token"])) {include_once ("../../loi404.html");exit();}
         }).toArray();
         if(jQuery.isEmptyObject(tv)){
             swal('Ôi! Lỗi','Nhóm chưa có thành viên, vui lòng làm lại','error');
+            $('#modal-tao-nhom').modal('hide');
+            return;
+        }
+        if(tv.length==1){
+            swal('Ôi! Lỗi','Nhóm ít nhất 2 thành viên, vui lòng làm lại','error');
             $('#modal-tao-nhom').modal('hide');
             return;
         }
@@ -271,6 +285,7 @@ if (!isset($_SESSION["token"])) {include_once ("../../loi404.html");exit();}
       });
     });
     $('#xacnhan').on('click',function () {
+      $('#danh-sach-mail').html('');
       var bxn = [],xn = [];
       $('#bangxacnhan').find('tr:not(:first)').each(function(i, row) {
         var cols = [],dem=0;
@@ -289,6 +304,9 @@ if (!isset($_SESSION["token"])) {include_once ("../../loi404.html");exit();}
           return;
       }
       $('#modal-mail').modal('show');
+      xn.map(function(v){
+        $('#danh-sach-mail').append('<span class="danhsachmail">'+v+' <button class="btn btn-danger btn-sm xoa-tv-nhom"><i class="fa fa-times"></i></button></span>');
+      });
       //var noidung =  CKEDITOR.instances['noidungmail'].getData();
     });
     });

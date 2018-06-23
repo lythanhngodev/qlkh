@@ -3033,6 +3033,6 @@ a > code {
 .timeline ol li:nth-child(odd) div { transform: none; }
 .timeline ol li:nth-child(odd) div::before,  .timeline ol li:nth-child(even) div::before {left: 50%; top: 100%; transform: translateX(-50%); border: none; border-left: 1px solid white; height: 25px;}
 .timeline ol li:last-child,  .timeline ol li:nth-last-child(2) div::before,  .timeline ol li:not(:last-child)::after,  .timeline .arrows { display: none; } }
-.tb-nhom,.tb-tao-nhom{transition: all 0.4s;padding: 4px 4px 4px 8px;b;margin: 0px 0px 10px 6px;color: #363636;border-radius: 25px;border: 1px solid #b8b8b8;}
+.tb-nhom,.tb-tao-nhom,.danhsachmail{transition: all 0.4s;padding: 4px 4px 4px 8px;b;margin: 0px 0px 10px 6px;color: #363636;border-radius: 25px;border: 1px solid #b8b8b8;}
 .chi-tiet-nhom{transition: all 0.4s;padding: 4px 8px 4px 8px;b;margin: 0px 0px 10px 6px;background: #eff7ff;color: #363636;border-radius: 25px;border: 1px solid #b8b8b8;}
-.tb-nhom .btn,.tb-tao-nhom .btn{border-radius:50% !important}
+.tb-nhom .btn,.tb-tao-nhom .btn,.danhsachmail .btn{border-radius:50% !important}
