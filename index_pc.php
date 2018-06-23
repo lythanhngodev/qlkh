@@ -13,8 +13,20 @@
 	<meta name="Designer" content="Ngô Thanh Lý | lythanhngodev@gmail.com">
 	<meta name="GENERATOR" content="NCKH & HTQT VLUTE" />
 	<base href="<?php echo $qlkh['HOSTGOC'] ?>" />
-	<link rel="stylesheet" type="text/css" href="css/style.css">
-	<link rel="stylesheet" type="text/css" href="fontawesome/web-fonts-with-css/css/fontawesome-all.css">
+	<script type="text/javascript">
+		var giftofspeed = document.createElement('link');
+		giftofspeed.rel = 'stylesheet';
+		giftofspeed.href = 'css/style.css';
+		giftofspeed.type = 'text/css';
+		var godefer = document.getElementsByTagName('link')[0];
+		godefer.parentNode.insertBefore(giftofspeed, godefer);
+		var giftofspeed2 = document.createElement('link');
+		giftofspeed2.rel = 'stylesheet';
+		giftofspeed2.href = 'fontawesome/web-fonts-with-css/css/fontawesome-all.css';
+		giftofspeed2.type = 'text/css';
+		var godefer2 = document.getElementsByTagName('link')[0];
+		godefer2.parentNode.insertBefore(giftofspeed2, godefer2);
+	</script>
 	<script src="js/jquery-3.3.1.min.js"></script>
 	<script src="js/superfish.js" type="text/javascript"></script>
 	<script type="text/javascript">$(function() {$('ul.sf-menu').superfish();});</script>

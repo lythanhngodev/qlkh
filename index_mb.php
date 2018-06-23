@@ -13,8 +13,15 @@
   <meta name="GENERATOR" content="NCKH & HTQT VLUTE" />
 	<?php include_once "header.php" ?>
 	<base href="<?php echo $qlkh['HOSTGOC'] ?>" />
-  <link rel="stylesheet" type="text/css" href="css/style-mb.css">
-  <script src="js/jquery-3.3.1.min.js"></script>
+  <script type="text/javascript">
+    var _ltn = document.createElement('link');
+    _ltn.rel = 'stylesheet';
+    _ltn.href = 'css/style-mb.css';
+    _ltn.type = 'text/css';
+    var _go_ = document.getElementsByTagName('link')[0];
+    _go_.parentNode.insertBefore(_ltn, _go_);
+  </script>
+  <script src="js/jquery-3.3.1.min.js" type="text/javascript"></script>
 </head>
 <body>
 <div id="fb-root"></div>

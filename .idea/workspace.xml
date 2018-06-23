@@ -4,6 +4,7 @@
     <list default="true" id="e784096a-f6cb-467c-8cbe-b1eae1f3bf23" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/admin/mail/guimail.php" afterPath="$PROJECT_DIR$/admin/mail/guimail.php" />
+      <change beforePath="$PROJECT_DIR$/admin/view/v_them_de_xuat.php" afterPath="$PROJECT_DIR$/admin/view/v_them_de_xuat.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -81,8 +82,8 @@
       <file leaf-file-name="guimail.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/admin/mail/guimail.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="513">
-              <caret line="19" column="25" lean-forward="false" selection-start-line="19" selection-start-column="25" selection-end-line="19" selection-end-column="25" />
+            <state relative-caret-position="582">
+              <caret line="42" column="33" lean-forward="false" selection-start-line="42" selection-start-column="33" selection-end-line="42" selection-end-column="33" />
               <folding />
             </state>
           </provider>
@@ -361,7 +362,7 @@
       <workItem from="1529592941118" duration="1137000" />
       <workItem from="1529651012717" duration="2606000" />
       <workItem from="1529724464523" duration="735000" />
-      <workItem from="1529745376519" duration="117000" />
+      <workItem from="1529745376519" duration="2510000" />
     </task>
     <task id="LOCAL-00001" summary="Start up">
       <created>1525824037964</created>
@@ -402,7 +403,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="137949000" />
+    <option name="totallyTimeSpent" value="140342000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="32" width="1936" height="1056" extended-state="6" />
@@ -831,8 +832,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/admin/mail/guimail.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="513">
-          <caret line="19" column="25" lean-forward="false" selection-start-line="19" selection-start-column="25" selection-end-line="19" selection-end-column="25" />
+        <state relative-caret-position="582">
+          <caret line="42" column="33" lean-forward="false" selection-start-line="42" selection-start-column="33" selection-end-line="42" selection-end-column="33" />
           <folding />
         </state>
       </provider>
