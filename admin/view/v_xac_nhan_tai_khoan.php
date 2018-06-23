@@ -63,7 +63,7 @@
         });
     });
     $('#xacnhan').on('click',function () {
-      var hoi = confirm('Bạn có chắc xoá những mục đã chọn');
+      var hoi = confirm('Bạn có chắc xác nhận những mục đã chọn');
       if (!hoi) {return;}
       var bxn = [],xn = [];
       $('#bangxacnhan').find('tr:not(:first)').each(function(i, row) {
@@ -75,7 +75,7 @@
         });cols.push($(this).attr('x'));
         bxn.push(cols);
       });
-      bxn.forEach(function(t){
+      bxn.map(function(t){
         if(t[0]==1) xn.push(t);
       });
       if(jQuery.isEmptyObject(xn)){
@@ -124,7 +124,7 @@
         });cols.push($(this).attr('x'));
         bxn.push(cols);
       });
-      bxn.forEach(function(t){
+      bxn.map(function(t){
         if(t[0]==1) xn.push(t);
       });
       if(jQuery.isEmptyObject(xn)){

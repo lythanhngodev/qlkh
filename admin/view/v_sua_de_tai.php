@@ -532,15 +532,15 @@
                 (!_data_[i][j]) ? _data_[i][j] = '' : 1;
         var tr=null;
         if (_tv_!=null) {
-            _tv_.forEach(function(tv){
-                _data_.forEach(function(d){
+            _tv_.map(function(tv){
+                _data_.map(function(d){
                     if (tv[3]==d[0]) {
                         var option = "<option value=''>Chọn thành viên</option>";
-                            _data_.forEach(function(i){
+                            _data_.map(function(i){
                               (tv[3]==i[0]) ? option+="<option value='"+i[0]+"' selected>"+i[1]+" "+i[2]+"</option>" : option+="<option value='"+i[0]+"'>"+i[1]+" "+i[2]+"</option>";
                             });
-                        var td=""; _ndtd_.forEach(function(d){if (d[0]==tv[3]) {td = d[1];}});
-                        var dv=""; _nddv_.forEach(function(d){if (d[0]==tv[3]) {dv = d[1];}});
+                        var td=""; _ndtd_.map(function(d){if (d[0]==tv[3]) {td = d[1];}});
+                        var dv=""; _nddv_.map(function(d){if (d[0]==tv[3]) {dv = d[1];}});
                         tr+="<tr><td><select class='form-control select-chon' disabled>"+option+"</select></td><td><textarea class='form-control' rows='4' readonly>"+"- "+td+"\n- "+dv+"\n- "+d[3]+"</textarea></td><td><textarea class='form-control' rows='4'>"+tv[2]+"</textarea></td><td class='giua'><button class='xoathanhvien'><i class='fas fa-times do'></i></button></td></tr>";
                     }
                 });
@@ -549,7 +549,7 @@
         $('#bangthanhvien').append(tr);
         $('.select-chon').addClass('selectpicker');
         $('.selectpicker').selectpicker({ liveSearch: true });
-        _data_.forEach(function(data){
+        _data_.map(function(data){
           if (data[0]==$('#chonchunhiem').val()) {
             $('#chonchunhiem').parent('td').parent('tr').find('td:nth-child(2) textarea').val("- "+data[6]+"\n- "+data[3]+"\n- "+data[4]);
           }
@@ -565,15 +565,15 @@
                 (!_data_[i][j]) ? _data_[i][j] = '' : 1;
         var tr=null;
         if (_tv_!=null) {
-            _tv_.forEach(function(tv){
-                _data_.forEach(function(d){
+            _tv_.map(function(tv){
+                _data_.map(function(d){
                     if (tv[3]==d[0]) {
                         var option = "<option value=''>Chọn thành viên</option>";
-                            _data_.forEach(function(i){
+                            _data_.map(function(i){
                               (tv[3]==i[0]) ? option+="<option value='"+i[0]+"' selected>"+i[1]+" "+i[2]+"</option>" : option+="<option value='"+i[0]+"'>"+i[1]+" "+i[2]+"</option>";
                             });
-                        var td=""; _ndtd_.forEach(function(d){if (d[0]==tv[3]) {td = d[1];}});
-                        var dv=""; _nddv_.forEach(function(d){if (d[0]==tv[3]) {dv = d[1];}});
+                        var td=""; _ndtd_.map(function(d){if (d[0]==tv[3]) {td = d[1];}});
+                        var dv=""; _nddv_.map(function(d){if (d[0]==tv[3]) {dv = d[1];}});
                         tr+="<tr><td><select class='form-control select-chon'>"+option+"</select></td><td><textarea class='form-control' rows='4' readonly>"+"- "+td+"\n- "+dv+"\n- "+d[3]+"</textarea></td><td><textarea class='form-control' rows='4'>"+tv[2]+"</textarea></td><td class='giua'><button class='xoathanhvien'><i class='fas fa-times do'></i></button></td></tr>";
                     }
                 });
@@ -585,7 +585,7 @@
 
         // Thêm thành viên thực hiện đề tài
         var option="<option value=''>Chọn thành viên</option>";
-        _data_.forEach(function(i){
+        _data_.map(function(i){
             option+="<option value='"+i[0]+"'>"+i[1]+" "+i[2]+"</option>";
         });
         var stt_btv=1;
@@ -809,7 +809,7 @@
             if(!tendetai) {khongthanhcong('Chưa nhập tên đề tài');return;}
             /*if(!muctieudetai){khongthanhcong('Chưa nhập mục tiêu đề tài');return;}
             if(!noidungdetai){khongthanhcong('Nhập nội dung đề tài');return;}*/
-            _cdt_.forEach(function(c){
+            _cdt_.map(function(c){
               ($('#capdetai-'+c[0]).is(':checked')) ? capdetai = $('#capdetai-'+c[0]).val().trim():0;
             });
             if(!capdetai){
@@ -832,7 +832,7 @@
             if(!$.isNumeric(kinhphinguonkhac)){khongthanhcong('Kinh phí nguồn khác không hợp lệ, kiểm tra lại');return;} */
             // Xét loại hình nghiên cứu
             var loaihinhnghiencuu = [];
-            _lh_.forEach(function(c){
+            _lh_.map(function(c){
               ($('#loaihinh-'+c[0]).is(':checked'))?loaihinhnghiencuu.push(c[1].trim()):0;
             });
             if(jQuery.isEmptyObject(loaihinhnghiencuu)){
@@ -841,7 +841,7 @@
             }
             // Xét lĩnh vực khoa học
             var linhvuckhoahoc = [];
-            _lv_.forEach(function(c){
+            _lv_.map(function(c){
               ($('#linhvuc-'+c[0]).is(':checked'))?linhvuckhoahoc.push(c[1].trim()):0;
             });
             if(jQuery.isEmptyObject(linhvuckhoahoc)){
@@ -1010,10 +1010,10 @@
                 });
             } else canhbao('Không có kết nối internet');
         });
-        _data_.forEach(function(data){
+        _data_.map(function(data){
           if (data[0]==$('#chonchunhiem').val()) {
-            var td=""; _ndtd_.forEach(function(d){if (d[0]==$('#chonchunhiem').val()) {td = d[1];}});
-            var dv=""; _nddv_.forEach(function(d){if (d[0]==$('#chonchunhiem').val()) {dv = d[1];}});
+            var td=""; _ndtd_.map(function(d){if (d[0]==$('#chonchunhiem').val()) {td = d[1];}});
+            var dv=""; _nddv_.map(function(d){if (d[0]==$('#chonchunhiem').val()) {dv = d[1];}});
             $('#chonchunhiem').parent('td').parent('tr').find('td:nth-child(2) textarea').val("- "+td+"\n- "+dv+"\n- "+data[3]);
           }
         });
@@ -1043,10 +1043,10 @@
             khongthanhcong("Hiện không có kết nối internet");
     }
     function chonthanhvien(t){
-        _data_.forEach(function(data){
+        _data_.map(function(data){
           if (data[0]==t.value) {
-            var td=""; _ndtd_.forEach(function(d){if (d[0]==t.value) {td = d[1];}});
-            var dv=""; _nddv_.forEach(function(d){if (d[0]==t.value) {dv = d[1];}});
+            var td=""; _ndtd_.map(function(d){if (d[0]==t.value) {td = d[1];}});
+            var dv=""; _nddv_.map(function(d){if (d[0]==t.value) {dv = d[1];}});
             $(t).parent().parent('td').parent('tr').find('td:nth-child(2) textarea').val("- "+td+"\n- "+dv+"\n- "+data[3]);
             return;
           }
