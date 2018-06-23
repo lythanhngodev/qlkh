@@ -13,25 +13,30 @@ if (isset($_SESSION['tdn']) && isset($_SESSION['pas']) && isset($_SESSION['_loai
 $result = Array(
     'trangthai' => 0
 );
-function themthanhviennghiemthu($nt, $dt){
-    $ketnoi = new clsKetnoi();
-    $conn = $ketnoi->ketnoi();
-    $sql = "DELETE FROM xetduyetnghiemthu WHERE IDDT = '$dt';";
-    for($i=0;$i<count($nt);$i++)
-        $sql.= "INSERT INTO `xetduyetnghiemthu`(`IDDT`, `IDND`, `NHIEMVU`, `GHICHU`) VALUES ('$dt','".$nt[$i][1]."','".$nt[$i][2]."','".$nt[$i][3]."');";
-    if(mysqli_multi_query($conn,$sql)){
-        mysqli_close($conn);
-        return true;
-    }
-    return false;
+if(!isset($_POST['nhom']) || empty($_POST['nhom'])){
+    trangchu($qlkh['HOSTADMIN']);
 }
-
-if (themthanhviennghiemthu($_POST['nt'], $_POST['dt'])) {
-    $result['trangthai'] = 1;
+$idnhom = $_POST['nhom'];
+$idnhom = intval($idnhom);
+$ketnoi = new clsKetnoi();
+$conn = $ketnoi->ketnoi();
+$sql = "DELETE FROM `nhomthongbao` WHERE `IDNTB` = '$idnhom'";
+$test = mysqli_query($conn,$sql);
+$demdong = mysqli_affected_rows($conn);
+if ($demdong==0) {
     echo json_encode($result);
     exit();
 }
-else
+$sql = "DELETE FROM `nhomthongbao_nguoidung` WHERE `IDNTB` = '$idnhom'";
+if(mysqli_query($conn, $sql)){
+    $result['trangthai'] = 1;
+    mysqli_close($conn);
     echo json_encode($result);
+    exit();
+}
+else{
+    mysqli_close($conn);
+    echo json_encode($result);
+    exit();
+}
 ?>
-

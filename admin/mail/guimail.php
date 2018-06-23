@@ -34,11 +34,10 @@ function guimailnhom($tieude,$than,$dc,$user,$pass,$port){
     $mail->Username = $user;                 // SMTP username
     $mail->Password = $pass;                 // SMTP password
     $mail->SMTPSecure = 'tls';               // Enable TLS encryption, `ssl` also accepted
-    $mail->Port = 587;                       // TCP port to connect to
+    $mail->Port = $port;                       // TCP port to connect to
     $mail->setFrom($user, 'Phòng NCKH & HTQT | ĐH SPKT Vĩnh Long');
-    //$mail->addAddress($dc);     // Add a recipient
     for ($i=0,$l=count($dc);$i<$l;$i++){
-        $mail->addBCC($dc[$i]);
+        $mail->addBCC($dc[$i][0]);
     }
     if (empty($dc)) return false;
     $mail->isHTML(true);                                  // Set email format to HTML

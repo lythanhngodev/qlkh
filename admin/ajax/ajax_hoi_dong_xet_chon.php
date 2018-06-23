@@ -3,7 +3,7 @@ include_once("../../config.php");
 session_start();
 if (isset($_SESSION['tdn']) && isset($_SESSION['pas'])) {
     $ketnoi = new clsKetnoi();
-    if (!($ketnoi->checklogin($_SESSION['tdn'],$_SESSION['pas']))) {
+    if (!($ketnoi->checklogin($_SESSION['tdn'],$_SESSION['pas'])) && $_SERVER['HTTP_X_REQUESTED_WITH'] == 'XMLHttpRequest') {
         trangchu($qlkh['HOSTADMIN']);
         exit();
     }

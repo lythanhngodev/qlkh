@@ -1,7 +1,7 @@
 <?php
 include_once("../../config.php");
 session_start();
-if (isset($_SESSION['tdn']) && isset($_SESSION['pas']) && isset($_SESSION['_loaitaikhoan']) && ($_SESSION['_loaitaikhoan']=='admin' || $_SESSION['_loaitaikhoan']=='khoahoc')) {
+if (isset($_SESSION['tdn']) && isset($_SESSION['pas']) && isset($_SESSION['_loaitaikhoan']) && ($_SESSION['_loaitaikhoan']=='admin' || $_SESSION['_loaitaikhoan']=='khoahoc') && $_SERVER['HTTP_X_REQUESTED_WITH'] == 'XMLHttpRequest') {
     $ketnoi = new clsKetnoi();
     if (!($ketnoi->checklogin($_SESSION['tdn'],$_SESSION['pas']))) {
         trangchu($qlkh['HOSTADMIN']);
@@ -46,7 +46,7 @@ $ex_sql = mysqli_query($conn, $sql);
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Đóng</button>
-                <button type="button" class="btn btn-primary" id="themnhom"><i class="fa fa-paper-plane"></i>&ensp;Gửi thông báo</button>
+                <button type="button" class="btn btn-primary" id="guithuchonhom"><i class="fa fa-paper-plane"></i>&ensp;Gửi thông báo</button>
             </div>
         </div>
     </div>

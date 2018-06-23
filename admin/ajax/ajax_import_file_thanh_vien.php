@@ -3,7 +3,7 @@ error_reporting(0);
 @ini_set('display_errors', 0);
 session_start();
 require_once("../../config.php");
-if (isset($_SESSION['tdn']) && isset($_SESSION['pas'])) {
+if (isset($_SESSION['tdn']) && isset($_SESSION['pas']) && isset($_SESSION['_loaitaikhoan']) && ($_SESSION['_loaitaikhoan']=='admin' || $_SESSION['_loaitaikhoan']=='khoahoc') && $_SERVER['HTTP_X_REQUESTED_WITH'] == 'XMLHttpRequest') {
     $ketnoi = new clsKetnoi();
     if (!($ketnoi->checklogin($_SESSION['tdn'],$_SESSION['pas']))) {
         trangchu($qlkh['HOSTADMIN']);

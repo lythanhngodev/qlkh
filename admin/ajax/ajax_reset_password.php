@@ -1,6 +1,9 @@
 <?php
 include_once("../../config.php");
 include_once ("../mail/guimail.php");
+if($_SERVER['HTTP_X_REQUESTED_WITH'] != 'XMLHttpRequest'){
+    trangchu($qlkh['HOSTADMIN']);
+}
 $mang = array(
     'trangthai' => 0,
     'thongbao' => ''

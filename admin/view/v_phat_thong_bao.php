@@ -287,9 +287,9 @@ if (!isset($_SESSION["token"])) {include_once ("../../loi404.html");exit();}
       });
     });
     $('#xacnhan').on('click',function () {
-      $('#danh-sach-mail').html('');
-      var bxn = [],xn = [];
-      $('#bangxacnhan').find('tr:not(:first)').each(function(i, row) {
+        $('#danh-sach-mail').html('');
+        var bxn = [],xn = [];
+        $('#bangxacnhan').find('tr:not(:first)').each(function(i, row) {
         var cols = [],dem=0;
         $(this).find('td').each(function(i, col) {
            if(dem==0){if($(this).find('input[type="checkbox"]').is(':checked')) cols.push(1); else cols.push(0);}
@@ -297,20 +297,157 @@ if (!isset($_SESSION["token"])) {include_once ("../../loi404.html");exit();}
             dem++;
         });
         bxn.push(cols);
-      });
-      bxn.map(function(t){
+        });
+        bxn.map(function(t){
         if(t[0]==1) xn.push(t[1]);
-      });
-      if(jQuery.isEmptyObject(xn)){
+        });
+        if(jQuery.isEmptyObject(xn)){
           swal('Ôi! Lỗi','Không có mục nào được chọn','error');
           return;
-      }
-      $('#modal-mail').modal('show');
-      xn.map(function(v){
+        }
+        $('#modal-mail').modal('show');
+        xn.map(function(v){
         $('#danh-sach-mail').append('<span class="danhsachmail">'+v+' <button class="btn btn-danger btn-sm xoa-tv-nhom"><i class="fa fa-times"></i></button></span>');
-      });
-      //var noidung =  CKEDITOR.instances['noidungmail'].getData();
+        });
+        });
     });
+    $(document).on('click','#guimail',function(){
+        var tieude = $('#tieudemail').val().trim();
+        var noidung = CKEDITOR.instances['noidungmail'].getData();
+        if(!tieude){
+            swal('Ôi! Lỗi','Chưa nhập tiêu đề','error');
+            return;
+        }
+        if(!noidung){
+            swal('Ôi! Lỗi','Chưa nhập nội dung','error');
+            return;
+        }
+        var ds=$('#danh-sach-mail').find('.danhsachmail').map(function(){
+            var temp=$(this).text().trim();
+            if (!jQuery.isEmptyObject(temp)) {
+                return temp;
+            }
+        }).toArray();
+        if(jQuery.isEmptyObject(ds)){
+            swal('Ôi! Lỗi','Chưa có thành viên nào được chọn','error');
+            return;
+        }
+      if(kiemtraketnoi()){
+          $.ajax({
+              url: 'ajax/ajax_gui_mail_thong_bao.php',
+              type: 'POST',
+              data: {
+                  tieude: tieude,
+                  noidung: noidung,
+                  ds: ds
+              },
+              beforeSend: function () {
+                  swal("Đợi đã!", "Vui lòng chờ đợi cho đến khi hoàn tất.", "info");
+              },
+              success: function (data) {
+                  var result = $.parseJSON(data);
+                  if(result.trangthai == 1){
+                      swal('Thành công','Đã phát thông báo thành công','success');
+                      setTimeout(function(){
+                        location.reload();
+                    }, 2000);
+                  }
+                  else
+                    swal('Ôi! Lỗi','Xảy ra lỗi, vui lòng thử lại','error');
+              },
+              error: function () {
+                  swal('Ôi! Lỗi','Xảy ra lỗi, vui lòng thử lại','error');
+              }
+          });
+      }
+      else
+          khongthanhcong('Không có kết nối internet');
+    });
+    $(document).on('click','#guithuchonhom',function(){
+        var tieude = $('#tieudemail2').val().trim();
+        var noidung = CKEDITOR.instances['noidungmail2'].getData();
+        if(!tieude){
+            swal('Ôi! Lỗi','Chưa nhập tiêu đề','error');
+            return;
+        }
+        if(!noidung){
+            swal('Ôi! Lỗi','Chưa nhập nội dung','error');
+            return;
+        }
+        var ds=$('#ct-tv-nhom').find('.chi-tiet-nhom').map(function(){
+            var temp=$(this).text().trim();
+            if (!jQuery.isEmptyObject(temp)) {
+                return temp;
+            }
+        }).toArray();
+        if(jQuery.isEmptyObject(ds)){
+            swal('Ôi! Lỗi','Chưa có thành viên nào được chọn','error');
+            return;
+        }
+        if(kiemtraketnoi()){
+          $.ajax({
+              url: 'ajax/ajax_gui_mail_thong_bao.php',
+              type: 'POST',
+              data: {
+                  tieude: tieude,
+                  noidung: noidung,
+                  ds: ds
+              },
+              beforeSend: function () {
+                  swal("Đợi đã!", "Vui lòng chờ đợi cho đến khi hoàn tất.", "info");
+              },
+              success: function (data) {
+                  var result = $.parseJSON(data);
+                  if(result.trangthai == 1){
+                      swal('Thành công','Đã phát thông báo thành công','success');
+                      setTimeout(function(){
+                        location.reload();
+                    }, 2000);
+                  }
+                  else
+                    swal('Ôi! Lỗi','Xảy ra lỗi, vui lòng thử lại','error');
+              },
+              error: function () {
+                  swal('Ôi! Lỗi','Xảy ra lỗi, vui lòng thử lại','error');
+              }
+          });
+        }
+        else
+          khongthanhcong('Không có kết nối internet');
+    });
+    $(document).on('click','.xoanhom',function(){
+        var conf = confirm('Bạn có chắc xoá nhóm này không?');
+        if (!conf) {
+            return;
+        }
+        if(kiemtraketnoi()){
+          $.ajax({
+              url: 'ajax/ajax_xoa_nhom_thong_bao.php',
+              type: 'POST',
+              data: {
+                  nhom: $(this).parent('span').attr('lydata')
+              },
+              beforeSend: function () {
+                  swal("Đợi đã!", "Vui lòng chờ đợi cho đến khi hoàn tất.", "info");
+              },
+              success: function (data) {
+                  var result = $.parseJSON(data);
+                  if(result.trangthai == 1){
+                      swal('Thành công','Đã xoá nhóm thành công','success');
+                      setTimeout(function(){
+                        location.reload();
+                    }, 2000);
+                  }
+                  else
+                    swal('Ôi! Lỗi','Xảy ra lỗi, vui lòng thử lại','error');
+              },
+              error: function () {
+                  swal('Ôi! Lỗi','Xảy ra lỗi, vui lòng thử lại','error');
+              }
+          });
+        }
+        else
+          khongthanhcong('Không có kết nối internet');
     });
     $(document).ready(function() {
         $('#bangxacnhan').DataTable({

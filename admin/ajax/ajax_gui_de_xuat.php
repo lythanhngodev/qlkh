@@ -1,15 +1,7 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Ly Thanh Ngo
- * Date: 12/04/2018
- * Time: 9:42 AM
- */
-?>
-<?php
 include_once("../../config.php");
 session_start();
-if (isset($_SESSION['tdn']) && isset($_SESSION['pas'])) {
+if (isset($_SESSION['tdn']) && isset($_SESSION['pas']) && $_SERVER['HTTP_X_REQUESTED_WITH'] == 'XMLHttpRequest') {
     $ketnoi = new clsKetnoi();
     if (!($ketnoi->checklogin($_SESSION['tdn'],$_SESSION['pas']))) {
         trangchu($qlkh['HOSTADMIN']);
