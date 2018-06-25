@@ -3,33 +3,7 @@
 <html lang='vi'>
 <head>
 <meta charset="utf-8">
-	<?php include_once "header.php" ?>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="theme-color" content="#2b7ce0">
-	<meta content="INDEX,FOLLOW" name="robots" />
-	<meta http-equiv="cache-control" content="max-age=3600" />
-	<meta HTTP-EQUIV="CACHE-CONTROL" content="NO-STORE">
-	<meta name="COPYRIGHT" content="&copy; 2018 P. NCKH &amp; HTQT SPKT Vĩnh Long">
-	<meta name="Designer" content="Ngô Thanh Lý | lythanhngodev@gmail.com">
-	<meta name="GENERATOR" content="NCKH & HTQT VLUTE" />
-	<base href="<?php echo $qlkh['HOSTGOC'] ?>" />
-	<script type="text/javascript">
-		var giftofspeed = document.createElement('link');
-		giftofspeed.rel = 'stylesheet';
-		giftofspeed.href = 'css/style.css';
-		giftofspeed.type = 'text/css';
-		var godefer = document.getElementsByTagName('link')[0];
-		godefer.parentNode.insertBefore(giftofspeed, godefer);
-		var giftofspeed2 = document.createElement('link');
-		giftofspeed2.rel = 'stylesheet';
-		giftofspeed2.href = 'fontawesome/web-fonts-with-css/css/fontawesome-all.css';
-		giftofspeed2.type = 'text/css';
-		var godefer2 = document.getElementsByTagName('link')[0];
-		godefer2.parentNode.insertBefore(giftofspeed2, godefer2);
-	</script>
-	<script src="js/jquery-3.3.1.min.js"></script>
-	<script src="js/superfish.js" type="text/javascript"></script>
-	<script type="text/javascript">$(function() {$('ul.sf-menu').superfish();});</script>
+	<?php include_once "header.php" ?><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="theme-color" content="#2b7ce0"><meta content="INDEX,FOLLOW" name="robots" /><meta http-equiv="cache-control" content="max-age=3600" /><meta HTTP-EQUIV="CACHE-CONTROL" content="NO-STORE"><meta name="COPYRIGHT" content="&copy; 2018 P. NCKH &amp; HTQT SPKT Vĩnh Long"><meta name="Designer" content="Ngô Thanh Lý | lythanhngodev@gmail.com"><meta name="GENERATOR" content="NCKH & HTQT VLUTE" /><base href="<?php echo $qlkh['HOSTGOC'] ?>" /><script type="text/javascript">var _ltn_ = document.createElement('link');_ltn_.rel = 'stylesheet';_ltn_.href = 'css/style.css';_ltn_.type = 'text/css';var _gl = document.getElementsByTagName('link')[0];_gl.parentNode.insertBefore(_ltn_, _gl);var __ltn_ = document.createElement('link');__ltn_.rel = 'stylesheet';__ltn_.href = 'fontawesome/web-fonts-with-css/css/fontawesome-all.css';__ltn_.type = 'text/css';var __gl = document.getElementsByTagName('link')[0];__gl.parentNode.insertBefore(__ltn_, __gl);</script><script src="js/jquery-3.3.1.min.js"></script><script src="js/superfish.js" type="text/javascript"></script><script type="text/javascript">$(function() {$('ul.sf-menu').superfish();});</script><script>window.fbAsyncInit = function() {FB.init({appId: '2165745763451934',xfbml: true,version: 'v3.0'});FB.AppEvents.logPageView();};(function(d, s, id){var js, fjs = d.getElementsByTagName(s)[0];if (d.getElementById(id)) {return;}js = d.createElement(s); js.id = id;js.src = "https://connect.facebook.net/en_US/sdk.js";fjs.parentNode.insertBefore(js, fjs);}(document, 'script', 'facebook-jssdk'));</script><script async src="https://www.googletagmanager.com/gtag/js?id=UA-77436024-2"></script><script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'UA-77436024-2');</script>
 	<script type="application/ld+json">
 		{
 		  "@context": "http://schema.org",
@@ -42,32 +16,6 @@
 		    "contactType": "customer service"
 		  }]
 		}
-	</script>
-	<script>
-	  window.fbAsyncInit = function() {
-	    FB.init({
-	      appId      : '2165745763451934',
-	      xfbml      : true,
-	      version    : 'v3.0'
-	    });
-	    FB.AppEvents.logPageView();
-	  };
-	  (function(d, s, id){
-	     var js, fjs = d.getElementsByTagName(s)[0];
-	     if (d.getElementById(id)) {return;}
-	     js = d.createElement(s); js.id = id;
-	     js.src = "https://connect.facebook.net/en_US/sdk.js";
-	     fjs.parentNode.insertBefore(js, fjs);
-	   }(document, 'script', 'facebook-jssdk'));
-	</script>
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-77436024-2"></script>
-	<script>
-	  window.dataLayer = window.dataLayer || [];
-	  function gtag(){dataLayer.push(arguments);}
-	  gtag('js', new Date());
-
-	  gtag('config', 'UA-77436024-2');
 	</script>
 </head>
 <body>
@@ -170,19 +118,7 @@
 			</div>
 		</div>
 	</div>
-		<div id="timkiemgg">
-			<script>
-			  (function() {
-			    var cx = '011375218569618766485:2vgaz9qfk-w';
-			    var gcse = document.createElement('script');
-			    gcse.type = 'text/javascript';
-			    gcse.async = true;
-			    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
-			    var s = document.getElementsByTagName('script')[0];
-			    s.parentNode.insertBefore(gcse, s);
-			  })();
-			</script>
-			<gcse:search enableAutoComplete="true"></gcse:search>
+		<div id="timkiemgg"><script>(function() {var cx = '011375218569618766485:2vgaz9qfk-w';var gcse = document.createElement('script');gcse.type = 'text/javascript';gcse.async = true;gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(gcse, s);})();</script><gcse:search enableAutoComplete="true"></gcse:search>
 		</div>
 </div>
 </body>

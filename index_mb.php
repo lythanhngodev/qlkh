@@ -2,56 +2,13 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-	<meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-  <meta name="theme-color" content="#2b7ce0">
-  <meta content="INDEX,FOLLOW" name="robots" />
-  <meta http-equiv="cache-control" content="max-age=3600" />
-  <meta HTTP-EQUIV="CACHE-CONTROL" content="NO-STORE">
-  <meta name="COPYRIGHT" content="&copy; 2018 P. NCKH &amp; HTQT SPKT Vĩnh Long">
-  <meta name="Designer" content="Ngô Thanh Lý | lythanhngodev@gmail.com">
-  <meta name="GENERATOR" content="NCKH & HTQT VLUTE" />
-	<?php include_once "header.php" ?>
-	<base href="<?php echo $qlkh['HOSTGOC'] ?>" />
-  <script type="text/javascript">
-    var _ltn = document.createElement('link');
-    _ltn.rel = 'stylesheet';
-    _ltn.href = 'css/style-mb.css';
-    _ltn.type = 'text/css';
-    var _go_ = document.getElementsByTagName('link')[0];
-    _go_.parentNode.insertBefore(_ltn, _go_);
-  </script>
-  <script src="js/jquery-3.3.1.min.js" type="text/javascript"></script>
+	<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" /><meta name="theme-color" content="#2b7ce0"><meta content="INDEX,FOLLOW" name="robots" /><meta http-equiv="cache-control" content="max-age=3600" /><meta HTTP-EQUIV="CACHE-CONTROL" content="NO-STORE"><meta name="COPYRIGHT" content="&copy; 2018 P. NCKH &amp; HTQT SPKT Vĩnh Long"><meta name="Designer" content="Ngô Thanh Lý | lythanhngodev@gmail.com"><meta name="GENERATOR" content="NCKH & HTQT VLUTE" /><?php include_once "header.php" ?><base href="<?php echo $qlkh['HOSTGOC'] ?>" /><script type="text/javascript">var _ltn = document.createElement('link');_ltn.rel = 'stylesheet';_ltn.href = 'css/style-mb.css';_ltn.type = 'text/css';var _go_ = document.getElementsByTagName('link')[0];_go_.parentNode.insertBefore(_ltn, _go_);</script><script src="js/jquery-3.3.1.min.js" type="text/javascript"></script>
 </head>
 <body>
-<div id="fb-root"></div>
-  <script>
-    window.fbAsyncInit = function() {
-      FB.init({
-        appId      : '2165745763451934',
-        xfbml      : true,
-        version    : 'v3.0'
-      });
-      FB.AppEvents.logPageView();
-    };
-    (function(d, s, id){
-       var js, fjs = d.getElementsByTagName(s)[0];
-       if (d.getElementById(id)) {return;}
-       js = d.createElement(s); js.id = id;
-       js.src = "https://connect.facebook.net/en_US/sdk.js";
-       fjs.parentNode.insertBefore(js, fjs);
-     }(document, 'script', 'facebook-jssdk'));
-  </script>
+<div id="fb-root"></div><script>window.fbAsyncInit = function() {FB.init({appId: '2165745763451934',xfbml: true,version: 'v3.0'});FB.AppEvents.logPageView();};(function(d, s, id){var js, fjs = d.getElementsByTagName(s)[0];if (d.getElementById(id)) {return;}js = d.createElement(s); js.id = id;js.src = "https://connect.facebook.net/en_US/sdk.js";fjs.parentNode.insertBefore(js, fjs);}(document, 'script', 'facebook-jssdk'));</script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-77436024-2"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-77436024-2');
-</script>
-
+<script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'UA-77436024-2');</script>
 <div class="progress" style="z-index: 9999;position: fixed;bottom: 0;border-radius:  0;height: 5px;background: transparent;left:  0;right: 0;">
   <div class="progress-bar" id="daluot" style="background: linear-gradient(130deg, #58d9d0 0%, #4a99fa 100%);transition: none;"></div>
 </div>
