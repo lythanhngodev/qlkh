@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="e784096a-f6cb-467c-8cbe-b1eae1f3bf23" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/admin/mail/guimail.php" afterPath="$PROJECT_DIR$/admin/mail/guimail.php" />
-      <change beforePath="$PROJECT_DIR$/admin/view/v_phat_thong_bao.php" afterPath="$PROJECT_DIR$/admin/view/v_phat_thong_bao.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -50,25 +48,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="v_xem_de_xuat.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/admin/view/v_xem_de_xuat.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="378">
-              <caret line="14" column="22" lean-forward="false" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="kehoachxetchonnghiemthu" pinned="false" current-in-tab="false">
-        <entry file="das://table:/f683da9/7100f002-45e7-4ecd-b4f9-feb8543b2f12/nckh.kehoachxetchonnghiemthu">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="console_17.sql" pinned="false" current-in-tab="false">
         <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/7100f002-45e7-4ecd-b4f9-feb8543b2f12/console_17.sql">
           <provider selected="true" editor-type-id="text-editor">
@@ -82,20 +61,69 @@
       <file leaf-file-name="guimail.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/admin/mail/guimail.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="448">
-              <caret line="40" column="5" lean-forward="true" selection-start-line="40" selection-start-column="5" selection-end-line="40" selection-end-column="5" />
+            <state relative-caret-position="1080">
+              <caret line="40" column="5" lean-forward="false" selection-start-line="40" selection-start-column="5" selection-end-line="40" selection-end-column="5" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ajax_gui_mail_thong_bao.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ajax_gui_mail_thong_bao.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/admin/ajax/ajax_gui_mail_thong_bao.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="744">
-              <caret line="43" column="1" lean-forward="false" selection-start-line="43" selection-start-column="1" selection-end-line="43" selection-end-column="1" />
+            <state relative-caret-position="648">
+              <caret line="24" column="20" lean-forward="false" selection-start-line="24" selection-start-column="20" selection-end-line="24" selection-end-column="20" />
               <folding>
-                <marker date="1529767474873" expanded="true" signature="740:781" ph="SELECT mail,... caidat" />
+                <marker date="1529796127507" expanded="true" signature="776:817" ph="SELECT mail,... caidat" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ajax_chu_nhiem_up_file.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/admin/ajax/ajax_chu_nhiem_up_file.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ajax_danh_gia_nghiem_thu_up_file.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/admin/ajax/ajax_danh_gia_nghiem_thu_up_file.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ajax_luu_thong_tin_nguoi_dung.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/admin/ajax/ajax_luu_thong_tin_nguoi_dung.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="339">
+              <caret line="141" column="5" lean-forward="false" selection-start-line="141" selection-start-column="5" selection-end-line="141" selection-end-column="5" />
+              <folding>
+                <marker date="1529796233089" expanded="true" signature="2938:3913" ph="UPDATE `nguoidung`... " />
+                <marker date="1529796233089" expanded="true" signature="3954:4922" ph="UPDATE `nguoidung`... " />
+                <marker date="1529796233089" expanded="true" signature="4948:5008" ph="DELETE FROM nguoidung_chucdanhgiangvien... " />
+                <marker date="1529796233089" expanded="true" signature="5023:5114" ph="INSERT INTO nguoidung_chucdanhgiangvien... " />
+                <marker date="1529796233089" expanded="true" signature="5130:5189" ph="DELETE FROM nguoidung_trinhdochuyenmon... " />
+                <marker date="1529796233089" expanded="true" signature="5204:5293" ph="INSERT INTO nguoidung_trinhdochuyenmon... " />
+                <marker date="1529796233089" expanded="true" signature="5309:5357" ph="DELETE FROM nguoidung_hocvi... " />
+                <marker date="1529796233089" expanded="true" signature="5372:5446" ph="INSERT INTO nguoidung_hocvi... " />
+                <marker date="1529796233089" expanded="true" signature="5462:5520" ph="DELETE FROM nguoidung_chucdanhkhoahoc... " />
+                <marker date="1529796233089" expanded="true" signature="5535:5622" ph="INSERT INTO nguoidung_chucdanhkhoahoc... " />
+                <marker date="1529796233089" expanded="true" signature="5638:5687" ph="DELETE FROM nguoidung_chucvu... " />
+                <marker date="1529796233089" expanded="true" signature="5702:5771" ph="INSERT INTO nguoidung_chucvu... " />
+                <marker date="1529796233089" expanded="true" signature="5787:5839" ph="DELETE FROM nguoidung_khoabomon... " />
+                <marker date="1529796233089" expanded="true" signature="5854:5933" ph="INSERT INTO nguoidung_khoabomon... " />
+                <marker date="1529796233089" expanded="true" signature="5953:5996" ph="DELETE FROM `daihoc`... " />
+                <marker date="1529796233089" expanded="true" signature="6083:6220" ph="INSERT INTO `daihoc`... " />
+                <marker date="1529796233089" expanded="true" signature="6508:6561" ph="DELETE FROM `congtacchuyenmon`... " />
+                <marker date="1529796233089" expanded="true" signature="6646:6754" ph="INSERT INTO `congtacchuyenmon`... " />
               </folding>
             </state>
           </provider>
@@ -104,24 +132,24 @@
       <file leaf-file-name="ajax_xac_nhan_tai_khoan.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/admin/ajax/ajax_xac_nhan_tai_khoan.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="589">
-              <caret line="42" column="94" lean-forward="true" selection-start-line="42" selection-start-column="16" selection-end-line="42" selection-end-column="94" />
+            <state relative-caret-position="1134">
+              <caret line="42" column="94" lean-forward="false" selection-start-line="42" selection-start-column="16" selection-end-line="42" selection-end-column="94" />
               <folding>
-                <marker date="1527639413082" expanded="true" signature="638:829" ph="UPDATE nguoidung... " />
-                <marker date="1527639413082" expanded="true" signature="911:952" ph="SELECT mail,... caidat" />
-                <marker date="1527639413082" expanded="true" signature="1072:1151" ph="..." />
-                <marker date="1527639413082" expanded="true" signature="1165:1262" ph="..." />
-                <marker date="1527639413082" expanded="true" signature="1276:1344" ph="..." />
-                <marker date="1527639413082" expanded="true" signature="1357:1455" ph="..." />
-                <marker date="1527639413082" expanded="true" signature="1499:1555" ph="..." />
-                <marker date="1527639413082" expanded="true" signature="1568:1610" ph="..." />
-                <marker date="1527639413082" expanded="true" signature="1649:1703" ph="..." />
-                <marker date="1527639413082" expanded="true" signature="1755:1772" ph="..." />
-                <marker date="1527639413082" expanded="true" signature="1785:1839" ph="..." />
-                <marker date="1527639413082" expanded="true" signature="1903:1957" ph="..." />
-                <marker date="1527639413082" expanded="true" signature="2047:2218" ph="..." />
-                <marker date="1527639413082" expanded="true" signature="2269:2370" ph="..." />
-                <marker date="1527639413082" expanded="true" signature="2430:2532" ph="..." />
+                <marker date="1529796888110" expanded="true" signature="814:1005" ph="UPDATE nguoidung... " />
+                <marker date="1529796888110" expanded="true" signature="1087:1128" ph="SELECT mail,... caidat" />
+                <marker date="1529796888110" expanded="true" signature="1248:1327" ph="..." />
+                <marker date="1529796888110" expanded="true" signature="1341:1438" ph="..." />
+                <marker date="1529796888110" expanded="true" signature="1452:1520" ph="..." />
+                <marker date="1529796888110" expanded="true" signature="1533:1631" ph="..." />
+                <marker date="1529796888110" expanded="true" signature="1675:1731" ph="..." />
+                <marker date="1529796888110" expanded="true" signature="1744:1786" ph="..." />
+                <marker date="1529796888110" expanded="true" signature="1825:1879" ph="..." />
+                <marker date="1529796888110" expanded="true" signature="1931:1948" ph="..." />
+                <marker date="1529796888110" expanded="true" signature="1961:2015" ph="..." />
+                <marker date="1529796888110" expanded="true" signature="2079:2133" ph="..." />
+                <marker date="1529796888110" expanded="true" signature="2223:2394" ph="..." />
+                <marker date="1529796888110" expanded="true" signature="2445:2546" ph="..." />
+                <marker date="1529796888110" expanded="true" signature="2606:2708" ph="..." />
               </folding>
             </state>
           </provider>
@@ -133,8 +161,9 @@
             <state relative-caret-position="5130">
               <caret line="190" column="11" lean-forward="false" selection-start-line="190" selection-start-column="11" selection-end-line="190" selection-end-column="11" />
               <folding>
-                <marker date="1529767007037" expanded="true" signature="15917:15925" ph="{...}" />
-                <marker date="1529767007037" expanded="true" signature="15999:16093" ph="{&quot;scrollY&quot;: &quot;350px&quot;...}" />
+                <marker date="1529794518537" expanded="true" signature="13032:13951" ph="{...}" />
+                <marker date="1529794518537" expanded="true" signature="18842:18913" ph="{...}" />
+                <marker date="1529794518537" expanded="true" signature="18905:18913" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -146,8 +175,8 @@
             <state relative-caret-position="1377">
               <caret line="51" column="50" lean-forward="false" selection-start-line="51" selection-start-column="50" selection-end-line="51" selection-end-column="50" />
               <folding>
-                <marker date="1529653157738" expanded="true" signature="711:765" ph="INSERT INTO nhomthongbao... " />
-                <marker date="1529653157738" expanded="true" signature="956:1004" ph="SELECT IDND nguoidung" />
+                <marker date="1529796598177" expanded="true" signature="768:822" ph="INSERT INTO nhomthongbao... " />
+                <marker date="1529796598177" expanded="true" signature="1013:1061" ph="SELECT IDND nguoidung" />
               </folding>
             </state>
           </provider>
@@ -224,6 +253,7 @@
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/7100f002-45e7-4ecd-b4f9-feb8543b2f12/console_17.sql" />
         <option value="$PROJECT_DIR$/admin/mail/guimail.php" />
         <option value="$PROJECT_DIR$/admin/ajax/ajax_gui_mail_thong_bao.php" />
+        <option value="$PROJECT_DIR$/admin/ajax/ajax_luu_thong_tin_nguoi_dung.php" />
       </list>
     </option>
   </component>
@@ -281,6 +311,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
@@ -327,13 +358,12 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="settings.editor.selected.configurable" value="configurable.group.build" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../onhtml" />
     <property name="WebServerToolWindowFactoryState" value="true" />
     <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
@@ -412,6 +442,8 @@
       <workItem from="1529724464523" duration="735000" />
       <workItem from="1529745376519" duration="2510000" />
       <workItem from="1529765569584" duration="1077000" />
+      <workItem from="1529982810173" duration="687000" />
+      <workItem from="1529993878134" duration="213000" />
     </task>
     <task id="LOCAL-00001" summary="Start up">
       <created>1525824037964</created>
@@ -452,14 +484,14 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="141419000" />
+    <option name="totallyTimeSpent" value="142319000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="32" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1359275" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13859275" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -522,27 +554,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="das://table:/f683da9/7100f002-45e7-4ecd-b4f9-feb8543b2f12/nckh.baokhoahoc">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/7100f002-45e7-4ecd-b4f9-feb8543b2f12/console_9.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="14" column="113" lean-forward="false" selection-start-line="14" selection-start-column="113" selection-end-line="14" selection-end-column="113" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://table:/f683da9/7100f002-45e7-4ecd-b4f9-feb8543b2f12/nckh.linhvuckhoahoc">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/7100f002-45e7-4ecd-b4f9-feb8543b2f12/console_11.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="351">
@@ -807,7 +818,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="378">
           <caret line="14" column="22" lean-forward="false" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -843,8 +853,8 @@
         <state relative-caret-position="1377">
           <caret line="51" column="50" lean-forward="false" selection-start-line="51" selection-start-column="50" selection-end-line="51" selection-end-column="50" />
           <folding>
-            <marker date="1529653157738" expanded="true" signature="711:765" ph="INSERT INTO nhomthongbao... " />
-            <marker date="1529653157738" expanded="true" signature="956:1004" ph="SELECT IDND nguoidung" />
+            <marker date="1529796598177" expanded="true" signature="768:822" ph="INSERT INTO nhomthongbao... " />
+            <marker date="1529796598177" expanded="true" signature="1013:1061" ph="SELECT IDND nguoidung" />
           </folding>
         </state>
       </provider>
@@ -854,8 +864,9 @@
         <state relative-caret-position="5130">
           <caret line="190" column="11" lean-forward="false" selection-start-line="190" selection-start-column="11" selection-end-line="190" selection-end-column="11" />
           <folding>
-            <marker date="1529767007037" expanded="true" signature="15917:15925" ph="{...}" />
-            <marker date="1529767007037" expanded="true" signature="15999:16093" ph="{&quot;scrollY&quot;: &quot;350px&quot;...}" />
+            <marker date="1529794518537" expanded="true" signature="13032:13951" ph="{...}" />
+            <marker date="1529794518537" expanded="true" signature="18842:18913" ph="{...}" />
+            <marker date="1529794518537" expanded="true" signature="18905:18913" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -870,42 +881,85 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/admin/mail/guimail.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="448">
-          <caret line="40" column="5" lean-forward="true" selection-start-line="40" selection-start-column="5" selection-end-line="40" selection-end-column="5" />
+        <state relative-caret-position="1080">
+          <caret line="40" column="5" lean-forward="false" selection-start-line="40" selection-start-column="5" selection-end-line="40" selection-end-column="5" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/admin/ajax/ajax_xac_nhan_tai_khoan.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="589">
-          <caret line="42" column="94" lean-forward="true" selection-start-line="42" selection-start-column="16" selection-end-line="42" selection-end-column="94" />
+        <state relative-caret-position="1134">
+          <caret line="42" column="94" lean-forward="false" selection-start-line="42" selection-start-column="16" selection-end-line="42" selection-end-column="94" />
           <folding>
-            <marker date="1527639413082" expanded="true" signature="638:829" ph="UPDATE nguoidung... " />
-            <marker date="1527639413082" expanded="true" signature="911:952" ph="SELECT mail,... caidat" />
-            <marker date="1527639413082" expanded="true" signature="1072:1151" ph="..." />
-            <marker date="1527639413082" expanded="true" signature="1165:1262" ph="..." />
-            <marker date="1527639413082" expanded="true" signature="1276:1344" ph="..." />
-            <marker date="1527639413082" expanded="true" signature="1357:1455" ph="..." />
-            <marker date="1527639413082" expanded="true" signature="1499:1555" ph="..." />
-            <marker date="1527639413082" expanded="true" signature="1568:1610" ph="..." />
-            <marker date="1527639413082" expanded="true" signature="1649:1703" ph="..." />
-            <marker date="1527639413082" expanded="true" signature="1755:1772" ph="..." />
-            <marker date="1527639413082" expanded="true" signature="1785:1839" ph="..." />
-            <marker date="1527639413082" expanded="true" signature="1903:1957" ph="..." />
-            <marker date="1527639413082" expanded="true" signature="2047:2218" ph="..." />
-            <marker date="1527639413082" expanded="true" signature="2269:2370" ph="..." />
-            <marker date="1527639413082" expanded="true" signature="2430:2532" ph="..." />
+            <marker date="1529796888110" expanded="true" signature="814:1005" ph="UPDATE nguoidung... " />
+            <marker date="1529796888110" expanded="true" signature="1087:1128" ph="SELECT mail,... caidat" />
+            <marker date="1529796888110" expanded="true" signature="1248:1327" ph="..." />
+            <marker date="1529796888110" expanded="true" signature="1341:1438" ph="..." />
+            <marker date="1529796888110" expanded="true" signature="1452:1520" ph="..." />
+            <marker date="1529796888110" expanded="true" signature="1533:1631" ph="..." />
+            <marker date="1529796888110" expanded="true" signature="1675:1731" ph="..." />
+            <marker date="1529796888110" expanded="true" signature="1744:1786" ph="..." />
+            <marker date="1529796888110" expanded="true" signature="1825:1879" ph="..." />
+            <marker date="1529796888110" expanded="true" signature="1931:1948" ph="..." />
+            <marker date="1529796888110" expanded="true" signature="1961:2015" ph="..." />
+            <marker date="1529796888110" expanded="true" signature="2079:2133" ph="..." />
+            <marker date="1529796888110" expanded="true" signature="2223:2394" ph="..." />
+            <marker date="1529796888110" expanded="true" signature="2445:2546" ph="..." />
+            <marker date="1529796888110" expanded="true" signature="2606:2708" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/admin/ajax/ajax_gui_mail_thong_bao.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="744">
-          <caret line="43" column="1" lean-forward="false" selection-start-line="43" selection-start-column="1" selection-end-line="43" selection-end-column="1" />
+        <state relative-caret-position="648">
+          <caret line="24" column="20" lean-forward="false" selection-start-line="24" selection-start-column="20" selection-end-line="24" selection-end-column="20" />
           <folding>
-            <marker date="1529767474873" expanded="true" signature="740:781" ph="SELECT mail,... caidat" />
+            <marker date="1529796127507" expanded="true" signature="776:817" ph="SELECT mail,... caidat" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/ajax/ajax_chu_nhiem_up_file.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/ajax/ajax_danh_gia_nghiem_thu_up_file.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/ajax/ajax_luu_thong_tin_nguoi_dung.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="339">
+          <caret line="141" column="5" lean-forward="false" selection-start-line="141" selection-start-column="5" selection-end-line="141" selection-end-column="5" />
+          <folding>
+            <marker date="1529796233089" expanded="true" signature="2938:3913" ph="UPDATE `nguoidung`... " />
+            <marker date="1529796233089" expanded="true" signature="3954:4922" ph="UPDATE `nguoidung`... " />
+            <marker date="1529796233089" expanded="true" signature="4948:5008" ph="DELETE FROM nguoidung_chucdanhgiangvien... " />
+            <marker date="1529796233089" expanded="true" signature="5023:5114" ph="INSERT INTO nguoidung_chucdanhgiangvien... " />
+            <marker date="1529796233089" expanded="true" signature="5130:5189" ph="DELETE FROM nguoidung_trinhdochuyenmon... " />
+            <marker date="1529796233089" expanded="true" signature="5204:5293" ph="INSERT INTO nguoidung_trinhdochuyenmon... " />
+            <marker date="1529796233089" expanded="true" signature="5309:5357" ph="DELETE FROM nguoidung_hocvi... " />
+            <marker date="1529796233089" expanded="true" signature="5372:5446" ph="INSERT INTO nguoidung_hocvi... " />
+            <marker date="1529796233089" expanded="true" signature="5462:5520" ph="DELETE FROM nguoidung_chucdanhkhoahoc... " />
+            <marker date="1529796233089" expanded="true" signature="5535:5622" ph="INSERT INTO nguoidung_chucdanhkhoahoc... " />
+            <marker date="1529796233089" expanded="true" signature="5638:5687" ph="DELETE FROM nguoidung_chucvu... " />
+            <marker date="1529796233089" expanded="true" signature="5702:5771" ph="INSERT INTO nguoidung_chucvu... " />
+            <marker date="1529796233089" expanded="true" signature="5787:5839" ph="DELETE FROM nguoidung_khoabomon... " />
+            <marker date="1529796233089" expanded="true" signature="5854:5933" ph="INSERT INTO nguoidung_khoabomon... " />
+            <marker date="1529796233089" expanded="true" signature="5953:5996" ph="DELETE FROM `daihoc`... " />
+            <marker date="1529796233089" expanded="true" signature="6083:6220" ph="INSERT INTO `daihoc`... " />
+            <marker date="1529796233089" expanded="true" signature="6508:6561" ph="DELETE FROM `congtacchuyenmon`... " />
+            <marker date="1529796233089" expanded="true" signature="6646:6754" ph="INSERT INTO `congtacchuyenmon`... " />
           </folding>
         </state>
       </provider>
