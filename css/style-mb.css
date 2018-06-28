@@ -88,14 +88,6 @@ hr{margin-top:1rem;margin-bottom:1rem;border:0;border-top:1px solid rgba(0, 0, 0
 small,.small{font-size:80%;font-weight:400;}
 mark,.mark{padding:0.2em;background-color:#fcf8e3;}
 .container{width:100%;padding-right:15px;padding-left:15px;margin-right:auto;margin-left:auto;}
-@media (min-width:576px){.container{max-width:540px;}
-}
-@media (min-width:768px){.container{max-width:720px;}
-}
-@media (min-width:992px){.container{max-width:960px;}
-}
-@media (min-width:1200px){.container{max-width:1140px;}
-}
 .container-fluid{width:100%;padding-right:15px;padding-left:15px;margin-right:auto;margin-left:auto;}
 .row{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;margin-right:-15px;margin-left:-15px;}
 .no-gutters{margin-right:0;margin-left:0;}
@@ -309,4 +301,5 @@ a.text-dark:hover, a.text-dark:focus{color:#1d2124 !important;}
 .text-hide{font:0/0 a;color:transparent;text-shadow:none;background-color:transparent;border:0;}
 .visible{visibility:visible !important;}
 .invisible{visibility:hidden !important;}
+body{display: block !important;}
 #back-to-top{cursor: pointer;position: fixed;bottom: 10px;right: 15px;display: none;width: 40px;height: 40px;margin: 0 auto;}.table th, .table td{padding: 0.3rem !important;}.hidden{visibility: hidden;}
