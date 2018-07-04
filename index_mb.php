@@ -27,13 +27,8 @@
       <li class="nav-item" id="trangchu">
         <a class="nav-link" href="<?php echo $qlkh['HOSTGOC'] ?>">Trang chủ</a>
       </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Giới thiệu
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="http://vlute.edu.vn/index.php/nghien-cuu-khoa-hoc" target="_blank">Giới thiệu chung</a>
-        </div>
+      <li class="nav-item" id="bieumau">
+        <a class="nav-link" href="http://vlute.edu.vn/index.php/nghien-cuu-khoa-hoc" target="_blank">Giới thiệu chung</a>
       </li>
       <li class="nav-item dropdown" id="nckh">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -102,16 +97,8 @@
 <script async type="text/javascript" src="js/bootstrap.js" ></script>
 <script type="text/javascript">
 function getDocHeight() {var D = document;return Math.max(D.body.scrollHeight, D.documentElement.scrollHeight,D.body.offsetHeight, D.documentElement.offsetHeight,D.body.clientHeight, D.documentElement.clientHeight);}
-  $(document).ready(function(){
-    //$('.thantrangmb').fadeIn(200);
      $(window).scroll(function () {
-        if ($(this).scrollTop() > 200)
-            $('#back-to-top').fadeIn();
-        else
-            $('#back-to-top').fadeOut();
-        $('#daluot').css("width",($(window).scrollTop()/($(document).height()-$(window).height())*100)+"%");
-        if ($(window).scrollTop() + $(window).height() + $('.footer').height() + 15 >= getDocHeight())
-            $('#daluot').css("width","100%");
+        ($(this).scrollTop() > 200) && $('#back-to-top').fadeIn() || $('#back-to-top').fadeOut(); $('#daluot').css("width",($(window).scrollTop()/($(document).height()-$(window).height())*100)+"%"); ($(window).scrollTop() + $(window).height() + $('.footer').height() + 15 >= getDocHeight()) && $('#daluot').css("width","100%");
     });
     $('#back-to-top').click(function () {
         $('#back-to-top').tooltip('hide');
@@ -119,7 +106,6 @@ function getDocHeight() {var D = document;return Math.max(D.body.scrollHeight, D
             scrollTop: 0
         }, 400);
     });
-});
 </script>
 </body>
 </html>
