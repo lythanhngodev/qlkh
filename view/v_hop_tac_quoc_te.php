@@ -72,7 +72,7 @@
                 while ($row = mysqli_fetch_assoc($tinmoi)) { ?>
                 <a href="?p=xemtin&id=<?php echo $row['IDBV']; ?>&tieude=<?php echo $row['TENBV']; ?>">
                     <div class="tincon">
-                        <div class="hinhtin" style="background-image: url('_thumbs/<?php echo $row['HINHANH']; ?>');"></div>
+                        <div class="hinhtin lazyload" data-src="_thumbs/<?php echo $row['HINHANH']; ?>" style="background-image: url();"></div>
                         <div class="tomtattin"><?php echo $row['TENBV'] ?></div>
                     </div>  
                 </a>
@@ -90,7 +90,7 @@
                 while ($row = mysqli_fetch_assoc($htqt)) { ?>
                 <a href="xemtin/<?php echo $row['LINKBV']; ?>-<?php echo $row['IDBV']; ?>.ltn">
                     <div class="tincon">
-                        <div class="hinhtin" style="background-image: url('_thumbs/<?php echo $row['HINHANH']; ?>');"></div>
+                        <div class="hinhtin lazyload" data-src="_thumbs/<?php echo $row['HINHANH']; ?>" style="background-image: url();"></div>
                         <div class="tomtattin"><?php echo $row['TENBV'] ?></div>
                     </div>  
                 </a>
