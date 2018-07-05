@@ -117,7 +117,7 @@
 	</div>
 		<div id="timkiemgg"><script>(function() {var cx = '011375218569618766485:2vgaz9qfk-w';var gcse = document.createElement('script');gcse.type = 'text/javascript';gcse.async = true;gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(gcse, s);})();</script><gcse:search enableAutoComplete="true"></gcse:search>
 		</div>
-		<script async="async" type="text/javascript" src="js/lazy.js"></script>
+		<script type="text/javascript" src="js/lazy.js"></script>
 </div>
 </body>
 </html>
