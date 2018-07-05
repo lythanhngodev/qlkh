@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-	<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" /><meta name="theme-color" content="#2b7ce0"><meta content="INDEX,FOLLOW" name="robots" /><meta name="COPYRIGHT" content="&copy; 2018 P. NCKH &amp; HTQT SPKT Vĩnh Long"><meta name="Designer" content="Ngô Thanh Lý | lythanhngodev@gmail.com"><meta name="GENERATOR" content="NCKH & HTQT VLUTE" /><?php include_once "header.php" ?><base href="<?php echo $qlkh['HOSTGOC'] ?>" /><script type="text/javascript">var _ltn = document.createElement('link');_ltn.rel = 'stylesheet';_ltn.href = 'css/style-mb.css';_ltn.type = 'text/css';var _go_ = document.getElementsByTagName('link')[0];_go_.parentNode.insertBefore(_ltn, _go_);</script><script src="js/jquery-3.3.1.min.js" type="text/javascript"></script><noscript><link rel="stylesheet" type="text/css" href="css/style-mb.css"></noscript>
+	<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" /><meta name="theme-color" content="#2b7ce0"><meta content="INDEX,FOLLOW" name="robots" /><meta name="COPYRIGHT" content="&copy; 2018 P. NCKH &amp; HTQT SPKT Vĩnh Long"><meta name="Designer" content="Ngô Thanh Lý | lythanhngodev@gmail.com"><meta name="GENERATOR" content="NCKH & HTQT VLUTE" /><?php include_once "header.php" ?><base href="<?php echo $qlkh['HOSTGOC'] ?>" /><script type="text/javascript">var _ltn = document.createElement('link');_ltn.rel = 'stylesheet';_ltn.href = 'css/style-mb.css';_ltn.type = 'text/css';var _go_ = document.getElementsByTagName('link')[0];_go_.parentNode.insertBefore(_ltn, _go_);</script><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script><noscript><link rel="stylesheet" type="text/css" href="css/style-mb.css"></noscript>
 </head>
 <body style="display: none;">
 <div id="fb-root"></div><script>window.fbAsyncInit = function() {FB.init({appId: '2165745763451934',xfbml: true,version: 'v3.0'});FB.AppEvents.logPageView();};(function(d, s, id){var js, fjs = d.getElementsByTagName(s)[0];if (d.getElementById(id)) {return;}js = d.createElement(s); js.id = id;js.src = "https://connect.facebook.net/en_US/sdk.js";fjs.parentNode.insertBefore(js, fjs);}(document, 'script', 'facebook-jssdk'));</script>
@@ -88,13 +88,13 @@
 </div>
 <div id="timkiemgg"><script>(function() {var cx = '011375218569618766485:2vgaz9qfk-w';var gcse = document.createElement('script');gcse.type = 'text/javascript';gcse.async = true;gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(gcse, s);})();</script><gcse:search enableAutoComplete="true"></gcse:search>
 </div>
-<footer class="footer thantrangmb" style="/*display: none;">
+<footer class="footer thantrangmb">
   <div class="container">
     <span class="text-muted">&copy;2018 P. NCKH &amp; HTQT - VLUTE</span>
   </div>
 </footer>
-<center><img async id="back-to-top" src="images/back-to-top.png"></center>
-<script async type="text/javascript" src="js/bootstrap.js" ></script>
+<center><img id="back-to-top" src="images/back-to-top.png"></center>
+<script async type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" ></script>
 <script type="text/javascript">function getDocHeight() {var D = document;return Math.max(D.body.scrollHeight, D.documentElement.scrollHeight,D.body.offsetHeight, D.documentElement.offsetHeight,D.body.clientHeight, D.documentElement.clientHeight);}$(window).scroll(function () {($(this).scrollTop() > 200) && $('#back-to-top').fadeIn() || $('#back-to-top').fadeOut(); $('#daluot').css("width",($(window).scrollTop()/($(document).height()-$(window).height())*100)+"%"); ($(window).scrollTop() + $(window).height() + $('.footer').height() + 15 >= getDocHeight()) && $('#daluot').css("width","100%");});$(document).on('click','#back-to-top',function(){$('#back-to-top').tooltip('hide');$('body,html').animate({scrollTop: 0}, 400);});</script>
 </body>
 </html>

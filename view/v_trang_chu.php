@@ -1,12 +1,8 @@
-<!-- slider -->
-<link rel="stylesheet" href="slider/themes/default/default.css" type="text/css" media="screen" />
-<link rel="stylesheet" href="slider/nivo-slider.css" type="text/css" media="screen" />
-<link rel="stylesheet" href="slider/demo/style.css" type="text/css" media="screen" />
 <div id="cottrai">
     <!-- TRÌNH CHIẾU (SILDER) -->
     <div class="trinh-chieu" ><div class="slider-wrapper theme-default"><div id="slider" class="nivoSlider"><?php while ($row = mysqli_fetch_assoc($slider)) { ?><a href="<?php echo $row['link']; ?>"><img src="<?php echo $row['hinhanh']; ?>" data-thumb="<?php echo $row['hinhanh']; ?>" data-transition="<?php echo $row['style']; ?>" alt="<?php echo $row['tieude']; ?>" title="<?php echo $row['tieude']; ?>" /></a><?php } ?></div></div></div>
       <script type="text/javascript" src="slider/jquery.nivo.slider.js"></script>
-      <script type="text/javascript">$('#slider').nivoSlider();</script> 
+      <script type="text/javascript">$('#slider').nivoSlider();</script>
     <!-- CÁC CÔNG TRÌNH KHOA HỌC ĐÃ CÔNG BỐ -->
     <div class="tieudechinh">
         <div class="tentieudechinh" style="width: 240px;">
@@ -92,7 +88,9 @@
                 while ($row = mysqli_fetch_assoc($tinmoi)) { ?>
                 <a href="xemtin/<?php echo $row['LINKBV']; ?>-<?php echo $row['IDBV']; ?>.ltn">
                     <div class="tincon">
-                        <div class="hinhtin" style="background-image: url('_thumbs/<?php echo $row['HINHANH']; ?>');"></div>
+                        <div class="hinhtin">
+                          <img src="_thumbs/<?php echo $row['HINHANH']; ?>">
+                        </div>
                         <div class="tomtattin"><?php echo $row['TENBV'] ?></div>
                     </div>  
                 </a>

@@ -1,4 +1,25 @@
-<?php include_once '../config.php'; ?><!DOCTYPE html><html><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Đăng nhập</title><meta name="description" content="Trang đăng nhập phòng nghiên cứu khoa học trường Đại học Sư phạm Kỹ thuật Vĩnh Long"><meta name="viewport" content="width=device-width, initial-scale=1"><base href="<?php echo $qlkh['HOSTADMIN']; ?>"><link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css"><link rel="stylesheet" href="../css/animate.css"><link rel="stylesheet" href="css/style.css" id="theme-stylesheet"><link rel="stylesheet" href="css/custom.css"><link rel="shortcut icon" href="../images/favicon.ico"><script src="../js/jquery-3.3.1.min.js" type="text/javascript"></script><script type="text/javascript" src="../js/sweetalert.min.js"></script><?php 
+<?php 
+function sanitize_output($buffer) {
+
+    $search = array(
+        '/\>[^\S ]+/s',     // strip whitespaces after tags, except space
+        '/[^\S ]+\</s',     // strip whitespaces before tags, except space
+        '/(\s)+/s',         // shorten multiple whitespace sequences
+        '/<!--(.|\s)*?-->/' // Remove HTML comments
+    );
+
+    $replace = array(
+        '>',
+        '<',
+        '\\1',
+        ''
+    );
+    $buffer = preg_replace($search, $replace, $buffer);
+    return $buffer;
+}
+ob_start("sanitize_output");
+ ?>
+<?php include_once '../config.php'; ?><!DOCTYPE html><html><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Đăng nhập</title><meta name="description" content="Trang đăng nhập phòng nghiên cứu khoa học trường Đại học Sư phạm Kỹ thuật Vĩnh Long"><meta name="viewport" content="width=device-width, initial-scale=1"><base href="<?php echo $qlkh['HOSTADMIN']; ?>"><link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css"><link rel="stylesheet" href="css/style.css" id="theme-stylesheet"><link rel="stylesheet" href="css/custom.css"><link rel="shortcut icon" href="../images/favicon.ico"><script src="../js/jquery-3.3.1.min.js" type="text/javascript"></script><script type="text/javascript" src="../js/sweetalert.min.js"></script><?php 
   // Nếu tồn tại tên đăng nhập và mật khẩu
   if (isset($_POST['tdn']) && isset($_POST['pas'])) {
     $tdn = $_POST['tdn'];
@@ -36,6 +57,6 @@
     }
     mysqli_close($conn);
   }
- ?><script src="vendor/jquery/jquery.min.js"></script><script src="vendor/bootstrap/js/bootstrap.min.js"></script><script src="vendor/jquery.cookie/jquery.cookie.js"> </script><script src="vendor/jquery-validation/jquery.validate.min.js"></script><script src="vendor/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"></script><script src="js/front.js"></script><script type="text/javascript">$(document).ready(function(){var movementStrength = 25;var height = movementStrength / $(window).height();var width = movementStrength / $(window).width();$("#bg").mousemove(function(e){var pageX = e.pageX - ($(window).width() / 2);var pageY = e.pageY - ($(window).height() / 2);var newvalueX = width * pageX * -1 - 25;var newvalueY = height * pageY * -1 - 50;$('#bg').css("background-position", newvalueX+"px "+newvalueY+"px");});});</script>
+ ?><script src="vendor/bootstrap/js/bootstrap.min.js"></script><script src="vendor/jquery.cookie/jquery.cookie.js"> </script><script src="vendor/jquery-validation/jquery.validate.min.js"></script><script src="vendor/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"></script><script src="js/front.js"></script><script type="text/javascript">$(document).ready(function(){var movementStrength = 25;var height = movementStrength / $(window).height();var width = movementStrength / $(window).width();$("#bg").mousemove(function(e){var pageX = e.pageX - ($(window).width() / 2);var pageY = e.pageY - ($(window).height() / 2);var newvalueX = width * pageX * -1 - 25;var newvalueY = height * pageY * -1 - 50;$('#bg').css("background-position", newvalueX+"px "+newvalueY+"px");});});</script>
   </body>
 </html>

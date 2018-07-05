@@ -6,31 +6,7 @@
 .tincon .hinhtin{width:90px;height:60px;float:left;margin-right:5px;background-size:cover;background-position:center;border-radius: 4px;}
 @media screen and (max-width:400px){.tincon .hinhtin{width: 20%;height:50px;float:left;margin-right: 10px;background-size:cover;background-position:center;}
 }
-.tincon .tomtattin{float:left;width:75%;}
-.tinmoi a{color:#212121;}
-.tinmoi a:hover{color:#2b6dce;}
-.tieudemuccon{width:100%;float:left;}
-.tieu-de-tin{color:#1c7fe8 !important;font-weight:600;font-size:14px;}
-.noidungtin{padding:0px 5px;}
-.thongtinchung{margin-top:5px;}
-.carousel{content: "";}
-.thongtinchung ul{margin-bottom:0px;padding-left:30px;}
-.nut-link{background:linear-gradient(141deg, #24b8ae 0%, #49c8d6 51%, #4cbde7 75%);color:#fff;padding:10px 10px;border-radius:6px;box-shadow:2px 2px 8px 0px #cacaca;}
-.muccon center{position:absolute;bottom:-9px;left:0;right:0;}
-.footer{float:left;bottom:0;width:100%;height:60px;line-height:60px;background-color:#f5f5f5;}
-.chi-tiet-bai-viet{width:100% !important;float:left;}
-.vlu-chi-tiet-header-bai-viet{width:100%;float:left;position:relative;}
-.vlu-chi-tiet-header-bai-viet article{width:100%;height:275px;background-position:center;background-size:cover;}
-.vlu-chi-tiet-hinh-anh-tin a{text-decoration:none;}
-.vlu-chi-tiet-link-bai-viet{position:absolute;bottom:0;left:0;right:0;background-color:rgba(0, 0, 0, 0.23456789);padding:10px;}
-.vlu-chi-tieu-tieu-de-bai-viet{font-family:sans-serif;font-size:150%;color:#fff;font-weight:500;}
-.vlu-chi-tiet-bai-viet{float:left;padding:10px 4px;width:100%;overflow:-webkit-paged-x;}
-.vlu-chi-tiet-thoi-gian-bai-viet{color:#e0e0e0;font-size:90%;padding:6px 2px;}
-.detailienquan{color:#2279fa;font-size:18px;font-weight:400;font-family:sans-serif;margin:1rem 0rem 0.5rem 0rem;text-decoration:underline;}
-.lienquan{margin:0rem 0.5rem;font-family:sans-serif;font-weight:100;}
-.lienquan h3{font-weight:100;}
-.lienquan h3 a{color:#212121;text-decoration:none;font-size:15px;}
-.lienquan h3 a:hover{text-decoration:underline;}
+.tincon .tomtattin{float:left;width:75%;}.tinmoi a{color:#212121;}.tinmoi a:hover{color:#2b6dce;}.tieudemuccon{width:100%;float:left;}.tieu-de-tin{color:#1c7fe8 !important;font-weight:600;font-size:14px;}.noidungtin{padding:0px 5px;}.thongtinchung{margin-top:5px;}.carousel{content: "";}.thongtinchung ul{margin-bottom:0px;padding-left:30px;}.nut-link{background:linear-gradient(141deg, #24b8ae 0%, #49c8d6 51%, #4cbde7 75%);color:#fff;padding:10px 10px;border-radius:6px;box-shadow:2px 2px 8px 0px #cacaca;}.muccon center{position:absolute;bottom:-9px;left:0;right:0;}.footer{float:left;bottom:0;width:100%;height:60px;line-height:60px;background-color:#f5f5f5;}.chi-tiet-bai-viet{width:100% !important;float:left;}.vlu-chi-tiet-header-bai-viet{width:100%;float:left;position:relative;}.vlu-chi-tiet-header-bai-viet article{width:100%;height:275px;background-position:center;background-size:cover;}.vlu-chi-tiet-hinh-anh-tin a{text-decoration:none;}.vlu-chi-tiet-link-bai-viet{position:absolute;bottom:0;left:0;right:0;background-color:rgba(0, 0, 0, 0.23456789);padding:10px;}.vlu-chi-tieu-tieu-de-bai-viet{font-family:sans-serif;font-size:150%;color:#fff;font-weight:500;}.vlu-chi-tiet-bai-viet{float:left;padding:10px 4px;width:100%;overflow:-webkit-paged-x;}.vlu-chi-tiet-thoi-gian-bai-viet{color:#e0e0e0;font-size:90%;padding:6px 2px;}.detailienquan{color:#2279fa;font-size:18px;font-weight:400;font-family:sans-serif;margin:1rem 0rem 0.5rem 0rem;text-decoration:underline;}.lienquan{margin:0rem 0.5rem;font-family:sans-serif;font-weight:100;}.lienquan h3{font-weight:100;}.lienquan h3 a{color:#212121;text-decoration:none;font-size:15px;}.lienquan h3 a:hover{text-decoration:underline;}
 :root{--blue:#007bff;--indigo:#6610f2;--purple:#6f42c1;--pink:#e83e8c;--red:#dc3545;--orange:#fd7e14;--yellow:#ffc107;--green:#28a745;--teal:#20c997;--cyan:#17a2b8;--white:#fff;--gray:#6c757d;--gray-dark:#343a40;--primary:#007bff;--secondary:#6c757d;--success:#28a745;--info:#17a2b8;--warning:#ffc107;--danger:#dc3545;--light:#f8f9fa;--dark:#343a40;--breakpoint-xs:0;--breakpoint-sm:576px;--breakpoint-md:768px;--breakpoint-lg:992px;--breakpoint-xl:1200px;--font-family-sans-serif:-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";--font-family-monospace:SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;}
 *,*::before,*::after{box-sizing:border-box;}
 html{font-family:sans-serif;line-height:1.15;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;-ms-overflow-style:scrollbar;-webkit-tap-highlight-color:transparent;}
