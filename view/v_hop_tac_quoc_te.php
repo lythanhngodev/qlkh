@@ -24,7 +24,7 @@
         while ($row = mysqli_fetch_assoc($tin)){ ?>
         <a href="xemtin/<?php echo $row['LINKBV']; ?>-<?php echo $row['IDBV']; ?>.ltn">
             <div class="tin-con-phai">
-                <div class="hinh-anh-tin-con-phai" style="background-image: url('_thumbs/<?php echo $row['HINHANH'] ?>');"></div>
+                <div class="hinh-anh-tin-con-phai lazyload" data-src="_thumbs/<?php echo $row['HINHANH'] ?>" style="background-image: url();"></div>
                 <div class="tin-con-phai-phai">
                     <div class="tieu-de-tin-con-phai"><?php echo $row['TENBV'] ?></div>
                     <div class="ngay-tin-con-phai"><i class="fas fa-calendar"></i>&nbsp;&nbsp;<?php if(empty($row['NGAYDANG'])) echo "Đang cập nhật"; else echo $row['NGAYDANG']; ?></div>

@@ -95,8 +95,7 @@
 </footer>
 <center><img id="back-to-top" src="images/back-to-top.png"></center>
 <script async type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" ></script>
-<script type="text/javascript" src="js/lazy.js"></script>
-<script type="text/javascript">$('.lazyload').lazyload();</script>
+<script async="async" type="text/javascript" src="js/lazy.js"></script>
 <script type="text/javascript">function getDocHeight() {var D = document;return Math.max(D.body.scrollHeight, D.documentElement.scrollHeight,D.body.offsetHeight, D.documentElement.offsetHeight,D.body.clientHeight, D.documentElement.clientHeight);}$(window).scroll(function () {($(this).scrollTop() > 200) && $('#back-to-top').fadeIn() || $('#back-to-top').fadeOut(); $('#daluot').css("width",($(window).scrollTop()/($(document).height()-$(window).height())*100)+"%"); ($(window).scrollTop() + $(window).height() + $('.footer').height() + 15 >= getDocHeight()) && $('#daluot').css("width","100%");});$(document).on('click','#back-to-top',function(){$('#back-to-top').tooltip('hide');$('body,html').animate({scrollTop: 0}, 400);});</script>
 </body>
 </html>
