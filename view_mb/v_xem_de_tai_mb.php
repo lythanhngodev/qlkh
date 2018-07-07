@@ -109,9 +109,7 @@
          <?php } ?>
         </div>
     </div>
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script type="text/javascript">
-  $(document).ready(function(){
-    $('#tieude').html('Chỉ tiết đề tài');
-  });
+    document.getElementById("tieude").innerHTML = "Chi tiết đề tài";
 </script>

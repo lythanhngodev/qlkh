@@ -39,12 +39,12 @@
     <center style="bottom: -20px;" ><button id="xemthem" class="nut-link btn">XEM THÊM</button></center>
 <?php } ?>
 </div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script type="text/javascript">
     var tin = 2;
-    $("document").ready(function() {
-        $('#htqt').addClass('active');
-        $('#tieude').html('Hợp tác quốc tế');
-    $('#xemthem').on('click',function(){
+    document.getElementById("htqt").classList.add("active");
+    document.getElementById("tieude").innerHTML = "Hợp tác quốc tế";
+    $(document).on('click','#xemthem',function(){
       $.ajax({
         url : "ajax/ajax_xem_them_hop_tac_quoc_te_mb.php",
         type : "post",
@@ -69,6 +69,5 @@
             alert('Lỗi khi tải tin');
         }
       });
-    });
     });
 </script> 

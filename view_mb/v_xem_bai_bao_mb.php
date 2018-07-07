@@ -58,10 +58,8 @@
          <?php } ?>
         </div>
     </div>
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script type="text/javascript">
-    $("document").ready(function() {
-        $('#baokhoahoc').addClass('active');
-        $('#tieude').html('Báo khoa học')
-    });
+    document.getElementById("baokhoahoc").classList.add("active");
+    document.getElementById("tieude").innerHTML = "Báo khoa học";
 </script> 

@@ -94,8 +94,7 @@
 
 </div>
 <script type="text/javascript">
-    $("document").ready(function() {
-        $('#trangchu').addClass('current');
-        $('#tentag').html('<?php echo $tentag ?>');
-    });
-</script> 
+  document.getElementById('trangchu').classList.add("current");
+  document.getElementById('tentag').innerHTML = '<?php echo $tentag ?>';
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>

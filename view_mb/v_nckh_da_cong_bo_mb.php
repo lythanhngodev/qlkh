@@ -58,12 +58,12 @@
     <center style="bottom: -20px;"><button class="nut-link btn" id="xemthem" style="color:#fff;">XEM THÊM</button></center>
     </div>
 </div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script type="text/javascript">
   var tin = 2;
-  $(document).ready(function(){
-    $('#nckh').addClass('active');
-    $('#tieude').html('NCKH đã công bố');
-    $('#xemthem').on('click',function(){
+    document.getElementById("nckh").classList.add("active");
+    document.getElementById("tieude").innerHTML = "NCKH đã công bố";
+    $(document).on('click','#xemthem',function(){
       $.ajax({
         url : "ajax/ajax_xem_them_nckh_da_cong_bo_mb.php",
         type : "post",
@@ -89,6 +89,4 @@
         }
     });
     });
-  });
-
 </script>

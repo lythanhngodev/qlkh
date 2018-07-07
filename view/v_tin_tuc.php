@@ -106,8 +106,5 @@
         </div>
     </div>
 </div>
-<script type="text/javascript">
-    $("document").ready(function() {
-        $('#tintuc').addClass('current');
-    });
-</script> 
+<script type="text/javascript">document.getElementById('tintuc').classList.add("current");</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
