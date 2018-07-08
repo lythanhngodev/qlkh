@@ -14,12 +14,12 @@
                 </a>
             </article>
         </div>
+<script>window.fbAsyncInit = function() {FB.init({appId: '2165745763451934',xfbml: true,version: 'v3.0'});FB.AppEvents.logPageView();};(function(d, s, id){var js, fjs = d.getElementsByTagName(s)[0];if (d.getElementById(id)) {return;}js = d.createElement(s); js.id = id;js.src = "https://connect.facebook.net/en_US/sdk.js";fjs.parentNode.insertBefore(js, fjs);}(document, 'script', 'facebook-jssdk'));</script>
         <div style="float: right;margin-top: 10px;" class="fb-like" data-href="<?php echo "http://". $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'] ?>" data-layout="button_count" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
         <div class="vlu-chi-tiet-bai-viet">
             <?php echo $bv['NOIDUNG'] ?>
         </div>
         <br>
-        <hr>
         <br>
     </div>   
     <?php } ?>
