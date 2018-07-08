@@ -26,8 +26,8 @@
       <li class="nav-item" id="trangchu">
         <a class="nav-link" href="<?php echo $qlkh['HOSTGOC'] ?>">Trang chủ</a>
       </li>
-      <li class="nav-item" id="bieumau">
-        <a class="nav-link" href="http://vlute.edu.vn/index.php/nghien-cuu-khoa-hoc" target="_blank">Giới thiệu chung</a>
+      <li class="nav-item" id="gioithieu">
+        <a class="nav-link" href="http://vlute.edu.vn/index.php/nghien-cuu-khoa-hoc" target="_blank" rel="noopener">Giới thiệu chung</a>
       </li>
       <li class="nav-item dropdown" id="nckh">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -78,7 +78,7 @@
            ?>
         </div>
       </li>
-      <li class="nav-item" id="lienhe"><a class="nav-link" target="_blank" href="http://vlute.edu.vn/index.php/lien-he">Liên hệ</a></li>
+      <li class="nav-item" id="lienhe"><a class="nav-link" target="_blank" rel="noopener" href="http://vlute.edu.vn/index.php/lien-he">Liên hệ</a></li>
     </ul>
   </div>
 </nav>
