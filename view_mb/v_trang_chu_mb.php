@@ -2,7 +2,7 @@
   <div class="carousel-inner">
     <?php $stt=1; while ($row = mysqli_fetch_assoc($slider)) { ?>
     <div class="carousel-item <?php if($stt==1) echo "active"; ?>">
-      <img async class="d-block w-100" src="<?php echo $row['hinhanh']; ?>" alt="<?php echo $row['tieude']; ?>" style="width: 100%" >
+      <img class="d-block w-100" src="<?php echo $row['hinhanh']; ?>" alt="<?php echo $row['tieude']; ?>" style="width: 100%" >
     </div>
     <?php $stt++; } ?>
   </div>
