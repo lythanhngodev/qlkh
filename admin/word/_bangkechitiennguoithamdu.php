@@ -35,8 +35,8 @@
 				</div>
 				<div class="col-md-12">
 					<div class="form-group">
-						<label class="font-weight-bold">Ngày / tháng / năm diễn ra hội nghị</label>
-						<input type="date" name="ngaythang" id="nt" class="form-control col-md-4">
+						<label class="font-weight-bold">Tháng / năm diễn ra hội nghị</label>
+						<input type="month" name="thoigian" id="thang" class="form-control col-md-4">
 					</div>
 				</div>
 				<div class="col-md-6">
@@ -69,14 +69,13 @@
  		}
  	}
  	function kiemtra(){
- 		if (jQuery.isEmptyObject($('#nt').val().trim())) {
- 			khongthanhcong("Chưa chọn ngày tháng năm diễ ra hội nghị");
+ 		if (jQuery.isEmptyObject($('#thang').val().trim())) {
+ 			khongthanhcong('Chưa chọn tháng năm diễn ra hội nghị');
  			return false;
  		}
  		if (!document.getElementById('nghiemthu').checked && !document.getElementById('xetduyet').checked){
  			khongthanhcong("Chưa chọn loại kê chi");
  			return false;
  		}
-
  	}
  </script>
