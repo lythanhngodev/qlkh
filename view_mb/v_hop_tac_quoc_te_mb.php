@@ -36,25 +36,17 @@
            <?php } ?>
         </div>
     </div>
-    <center style="bottom: -20px;" ><button id="xemthem" class="nut-link btn">XEM THÊM</button></center>
+    <center style="bottom: -20px;" ><button id="xemthem" class="nut-link btn" onclick="return xemthem()">XEM THÊM</button></center>
 <?php } ?>
 </div>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script type="text/javascript">
     var tin = 2;
     document.getElementById("htqt").classList.add("active");
     document.getElementById("tieude").innerHTML = "Hợp tác quốc tế";
-    $(document).on('click','#xemthem',function(){
+    function xemthem(){
+      $('#xemthem').html('ĐANG TẢI ...');
       $.ajax({
-        url : "ajax/ajax_xem_them_hop_tac_quoc_te_mb.php",
-        type : "post",
-        dataType:"text",
-        data : {
-            tin: tin, cm: <?php echo $id; ?> 
-        },
-        beforeSent : function(){
-          $('#xemthem').html('ĐANG TẢI ...');
-        },
+        url : "ajax/ajax_xem_them_hop_tac_quoc_te_mb.php",type : "post",dataType:"text",data : {tin: tin, cm: <?php echo $id; ?> },
         success : function (data){
             tin++;
             $('#xemthem').html('XEM THÊM');
@@ -69,5 +61,5 @@
             alert('Lỗi khi tải tin');
         }
       });
-    });
+    }
 </script> 

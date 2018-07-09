@@ -11,8 +11,6 @@
 	<meta name="Designer" content="Ngô Thanh Lý | lythanhngodev@gmail.com">
 	<meta name="GENERATOR" content="NCKH & HTQT VLUTE" />
 	<base href="<?php echo $qlkh['HOSTGOC'] ?>" />
-	<script type="text/javascript">var __ltn_ = document.createElement('link');__ltn_.rel = 'stylesheet';__ltn_.href = 'https://use.fontawesome.com/releases/v5.1.0/css/all.css';__ltn_.type = 'text/css';var __gl = document.getElementsByTagName('link')[0];__gl.parentNode.insertBefore(__ltn_, __gl);</script>
-	<!--<script defer="defer" src="js/superfish.js" type="text/javascript"></script>-->
 	<script>window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","UA-77436024-2","auto"),ga("send","pageview");</script>
 	<script async src='https://www.google-analytics.com/analytics.js'></script><script>const observer=new PerformanceObserver((list)=>{for(const entry of list.getEntries()){const metricName=entry.name;const time=Math.round(entry.startTime+entry.duration);ga('send','event',{eventCategory:'Performance Metrics',eventAction:metricName,eventValue:time,nonInteraction:!0,})}});observer.observe({entryTypes:['paint']})</script><script type="application/ld+json">{"@context": "http://schema.org","@type": "Organization","url": "<?php echo $qlkh['HOSTGOC'] ?>","logo": "<?php echo $qlkh['HOSTGOC'] ?>images/logo.png","contactPoint": [{"@type": "ContactPoint","telephone": "+84 2703 862457","contactType": "customer service"}]}</script>
 	<style type="text/css">
@@ -39,8 +37,8 @@
 					<li id="nckh">
 						<a class="sf-with-ul">Hoạt động NCKH</a>
 						<ul>
-							<li><a href="nckhdexuatmoi" >Đề xuất NCKH</a></li>
-							<li><a href="nckhdacongbo" >Công trình khoa học đã công bố</a></li>
+							<li><a href="nckhdexuatmoi">Đề tài NCKH đang thực hiện</a></li>
+							<li><a href="nckhdacongbo">Đề tài NCKH đã công bố</a></li>
 						</ul>
 					</li>
 					<li id="htqt">
@@ -122,6 +120,7 @@
 	<div id="timkiemgg"><script>(function() {var cx = '011375218569618766485:2vgaz9qfk-w';var gcse = document.createElement('script');gcse.type = 'text/javascript';gcse.async = true;gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(gcse, s);})();</script><gcse:search enableAutoComplete="true"></gcse:search>
 	</div>
 </div>
+<script type="text/javascript">var __ltn_ = document.createElement('link');__ltn_.rel = 'stylesheet';__ltn_.href = 'https://use.fontawesome.com/releases/v5.1.0/css/all.css';__ltn_.type = 'text/css';var __gl = document.getElementsByTagName('link')[0];__gl.parentNode.insertBefore(__ltn_, __gl);</script>
 <script type="text/javascript">
 	(function(root,factory){if(typeof exports==="object"){module.exports=factory(root)}else if(typeof define==="function"&&define.amd){define([],factory(root))}else{root.LazyLoad=factory(root)}})(typeof global!=="undefined"?global:this.window||this.global,function(root){"use strict";const defaults={src:"data-src",srcset:"data-srcset",selector:".lazyload"};const extend=function(){let extended={};let deep=!1;let i=0;let length=arguments.length;if(Object.prototype.toString.call(arguments[0])==="[object Boolean]"){deep=arguments[0];i++}let merge=function(obj){for(let prop in obj){if(Object.prototype.hasOwnProperty.call(obj,prop)){if(deep&&Object.prototype.toString.call(obj[prop])==="[object Object]"){extended[prop]=extend(!0,extended[prop],obj[prop])}else{extended[prop]=obj[prop]}}}};for(;i<length;i++){let obj=arguments[i];merge(obj)} return extended};function LazyLoad(images,options){this.settings=extend(defaults,options||{});this.images=images||document.querySelectorAll(this.settings.selector);this.observer=null;this.init()}LazyLoad.prototype={init:function(){if(!root.IntersectionObserver){this.loadImages();return} let self=this;let observerConfig={root:null,rootMargin:"0px",threshold:[0]};this.observer=new IntersectionObserver(function(entries){entries.forEach(function(entry){if(entry.intersectionRatio>0){self.observer.unobserve(entry.target);let src=entry.target.getAttribute(self.settings.src);let srcset=entry.target.getAttribute(self.settings.srcset);if("img"===entry.target.tagName.toLowerCase()){if(src){entry.target.src=src}if(srcset){entry.target.srcset=srcset}}else{entry.target.style.backgroundImage="url("+src+")"}}})},observerConfig);this.images.forEach(function(image){self.observer.observe(image)})},loadAndDestroy:function(){if(!this.settings){return}this.loadImages();this.destroy()},loadImages:function(){if(!this.settings){return} let self=this;this.images.forEach(function(image){let src=image.getAttribute(self.settings.src);let srcset=image.getAttribute(self.settings.srcset);if("img"===image.tagName.toLowerCase()){if(src){image.src=src}if(srcset){image.srcset=srcset}}else{image.style.backgroundImage="url("+src+")"}})},destroy:function(){if(!this.settings){return} this.observer.disconnect();this.settings=null}};root.lazyload=function(images,options){return new LazyLoad(images,options)};if(root.jQuery){const $=root.jQuery;$.fn.lazyload=function(options){options=options||{};options.attribute=options.attribute||"data-src";new LazyLoad($.makeArray(this),options);return this}}return LazyLoad});$('.lazyload,img').lazyload();
 </script>

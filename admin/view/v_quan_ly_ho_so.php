@@ -42,7 +42,7 @@
                           <button class="list-group-item" id="kehoachnghiemthu">Kế hoạch nghiệm thu đề tài</button>
                           <button class="list-group-item" id="phieudanhgianghiemthu">Phiếu đánh giá nghiệm thu</button>
                           <button class="list-group-item" id="tonghopdanhgianghiemthu">Tổng hợp HĐ đánh giá NT</button>
-                          <button class="list-group-item" id="">Bảng kê chi tiền tham dự (NT)</button>
+                          <button class="list-group-item" id="bangkechitiennguoithamdu">Bảng kê chi tiền người tham dự</button>
                           <button class="list-group-item" id="phieugiaonhansanpham">Phiếu giao nhận sản phẩm (NT)</button>
                           <button class="list-group-item" id="phieugiaonhansanphamthietbi">Phiếu giao nhận sản phẩm (NT - Thiết bị)</button>
                           <button class="list-group-item" id="phieuxacnhantrienkhaiungdung">Phiếu xác nhận triển khai ứng dụng</button>
@@ -95,6 +95,9 @@
             case "kehoachnghiemthu":
                 laydulieu(id);
                 break;
+            case "bangkechitiennguoithamdu":
+                laydulieu(id);
+                break;
             case "phieugiaonhansanpham":
                 laydulieu(id);
                 break;
@@ -104,7 +107,6 @@
             case "phieuxacnhantrienkhaiungdung":
                 laydulieu(id);
                 break;
-
         }
     });
   });

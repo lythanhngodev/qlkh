@@ -40,7 +40,6 @@
         </div>
     </div>
 </div>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script type="text/javascript">
     document.getElementById("bieumau").classList.add("active");
     document.getElementById("tieude").innerHTML = "Biểu mẫu";

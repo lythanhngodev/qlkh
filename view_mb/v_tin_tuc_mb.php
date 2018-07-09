@@ -36,24 +36,21 @@
            <?php } ?>
         </div>
     </div>
-    <center style="bottom: -20px;" ><button id="xemthem" class="nut-link btn">XEM THÊM</button></center>
+    <center style="bottom: -20px;" ><button id="xemthem" class="nut-link btn" onclick="return xemthem()">XEM THÊM</button></center>
 <?php } ?>
 </div>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script type="text/javascript">
     var tin = 2;
     document.getElementById("tintuc").classList.add("active");
     document.getElementById("tieude").innerHTML = "Tin tức";
-    $(document).on('click','#xemthem',function(){
+    function xemthem(){
+      $('#xemthem').html('ĐANG TẢI ...');
       $.ajax({
         url : "ajax/ajax_xem_them_tin_tuc_mb.php",
         type : "post",
         dataType:"text",
         data : {
             tin: tin, cm: <?php echo $id; ?> 
-        },
-        beforeSent : function(){
-          $('#xemthem').html('ĐANG TẢI ...');
         },
         success : function (data){
             tin++;
@@ -69,5 +66,5 @@
             alert('Lỗi khi tải tin');
         }
       });
-    });
+    }
 </script> 

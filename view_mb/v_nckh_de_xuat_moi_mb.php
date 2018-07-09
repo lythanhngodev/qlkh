@@ -30,7 +30,7 @@
 <hr>
 <!-- CÔNG TRÌNH NGHIÊN CỨU KHOA HỌC -->
 <div class="muccon">
-    <h3>Đề xuất nghiên cứu khoa học</h3>
+    <h3>Đề tài NCKH đang thực hiện</h3>
     <div class="tieudemuccon">
         <div class="tinmoi">
         <?php $nghiemthu = lay_de_tai_da_cong_bo(0,6);$stt=1;
@@ -55,24 +55,21 @@
        </div>
          <?php $stt++;} ?>
         </div>
-    <center style="bottom: -20px;"><button class="nut-link btn" id="xemthem" style="color:#fff;">XEM THÊM</button></center>
+    <center style="bottom: -20px;"><button class="nut-link btn" id="xemthem" style="color:#fff;" onclick="return xemthem()">XEM THÊM</button></center>
     </div>
 </div>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script type="text/javascript">
   var tin = 2;
     document.getElementById("nckh").classList.add("active");
     document.getElementById("tieude").innerHTML = "Đề xuất NCKH";
-    $(document).on('click','#xemthem',function(){
+    function xemthem(){
+      $('#xemthem').html('ĐANG TẢI ...');
       $.ajax({
         url : "ajax/ajax_xem_them_nckh_da_de_xuat_mb.php",
         type : "post",
         dataType:"text",
         data : {
             tin: tin 
-        },
-        beforeSent : function(){
-          $('#xemthem').html('ĐANG TẢI ...');
         },
         success : function (data){
             tin++;
@@ -88,5 +85,5 @@
             alert('Lỗi khi tải tin');
         }
       });
-    });
+    }
 </script>

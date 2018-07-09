@@ -2,7 +2,7 @@
     <!-- CÁC CÔNG TRÌNH KHOA HỌC ĐÃ CÔNG BỐ -->
     <div class="tieudechinh">
         <div class="tentieudechinh" style="width: 235px;">
-            <img src="images/chi-muc.png" width="27" height="27" align="absmiddle"><a>Công trình NCKH đã công bố</a>
+            <img src="images/chi-muc.png" width="27" height="27" align="absmiddle"><a>Đề tài NCKH đã công bố</a>
         </div>
         <div class="clear"></div>
         <div class="line"></div>

@@ -39,15 +39,15 @@
        </div>
          <?php $stt++;} ?>
         </div>
-    <center style="bottom:-20px;"><button id="xemthem" class="nut-link btn">XEM THÊM</button></center>
+    <center style="bottom:-20px;"><button id="xemthem" class="nut-link btn" onclick="return xemthem()">XEM THÊM</button></center>
     </div>
 </div>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script type="text/javascript">
     var tin = 2;
     document.getElementById("baokhoahoc").classList.add("active");
     document.getElementById("tieude").innerHTML = "Báo khoa học";
-    $(document).on('click','#xemthem',function(){
+    function xemthem(){
+      $('#xemthem').text('ĐANG TẢI ...');
       $.ajax({
         url : "ajax/ajax_xem_them_bao_khoa_hoc_mb.php",
         type : "post",
@@ -55,12 +55,9 @@
         data : {
             tin: tin
         },
-        beforeSent : function(){
-          $('#xemthem').html('ĐANG TẢI ...');
-        },
         success : function (data){
             tin++;
-            $('#xemthem').html('XEM THÊM');
+            $('#xemthem').text('XEM THÊM');
             if(jQuery.isEmptyObject(data)){
               alert('Hết dữ liệu');
               $('#xemthem').remove();
@@ -72,5 +69,5 @@
             alert('Lỗi khi tải tin');
         }
       });
-    });
+    }
 </script> 

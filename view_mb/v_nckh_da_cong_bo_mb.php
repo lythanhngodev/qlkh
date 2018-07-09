@@ -55,24 +55,21 @@
        </div>
          <?php $stt++;} ?>
         </div>
-    <center style="bottom: -20px;"><button class="nut-link btn" id="xemthem" style="color:#fff;">XEM THÊM</button></center>
+    <center style="bottom: -20px;"><button class="nut-link btn" id="xemthem" style="color:#fff;" onclick="return xemthem()" >XEM THÊM</button></center>
     </div>
 </div>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script type="text/javascript">
   var tin = 2;
     document.getElementById("nckh").classList.add("active");
     document.getElementById("tieude").innerHTML = "NCKH đã công bố";
-    $(document).on('click','#xemthem',function(){
+    function xemthem(){
+      $('#xemthem').html('ĐANG TẢI ...');
       $.ajax({
         url : "ajax/ajax_xem_them_nckh_da_cong_bo_mb.php",
         type : "post",
         dataType:"text",
         data : {
             tin: tin 
-        },
-        beforeSent : function(){
-          $('#xemthem').html('ĐANG TẢI ...');
         },
         success : function (data){
             tin++;
@@ -87,6 +84,6 @@
         error: function () {
             alert('Lỗi khi tải tin');
         }
-    });
-    });
+      });
+    }
 </script>

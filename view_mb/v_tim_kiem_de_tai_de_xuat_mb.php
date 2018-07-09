@@ -29,8 +29,4 @@
   } else echo "Không đề tài nào được tìm khấy!"; ?>
 </div>
 <br>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script type="text/javascript">
-    document.getElementById("trangchu").classList.add("active");
-    document.getElementById("tieude").innerHTML = "Tìm kiếm";
-</script> 
+<script type="text/javascript">document.getElementById("trangchu").classList.add("active");document.getElementById("tieude").innerHTML = "Tìm kiếm";</script> 
