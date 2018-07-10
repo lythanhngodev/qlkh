@@ -112,7 +112,7 @@
                             </tr>
                             <tr>
                               <td>1 - Chủ nhiệm đề tài:<br>
-                                  <select id="chonchunhiem" class='form-control' onchange="chonthanhvien(this)" disabled="disabled" >
+                                  <select id="chonchunhiem" class='form-control' onchange="chonthanhvien(this)">
                                   </select>
                               </td>
                               <td><textarea name="" class="form-control" rows="4" readonly></textarea></td>
@@ -360,7 +360,7 @@ giao kết quả nghiên cứu đến người sử dụng. Phải nêu được
     $('#chonchunhiem').append(option);
     $('#chonchunhiem').addClass('selectpicker');
     $('.selectpicker').selectpicker({ liveSearch: true });
-    $('#quanlydetai').addClass('active');
+    $('#quanlydetaiduan').addClass('active');
     $('.tieude').html('Thêm đề tài NCKH');
     $('#bangtiendo').on('click','.xoatiendo',function(){
       $(this).parents('tr').remove();

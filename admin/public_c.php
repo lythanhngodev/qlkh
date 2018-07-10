@@ -25,6 +25,9 @@
             case 'danhgiadecuong':
                 include_once ("control/c_danh_gia_de_cuong.php");
                 break;
+            case 'themmoidetai':
+                include_once "control/c_them_moi_de_tai.php";
+                break;
             case 'chitietdanhgiadecuong':
                 include_once("control/c_chi_tiet_danh_gia_de_cuong.php");
                 break;

@@ -4,7 +4,12 @@ include_once('../config.php');
 function nguoi_dung(){
     $ketnoi = new clsKetnoi();
     $conn = $ketnoi->ketnoi();
-    $hoi = "SELECT `IDND`, CONCAT(`HO`,' ',`TEN`) as HOTEN, `NGAYSINH`,`DIENTHOAIDD`, `MAIL` FROM `nguoidung` WHERE `TRANGTHAI` = N'binhthuong'";
+    $hoi = "SELECT DISTINCT nd.`IDND`, CONCAT(`HO`,' ',`TEN`) as HOTEN, `NGAYSINH`, `DIENTHOAIDD`, `MAIL`, kbm.TENTAT 
+            FROM `nguoidung` nd 
+                    LEFT JOIN nguoidung_khoabomon k ON nd.IDND=k.IDND 
+                    LEFT JOIN khoabomon kbm ON k.IDKBM=kbm.IDKBM 
+            WHERE `TRANGTHAI` = N'binhthuong' AND nd.XACNHAN=b'1'
+    ";
     $dulieu = mysqli_query($conn, $hoi);
     mysqli_close($conn);
     return $dulieu;
