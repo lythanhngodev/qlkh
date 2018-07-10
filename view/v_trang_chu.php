@@ -112,6 +112,29 @@
             </div>
         </div>
     </div>
+    <!-- XEM NHIỀU -->
+    <?php 
+      $txnn = lay_tin_xem_nhieu();
+      $dt = mysqli_num_rows($txnn);
+      if ($dt>0) { ?>
+    <div class="muccon">
+        <h3>Tin xem nhiều</h3>
+        <div class="tieudemuccon">
+            <div class="tinmoi">
+                <?php 
+                $txn = lay_tin_xem_nhieu();
+                while ($row = mysqli_fetch_assoc($txn)) { ?>
+                <a href="xemtin/<?php echo $row['LINKBV']; ?>-<?php echo $row['IDBV']; ?>.ltn">
+                    <div class="tincon">
+                        <div class="hinhtin lazyload" data-src="_thumbs/<?php echo $row['HINHANH']; ?>" style="background-image: url();"></div>
+                        <div class="tomtattin"><?php echo $row['TENBV'] ?></div>
+                    </div>  
+                </a>
+               <?php } ?>
+            </div>
+        </div>
+    </div>
+  <?php } ?>
     <!-- TỪ KHÓA NỔI BẬC -->
     <div class="muccon">
         <h3>Từ khóa nổi bậc</h3>

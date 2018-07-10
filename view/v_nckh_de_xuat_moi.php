@@ -1,7 +1,7 @@
 <div id="cottrai">
     <!-- CÁC CÔNG TRÌNH KHOA HỌC ĐÃ CÔNG BỐ -->
     <div class="tieudechinh">
-        <div class="tentieudechinh" style="width: 205px;">
+        <div class="tentieudechinh" style="width: 230px;">
             <img src="images/chi-muc.png" width="27" height="27" align="absmiddle"><a>Đề tài NCKH đang thực hiện</a>
         </div>
         <div class="clear"></div>
@@ -19,6 +19,10 @@
           }
           $tu = ($bd-1)*$sotin;
           $nghiemthu = lay_de_tai_da_cong_bo($tu,$sotin);
+          $dt = mysqli_num_rows($nghiemthu);
+          if ($dt==0) {
+            echo "Chuyên mục chưa có bài viết";
+          }
           while ($row = mysqli_fetch_assoc($nghiemthu)) { ?>
            <div class="noidungtin">
               <h3>

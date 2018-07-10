@@ -19,6 +19,10 @@
           }
           $tu = ($bd-1)*$sotin;
           $nghiemthu = lay_de_tai_da_cong_bo($tu,$sotin);
+          $dt = mysqli_num_rows($nghiemthu);
+          if ($dt==0) {
+            echo "Chuyên mục chưa có bài viết";
+          }
           while ($row = mysqli_fetch_assoc($nghiemthu)) { ?>
            <div class="noidungtin">
               <h3>

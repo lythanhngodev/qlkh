@@ -12,8 +12,8 @@
   <div class="progress-bar" id="daluot" style="background: linear-gradient(130deg, #58d9d0 0%, #4a99fa 100%);transition: none;"></div>
 </div>
 <div>
-  <div style="width: 100%;margin: 0 auto;position: relative;margin-top: 5px;">
-    <img src="images/header_vlute_mb.png" style="width: 100%;" />
+  <div style="width: 100%;margin: 0 auto;position: relative;">
+    <img class="lazyload" data-src="images/header_vlute_mb.png" src="images/header_vlute_mb_blur.png" style="width: 100%;" />
   </div>
 </div>
 <nav class="navbar navbar-lg navbar-dark bg-primary" style="background: linear-gradient(130deg, #54d7ce 0%, #2b7ce0 100%);">
