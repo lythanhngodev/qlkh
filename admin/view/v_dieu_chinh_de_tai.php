@@ -482,7 +482,7 @@
         // Thêm thành viên thực hiện đề tài
         var option="<option value=''>Chọn thành viên</option>";
         _data_.map(function(i){
-            option+="<option value='"+i[0]+"'>"+i[1]+" "+i[2]+"</option>";
+            option+="<option value='"+i[0]+"'>"+i[1]+" - "+i[5]+"</option>";
         });
         var stt_btv=1;
         $('#themthanhvien').click(function () {
