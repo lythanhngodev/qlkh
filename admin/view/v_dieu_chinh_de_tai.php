@@ -126,9 +126,9 @@
                                                             <select class="form-control selectpicker" data-live-search="true" id="chonchunhiem" onchange="chonthanhvien(this)">
                                                                 <?php foreach ($rnd as $nd) {
                                                                     if ($row['IDND']==$nd[0]) {
-                                                                        echo "<option value='".$nd[0]."' selected >".$row['HOTEN']." ".$nd[2]."</option>";
+                                                                        echo "<option value='".$nd[0]."' selected >".$row['HOTEN']." - ".$nd[5]."</option>";
                                                                     }else{
-                                                                        echo "<option value='".$nd[0]."'>".$nd[1]." ".$nd[2]."</option>";
+                                                                        echo "<option value='".$nd[0]."'>".$nd[1]." - ".$nd[5]."</option>";
                                                                     }
                                                                 } ?>
                                                             </select>
@@ -467,7 +467,7 @@
                     if (tv[3]==d[0]) {
                         var option = "<option value=''>Chọn thành viên</option>";
                             _data_.map(function(i){
-                              (tv[3]==i[0]) ? option+="<option value='"+i[0]+"' selected>"+i[1]+" "+i[2]+"</option>" : option+="<option value='"+i[0]+"'>"+i[1]+" "+i[2]+"</option>";
+                              (tv[3]==i[0]) ? option+="<option value='"+i[0]+"' selected>"+i[1]+" - "+i[5]+"</option>" : option+="<option value='"+i[0]+"'>"+i[1]+" - "+i[5]+"</option>";
                             });
                         var td=""; _ndtd_.map(function(d){if (d[0]==tv[3]) {td = d[1];}});
                         var dv=""; _nddv_.map(function(d){if (d[0]==tv[3]) {dv = d[1];}});

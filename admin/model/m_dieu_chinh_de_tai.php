@@ -36,7 +36,12 @@ function thanh_vien_de_tai($iddt){
 function nguoi_dung(){
     $ketnoi = new clsKetnoi();
     $conn = $ketnoi->ketnoi();
-    $query = "SELECT `IDND`, CONCAT(`HO`,' ',`TEN`) as HOTEN, `NGAYSINH`,`DIENTHOAIDD`, `MAIL` FROM `nguoidung` WHERE `TRANGTHAI` = N'binhthuong'";
+    $query = "SELECT DISTINCT nd.`IDND`, CONCAT(`HO`,' ',`TEN`) as HOTEN, `NGAYSINH`, `DIENTHOAIDD`, `MAIL`, kbm.TENTAT 
+            FROM `nguoidung` nd 
+                    LEFT JOIN nguoidung_khoabomon k ON nd.IDND=k.IDND 
+                    LEFT JOIN khoabomon kbm ON k.IDKBM=kbm.IDKBM 
+            WHERE `TRANGTHAI` = N'binhthuong' AND nd.XACNHAN=b'1'
+    ";
     $result = mysqli_query($conn, $query);
     mysqli_close($conn);
     return $result;
