@@ -9,7 +9,7 @@
 </style>
 <div class="chi-tiet-bai-viet">
     <div class="vlu-chi-tiet-header-bai-viet">
-        <article class="vlu-chi-tiet-hinh-anh-tin" style="background-image: url('<?php echo $bv['HINHANH'] ?>')">
+        <article class="vlu-chi-tiet-hinh-anh-tin lazyload" data-src="<?php echo $bv['HINHANH'] ?>" style="background-image: url()">
             <a>
                 <div class="vlu-chi-tiet-link-bai-viet">
                     <div class="vlu-chi-tieu-tieu-de-bai-viet"><?php echo $bv['TENBV'] ?></div>

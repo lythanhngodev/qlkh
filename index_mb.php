@@ -92,7 +92,7 @@
 </footer>
 <center><img id="back-to-top" src="images/back-to-top.png" width="40" height="40"></center>
 <script defer="defer" src="js/jquery-3.3.1.min.js"></script>
-<script defer="defer" type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" ></script>
+<script defer="defer" type="text/javascript" src="bootstrap/js/bootstrap.min.js" ></script>
 <script defer="defer" type="text/javascript" src="js_mb/js_tc_mb.js"></script>
 </body>
 </html>
