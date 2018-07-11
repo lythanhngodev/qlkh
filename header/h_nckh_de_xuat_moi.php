@@ -2,11 +2,11 @@
 	include_once 'model/m_nckh_de_xuat_moi.php';
  ?>
 <meta name="description" content="Nghiên cứu khoa học &amp; Hợp tác quốc tế | Đại học Sư phạm Kỹ thuật Vĩnh Long" />
-<title>Đề xuất nghiên cứu khoa học | Đại học Sư phạm Kỹ thuật Vĩnh Long</title>
+<title>Đề tài nghiên cứu khoa học đang thực hiện | Đại học Sư phạm Kỹ thuật Vĩnh Long</title>
 <!-- Facebook SEO -->
 <meta property="og:url" content="<?php echo "http://". $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'] ?>" />
 <meta property="og:type" content="article" />
-<meta property="og:title" content='Đề xuất nghiên cứu khoa học đã công bố | Nghiên cứu khoa học &amp; Hợp tác quốc tế VLUTE' />
+<meta property="og:title" content='Đề tài nghiên cứu khoa học đang thực hiện | Nghiên cứu khoa học &amp; Hợp tác quốc tế VLUTE' />
 <meta property="og:image" content="<?php echo $qlkh['HOSTGOC'] ?>images/vlute-o.jpg" />
 <meta property="fb:app_id" content="2165745763451934" /> 
 <link rel="shortcut icon" href="<?php echo $qlkh['HOSTGOC'] ?>images/favicon.ico" />
