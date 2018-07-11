@@ -122,6 +122,6 @@
 	</div>
 </div>
 <script defer="defer" type="text/javascript" src="js/lazy.js"></script>
-<script type="text/javascript">var __ltn_ = document.createElement('link');__ltn_.rel = 'stylesheet';__ltn_.href = 'fontawesome/web-fonts-with-css/css/fontawesome.min.css';__ltn_.type = 'text/css';var __gl = document.getElementsByTagName('link')[0];__gl.parentNode.insertBefore(__ltn_, __gl);</script>
+<script type="text/javascript">var __ltn_ = document.createElement('link');__ltn_.rel = 'stylesheet';__ltn_.href = 'fontawesome/web-fonts-with-css/css/fontawesome-all.css';__ltn_.type = 'text/css';var __gl = document.getElementsByTagName('link')[0];__gl.parentNode.insertBefore(__ltn_, __gl);</script>
 </body>
 </html>
