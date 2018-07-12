@@ -108,11 +108,11 @@
 			<div class="clear"></div>
 			<div class="ft_cnt">
 				<div style="float:left">
-					<div><i class="fas fa-school"></i> Đại Học Sư phạm Kỹ thuật Vĩnh Long</div>
-					<div><i class="fa fa-location-arrow"></i> Địa chỉ: 73 Nguyễn Huệ Phường 2 TP. Vĩnh Long Tỉnh Vĩnh Long</div>
-					<div><i class="fa fa-phone"></i> Điện thoại: (+84) 270 382 2141 - <i class="fa fa-fax"></i> Fax: (+84) 02703821003</div>
-					<div><i class="far fa-envelope"></i> Email: <a href="mailto:spktvl@vlute.edu.vn">spktvl@vlute.edu.vn</a></div>
-					<div><i class="fas fa-toolbox"></i> Hỗ trợ kỹ thuật: <a href="mailto:lythanhngodev@gmail.com">lythanhngodev@gmail.com</a> - <i class="fa fa-phone"></i> (+84) 121 496 7197</div>
+					<div>Đại Học Sư phạm Kỹ thuật Vĩnh Long</div>
+					<div>Địa chỉ: 73 Nguyễn Huệ Phường 2 TP. Vĩnh Long Tỉnh Vĩnh Long</div>
+					<div>Điện thoại: (+84) 270 382 2141 - Fax: (+84) 02703821003</div>
+					<div>Email: <a href="mailto:spktvl@vlute.edu.vn">spktvl@vlute.edu.vn</a></div>
+					<div>Hỗ trợ kỹ thuật: <a href="mailto:lythanhngodev@gmail.com">lythanhngodev@gmail.com</a> - (+84) 121 496 7197</div>
 				</div>
 				<div class="clear"></div>
 			</div>
