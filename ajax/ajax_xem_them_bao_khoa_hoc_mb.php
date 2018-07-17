@@ -23,7 +23,7 @@ function lay_ten_tac_gia_bao_khoa_hoc($idbao){
 <?php $baibao = lay_bao_khoa_hoc(intval(($_POST['tin'])-1)*6,6);
 while ($row = mysqli_fetch_assoc($baibao)) {
  ?>
- <div class="noidungtin">
+ <div class="noidungtin animated fadeIn">
     <a class="tieu-de-tin" href="xembaibao/<?php echo to_slug($row['TENBAO']) ?>-<?php echo $row['IDBAO'] ?>.ltn" title="<?php echo $row['TENBAO'] ?>"><?php echo $row['TENBAO'] ?></a>
     <div class="thongtinchung">
       <ul>

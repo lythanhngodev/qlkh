@@ -19,7 +19,7 @@
 <?php $nghiemthu = lay_de_tai_da_cong_bo((intval($_POST['tin'])-1)*6,6);;
 while ($row = mysqli_fetch_assoc($nghiemthu)) {
  ?>
- <div class="noidungtin">
+ <div class="noidungtin animated fadeIn">
     <a class="tieu-de-tin" href="xemdetai/<?php echo to_slug($row['TENDETAI']); ?>-<?php echo $row['IDDT'] ?>.ltn" title="<?php echo $row['TENDETAI'] ?>"><?php echo $row['TENDETAI'] ?></a>
     <div class="thongtinchung">
         <ul>

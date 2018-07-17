@@ -20,7 +20,7 @@
 while ($row = mysqli_fetch_assoc($nghiemthu)) {
  ?>
 <a href="xemtin/<?php echo $row['LINKBV']; ?>-<?php echo $row['IDBV']; ?>.ltn">
-    <div class="tincon content">
+    <div class="tincon content animated fadeIn">
         <div class="hinhtin" style="background-image: url('_thumbs/<?php echo $row['HINHANH']; ?>');"></div>
         <div class="tomtattin"><?php echo $row['TENBV'] ?></div>
     </div>  
