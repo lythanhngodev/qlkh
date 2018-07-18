@@ -3,6 +3,7 @@ include_once("../../config.php");
 include_once ("../mail/guimail.php");
 if($_SERVER['HTTP_X_REQUESTED_WITH'] != 'XMLHttpRequest'){
     trangchu($qlkh['HOSTADMIN']);
+    exit();
 }
 $mang = array(
     'trangthai' => 0,
@@ -43,10 +44,12 @@ function datlaimatkhau($mail,$host){
     }else return false;
 }
 
-if (datlaimatkhau($_POST['mail'],$qlkh['HOSTADMIN']))
+if (datlaimatkhau($_POST['mail'],$qlkh['HOSTADMIN'])){
     $mang['trangthai'] = 1;
-else
+}
+else{
     $mang['thongbao'] = "Có lỗi, vui lòng thử lại";
+}
 echo json_encode($mang);
 exit();
 ?>

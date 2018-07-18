@@ -1,5 +1,4 @@
 <?php include_once "../../config.php"; ?>
-<?php include_once "../../config.php"; ?>
 <?php 
 	if (!isset($_POST['dachon']) || empty($_POST['dachon'])) {
 		echo " Không có dữ liệu";
