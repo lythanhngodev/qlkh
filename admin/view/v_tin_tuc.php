@@ -7,7 +7,7 @@
             <h4>Tin tức</h4>
           </div>
           <div class="card-body">
-            <a href="?p=themtintuc" class="btn btn-primary btn-sm"><i class="fas fa-plus"></i>&nbsp;&nbsp;Thêm mới</a><br><br>
+            <a href="?p=themtintuc" class="btn btn-success btn-sm"><i class="fas fa-plus"></i>&nbsp;&nbsp;Thêm mới</a><br><br>
               <table id="example" class="table table-hover table-bordered" style="width:100%">
                 <thead>
                     <tr style="background:#e9ecef;">

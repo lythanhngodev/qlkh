@@ -50,7 +50,6 @@ $_SESSION["token"] = $token;
                   <h5 class="sidenav-heading">Báo khoa học</h5>
                   <ul id="side-admin-menu" class="side-menu list-unstyled">
                       <li id="baokhoahoc"><a href="?p=baokhoahoc"> <i class="fas fa-newspaper"></i>Báo khoa học</a></li>
-                      <li id="thembaokhoahoc"><a href="?p=thembaokhoahoc"> <i class="fas fa-plus"></i>Thêm bài báo khoa học</a></li>
                   </ul>
               </div>
               <div class="admin-menu">
@@ -64,7 +63,6 @@ $_SESSION["token"] = $token;
                   <ul id="side-admin-menu" class="side-menu list-unstyled">
                       <li id="chuyenmuc"><a href="?p=chuyenmuc"> <i class="fas fa-list-ul"></i>Chuyên mục</a></li>
                       <li id="tintuc"><a href="?p=tintuc"> <i class="fas fa-newspaper"></i>Tin tức</a></li>
-                      <li id="themtintuc"><a href="?p=themtintuc"> <i class="fas fa-plus"></i>Thêm tin tức</a></li>
                   </ul>
               </div>
               <div class="admin-menu">
@@ -114,14 +112,12 @@ $_SESSION["token"] = $token;
                   <h5 class="sidenav-heading">Báo khoa học</h5>
                   <ul id="side-admin-menu" class="side-menu list-unstyled">
                       <li id="baokhoahoc"><a href="?p=baokhoahoc"> <i class="fas fa-newspaper"></i>Báo khoa học</a></li>
-                      <li id="thembaokhoahoc"><a href="?p=thembaokhoahoc"> <i class="fas fa-plus"></i>Thêm bài báo khoa học</a></li>
                   </ul>
               </div>
               <div class="admin-menu">
                   <h5 class="sidenav-heading">Tin tức - Sự kiện</h5>
                   <ul id="side-admin-menu" class="side-menu list-unstyled">
                       <li id="tintuc"><a href="?p=tintuc"> <i class="fas fa-newspaper"></i>Tin tức</a></li>
-                      <li id="themtintuc"><a href="?p=themtintuc"> <i class="fas fa-plus"></i>Thêm tin tức</a></li>
                   </ul>
               </div>
               <div class="admin-menu">
