@@ -3,7 +3,7 @@
 	function lay_tin($id){
 		$ketnoi = new clsKetnoi();
 		$conn = $ketnoi->ketnoi();
-		$query = "SELECT bv.IDBV, bv.TENBV, bv.LINKBV, bv.HINHANH, NGAYDANG from baiviet bv, chuyenmuc cm, baiviet_chuyenmuc bc WHERE bc.IDBV = bv.IDBV AND bc.IDCM = cm.IDCM AND cm.LOAICHUYENMUC=N'tintuc' AND bv.HIENTHI=b'1' AND bc.IDCM='$id';";
+		$query = "SELECT bv.IDBV, bv.TENBV, bv.LINKBV, bv.HINHANH, NGAYDANG from baiviet bv, chuyenmuc cm, baiviet_chuyenmuc bc WHERE bc.IDBV = bv.IDBV AND bc.IDCM = cm.IDCM AND cm.LOAICHUYENMUC=N'tintuc' AND bv.HIENTHI=b'1' AND bc.IDCM='$id' ORDER BY bv.IDBV DESC;";
 		$result = mysqli_query($conn, $query);
 		mysqli_close($conn);
 		return $result;
@@ -20,7 +20,7 @@
 	function lay_tin_them($id,$bd,$sotin){
 		$ketnoi = new clsKetnoi();
 		$conn = $ketnoi->ketnoi();
-		$query = "SELECT bv.IDBV, bv.TENBV, bv.LINKBV, bv.HINHANH, NGAYDANG from baiviet bv, chuyenmuc cm, baiviet_chuyenmuc bc WHERE bc.IDBV = bv.IDBV AND bc.IDCM = cm.IDCM AND cm.LOAICHUYENMUC=N'tintuc' AND bv.HIENTHI=b'1' AND bc.IDCM='$id' LIMIT $bd, $sotin";
+		$query = "SELECT bv.IDBV, bv.TENBV, bv.LINKBV, bv.HINHANH, NGAYDANG from baiviet bv, chuyenmuc cm, baiviet_chuyenmuc bc WHERE bc.IDBV = bv.IDBV AND bc.IDCM = cm.IDCM AND cm.LOAICHUYENMUC=N'tintuc' AND bv.HIENTHI=b'1' AND bc.IDCM='$id' ORDER BY bv.IDBV LIMIT $bd, $sotin";
 		$result = mysqli_query($conn, $query);
 		mysqli_close($conn);
 		return $result;

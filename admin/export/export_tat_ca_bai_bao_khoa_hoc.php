@@ -51,7 +51,7 @@ while ($row = mysqli_fetch_row($esql_stqd)) {
     <div class="card-header">
         <h4>Thống kê tất cả các bài báo khoa học</h4>
         <hr>
-        <form action="export/_export_tat_ca_bai_bao_khoa_hoc.php" method="post">
+        <form action="export/_export_tat_ca_bai_bao_khoa_hoc.php" method="post" target="_blank">
             <input type="text" name="alldtnt" hidden="hidden" value="<?php echo $_POST['_token']; ?>">
             <button type="submit" class="btn btn-warning"><i class='far fa-file-excel'></i>&ensp;Xuất excel</button>
         </form>

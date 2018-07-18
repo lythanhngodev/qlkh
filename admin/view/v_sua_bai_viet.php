@@ -157,8 +157,10 @@
             var result = $.parseJSON(data);
             if(result.trangthai == 1){
                 swal('Tốt','Sửa bài viết thành công','success');
-                location.href = "<?php echo $qlkh['HOSTADMIN']."?p=tintuc" ?>";
                 $('#luubaiviet').hide();
+                setTimeout(function(){
+                  location.href = "<?php echo $qlkh['HOSTADMIN']."?p=tintuc" ?>";
+                }, 1500);
             }
           }
         });

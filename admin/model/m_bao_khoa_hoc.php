@@ -4,7 +4,7 @@
 	function lay_bao_khoa_hoc(){
 		$ketnoi = new clsKetnoi();
 		$conn = $ketnoi->ketnoi();
-		$query = "SELECT IDBAO, TENBAO, NGAYDANGBAI, FILE, ANHIEN, DIEM, SOTIET FROM baokhoahoc bkh";
+		$query = "SELECT IDBAO, TENBAO, NGAYDANGBAI, FILE, ANHIEN, DIEM, SOTIET FROM baokhoahoc bkh Order by IDBAO DESC";
 		$result = mysqli_query($conn, $query);
 		mysqli_close($conn);
 		return $result;

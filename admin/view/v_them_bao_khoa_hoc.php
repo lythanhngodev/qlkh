@@ -142,7 +142,7 @@
                                               </div>
                                           </div>
                                       </div>
-                                      <div class="col-md-2">
+                                      <div class="col-md-2" hidden="hideden">
                                           <div class="form-group">
                                               <label for="category" class="font-weight-bold" >
                                                   Điểm số</label>
@@ -244,7 +244,7 @@
             }
             else canhbao("Vui lòng chọn file hình ảnh, pdf hoặc word");
         });
-    $('#thembaokhoahoc').addClass('active');
+    $('#baokhoahoc').addClass('active');
     $('.tieude').html('Thêm bài báo khoa học');
     $('#bangtacgia').on('click','.xoatacgia',function(){
       $(this).parents('tr').remove();

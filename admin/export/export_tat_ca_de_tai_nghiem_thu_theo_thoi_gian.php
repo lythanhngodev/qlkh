@@ -29,7 +29,7 @@ while ($row = mysqli_fetch_row($esql_stqd)) {
     <div class="card-header">
         <h4>Thống kê đề tài đã nghiệm thu từ <?php echo date("m-Y", strtotime($bd))." đến ".date("m-Y", strtotime($kt)); ?></h4>
         <hr>
-        <form action="export/_export_tat_ca_de_tai_nghiem_thu_theo_thoi_gian.php" method="post">
+        <form action="export/_export_tat_ca_de_tai_nghiem_thu_theo_thoi_gian.php" method="post" target="_blank">
             <input type="text" name="alldtnt" hidden="hidden" value="<?php echo $_POST['_token']; ?>">
             <input type="text" name="bd" hidden="hidden" value="<?php echo $bd ?>">
             <input type="text" name="kt" hidden="hidden" value="<?php echo $kt ?>">

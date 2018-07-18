@@ -147,7 +147,8 @@
 	$objWriter = new PHPExcel_Writer_Excel2007($objPHPExcel);
 	header('Content-Type: application/vnd.openxmlformatsofficedocument.spreadsheetml.sheet');
 	$filename = "$ten.xlsx";
-	header('Content-Disposition: attachment; filename="' . $filename . '"');
+	header('Content-Disposition: attachment; filename="'.$filename.'"');
 	header('Cache-Control: max-age=0');
 	$objWriter->save("php://output");
+	die();
  ?>

@@ -45,7 +45,9 @@
 				mysqli_query($conn, $tv1);
 			}
 		}
-		$nd = addslashes($nd);
+	    $nd = mysqli_real_escape_string($conn, $nd);
+	    $nd = str_replace('&ensp;',' ',$nd);
+	    $nd = str_replace('&nbsp;',' ',$nd);
 		$idbvbvbv=0;
 		$hoi="INSERT INTO `baokhoahoc`(`TENBAO`,`TENQG`,`TAPCHI`, `NAMXUATBAN`, `NOIDUNG`, `BIB`, `NGAYDANGBAI`,`FILE`,`CAPBAIBAO`,`DIEM`, `SOTIET`) VALUES (N'$tbb',N'$qg',N'$tc','$namxb',N'$nd','$bib',CURRENT_DATE(),'$file','$cap','$diem','$sotiet')";
 

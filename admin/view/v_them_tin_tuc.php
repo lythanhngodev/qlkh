@@ -122,7 +122,7 @@
         document.getElementById('linkfile').value=fileUrl.substr(host.length+1,fileUrl.length-host.length);
     }
   $(document).ready(function(){
-    $('#themtintuc').addClass('active');
+    $('#tintuc').addClass('active');
     $('.tieude').html('Thêm bài viết');
     $('#xoahinh').click(function(){
       document.getElementById('hinh-anh-ht').src = '';
@@ -158,7 +158,7 @@
                 swal('Tốt','Thêm bài viết thành công','success');
               setTimeout(function(){
                     location.href = "<?php echo $qlkh['HOSTADMIN']; ?>?p=tintuc";
-                }, 2000);
+                }, 1500);
             }
           }
         });
