@@ -74,9 +74,10 @@ $_SESSION["token"] = $token;
               <div class="admin-menu">
                   <h5 class="sidenav-heading">Quản lý thành viên</h5>
                   <ul id="side-admin-menu" class="side-menu list-unstyled">
-                      <li id="xacnhantaikhoan"><a href="?p=xacnhantaikhoan"> <i class="far fa-calendar-check"></i>Xác nhận đăng ký tài khoản</a></li>
-                      <li id="thanhvien"><a href="?p=thanhvien"> <i class="fas fa-users"></i>Thông tin thành viên</a></li>
+                      <li id="xacnhantaikhoan"><a href="?p=xacnhantaikhoan"> <i class="far fa-calendar-check"></i>Xác nhận tài khoản</a></li>
                       <li id="nhapthanhvien"><a href="?p=nhapthanhvien"> <i class="fas fa-user-plus"></i>Nhập thành viên</a></li>
+                      <li id="thanhvienluutru"><a href="?p=thanhvienluutru"> <i class="fa fa-box"></i>Thành viên lưu trữ</a></li>
+                      <li id="thanhvien"><a href="?p=thanhvien"> <i class="fas fa-users"></i>Thông tin thành viên</a></li>
                   </ul>
               </div>
               <div class="admin-menu">

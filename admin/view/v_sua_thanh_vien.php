@@ -438,7 +438,7 @@ if (!isset($_SESSION["token"])) {include_once ("../../loi404.html");exit();}
                         $.notifyClose();
                         var mang = $.parseJSON(data);
                         if(mang.trangthai==1){
-                            swal('Tốt','Tên đang nhập đã được thay đổi','success');
+                            swal('Tốt','Tên đăng nhập đã được thay đổi','success');
                         }else
                             swal('Ôi! Lỗi','Xảy ra lỗi, vui lòng thử lại','error');
                     },

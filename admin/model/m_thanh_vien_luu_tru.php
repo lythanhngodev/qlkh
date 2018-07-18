@@ -6,7 +6,7 @@ function lay_thanh_vien($idnd){
     $conn = $ketnoi->ketnoi();
     $query = "SELECT DISTINCT nd.IDND, CONCAT(nd.HO, ' ', nd.TEN) as HOTEN, l.TENLTK, l.IDLTK, nd.MAIL
         FROM nguoidung nd, loaitaikhoan_nguoidung ln, loaitaikhoan l
-        WHERE nd.IDND = ln.IDND AND l.IDLTK = ln.IDLTK AND nd.XACNHAN=b'1' AND nd.IDND NOT IN (SELECT IDND FROM nguoidung WHERE IDND = '$idnd') AND nd.TRANGTHAI='binhthuong'; ";
+        WHERE nd.IDND = ln.IDND AND l.IDLTK = ln.IDLTK AND nd.XACNHAN=b'1' AND nd.IDND NOT IN (SELECT IDND FROM nguoidung WHERE IDND = '$idnd') AND nd.TRANGTHAI='luutru'; ";
     $result = mysqli_query($conn, $query);
     mysqli_close($conn);
     return $result;

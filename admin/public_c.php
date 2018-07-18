@@ -103,6 +103,9 @@
             case 'suathanhvien':
                 include("control/c_sua_thanh_vien.php");
                 break;
+            case 'thanhvienluutru':
+                include("control/c_thanh_vien_luu_tru.php");
+                break;
             case 'dieuchinhdetai':
                 include("control/c_dieu_chinh_de_tai.php");
                 break;
