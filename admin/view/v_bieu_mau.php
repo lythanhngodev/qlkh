@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Ly Thanh Ngo
- * Date: 16/04/2018
- * Time: 11:22 PM
- */
 if (!isset($_SESSION["token"])) {include_once ("../../loi404.html");exit();}
 ?>
 <style>
@@ -20,7 +14,7 @@ if (!isset($_SESSION["token"])) {include_once ("../../loi404.html");exit();}
                     <h4>Danh sách biểu mẫu</h4>
                 </div>
                 <div class="card-body">
-                    <a class="btn btn-success btn-sm thembm"><i class="fa fa-plus"></i>&nbsp;&nbsp;Thêm mới</a><br><br>
+                    <a class="btn btn-primary btn-sm thembm"><i class="fa fa-plus"></i>&nbsp;&nbsp;Thêm mới</a><br><br>
                     <div class="row">
                         <div class="col-md-12">
                             <table id="bang-bieu-mau" class="table table-bordered table-hover">
@@ -69,7 +63,7 @@ if (!isset($_SESSION["token"])) {include_once ("../../loi404.html");exit();}
 <div class="cach"></div>
 
 <!-- Modal -->
-<div class="modal fade" id="modal-them-bieu-mau" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+<div class="modal" id="modal-them-bieu-mau" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
             <div class="modal-header">

@@ -173,7 +173,7 @@ $_SESSION["token"] = $token;
                     $_c = mysqli_num_rows($_m);
                     if ($_c > 0){
                         echo "<h5 class=\"sidenav-heading\">Đánh giá xét duyệt</h5>";
-                        echo "<li id=\"danhgiadecuong\"><a href=\"?p=danhgiadecuong\"> <i class=\"fas fa-balance-scale\"></i>&nbsp;&nbsp;Đánh giá đề cương ĐT</a></li>";
+                        echo "<li id=\"danhgiadecuong\"><a href=\"?p=danhgiadecuong\"> <i class=\"fas fa-balance-scale\"></i>Đánh giá đề cương ĐT</a></li>";
                     }
               ?>
               <?php
@@ -182,7 +182,7 @@ $_SESSION["token"] = $token;
               $_c = mysqli_num_rows($_m);
               if ($_c > 0){
                   echo "<h5 class=\"sidenav-heading\">Đánh giá nghiệm thu</h5>";
-                  echo "<li id=\"danhgianghiemthu\"><a href=\"?p=danhgianghiemthu\"> <i class=\"fas fa-balance-scale\"></i>&nbsp;&nbsp;Đánh giá nghiệm thu</a></li>";
+                  echo "<li id=\"danhgianghiemthu\"><a href=\"?p=danhgianghiemthu\"> <i class=\"fas fa-balance-scale\"></i>Đánh giá nghiệm thu</a></li>";
               }
               mysqli_close($conn);
               ?>

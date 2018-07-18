@@ -165,18 +165,18 @@
                                                 </tr>
                                                 <?php 
                                                     $stt = 1;
-                                                    while ($row = mysqli_fetch_assoc($thanhvien)) { 
+                                                    while ($rowb = mysqli_fetch_assoc($thanhvien)) { 
                                                         if($stt==1){
                                                             echo "<tr>";
-                                                            echo "<td>1 - Chủ nhiệm đề tài <br><b>".$row['HOTEN']."</b></td>";
-                                                            echo "<td>- ".trinh_do_chuyen_mon($row['IDND'])."<br>- ".chuc_danh_giang_vien($row['IDND'])."<br>- ".$row['DIENTHOAIDD']."</td>";
-                                                            echo "<td>".$row['CONGVIEC']."</td>";
+                                                            echo "<td>1 - Chủ nhiệm đề tài <br><b>".$rowb['HOTEN']."</b></td>";
+                                                            echo "<td>- ".trinh_do_chuyen_mon($rowb['IDND'])."<br>- ".don_vi_cong_tac($rowb['IDND'])."<br>- ".$rowb['DIENTHOAIDD']."</td>";
+                                                            echo "<td>".$rowb['CONGVIEC']."</td>";
                                                             echo "<tr><td colspan='4'>Thành viên tham gia:</td></tr>";
                                                         }else{
                                                             echo "<tr>";
-                                                            echo "<th>".$stt." - ".$row['HOTEN']."</th>";
-                                                            echo "<td>- ".trinh_do_chuyen_mon($row['IDND'])."<br>- ".chuc_danh_giang_vien($row['IDND'])."<br>- ".$row['DIENTHOAIDD']."</td>";
-                                                            echo "<td>".$row['CONGVIEC']."</td>";
+                                                            echo "<th>".$stt." - ".$rowb['HOTEN']."</th>";
+                                                            echo "<td>- ".trinh_do_chuyen_mon($rowb['IDND'])."<br>- ".don_vi_cong_tac($rowb['IDND'])."<br>- ".$rowb['DIENTHOAIDD']."</td>";
+                                                            echo "<td>".$rowb['CONGVIEC']."</td>";
                                                         } ?>
                                                         
                                                  <?php $stt++; } ?>
