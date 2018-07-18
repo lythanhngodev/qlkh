@@ -4,7 +4,7 @@
       <div class="col-md-12">
         <div class="card">
           <div class="card-header">
-            <h4>Danh sách đề tài</h4>
+            <h4>Danh sách đề tài của tôi</h4>
           </div>
           <div class="card-body">
             <a href="?p=themdexuat" class="btn btn-primary btn-sm"><i class="fas fa-plus"></i>&nbsp;&nbsp;Thêm mới</a><br><br>
@@ -134,7 +134,7 @@
   <script type="text/javascript">
   $(document).ready(function(){
     $('#quanlydetai').addClass('active');
-    $('.tieude').html('Quản lý đề tài');
+    $('.tieude').html('Quản lý đề tài của tôi');
     $('.guidexuat').click(function () {
         $('#iddx').val($(this).attr('lydata'));
         $('#tendexat').html($('#tendetai-'+$(this).attr('lydata')).text().trim());
