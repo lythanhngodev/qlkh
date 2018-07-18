@@ -358,7 +358,7 @@
 </div>
 <div class="cach"></div>
 <!-- Modal thêm khoa bộ môn -->
-<div class="modal fade" id="modal-them-khoa-bo-mon" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+<div class="modal " id="modal-them-khoa-bo-mon" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
             <div class="modal-header">
@@ -385,7 +385,7 @@
     </div>
 </div>
 <!-- Modal sửa khoa bộ môn -->
-<div class="modal fade" id="modal-sua-khoa-bo-mon" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+<div class="modal " id="modal-sua-khoa-bo-mon" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
             <div class="modal-header">
@@ -412,7 +412,7 @@
     </div>
 </div>
 <!-- Modal xóa khoa bộ môn -->
-<div class="modal fade" id="modal-xoa-khoa-bo-mon" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+<div class="modal " id="modal-xoa-khoa-bo-mon" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
             <div class="modal-header">
@@ -435,7 +435,7 @@
     </div>
 </div>
 <!-- Modal thêm trình độ chuyên môn -->
-<div class="modal fade" id="modal-them-trinh-do-chuyen-mon" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+<div class="modal " id="modal-them-trinh-do-chuyen-mon" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
             <div class="modal-header">
@@ -458,7 +458,7 @@
     </div>
 </div>
 <!-- Modal sửa trình độ chuyên môn -->
-<div class="modal fade" id="modal-sua-trinh-do-chuyen-mon" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+<div class="modal " id="modal-sua-trinh-do-chuyen-mon" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
             <div class="modal-header">
@@ -481,7 +481,7 @@
     </div>
 </div>
 <!-- Modal xóa trình độ chuyên môn -->
-<div class="modal fade" id="modal-xoa-trinh-do-chuyen-mon" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+<div class="modal " id="modal-xoa-trinh-do-chuyen-mon" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
             <div class="modal-header">
@@ -504,7 +504,7 @@
     </div>
 </div>
 <!-- Modal thêm chức danh giảng viên -->
-<div class="modal fade" id="modal-them-chuc-danh-giang-vien" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+<div class="modal " id="modal-them-chuc-danh-giang-vien" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
             <div class="modal-header">
@@ -527,7 +527,7 @@
     </div>
 </div>
 <!-- Modal sửa chức danh giảng viên -->
-<div class="modal fade" id="modal-sua-chuc-danh-giang-vien" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+<div class="modal " id="modal-sua-chuc-danh-giang-vien" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
             <div class="modal-header">
@@ -550,7 +550,7 @@
     </div>
 </div>
 <!-- Modal xóa chứ danh giảng viên -->
-<div class="modal fade" id="modal-xoa-chuc-danh-giang-vien" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+<div class="modal " id="modal-xoa-chuc-danh-giang-vien" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
             <div class="modal-header">
@@ -573,7 +573,7 @@
     </div>
 </div>
 <!-- Modal thêm học vị -->
-<div class="modal fade" id="modal-them-hoc-vi" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+<div class="modal " id="modal-them-hoc-vi" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
             <div class="modal-header">
@@ -596,7 +596,7 @@
     </div>
 </div>
 <!-- Modal sửa học vị -->
-<div class="modal fade" id="modal-sua-hoc-vi" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+<div class="modal " id="modal-sua-hoc-vi" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
             <div class="modal-header">
@@ -619,7 +619,7 @@
     </div>
 </div>
 <!-- Modal xóa học vị -->
-<div class="modal fade" id="modal-xoa-hoc-vi" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+<div class="modal " id="modal-xoa-hoc-vi" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
             <div class="modal-header">
@@ -643,7 +643,7 @@
 </div>
 
 <!-- Modal thêm chức danh khoa học -->
-<div class="modal fade" id="modal-them-chuc-danh-khoa-hoc" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+<div class="modal " id="modal-them-chuc-danh-khoa-hoc" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
             <div class="modal-header">
@@ -666,7 +666,7 @@
     </div>
 </div>
 <!-- Modal sửa chức danh khoa học -->
-<div class="modal fade" id="modal-sua-chuc-danh-khoa-hoc" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+<div class="modal " id="modal-sua-chuc-danh-khoa-hoc" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
             <div class="modal-header">
@@ -689,7 +689,7 @@
     </div>
 </div>
 <!-- Modal xóa chứ danh khoa học -->
-<div class="modal fade" id="modal-xoa-chuc-danh-khoa-hoc" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+<div class="modal " id="modal-xoa-chuc-danh-khoa-hoc" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
             <div class="modal-header">
@@ -712,7 +712,7 @@
     </div>
 </div>
 <!-- Modal thêm chức vụ -->
-<div class="modal fade" id="modal-them-chuc-vu" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+<div class="modal " id="modal-them-chuc-vu" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
             <div class="modal-header">
@@ -735,7 +735,7 @@
     </div>
 </div>
 <!-- Modal sửa chức vụ -->
-<div class="modal fade" id="modal-sua-chuc-vu" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+<div class="modal " id="modal-sua-chuc-vu" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
             <div class="modal-header">
@@ -758,7 +758,7 @@
     </div>
 </div>
 <!-- Modal xóa chức vụ -->
-<div class="modal fade" id="modal-xoa-chuc-vu" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+<div class="modal " id="modal-xoa-chuc-vu" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
             <div class="modal-header">
@@ -781,7 +781,7 @@
     </div>
 </div>
 <!-- Modal thêm cấp bài báo -->
-<div class="modal fade" id="modal-them-cap-bai-bao" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+<div class="modal " id="modal-them-cap-bai-bao" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
             <div class="modal-header">
@@ -804,7 +804,7 @@
     </div>
 </div>
 <!-- Modal sửa cấp bài báo -->
-<div class="modal fade" id="modal-sua-cap-bai-bao" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+<div class="modal " id="modal-sua-cap-bai-bao" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
             <div class="modal-header">
@@ -827,7 +827,7 @@
     </div>
 </div>
 <!-- Modal xóa cấp bài báo -->
-<div class="modal fade" id="modal-xoa-cap-bai-bao" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+<div class="modal " id="modal-xoa-cap-bai-bao" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
             <div class="modal-header">
@@ -850,7 +850,7 @@
     </div>
 </div>
 <!-- Modal thêm cấp đề tài -->
-<div class="modal fade" id="modal-them-cap-de-tai" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+<div class="modal " id="modal-them-cap-de-tai" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
             <div class="modal-header">
@@ -873,7 +873,7 @@
     </div>
 </div>
 <!-- Modal sửa cấp đề tài -->
-<div class="modal fade" id="modal-sua-cap-de-tai" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+<div class="modal " id="modal-sua-cap-de-tai" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
             <div class="modal-header">
@@ -896,7 +896,7 @@
     </div>
 </div>
 <!-- Modal xóa cấp đề tài -->
-<div class="modal fade" id="modal-xoa-cap-de-tai" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+<div class="modal " id="modal-xoa-cap-de-tai" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
             <div class="modal-header">
@@ -919,7 +919,7 @@
     </div>
 </div>
 <!-- Modal thêm lĩnh vực khoa học -->
-<div class="modal fade" id="modal-them-linh-vuc-khoa-hoc" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+<div class="modal " id="modal-them-linh-vuc-khoa-hoc" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
             <div class="modal-header">
@@ -942,7 +942,7 @@
     </div>
 </div>
 <!-- Modal sửa lĩnh vực khoa học -->
-<div class="modal fade" id="modal-sua-linh-vuc-khoa-hoc" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+<div class="modal " id="modal-sua-linh-vuc-khoa-hoc" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
             <div class="modal-header">
@@ -965,7 +965,7 @@
     </div>
 </div>
 <!-- Modal xóa lĩnh vực khoa học -->
-<div class="modal fade" id="modal-xoa-linh-vuc-khoa-hoc" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+<div class="modal " id="modal-xoa-linh-vuc-khoa-hoc" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
             <div class="modal-header">
@@ -988,7 +988,7 @@
     </div>
 </div>
 <!-- Modal thêm loại hình nghiên cứu khoa học -->
-<div class="modal fade" id="modal-them-loai-hinh-khoa-hoc" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+<div class="modal " id="modal-them-loai-hinh-khoa-hoc" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
             <div class="modal-header">
@@ -1011,7 +1011,7 @@
     </div>
 </div>
 <!-- Modal sửa loại hình nghiên cứu khoa học -->
-<div class="modal fade" id="modal-sua-loai-hinh-khoa-hoc" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+<div class="modal " id="modal-sua-loai-hinh-khoa-hoc" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
             <div class="modal-header">
@@ -1034,7 +1034,7 @@
     </div>
 </div>
 <!-- Modal xóa loại hình nghiên cứu khoa học -->
-<div class="modal fade" id="modal-xoa-loai-hinh-khoa-hoc" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+<div class="modal " id="modal-xoa-loai-hinh-khoa-hoc" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
             <div class="modal-header">
@@ -1062,7 +1062,7 @@
 
 
 <!-- Modal thêm số tiết qui đổi -->
-<div class="modal fade" id="modal-them-so-tiet-qui-doi" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+<div class="modal " id="modal-them-so-tiet-qui-doi" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
             <div class="modal-header">
@@ -1093,7 +1093,7 @@
     </div>
 </div>
 <!-- Modal sửa số tiết qui đổi -->
-<div class="modal fade" id="modal-sua-so-tiet-qui-doi" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+<div class="modal " id="modal-sua-so-tiet-qui-doi" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
             <div class="modal-header">
@@ -1124,7 +1124,7 @@
     </div>
 </div>
 <!-- Modal xóa số tiết qui đổi -->
-<div class="modal fade" id="modal-xoa-so-tiet-qui-doi" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+<div class="modal " id="modal-xoa-so-tiet-qui-doi" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
             <div class="modal-header">

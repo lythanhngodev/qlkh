@@ -112,12 +112,18 @@ if (themdetai($_POST['tendetai'],$_POST['muctieu'],$_POST['noidung'],$_POST['cap
     ?>
     <script type="text/javascript">
         swal('Thành công','Đã thêm đề tài!','success');
+        setTimeout(function(){
+          location.href = "<?php echo $qlkh['HOSTADMIN']."?p=quanlydetai" ?>";
+        }, 1500);
     </script>
     <?php
     exit();
 }
-else{
-    echo "<script type=\"text/javascript\">swal('Ôi! Lỗi','Vui lòng thử lại sau','error');</script>";
+else{ ?>
+    <script type="text/javascript">
+        swal('Ôi! Lỗi','Vui lòng thử lại sau','error');
+    </script>";
+    <?php 
     exit();
 }
 ?>

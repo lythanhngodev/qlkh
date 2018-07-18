@@ -174,22 +174,21 @@
         if(kiemtraketnoi()){
             // Ajax
             $.ajax({
-                url: 'ajax/ajax_xoa_de_tai.php',
+                url: 'ajax/ajax_xoa_de_tai_binh_thuong.php',
                 type: 'POST',
                 data: {
                     token: '<?php echo $token; ?>',
                     id: $('#id-id-xoa').val().trim()
                 },
-                beforeSend: function () {
-                    canhbao('Đang xử lý dữ liệu');
-                },
                 success: function (data) {
                     $.notifyClose();
                     var result = $.parseJSON(data);
                     if(result.trangthai == 1){
-                        $('#example').DataTable().row("#dong-"+$('#id-id-xoa').val().trim()).remove().draw();
                         $('#modal-xoa-de-tai').modal('hide');
                         swal('Tốt','Xóa đề tài thành công','success');
+                        setTimeout(function(){
+                          location.href = "<?php echo $qlkh['HOSTADMIN']."?p=quanlydetai" ?>";
+                        }, 1000);
                     }
                 },
                 error: function () {
