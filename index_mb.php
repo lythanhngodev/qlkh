@@ -18,7 +18,7 @@
 </div>
 <div>
   <div style="width: 100%;margin: 0 auto;position: relative;">
-    <img class="lazyload" data-src="images/header_vlute_mb.png" src="images/header_vlute_mb_blur.png" style="width: 100%;" />
+    <img class="lazyload" data-src="images/header_vlute_mb.png" src="images/header_vlute_mb_blur.png" style="width: 100%;" onclick="location.href='<?php echo $qlkh['HOSTGOC'] ?>';" />
   </div>
 </div>
 <nav class="navbar navbar-lg navbar-dark bg-primary" style="background: linear-gradient(130deg, #54d7ce 0%, #2b7ce0 100%);">

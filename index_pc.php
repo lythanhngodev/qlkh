@@ -20,7 +20,7 @@
 <body>
 <div class="header">
 	<div>
-		<img src="images/header_vlute.png" style="width: 100%;" />
+		<img src="images/header_vlute.png" style="width: 100%;" onclick="location.href='<?php echo $qlkh['HOSTGOC'] ?>';" />
 		<a href="admin" class="dangnhap">Đăng nhập</a>
 	</div>
 </div>
