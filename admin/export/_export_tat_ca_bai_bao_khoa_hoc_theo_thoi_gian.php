@@ -64,9 +64,15 @@
 	include_once("../excel/PHPExcel.php");
 	$objPHPExcel = new PHPExcel();
 	$objPHPExcel->setActiveSheetIndex(0);
+    $styleArray_de = array(
+        'font'  => array(
+            'name'  => 'Times New Roman',
+            'size' => 13
+        ));
+    $objPHPExcel->getActiveSheet()->getDefaultStyle()
+    ->applyFromArray($styleArray_de);
 	// tiêu đề
 	$sheet = $objPHPExcel->getActiveSheet()->setTitle("TK BKH"); // tiêu đề
-	$sheet->getColumnDimension('A')->setAutoSize(true); // kích thước cột tự canh đều
 	// GỌP CỘT
 	$objPHPExcel->setActiveSheetIndex(0)->mergeCells('A1:F3');
 	$objPHPExcel->setActiveSheetIndex(0)->mergeCells('A4:A5');
@@ -88,11 +94,17 @@
 	$objPHPExcel->getActiveSheet()->getStyle("A1:F4")->getFont()->setBold(true);
 	$rowCount=4;
 	$sheet->setCellValue('A'.$rowCount,'TT');
+	$objPHPExcel->getActiveSheet()->getColumnDimension('A')->setWidth(8);
 	$sheet->setCellValue('B'.$rowCount,'Tên bài báo');
+	$objPHPExcel->getActiveSheet()->getColumnDimension('B')->setWidth(50);
 	$sheet->setCellValue('C'.$rowCount,'Tác giả');
+	$objPHPExcel->getActiveSheet()->getColumnDimension('C')->setWidth(25);
 	$sheet->setCellValue('D'.$rowCount,'Đơn vị');
+	$objPHPExcel->getActiveSheet()->getColumnDimension('D')->setWidth(25);
 	$sheet->setCellValue('E'.$rowCount,'Ghi chú');
+	$objPHPExcel->getActiveSheet()->getColumnDimension('E')->setWidth(20);
 	$sheet->setCellValue('F'.$rowCount,'Số tiết quy đổi');
+	$objPHPExcel->getActiveSheet()->getColumnDimension('F')->setWidth(14);
 	$rowCount++;
   	// lệnh sql
   	$sttcap=1;
@@ -158,13 +170,6 @@
 		}
 		$sheet->getStyle('A'.$rowBD.':A'.$rowCount)->getAlignment()->setHorizontal(PHPExcel_Style_Alignment::HORIZONTAL_CENTER);
 		$sheet->getStyle('C'.$rowBD.':F'.$rowCount)->getAlignment()->setHorizontal(PHPExcel_Style_Alignment::HORIZONTAL_CENTER);
-		// Canh kích thước các cột
-		$sheet->getColumnDimension('A')->setAutoSize(true);
-		$sheet->getColumnDimension('B')->setAutoSize(true);
-		$sheet->getColumnDimension('C')->setAutoSize(true);
-		$sheet->getColumnDimension('D')->setAutoSize(true);
-		$sheet->getColumnDimension('E')->setAutoSize(true);
-		$sheet->getColumnDimension('F')->setAutoSize(true);
 	}
 	// Đường viền
 	$sheet->getStyle('A4:' . 'F'.$rowCount)

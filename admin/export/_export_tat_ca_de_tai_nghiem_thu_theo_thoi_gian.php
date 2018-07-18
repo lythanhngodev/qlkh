@@ -44,9 +44,15 @@
 	include_once("../excel/PHPExcel.php");
 	$objPHPExcel = new PHPExcel();
 	$objPHPExcel->setActiveSheetIndex(0);
+    $styleArray_de = array(
+        'font'  => array(
+            'name'  => 'Times New Roman',
+            'size' => 13
+        ));
+    $objPHPExcel->getActiveSheet()->getDefaultStyle()
+    ->applyFromArray($styleArray_de);
 	// tiêu đề
 	$sheet = $objPHPExcel->getActiveSheet()->setTitle("TK NCKH"); // tiêu đề
-	$sheet->getColumnDimension('A')->setAutoSize(true); // kích thước cột tự canh đều
 	// GỌP CỘT
 	$objPHPExcel->setActiveSheetIndex(0)->mergeCells('A1:F3');
 	$objPHPExcel->setActiveSheetIndex(0)->mergeCells('A4:A5');
@@ -68,11 +74,17 @@
 	$objPHPExcel->getActiveSheet()->getStyle("A1:F4")->getFont()->setBold(true);
 	$rowCount=4;
 	$sheet->setCellValue('A'.$rowCount,'TT');
+	$objPHPExcel->getActiveSheet()->getColumnDimension('A')->setWidth(8);
 	$sheet->setCellValue('B'.$rowCount,'Tên đề tài');
+	$objPHPExcel->getActiveSheet()->getColumnDimension('B')->setWidth(50);
 	$sheet->setCellValue('C'.$rowCount,'Thời gian nghiệm thu');
+	$objPHPExcel->getActiveSheet()->getColumnDimension('C')->setWidth(20);
 	$sheet->setCellValue('D'.$rowCount,'Tên CBVC, Đơn vị');
+	$objPHPExcel->getActiveSheet()->getColumnDimension('D')->setWidth(25);
 	$sheet->setCellValue('E'.$rowCount,'Số điểm');
+	$objPHPExcel->getActiveSheet()->getColumnDimension('E')->setWidth(10);
 	$sheet->setCellValue('F'.$rowCount,'Số tiết quy đổi');
+	$objPHPExcel->getActiveSheet()->getColumnDimension('F')->setWidth(16);
 	$rowCount++;
   	// lệnh sql
   	$sttcap=1;
@@ -90,6 +102,7 @@
 			$rowCount++; // tăng dòng
 			$sheet->setCellValue('A'.$rowCount,$stt);
 			$sheet->setCellValue('B'.$rowCount,$nt['TENDETAI']);
+			$objPHPExcel->getActiveSheet()->getStyle('B'.$rowCount)->getAlignment()->setWrapText(true);
 			$sheet->setCellValue('C'.$rowCount,$nt['THOIGIANNGHIEMTHU']);
             $iddt = $nt['IDDT'];
             $chuoi_cbvc="";
@@ -100,11 +113,12 @@
                 $e_cbvc = mysqli_query($conn, $q_cbvc);
                 while ($r_cbvc = mysqli_fetch_assoc($e_cbvc)) {
                     $chuoi_cbvc.=$r_cbvc['HOTEN']."\n";
+                    //$chuoi_cbvc = "sdvsdsv";
                 }
                 $chuoi_cbvc.=$r_kbm['TENKBM'];
             }
 			$sheet->setCellValue('D'.$rowCount,$chuoi_cbvc);
-
+			$objPHPExcel->getActiveSheet()->getStyle('D'.$rowCount)->getAlignment()->setWrapText(true);
 			$diem = 0;
 			$diem = $nt['DIEM'];
 			$sheet->setCellValue('E'.$rowCount,$diem);
@@ -116,16 +130,10 @@
 			$stt++; // đếm số thứ tự
 			$sheet->getStyle("A$rowCount:F$rowCount")->getAlignment()->setVertical(PHPExcel_Style_Alignment::VERTICAL_CENTER);
 		}
-		$objPHPExcel->getActiveSheet()->getStyle('D'.$rowCount)->getAlignment()->setWrapText(true); // xuống nhiều dòng
+		$objPHPExcel->getActiveSheet()->getStyle('D'.$rowCount)->getAlignment()->setWrapText(true);
 		$sheet->getStyle('A'.$rowBD.':A'.$rowCount)->getAlignment()->setHorizontal(PHPExcel_Style_Alignment::HORIZONTAL_CENTER);
 		$sheet->getStyle('C'.$rowBD.':F'.$rowCount)->getAlignment()->setHorizontal(PHPExcel_Style_Alignment::HORIZONTAL_CENTER);
 		// Canh kích thước các cột
-		$sheet->getColumnDimension('A')->setAutoSize(true);
-		$sheet->getColumnDimension('B')->setAutoSize(true);
-		$sheet->getColumnDimension('C')->setAutoSize(true);
-		$sheet->getColumnDimension('D')->setAutoSize(true);
-		$sheet->getColumnDimension('E')->setAutoSize(true);
-		$sheet->getColumnDimension('F')->setAutoSize(true);
 	}
 	// Đường viền
 	$sheet->getStyle('A4:' . 'F'.$rowCount)
