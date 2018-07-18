@@ -44,7 +44,7 @@
             <label>Hotline:</label><span class="t_hotline">&nbsp;+84 2703 862457</span>
           </div>
           <div>
-            <label>Email:</label>&nbsp;<a href="#" class="gr"><strong>nckh@vlute.edu.vn</strong></a>
+            <label>Email:</label>&nbsp;<a href="mailto:nckh@vlute.edu.vn" class="gr"><strong>nckh@vlute.edu.vn</strong></a>
           </div>
         </div>
     </div>
