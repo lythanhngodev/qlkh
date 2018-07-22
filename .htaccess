@@ -13,3 +13,4 @@ RewriteRule ^tag/(.*)$ ?p=tag&tag=$1
 RewriteRule ^tintuc/(.*)/(.*)$ ?p=tintuc&id=$1&trang=$2
 RewriteRule ^nckhdacongbo/(.*)$ ?p=nckhdacongbo&trang=$1
 RewriteRule ^baokhoahoc/(.*)$ ?p=baokhoahoc&trang=$1
+RewriteRule ^timkiemgg$ ?p=timkiemgg

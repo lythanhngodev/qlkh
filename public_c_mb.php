@@ -31,6 +31,7 @@
 			case 'timkiem':
 				include_once("control_mb/c_tim_kiem_mb.php");
 				break;
+
 		}
 	}
 	else

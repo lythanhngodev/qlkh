@@ -184,7 +184,7 @@
     </div>
     <!-- TỪ KHÓA NỔI BẬC -->
     <div class="muccon">
-        <h3>Từ khóa nổi bậc</h3>
+        <h3>Từ khóa nổi bật</h3>
         <div class="tieudemuccon">
             <div class="tukhoa">
               <?php $tk = lay_tu_khoa();

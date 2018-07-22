@@ -54,7 +54,7 @@ if(mysqli_multi_query($conn, $hoi)===TRUE) {
     ";
     }
     if (!empty($mail)) {
-        guimail('Đăng ký tài khoản', $body, $mail,$rmail[0],$rmail[1],$rmail[2]);
+        guimail('Thông báo duyệt đề tài', $body, $mail,$rmail[0],$rmail[1],$rmail[2]);
         exit();
     }
     $result['trangthai'] = 1;
