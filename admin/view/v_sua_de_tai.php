@@ -54,16 +54,16 @@
                                         <div class="col-md-12"><hr></div>
                                         <div class="form-group col-md-4">
                                             <label for="category" class="font-weight-bold" >Tổng tháng thực hiện (<span class="text-danger">*</span>)</label>
-                                            <input id="thangthuchiendetai" type="number" min="1" max="120" class="form-control giua" value="<?php echo $detai['THANGTHUCHIEN'] ?>">
+                                            <input id="thangthuchiendetai" type="number" min="1" max="120" class="form-control giua" value="<?php echo $detai['THANGTHUCHIEN'] ?>" onchange="return chonsothang(this);" onkeyup="return chonsothang(this);">
                                         </div>
                                         <div class="form-group col-md-4">
                                             <label for="category" class="font-weight-bold" >Tháng/Năm bắt đầu (<span class="text-danger">*</span>)</label>
-                                            <input class="form-control" type="month" name="" id="thangnambatdaudetai" value="<?php echo $detai['THANGNAMBD'] ?>">
+                                            <input class="form-control" type="month" name="" id="thangnambatdaudetai" value="<?php echo $detai['THANGNAMBD'] ?>" onchange="return chonthangbatdau(this);" onkeyup="return chonthangbatdau(this);">
                                         </div>
 
                                         <div class="form-group col-md-4">
                                             <label for="category" class="font-weight-bold" >Tháng/Năm kết thúc (<span class="text-danger">*</span>)</label>
-                                            <input class="form-control" type="month" name="" id="thangnamketthucdetai" value="<?php echo $detai['THANGNAMKT'] ?>">
+                                            <input class="form-control" type="month" name="" id="thangnamketthucdetai" value="<?php echo $detai['THANGNAMKT'] ?>" readonly="readonly">
                                         </div>
                                         <div class="col-md-12"><hr></div>
                                         <div class="form-group col-md-4">
@@ -1052,5 +1052,33 @@
           }
         });
     }
+  function chonsothang(th){
+    try{
+      var nbd = new Date($('#thangnambatdaudetai').val());
+      var sothang = parseInt($(th).val());
+      nbd.setMonth(nbd.getMonth() + sothang);
+      var months = ["01", "02", "03", "04", "05", "06", "07",
+           "08", "09", "10", "11", "12"];
+      if (sothang>0) {
+        $('#thangnamketthucdetai').val(nbd.getFullYear()+"-"+months[nbd.getMonth()]);
+      }else{
+        $('#thangnamketthucdetai').val('0000-00');
+      }
+    }catch(e){return;}
+  }
+  function chonthangbatdau(th){
+    try{
+      var nbd = new Date($(th).val());
+      var sothang = parseInt($('#thangthuchiendetai').val());
+      nbd.setMonth(nbd.getMonth() + sothang);
+      var months = ["01", "02", "03", "04", "05", "06", "07",
+           "08", "09", "10", "11", "12"];
+      if (sothang>0) {
+        $('#thangnamketthucdetai').val(nbd.getFullYear()+"-"+months[nbd.getMonth()]);
+      }else{
+        $('#thangnamketthucdetai').val('0000-00');
+      }
+    }catch(e){return;}
+  }
 </script>
 <?php } ?>
