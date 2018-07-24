@@ -1,7 +1,7 @@
 <div id="cottrai">
     <!-- CÁC CÔNG TRÌNH KHOA HỌC ĐÃ CÔNG BỐ -->
     <div class="tieudechinh">
-        <div class="tentieudechinh" style="width: 235px;">
+        <div class="tentieudechinh" style="width: fit-content;">
             <img src="images/chi-muc.png" width="27" height="27" align="absmiddle"><a>Kết quả tìm kiếm: <?php echo $tu; ?></a>
         </div>
         <div class="clear"></div>
