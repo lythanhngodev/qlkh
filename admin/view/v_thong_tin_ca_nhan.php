@@ -391,7 +391,7 @@ if (!isset($_SESSION["token"])) {include_once ("../../loi404.html");exit();}
                                             
                                         </div>
                                         <div class="form-group col-md-4">
-                                            <label for="category" class="font-weight-bold" >Xác nhận mật khẩu mới</label>
+                                            <label for="category" class="font-weight-bold" >Nhập lại mật khẩu mới</label>
                                             <input type="password" id="mk2" class="form-control">
                                         </div>
                                         <div class="form-group col-md-2">
