@@ -109,6 +109,7 @@
 			<div class="clear"></div>
 			<div class="ft_cnt">
 				<div style="float:left">
+					<div>Phòng Nghiên cứu khoa học &amp; Hợp tác quốc tế</div>
 					<div>Đại Học Sư phạm Kỹ thuật Vĩnh Long</div>
 					<div>Địa chỉ: 73 Nguyễn Huệ Phường 2 TP. Vĩnh Long Tỉnh Vĩnh Long</div>
 					<div>Điện thoại: (+84) 270 382 2141 - Fax: (+84) 02703821003</div>
