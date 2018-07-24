@@ -6,6 +6,9 @@
 		exit();	
 	}
 	$idnd = $_SESSION['_idnd'];
+	if (isset($_GET['tv']) && !empty($_GET['tv'])) {
+		$idnd = intval($_GET['tv']);
+	}
 function lay_thong_tin_nguoi_dung($idnd){
     $ketnoi = new clsKetnoi();
     $conn = $ketnoi->ketnoi();
@@ -34,7 +37,7 @@ function lay_cong_tac_chuyen_mon($idnd){
 function lay_de_tai_nghien_cuu_khoa_hoc($idnd){
     $ketnoi = new clsKetnoi();
     $conn = $ketnoi->ketnoi();
-    $query = "SELECT dt.TENDETAI, dt.THANGNAMBD, dt.THANGNAMKT, dt.CAPDETAI, tv.TRACHNHIEM FROM detai dt, thanhviendetai tv WHERE dt.IDDT = tv.IDDT AND tv.IDND = '$idnd' AND (dt.TRANGTHAI=N'Đã nghiệm thu' OR dt.TRANGTHAI=N'Đang thực hiện') ";
+    $query = "SELECT dt.TENDETAI, dt.THANGNAMBD, dt.THANGNAMKT, dt.CAPDETAI, tv.TRACHNHIEM FROM detai dt, thanhviendetai tv WHERE dt.IDDT = tv.IDDT AND tv.IDND = '$idnd' AND (dt.TRANGTHAI=N'Đã nghiệm thu' OR dt.TRANGTHAI=N'Đang thực hiện')";
     $result = mysqli_query($conn, $query);
     mysqli_close($conn);
     return $result;
@@ -290,13 +293,13 @@ function lay_nguoi_dung_don_vi_cong_tac($idnd){
 					<th>Trách nhiệm tham gia trong đề tài</th>
 				</tr>
 				<?php $detai = lay_de_tai_nghien_cuu_khoa_hoc($idnd);$demdt=1;
-				while ($row = mysqli_fetch_assoc($detai)) { ?>
+				while ($rowdt = mysqli_fetch_assoc($detai)) { ?>
 				<tr>
 					<td style="text-align: center;"><?php echo $demdt ?></td>
-					<td style="padding-left: 0.3cm;"><?php echo $row['TENDETAI'] ?></td>
-					<td style="text-align: center;"><?php echo date('m-Y',strtotime($row['THANGNAMBD'])). " đến ".date('m-Y',strtotime($row['THANGNAMKT'])); ?></td>
-					<td style="text-align: center;"><?php echo $row['CAPDETAI']; ?></td>
-					<td style="text-align: center;"><?php echo $row['TRACHNGHIEM'] ?></td>
+					<td style="padding-left: 0.3cm;"><?php echo $rowdt['TENDETAI'] ?></td>
+					<td style="text-align: center;"><?php echo date('m-Y',strtotime($rowdt['THANGNAMBD'])). " đến ".date('m-Y',strtotime($rowdt['THANGNAMKT'])); ?></td>
+					<td style="text-align: center;"><?php echo $rowdt['CAPDETAI']; ?></td>
+					<td style="text-align: center;"><?php echo $rowdt['TRACHNHIEM'] ?></td>
 				</tr>
 				<?php $demdt++;}
 				if($demdt==1){ ?>

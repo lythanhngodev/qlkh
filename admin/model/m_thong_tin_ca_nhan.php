@@ -76,7 +76,7 @@ function lay_chuc_vu(){
 function lay_de_tai_nghien_cuu_khoa_hoc($idnd){
     $ketnoi = new clsKetnoi();
     $conn = $ketnoi->ketnoi();
-    $query = "SELECT dt.TENDETAI, dt.THANGNAMBD, dt.THANGNAMKT, dt.CAPDETAI, tv.TRACHNHIEM FROM detai dt, thanhviendetai tv WHERE dt.IDDT = tv.IDDT AND tv.IDND = '$idnd' AND (dt.TRANGTHAI=N'Đã nghiệm thu' OR dt.TRANGTHAI=N'Đang thực hiện') ";
+    $query = "SELECT dt.TENDETAI, dt.THANGNAMBD, dt.THANGNAMKT, dt.CAPDETAI, tv.TRACHNHIEM FROM detai dt, thanhviendetai tv WHERE dt.IDDT = tv.IDDT AND tv.IDND = '$idnd' AND (dt.TRANGTHAI=N'Đã nghiệm thu' OR dt.TRANGTHAI=N'Đang thực hiện')";
     $result = mysqli_query($conn, $query);
     mysqli_close($conn);
     return $result;

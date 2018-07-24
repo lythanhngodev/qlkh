@@ -392,7 +392,7 @@ if (!isset($_SESSION["token"])) {include_once ("../../loi404.html");exit();}
                 <div class="card-footer">
                     <div class="pull-right">
                         <button type="button" class="btn btn-primary" id="luuthongtin"><i class="fas fa-save"></i>&nbsp;&nbsp;Lưu thông tin</button>
-                        <a href="word/xuatlylichkhoahoc.php" target="_blank" class="btn btn-warning" ><i class="fas fa-file-word"></i>&nbsp;&nbsp;Xuất lý lịch khoa học</a>
+                        <a href="word/xuatlylichkhoahoc.php?tv=<?php echo $idnd; ?>" target="_blank" class="btn btn-warning" ><i class="fas fa-file-word"></i>&nbsp;&nbsp;Xuất lý lịch khoa học</a>
                     </div>
                 </div>
             </div>
