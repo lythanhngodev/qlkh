@@ -19,7 +19,7 @@
                     <h4>Xét duyệt đề tài</h4>
                 </div>
                 <div class="card-body giua">
-                    <a href="?p=quanlydetaiduan">
+                    <a href="?p=dexuatmoi">
                         <img src="../images/kiem-tra-de-tai.png">
                     </a>
                 </div>
@@ -34,7 +34,7 @@
                     <h4>Nghiệm thu đề tài</h4>
                 </div>
                 <div class="card-body giua">
-                    <a href="?p=quanlydetaiduan">
+                    <a href="?p=denhanbaocao">
                 	   <img src="../images/de-tai-nghiem-thu.png">
                     </a>
                 </div>

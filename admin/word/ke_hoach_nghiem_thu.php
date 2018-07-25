@@ -14,6 +14,13 @@
 		$kq = $gio."h ".$phut."’";
 		return $kq;
 	}
+	function inthoigiantt($time){
+		$tg = explode(':',$time);
+		$gio = $tg[0];
+		$phut = $tg[1];
+		$kq = $gio."h ".$phut;
+		return $kq;
+	}
 	$ngaythang = explode('-', $_POST['ngaythang']);
 	$nam = $ngaythang[0];
 	$thang = $ngaythang[1];
@@ -38,10 +45,12 @@
 	    mysqli_close($conn);
 	    return $result;
 	}
-	function luu_hoi_dong_nghiem_thu($ds, $thang, $nam){
+	function luu_hoi_dong_nghiem_thu($ds,$ngay,$thang,$nam,$thoigian){
 		$ketnoi = new clsKetnoi();
 	    $conn = $ketnoi->ketnoi();
+	    $thoigianxc = $thoigian;
 	    foreach ($ds as $iddt) {
+	    	$_tg=inthoigiantt($thoigianxc);
 	    	$sql = "SELECT IDDT FROM kehoachxetchonnghiemthu WHERE IDDT = $iddt AND LOAI = b'1'";
 	    	$qsql = mysqli_query($conn, $sql);
 	    	$kt = 0;
@@ -50,18 +59,19 @@
 	    	}
 	    	if ($kt > 0) {
 	    		// Đã có hội đồng trước đó
-	    		$sql_dc = "UPDATE kehoachxetchonnghiemthu SET THANG='$thang',NAM='$nam' WHERE IDDT='$iddt' AND LOAI = b'1'";
+	    		$sql_dc = "UPDATE kehoachxetchonnghiemthu SET NGAY='$ngay',THANG='$thang',NAM='$nam',THOIGIAN='$_tg' WHERE IDDT='$iddt' AND LOAI = b'1'";
 	    		mysqli_query($conn, $sql_dc);
 	    	}
 	    	else{
 	    		// Cưa có hội đồng xét chọn
-	    		$sql_cc = "INSERT INTO kehoachxetchonnghiemthu(IDDT,THANG,NAM,LOAI) VALUES ('$iddt', '$thang', '$nam',b'1')";
+	    		$sql_cc = "INSERT INTO kehoachxetchonnghiemthu(IDDT,NGAY,THANG,NAM,THOIGIAN,LOAI) VALUES ('$iddt',NGAY='$ngay','$thang', '$nam','$_tg',b'1')";
 	    		mysqli_query($conn, $sql_cc);
 	    	}
+	    	$thoigianxc=addMinutesToTime($thoigianxc);
 	    }
 	    mysqli_close($conn);
 	}
-	luu_hoi_dong_nghiem_thu($ds, $thang, $nam);
+	luu_hoi_dong_nghiem_thu($ds,$ngay,$thang,$nam,$thoigian);
  ?>
 <?php 
  header("Content-Type: application/vnd.ms-word");

@@ -634,17 +634,17 @@ a > code{padding:0;color:inherit;background-color:inherit;}
 }
 .timeline{white-space:nowrap;overflow-x:hidden;}
 .timeline ol{font-size:0;width:100%;padding:100px 0;transition:all 1s;}
-.timeline ol li{position:relative;display:inline-block;list-style-type:none;width:20%;height:2px;background:#28a745;}
+.timeline ol li{position:relative;display:inline-block;list-style-type:none;width: 16%;height:2px;background:#28a745;}
 .timeline ol li:last-child{width:280px;}
 .timeline ol li:not(:first-child){margin-left:14px;}
 .timeline ol li:not(:last-child)::after{content:'';position:absolute;top:50%;left:calc(100% + 1px);bottom:0;width:12px;height:12px;transform:translateY(-50%);border-radius:50%;background:#28a745;}
-.timeline ol li div{position:absolute;left:calc(100% + 7px);width:180px;padding:15px;font-size:1rem;white-space:normal;color:black;background:#c5e4ff;}
+.timeline ol li div{position:absolute;left:calc(100% + 7px);width: 250px;padding: 10px 4px 4px 10px;font-size:1rem;white-space:normal;color:black;background:#c5e4ff;}
 .timeline ol li div::before{content:'';position:absolute;top:100%;left:0;width:0;height:0;border-style:solid;}
 .timeline ol li:nth-child(odd) div{top:-16px;transform:translateY(-100%);border-radius:10px 10px 10px 0px;box-shadow:2px 2px 4px -2px #b6b6b6;}
 .timeline ol li:nth-child(odd) div::before{top:100%;border-width:8px 8px 0 0;border-color:#c5e4fe transparent transparent transparent;}
 .timeline ol li:nth-child(even) div{top:calc(100% + 16px);border-radius:0px 10px 10px 10px;box-shadow:2px 2px 4px -2px #b6b6b6;}
 .timeline ol li:nth-child(even) div::before{top:-8px;border-width:8px 0 0 8px;border-color:transparent transparent transparent #c5e4fe;}
-.timeline time{display:block;font-size:1.2rem;font-weight:bold;}
+.timeline time{display:block;font-size: 1rem;font-weight:bold;}
 .timeline .arrows{display:flex;justify-content:center;margin-bottom:20px;}
 .timeline .disabled{opacity:.5;}
 @media screen and (max-width:599px){.timeline ol, .timeline ol li{width:auto;}
