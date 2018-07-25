@@ -158,7 +158,7 @@ if (themdetai($_POST['diemdetai'],$_POST['madetai'],$_POST['ngaynghiemthu'],$_PO
     exit();
 }
 else{
-    echo "<script type=\"text/javascript\">khongthanhcong(\"<strong>Lỗi!</strong> Xảy ra lỗi khi thêm\")</script>";
+    echo "<script type=\"text/javascript\">khongthanhcong(\"<strong>Lỗi!</strong> Tên đề tài đã tồn tại\")</script>";
     exit();
 }
 ?>
