@@ -76,7 +76,7 @@
   </div>
   <div class="cach"></div>
   <!-- Modal -->
-  <div class="modal fade" id="modal-Gui-de-xuat" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal" id="modal-Gui-de-xuat" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered" role="document">
           <div class="modal-content">
               <div class="modal-header">
@@ -105,7 +105,7 @@
   </div>
 
   <!-- Modal xóa đề xuất -->
-  <div class="modal fade" id="modal-xoa-de-tai" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal" id="modal-xoa-de-tai" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered" role="document">
           <div class="modal-content">
               <div class="modal-header">

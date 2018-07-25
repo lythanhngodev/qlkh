@@ -45,7 +45,7 @@
 <div class="cach"></div>
 
 <!-- Modal thêm slider -->
-<div class="modal fade" id="modal-them-slider" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+<div class="modal" id="modal-them-slider" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
         <div class="modal-content">
             <div class="modal-header">

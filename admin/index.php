@@ -2,6 +2,23 @@
 include_once 'check_login.php';
 $token = $ketnoi->chuoingaunhien(256);
 $_SESSION["token"] = $token;
+function sanitize_output($buffer) {
+    $search = array(
+        '/\>[^\S ]+/s',     // strip whitespaces after tags, except space
+        '/[^\S ]+\</s',     // strip whitespaces before tags, except space
+        '/( )+/s',         // shorten multiple whitespace sequences
+        '/<!--(.|\s)*?-->/' // Remove HTML comments
+    );
+    $replace = array(
+        '>',
+        '<',
+        '\\1',
+        ''
+    );
+    $buffer = preg_replace($search, $replace, $buffer);
+    return $buffer;
+}
+ ob_start("sanitize_output");
 ?>
 <!DOCTYPE html>
 <html>

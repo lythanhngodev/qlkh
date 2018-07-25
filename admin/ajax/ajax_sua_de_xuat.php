@@ -160,7 +160,7 @@ if (suadetai($_POST['tendetai'],$_POST['muctieu'],$_POST['noidung'],$_POST['cap'
     exit();
 }
 else{
-    echo "<script type=\"text/javascript\">khongthanhcong(\"<strong>Lỗi!</strong> Xảy ra lỗi khi sửa\")</script>";
+    echo "<script type=\"text/javascript\">khongthanhcong(\"<strong>Lỗi!</strong> Tên đề tài đã tồn tại\")</script>";
     exit();
 }
 ?>

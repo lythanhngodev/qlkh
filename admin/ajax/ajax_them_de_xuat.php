@@ -38,7 +38,7 @@ function themdetai($tendetai,$muctieu,$noidung,$cap,$moisangtao,$thuocchuongtrin
         $iddt = mysqli_insert_id($conn);
         $rsql = mysqli_affected_rows($conn);
         if ($rsql==0){
-            return false;
+            return 0;
         }
         $sql="";
         // Thêm loại hình nghiên cứu thuộc đề tài
@@ -83,10 +83,10 @@ function themdetai($tendetai,$muctieu,$noidung,$cap,$moisangtao,$thuocchuongtrin
             $sql.= "INSERT INTO kinhphi(IDDT,KHOANCHI,DONVITINH,SOLUONG,DONGIA,GHICHU,LOAI) VALUES('$iddt','$khoanchi','$donvitinh','$soluong','$dongia','$ghichu','$loai');";
         }
         mysqli_multi_query($conn,$sql);
-        return true;
+        return 1;
     }
     else
-        return false;
+        return -1;
 }
 function xetthanhvien(){
     if (!isset($_POST['thanhvien']) || empty($_POST['thanhvien'])){
@@ -108,7 +108,8 @@ function xetkinhphi(){
         return null;
     }else return $_POST['kinhphichitiet'];
 }
-if (themdetai($_POST['tendetai'],$_POST['muctieu'],$_POST['noidung'],$_POST['cap'],$_POST['moisangtao'],$_POST['thuocchuongtrinh'],$_POST['sucanthiet'],$_POST['tinhhinhnghiencuu'],$_POST['nghiencuulienquan'],$_POST['phuongphapkythuat'],$_POST['kinhphingansach'],$_POST['kinhphinguonkhac'],$_POST['thangthuchien'],$_POST['thangnambatdau'],$_POST['thangnamketthuc'],$_POST['ketqua'],$_POST['loaihinhnghiencuu'],$_POST['linhvuckhoahoc'],$thanhvien=xetthanhvien(),$tochuc=xettochuc(),$tiendodukien=xettiendodukien(),$kinhphichitiet=xetkinhphi())) {
+$ktthem = themdetai($_POST['tendetai'],$_POST['muctieu'],$_POST['noidung'],$_POST['cap'],$_POST['moisangtao'],$_POST['thuocchuongtrinh'],$_POST['sucanthiet'],$_POST['tinhhinhnghiencuu'],$_POST['nghiencuulienquan'],$_POST['phuongphapkythuat'],$_POST['kinhphingansach'],$_POST['kinhphinguonkhac'],$_POST['thangthuchien'],$_POST['thangnambatdau'],$_POST['thangnamketthuc'],$_POST['ketqua'],$_POST['loaihinhnghiencuu'],$_POST['linhvuckhoahoc'],$thanhvien=xetthanhvien(),$tochuc=xettochuc(),$tiendodukien=xettiendodukien(),$kinhphichitiet=xetkinhphi());
+if ($ktthem==1) {
     ?>
     <script type="text/javascript">
         swal('Thành công','Đã thêm đề tài!','success');
@@ -119,11 +120,16 @@ if (themdetai($_POST['tendetai'],$_POST['muctieu'],$_POST['noidung'],$_POST['cap
     <?php
     exit();
 }
-else{ ?>
+else if($ktthem==0){ ?>
     <script type="text/javascript">
-        swal('Ôi! Lỗi','Vui lòng thử lại sau','error');
+        swal('Ôi! Lỗi','Đề tài này đã tồn tại','error');
     </script>";
     <?php 
     exit();
 }
+else if ($ktthem==-1) { ?>
+    <script type="text/javascript">
+        swal('Ôi! Lỗi','Đề tài này đã tồn tại','error');
+    </script>";
+<?php }
 ?>
