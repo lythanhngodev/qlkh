@@ -59,7 +59,7 @@ while ($row = mysqli_fetch_row($esql_stqd)) {
     <div class="card-body">
         <?php $stt_cap=1; while ($cap = mysqli_fetch_assoc($qcapsql)) { ?>
         <h4><?php echo $ketnoi->ConverToRoman($stt_cap); ?>. Cấp: <?php $capbaibao=$cap['CAPBAIBAO']; echo $capbaibao; ?></h4>
-        <table id="bang-bieu-mau" class="table table-bordered table-hover table-responsive">
+        <table id="bang-bieu-mau" class="table table-bordered table-hover table-responsive" style="height: 700px;">
             <thead>
                 <tr style="background:#e9ecef;">
                     <th class="giua">TT</th>

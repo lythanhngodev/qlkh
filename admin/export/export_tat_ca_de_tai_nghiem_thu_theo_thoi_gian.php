@@ -46,7 +46,7 @@ while ($row = mysqli_fetch_row($esql_stqd)) {
     <div class="card-body">
         <?php $stt_cap=1; while ($cap = mysqli_fetch_assoc($qcapsql)) { ?>
         <h4><?php echo $ketnoi->ConverToRoman($stt_cap); ?>. Cấp: <?php $capdetai=$cap['CAPDETAI']; echo $capdetai; ?></h4>
-        <table id="bang-bieu-mau" class="table table-bordered table-hover">
+        <table id="bang-bieu-mau" class="table table-bordered table-hover" style="height: 700px;">
             <thead>
                 <tr style="background:#e9ecef;">
                     <th class="giua">TT</th>
