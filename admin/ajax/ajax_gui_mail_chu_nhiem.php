@@ -31,4 +31,5 @@ else{
     $mang['thongbao'] = "Xảy ra lỗi, vui lòng thử lại";
 }
 echo json_encode($mang);
+exit();
 ?>

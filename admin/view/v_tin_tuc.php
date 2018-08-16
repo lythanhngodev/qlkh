@@ -23,7 +23,7 @@
                     <?php $stt=1; while ($row = mysqli_fetch_assoc($tintuc)) { ?>
                     <tr>
                         <th class="giua"><?php echo $stt; ?></th>
-                        <td><?php echo $row['TENBV']; ?></td>
+                        <td><a href="?p=suabaiviet&id=<?php echo $row['IDBV'] ?>" class="link text-dark text-bold"><?php echo $row['TENBV']; ?></a></td>
                         <td><?php echo $row['TENBV']; ?></td>
                         <td class="giua"><?php echo $row['NGAYDANG']; ?></td>
                         <td class="giua" onclick="alert('Đang phát triển')">
@@ -62,7 +62,7 @@
     $('#example').DataTable();
 } );
   function xoa(id){
-    if (!confirm('Bạn có chắc xoá bài báo này?')) {
+    if (!confirm('Bạn có chắc xoá tin này?')) {
       return;
     }
     $.ajax({

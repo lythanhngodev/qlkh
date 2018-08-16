@@ -123,7 +123,7 @@
     }
   $(document).ready(function(){
     $('#tintuc').addClass('active');
-    $('.tieude').html('Thêm bài viết');
+    $('.tieude').html('Thêm tin tức');
     $('#xoahinh').click(function(){
       document.getElementById('hinh-anh-ht').src = '';
       document.getElementById('linkfile').value= '';

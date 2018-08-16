@@ -18,7 +18,7 @@ function sanitize_output($buffer) {
     $buffer = preg_replace($search, $replace, $buffer);
     return $buffer;
 }
- ob_start("sanitize_output");
+ //ob_start("sanitize_output");
 ?>
 <!DOCTYPE html>
 <html>

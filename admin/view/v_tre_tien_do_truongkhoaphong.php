@@ -56,7 +56,7 @@
 <script type="text/javascript">
   $(document).ready(function(){
     $('#tretiendo').addClass('active');
-    $('.tieude').html('Đề tài trễ tiến độ');
+    $('.tieude').html('Đề tài nghiên cứu khoa học trễ tiến độ');
   });
   $(document).ready(function() {
     $('#example').DataTable({

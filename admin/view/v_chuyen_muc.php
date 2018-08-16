@@ -11,7 +11,7 @@ if (!isset($_SESSION["token"])) {include_once ("../../loi404.html");exit();}
                 <div class="card-body">
                     <div class="row">
                         <div class="col-md-12">
-                            <button id="themchuyenmuc" class="btn btn-success btn-sm"><i class="fa fa-plus"></i>&nbsp;&nbsp;Thêm mới</button><br><br>
+                            <button id="themchuyenmuc" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i>&nbsp;&nbsp;Thêm mới</button><br><br>
                         </div>
                         <div class="col-md-12">
                             <table id="bang-chuyen-muc" class="table table-bordered table-hover">

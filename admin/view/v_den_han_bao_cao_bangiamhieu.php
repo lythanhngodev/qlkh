@@ -56,7 +56,7 @@
 <script type="text/javascript">
   $(document).ready(function(){
     $('#denhanbaocao').addClass('active');
-    $('.tieude').html('Đề tài đến hạn báo cáo');
+    $('.tieude').html('Đề tài nghiên cứu khoa học đến hạn báo cáo');
   });
   $(document).ready(function() {
     $('#example').DataTable({

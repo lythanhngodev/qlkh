@@ -57,7 +57,7 @@
 <script type="text/javascript">
   $(document).ready(function(){
     $('#dangthuchien').addClass('active');
-    $('.tieude').html('Đề xuất đề tài nghiên cứu khao học mới');
+    $('.tieude').html('Đề tài nghiên cứu khoa học đang thực hiện');
   });
   $(document).ready(function() {
     $('#example').DataTable({

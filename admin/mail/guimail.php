@@ -2,7 +2,7 @@
 include('class.smtp.php');
 include "class.phpmailer.php"; 
 function guimail($tieude,$than,$dc,$user,$pass,$port){
-    $mail = new PHPMailer();
+    $mail = new PHPMailer(true);
     $mail->SMTPOptions = array( 'ssl' => array( 'verify_peer' => false, 'verify_peer_name' => false, 'allow_self_signed' => true ) );
     $mail->CharSet = "UTF-8";
     $mail->isSMTP();                         // Set mailer to use SMTP
@@ -25,7 +25,7 @@ function guimail($tieude,$than,$dc,$user,$pass,$port){
         return true;
 }
 function guimailnhom($tieude,$than,$dc,$user,$pass,$port){
-    $mail = new PHPMailer();
+    $mail = new PHPMailer(true);
     $mail->SMTPOptions = array( 'ssl' => array( 'verify_peer' => false, 'verify_peer_name' => false, 'allow_self_signed' => true ) );
     $mail->CharSet = "UTF-8";
     $mail->isSMTP();                         // Set mailer to use SMTP

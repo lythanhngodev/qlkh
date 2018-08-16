@@ -57,7 +57,7 @@
 <script type="text/javascript">
   $(document).ready(function(){
     $('#dexuatmoi').addClass('active');
-    $('.tieude').html('Đề xuất đề tài nghiên cứu khao học mới');
+    $('.tieude').html('Đề xuất đề tài nghiên cứu khoa học mới');
   });
   $(document).ready(function() {
     $('#example').DataTable({
