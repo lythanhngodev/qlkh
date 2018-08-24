@@ -141,6 +141,7 @@ header("Content-Type: application/vnd.ms-word");
 							break;
 					}
 				} ?>
+				<p>&ensp;&ensp;&ensp;&ensp;Danh sách hội đồng:</p>
 				<table border="1" style="width: 18cm;border-collapse: collapse; margin: 0 auto;margin-left: 0.5cm">
 					<tr style="text-align: center;">
 						<th>TT</th>

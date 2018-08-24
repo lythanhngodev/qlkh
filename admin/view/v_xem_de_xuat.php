@@ -1099,7 +1099,7 @@ $nhiemvu_nghiemthu = ['Chủ tịch HĐ', 'Ủy viên', 'Thư ký'];
                     if ($(this).find('option:selected').val()==data[i][1]){tontai=1;break;};
                 }
                 if (tontai==0) {
-                    if(sodong<5){
+                    if(sodong<15){
                         //them tac gia vao danh sach
                         var tr = "<tr><td>"+$('#chontvbtc option:selected').text()+"</td><td class='an'>"+$(this).find('option:selected').val()+"</td><td><select class='form-control'><option value='Chủ tịch HĐ'>Chủ tịch HĐ</option><option value='Trưởng BTC'>Trưởng BTC</option><option value='Phó BTC'>Phó BTC</option><option value='UV TT'>UV TT</option><option value='Ủy viên'>Ủy viên</option><option value='Thư ký'>Thư ký</option></select></td><td><textarea class='form-control' rows='2'></textarea></td><td class='giua' style='width:50px;'><button class='xoabtc'><i class='fas fa-times do'></i></button></td></tr>";
                         $('#bangbtc').append(tr);
@@ -1130,7 +1130,7 @@ $nhiemvu_nghiemthu = ['Chủ tịch HĐ', 'Ủy viên', 'Thư ký'];
                     if ($(this).find('option:selected').val()==data[i][1]){tontai=1;break;};
                 }
                 if (tontai==0) {
-                    if(sodong<5){
+                    if(sodong<15){
                         //them tac gia vao danh sach
                         var tr = "<tr><td>"+$('#chontvnt option:selected').text()+"</td><td class='an'>"+$(this).find('option:selected').val()+"</td><td><select class='form-control'><option value='Chủ tịch HĐ'>Chủ tịch HĐ</option><option value='Ủy viên'>Ủy viên</option><option value='Thư ký'>Thư ký</option></select></td><td><textarea class='form-control' rows='2' ></textarea></td><td class='giua' style='width:50px;'><button class='xoatvnt'><i class='fas fa-times do'></i></button></td></tr>";
                         $('#bangtvnt').append(tr);
