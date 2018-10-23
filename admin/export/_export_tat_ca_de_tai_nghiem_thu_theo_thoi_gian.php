@@ -106,7 +106,7 @@
 			$sheet->setCellValue('C'.$rowCount,$nt['THOIGIANNGHIEMTHU']);
             $iddt = $nt['IDDT'];
             $chuoi_cbvc="";
-            $q_kbm = "SELECT DISTINCT k.TENKBM, k.IDKBM FROM thanhviendetai tv, khoabomon k, nguoidung nd, nguoidung_khoabomon nk WHERE tv.IDND = nd.IDND AND nd.IDND = nk.IDND AND  nk.IDKBM = k.IDKBM AND tv.IDDT = '$iddt';";
+            $q_kbm = "SELECT DISTINCT k.TENTAT, k.IDKBM FROM thanhviendetai tv, khoabomon k, nguoidung nd, nguoidung_khoabomon nk WHERE tv.IDND = nd.IDND AND nd.IDND = nk.IDND AND  nk.IDKBM = k.IDKBM AND tv.IDDT = '$iddt';";
             $e_kbm = mysqli_query($conn, $q_kbm);
             while ($r_kbm = mysqli_fetch_assoc($e_kbm)) {
                 $q_cbvc = "SELECT DISTINCT CONCAT(nd.HO, ' ', nd.TEN) AS  HOTEN FROM thanhviendetai tv, khoabomon k, nguoidung nd, nguoidung_khoabomon nk WHERE tv.IDND = nd.IDND AND nd.IDND = nk.IDND AND  nk.IDKBM = k.IDKBM AND tv.IDDT = '$iddt' AND k.IDKBM = '".$r_kbm['IDKBM']."';";
@@ -115,7 +115,7 @@
                     $chuoi_cbvc.=$r_cbvc['HOTEN']."\n";
                     //$chuoi_cbvc = "sdvsdsv";
                 }
-                $chuoi_cbvc.=$r_kbm['TENKBM'];
+                $chuoi_cbvc.=$r_kbm['TENTAT'];
             }
 			$sheet->setCellValue('D'.$rowCount,$chuoi_cbvc);
 			$objPHPExcel->getActiveSheet()->getStyle('D'.$rowCount)->getAlignment()->setWrapText(true);

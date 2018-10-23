@@ -20,7 +20,7 @@
 	function lay_de_tai_da_cong_bo($bd, $sotin){
 		$ketnoi = new clsKetnoi();
 		$conn = $ketnoi->ketnoi();
-		$query = "SELECT DISTINCT dt.IDDT, dt.TENDETAI, dt.THOIGIANNGHIEMTHU, CONCAT(nd.HO, ' ', nd.TEN) AS HOTEN FROM detai dt, dexuatdetai dx, nguoidung nd, thanhviendetai tv WHERE dt.TRANGTHAI = N'Đã nghiệm thu' AND dt.DUYET = b'1' AND dx.IDDT = dt.IDDT AND tv.IDDT = dt.IDDT AND tv.TRACHNHIEM = N'Chủ nhiệm' AND tv.IDND = nd.IDND ORDER BY dt.THOIGIANNGHIEMTHU LIMIT $bd,$sotin;";
+		$query = "SELECT DISTINCT dt.IDDT, dt.TENDETAI, dt.THOIGIANNGHIEMTHU, CONCAT(nd.HO, ' ', nd.TEN) AS HOTEN FROM detai dt, dexuatdetai dx, nguoidung nd, thanhviendetai tv WHERE dt.TRANGTHAI = N'Đã nghiệm thu' AND dt.DUYET = b'1' AND dx.IDDT = dt.IDDT AND tv.IDDT = dt.IDDT AND tv.TRACHNHIEM = N'Chủ nhiệm' AND tv.IDND = nd.IDND ORDER BY dt.THOIGIANNGHIEMTHU DESC LIMIT $bd,$sotin;";
 		$result = mysqli_query($conn, $query);
 		mysqli_close($conn);
 		return $result;

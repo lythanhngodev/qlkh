@@ -49,6 +49,18 @@
 			<span>Số đề tài đã chọn: <b class="dachon">0</b></span><br>
 		<a class="btn btn-warning xuat_khnt"><i class="far fa-file-word"></i> Xuất file</a>
 			<div class="row">
+				<div class="col-md-12">
+					<div class="form-group">
+						<label class="font-weight-bold">Địa điểm nghiệm thu: </label>
+						<input type="text" name="diadiem" id="diadiem" class="form-control">
+					</div>
+				</div>
+				<div class="col-md-12">
+					<div class="form-group">
+						<label class="font-weight-bold">Chủ tịch hội đồng: </label>
+						<input type="text" name="chutich" id="chutich" class="form-control">
+					</div>
+				</div>
 				<div class="col-md-6">
 					<div class="form-group">
 						<label class="font-weight-bold">Ngày / Tháng / Năm lập hội đồng xét chọn</label>

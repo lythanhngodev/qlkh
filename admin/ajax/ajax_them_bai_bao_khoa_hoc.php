@@ -46,6 +46,8 @@
 			}
 		}
 	    $nd = mysqli_real_escape_string($conn, $nd);
+	    $tbb = mysqli_real_escape_string($conn, $tbb);
+	    $tc = mysqli_real_escape_string($conn, $tc);
 	    $nd = str_replace('&ensp;',' ',$nd);
 	    $nd = str_replace('&nbsp;',' ',$nd);
 		$idbvbvbv=0;
@@ -61,8 +63,9 @@
 				$tv3 = "INSERT INTO `baibao_tukhoa`(`IDKHOA`, `IDBAO`) VALUES ('$idtag','$idbvbvbv')";
 				mysqli_query($conn, $tv3);
 			}
+
 			for ($i=0; $i < count($tg); $i++) { 
-				$tv4 = "INSERT INTO `nguoidung_baibao`(`IDBAO`, `IDND`) VALUES ('$idbvbvbv','".$tg[$i]."')";
+				$tv4 = "INSERT INTO `nguoidung_baibao`(`IDBAO`, `IDND`,`TGCHINH`,`DONGTG`) VALUES ('$idbvbvbv','".$tg[$i][0]."',b'".$tg[$i][1]."',b'".$tg[$i][2]."');";
 				mysqli_query($conn, $tv4);
 			}
 			mysqli_close($conn);

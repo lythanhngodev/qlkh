@@ -25,6 +25,8 @@ if (isset($_SESSION['tdn']) && isset($_SESSION['pas']) && isset($_SESSION['_loai
 		}
 		$ketnoi = new clsKetnoi();
 		$conn = $ketnoi->ketnoi();
+	    $tbb = mysqli_real_escape_string($conn, $tbb);
+	    $tc = mysqli_real_escape_string($conn, $tc);
 		// xử lý từ khóa
 		$mang = explode(',', $tk);
 		for ($i=0; $i < count($mang); $i++) { 
@@ -70,7 +72,7 @@ if (isset($_SESSION['tdn']) && isset($_SESSION['pas']) && isset($_SESSION['_loai
 				mysqli_query($conn, $tv3);
 			}
 			for ($i=0; $i < count($tg); $i++) { 
-				$tv4 = "INSERT INTO `nguoidung_baibao`(`IDBAO`, `IDND`) VALUES ('$idbb','".$tg[$i]."')";
+				$tv4 = "INSERT INTO `nguoidung_baibao`(`IDBAO`, `IDND`,`TGCHINH`,`DONGTG`) VALUES ('$idbb','".$tg[$i][0]."',b'".$tg[$i][1]."',b'".$tg[$i][2]."');";
 				mysqli_query($conn, $tv4);
 			}
 			mysqli_close($conn);

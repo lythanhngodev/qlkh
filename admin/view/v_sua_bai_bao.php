@@ -68,14 +68,18 @@
                                           <thead style="background:#e9ecef;">
                                             <th style="padding: 8px;border: none;">Tên tác giả</th>
                                             <th class="an">IDTG</th>
+                                            <th style="width: 80px;">TG chính</th>
+                                            <th style="width: 80px;">Đồng TG</th>
                                             <th  style="width: 50px;padding: 8px;border:none;" class="giua">Xóa</th>
                                           </thead>
                                           <tbody>
                                           <?php 
                                             while ($row1 = mysqli_fetch_assoc($tacgiabaiviet)) { ?>
                                               <tr>
-                                                <td><?php echo $row1['HOTEN'].' '.$row1['NGAYSINH']; ?></td>
+                                                <td><?php echo $row1['HOTEN'].' - '.$row1['TENTAT']; ?></td>
                                                 <td class="an"><?php echo $row1['IDND']; ?></td>
+                                                <td class="giua" style="width: 80px;"><input type="checkbox" <?php if($row1['TGCHINH']==1) echo "checked=\"checked\"" ?>></td>
+                                                <td class="giua" style="width: 80px;"><input type="checkbox" <?php if($row1['DONGTG']==1) echo "checked=\"checked\"" ?>></td>
                                                 <td class="giua" style="width:50px;"><button class="xoatacgia"><i class="fas fa-times do"></i></button></td>
                                               </tr>
                                           <?php } ?>
@@ -87,7 +91,7 @@
                                           <select id="tacgia" data-live-search="true" class="selectpicker form-control" title="Chọn tác giả">
                                             <option value="chontacgia">-- Chọn tác giả --</option>
                                             <?php while ($row=mysqli_fetch_assoc($tacgia)) {
-                                              echo '<option value="'.$row['IDND'].'" idtgdata="'.$row['IDND'].'">'.$row['HOTEN'].' '.$row['NGAYSINH'].'</option>';
+                                              echo '<option value="'.$row['IDND'].'" idtgdata="'.$row['IDND'].'">'.$row['HOTEN'].' - '.$row['TENTAT'].'</option>';
                                             } ?>
                                           </select>
                                       </div>
@@ -289,7 +293,7 @@
         }
         if (tontai==0) {
           //them tac gia vao danh sach
-          var tr = "<tr><td>"+$('#tacgia option:selected').text()+"</td><td class=\"an\">"+$(this).find('option:selected').attr('idtgdata')+"</td><td class=\"giua\" style=\"width:50px;\"><button class=\"xoatacgia\"><i class=\"fas fa-times do\"></i></button></td></tr>";
+          var tr = "<tr><td>"+$('#tacgia option:selected').text()+"</td><td class=\"an\">"+$(this).find('option:selected').attr('idtgdata')+"</td><td class=giua style=\"width: 80px;\"><input type=\"checkbox\"/></td><td class=giua style=\"width: 80px;\"><input type=\"checkbox\"/></td><td class=\"giua\" style=\"width:50px;\"><button class=\"xoatacgia\"><i class=\"fas fa-times do\"></i></button></td></tr>";
           $('#bangtacgia').append(tr);
         }
         else
@@ -306,16 +310,26 @@
         var table = $('#bangtacgia');
         var tacgia = [];
         table.find('tr:not(:first)').each(function(i, row) {
-          var cols = [];
+          var cols = [], dem=1;
           $(this).find('td:not(:last)').each(function(i, col) {
-            cols.push($(this).text());
+            if (dem==1 || dem==2) {
+              cols.push($(this).text());
+            }else if (dem==3 || dem==4) {
+              if($(this).find('input[type="checkbox"]').is(':checked')) cols.push(1); else cols.push(0);
+            }
+            dem++;
           });
           tacgia.push(cols);
         });
         var mtacgia=[];
-        for (var i = 0; i < tacgia.length; i++) {
-          mtacgia[i]=tacgia[i][1];
+        for(var i = 0;i<tacgia.length;i++){
+          var mcot=[];
+          for(var j = 1;j<4;j++){
+            mcot.push(tacgia[i][j]);
+          }
+          mtacgia.push(mcot);
         }
+
         $.ajax({
           url : "ajax/ajax_sua_bai_bao_khoa_hoc.php",
           type : "post",

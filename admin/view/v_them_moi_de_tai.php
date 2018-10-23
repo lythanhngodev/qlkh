@@ -632,7 +632,7 @@ giao kết quả nghiên cứu đến người sử dụng. Phải nêu được
           if (kiemtraketnoi()) {
               // Ajax
               $.ajax({
-                  url: 'ajax/ajax_them_de_xuat.php',
+                  url: 'ajax/ajax_them_de_tai_moi.php',
                   type: 'POST',
                   data: {
                       tendetai: tendetai,

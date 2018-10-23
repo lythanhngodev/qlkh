@@ -26,6 +26,10 @@
 	$thang = $ngaythang[1];
 	$ngay = $ngaythang[2];
 	$thoigian = $_POST['thoigian'];
+	$diadiem = '';
+	$diadiem = $_POST['diadiem'];
+	$chutich ='';
+	$chutich = $_POST['chutich'];
 	$ds = null;
 	$_ds = explode(',', $_POST['dachon']);
 	for ($i=0; $i < count($_ds); $i++) { 
@@ -120,14 +124,14 @@
 				</tr>
 				<tr>
 					<td style="width: 1.4cm;"></td>
-					<td>(Kèm theo Quyết định số: /QĐ-SPKTVL-NCKH, ngày <?php echo $ngay ?> tháng <?php echo $thang ?> năm <?php echo $nam ?> của Hiệu trưởng Trường Đại học SPKT Vĩnh Long)</td>
+					<td>(Kèm theo Quyết định số: /QĐ-SPKTVL-NCKH, ngày  tháng  năm  của Hiệu trưởng Trường Đại học SPKT Vĩnh Long)</td>
 					<td style="width: 1.4cm;"></td>
 				</tr>
 			</table>
 			<div style="width: 190mm">
-				<p><b>Thời gian nghiệm thu: </b></p>
-				<p><b>Địa điểm: </b></p>
-				<p><b>Chủ tịch hội đồng: </b></p>
+				<p><b>Thời gian nghiệm thu: </b>ngày <?php echo $ngay ?> tháng <?php echo $thang ?> năm <?php echo $nam ?></p>
+				<p><b>Địa điểm: </b><?php echo $diadiem ?></p>
+				<p><b>Chủ tịch hội đồng: </b><?php echo $chutich ?></p>
 				<p>1 - Công bố Quyết định thành lập Ban tổ chức và các Hội đồng đánh giá nghiệm thu đề tài;</p>
 				<p>2 - Điều khiển các báo cáo nghiệm thu đề tài;</p>
 				<p>3 - Chủ nhiệm đề tài báo cáo kết quả thực hiện đề tài:</p>
@@ -165,7 +169,7 @@
 				<table style="width: 190mm;">
 					<tr>
 						<td></td>
-						<td style="text-align: center;width: 80mm;"><i>Vĩnh Long, ngày <?php echo $ngay ?> tháng <?php echo $thang ?> năm <?php echo $nam ?></i><br><br><b>BAN TỔ CHỨC</b></td>
+						<td style="text-align: center;width: 80mm;"><i>Vĩnh Long, ngày  tháng  năm </i><br><br><b>BAN TỔ CHỨC</b></td>
 					</tr>
 				</table>
 			</div>

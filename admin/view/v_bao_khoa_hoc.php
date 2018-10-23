@@ -13,7 +13,7 @@
                     <tr style="background:#e9ecef;">
                         <th class="giua" style="width: 28px;">STT</th>
                         <th>Tên bài báo</th>
-                        <th style="width: 160px;">Tác giả</th>
+                        <th style="width: 200px;">Tác giả</th>
                         <th style="width: 40px;">Điểm</th>
                         <th style="width: 60px;">Số tiết</th>
                         <th style="width: 75px;">Ngày đăng</th>
@@ -28,7 +28,14 @@
                         <td><?php 
                             $tg = lay_tac_gia($row['IDBAO']);
                             while ($row1 = mysqli_fetch_assoc($tg)) {
-                            echo $row1['HOTEN']."<br>";
+                            echo $row1['HOTEN'];
+                            if ($row1['TGCHINH']==1) {
+                              echo " <b>(TG Chính)</b>";
+                            }
+                            if ($row1['DONGTG']==1) {
+                              echo " <b>(Đồng TG)</b>";
+                            }
+                            echo "<hr style='margin: 6px 0px;'>";
                         } ?></td>
                         <td class="giua"><?php echo $row['DIEM']; ?></td>
                         <td class="giua"><?php echo $row['SOTIET']; ?></td>

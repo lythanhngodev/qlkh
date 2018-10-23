@@ -12,7 +12,12 @@
 	function lay_ten_tac_gia(){
 		$ketnoi = new clsKetnoi();
 		$conn = $ketnoi->ketnoi();
-		$query = "SELECT `IDND`, CONCAT(HO,' ',TEN) as HOTEN, NGAYSINH FROM `nguoidung` WHERE TRANGTHAI = N'binhthuong'";
+		$query = "
+			SELECT nd.`IDND`, CONCAT(nd.HO,' ',nd.TEN) as HOTEN, kbm.TENTAT 
+			FROM `nguoidung` nd 
+				LEFT OUTER JOIN `nguoidung_khoabomon` nk ON (nd.IDND = nk.IDND) 
+				LEFT OUTER JOIN khoabomon kbm ON (nk.IDKBM=kbm.IDKBM) WHERE nd.TRANGTHAI = N'binhthuong'
+		";
 		$result = mysqli_query($conn, $query);
 		mysqli_close($conn);
 		return $result;
@@ -21,7 +26,13 @@
 	function lay_ten_tac_gia_bai_viet($idbv){
 		$ketnoi = new clsKetnoi();
 		$conn = $ketnoi->ketnoi();
-		$query = "SELECT nd.IDND, CONCAT(nd.HO,' ',nd.TEN) as HOTEN,nd.NGAYSINH FROM `nguoidung_baibao` tgbb, nguoidung nd WHERE nd.IDND = tgbb.IDND AND tgbb.IDBAO = '$idbv'";
+		$query = "
+		SELECT nd.IDND, CONCAT(nd.HO,' ',nd.TEN) as HOTEN, kbm.TENTAT,TGCHINH,DONGTG 
+		FROM `nguoidung_baibao` tgbb 
+			LEFT JOIN nguoidung nd ON nd.IDND = tgbb.IDND
+			LEFT JOIN nguoidung_khoabomon nk ON tgbb.IDND = nk.IDND
+			LEFT JOIN khoabomon kbm ON nk.IDKBM = kbm.IDKBM  
+		WHERE tgbb.IDBAO = '$idbv'";
 		$result = mysqli_query($conn, $query);
 		mysqli_close($conn);
 		return $result;

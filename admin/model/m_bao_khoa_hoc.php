@@ -20,7 +20,10 @@
 	function lay_tac_gia($id){
 		$ketnoi = new clsKetnoi();
 		$conn = $ketnoi->ketnoi();
-		$query = "SELECT DISTINCT CONCAT(n.HO,' ',n.TEN) as HOTEN FROM baokhoahoc b, nguoidung n, nguoidung_baibao nb WHERE b.IDBAO = nb.IDBAO AND n.IDND = nb.IDND AND b.IDBAO = '$id'";
+		$query = "
+		SELECT DISTINCT CONCAT(n.HO,' ',n.TEN) as HOTEN, nb.TGCHINH, nb.DONGTG 
+		FROM baokhoahoc b, nguoidung n, nguoidung_baibao nb 
+		WHERE b.IDBAO = nb.IDBAO AND n.IDND = nb.IDND AND b.IDBAO = '$id'";
 		$result = mysqli_query($conn, $query);
 		mysqli_close($conn);
 		return $result;

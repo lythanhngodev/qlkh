@@ -20,7 +20,7 @@
 	function lay_bao_khoa_hoc($bd, $sotin){
 		$ketnoi = new clsKetnoi();
 		$conn = $ketnoi->ketnoi();
-		$query = "SELECT DISTINCT b.IDBAO, b.TENBAO, b.TAPCHI, b.NAMXUATBAN FROM baokhoahoc b WHERE ANHIEN = b'1' ORDER BY IDBAO LIMIT $bd,$sotin;";
+		$query = "SELECT DISTINCT b.IDBAO, b.TENBAO, b.TAPCHI, b.NAMXUATBAN FROM baokhoahoc b WHERE ANHIEN = b'1' ORDER BY IDBAO DESC LIMIT $bd,$sotin;";
 		$result = mysqli_query($conn, $query);
 		mysqli_close($conn);
 		return $result;

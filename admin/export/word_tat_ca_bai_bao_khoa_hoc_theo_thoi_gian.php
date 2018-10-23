@@ -20,6 +20,15 @@
 		mysqli_close($conn);
 		return $result_cap;
 	}
+	function lay_cap_bai_bao(){
+		$ketnoi = new clsKetnoi();
+		$conn = $ketnoi->ketnoi();
+		$query_cap = "SELECT DISTINCT * FROM capbaibao;";
+		$result_cap = mysqli_query($conn, $query_cap);
+
+		mysqli_close($conn);
+		return $result_cap;
+	}
 	function thong_ke_bai_bao_theo_thoi_gian($capbaibao,$bd,$kt){
 		$ketnoi = new clsKetnoi();
 		$conn = $ketnoi->ketnoi();
@@ -107,7 +116,10 @@
 				</tr>
 			</table>
 			<div style="width: 267mm;">
-				<p style="padding-left:1cm;">I. Bài báo khoa học, sách chuyên khảo</p>
+				<?php 
+				$capbaibao = lay_cap_bai_bao(); $rstt=1;
+				while ($rcbb=mysqli_fetch_assoc($capbaibao)) { ?>
+				<p style="padding-left:1cm;"><?php echo $ketnoi->ConverToRoman($rstt); ?>. <?php echo $rcbb['TENCAP']; ?></p>
 				<!-- NỘI DUNG ĐÁNH GIÁ -->
 				<table border="1" style="border-collapse: collapse;width: 100%;font-size: 17px;">
 					<tr style="text-align: center;">
@@ -118,7 +130,7 @@
 						<th style="width: 2cm;">Ghi chú</th>
 						<th style="width: 3cm;">Số tiết qui đổi</th>
 					</tr>
-					<?php $baibaotk = thong_ke_bai_bao_theo_thoi_gian('Cấp trường',$bd,$kt); $sttct=1;
+					<?php $baibaotk = thong_ke_bai_bao_theo_thoi_gian($rcbb['TENCAP'],$bd,$kt); $sttct=1;
 						while ($row = mysqli_fetch_assoc($baibaotk)) { ?>
 					<tr>
 						<td style="text-align: center;"><?php echo $sttct; ?></td>
@@ -173,6 +185,10 @@
 					</tr>		
 					<?php $sttct++; } ?>
 				</table>
+				<?php 
+				 $rstt++;}
+				 ?>
+
 				<!-- NGÀY THÁNG VIẾT ĐỀ XUẤT -->
 				<p style="text-align: right;margin-top: 4mm;padding-right: 1mm"><i>Vĩnh Long</i>, ngày ...... tháng ...... năm ......</p>
 				<!-- KÝ TÊN XÁC NHẬN -->

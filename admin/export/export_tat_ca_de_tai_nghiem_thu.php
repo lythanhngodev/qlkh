@@ -58,7 +58,7 @@ while ($row = mysqli_fetch_row($esql_stqd)) {
                     <td class="giua"><?php if(!empty($row['THOIGIANNGHIEMTHU'])){echo date("d-m-Y", strtotime($row['THOIGIANNGHIEMTHU']));} else echo ""; ?></td>
                     <td class="giua">
                         <?php $iddt = $row['IDDT'];
-                        $q_kbm = "SELECT DISTINCT k.TENKBM, k.IDKBM FROM thanhviendetai tv, khoabomon k, nguoidung nd, nguoidung_khoabomon nk WHERE tv.IDND = nd.IDND AND nd.IDND = nk.IDND AND  nk.IDKBM = k.IDKBM AND tv.IDDT = '$iddt';";
+                        $q_kbm = "SELECT DISTINCT k.TENTAT, k.IDKBM FROM thanhviendetai tv, khoabomon k, nguoidung nd, nguoidung_khoabomon nk WHERE tv.IDND = nd.IDND AND nd.IDND = nk.IDND AND  nk.IDKBM = k.IDKBM AND tv.IDDT = '$iddt';";
                         $e_kbm = mysqli_query($conn, $q_kbm);
                         while ($r_kbm = mysqli_fetch_assoc($e_kbm)) {
                             $q_cbvc = "SELECT DISTINCT CONCAT(nd.HO, ' ', nd.TEN) AS  HOTEN FROM thanhviendetai tv, khoabomon k, nguoidung nd, nguoidung_khoabomon nk WHERE tv.IDND = nd.IDND AND nd.IDND = nk.IDND AND  nk.IDKBM = k.IDKBM AND tv.IDDT = '$iddt' AND k.IDKBM = '".$r_kbm['IDKBM']."';";
@@ -66,7 +66,7 @@ while ($row = mysqli_fetch_row($esql_stqd)) {
                             while ($r_cbvc = mysqli_fetch_assoc($e_cbvc)) {
                                 echo $r_cbvc['HOTEN']."<br>";
                             }
-                            echo "<hr>".$r_kbm['TENKBM']."<br>";
+                            echo "<hr>".$r_kbm['TENTAT']."<br>";
                         }
                          ?>
                     </td>

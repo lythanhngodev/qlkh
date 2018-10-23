@@ -12,7 +12,12 @@
 	function lay_ten_tac_gia(){
 		$ketnoi = new clsKetnoi();
 		$conn = $ketnoi->ketnoi();
-		$query = "SELECT `IDND`, CONCAT(HO,' ',TEN) as HOTEN, NGAYSINH FROM `nguoidung` WHERE TRANGTHAI = N'binhthuong'";
+		$query = "
+			SELECT nd.`IDND`, CONCAT(nd.HO,' ',nd.TEN) as HOTEN, kbm.TENTAT 
+			FROM `nguoidung` nd 
+				LEFT OUTER JOIN `nguoidung_khoabomon` nk ON (nd.IDND = nk.IDND) 
+				LEFT OUTER JOIN khoabomon kbm ON (nk.IDKBM=kbm.IDKBM) WHERE nd.TRANGTHAI = N'binhthuong'
+		";
 		$result = mysqli_query($conn, $query);
 		mysqli_close($conn);
 		return $result;
